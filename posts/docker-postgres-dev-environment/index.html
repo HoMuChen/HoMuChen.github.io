@@ -18,27 +18,33 @@
 
   
 
+    
+
+    
+
+  
+
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="About" />
+<meta property="og:title" content="利用Docker建立PostgreSQL開發環境" />
 <meta property="og:locale" content="zh_tw" />
-<meta name="description" content="This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com" />
-<meta property="og:description" content="This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com" />
-<link rel="canonical" href="https://homuchen.com/about/" />
-<meta property="og:url" content="https://homuchen.com/about/" />
+<meta name="description" content="首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env" />
+<meta property="og:description" content="首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env" />
+<link rel="canonical" href="https://homuchen.com/posts/docker-postgres-dev-environment/" />
+<meta property="og:url" content="https://homuchen.com/posts/docker-postgres-dev-environment/" />
 <meta property="og:site_name" content="HoMuChen" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-06-22T17:13:28+08:00" />
+<meta property="article:published_time" content="2018-07-25T12:19:15+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About" />
+<meta property="twitter:title" content="利用Docker建立PostgreSQL開發環境" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"url":"https://homuchen.com/about/","name":"HoMuChen","headline":"About","dateModified":"2021-06-22T17:13:28+08:00","datePublished":"2021-06-22T17:13:28+08:00","sameAs":["https://github.com/HoMuChen"],"description":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com","@type":"WebSite","@context":"https://schema.org"}</script>
+{"url":"https://homuchen.com/posts/docker-postgres-dev-environment/","headline":"利用Docker建立PostgreSQL開發環境","dateModified":"2018-07-25T12:19:15+08:00","datePublished":"2018-07-25T12:19:15+08:00","description":"首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env","mainEntityOfPage":{"@type":"WebPage","@id":"https://homuchen.com/posts/docker-postgres-dev-environment/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>About | HoMuChen
+  <title>利用Docker建立PostgreSQL開發環境 | HoMuChen
   </title>
 
   <!--
@@ -84,6 +90,9 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
+
 
 
   <!-- Manific Popup -->
@@ -103,6 +112,8 @@
 -->
 
 
+  
+
 
 
   <!-- image lazy-loading & popup -->
@@ -113,7 +124,7 @@
 
 
 
-<script defer src="/assets/js/dist/page.min.js"></script>
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 
@@ -157,7 +168,7 @@
     </li>
     <!-- the real tabs -->
     
-    <li class="nav-item active">
+    <li class="nav-item">
       <a href="/about/" class="nav-link">
         <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i>
         <span>ABOUT</span>
@@ -249,17 +260,26 @@
 
         
           
-          <span>
-            <a href="/">Home</a>
-          </span>
-          
 
         
 
       
 
         
-          <span>About</span>
+        <span>
+          
+          
+          <a href="/">
+            Posts
+          </a>
+        </span>
+
+        
+
+      
+
+        
+          <span>利用Docker建立PostgreSQL開發環境</span>
 
         
 
@@ -272,7 +292,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      About
+      Post
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -317,26 +337,195 @@
 
 <!-- return -->
 <div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
-    
-      <h1 class="dynamic-title">About</h1>
+
+  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
+
+    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+      <h1 data-toc-skip>利用Docker建立PostgreSQL開發環境</h1>
+
+      <div class="post-meta text-muted d-flex flex-column">
+        <!-- Published date and author -->
+        <div>
+          <span class="semi-bold">
+            HoMuChen
+          </span>
+          <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jul 25, 2018, 12:19 PM +0800"
+  
+
+  
+  prep="on" >
+
+  
+  
+
+  
+    Jul 25, 2018
+  
+
+  <i class="unloaded">2018-07-25T12:19:15+08:00</i>
+
+</span>
+
+        </div>
+
+        <div>
+          <!-- lastmod -->
+          
+
+          <!-- read time -->
+          <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="376 words">2 min</span>
+
+
+          <!-- page views -->
+          
+
+        </div>
+
+      </div> <!-- .post-meta -->
+
       <div class="post-content">
-        <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+        
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+        <p>首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>export PG_PORT=5432
+export PG_USER=admin
+export PG_PWD=secretpwd
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>再來是一個shell script run_postgres.sh ，記錄下docker指令，以便之後繼續使用</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c">#!/bin/sh</span>
+docker run                                  <span class="se">\</span>
+  <span class="nt">-d</span>                                        <span class="se">\</span>
+  <span class="nt">-p</span> <span class="nv">$PG_PORT</span>:5432                          <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">POSTGRES_USER</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PG_USER</span><span class="s2">"</span>               <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PG_PASSWORD</span><span class="s2">"</span>       <span class="se">\</span>
+  <span class="nt">-v</span> <span class="s2">"</span><span class="nv">$PWD</span><span class="s2">/pgdata"</span>:/var/lib/postgresql/data <span class="se">\</span>
+  postgres
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>解釋一下這個docker指令各個參數的意義:</p>
+
+<ol>
+  <li>-d 在背景執行</li>
+  <li>-p $PG_PORT:5432 將容器內的5432port映射到本機的$PG_PORT</li>
+  <li>-e 注入環境變數到容器裏，有哪些環境變數可用，可以參考官方連結https://hub.docker.com/_/postgres/</li>
+  <li>-v 將容器內的檔案掛載到本機，此處將容器內存放postgres 資料的資料夾 /var/lib/postgresql/data 掛載到$PWD/pgdata，也就是當前目錄的pgdata資料夾</li>
+  <li>postgres為image的名稱，可以用例如postgres:latest, postgres:9.6，後面加上版本號，沒加就是latest，可用的版本及latest是哪一版可以從此連結查詢https://hub.docker.com/_/postgres/</li>
+</ol>
+
+<p>執行完之後執行 docker ps 就可以看到container的資訊如下</p>
+
+<p>接下來要進去容器裡面create table，下下sql指令的話，就是執行</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker exec -it {container id} psql -U $PG_USER</code></p>
+
+<p>PG_USER是我們的環境變數，預設的DB(此處為admin)的名字就跟PG_USER一樣，進去容器之後看到如下，就可以開始使用拉～</p>
 
 
       </div>
+
+      <div class="post-tail-wrapper text-muted">
+
+        <!-- categories -->
+        
+        <div class="post-meta mb-3">
+          <i class="far fa-folder-open fa-fw mr-1"></i>
+          
+            <a href='/categories/tutorial/'>Tutorial</a>
+        </div>
+        
+
+        <!-- tags -->
+        
+        <div class="post-tags">
+          <i class="fa fa-tags fa-fw mr-1"></i>
+          
+          <a href="/tags/docker/"
+            class="post-tag no-text-decoration" >docker</a>
+          
+          <a href="/tags/postgres/"
+            class="post-tag no-text-decoration" >postgres</a>
+          
+          </div>
+        
+
+        <div class="post-tail-bottom
+          d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+          
+
+          <!--
+ Post sharing snippet
+-->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted mr-1">Share</span>
+  <span class="share-icons">
     
-    </div> <!-- #page -->
-  </div><!-- .col-12 -->
+    
+
+    
+
+    <i class="fa-fw fas fa-link small" onclick="copyLink()"
+        data-toggle="tooltip" data-placement="top" title="Copy link"></i>
+
+  </span>
+</div>
+
+
+        </div><!-- .post-tail-bottom -->
+
+      </div><!-- div.post-tail -->
+
+    </div> <!-- .post -->
+
+
+  </div> <!-- #post-wrapper -->
+
+  
+
+  
 
   <!--
   The Pannel on right side (Desktop views)
@@ -690,9 +879,239 @@
 </div> <!-- #panel-wrapper -->
 
 
+</div> <!-- .row -->
+
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+    <!--
+ Recommend the other 3 posts according to the tags and categories of the current post,
+ if the number is not enough, use the other latest posts to supplement.
+-->
+
+<!-- The total size of related posts  -->
+
+
+<!-- An random integer that bigger than 0  -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<!-- Fill with the other newlest posts  -->
+
+
+
+
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+  <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
+    <h3 class="pt-2 mt-1 mb-4 ml-1"
+      data-toc-skip>Further Reading</h3>
+    <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/express-line-notify-service/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Dec 28, 2017
+  
+
+  <i class="unloaded">2017-12-28T20:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>使用Node.js + Express整合Line Notify通知服務</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                快速簡單地使用一個express的middleware完成line notify的oauth2流程，取得access_token來做後續的消息推送
+
+使用line notify可以簡單地讓網站開發者推送訊息到使用者的line裡，雖不像line bot可以跟使用者做更多的互動，但如果只是要單方面的的發送訊息，使用line notify就足矣，而且還不像line bot的push api要收費，...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/what-is-networking-and-isp/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Apr  4, 2020
+  
+
+  <i class="unloaded">2020-04-04T20:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>什麼是網路？網路的組成及網路服務供應商 ISP</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．
+
+
+
+網路的組成
+
+網路連接了世界上數十億的裝置，...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div> <!-- .card-deck -->
+  </div> <!-- #related-posts -->
+
+
+
+    <!--
+  Navigation buttons at the bottom of the post.
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <a href="/posts/express-line-notify-service/" class="btn btn-outline-primary"
+    prompt="previous">
+    <p>使用Node.js + Express整合Line Notify通知服務</p>
+  </a>
+  
+
+  
+  <a href="/posts/what-is-networking-and-isp/" class="btn btn-outline-primary"
+    prompt="next">
+    <p>什麼是網路？網路的組成及網路服務供應商 ISP</p>
+  </a>
+  
+
 </div>
 
 
+    
+
+    </div> <!-- #post-extend-wrapper -->
+
+  </div> <!-- .col-* -->
+
+</div> <!-- .row -->
 
 
 

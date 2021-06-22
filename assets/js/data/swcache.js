@@ -25,8 +25,6 @@ const resource = [
   
     '/archives/',
   
-    '/test/',
-  
 
   /* --- Favicons --- */
   
@@ -46,8 +44,11 @@ const resource = [
 /* The request url with below domain will be cached */
 const allowedDomains = [
   
+    'www.googletagmanager.com',
+    'www.google-analytics.com',
+  
 
-  '',
+  'homuchen.com',
 
   'fonts.gstatic.com',
   'fonts.googleapis.com',

@@ -1,17 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-21T21:34:58+08:00</updated><id>/feed.xml</id><title type="html">HoMuChen</title><subtitle>我是陳河穆，Software Engineer</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/posts/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2021-06-21T12:19:15+08:00</published><updated>2021-06-21T12:19:15+08:00</updated><id>/posts/welcome-to-jekyll</id><content type="html" xml:base="/posts/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-22T17:13:28+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>我是陳河穆，HoMuChen，A Software Engineer 這裡是我的個人網站部落格，用來紀錄自己學習的歷程</subtitle><entry><title type="html">什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/isp-1.png&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;網路的組成&quot;&gt;網路的組成&lt;/h1&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;網路連接了世界上數十億的裝置，這些連上網路的裝置就稱為hosts, end-systems，而網路本身由communocation links及packets switches組成，links就是指電話線呀、同軸電纜、光纖、電磁波頻譜這些實際傳送資料的媒介，而資料從一個host到另一個host是被拆分成許多一個一個的packet，藉由link傳送，到達packets switches，每個switch則負責把packet從進來的link選擇一個link傳出去，最後到達目的地．&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/isp-2.png&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;那到底是誰提供這些links及switches給我們的裝置去連接上呢？就是網際網路服務供應商，Internet Service Provider，ISP．&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="jekyll" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Pagination Post</title><link href="/posts/pagination-post/" rel="alternate" type="text/html" title="Pagination Post" /><published>2017-03-05T00:00:00+08:00</published><updated>2017-03-05T00:00:00+08:00</updated><id>/posts/pagination-post</id><content type="html" xml:base="/posts/pagination-post/">&lt;p&gt;Here we see &lt;strong&gt;Tale’s&lt;/strong&gt; pagination feature in action. It is set to 5 posts per page by default. Feel free to change this number in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file!&lt;/p&gt;</content><author><name>Chester</name></author><category term="Tale" /><category term="Tale" /><summary type="html">Here we see Tale’s pagination feature in action. It is set to 5 posts per page by default. Feel free to change this number in the _config.yml file!</summary></entry></feed>
+&lt;h1 id=&quot;internet-service-providerisp&quot;&gt;Internet Service Provider(ISP)&lt;/h1&gt;
+
+&lt;p&gt;在台灣，當我們想要使用網路時，就要去找中華電信、遠傳、台灣大哥大等等的電信商，他們就是ISP，負責建設基礎設施，設定連結，我們透過行動網路、光纖、DSL連上，網路供應商的設備就會負責傳遞資料來往於我們與目的地之間．&lt;/p&gt;
+
+&lt;p&gt;比如A跟B都去了中華電信申請了網路服務，連接上後A及B之間就能互相通訊了，那現在C使用了遠傳的服務，AB及C該要怎麼通訊呢?如果中華電信跟遠傳之間互相連接起來就可以了．&lt;/p&gt;
+
+&lt;p&gt;那全球有那麼多的用戶，各自使用各自的服務供應商，如果全部都必須要能夠互相通訊，就必須要全部的網路服務供應商都互相連接才行，但這要有點太不實際了，連結的數量太過龐大，成本非常高．&lt;/p&gt;
+
+&lt;p&gt;現在假設有個全球範圍的服務供應商，各地區的供應商只要接上去就可以了，下層的服務供應商成了上層的客戶，依據流量付費，有錢賺的生意當然就有許多人進來做，許多競爭的供應商加入，彼此也可以互相連結，客戶也可以跟多個供應商合作，如此當有任一供應商服務中斷，也不會影響終端用戶．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/isp-3.png&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;於是網路就成了階層式的架構，上下層的客戶關係，同層之間也會互相連接，各個供應商自己負責建設自己的基礎設施及設定路由，封包的傳送可能會有經濟的考量(盡量不走上層供應商，因為要錢，只在同層之間交換)、或者是政治考量(不想封包經過某某國家的設備，或是所以封包都要經過某地，以利監控、阻擋某些來源)．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="ISP" /><summary type="html">網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．</summary></entry><entry><title type="html">利用Docker建立PostgreSQL開發環境</title><link href="https://homuchen.com/posts/docker-postgres-dev-environment/" rel="alternate" type="text/html" title="利用Docker建立PostgreSQL開發環境" /><published>2018-07-25T12:19:15+08:00</published><updated>2018-07-25T12:19:15+08:00</updated><id>https://homuchen.com/posts/docker-postgres-dev-environment</id><content type="html" xml:base="https://homuchen.com/posts/docker-postgres-dev-environment/">&lt;p&gt;首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;export PG_PORT=5432
+export PG_USER=admin
+export PG_PWD=secretpwd
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;再來是一個shell script run_postgres.sh ，記錄下docker指令，以便之後繼續使用&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+docker run                                  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;                                        &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PG_PORT&lt;/span&gt;:5432                          &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;POSTGRES_USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PG_USER&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;               &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PG_PASSWORD&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;       &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/pgdata&quot;&lt;/span&gt;:/var/lib/postgresql/data &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  postgres
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;解釋一下這個docker指令各個參數的意義:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;-d 在背景執行&lt;/li&gt;
+  &lt;li&gt;-p $PG_PORT:5432 將容器內的5432port映射到本機的$PG_PORT&lt;/li&gt;
+  &lt;li&gt;-e 注入環境變數到容器裏，有哪些環境變數可用，可以參考官方連結https://hub.docker.com/_/postgres/&lt;/li&gt;
+  &lt;li&gt;-v 將容器內的檔案掛載到本機，此處將容器內存放postgres 資料的資料夾 /var/lib/postgresql/data 掛載到$PWD/pgdata，也就是當前目錄的pgdata資料夾&lt;/li&gt;
+  &lt;li&gt;postgres為image的名稱，可以用例如postgres:latest, postgres:9.6，後面加上版本號，沒加就是latest，可用的版本及latest是哪一版可以從此連結查詢https://hub.docker.com/_/postgres/&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;執行完之後執行 docker ps 就可以看到container的資訊如下&lt;/p&gt;
+
+&lt;p&gt;接下來要進去容器裡面create table，下下sql指令的話，就是執行&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -it {container id} psql -U $PG_USER&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;PG_USER是我們的環境變數，預設的DB(此處為admin)的名字就跟PG_USER一樣，進去容器之後看到如下，就可以開始使用拉～&lt;/p&gt;</content><author><name></name></author><category term="Tutorial" /><category term="docker" /><category term="postgres" /><summary type="html">首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env</summary></entry><entry><title type="html">使用Node.js + Express整合Line Notify通知服務</title><link href="https://homuchen.com/posts/express-line-notify-service/" rel="alternate" type="text/html" title="使用Node.js + Express整合Line Notify通知服務" /><published>2017-12-28T20:00:00+08:00</published><updated>2017-12-28T20:00:00+08:00</updated><id>https://homuchen.com/posts/express-line-notify-service</id><content type="html" xml:base="https://homuchen.com/posts/express-line-notify-service/">&lt;p&gt;快速簡單地使用一個express的middleware完成line notify的oauth2流程，取得access_token來做後續的消息推送&lt;/p&gt;
+
+&lt;p&gt;使用line notify可以簡單地讓網站開發者推送訊息到使用者的line裡，雖不像line bot可以跟使用者做更多的互動，但如果只是要單方面的的發送訊息，使用line notify就足矣，而且還不像line bot的push api要收費，這個不用錢～&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;登入流程&quot;&gt;登入流程&lt;/h1&gt;
+
+&lt;p&gt;Line notify的流程大致來說是這樣的:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/line-notify.png&quot; alt=&quot;Line Notify Login Flow&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;GET https://notify-bot.line.me/oauth/authorize
+    &lt;ul&gt;
+      &lt;li&gt;帶著你的client id及redirect_uri，GET上面的url，使用者就會被導到line的登入頁面&lt;/li&gt;
+      &lt;li&gt;登入成功之後，line那邊會倒回上述的redirect_uri並且query string帶著code
+2.POST https://notify-bot.line.me/oauth/token&lt;/li&gt;
+      &lt;li&gt;將第一步得到的code，post到上述url，就可以拿到一個token&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;POST https://notify-bot.line.me/api/notify
+    &lt;ul&gt;
+      &lt;li&gt;帶著上面步驟所取得的token及訊息，post上面的url，使用者就可以收到消息拉～&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;套件使用&quot;&gt;套件使用&lt;/h1&gt;
+
+&lt;p&gt;接下來要實作以上流程覺得好麻煩喔～小的已將上述前兩個步驟寫成一個express的middleware供大家使用，說明如下：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;npm install express-line-notify&lt;/li&gt;
+  &lt;li&gt;傳入config物件，需要clientId及clientSecret&lt;/li&gt;
+  &lt;li&gt;選個endpoint來走以上oauth2流程，記得endpoint要加在callbackurl裡
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lineNotify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express-line-notify&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;clientId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your-client-id&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;clientSecret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your-client-secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/endpoint_u_want_to_use&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;lineNotify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;otherMiddleware&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;4.如上實作之後，便可以在otherMiddleware裡的req[‘line-notify-access-token’]拿到token拉～就可開發者要怎麼使用了&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;最後附上git hub repository，有較為詳盡的使用說明．&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/HoMuChen/express-line-notify&quot;&gt;HoMuChen/express-line-notify&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Tutorial" /><category term="express" /><category term="node.js" /><category term="line notify" /><category term="middleware" /><summary type="html">快速簡單地使用一個express的middleware完成line notify的oauth2流程，取得access_token來做後續的消息推送</summary></entry></feed>
