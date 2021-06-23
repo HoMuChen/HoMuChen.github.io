@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-22T17:43:51+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>我是陳河穆，HoMuChen，A Software Engineer 這裡是我的個人網站部落格，用來紀錄自己學習的歷程</subtitle><entry><title type="html">什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/isp-1.png&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-23T12:48:57+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>我是陳河穆，HoMuChen，A Software Engineer 這裡是我的個人網站部落格，用來紀錄自己學習的歷程</subtitle><entry><title type="html">什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
 
 &lt;h1 id=&quot;網路的組成&quot;&gt;網路的組成&lt;/h1&gt;
 
 &lt;p&gt;網路連接了世界上數十億的裝置，這些連上網路的裝置就稱為hosts, end-systems，而網路本身由communocation links及packets switches組成，links就是指電話線呀、同軸電纜、光纖、電磁波頻譜這些實際傳送資料的媒介，而資料從一個host到另一個host是被拆分成許多一個一個的packet，藉由link傳送，到達packets switches，每個switch則負責把packet從進來的link選擇一個link傳出去，最後到達目的地．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/isp-2.png&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/isp-2.jpg&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;那到底是誰提供這些links及switches給我們的裝置去連接上呢？就是網際網路服務供應商，Internet Service Provider，ISP．&lt;/p&gt;
 
@@ -20,9 +18,60 @@
 
 &lt;p&gt;現在假設有個全球範圍的服務供應商，各地區的供應商只要接上去就可以了，下層的服務供應商成了上層的客戶，依據流量付費，有錢賺的生意當然就有許多人進來做，許多競爭的供應商加入，彼此也可以互相連結，客戶也可以跟多個供應商合作，如此當有任一供應商服務中斷，也不會影響終端用戶．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/isp-3.png&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/isp-3.jpg&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;於是網路就成了階層式的架構，上下層的客戶關係，同層之間也會互相連接，各個供應商自己負責建設自己的基礎設施及設定路由，封包的傳送可能會有經濟的考量(盡量不走上層供應商，因為要錢，只在同層之間交換)、或者是政治考量(不想封包經過某某國家的設備，或是所以封包都要經過某地，以利監控、阻擋某些來源)．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="ISP" /><summary type="html">網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．</summary></entry><entry><title type="html">利用Docker建立PostgreSQL開發環境</title><link href="https://homuchen.com/posts/docker-postgres-dev-environment/" rel="alternate" type="text/html" title="利用Docker建立PostgreSQL開發環境" /><published>2018-07-25T12:19:15+08:00</published><updated>2018-07-25T12:19:15+08:00</updated><id>https://homuchen.com/posts/docker-postgres-dev-environment</id><content type="html" xml:base="https://homuchen.com/posts/docker-postgres-dev-environment/">&lt;p&gt;首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env&lt;/p&gt;
+&lt;p&gt;於是網路就成了階層式的架構，上下層的客戶關係，同層之間也會互相連接，各個供應商自己負責建設自己的基礎設施及設定路由，封包的傳送可能會有經濟的考量(盡量不走上層供應商，因為要錢，只在同層之間交換)、或者是政治考量(不想封包經過某某國家的設備，或是所以封包都要經過某地，以利監控、阻擋某些來源)．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="ISP" /><summary type="html">網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．</summary></entry><entry><title type="html">[Google Sheet]我如何製作進度表</title><link href="https://homuchen.com/posts/google-sheet-track-progress/" rel="alternate" type="text/html" title="[Google Sheet]我如何製作進度表" /><published>2019-08-14T20:00:00+08:00</published><updated>2019-08-14T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-track-progress</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-track-progress/">&lt;p&gt;追蹤每項任務到目前為止的進度，或每段時間(每天、每個禮拜、或每個月)的努力情況&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-1.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;首先先把任務跟時間輸入進去，如下圖:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-2.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;時間只要輸入兩格就可以了，點住右下角的小藍點往右拉，就會補上一樣間距的時間，也就是說那兩格如果是差一天，之後每一格都會差一天，一個禮拜、一個月亦然．&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代表每項任務需要完成的單位，簡單用數字量化表示，比如一堂課有10週的課程，就輸入10．&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-3.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;每個時段，完成某個任務多少單位，就填在這個地方．&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;C4那格裡的公式是=sum(D4:Z4)/B4，就是簡單地將同個任務右邊的每個時段完成的單位(D4:Z4)加起來，再除以Total Unit(B4)，做完後往下拉，每個任務的progress就都有了．&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-4.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;C4=SPARKLINE(SUM(D4:Z4)/B4,{“charttype”,”bar”;”max”,1}) ，這裡使用了SPARKLINE這個函式，將(4)所計算出來的值丟進去第一個參數，第二個參數{“charttype”,”bar”;”max”,1}代表著我們要的是柱狀圖，且最大值為1，因為進度是一個0–1的數字．&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-5.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加一列Total，將每個任務的Total unit，progress及每周的進度都加總起來，以此為例B11 = SUM(B4:B10)，然後再往右拉，應用到每一格上．&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;製作每時間區間進度條，只是將上述第6步驟的值視覺化:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;先將日期上面的格子全部合併成一格，將D1:N1選起來，從格式 → 合併儲存格 → 全部合併&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-6.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;這一格 =SPARKLINE(D11:N11, {“charttype”,”column”})，ㄧ樣使用SPARKLINE函式，如果想要一條線就=SPARKLINE(D11:N11)就好，看起來就像這樣&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-7.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;大功告成～～🎉🎉🎉&lt;/p&gt;</content><author><name></name></author><category term="GoogleSheet" /><category term="google sheet" /><category term="sparkline" /><summary type="html">追蹤每項任務到目前為止的進度，或每段時間(每天、每個禮拜、或每個月)的努力情況</summary></entry><entry><title type="html">利用Docker建立PostgreSQL開發環境</title><link href="https://homuchen.com/posts/docker-postgres-dev-environment/" rel="alternate" type="text/html" title="利用Docker建立PostgreSQL開發環境" /><published>2018-07-25T12:19:15+08:00</published><updated>2018-07-25T12:19:15+08:00</updated><id>https://homuchen.com/posts/docker-postgres-dev-environment</id><content type="html" xml:base="https://homuchen.com/posts/docker-postgres-dev-environment/">&lt;p&gt;首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -78,7 +127,7 @@ docker run                                  &lt;span class=&quot;se&quot;&gt;\&l
 
 &lt;p&gt;Line notify的流程大致來說是這樣的:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/line-notify.png&quot; alt=&quot;Line Notify Login Flow&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/line-notify.jpg&quot; alt=&quot;Line Notify Login Flow&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;GET https://notify-bot.line.me/oauth/authorize
