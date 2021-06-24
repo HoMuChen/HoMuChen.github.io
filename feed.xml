@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-23T17:30:24+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>我是陳河穆，HoMuChen，A Software Engineer 這裡是我的個人網站部落格，用來紀錄自己學習的歷程</subtitle><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-24T13:14:22+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>我是陳河穆，HoMuChen，A Software Engineer 這裡是我的個人網站部落格，用來紀錄自己學習的歷程</subtitle><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
 
 &lt;p&gt;當然寫server的人可以不照著慣例走，不過如此一來，使用這個API的user可能會很不高興，而這個user可以是公司的客戶，可能是公司內部的其他團隊，也可能是未來的自己！&lt;/p&gt;
 
@@ -26,7 +26,7 @@
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;第一個字就是method，接著為URL跟version，換行後為許多個header，每個header以換行隔開，最後再隔一行之後是body．&lt;/p&gt;
 
-&lt;p&gt;對於HTTP message還不熟的，可以看我之前寫的文章：[Networking] HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/p&gt;
+&lt;p&gt;對於HTTP message還不熟的，可以看我之前寫的文章：&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;[Networking] HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;URL代表著資源，而method是你想要對資源進行的操作，常見的method如下表：&lt;/p&gt;
 
@@ -168,7 +168,307 @@ Content-Length: 11
 
 &lt;hr /&gt;
 
-&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="API Design" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
+&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="API Design" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">A Linux HTTP client tool — curl的介紹及用法</title><link href="https://homuchen.com/posts/linux-http-client-tool-curl-usage/" rel="alternate" type="text/html" title="A Linux HTTP client tool — curl的介紹及用法" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/linux-http-client-tool-curl-usage</id><content type="html" xml:base="https://homuchen.com/posts/linux-http-client-tool-curl-usage/">&lt;p&gt;做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用&lt;a href=&quot;https://www.postman.com/&quot;&gt;postman&lt;/a&gt;這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！&lt;/p&gt;
+
+&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTTP Request message&lt;/li&gt;
+  &lt;li&gt;Curl 的許多參數及用法&lt;/li&gt;
+  &lt;li&gt;如何知道自己curl有沒有寫對&lt;/li&gt;
+  &lt;li&gt;其他常見搭配的用法及使用情境&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/curl-1.jpg&quot; alt=&quot;curl&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;http-request-message&quot;&gt;HTTP Request message&lt;/h1&gt;
+
+&lt;p&gt;作為一個HTTP client，要送出一個request，我們先必須知道送出去的message到底會有哪些東西組成．&lt;/p&gt;
+
+&lt;h2 id=&quot;request-line&quot;&gt;Request line&lt;/h2&gt;
+&lt;p&gt;HTTP message的第一行，由method、URL、version所組成，例如：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET /index.html HTTP/1.1
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;header-lines&quot;&gt;Header lines&lt;/h2&gt;
+&lt;p&gt;第二行開始，每一行是為一個header，field及value由冒號隔開，例如&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;Host: www.google.com
+Connection: Close
+Accept-Language: en
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;body&quot;&gt;body&lt;/h2&gt;
+&lt;p&gt;Header結束空一行之後是為body，method是GET的就沒有body，例如你的表單POST的一些資料就會放在body，可能長這樣：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;name=HoMu&amp;amp;phone=0912345678&amp;amp;email=homu@email.com
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;更多關於HTTP message的說明，可以看我之前寫過的文章：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;[Networking] HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;curl&quot;&gt;Curl&lt;/h1&gt;
+&lt;p&gt;所以我們要如何使用curl指令來產生HTTP message呢？！&lt;/p&gt;
+
+&lt;h2 id=&quot;基本&quot;&gt;基本&lt;/h2&gt;
+&lt;p&gt;URL是必須的，什麼參數都沒有，就產生一個GET message&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-x&quot;&gt;-X&lt;/h2&gt;
+&lt;p&gt;設定你想要的method，例如你想要POST，如：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST api.host.com/v1/users
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-h&quot;&gt;-H&lt;/h2&gt;
+&lt;p&gt;加上headers，用冒號隔開field及value，如果想要多個header就多打幾次-H，如：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST \
+     -H 'Content-Type: application/json' \
+     -H 'X-Whatever-Field: value' \
+     api.host.com/v1/users
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-d&quot;&gt;-d&lt;/h2&gt;
+&lt;p&gt;加上body，比如你想POST JSON string的data給你的API：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d '{&quot;name&quot;: &quot;HoMu&quot;, &quot;age&quot;: 30}'
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果你data很多，想在一個檔案裡頭，也可以使用指定檔案路徑的方式，可以為絕對路徑，也可以是相對的，路徑前必須加上@，例如：-d @./data.json&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d @FILEPATH
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-i&quot;&gt;-i&lt;/h2&gt;
+&lt;p&gt;按下Enter後，你得到會是server傳回來的body，如果你想要看response的header的話，要加上-i&lt;/p&gt;
+
+&lt;h2 id=&quot;-f&quot;&gt;-F&lt;/h2&gt;
+&lt;p&gt;上傳檔案&lt;/p&gt;
+
+&lt;h1 id=&quot;利用nc指令看看自己到了傳了什麼&quot;&gt;利用nc指令看看自己到了傳了什麼&lt;/h1&gt;
+&lt;p&gt;你可能寫了curl指令，不太確定用法，想知道到底curl形成出來的message是不是自己想要的格式，這時可以使用nc指令，在本機端起一個tcp server，在curl這個server，就可以看到HTTP的message囉．&lt;/p&gt;
+
+&lt;h2 id=&quot;nc監聽在port-3000&quot;&gt;nc監聽在port 3000&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;nc -l 3000
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;curl-port-3000&quot;&gt;curl port 3000&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl localhost:3000
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;其他常見使用情況&quot;&gt;其他常見使用情況&lt;/h1&gt;
+&lt;h2 id=&quot;redirect&quot;&gt;redirect&lt;/h2&gt;
+&lt;p&gt;當curl回來的資料是html時，直接在terminal上噴出一堆字也是很難看，這時長搭配redirect io，把回傳回來的html string寫到檔案裡，就可以用瀏覽器打開來了．&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com &amp;gt; gg.html
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;jq&quot;&gt;jq&lt;/h2&gt;
+&lt;p&gt;如果content-type是json的話，可以使用jq command幫你parse，不然一堆json string噴在螢幕上，也是眼花．&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl api.host.com/users | jq
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;今天簡單看了一下HTTP message的格式，以及如何用curl來做出自己想要的HTTP Request，並且知道自己到底有沒有寫對．&lt;/p&gt;
+
+&lt;p&gt;感謝大家的收看，如有錯誤歡迎指正，下次見！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;參考資料&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;jq - &lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><summary type="html">做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用postman這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！</summary></entry><entry><title type="html">HTTP 簡介，以及使用telnet、nc、curl等指令來探索</title><link href="https://homuchen.com/posts/http-introduction-telnet-nc-curl/" rel="alternate" type="text/html" title="HTTP 簡介，以及使用telnet、nc、curl等指令來探索" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-introduction-telnet-nc-curl</id><content type="html" xml:base="https://homuchen.com/posts/http-introduction-telnet-nc-curl/">&lt;p&gt;在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．&lt;/p&gt;
+
+&lt;p&gt;HTTP在OSI模型中，是屬於應用層(Application layer)裡的一個通訊協定，透過傳輸層(Transport layer)的TCP來傳輸資料．&lt;/p&gt;
+
+&lt;p&gt;關於application layer在整個分層架構中扮演什麼樣的角色，可以參考我之前寫的文章: &lt;a href=&quot;/posts/networking-application-layer-overview-what-is-socket&quot;&gt;[Networking]Application Layer Overview，什麼是Socket?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;client-server-protocol&quot;&gt;Client server protocol&lt;/h1&gt;
+&lt;p&gt;HTTP是這樣的，想要發起通訊請求的一方作為client(例如你的瀏覽器)，而server則隨時等候，回應client的請求，client首先會建立一個TCP socket，至於TCP連線是怎麼建立，以及資料如何透過TCP connection在client及server之間傳送，則是另外一回事，並不是HTTP需要考慮的事．&lt;/p&gt;
+
+&lt;p&gt;Client送出一個請求，例如我要看youtube! 而youtube的server收到這個請求，則回應給他youtube的介面，以及一些影片的清單．&lt;/p&gt;
+
+&lt;p&gt;HTTP既然作為client及server之間的語言，他必須有個規範大家才聽得懂，不然有人講中文，有人說英文這樣是無法溝通的．以下就來看看HTTP所傳送的資料到底是長怎樣．&lt;/p&gt;
+
+&lt;h1 id=&quot;http-message&quot;&gt;HTTP message&lt;/h1&gt;
+&lt;p&gt;HTTP message分成兩種，請求(request)及回應(response)，他基本上就是人類可以讀懂的文字．&lt;/p&gt;
+
+&lt;h2 id=&quot;request-message&quot;&gt;Request message&lt;/h2&gt;
+&lt;p&gt;以下一個範例，當你在網址上輸入www.google.com時，你的瀏覽送出去的HTTP message可能會是這樣:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET / HTTP/1.1
+Host: www.google.com
+Connection: Close
+User-agent: Mozilla/5.0
+Accept-language: en
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;第一行為request line，由三個部分組成，method、URL、version，分別以空格隔開．&lt;/p&gt;
+
+&lt;p&gt;常見的method有GET 、POST 、PUT 、DELETE 、HEAD等等，GET非常地常見，通常代表著你想要取得的某些資源，而你想取的資源則用URL表示，最後HTTP/1.1就是版本．&lt;a href=&quot;/posts/&quot;&gt;點我看更多關於method的介紹．&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;第二行開始為header lines，field跟value以冒號(:)隔開，上面例子中有Host、Connection、User-agent、Accept-language四個header，還有許許多多的header各自有各自的意義，Host代表server，Connection: Close是叫server回傳完資料後就把TCP connection close掉，關於persistent connections的部分，之後會再寫一篇文章來詳細探討．&lt;/p&gt;
+
+&lt;h2 id=&quot;request-body&quot;&gt;Request body&lt;/h2&gt;
+&lt;p&gt;如果client需要傳送額外的資料給server，就要把資料放在body的部分，是在header lines之後空一行，比如說我要通過一個API新增一個user&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;POST /users HTTP/1.1
+HOST: api.domain.com
+Content-Type: application/json
+Connection: Keep-alive
+{&quot;name&quot;: &quot;HoMuChen&quot;, &quot;age&quot;: 30, &quot;gender&quot;: &quot;male&quot;}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;response-message&quot;&gt;Response message&lt;/h2&gt;
+&lt;p&gt;以下為一個範例:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;HTTP/1.1 200 OK
+Server: nginx/1.14.0 (Ubuntu)
+Date: Wed, 17 Mar 2021 14:34:29 GMT
+Content-Type: text/html
+Content-Length: 614
+Last-Modified: Wed, 17 Mar 2021 10:27:32 GMT
+&amp;lt;!doctype html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;........
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;status-line&quot;&gt;Status Line&lt;/h2&gt;
+&lt;p&gt;第一行為status line，由三個部分組成，version、status code、phrase，分別以空格隔開．
+Status code 跟 phrase拜表著回應的結果，常見的有：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;200 OK：成功&lt;/li&gt;
+  &lt;li&gt;301 Moved Permanently: 資源不在此URL，通常搭配著Location的response header，告訴我們要去哪裡取得資源．&lt;/li&gt;
+  &lt;li&gt;400 Bad Request: Request有錯，我server看不懂拉．&lt;/li&gt;
+  &lt;li&gt;404 Not Found: 資源不存在．&lt;/li&gt;
+  &lt;li&gt;500 Internal Server Error: Server出事了…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;header-lines&quot;&gt;Header Lines&lt;/h2&gt;
+&lt;p&gt;第二行開始一樣是header lines，我覺得比較重要的是Content-Type，此header就是說明了放在最後body裡的資料是什麼格式，讓client可以去處理．常見的像是text/html、application/json、image/jpeg、application/pdf等等．&lt;/p&gt;
+
+&lt;h2 id=&quot;body&quot;&gt;Body&lt;/h2&gt;
+&lt;p&gt;結束header lines之後，空一行，後面就是response body的部分，放著的就是request想要的資料，上面例子中就是html document，也可能是一張圖片的binary data，或是一個Restful API的json資料．&lt;/p&gt;
+
+&lt;h1 id=&quot;get-your-hands-dirty&quot;&gt;Get your hands dirty&lt;/h1&gt;
+&lt;h2 id=&quot;telnet&quot;&gt;telnet&lt;/h2&gt;
+&lt;p&gt;最後就來使用一些linux command line tool來驗證上面講的對不對吧！&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;telnet www.google.com 80
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用telnet指令，如此一來就跟google建立了一個TCP連線，接下來輸入並且按下Enter&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET / HTTP/1.1
+Host: www.google.com
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-intro-1.jpg&quot; alt=&quot;telnet request response&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;就可以看到google把網頁吐回來拉～～&lt;/p&gt;
+
+&lt;h2 id=&quot;nccurl&quot;&gt;nc、curl&lt;/h2&gt;
+
+&lt;p&gt;除了telnet之後，也可以用nc作為建立tcp連線的指令，這裡我們用nc來建立一個server，-l 監聽在本機的port 3000上&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;nc -l 3000
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;之後在另一個shell，利用curl作為HTTP client，發送HTTP到port 3000&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl localhost:3000
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-intro-2.jpg&quot; alt=&quot;curl response&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;nc的terminal上就會出現這些資訊拉～～也就是curl傳送過來的資料，再來試試看上面開創一個新的user的API call吧&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -XPOST \
+     -H 'Content-Type: application' \
+     -H 'Connection: Keep-alive' \
+     api.domain.com/users \
+     -d '{&quot;name&quot;: &quot;HoMuChen&quot;, &quot;age&quot;: 30, &quot;gender&quot;: &quot;male&quot;}'
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;nc server就會收到下面的資料拉！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-intro-3.jpg&quot; alt=&quot;curl request&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;HTTP作為網路中最常用的client server 通訊協定，簡單地介紹了HTTP message的格式，他是human readable的text format，熟悉他到底傳來傳去到底在傳什麼，可以幫助我們開發網頁應用時更有底氣．&lt;/p&gt;
+
+&lt;p&gt;也可以學習使用一些linux指令，快速的explore別人的API，或是看看自己送出去的request到底有沒有對．&lt;/p&gt;
+
+&lt;p&gt;感謝您的閱讀~期待下次見！&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><category term="nc" /><category term="telnet" /><summary type="html">在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．</summary></entry><entry><title type="html">[Networking]Application Layer Overview，什麼是Socket?</title><link href="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/" rel="alternate" type="text/html" title="[Networking]Application Layer Overview，什麼是Socket?" /><published>2020-05-05T20:00:00+08:00</published><updated>2020-05-05T20:00:00+08:00</updated><id>https://homuchen.com/posts/networking-application-layer-overview-what-is-socket</id><content type="html" xml:base="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/app-layer-1.jpg&quot; alt=&quot;application layer&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;process-communication&quot;&gt;Process communication&lt;/h1&gt;
+&lt;p&gt;上次講過了網路的分層架構之後，接下來要來關注application layer，這一層就是我們應用程式所在的地方，應用程式可能是網頁瀏覽器、電子信箱、Skype等等，每種不同的應用程式會有他們自己的通訊協定，規定應用程式之間該如何交換資料，以及資料的格式，常見的協定例如是HTTP、FTP、DNS等等．&lt;/p&gt;
+
+&lt;p&gt;那application layer的process們之間要怎麼互相通訊呢？就是要利用transport layer所提供的服務．&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-socket&quot;&gt;What is socket?&lt;/h1&gt;
+&lt;p&gt;Application layer的process必須使用transport layer所提供的服務來進行通訊，而這之間的介面就是socket，process只要把資料寫入socket，另一個process從socket讀出資料就好，就是這麼簡單～至於資料是如何在這之間傳遞的，底下的每一層 (transport、network、link、physical layer) 都幫你處理的好好的了，applications就只需要專心做自己的事就好！&lt;/p&gt;
+
+&lt;p&gt;不過在通信之前，必須要知道對方在哪裡，資料才有辦法送到，一個socket就是一組ip:port pair，ip用來分別process所在的機器，而一台機器上會有許多的process，port number則用來分別是想要跟哪個程序溝通，有些服務基本上監聽在一些固定的port上，方便client來連，例如HTTP使用80、FTP用21、SSH使用22等等．&lt;/p&gt;
+
+&lt;p&gt;另外當client要向server通訊時，作業系統會隨機指定一個port給他，如此一來server才會知道訊息要回傳到哪裡．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/app-layer-2.jpg&quot; alt=&quot;application layer&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;transport-layer-service&quot;&gt;Transport layer service&lt;/h1&gt;
+&lt;p&gt;Application programer可以根據自己想打造的應用程式的需求，在兩種transport layer所提供的服務中選擇，一個是TCP，另一個是UDP，以下分別介紹．&lt;/p&gt;
+
+&lt;h2 id=&quot;tcp&quot;&gt;TCP&lt;/h2&gt;
+&lt;p&gt;TCP提供的是一個可靠的服務，確保資料一定會完整無缺的抵達另一端，使用TCP的application programmer不用擔心資料會到不了另一端，專心於application protocal就好．&lt;/p&gt;
+
+&lt;p&gt;TCP有congestion control的機制，當網路變得壅塞的時候，會放慢sender的速度，這是為整個網路著想的設計，但對於application並沒有直接的幫助，可能還會使得速度變慢．&lt;/p&gt;
+
+&lt;h2 id=&quot;udp&quot;&gt;UDP&lt;/h2&gt;
+&lt;p&gt;UDP的服務並不可靠，也就是並不保證資料一定會送達，對於一些應用來說或許是可以接受的，比如即時的通話或視訊，上一秒的聲音或畫面不見就不見了．是ok的．&lt;/p&gt;
+
+&lt;p&gt;另外UDP也沒有flow control跟congestion control，sender想送多快就多快，所以如果有application覺得TCP做太多事了，開發起來綁手綁腳，想要看短的latency，就可以考慮使用TCP，例如google的QUIC就是基於UDP上，再重新自己實現了可靠的傳輸．&lt;/p&gt;
+
+&lt;h1 id=&quot;socket-programming&quot;&gt;Socket programming&lt;/h1&gt;
+&lt;p&gt;之後會寫一篇使用Node.js的net module來實際地使用一下TCP的服務，並在這之上打造自己的application protocol，待續…&lt;/p&gt;
+
+&lt;h1 id=&quot;application-layer-protocols&quot;&gt;Application layer protocols&lt;/h1&gt;
+&lt;p&gt;接著也會陸續會介紹一些常用的application layer的protocol: HTTP、SMTP、DNS，待續…&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="linux" /><category term="socket" /><category term="tcp" /><category term="udp" /><summary type="html"></summary></entry><entry><title type="html">什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
 
 &lt;h1 id=&quot;網路的組成&quot;&gt;網路的組成&lt;/h1&gt;
 
