@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-24T13:14:22+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>我是陳河穆，HoMuChen，A Software Engineer 這裡是我的個人網站部落格，用來紀錄自己學習的歷程</subtitle><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-25T12:16:41+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
 
 &lt;p&gt;當然寫server的人可以不照著慣例走，不過如此一來，使用這個API的user可能會很不高興，而這個user可以是公司的客戶，可能是公司內部的其他團隊，也可能是未來的自己！&lt;/p&gt;
 
@@ -168,133 +168,7 @@ Content-Length: 11
 
 &lt;hr /&gt;
 
-&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="API Design" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">A Linux HTTP client tool — curl的介紹及用法</title><link href="https://homuchen.com/posts/linux-http-client-tool-curl-usage/" rel="alternate" type="text/html" title="A Linux HTTP client tool — curl的介紹及用法" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/linux-http-client-tool-curl-usage</id><content type="html" xml:base="https://homuchen.com/posts/linux-http-client-tool-curl-usage/">&lt;p&gt;做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用&lt;a href=&quot;https://www.postman.com/&quot;&gt;postman&lt;/a&gt;這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！&lt;/p&gt;
-
-&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTTP Request message&lt;/li&gt;
-  &lt;li&gt;Curl 的許多參數及用法&lt;/li&gt;
-  &lt;li&gt;如何知道自己curl有沒有寫對&lt;/li&gt;
-  &lt;li&gt;其他常見搭配的用法及使用情境&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/curl-1.jpg&quot; alt=&quot;curl&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;http-request-message&quot;&gt;HTTP Request message&lt;/h1&gt;
-
-&lt;p&gt;作為一個HTTP client，要送出一個request，我們先必須知道送出去的message到底會有哪些東西組成．&lt;/p&gt;
-
-&lt;h2 id=&quot;request-line&quot;&gt;Request line&lt;/h2&gt;
-&lt;p&gt;HTTP message的第一行，由method、URL、version所組成，例如：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET /index.html HTTP/1.1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;header-lines&quot;&gt;Header lines&lt;/h2&gt;
-&lt;p&gt;第二行開始，每一行是為一個header，field及value由冒號隔開，例如&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;Host: www.google.com
-Connection: Close
-Accept-Language: en
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;body&quot;&gt;body&lt;/h2&gt;
-&lt;p&gt;Header結束空一行之後是為body，method是GET的就沒有body，例如你的表單POST的一些資料就會放在body，可能長這樣：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;name=HoMu&amp;amp;phone=0912345678&amp;amp;email=homu@email.com
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;更多關於HTTP message的說明，可以看我之前寫過的文章：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;[Networking] HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;curl&quot;&gt;Curl&lt;/h1&gt;
-&lt;p&gt;所以我們要如何使用curl指令來產生HTTP message呢？！&lt;/p&gt;
-
-&lt;h2 id=&quot;基本&quot;&gt;基本&lt;/h2&gt;
-&lt;p&gt;URL是必須的，什麼參數都沒有，就產生一個GET message&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-x&quot;&gt;-X&lt;/h2&gt;
-&lt;p&gt;設定你想要的method，例如你想要POST，如：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST api.host.com/v1/users
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-h&quot;&gt;-H&lt;/h2&gt;
-&lt;p&gt;加上headers，用冒號隔開field及value，如果想要多個header就多打幾次-H，如：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST \
-     -H 'Content-Type: application/json' \
-     -H 'X-Whatever-Field: value' \
-     api.host.com/v1/users
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-d&quot;&gt;-d&lt;/h2&gt;
-&lt;p&gt;加上body，比如你想POST JSON string的data給你的API：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d '{&quot;name&quot;: &quot;HoMu&quot;, &quot;age&quot;: 30}'
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果你data很多，想在一個檔案裡頭，也可以使用指定檔案路徑的方式，可以為絕對路徑，也可以是相對的，路徑前必須加上@，例如：-d @./data.json&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d @FILEPATH
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-i&quot;&gt;-i&lt;/h2&gt;
-&lt;p&gt;按下Enter後，你得到會是server傳回來的body，如果你想要看response的header的話，要加上-i&lt;/p&gt;
-
-&lt;h2 id=&quot;-f&quot;&gt;-F&lt;/h2&gt;
-&lt;p&gt;上傳檔案&lt;/p&gt;
-
-&lt;h1 id=&quot;利用nc指令看看自己到了傳了什麼&quot;&gt;利用nc指令看看自己到了傳了什麼&lt;/h1&gt;
-&lt;p&gt;你可能寫了curl指令，不太確定用法，想知道到底curl形成出來的message是不是自己想要的格式，這時可以使用nc指令，在本機端起一個tcp server，在curl這個server，就可以看到HTTP的message囉．&lt;/p&gt;
-
-&lt;h2 id=&quot;nc監聽在port-3000&quot;&gt;nc監聽在port 3000&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;nc -l 3000
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;curl-port-3000&quot;&gt;curl port 3000&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl localhost:3000
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;其他常見使用情況&quot;&gt;其他常見使用情況&lt;/h1&gt;
-&lt;h2 id=&quot;redirect&quot;&gt;redirect&lt;/h2&gt;
-&lt;p&gt;當curl回來的資料是html時，直接在terminal上噴出一堆字也是很難看，這時長搭配redirect io，把回傳回來的html string寫到檔案裡，就可以用瀏覽器打開來了．&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com &amp;gt; gg.html
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;jq&quot;&gt;jq&lt;/h2&gt;
-&lt;p&gt;如果content-type是json的話，可以使用jq command幫你parse，不然一堆json string噴在螢幕上，也是眼花．&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl api.host.com/users | jq
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;今天簡單看了一下HTTP message的格式，以及如何用curl來做出自己想要的HTTP Request，並且知道自己到底有沒有寫對．&lt;/p&gt;
-
-&lt;p&gt;感謝大家的收看，如有錯誤歡迎指正，下次見！&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;參考資料&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;jq - &lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><summary type="html">做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用postman這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！</summary></entry><entry><title type="html">HTTP 簡介，以及使用telnet、nc、curl等指令來探索</title><link href="https://homuchen.com/posts/http-introduction-telnet-nc-curl/" rel="alternate" type="text/html" title="HTTP 簡介，以及使用telnet、nc、curl等指令來探索" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-introduction-telnet-nc-curl</id><content type="html" xml:base="https://homuchen.com/posts/http-introduction-telnet-nc-curl/">&lt;p&gt;在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．&lt;/p&gt;
+&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="API Design" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">HTTP 簡介，以及使用telnet、nc、curl等指令來探索</title><link href="https://homuchen.com/posts/http-introduction-telnet-nc-curl/" rel="alternate" type="text/html" title="HTTP 簡介，以及使用telnet、nc、curl等指令來探索" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-introduction-telnet-nc-curl</id><content type="html" xml:base="https://homuchen.com/posts/http-introduction-telnet-nc-curl/">&lt;p&gt;在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．&lt;/p&gt;
 
 &lt;p&gt;HTTP在OSI模型中，是屬於應用層(Application layer)裡的一個通訊協定，透過傳輸層(Transport layer)的TCP來傳輸資料．&lt;/p&gt;
 
@@ -435,7 +309,309 @@ Host: www.google.com
 
 &lt;p&gt;也可以學習使用一些linux指令，快速的explore別人的API，或是看看自己送出去的request到底有沒有對．&lt;/p&gt;
 
-&lt;p&gt;感謝您的閱讀~期待下次見！&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><category term="nc" /><category term="telnet" /><summary type="html">在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．</summary></entry><entry><title type="html">[Networking]Application Layer Overview，什麼是Socket?</title><link href="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/" rel="alternate" type="text/html" title="[Networking]Application Layer Overview，什麼是Socket?" /><published>2020-05-05T20:00:00+08:00</published><updated>2020-05-05T20:00:00+08:00</updated><id>https://homuchen.com/posts/networking-application-layer-overview-what-is-socket</id><content type="html" xml:base="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/app-layer-1.jpg&quot; alt=&quot;application layer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;感謝您的閱讀~期待下次見！&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><category term="nc" /><category term="telnet" /><summary type="html">在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．</summary></entry><entry><title type="html">A Linux HTTP client tool — curl的介紹及用法</title><link href="https://homuchen.com/posts/linux-http-client-tool-curl-usage/" rel="alternate" type="text/html" title="A Linux HTTP client tool — curl的介紹及用法" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/linux-http-client-tool-curl-usage</id><content type="html" xml:base="https://homuchen.com/posts/linux-http-client-tool-curl-usage/">&lt;p&gt;做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用&lt;a href=&quot;https://www.postman.com/&quot;&gt;postman&lt;/a&gt;這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！&lt;/p&gt;
+
+&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTTP Request message&lt;/li&gt;
+  &lt;li&gt;Curl 的許多參數及用法&lt;/li&gt;
+  &lt;li&gt;如何知道自己curl有沒有寫對&lt;/li&gt;
+  &lt;li&gt;其他常見搭配的用法及使用情境&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/curl-1.jpg&quot; alt=&quot;curl&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;http-request-message&quot;&gt;HTTP Request message&lt;/h1&gt;
+
+&lt;p&gt;作為一個HTTP client，要送出一個request，我們先必須知道送出去的message到底會有哪些東西組成．&lt;/p&gt;
+
+&lt;h2 id=&quot;request-line&quot;&gt;Request line&lt;/h2&gt;
+&lt;p&gt;HTTP message的第一行，由method、URL、version所組成，例如：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET /index.html HTTP/1.1
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;header-lines&quot;&gt;Header lines&lt;/h2&gt;
+&lt;p&gt;第二行開始，每一行是為一個header，field及value由冒號隔開，例如&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;Host: www.google.com
+Connection: Close
+Accept-Language: en
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;body&quot;&gt;body&lt;/h2&gt;
+&lt;p&gt;Header結束空一行之後是為body，method是GET的就沒有body，例如你的表單POST的一些資料就會放在body，可能長這樣：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;name=HoMu&amp;amp;phone=0912345678&amp;amp;email=homu@email.com
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;更多關於HTTP message的說明，可以看我之前寫過的文章：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;[Networking] HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;curl&quot;&gt;Curl&lt;/h1&gt;
+&lt;p&gt;所以我們要如何使用curl指令來產生HTTP message呢？！&lt;/p&gt;
+
+&lt;h2 id=&quot;基本&quot;&gt;基本&lt;/h2&gt;
+&lt;p&gt;URL是必須的，什麼參數都沒有，就產生一個GET message&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-x&quot;&gt;-X&lt;/h2&gt;
+&lt;p&gt;設定你想要的method，例如你想要POST，如：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST api.host.com/v1/users
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-h&quot;&gt;-H&lt;/h2&gt;
+&lt;p&gt;加上headers，用冒號隔開field及value，如果想要多個header就多打幾次-H，如：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST \
+     -H 'Content-Type: application/json' \
+     -H 'X-Whatever-Field: value' \
+     api.host.com/v1/users
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-d&quot;&gt;-d&lt;/h2&gt;
+&lt;p&gt;加上body，比如你想POST JSON string的data給你的API：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d '{&quot;name&quot;: &quot;HoMu&quot;, &quot;age&quot;: 30}'
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果你data很多，想在一個檔案裡頭，也可以使用指定檔案路徑的方式，可以為絕對路徑，也可以是相對的，路徑前必須加上@，例如：-d @./data.json&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d @FILEPATH
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;-i&quot;&gt;-i&lt;/h2&gt;
+&lt;p&gt;按下Enter後，你得到會是server傳回來的body，如果你想要看response的header的話，要加上-i&lt;/p&gt;
+
+&lt;h2 id=&quot;-f&quot;&gt;-F&lt;/h2&gt;
+&lt;p&gt;上傳檔案&lt;/p&gt;
+
+&lt;h1 id=&quot;利用nc指令看看自己到了傳了什麼&quot;&gt;利用nc指令看看自己到了傳了什麼&lt;/h1&gt;
+&lt;p&gt;你可能寫了curl指令，不太確定用法，想知道到底curl形成出來的message是不是自己想要的格式，這時可以使用nc指令，在本機端起一個tcp server，在curl這個server，就可以看到HTTP的message囉．&lt;/p&gt;
+
+&lt;h2 id=&quot;nc監聽在port-3000&quot;&gt;nc監聽在port 3000&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;nc -l 3000
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;curl-port-3000&quot;&gt;curl port 3000&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl localhost:3000
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;其他常見使用情況&quot;&gt;其他常見使用情況&lt;/h1&gt;
+&lt;h2 id=&quot;redirect&quot;&gt;redirect&lt;/h2&gt;
+&lt;p&gt;當curl回來的資料是html時，直接在terminal上噴出一堆字也是很難看，這時長搭配redirect io，把回傳回來的html string寫到檔案裡，就可以用瀏覽器打開來了．&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com &amp;gt; gg.html
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;jq&quot;&gt;jq&lt;/h2&gt;
+&lt;p&gt;如果content-type是json的話，可以使用jq command幫你parse，不然一堆json string噴在螢幕上，也是眼花．&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl api.host.com/users | jq
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;今天簡單看了一下HTTP message的格式，以及如何用curl來做出自己想要的HTTP Request，並且知道自己到底有沒有寫對．&lt;/p&gt;
+
+&lt;p&gt;感謝大家的收看，如有錯誤歡迎指正，下次見！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;參考資料&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;jq - &lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><summary type="html">做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用postman這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！</summary></entry><entry><title type="html">[System Design]Data model: Relational V.S. Document</title><link href="https://homuchen.com/posts/system-design-data-model-relational-vs-document/" rel="alternate" type="text/html" title="[System Design]Data model: Relational V.S. Document" /><published>2020-12-28T20:00:00+08:00</published><updated>2020-12-28T20:00:00+08:00</updated><id>https://homuchen.com/posts/system-design-data-model-relational-vs-document</id><content type="html" xml:base="https://homuchen.com/posts/system-design-data-model-relational-vs-document/">&lt;p&gt;開發應用程式時，時常使用到資料庫，儲存資料並在之後需要時將其取出，如今有許多的資料庫產品可供選擇，提供各種不同的data model及function，在各種使用情境下有不同的表現，開發者根據你的應用程式的需求、資料之間的關係、access pattern、scalability、ACID transaction、fault-tolerance、會有各種不同的適合的選擇．&lt;/p&gt;
+
+&lt;p&gt;接下來只單純討論資料庫提供給我們application programmer們的data model，看看是否在哪些情況比較適合用哪一種，主要是探討relational 及 document這兩種data model.&lt;/p&gt;
+
+&lt;h1 id=&quot;one-to-many-relationship&quot;&gt;One-to-many relationship&lt;/h1&gt;
+&lt;p&gt;讓我們先從一個簡單的例子Todo list開始，假設我們應用程式有使用者，每個使用者有多個Todo，就這麼簡單的一個one-to-many relationship．&lt;/p&gt;
+
+&lt;h2 id=&quot;relational-dbms&quot;&gt;Relational DBMS&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-1.jpg&quot; alt=&quot;database relationship&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如上圖， 一般使用SQL database的做法，會開兩個table，分別是users及todos，並且在todos table有個欄位user_id為foreign key指到user table&lt;/p&gt;
+
+&lt;h2 id=&quot;document-database&quot;&gt;Document database&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-2.jpg&quot; alt=&quot;document in NoSQL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;而在document database中，我們可以將整個資訊存成一個JSON document如上圖，當我們的UI需要呈現某使用者的todo的時候，資料庫只需要一個disk seek就可以拿到全部的資料，對比於relational database，必須在todos table裡找到相對應的rows，再將其與users的row合併．&lt;/p&gt;
+
+&lt;p&gt;可以看到document database用來model one-to-many relationship的資料可說是天生的適合．&lt;/p&gt;
+
+&lt;h1 id=&quot;many-to-one-and-many-to-many-relationship&quot;&gt;Many-to-one and Many-to-many relationship&lt;/h1&gt;
+
+&lt;p&gt;現在假設我們要加入新的功能，使用者可以新增標籤，並把自己的Todo加上一個標籤．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-3.jpg&quot; alt=&quot;Many-to-many relationship&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Relational database按照normalization的做法，就是再多一個tags table，user_id指向Users，而Todos再多一個foreign key指向Tags，如上圖沒什麼問題．&lt;/p&gt;
+
+&lt;p&gt;而Document database則會向下圖這樣:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-4.jpg&quot; alt=&quot;document in NoSQL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;資訊重複出現了好幾個地方，容易造成不一致，比如說我想把Coding改成Programming，除了在tags這個array裡面要修改之外，兩個todo裡的tag也要同時修改才行．&lt;/p&gt;
+
+&lt;h2 id=&quot;document-database就不能做normalization嗎&quot;&gt;Document database就不能做normalization嗎？&lt;/h2&gt;
+&lt;p&gt;當然是可以的！分別儲存三種類型的document: User、Tag、Todo，當某個user要取得他的資料時，就必須分別從三類document找出相對的document，在合併起來．&lt;/p&gt;
+
+&lt;p&gt;那這跟relational database的join有什麼不一樣嗎？&lt;/p&gt;
+
+&lt;p&gt;其實本質上是一樣的！只不過使用relational database時是database幫你做，而使用document database則是要在application code上面自己做，除了會有更多的network round trip time之外，relational database通常也會幫你優化．&lt;/p&gt;
+
+&lt;h1 id=&quot;schema-flexibility&quot;&gt;Schema flexibility&lt;/h1&gt;
+&lt;p&gt;另外他們倆之間常被討論到的不同，就是schema的有無，雖然說document database可以讓你隨意的放入任何的JSON document，但我們通常不會這樣做，一般來說都會把相同類型，有ㄧ樣資料格式的document放在一起，只不過資料庫本身並不會強迫每個document的schema要一模一樣．&lt;/p&gt;
+
+&lt;p&gt;這樣的彈性，讓schema evolution也算方便，資料庫裡可以同時保有舊有的資料和新的資料 ，比如說todo想要新增一個欄位created_at，或是todo原本只能有一個tag，用一個string來表示，現在想要改成可以有多個tag，新新增的資料不在是一個string而是一個array．&lt;/p&gt;
+
+&lt;p&gt;但如此一來application programmer在使用document database時，就不能保證拿到的資料的格式，會出現類似這樣的code:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;created_at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;時間久了，資料可能會越來越亂，一不注意就跑出個error:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cannot read property ‘some_field’ of undefined!&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;該如何管理schema evolution，不讓你的應用程式crash，隨著新功能及新資料的加入能夠compatible，繼續穩定的運行就是另一門學問，有機會可以再來探討．&lt;/p&gt;
+
+&lt;h1 id=&quot;whats-the-situation-preferring-to-schema-less-approach&quot;&gt;What’s the situation preferring to schema-less approach?&lt;/h1&gt;
+&lt;p&gt;其實能有schema最好就有，他是你的資料的一個documentation，一個contract，讓programmer寫起程式來更有信心，不用擔心東擔心西，擔心會不會少了個欄位就讓我的process crash掉，那有什麼樣的情況會更適合使用document database嗎？&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;資料來自外部，格式不是妳能控制的&lt;/li&gt;
+  &lt;li&gt;有非常多種類的object，分別將每個object放到個別的table可能不太適合&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;比如說event sourcing的架構，每種event type都有各自的資料格式，放在relation database的一個table，會有很多欄位是空的，schema定義起來也會非常麻煩．&lt;/p&gt;
+
+&lt;p&gt;再來你的資料來源可能來自爬蟲、外部的API，格式可能改變，所以可以在拿到資料的時候就先存起來，之後讀的時候做處理，不然可能就會丟失部分的資料了．&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;如果你的資料之間的關係不複雜，基本上是one-to-many的，一個self-contained的JSON document能夠包含所有需要的資料，那麼document based的DBMS就相當適合，會有更好的performance，因為資料都在一起．&lt;/p&gt;
+
+&lt;p&gt;Relational database更適合當你的資料之間的關係複雜，有許多many-to-one、many-to-many relationship時，幫你處理join的動作，雖說使用document database也是可以如此，但join的動作必須在application code上執行．&lt;/p&gt;
+
+&lt;p&gt;另外document database也提供更彈性的schema，當你的應用需要面對許多不同且不確定、不是自己能控制的資料格式時，document database也許會有更好的support．&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321&quot;&gt;Designing Data-Intensive Applications Chapter 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/schemaless/&quot;&gt;https://martinfowler.com/articles/schemaless/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="data model" /><category term="system design" /><category term="database" /><summary type="html">開發應用程式時，時常使用到資料庫，儲存資料並在之後需要時將其取出，如今有許多的資料庫產品可供選擇，提供各種不同的data model及function，在各種使用情境下有不同的表現，開發者根據你的應用程式的需求、資料之間的關係、access pattern、scalability、ACID transaction、fault-tolerance、會有各種不同的適合的選擇．</summary></entry><entry><title type="html">如何用create-react-app開發，整合一個或多個API backend server</title><link href="https://homuchen.com/posts/create-react-app-integrate-multiple-api-backend-servers/" rel="alternate" type="text/html" title="如何用create-react-app開發，整合一個或多個API backend server" /><published>2020-08-22T20:00:00+08:00</published><updated>2020-08-22T20:00:00+08:00</updated><id>https://homuchen.com/posts/create-react-app-integrate-multiple-api-backend-servers</id><content type="html" xml:base="https://homuchen.com/posts/create-react-app-integrate-multiple-api-backend-servers/">&lt;p&gt;在開發single page application時，會需要透過api來取得及操作資料，本篇文章將示範如何在使用create-react-app開發時，整合一個甚至是多個backend api server！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/cra-1.jpg&quot; alt=&quot;create-react-app with multiple backend servers&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;create-react-app&quot;&gt;Create-react-app&lt;/h1&gt;
+&lt;p&gt;使用create-react-app時，簡單一個指令npm start 就可以開始開發，此時CRA會起一個webpack dev server來serve static files，通常我們會想要做類似這樣的動作: fetch(‘/todos’) 、fetch(‘/api/todos’) 來跟我們的API server通訊，此時該如何讓CRA的dev server將request proxy到我們想要的API server呢？&lt;/p&gt;
+
+&lt;h1 id=&quot;透過packagejson&quot;&gt;透過package.json&lt;/h1&gt;
+&lt;p&gt;最簡單的方法就是在package.json中加一個proxy欄位，”proxy”: “http://localhost:5000” ，如此一來，所有的request便會被proxy到http://localhost:5000．&lt;/p&gt;
+
+&lt;h2 id=&quot;想解決的問題&quot;&gt;想解決的問題&lt;/h2&gt;
+&lt;p&gt;這樣的做法很簡單但卻不太彈性，通常我們會希望外部的資源可以透過環境變數去控制，而不是寫死在檔案裡面，同一份codebase，透過設置不同的環境變數擁有不同的部署，可能是開發環境、測試環境、或staging、production環境 (https://12factor.net/codebase) ．&lt;/p&gt;
+
+&lt;p&gt;另外將proxy寫在package.json中，只能將所有的ajax導到同一個server，假如您是service oriented architecture或microservices這種架構，可能會有許多的服務，例如data api、search api、authentication api、payment api等等．那該如何將不同的path，例如/api、/search、/auth，route到各自的服務呢？&lt;/p&gt;
+
+&lt;h1 id=&quot;透過setupproxyjs&quot;&gt;透過setupProxy.js&lt;/h1&gt;
+&lt;p&gt;首先需要安裝dependency&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;npm i -D http-proxy-middleware
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;接著在src資料夾裡新增一個檔案setupProxy.js，範例如下:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http-proxy-middleware&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;API_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;API_HOST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SEARCH_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;SEARCH_HOST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AUTH_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;AUTH_HOST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/api&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;API_HOST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  
+  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/search&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SEARCH_HOST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  
+  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/auth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AUTH_HOST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;changeOrigin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如此一來，就能透過環境變數API_HOST、SEARCH_HOST、AUTH_HOST來指向你的服務，變且成功整合多個服務囉！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="react" /><category term="create-react-app" /><summary type="html">在開發single page application時，會需要透過api來取得及操作資料，本篇文章將示範如何在使用create-react-app開發時，整合一個甚至是多個backend api server！</summary></entry><entry><title type="html">[Networking]Application Layer Overview，什麼是Socket?</title><link href="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/" rel="alternate" type="text/html" title="[Networking]Application Layer Overview，什麼是Socket?" /><published>2020-05-05T20:00:00+08:00</published><updated>2020-05-05T20:00:00+08:00</updated><id>https://homuchen.com/posts/networking-application-layer-overview-what-is-socket</id><content type="html" xml:base="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/app-layer-1.jpg&quot; alt=&quot;application layer&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;process-communication&quot;&gt;Process communication&lt;/h1&gt;
 &lt;p&gt;上次講過了網路的分層架構之後，接下來要來關注application layer，這一層就是我們應用程式所在的地方，應用程式可能是網頁瀏覽器、電子信箱、Skype等等，每種不同的應用程式會有他們自己的通訊協定，規定應用程式之間該如何交換資料，以及資料的格式，常見的協定例如是HTTP、FTP、DNS等等．&lt;/p&gt;
@@ -468,7 +644,55 @@ Host: www.google.com
 &lt;p&gt;之後會寫一篇使用Node.js的net module來實際地使用一下TCP的服務，並在這之上打造自己的application protocol，待續…&lt;/p&gt;
 
 &lt;h1 id=&quot;application-layer-protocols&quot;&gt;Application layer protocols&lt;/h1&gt;
-&lt;p&gt;接著也會陸續會介紹一些常用的application layer的protocol: HTTP、SMTP、DNS，待續…&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="linux" /><category term="socket" /><category term="tcp" /><category term="udp" /><summary type="html"></summary></entry><entry><title type="html">什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
+&lt;p&gt;接著也會陸續會介紹一些常用的application layer的protocol: HTTP、SMTP、DNS，待續…&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="linux" /><category term="socket" /><category term="tcp" /><category term="udp" /><summary type="html"></summary></entry><entry><title type="html">RESTful API Design — A practical guide</title><link href="https://homuchen.com/posts/http-restful-api-design-practical-guide/" rel="alternate" type="text/html" title="RESTful API Design — A practical guide" /><published>2020-04-13T20:00:00+08:00</published><updated>2020-04-13T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-restful-api-design-practical-guide</id><content type="html" xml:base="https://homuchen.com/posts/http-restful-api-design-practical-guide/">&lt;p&gt;此篇文章將作為接下來一系列關於Restful API design的目錄．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 1:&lt;/strong&gt; 將介紹什麼是API，何時需要他，以及怎樣才會是一個好的API．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 2:&lt;/strong&gt; 在許多種API中，此系列只專注於HTTP RESTful API，為了更好地學習他，必須先了解HTTP Protocol，知道其中各個組成HTTP Message的每一個部分．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 3:&lt;/strong&gt; 介紹何為RESTful API，為什麼他會長這樣，以及其他許多當你在設計API時會遇到情況，例如: Documentation、Pagination、Rate Limiting、Monitoring．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 4:&lt;/strong&gt; 陸續想到一些相關的議題，再放上來！&lt;/p&gt;
+
+&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Introduction
+    &lt;ul&gt;
+      &lt;li&gt;1.1 What is an API?&lt;/li&gt;
+      &lt;li&gt;1.2 What is a good API?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;HTTP Basics
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;2.1 A HTTP Overview&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/posts/http-methods-which-to-use-and-how-to-use-them-correctly&quot;&gt;2.2 HTTP Methods&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;2.3 HTTP Response codes&lt;/li&gt;
+      &lt;li&gt;2.4 HTTP URI&lt;/li&gt;
+      &lt;li&gt;2.5 HTTP Headers&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/posts/linux-http-client-tool-curl-usage/&quot;&gt;2.6 [Practices] A HTTP client — curl&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RESTful API and some Practical Guidelines
+    &lt;ul&gt;
+      &lt;li&gt;3.1 What is a RESTful API?&lt;/li&gt;
+      &lt;li&gt;3.2 Identifying Resources&lt;/li&gt;
+      &lt;li&gt;3.2 API first&lt;/li&gt;
+      &lt;li&gt;3.3 An Introduction to OpenAPI&lt;/li&gt;
+      &lt;li&gt;3.4 [Practices] How do I manage a large OpenAPI spec file?&lt;/li&gt;
+      &lt;li&gt;3.5 Pagination&lt;/li&gt;
+      &lt;li&gt;3.6 Rate Limiting&lt;/li&gt;
+      &lt;li&gt;3.7 Monitoring&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Advanced Topics
+    &lt;ul&gt;
+      &lt;li&gt;4.1 Connection management&lt;/li&gt;
+      &lt;li&gt;4.2 Resource Modeling: Fine-grained or Coarse-grained?&lt;/li&gt;
+      &lt;li&gt;4.3 Versioning and Compatibility&lt;/li&gt;
+      &lt;li&gt;4.4 How to Response to a Health Check?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="API Design" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry><entry><title type="html">[Networking]什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="[Networking]什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
 
 &lt;h1 id=&quot;網路的組成&quot;&gt;網路的組成&lt;/h1&gt;
 
@@ -490,7 +714,47 @@ Host: www.google.com
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/isp-3.jpg&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;於是網路就成了階層式的架構，上下層的客戶關係，同層之間也會互相連接，各個供應商自己負責建設自己的基礎設施及設定路由，封包的傳送可能會有經濟的考量(盡量不走上層供應商，因為要錢，只在同層之間交換)、或者是政治考量(不想封包經過某某國家的設備，或是所以封包都要經過某地，以利監控、阻擋某些來源)．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="ISP" /><summary type="html">網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．</summary></entry><entry><title type="html">什麼是message queue? 優點及使用場景</title><link href="https://homuchen.com/posts/message-queue-advantages-use-cases/" rel="alternate" type="text/html" title="什麼是message queue? 優點及使用場景" /><published>2019-12-13T20:00:00+08:00</published><updated>2019-12-13T20:00:00+08:00</updated><id>https://homuchen.com/posts/message-queue-advantages-use-cases</id><content type="html" xml:base="https://homuchen.com/posts/message-queue-advantages-use-cases/">&lt;p&gt;在大型網頁應用程式系統中，當我們的服務越來越多，服務之間就需要溝通，透過http restful api，想必大家都一定遇過，或許或多或少也聽過使用message queue，那到底它是什麼？為什麼要用它？以及跟restful api有何不同的使用場景呢？&lt;/p&gt;
+&lt;p&gt;於是網路就成了階層式的架構，上下層的客戶關係，同層之間也會互相連接，各個供應商自己負責建設自己的基礎設施及設定路由，封包的傳送可能會有經濟的考量(盡量不走上層供應商，因為要錢，只在同層之間交換)、或者是政治考量(不想封包經過某某國家的設備，或是所以封包都要經過某地，以利監控、阻擋某些來源)．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="ISP" /><summary type="html">網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．</summary></entry><entry><title type="html">[Networking] 網路的架構，Layered Architecture</title><link href="https://homuchen.com/posts/networking-layered-architecture/" rel="alternate" type="text/html" title="[Networking] 網路的架構，Layered Architecture" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/networking-layered-architecture</id><content type="html" xml:base="https://homuchen.com/posts/networking-layered-architecture/">&lt;p&gt;網路是個如此巨大的工程，要如何架構，才能讓全世界的人通力合作，一起打造這豐富的世界呢？答案就是Layered Artichecture ．&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;layered-architecture&quot;&gt;Layered Architecture&lt;/h1&gt;
+&lt;p&gt;網路的最終目的，就是讓兩個執行在不同機器的程式可以互相溝通、交換資料，例如你的瀏覽器chrome跟網頁伺服器溝通，你手機的Skype跟另一個人的Skype溝通，而這中間，資料經過了重重難關、無數的機器及路由器，這麼多的機器到底是如何一起合作的呢？&lt;/p&gt;
+
+&lt;p&gt;答案就是分層的架構，Layered Architecture，生活中很多地方都可以看到類似的架構，我們以公司內部的信件為例好了，假設現在有一間公司有ABC三間分公司，在A公司的Alice想要寄封信給B公司的Bob，Alice首先寫了信的內容，將之放入信封內，並寫上收件人: B公司的bob，之後將信封交給A公司裡的一個叫做信件部門的部門，信件部門將信封寫上B公司的地址，再將信封交給附近的郵局，而郵局則使用卡車、飛機等運輸工具將信封運到B公司附近的郵局，此郵局再送到B公司，最後B公司的信件部門收到信，將他交給Bob．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/layered-arc-1.jpg&quot; alt=&quot;Layered Architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;分層架構將一項任務分成了許多層，每一層只專心做自己的事，並且使用下一層所提供的服務．&lt;/p&gt;
+
+&lt;p&gt;例如上圖中，人這一層，只專心將內容寫入信中，放進信封袋裡，然後交給下一層的信件部門就好，人這一層使用了信件部門這一層提供的服務，完全無需去擔心這封信最後是如何抵達另一個人那邊去，而信件部門層則使用郵局提供的服務，郵局服務提供了公司的工司的寄送，而信件部門就只專心將信件交給公司裡的某某人．&lt;/p&gt;
+
+&lt;h1 id=&quot;layers-in-the-internet&quot;&gt;Layers in the Internet&lt;/h1&gt;
+&lt;p&gt;網路世界的分層如下圖，根據OSI Model應該是有七層，但就目前常用，只介紹此五層，Application layer、Transmission layer、Network layer、Link layer、Physical layer．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/layered-arc-2.jpg&quot; alt=&quot;Layered Architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;application-layer&quot;&gt;Application layer&lt;/h2&gt;
+&lt;p&gt;這裡就是我們的應用程式所在地方，根據你的程式所要達成的目的，各自執行著自己的協議．例如網頁瀏覽器跟伺服器，一個說給我看某某網頁首頁，伺服器就說，好！給你！這之間資料交換的格式及方法，就是由HTTP協議所規範，只要瀏覽器跟伺服器都遵守HTTP的規範就能互相溝通．電子信箱服務使用的則是SMTP，查詢網域ip位置的是DNS，傳輸檔案的FTP等等．&lt;/p&gt;
+
+&lt;p&gt;而所有的application都必須依賴使用下層transmission layer的服務，transmission laye會負責applications之間的通訊，application只需要相信transmission layer會將信息傳遞給另一個application，專心做自己的事就好！&lt;/p&gt;
+
+&lt;h2 id=&quot;transmission-layer&quot;&gt;Transmission layer&lt;/h2&gt;
+&lt;p&gt;Transmission layer protocol負責傳遞信息於application之間，一台機器上可能有多個application，而transmission layer protocol則是用port number來分辨到底目標是哪個process．&lt;/p&gt;
+
+&lt;p&gt;目前網路世界中有兩種Transmission layer protocol，分別是TCP及UDP，TCP提供的服務保證資料一定會完整無誤地抵達目的地，並且還有flow control及congestion control．而UDP則沒做這麼多事，資料可能會丟失．&lt;/p&gt;
+
+&lt;h2 id=&quot;network-layer&quot;&gt;Network layer&lt;/h2&gt;
+&lt;p&gt;每台連上網路的機器都會有個地址，有就是IP位址，Network layer中的唯一一個protocol就是IP protocol，負責將資料從一個IP送到另一個IP，也就是從一台host到另一台host！這之間會經過許多的router，每個執行IP protacol的router會決定要將封包傳遞給哪下一個router來抵達目的地，但並不保證封包一定會抵達．&lt;/p&gt;
+
+&lt;h2 id=&quot;link-layer&quot;&gt;Link layer&lt;/h2&gt;
+&lt;p&gt;以上兩層當web dev以來，也從來沒碰過，哈！不熟，如果有興趣的人在自己去找資料囉～&lt;/p&gt;
+
+&lt;h2 id=&quot;physical-layer&quot;&gt;Physical layer&lt;/h2&gt;
+&lt;p&gt;這邊就是訊息從0101的bits轉換成真正物理世界裡存在的傳播媒介的地方了，可能是電磁波四處亂射，也可以是光走在光纖裡，或是電走在電線裡．&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;為了讓兩個在不同host上的process能夠通訊，首先你要指出你想要的通訊的process在什麼地方，透過ip:port這個pair，network layer會負責將信息送到擁有這個ip的機器，但卻不保證資料不會丟失，而network layer則透過port知道要將資料傳給哪個process，並且如果是TCP的話，會保證資料完好無缺地抵達另一個process那邊 (TCP可靠的傳輸建立在不可靠的IP上，酷吧！)，最後application根據自己的邏輯，來決定資料的格式，如何及何時發送和接收．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="layered architecture" /><summary type="html">網路是個如此巨大的工程，要如何架構，才能讓全世界的人通力合作，一起打造這豐富的世界呢？答案就是Layered Artichecture ．</summary></entry><entry><title type="html">什麼是message queue? 優點及使用場景</title><link href="https://homuchen.com/posts/message-queue-advantages-use-cases/" rel="alternate" type="text/html" title="什麼是message queue? 優點及使用場景" /><published>2019-12-13T20:00:00+08:00</published><updated>2019-12-13T20:00:00+08:00</updated><id>https://homuchen.com/posts/message-queue-advantages-use-cases</id><content type="html" xml:base="https://homuchen.com/posts/message-queue-advantages-use-cases/">&lt;p&gt;在大型網頁應用程式系統中，當我們的服務越來越多，服務之間就需要溝通，透過http restful api，想必大家都一定遇過，或許或多或少也聽過使用message queue，那到底它是什麼？為什麼要用它？以及跟restful api有何不同的使用場景呢？&lt;/p&gt;
 
 &lt;h1 id=&quot;什麼是message-queue&quot;&gt;什麼是message queue?&lt;/h1&gt;
 
@@ -540,314 +804,4 @@ Host: www.google.com
 &lt;h1 id=&quot;tutorial&quot;&gt;Tutorial&lt;/h1&gt;
 &lt;p&gt;之前有寫過的使用&lt;a href=&quot;/posts/asynchronous-task-queue-using-redis-and-kue-js&quot;&gt;Redis來當作message broker的示範&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;如果你連Redis都不想架！可以使用GCP的服務Pub/Sub，上GCP的網站點一點，開箱就用！&lt;/p&gt;</content><author><name></name></author><category term="Web Development" /><category term="message queue" /><summary type="html">在大型網頁應用程式系統中，當我們的服務越來越多，服務之間就需要溝通，透過http restful api，想必大家都一定遇過，或許或多或少也聽過使用message queue，那到底它是什麼？為什麼要用它？以及跟restful api有何不同的使用場景呢？</summary></entry><entry><title type="html">快速擁有一個Asynchronous Task Queue，使用Redis and Kue.js</title><link href="https://homuchen.com/posts/asynchronous-task-queue-using-redis-and-kue-js/" rel="alternate" type="text/html" title="快速擁有一個Asynchronous Task Queue，使用Redis and Kue.js" /><published>2019-10-30T20:00:00+08:00</published><updated>2019-10-30T20:00:00+08:00</updated><id>https://homuchen.com/posts/asynchronous-task-queue-using-redis-and-kue-js</id><content type="html" xml:base="https://homuchen.com/posts/asynchronous-task-queue-using-redis-and-kue-js/">&lt;p&gt;這是篇教你如何在node.js環境下，快速擁有一個Task queue的tutorial，如果想了解什麼是message queue，以及為什麼跟什麼時候要使用它，可以參考我的&lt;a href=&quot;/posts/message-queue-advantages-use-cases&quot;&gt;另外一篇文章&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;部署Redis，使用Docker，在本地起一台Redis&lt;/li&gt;
-  &lt;li&gt;介紹Kue.js&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;部署redis&quot;&gt;部署Redis&lt;/h1&gt;
-
-&lt;p&gt;先準備一個shell script run_redis.sh ，記錄下docker指令，以便之後繼續使用，內容指令如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-docker run                        &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;                              &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6379:6379                    &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;/redis_data:/data        &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; my-redis                 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  redis
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;解釋一下這個docker指令各個參數的意義:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;-d 在背景執行&lt;/li&gt;
-  &lt;li&gt;-p 6379:6379將容器內的port:6379映射到本機的port:6379&lt;/li&gt;
-  &lt;li&gt;-v 將容器內的檔案掛載到本機，此處將容器內存放redis 資料的資料夾 /data 掛載到$PWD/reids_data，也就是當前目錄的redis_data資料夾&lt;/li&gt;
-  &lt;li&gt;redis為image的名稱，可以用例如redis:latest, redis:5.0，後面加上版本號，沒加就是latest，可用的版本及latest是哪一版可以從此連結查詢https://hub.docker.com/_/redis/&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;執行完之後執行 docker ps 就可以看到container的資訊如下&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/kue-1.jpg&quot; alt=&quot;docker ps&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;介紹kuejs&quot;&gt;介紹Kue.js&lt;/h1&gt;
-
-&lt;h2 id=&quot;安裝&quot;&gt;安裝&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm install kue&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;connection&quot;&gt;Connection&lt;/h2&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;kue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;kue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;kue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createQueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;預設會連接到127.0.01:6379的redis，如果想要改變，可以&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;kue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createQueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;redis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;10.0.50.20&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// if provided select a non-default redis db&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// see https://github.com/mranney/node_redis#rediscreateclient&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;produce-message&quot;&gt;Produce message&lt;/h2&gt;
-
-&lt;p&gt;連接到message broker後，就可以開始送message過去拉～&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;welcome email for tj&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;tj@learnboost.com&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;welcome-email&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;這裡我們發送了一個message到名為email的queue裡，內容就是個JSON object.&lt;/p&gt;
-
-&lt;h2 id=&quot;consume-message&quot;&gt;Consume message&lt;/h2&gt;
-
-&lt;p&gt;接著我們就可以在別的地方，接收發出去的訊息及處理拉&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;doSomethingWithData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//acknowledge this message&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;queue.process接收兩個參數，第一個是queue的名字，這裡是以’email’為例，第二個參數是一個callback function，他有兩個參數，分別是job跟done，job.data就是我們剛剛發送出去的message，而done是一個function，當你確定這個message已經處理完的時候可以執行done()&lt;/p&gt;
-
-&lt;h2 id=&quot;concurrency-controll&quot;&gt;Concurrency controll&lt;/h2&gt;
-
-&lt;p&gt;上面例子中，一次只會接收一個message直到你ack這個message，如果你的工作是IO密集的話，你可能會想一次同時處理多個message，此時可以在process function中，加入第二參數:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;doSomethingWithData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//acknowledge this message&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;這樣一來，這個worker process同時就可以接收處理10個message!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;以上是簡單地介紹如何連接到message broker，以及產生和消耗信息，完整的說明文件及更多功能用法，可以到github上看看:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Automattic/kue&quot;&gt;Automattic/kue&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Web Development" /><category term="message queue" /><category term="node.js" /><category term="redis" /><summary type="html">這是篇教你如何在node.js環境下，快速擁有一個Task queue的tutorial，如果想了解什麼是message queue，以及為什麼跟什麼時候要使用它，可以參考我的另外一篇文章!</summary></entry><entry><title type="html">[Google Sheet]我如何製作進度表</title><link href="https://homuchen.com/posts/google-sheet-track-progress/" rel="alternate" type="text/html" title="[Google Sheet]我如何製作進度表" /><published>2019-08-14T20:00:00+08:00</published><updated>2019-08-14T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-track-progress</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-track-progress/">&lt;p&gt;追蹤每項任務到目前為止的進度，或每段時間(每天、每個禮拜、或每個月)的努力情況&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-1.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;首先先把任務跟時間輸入進去，如下圖:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-2.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;時間只要輸入兩格就可以了，點住右下角的小藍點往右拉，就會補上一樣間距的時間，也就是說那兩格如果是差一天，之後每一格都會差一天，一個禮拜、一個月亦然．&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;代表每項任務需要完成的單位，簡單用數字量化表示，比如一堂課有10週的課程，就輸入10．&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-3.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;每個時段，完成某個任務多少單位，就填在這個地方．&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;C4那格裡的公式是=sum(D4:Z4)/B4，就是簡單地將同個任務右邊的每個時段完成的單位(D4:Z4)加起來，再除以Total Unit(B4)，做完後往下拉，每個任務的progress就都有了．&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-4.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;C4=SPARKLINE(SUM(D4:Z4)/B4,{“charttype”,”bar”;”max”,1}) ，這裡使用了SPARKLINE這個函式，將(4)所計算出來的值丟進去第一個參數，第二個參數{“charttype”,”bar”;”max”,1}代表著我們要的是柱狀圖，且最大值為1，因為進度是一個0–1的數字．&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-5.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;增加一列Total，將每個任務的Total unit，progress及每周的進度都加總起來，以此為例B11 = SUM(B4:B10)，然後再往右拉，應用到每一格上．&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;製作每時間區間進度條，只是將上述第6步驟的值視覺化:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;先將日期上面的格子全部合併成一格，將D1:N1選起來，從格式 → 合併儲存格 → 全部合併&lt;/p&gt;
-
-        &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-6.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;這一格 =SPARKLINE(D11:N11, {“charttype”,”column”})，ㄧ樣使用SPARKLINE函式，如果想要一條線就=SPARKLINE(D11:N11)就好，看起來就像這樣&lt;/p&gt;
-
-        &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/track-progress-7.jpg&quot; alt=&quot;google sheet chart&quot; /&gt;&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;大功告成～～🎉🎉🎉&lt;/p&gt;</content><author><name></name></author><category term="GoogleSheet" /><category term="google sheet" /><category term="sparkline" /><summary type="html">追蹤每項任務到目前為止的進度，或每段時間(每天、每個禮拜、或每個月)的努力情況</summary></entry><entry><title type="html">利用Docker建立PostgreSQL開發環境</title><link href="https://homuchen.com/posts/docker-postgres-dev-environment/" rel="alternate" type="text/html" title="利用Docker建立PostgreSQL開發環境" /><published>2018-07-25T12:19:15+08:00</published><updated>2018-07-25T12:19:15+08:00</updated><id>https://homuchen.com/posts/docker-postgres-dev-environment</id><content type="html" xml:base="https://homuchen.com/posts/docker-postgres-dev-environment/">&lt;p&gt;首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;export PG_PORT=5432
-export PG_USER=admin
-export PG_PWD=secretpwd
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;再來是一個shell script run_postgres.sh ，記錄下docker指令，以便之後繼續使用&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-docker run                                  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;                                        &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PG_PORT&lt;/span&gt;:5432                          &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;POSTGRES_USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PG_USER&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;               &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PG_PASSWORD&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;       &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/pgdata&quot;&lt;/span&gt;:/var/lib/postgresql/data &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  postgres
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;解釋一下這個docker指令各個參數的意義:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;-d 在背景執行&lt;/li&gt;
-  &lt;li&gt;-p $PG_PORT:5432 將容器內的5432port映射到本機的$PG_PORT&lt;/li&gt;
-  &lt;li&gt;-e 注入環境變數到容器裏，有哪些環境變數可用，可以參考官方連結https://hub.docker.com/_/postgres/&lt;/li&gt;
-  &lt;li&gt;-v 將容器內的檔案掛載到本機，此處將容器內存放postgres 資料的資料夾 /var/lib/postgresql/data 掛載到$PWD/pgdata，也就是當前目錄的pgdata資料夾&lt;/li&gt;
-  &lt;li&gt;postgres為image的名稱，可以用例如postgres:latest, postgres:9.6，後面加上版本號，沒加就是latest，可用的版本及latest是哪一版可以從此連結查詢https://hub.docker.com/_/postgres/&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;執行完之後執行 docker ps 就可以看到container的資訊如下&lt;/p&gt;
-
-&lt;p&gt;接下來要進去容器裡面create table，下下sql指令的話，就是執行&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -it {container id} psql -U $PG_USER&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;PG_USER是我們的環境變數，預設的DB(此處為admin)的名字就跟PG_USER一樣，進去容器之後看到如下，就可以開始使用拉～&lt;/p&gt;</content><author><name></name></author><category term="Web Development" /><category term="docker" /><category term="postgres" /><summary type="html">首先先將需要的configuration variable放到環境變數裏，在這裡就是我們的PostgreSQL database server要起在哪一個port，user，password，db等等，準備好你的 dev.env檔案如下，然後執行 . ./dev.env</summary></entry><entry><title type="html">使用Node.js + Express整合Line Notify通知服務</title><link href="https://homuchen.com/posts/express-line-notify-service/" rel="alternate" type="text/html" title="使用Node.js + Express整合Line Notify通知服務" /><published>2017-12-28T20:00:00+08:00</published><updated>2017-12-28T20:00:00+08:00</updated><id>https://homuchen.com/posts/express-line-notify-service</id><content type="html" xml:base="https://homuchen.com/posts/express-line-notify-service/">&lt;p&gt;快速簡單地使用一個express的middleware完成line notify的oauth2流程，取得access_token來做後續的消息推送&lt;/p&gt;
-
-&lt;p&gt;使用line notify可以簡單地讓網站開發者推送訊息到使用者的line裡，雖不像line bot可以跟使用者做更多的互動，但如果只是要單方面的的發送訊息，使用line notify就足矣，而且還不像line bot的push api要收費，這個不用錢～&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;登入流程&quot;&gt;登入流程&lt;/h1&gt;
-
-&lt;p&gt;Line notify的流程大致來說是這樣的:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/line-notify.jpg&quot; alt=&quot;Line Notify Login Flow&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;GET https://notify-bot.line.me/oauth/authorize
-    &lt;ul&gt;
-      &lt;li&gt;帶著你的client id及redirect_uri，GET上面的url，使用者就會被導到line的登入頁面&lt;/li&gt;
-      &lt;li&gt;登入成功之後，line那邊會倒回上述的redirect_uri並且query string帶著code
-2.POST https://notify-bot.line.me/oauth/token&lt;/li&gt;
-      &lt;li&gt;將第一步得到的code，post到上述url，就可以拿到一個token&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;POST https://notify-bot.line.me/api/notify
-    &lt;ul&gt;
-      &lt;li&gt;帶著上面步驟所取得的token及訊息，post上面的url，使用者就可以收到消息拉～&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;套件使用&quot;&gt;套件使用&lt;/h1&gt;
-
-&lt;p&gt;接下來要實作以上流程覺得好麻煩喔～小的已將上述前兩個步驟寫成一個express的middleware供大家使用，說明如下：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;npm install express-line-notify&lt;/li&gt;
-  &lt;li&gt;傳入config物件，需要clientId及clientSecret&lt;/li&gt;
-  &lt;li&gt;選個endpoint來走以上oauth2流程，記得endpoint要加在callbackurl裡
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lineNotify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express-line-notify&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;clientId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your-client-id&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;clientSecret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your-client-secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/endpoint_u_want_to_use&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;lineNotify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;otherMiddleware&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;4.如上實作之後，便可以在otherMiddleware裡的req[‘line-notify-access-token’]拿到token拉～就可開發者要怎麼使用了&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;最後附上git hub repository，有較為詳盡的使用說明．&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/HoMuChen/express-line-notify&quot;&gt;HoMuChen/express-line-notify&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="express" /><category term="node.js" /><category term="line notify" /><category term="middleware" /><summary type="html">快速簡單地使用一個express的middleware完成line notify的oauth2流程，取得access_token來做後續的消息推送</summary></entry></feed>
+&lt;p&gt;如果你連Redis都不想架！可以使用GCP的服務Pub/Sub，上GCP的網站點一點，開箱就用！&lt;/p&gt;</content><author><name></name></author><category term="Web Development" /><category term="message queue" /><summary type="html">在大型網頁應用程式系統中，當我們的服務越來越多，服務之間就需要溝通，透過http restful api，想必大家都一定遇過，或許或多或少也聽過使用message queue，那到底它是什麼？為什麼要用它？以及跟restful api有何不同的使用場景呢？</summary></entry></feed>
