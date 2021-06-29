@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-28T16:25:33+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項</title><link href="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/" rel="alternate" type="text/html" title="[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項" /><published>2021-06-26T20:00:00+08:00</published><updated>2021-06-26T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/">&lt;h1 id=&quot;為什麼要用下拉式選單&quot;&gt;為什麼要用下拉式選單&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-29T23:05:59+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項</title><link href="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/" rel="alternate" type="text/html" title="[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項" /><published>2021-06-26T20:00:00+08:00</published><updated>2021-06-26T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/">&lt;h1 id=&quot;為什麼要用下拉式選單&quot;&gt;為什麼要用下拉式選單&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;新增資料更為快速，無需重複填寫&lt;/li&gt;
@@ -41,7 +41,55 @@
 
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 
-&lt;p&gt;建立一個下拉選單，選項可以自行輸入，也可以從既有資料的範圍中建立，如此一來當資料有變動時，下拉選單的選項就可以自動更新，而不需要自己再重新輸入新的選項!&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><summary type="html">為什麼要用下拉式選單</summary></entry><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
+&lt;p&gt;建立一個下拉選單，選項可以自行輸入，也可以從既有資料的範圍中建立，如此一來當資料有變動時，下拉選單的選項就可以自動更新，而不需要自己再重新輸入新的選項!&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><summary type="html">為什麼要用下拉式選單</summary></entry><entry><title type="html">RESTful API Design — A practical guide</title><link href="https://homuchen.com/posts/http-restful-api-design-practical-guide/" rel="alternate" type="text/html" title="RESTful API Design — A practical guide" /><published>2021-04-13T20:00:00+08:00</published><updated>2021-04-13T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-restful-api-design-practical-guide</id><content type="html" xml:base="https://homuchen.com/posts/http-restful-api-design-practical-guide/">&lt;p&gt;此篇文章將作為接下來一系列關於Restful API design的目錄．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 1:&lt;/strong&gt; 將介紹什麼是API，何時需要他，以及怎樣才會是一個好的API．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 2:&lt;/strong&gt; 在許多種API中，此系列只專注於HTTP RESTful API，為了更好地學習他，必須先了解HTTP Protocol，知道其中各個組成HTTP Message的每一個部分．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 3:&lt;/strong&gt; 介紹何為RESTful API，為什麼他會長這樣，以及其他許多當你在設計API時會遇到情況，例如: Documentation、Pagination、Rate Limiting、Monitoring．&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 4:&lt;/strong&gt; 陸續想到一些相關的議題，再放上來！&lt;/p&gt;
+
+&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Introduction
+    &lt;ul&gt;
+      &lt;li&gt;1.1 What is an API?&lt;/li&gt;
+      &lt;li&gt;1.2 What is a good API?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;HTTP Basics
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;2.1 A HTTP Overview&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/posts/http-methods-which-to-use-and-how-to-use-them-correctly&quot;&gt;2.2 HTTP Methods&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;2.3 HTTP Response codes&lt;/li&gt;
+      &lt;li&gt;2.4 HTTP URI&lt;/li&gt;
+      &lt;li&gt;2.5 HTTP Headers&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/posts/linux-http-client-tool-curl-usage/&quot;&gt;2.6 [Practices] A HTTP client — curl&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RESTful API and some Practical Guidelines
+    &lt;ul&gt;
+      &lt;li&gt;3.1 What is a RESTful API?&lt;/li&gt;
+      &lt;li&gt;3.2 Identifying Resources&lt;/li&gt;
+      &lt;li&gt;3.2 API first&lt;/li&gt;
+      &lt;li&gt;3.3 An Introduction to OpenAPI&lt;/li&gt;
+      &lt;li&gt;3.4 [Practices] How do I manage a large OpenAPI spec file?&lt;/li&gt;
+      &lt;li&gt;3.5 Pagination&lt;/li&gt;
+      &lt;li&gt;3.6 Rate Limiting&lt;/li&gt;
+      &lt;li&gt;3.7 Monitoring&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Advanced Topics
+    &lt;ul&gt;
+      &lt;li&gt;4.1 Connection management&lt;/li&gt;
+      &lt;li&gt;4.2 Resource Modeling: Fine-grained or Coarse-grained?&lt;/li&gt;
+      &lt;li&gt;4.3 Versioning and Compatibility&lt;/li&gt;
+      &lt;li&gt;4.4 How to Response to a Health Check?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="API Design" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
 
 &lt;p&gt;當然寫server的人可以不照著慣例走，不過如此一來，使用這個API的user可能會很不高興，而這個user可以是公司的客戶，可能是公司內部的其他團隊，也可能是未來的自己！&lt;/p&gt;
 
@@ -687,55 +735,7 @@ Host: www.google.com
 &lt;p&gt;之後會寫一篇使用Node.js的net module來實際地使用一下TCP的服務，並在這之上打造自己的application protocol，待續…&lt;/p&gt;
 
 &lt;h1 id=&quot;application-layer-protocols&quot;&gt;Application layer protocols&lt;/h1&gt;
-&lt;p&gt;接著也會陸續會介紹一些常用的application layer的protocol: HTTP、SMTP、DNS，待續…&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="linux" /><category term="socket" /><category term="tcp" /><category term="udp" /><summary type="html"></summary></entry><entry><title type="html">RESTful API Design — A practical guide</title><link href="https://homuchen.com/posts/http-restful-api-design-practical-guide/" rel="alternate" type="text/html" title="RESTful API Design — A practical guide" /><published>2020-04-13T20:00:00+08:00</published><updated>2020-04-13T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-restful-api-design-practical-guide</id><content type="html" xml:base="https://homuchen.com/posts/http-restful-api-design-practical-guide/">&lt;p&gt;此篇文章將作為接下來一系列關於Restful API design的目錄．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 1:&lt;/strong&gt; 將介紹什麼是API，何時需要他，以及怎樣才會是一個好的API．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 2:&lt;/strong&gt; 在許多種API中，此系列只專注於HTTP RESTful API，為了更好地學習他，必須先了解HTTP Protocol，知道其中各個組成HTTP Message的每一個部分．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 3:&lt;/strong&gt; 介紹何為RESTful API，為什麼他會長這樣，以及其他許多當你在設計API時會遇到情況，例如: Documentation、Pagination、Rate Limiting、Monitoring．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 4:&lt;/strong&gt; 陸續想到一些相關的議題，再放上來！&lt;/p&gt;
-
-&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;Introduction
-    &lt;ul&gt;
-      &lt;li&gt;1.1 What is an API?&lt;/li&gt;
-      &lt;li&gt;1.2 What is a good API?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;HTTP Basics
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;2.1 A HTTP Overview&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;/posts/http-methods-which-to-use-and-how-to-use-them-correctly&quot;&gt;2.2 HTTP Methods&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;2.3 HTTP Response codes&lt;/li&gt;
-      &lt;li&gt;2.4 HTTP URI&lt;/li&gt;
-      &lt;li&gt;2.5 HTTP Headers&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;/posts/linux-http-client-tool-curl-usage/&quot;&gt;2.6 [Practices] A HTTP client — curl&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;RESTful API and some Practical Guidelines
-    &lt;ul&gt;
-      &lt;li&gt;3.1 What is a RESTful API?&lt;/li&gt;
-      &lt;li&gt;3.2 Identifying Resources&lt;/li&gt;
-      &lt;li&gt;3.2 API first&lt;/li&gt;
-      &lt;li&gt;3.3 An Introduction to OpenAPI&lt;/li&gt;
-      &lt;li&gt;3.4 [Practices] How do I manage a large OpenAPI spec file?&lt;/li&gt;
-      &lt;li&gt;3.5 Pagination&lt;/li&gt;
-      &lt;li&gt;3.6 Rate Limiting&lt;/li&gt;
-      &lt;li&gt;3.7 Monitoring&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Advanced Topics
-    &lt;ul&gt;
-      &lt;li&gt;4.1 Connection management&lt;/li&gt;
-      &lt;li&gt;4.2 Resource Modeling: Fine-grained or Coarse-grained?&lt;/li&gt;
-      &lt;li&gt;4.3 Versioning and Compatibility&lt;/li&gt;
-      &lt;li&gt;4.4 How to Response to a Health Check?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="API Design" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry><entry><title type="html">[Networking]什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="[Networking]什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
+&lt;p&gt;接著也會陸續會介紹一些常用的application layer的protocol: HTTP、SMTP、DNS，待續…&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="linux" /><category term="socket" /><category term="tcp" /><category term="udp" /><summary type="html"></summary></entry><entry><title type="html">[Networking]什麼是網路？網路的組成及網路服務供應商 ISP</title><link href="https://homuchen.com/posts/what-is-networking-and-isp/" rel="alternate" type="text/html" title="[Networking]什麼是網路？網路的組成及網路服務供應商 ISP" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-networking-and-isp</id><content type="html" xml:base="https://homuchen.com/posts/what-is-networking-and-isp/">&lt;p&gt;網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．&lt;/p&gt;
 
 &lt;h1 id=&quot;網路的組成&quot;&gt;網路的組成&lt;/h1&gt;
 
