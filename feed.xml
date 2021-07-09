@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-06-29T23:05:59+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項</title><link href="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/" rel="alternate" type="text/html" title="[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項" /><published>2021-06-26T20:00:00+08:00</published><updated>2021-06-26T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/">&lt;h1 id=&quot;為什麼要用下拉式選單&quot;&gt;為什麼要用下拉式選單&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-09T16:57:53+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google sheet]我如何製作股票損益表，自動抓取最新股價</title><link href="https://homuchen.com/posts/google-sheet-stock-income-statement/" rel="alternate" type="text/html" title="[Google sheet]我如何製作股票損益表，自動抓取最新股價" /><published>2021-07-09T16:30:00+08:00</published><updated>2021-07-09T16:30:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-stock-income-statement</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-stock-income-statement/">&lt;p&gt;此篇文章將分享我是如何製作我持有股票的未實現損益表，看起來的成果如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-1.jpg&quot; alt=&quot;google sheet: stock income statement&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;主要功能&quot;&gt;主要功能&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;自動更新股價&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;根據最新股價，計算損益，並以顏色區分損或益&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;近一年的股價折線圖&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h1&gt;
+
+&lt;h2 id=&quot;製作表格&quot;&gt;製作表格&lt;/h2&gt;
+
+&lt;p&gt;首先填入表頭欄位，在這裡我們會有:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;股票代號&lt;/strong&gt;、&lt;strong&gt;名稱&lt;/strong&gt;、&lt;strong&gt;近一年股價&lt;/strong&gt;、&lt;strong&gt;現價&lt;/strong&gt;、&lt;strong&gt;漲跌&lt;/strong&gt;、
+&lt;strong&gt;成交量&lt;/strong&gt;、&lt;strong&gt;持有張數&lt;/strong&gt;、&lt;strong&gt;市值&lt;/strong&gt;、&lt;strong&gt;持有成本&lt;/strong&gt;、&lt;strong&gt;損益&lt;/strong&gt;、&lt;strong&gt;損益百分比&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-2.jpg&quot; alt=&quot;google sheet: blank data table&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;每新增一檔股票，需要我們自己填入的有&lt;strong&gt;股票代號&lt;/strong&gt;、&lt;strong&gt;名稱&lt;/strong&gt;，&lt;strong&gt;持有張數&lt;/strong&gt;、&lt;strong&gt;持有成本&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;股票代號&lt;/strong&gt;: 爲後續&lt;strong&gt;GOOGLEFINANCE&lt;/strong&gt;函式的參數，這裡以台北股市台積電為例爲TPE:2330&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;名稱&lt;/strong&gt;: 就你自己開心如何稱這黨股票就好～&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;持有張數&lt;/strong&gt;: 就是你的持有張數…&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;持有成本&lt;/strong&gt;: 每次買股票時，就將成本加上去吧&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;取得最新股價資訊現價成交量計算市值&quot;&gt;取得最新股價資訊(現價、成交量)，計算市值&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;現價&lt;/strong&gt;:&lt;/p&gt;
+
+    &lt;p&gt;使用&lt;strong&gt;GOOGLEFINANCE&lt;/strong&gt;函式來取得股價資訊！&lt;/p&gt;
+
+    &lt;p&gt;在D2儲存格中輸入公式: &lt;strong&gt;=GOOGLEFINANCE(A2, “price”)&lt;/strong&gt;，之後下來套用至整個D欄
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-3.jpg&quot; alt=&quot;google sheet: GOOGLEFINANCE price&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;成交量&lt;/strong&gt;:&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;=GOOGLEFINANCE(A2, “volume”)&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;市值&lt;/strong&gt;:&lt;/p&gt;
+
+    &lt;p&gt;將&lt;strong&gt;持有張數&lt;/strong&gt;及&lt;strong&gt;現價&lt;/strong&gt;相乘即可～ &lt;strong&gt;=D2*G2&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;計算當日漲跌損益&quot;&gt;計算當日漲跌損益&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;漲跌&lt;/strong&gt;:&lt;/p&gt;
+
+    &lt;p&gt;有了現價，可以跟昨日收盤價做比較計算出今日漲跌: &lt;strong&gt;=D2 - GOOGLEFINANCE(A2, “closeyest”)&lt;/strong&gt;
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-4.jpg&quot; alt=&quot;google sheet: GOOGLEFINANCE closeyest&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;損益&lt;/strong&gt;:&lt;/p&gt;
+
+    &lt;p&gt;即為&lt;strong&gt;持有成本&lt;/strong&gt;及&lt;strong&gt;市值&lt;/strong&gt;相減: &lt;strong&gt;=H2-I2&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;損益百分比&lt;/strong&gt;:&lt;/p&gt;
+
+    &lt;p&gt;即為&lt;strong&gt;損益&lt;/strong&gt;除以&lt;strong&gt;持有成本&lt;/strong&gt;: &lt;strong&gt;=IF(ISBLANK(I2), 0, J2/I2)&lt;/strong&gt;
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-5.jpg&quot; alt=&quot;google sheet: GOOGLEFINANCE&quot; /&gt;
+&lt;strong&gt;IF&lt;/strong&gt;及&lt;strong&gt;ISBLANK&lt;/strong&gt;的用途爲如果你尚未實有該檔股票，持有成本爲0或空白，卻又寫列入表中觀察，
+則&lt;strong&gt;損益百分比&lt;/strong&gt;顯示為0，否則將出現錯誤．&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;股價折線圖&quot;&gt;股價折線圖&lt;/h2&gt;
+
+&lt;p&gt;公式為: &lt;strong&gt;=sparkline(GOOGLEFINANCE(A2, “price”,today()-365,today(),1))&lt;/strong&gt;
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-6.jpg&quot; alt=&quot;google sheet: GOOGLEFINANCE sparkline&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GOOGLEFINACE:
+總共四個參數，第一為股票代號、再來是起始日期跟結束日期，此範例使用一年前today()-365到今天today()、最後爲資料的interval，
+1代表每天，也可以是7代表每週&lt;/li&gt;
+  &lt;li&gt;sparkline:
+可以再一個儲存格裡畫圖的函式，詳細的用法可以看我先前寫的文章:&lt;a href=&quot;/posts/google-sheet-sparkline/&quot;&gt;[Google Sheet]Sparkline，在儲存格裡插入迷你圖表&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;替漲跌及損益百分比上色&quot;&gt;替漲跌及損益百分比上色&lt;/h2&gt;
+
+&lt;p&gt;最後！股市就是要紅紅綠綠才比較好看，將賺錢的部分標上紅色，虧錢的弄上綠色吧！&lt;/p&gt;
+
+&lt;p&gt;首先點選漲跌那一欄(E)，接著點選工具欄&lt;strong&gt;格式&lt;/strong&gt; -&amp;gt; &lt;strong&gt;條件格式設定&lt;/strong&gt;
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-7.jpg&quot; alt=&quot;google sheet: format&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;將格式規則設為大於0，格式設定樣式改為字體紅色，綠色及損益率的部分也是一樣！
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-8.jpg&quot; alt=&quot;google sheet: format&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如此一來就大功告成囉🎉&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="finanace" /><summary type="html">此篇文章將分享我是如何製作我持有股票的未實現損益表，看起來的成果如下:</summary></entry><entry><title type="html">[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項</title><link href="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/" rel="alternate" type="text/html" title="[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項" /><published>2021-06-26T20:00:00+08:00</published><updated>2021-06-26T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/">&lt;h1 id=&quot;為什麼要用下拉式選單&quot;&gt;為什麼要用下拉式選單&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;新增資料更為快速，無需重複填寫&lt;/li&gt;
@@ -108,11 +210,13 @@
 4
 5
 6
+7
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;method&amp;gt; &amp;lt;URL&amp;gt; &amp;lt;version&amp;gt;
 &amp;lt;header&amp;gt;
 ...
 ...
 &amp;lt;header&amp;gt;
+
 &amp;lt;body&amp;gt; 
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;第一個字就是method，接著為URL跟version，換行後為許多個header，每個header以換行隔開，最後再隔一行之後是body．&lt;/p&gt;
@@ -207,10 +311,12 @@ Location: https://api.example.com/users/123
 3
 4
 5
+6
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;Request&amp;gt;
 PATCH /users/homuchen HTTP/1.1
 Content-Type: application/json
 Content-Length: 11
+
 {&quot;age&quot;: 31}
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;結果為&lt;/p&gt;
@@ -428,10 +534,12 @@ Accept-language: en
 3
 4
 5
+6
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;POST /users HTTP/1.1
 HOST: api.domain.com
 Content-Type: application/json
 Connection: Keep-alive
+
 {&quot;name&quot;: &quot;HoMuChen&quot;, &quot;age&quot;: 30, &quot;gender&quot;: &quot;male&quot;}
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -444,12 +552,14 @@ Connection: Keep-alive
 5
 6
 7
+8
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;HTTP/1.1 200 OK
 Server: nginx/1.14.0 (Ubuntu)
 Date: Wed, 17 Mar 2021 14:34:29 GMT
 Content-Type: text/html
 Content-Length: 614
 Last-Modified: Wed, 17 Mar 2021 10:27:32 GMT
+
 &amp;lt;!doctype html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;........
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -757,44 +867,4 @@ Host: www.google.com
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/isp-3.jpg&quot; alt=&quot;networking&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;於是網路就成了階層式的架構，上下層的客戶關係，同層之間也會互相連接，各個供應商自己負責建設自己的基礎設施及設定路由，封包的傳送可能會有經濟的考量(盡量不走上層供應商，因為要錢，只在同層之間交換)、或者是政治考量(不想封包經過某某國家的設備，或是所以封包都要經過某地，以利監控、阻擋某些來源)．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="ISP" /><summary type="html">網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．</summary></entry><entry><title type="html">[Networking] 網路的架構，Layered Architecture</title><link href="https://homuchen.com/posts/networking-layered-architecture/" rel="alternate" type="text/html" title="[Networking] 網路的架構，Layered Architecture" /><published>2020-04-04T20:00:00+08:00</published><updated>2020-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/networking-layered-architecture</id><content type="html" xml:base="https://homuchen.com/posts/networking-layered-architecture/">&lt;p&gt;網路是個如此巨大的工程，要如何架構，才能讓全世界的人通力合作，一起打造這豐富的世界呢？答案就是Layered Artichecture ．&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;layered-architecture&quot;&gt;Layered Architecture&lt;/h1&gt;
-&lt;p&gt;網路的最終目的，就是讓兩個執行在不同機器的程式可以互相溝通、交換資料，例如你的瀏覽器chrome跟網頁伺服器溝通，你手機的Skype跟另一個人的Skype溝通，而這中間，資料經過了重重難關、無數的機器及路由器，這麼多的機器到底是如何一起合作的呢？&lt;/p&gt;
-
-&lt;p&gt;答案就是分層的架構，Layered Architecture，生活中很多地方都可以看到類似的架構，我們以公司內部的信件為例好了，假設現在有一間公司有ABC三間分公司，在A公司的Alice想要寄封信給B公司的Bob，Alice首先寫了信的內容，將之放入信封內，並寫上收件人: B公司的bob，之後將信封交給A公司裡的一個叫做信件部門的部門，信件部門將信封寫上B公司的地址，再將信封交給附近的郵局，而郵局則使用卡車、飛機等運輸工具將信封運到B公司附近的郵局，此郵局再送到B公司，最後B公司的信件部門收到信，將他交給Bob．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/layered-arc-1.jpg&quot; alt=&quot;Layered Architecture&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;分層架構將一項任務分成了許多層，每一層只專心做自己的事，並且使用下一層所提供的服務．&lt;/p&gt;
-
-&lt;p&gt;例如上圖中，人這一層，只專心將內容寫入信中，放進信封袋裡，然後交給下一層的信件部門就好，人這一層使用了信件部門這一層提供的服務，完全無需去擔心這封信最後是如何抵達另一個人那邊去，而信件部門層則使用郵局提供的服務，郵局服務提供了公司的工司的寄送，而信件部門就只專心將信件交給公司裡的某某人．&lt;/p&gt;
-
-&lt;h1 id=&quot;layers-in-the-internet&quot;&gt;Layers in the Internet&lt;/h1&gt;
-&lt;p&gt;網路世界的分層如下圖，根據OSI Model應該是有七層，但就目前常用，只介紹此五層，Application layer、Transmission layer、Network layer、Link layer、Physical layer．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/layered-arc-2.jpg&quot; alt=&quot;Layered Architecture&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;application-layer&quot;&gt;Application layer&lt;/h2&gt;
-&lt;p&gt;這裡就是我們的應用程式所在地方，根據你的程式所要達成的目的，各自執行著自己的協議．例如網頁瀏覽器跟伺服器，一個說給我看某某網頁首頁，伺服器就說，好！給你！這之間資料交換的格式及方法，就是由HTTP協議所規範，只要瀏覽器跟伺服器都遵守HTTP的規範就能互相溝通．電子信箱服務使用的則是SMTP，查詢網域ip位置的是DNS，傳輸檔案的FTP等等．&lt;/p&gt;
-
-&lt;p&gt;而所有的application都必須依賴使用下層transmission layer的服務，transmission laye會負責applications之間的通訊，application只需要相信transmission layer會將信息傳遞給另一個application，專心做自己的事就好！&lt;/p&gt;
-
-&lt;h2 id=&quot;transmission-layer&quot;&gt;Transmission layer&lt;/h2&gt;
-&lt;p&gt;Transmission layer protocol負責傳遞信息於application之間，一台機器上可能有多個application，而transmission layer protocol則是用port number來分辨到底目標是哪個process．&lt;/p&gt;
-
-&lt;p&gt;目前網路世界中有兩種Transmission layer protocol，分別是TCP及UDP，TCP提供的服務保證資料一定會完整無誤地抵達目的地，並且還有flow control及congestion control．而UDP則沒做這麼多事，資料可能會丟失．&lt;/p&gt;
-
-&lt;h2 id=&quot;network-layer&quot;&gt;Network layer&lt;/h2&gt;
-&lt;p&gt;每台連上網路的機器都會有個地址，有就是IP位址，Network layer中的唯一一個protocol就是IP protocol，負責將資料從一個IP送到另一個IP，也就是從一台host到另一台host！這之間會經過許多的router，每個執行IP protacol的router會決定要將封包傳遞給哪下一個router來抵達目的地，但並不保證封包一定會抵達．&lt;/p&gt;
-
-&lt;h2 id=&quot;link-layer&quot;&gt;Link layer&lt;/h2&gt;
-&lt;p&gt;以上兩層當web dev以來，也從來沒碰過，哈！不熟，如果有興趣的人在自己去找資料囉～&lt;/p&gt;
-
-&lt;h2 id=&quot;physical-layer&quot;&gt;Physical layer&lt;/h2&gt;
-&lt;p&gt;這邊就是訊息從0101的bits轉換成真正物理世界裡存在的傳播媒介的地方了，可能是電磁波四處亂射，也可以是光走在光纖裡，或是電走在電線裡．&lt;/p&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;為了讓兩個在不同host上的process能夠通訊，首先你要指出你想要的通訊的process在什麼地方，透過ip:port這個pair，network layer會負責將信息送到擁有這個ip的機器，但卻不保證資料不會丟失，而network layer則透過port知道要將資料傳給哪個process，並且如果是TCP的話，會保證資料完好無缺地抵達另一個process那邊 (TCP可靠的傳輸建立在不可靠的IP上，酷吧！)，最後application根據自己的邏輯，來決定資料的格式，如何及何時發送和接收．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="layered architecture" /><summary type="html">網路是個如此巨大的工程，要如何架構，才能讓全世界的人通力合作，一起打造這豐富的世界呢？答案就是Layered Artichecture ．</summary></entry></feed>
+&lt;p&gt;於是網路就成了階層式的架構，上下層的客戶關係，同層之間也會互相連接，各個供應商自己負責建設自己的基礎設施及設定路由，封包的傳送可能會有經濟的考量(盡量不走上層供應商，因為要錢，只在同層之間交換)、或者是政治考量(不想封包經過某某國家的設備，或是所以封包都要經過某地，以利監控、阻擋某些來源)．&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="networking" /><category term="ISP" /><summary type="html">網路，可能是人類最大的工程成就之一，如今有數十億的人透過網路連接，在幾秒鐘之內就能夠互相通訊、完成某種任務，各種裝置互相連結，包括伺服器，個人桌上型電腦、平板、手機、未來還會有更多樣的things加入，例如車子、家電、各種感測器 ，等等．如此巨大的工程，大規模的全世界的共同合作，到底是如何做到的？工程架構的決定、協議的制定都值得去借鏡學習．</summary></entry></feed>
