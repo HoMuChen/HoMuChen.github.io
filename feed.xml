@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-14T17:14:34+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 最高學以致用法: 讓學習發揮最大成果的輸出大全</title><link href="https://homuchen.com/posts/book-notes-output/" rel="alternate" type="text/html" title="[讀書筆記] 最高學以致用法: 讓學習發揮最大成果的輸出大全" /><published>2021-07-14T17:10:00+08:00</published><updated>2021-07-14T17:10:00+08:00</updated><id>https://homuchen.com/posts/book-notes-output</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-output/">&lt;p&gt;不知道大家是否有過這樣的經驗: 讀了許多本書，事後卻說不出來到底讀了什麼;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-18T12:40:42+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google sheet]如何在試算表裡匯入新聞、rss feed</title><link href="https://homuchen.com/posts/google-sheet-google-news-rss-feed/" rel="alternate" type="text/html" title="[Google sheet]如何在試算表裡匯入新聞、rss feed" /><published>2021-07-18T12:00:00+08:00</published><updated>2021-07-18T12:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-google-news-rss-feed</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-google-news-rss-feed/">&lt;p&gt;此篇文章將分享我是如何在試算表裡查看新聞，看起來像是下面這樣:&lt;/p&gt;
+
+&lt;p&gt;於左上角輸入公司名稱(此處是下拉選單)，即可跑出公司的相關新聞&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-news-1.jpg&quot; alt=&quot;google sheet: import google news&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在這一篇&lt;a href=&quot;/posts/google-sheet-stock-income-statement&quot;&gt;[Google sheet]我如何製作股票損益表，自動抓取最新股價&lt;/a&gt;裡，
+我們已經建立了持有股票清單，我就想說如果同時可以同時看到每一間公司的相關新聞應該不錯，所以才會有了這篇．&lt;/p&gt;
+
+&lt;h1 id=&quot;公式&quot;&gt;公式&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;=IMPORTFEED(CONCATENATE(“https://news.google.com/atom/search?q=”, A1, “&amp;amp;hl=zh-TW&amp;amp;gl=TW&amp;amp;ceid=TW:zh-Hant&amp;amp;sort=rated”), “items”, false, 150)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;以上公式會使用&lt;strong&gt;A1&lt;/strong&gt;儲存格的字去google news查詢，列出150項結果，以下將分別說明各個函式的用法.&lt;/p&gt;
+
+&lt;h1 id=&quot;importfeed&quot;&gt;IMPORTFEED&lt;/h1&gt;
+
+&lt;p&gt;IMPORTFEED爲要匯入新聞RSS Feed的函式，有四個參數，用法為: &lt;strong&gt;IMPORTFEED(網址, [查詢], [標題], [項數])&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;網址&lt;/p&gt;
+
+    &lt;p&gt;此處我們使用的網址為&lt;/p&gt;
+
+    &lt;p&gt;https://news.google.com/atom/search?q=&lt;strong&gt;台積電&lt;/strong&gt;&amp;amp;hl=zh-TW&amp;amp;gl=TW&amp;amp;ceid=TW:zh-Hant&amp;amp;sort=rated&lt;/p&gt;
+
+    &lt;p&gt;改變q=後面的字，就是想要查詢的關鍵字&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;查詢&lt;/p&gt;
+
+    &lt;p&gt;第二個參數，可以為下列這些:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;feed: 只傳回單一列資料&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;feed &amp;lt;type&amp;gt;: 可以指定傳回的特定屬性，可能是title、url、author、summary&lt;/p&gt;
+
+        &lt;p&gt;舉例: IMPORTFEED(A1, “feed url”)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;items: 此為預設，傳回整個表格，&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;items &amp;lt;type&amp;gt;: 一樣可以指定特定屬性，&lt;/p&gt;
+
+        &lt;p&gt;舉例: IMPORTFEED(A1, “items title”, FALSE, 100)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;標題&lt;/p&gt;
+
+    &lt;p&gt;是否要納入標題欄，預設為FALSE&lt;/p&gt;
+
+    &lt;p&gt;舉例: IMPORTFEED(A1, “items”, TRUE)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;項數&lt;/p&gt;
+
+    &lt;p&gt;當查詢(第二個參數)爲項目(items)時，代表要傳回的項目數&lt;/p&gt;
+
+    &lt;p&gt;舉例: IMPORTFEED(A1, “items”, TRUE, 200)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;concatenate&quot;&gt;CONCATENATE&lt;/h1&gt;
+
+&lt;p&gt;就是把所有的參數串起來，例如=CONCATENATE(“123”, “456”)，就會相當於”123456”．&lt;/p&gt;
+
+&lt;p&gt;也能使用儲存格當作參數，這裡的例子就是:&lt;/p&gt;
+
+&lt;p&gt;=CONCATENATE(“https://news.google.com/atom/search?q=”, A1, “&amp;amp;hl=zh-TW&amp;amp;gl=TW&amp;amp;ceid=TW:zh-Hant&amp;amp;sort=rated”)，&lt;/p&gt;
+
+&lt;p&gt;當A1為台積電時，&lt;/p&gt;
+
+&lt;p&gt;就會相當於”https://news.google.com/atom/search?q=台積電&amp;amp;hl=zh-TW&amp;amp;gl=TW&amp;amp;ceid=TW:zh-Hant&amp;amp;sort=rated”&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;利用以上兩個公式，可能成功在試算表上看新聞囉～ 🎉，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><category term="finance" /><summary type="html">此篇文章將分享我是如何在試算表裡查看新聞，看起來像是下面這樣:</summary></entry><entry><title type="html">[讀書筆記] 最高學以致用法: 讓學習發揮最大成果的輸出大全</title><link href="https://homuchen.com/posts/book-notes-output/" rel="alternate" type="text/html" title="[讀書筆記] 最高學以致用法: 讓學習發揮最大成果的輸出大全" /><published>2021-07-14T17:10:00+08:00</published><updated>2021-07-14T17:10:00+08:00</updated><id>https://homuchen.com/posts/book-notes-output</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-output/">&lt;p&gt;不知道大家是否有過這樣的經驗: 讀了許多本書，事後卻說不出來到底讀了什麼;
 看了一場電影、經歷一趟旅程，卻分享不出想法、或是說出從中有哪些收穫．&lt;/p&gt;
 
 &lt;p&gt;大家可能也有聽過，最好的學習方法就是去教人．&lt;/p&gt;
@@ -201,7 +279,7 @@
 &lt;p&gt;將格式規則設為大於0，格式設定樣式改為字體紅色，綠色及損益率的部分也是一樣！
 &lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-8.jpg&quot; alt=&quot;google sheet: format&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;如此一來就大功告成囉🎉&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="finanace" /><summary type="html">此篇文章將分享我是如何製作我持有股票的未實現損益表，看起來的成果如下:</summary></entry><entry><title type="html">[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項</title><link href="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/" rel="alternate" type="text/html" title="[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項" /><published>2021-06-26T20:00:00+08:00</published><updated>2021-06-26T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/">&lt;h1 id=&quot;為什麼要用下拉式選單&quot;&gt;為什麼要用下拉式選單&lt;/h1&gt;
+&lt;p&gt;如此一來就大功告成囉🎉&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="finance" /><summary type="html">此篇文章將分享我是如何製作我持有股票的未實現損益表，看起來的成果如下:</summary></entry><entry><title type="html">[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項</title><link href="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/" rel="alternate" type="text/html" title="[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項" /><published>2021-06-26T20:00:00+08:00</published><updated>2021-06-26T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/">&lt;h1 id=&quot;為什麼要用下拉式選單&quot;&gt;為什麼要用下拉式選單&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;新增資料更為快速，無需重複填寫&lt;/li&gt;
@@ -292,7 +370,7 @@
       &lt;li&gt;4.4 How to Response to a Health Check?&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="API Design" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
 
 &lt;p&gt;當然寫server的人可以不照著慣例走，不過如此一來，使用這個API的user可能會很不高興，而這個user可以是公司的客戶，可能是公司內部的其他團隊，也可能是未來的自己！&lt;/p&gt;
 
@@ -466,7 +544,7 @@ Content-Length: 11
 
 &lt;hr /&gt;
 
-&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="API Design" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">A Linux HTTP client tool — curl的介紹及用法</title><link href="https://homuchen.com/posts/linux-http-client-tool-curl-usage/" rel="alternate" type="text/html" title="A Linux HTTP client tool — curl的介紹及用法" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/linux-http-client-tool-curl-usage</id><content type="html" xml:base="https://homuchen.com/posts/linux-http-client-tool-curl-usage/">&lt;p&gt;做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用&lt;a href=&quot;https://www.postman.com/&quot;&gt;postman&lt;/a&gt;這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！&lt;/p&gt;
+&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="Web Development" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">A Linux HTTP client tool — curl的介紹及用法</title><link href="https://homuchen.com/posts/linux-http-client-tool-curl-usage/" rel="alternate" type="text/html" title="A Linux HTTP client tool — curl的介紹及用法" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/linux-http-client-tool-curl-usage</id><content type="html" xml:base="https://homuchen.com/posts/linux-http-client-tool-curl-usage/">&lt;p&gt;做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用&lt;a href=&quot;https://www.postman.com/&quot;&gt;postman&lt;/a&gt;這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！&lt;/p&gt;
 
 &lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
 
@@ -913,37 +991,4 @@ Host: www.google.com
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;如此一來，就能透過環境變數API_HOST、SEARCH_HOST、AUTH_HOST來指向你的服務，變且成功整合多個服務囉！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="react" /><category term="create-react-app" /><summary type="html">在開發single page application時，會需要透過api來取得及操作資料，本篇文章將示範如何在使用create-react-app開發時，整合一個甚至是多個backend api server！</summary></entry><entry><title type="html">[Networking]Application Layer Overview，什麼是Socket?</title><link href="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/" rel="alternate" type="text/html" title="[Networking]Application Layer Overview，什麼是Socket?" /><published>2020-05-05T20:00:00+08:00</published><updated>2020-05-05T20:00:00+08:00</updated><id>https://homuchen.com/posts/networking-application-layer-overview-what-is-socket</id><content type="html" xml:base="https://homuchen.com/posts/networking-application-layer-overview-what-is-socket/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/app-layer-1.jpg&quot; alt=&quot;application layer&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;process-communication&quot;&gt;Process communication&lt;/h1&gt;
-&lt;p&gt;上次講過了網路的分層架構之後，接下來要來關注application layer，這一層就是我們應用程式所在的地方，應用程式可能是網頁瀏覽器、電子信箱、Skype等等，每種不同的應用程式會有他們自己的通訊協定，規定應用程式之間該如何交換資料，以及資料的格式，常見的協定例如是HTTP、FTP、DNS等等．&lt;/p&gt;
-
-&lt;p&gt;那application layer的process們之間要怎麼互相通訊呢？就是要利用transport layer所提供的服務．&lt;/p&gt;
-
-&lt;h1 id=&quot;what-is-socket&quot;&gt;What is socket?&lt;/h1&gt;
-&lt;p&gt;Application layer的process必須使用transport layer所提供的服務來進行通訊，而這之間的介面就是socket，process只要把資料寫入socket，另一個process從socket讀出資料就好，就是這麼簡單～至於資料是如何在這之間傳遞的，底下的每一層 (transport、network、link、physical layer) 都幫你處理的好好的了，applications就只需要專心做自己的事就好！&lt;/p&gt;
-
-&lt;p&gt;不過在通信之前，必須要知道對方在哪裡，資料才有辦法送到，一個socket就是一組ip:port pair，ip用來分別process所在的機器，而一台機器上會有許多的process，port number則用來分別是想要跟哪個程序溝通，有些服務基本上監聽在一些固定的port上，方便client來連，例如HTTP使用80、FTP用21、SSH使用22等等．&lt;/p&gt;
-
-&lt;p&gt;另外當client要向server通訊時，作業系統會隨機指定一個port給他，如此一來server才會知道訊息要回傳到哪裡．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/app-layer-2.jpg&quot; alt=&quot;application layer&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;transport-layer-service&quot;&gt;Transport layer service&lt;/h1&gt;
-&lt;p&gt;Application programer可以根據自己想打造的應用程式的需求，在兩種transport layer所提供的服務中選擇，一個是TCP，另一個是UDP，以下分別介紹．&lt;/p&gt;
-
-&lt;h2 id=&quot;tcp&quot;&gt;TCP&lt;/h2&gt;
-&lt;p&gt;TCP提供的是一個可靠的服務，確保資料一定會完整無缺的抵達另一端，使用TCP的application programmer不用擔心資料會到不了另一端，專心於application protocal就好．&lt;/p&gt;
-
-&lt;p&gt;TCP有congestion control的機制，當網路變得壅塞的時候，會放慢sender的速度，這是為整個網路著想的設計，但對於application並沒有直接的幫助，可能還會使得速度變慢．&lt;/p&gt;
-
-&lt;h2 id=&quot;udp&quot;&gt;UDP&lt;/h2&gt;
-&lt;p&gt;UDP的服務並不可靠，也就是並不保證資料一定會送達，對於一些應用來說或許是可以接受的，比如即時的通話或視訊，上一秒的聲音或畫面不見就不見了．是ok的．&lt;/p&gt;
-
-&lt;p&gt;另外UDP也沒有flow control跟congestion control，sender想送多快就多快，所以如果有application覺得TCP做太多事了，開發起來綁手綁腳，想要看短的latency，就可以考慮使用TCP，例如google的QUIC就是基於UDP上，再重新自己實現了可靠的傳輸．&lt;/p&gt;
-
-&lt;h1 id=&quot;socket-programming&quot;&gt;Socket programming&lt;/h1&gt;
-&lt;p&gt;之後會寫一篇使用Node.js的net module來實際地使用一下TCP的服務，並在這之上打造自己的application protocol，待續…&lt;/p&gt;
-
-&lt;h1 id=&quot;application-layer-protocols&quot;&gt;Application layer protocols&lt;/h1&gt;
-&lt;p&gt;接著也會陸續會介紹一些常用的application layer的protocol: HTTP、SMTP、DNS，待續…&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="linux" /><category term="socket" /><category term="tcp" /><category term="udp" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;如此一來，就能透過環境變數API_HOST、SEARCH_HOST、AUTH_HOST來指向你的服務，變且成功整合多個服務囉！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="react" /><category term="create-react-app" /><summary type="html">在開發single page application時，會需要透過api來取得及操作資料，本篇文章將示範如何在使用create-react-app開發時，整合一個甚至是多個backend api server！</summary></entry></feed>
