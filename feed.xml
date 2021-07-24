@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-18T12:40:42+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google sheet]如何在試算表裡匯入新聞、rss feed</title><link href="https://homuchen.com/posts/google-sheet-google-news-rss-feed/" rel="alternate" type="text/html" title="[Google sheet]如何在試算表裡匯入新聞、rss feed" /><published>2021-07-18T12:00:00+08:00</published><updated>2021-07-18T12:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-google-news-rss-feed</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-google-news-rss-feed/">&lt;p&gt;此篇文章將分享我是如何在試算表裡查看新聞，看起來像是下面這樣:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-24T22:47:45+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;簡介&quot;&gt;簡介&lt;/h1&gt;
+
+&lt;p&gt;這本書的第一章到第十六章，作者講述了兩對夫婦的故事，從交往、訂婚、結婚、蜜月，講到租房、買房、小孩教育、生活中的各個面向，
+看他們在面對所有財務決策時，如何做不同的選擇，而這些習慣，經過了時間了累積，到最後產生了巨大的差別！&lt;/p&gt;
+
+&lt;p&gt;透過故事，像是看小說一樣，更容易地會去感受到那些習慣的重要，那對底是哪些習慣呢～作者在本書後面的22章一一闡述:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;擁有好習慣，人生是彩色的；擁有壞習慣，人生是黑白的&lt;/li&gt;
+  &lt;li&gt;慎選人生伴侶&lt;/li&gt;
+  &lt;li&gt;避免欲望型消費&lt;/li&gt;
+  &lt;li&gt;節儉，但不小氣&lt;/li&gt;
+  &lt;li&gt;避免隨意購物&lt;/li&gt;
+  &lt;li&gt;成為自己的人生設計師──建構藍圖或計畫&lt;/li&gt;
+  &lt;li&gt;持續投資你的儲蓄存款&lt;/li&gt;
+  &lt;li&gt;謹慎投資&lt;/li&gt;
+  &lt;li&gt;讓你的錢各自歸位&lt;/li&gt;
+  &lt;li&gt;勿陷入「生活方式升級心理」，勿將你的生活加大升級&lt;/li&gt;
+  &lt;li&gt;保持心胸開放，別讓偏見影響你的財務決定&lt;/li&gt;
+  &lt;li&gt;結交有儲蓄習慣的朋友&lt;/li&gt;
+  &lt;li&gt;為你心中最重要的東西儲蓄&lt;/li&gt;
+  &lt;li&gt;金錢等於自由&lt;/li&gt;
+  &lt;li&gt;財富自由的首要條件是身體健康&lt;/li&gt;
+  &lt;li&gt;創造多元收入金流&lt;/li&gt;
+  &lt;li&gt;富裕不只是金錢富裕──七種富裕類型&lt;/li&gt;
+  &lt;li&gt;變有錢並非單一事件&lt;/li&gt;
+  &lt;li&gt;好目標 V.S. 壞目標&lt;/li&gt;
+  &lt;li&gt;好習慣帶來好運，壞習慣帶來厄運&lt;/li&gt;
+  &lt;li&gt;財富消除五十八%的人生問題（與壓力）&lt;/li&gt;
+  &lt;li&gt;財富遊戲計畫&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;心得感想&quot;&gt;心得感想&lt;/h1&gt;
+
+&lt;p&gt;或許可能會覺得這些東西都是老生常談，陳腔濫調，但就像伏爾泰說過的&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Common sense is not so common&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在我們日常生活中，是否這些習慣對富人來說是common sense，但對我們卻不是，或者是我們知道他是簡單的常識，
+卻沒有落實到生活當中，使他們變得平常，透過這次的閱讀，可以檢視自己有哪些是做得不好的部份．&lt;/p&gt;
+
+&lt;p&gt;不過在這本書裡，對於每一個原則及習慣，講的篇幅有限，我覺得可以透過其他的資源來加深學習:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;習慣:&lt;/strong&gt; 習慣這兩個字就出現在書名當中，可以知道它有多重要，造就現在我們的狀態的，正是過往以來我們所有的所作所為，
+而我們在過去的每個當下所做的選擇、所做的行為，決大部分並不是我們有意識的，而是無意識的習慣！&lt;/p&gt;
+
+    &lt;p&gt;試想從我們早上醒來，睜開眼睛第一件事是拿起手機賴在床上滑，還是整理床鋪、冥想;早餐是隨便吃吃，還是有注重均衡營養;
+到了工作場所，是先想好今天最重要的任務，還是開始瞎忙;下班之後是躺在沙發上看電視，還是去運動．&lt;/p&gt;
+
+    &lt;p&gt;我們不會無時無刻都在努力地做選擇，而是讓習慣驅動著我們，而&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot;&gt;&lt;strong&gt;原子習慣&lt;/strong&gt;&lt;/a&gt;這本書，
+說明了習慣的機制，教我們如何去培養好習慣、除去壞習慣，而不是每天依靠意志力來控制自己，而最後又筋疲力盡地失敗．&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;人際關係:&lt;/strong&gt; &lt;a href=&quot;https://www.books.com.tw/products/0010849837&quot;&gt;&lt;strong&gt;人性的弱點&lt;/strong&gt;&lt;/a&gt;，經典．&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;睡覺:&lt;/strong&gt; &lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot;&gt;&lt;strong&gt;為什麼要睡覺&lt;/strong&gt;&lt;/a&gt;，如果有一種產品，可以讓你記憶力變好、更具創造力及生產力、
+降低罹癌機率、心情更好、走出傷痛、變美麗、皮膚變好、變苗條，那你願意花多錢買這產品呢～一萬？不用！五千？也不用！
+免錢的啦～～只要你每天晚上好好地去睡覺就有了！為什麼要睡、要如何睡？比爾蓋茲也推薦大家看看這本書．&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;運動:&lt;/strong&gt; 運動對我們到底有多少好處，在&lt;a href=&quot;https://www.books.com.tw/products/0010855828&quot;&gt;&lt;strong&gt;真正的快樂處方&lt;/strong&gt;&lt;/a&gt;這本書裡，
+針對運動對我們大腦的影響，如果你想要變得更年輕、聰明、學東西更快、壓力更小更快樂、注意力更集中、更有創造力嗎？那就運動吧！&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;財務決策:&lt;/strong&gt; 本書說我們要有儲蓄及投資的習慣，在現在金融越來越越發達的世界當中，
+我們有越來越多的行為牽涉到金錢，在花錢時時常有許多不理性的行為，可能是被商人誘導，要讓我們花更多的錢，或者只是我們自己懶，
+在&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot;&gt;&lt;strong&gt;金錢心理學&lt;/strong&gt;&lt;/a&gt;裡，讓我們從很多的故事及實驗中，覺察到自己到底有沒有亂花錢的地方．&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最後除了自己做，最好是身邊的朋友及伴侶都有相同的價值觀，才能一起前進，而不是處處拉扯，祝大家可以找到三觀合的另一半~ 😂&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="habit" /><summary type="html"></summary></entry><entry><title type="html">[Google sheet]如何在試算表裡匯入新聞、rss feed</title><link href="https://homuchen.com/posts/google-sheet-google-news-rss-feed/" rel="alternate" type="text/html" title="[Google sheet]如何在試算表裡匯入新聞、rss feed" /><published>2021-07-18T12:00:00+08:00</published><updated>2021-07-18T12:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-google-news-rss-feed</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-google-news-rss-feed/">&lt;p&gt;此篇文章將分享我是如何在試算表裡查看新聞，看起來像是下面這樣:&lt;/p&gt;
 
 &lt;p&gt;於左上角輸入公司名稱(此處是下拉選單)，即可跑出公司的相關新聞&lt;/p&gt;
 
@@ -907,88 +984,4 @@ Host: www.google.com
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321&quot;&gt;Designing Data-Intensive Applications Chapter 2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/schemaless/&quot;&gt;https://martinfowler.com/articles/schemaless/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="data model" /><category term="system design" /><category term="database" /><summary type="html">開發應用程式時，時常使用到資料庫，儲存資料並在之後需要時將其取出，如今有許多的資料庫產品可供選擇，提供各種不同的data model及function，在各種使用情境下有不同的表現，開發者根據你的應用程式的需求、資料之間的關係、access pattern、scalability、ACID transaction、fault-tolerance、會有各種不同的適合的選擇．</summary></entry><entry><title type="html">如何用create-react-app開發，整合一個或多個API backend server</title><link href="https://homuchen.com/posts/create-react-app-integrate-multiple-api-backend-servers/" rel="alternate" type="text/html" title="如何用create-react-app開發，整合一個或多個API backend server" /><published>2020-08-22T20:00:00+08:00</published><updated>2020-08-22T20:00:00+08:00</updated><id>https://homuchen.com/posts/create-react-app-integrate-multiple-api-backend-servers</id><content type="html" xml:base="https://homuchen.com/posts/create-react-app-integrate-multiple-api-backend-servers/">&lt;p&gt;在開發single page application時，會需要透過api來取得及操作資料，本篇文章將示範如何在使用create-react-app開發時，整合一個甚至是多個backend api server！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/cra-1.jpg&quot; alt=&quot;create-react-app with multiple backend servers&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;create-react-app&quot;&gt;Create-react-app&lt;/h1&gt;
-&lt;p&gt;使用create-react-app時，簡單一個指令npm start 就可以開始開發，此時CRA會起一個webpack dev server來serve static files，通常我們會想要做類似這樣的動作: fetch(‘/todos’) 、fetch(‘/api/todos’) 來跟我們的API server通訊，此時該如何讓CRA的dev server將request proxy到我們想要的API server呢？&lt;/p&gt;
-
-&lt;h1 id=&quot;透過packagejson&quot;&gt;透過package.json&lt;/h1&gt;
-&lt;p&gt;最簡單的方法就是在package.json中加一個proxy欄位，”proxy”: “http://localhost:5000” ，如此一來，所有的request便會被proxy到http://localhost:5000．&lt;/p&gt;
-
-&lt;h2 id=&quot;想解決的問題&quot;&gt;想解決的問題&lt;/h2&gt;
-&lt;p&gt;這樣的做法很簡單但卻不太彈性，通常我們會希望外部的資源可以透過環境變數去控制，而不是寫死在檔案裡面，同一份codebase，透過設置不同的環境變數擁有不同的部署，可能是開發環境、測試環境、或staging、production環境 (https://12factor.net/codebase) ．&lt;/p&gt;
-
-&lt;p&gt;另外將proxy寫在package.json中，只能將所有的ajax導到同一個server，假如您是service oriented architecture或microservices這種架構，可能會有許多的服務，例如data api、search api、authentication api、payment api等等．那該如何將不同的path，例如/api、/search、/auth，route到各自的服務呢？&lt;/p&gt;
-
-&lt;h1 id=&quot;透過setupproxyjs&quot;&gt;透過setupProxy.js&lt;/h1&gt;
-&lt;p&gt;首先需要安裝dependency&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;npm i -D http-proxy-middleware
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;接著在src資料夾裡新增一個檔案setupProxy.js，範例如下:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http-proxy-middleware&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;API_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;API_HOST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SEARCH_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;SEARCH_HOST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AUTH_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;AUTH_HOST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/api&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;API_HOST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/search&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SEARCH_HOST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/auth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;createProxyMiddleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AUTH_HOST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;changeOrigin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如此一來，就能透過環境變數API_HOST、SEARCH_HOST、AUTH_HOST來指向你的服務，變且成功整合多個服務囉！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="react" /><category term="create-react-app" /><summary type="html">在開發single page application時，會需要透過api來取得及操作資料，本篇文章將示範如何在使用create-react-app開發時，整合一個甚至是多個backend api server！</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="data model" /><category term="system design" /><category term="database" /><summary type="html">開發應用程式時，時常使用到資料庫，儲存資料並在之後需要時將其取出，如今有許多的資料庫產品可供選擇，提供各種不同的data model及function，在各種使用情境下有不同的表現，開發者根據你的應用程式的需求、資料之間的關係、access pattern、scalability、ACID transaction、fault-tolerance、會有各種不同的適合的選擇．</summary></entry></feed>
