@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-24T22:47:45+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-31T22:38:51+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google Sheet]我如何利用Google表單來記帳</title><link href="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/" rel="alternate" type="text/html" title="[Google Sheet]我如何利用Google表單來記帳" /><published>2021-07-31T22:30:00+08:00</published><updated>2021-07-31T22:30:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/">&lt;p&gt;利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣，
+每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-1.jpg&quot; alt=&quot;google sheet bookkeeping&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;建立表單&quot;&gt;建立表單&lt;/h1&gt;
+
+&lt;p&gt;首先建立一個新的表單，接著點選&lt;strong&gt;工具&lt;/strong&gt; -&amp;gt; &lt;strong&gt;建立表單&lt;/strong&gt;，就會在新分頁裡跑出一個空白表單，
+接著我們就要編輯他的內容．&lt;/p&gt;
+
+&lt;h1 id=&quot;編輯表單&quot;&gt;編輯表單&lt;/h1&gt;
+
+&lt;p&gt;命名表單，隨便你要打什麼，這裡就打個”記帳”，接下來的每個問題可以是簡答、單選題、多選題&lt;/p&gt;
+
+&lt;p&gt;這裡的第一個問題的題目就是項目，也就是我們花了什麼錢，題目的種類選簡答:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-2.jpg&quot; alt=&quot;google form question 1: item&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第二題題目題目為金額，也是簡答，填表單時記得填上數字&lt;/p&gt;
+
+&lt;p&gt;第三題題目題目為種類，選項就你開心怎麼分類～ 這裡的例子是食衣住行娛樂跟其他&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-3.jpg&quot; alt=&quot;google form question 3: types&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;後面你想要加上任何題目都可以&lt;/p&gt;
+
+&lt;h1 id=&quot;將表單加入主畫面&quot;&gt;將表單加入主畫面&lt;/h1&gt;
+
+&lt;p&gt;完成表單後，點選右上角的&lt;strong&gt;傳送&lt;/strong&gt;，就可以在你的手機瀏覽器中，打開這個網址．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-4.jpg&quot; alt=&quot;google form question 3: types&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;點選右上角表單裡面的&lt;strong&gt;加到主畫面&lt;/strong&gt;，就能像是Appㄧ樣，在桌面有個小圖示囉～&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-5.jpg&quot; alt=&quot;google form question 3: add to desktop&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;建立好表單之後，每次要花錢的時候，就打開手機，送出一個表單就能記帳啦．&lt;/p&gt;
+
+&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot;&gt;&lt;strong&gt;金錢心理學&lt;/strong&gt;&lt;/a&gt;也有說到，我們人類天生會避免痛苦，
+而付錢就是一種痛苦，所以商人會有許多方法來讓我們忘記痛苦，不小心就花太多錢，
+比如預付、後付、信用卡、一鍵購物，讓花錢變得越方便，越無痛，來使得我們花更多．&lt;/p&gt;
+
+&lt;p&gt;所以記帳這行為，不僅是用來追蹤我們消費狀況的一個工具，說不定也能讓我們減少不必要的花費，每次花錢時都會清楚地感受到前噴出去的感覺，
+哪天更可能因為懶得拿出手機來記，就不花錢了呢～&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><category term="books" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;簡介&quot;&gt;簡介&lt;/h1&gt;
 
@@ -892,96 +937,4 @@ Host: www.google.com
 
 &lt;p&gt;也可以學習使用一些linux指令，快速的explore別人的API，或是看看自己送出去的request到底有沒有對．&lt;/p&gt;
 
-&lt;p&gt;感謝您的閱讀~期待下次見！&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><category term="nc" /><category term="telnet" /><summary type="html">在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．</summary></entry><entry><title type="html">[System Design]Data model: Relational V.S. Document</title><link href="https://homuchen.com/posts/system-design-data-model-relational-vs-document/" rel="alternate" type="text/html" title="[System Design]Data model: Relational V.S. Document" /><published>2020-12-28T20:00:00+08:00</published><updated>2020-12-28T20:00:00+08:00</updated><id>https://homuchen.com/posts/system-design-data-model-relational-vs-document</id><content type="html" xml:base="https://homuchen.com/posts/system-design-data-model-relational-vs-document/">&lt;p&gt;開發應用程式時，時常使用到資料庫，儲存資料並在之後需要時將其取出，如今有許多的資料庫產品可供選擇，提供各種不同的data model及function，在各種使用情境下有不同的表現，開發者根據你的應用程式的需求、資料之間的關係、access pattern、scalability、ACID transaction、fault-tolerance、會有各種不同的適合的選擇．&lt;/p&gt;
-
-&lt;p&gt;接下來只單純討論資料庫提供給我們application programmer們的data model，看看是否在哪些情況比較適合用哪一種，主要是探討relational 及 document這兩種data model.&lt;/p&gt;
-
-&lt;h1 id=&quot;one-to-many-relationship&quot;&gt;One-to-many relationship&lt;/h1&gt;
-&lt;p&gt;讓我們先從一個簡單的例子Todo list開始，假設我們應用程式有使用者，每個使用者有多個Todo，就這麼簡單的一個one-to-many relationship．&lt;/p&gt;
-
-&lt;h2 id=&quot;relational-dbms&quot;&gt;Relational DBMS&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-1.jpg&quot; alt=&quot;database relationship&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如上圖， 一般使用SQL database的做法，會開兩個table，分別是users及todos，並且在todos table有個欄位user_id為foreign key指到user table&lt;/p&gt;
-
-&lt;h2 id=&quot;document-database&quot;&gt;Document database&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-2.jpg&quot; alt=&quot;document in NoSQL&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;而在document database中，我們可以將整個資訊存成一個JSON document如上圖，當我們的UI需要呈現某使用者的todo的時候，資料庫只需要一個disk seek就可以拿到全部的資料，對比於relational database，必須在todos table裡找到相對應的rows，再將其與users的row合併．&lt;/p&gt;
-
-&lt;p&gt;可以看到document database用來model one-to-many relationship的資料可說是天生的適合．&lt;/p&gt;
-
-&lt;h1 id=&quot;many-to-one-and-many-to-many-relationship&quot;&gt;Many-to-one and Many-to-many relationship&lt;/h1&gt;
-
-&lt;p&gt;現在假設我們要加入新的功能，使用者可以新增標籤，並把自己的Todo加上一個標籤．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-3.jpg&quot; alt=&quot;Many-to-many relationship&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Relational database按照normalization的做法，就是再多一個tags table，user_id指向Users，而Todos再多一個foreign key指向Tags，如上圖沒什麼問題．&lt;/p&gt;
-
-&lt;p&gt;而Document database則會向下圖這樣:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/data-model-4.jpg&quot; alt=&quot;document in NoSQL&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;資訊重複出現了好幾個地方，容易造成不一致，比如說我想把Coding改成Programming，除了在tags這個array裡面要修改之外，兩個todo裡的tag也要同時修改才行．&lt;/p&gt;
-
-&lt;h2 id=&quot;document-database就不能做normalization嗎&quot;&gt;Document database就不能做normalization嗎？&lt;/h2&gt;
-&lt;p&gt;當然是可以的！分別儲存三種類型的document: User、Tag、Todo，當某個user要取得他的資料時，就必須分別從三類document找出相對的document，在合併起來．&lt;/p&gt;
-
-&lt;p&gt;那這跟relational database的join有什麼不一樣嗎？&lt;/p&gt;
-
-&lt;p&gt;其實本質上是一樣的！只不過使用relational database時是database幫你做，而使用document database則是要在application code上面自己做，除了會有更多的network round trip time之外，relational database通常也會幫你優化．&lt;/p&gt;
-
-&lt;h1 id=&quot;schema-flexibility&quot;&gt;Schema flexibility&lt;/h1&gt;
-&lt;p&gt;另外他們倆之間常被討論到的不同，就是schema的有無，雖然說document database可以讓你隨意的放入任何的JSON document，但我們通常不會這樣做，一般來說都會把相同類型，有ㄧ樣資料格式的document放在一起，只不過資料庫本身並不會強迫每個document的schema要一模一樣．&lt;/p&gt;
-
-&lt;p&gt;這樣的彈性，讓schema evolution也算方便，資料庫裡可以同時保有舊有的資料和新的資料 ，比如說todo想要新增一個欄位created_at，或是todo原本只能有一個tag，用一個string來表示，現在想要改成可以有多個tag，新新增的資料不在是一個string而是一個array．&lt;/p&gt;
-
-&lt;p&gt;但如此一來application programmer在使用document database時，就不能保證拿到的資料的格式，會出現類似這樣的code:&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;created_at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;時間久了，資料可能會越來越亂，一不注意就跑出個error:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cannot read property ‘some_field’ of undefined!&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;該如何管理schema evolution，不讓你的應用程式crash，隨著新功能及新資料的加入能夠compatible，繼續穩定的運行就是另一門學問，有機會可以再來探討．&lt;/p&gt;
-
-&lt;h1 id=&quot;whats-the-situation-preferring-to-schema-less-approach&quot;&gt;What’s the situation preferring to schema-less approach?&lt;/h1&gt;
-&lt;p&gt;其實能有schema最好就有，他是你的資料的一個documentation，一個contract，讓programmer寫起程式來更有信心，不用擔心東擔心西，擔心會不會少了個欄位就讓我的process crash掉，那有什麼樣的情況會更適合使用document database嗎？&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;資料來自外部，格式不是妳能控制的&lt;/li&gt;
-  &lt;li&gt;有非常多種類的object，分別將每個object放到個別的table可能不太適合&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;比如說event sourcing的架構，每種event type都有各自的資料格式，放在relation database的一個table，會有很多欄位是空的，schema定義起來也會非常麻煩．&lt;/p&gt;
-
-&lt;p&gt;再來你的資料來源可能來自爬蟲、外部的API，格式可能改變，所以可以在拿到資料的時候就先存起來，之後讀的時候做處理，不然可能就會丟失部分的資料了．&lt;/p&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;如果你的資料之間的關係不複雜，基本上是one-to-many的，一個self-contained的JSON document能夠包含所有需要的資料，那麼document based的DBMS就相當適合，會有更好的performance，因為資料都在一起．&lt;/p&gt;
-
-&lt;p&gt;Relational database更適合當你的資料之間的關係複雜，有許多many-to-one、many-to-many relationship時，幫你處理join的動作，雖說使用document database也是可以如此，但join的動作必須在application code上執行．&lt;/p&gt;
-
-&lt;p&gt;另外document database也提供更彈性的schema，當你的應用需要面對許多不同且不確定、不是自己能控制的資料格式時，document database也許會有更好的support．&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321&quot;&gt;Designing Data-Intensive Applications Chapter 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/schemaless/&quot;&gt;https://martinfowler.com/articles/schemaless/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="data model" /><category term="system design" /><category term="database" /><summary type="html">開發應用程式時，時常使用到資料庫，儲存資料並在之後需要時將其取出，如今有許多的資料庫產品可供選擇，提供各種不同的data model及function，在各種使用情境下有不同的表現，開發者根據你的應用程式的需求、資料之間的關係、access pattern、scalability、ACID transaction、fault-tolerance、會有各種不同的適合的選擇．</summary></entry></feed>
+&lt;p&gt;感謝您的閱讀~期待下次見！&lt;/p&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><category term="nc" /><category term="telnet" /><summary type="html">在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．</summary></entry></feed>
