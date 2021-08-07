@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-07T17:18:48+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費</title><link href="https://homuchen.com/posts/book-note-money-psychology/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費" /><published>2021-08-04T22:30:00+08:00</published><updated>2021-08-04T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-money-psychology</id><content type="html" xml:base="https://homuchen.com/posts/book-note-money-psychology/">&lt;p&gt;生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人，我們懶惰，喜歡走捷徑，有各種誤判及偏見，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-07T23:55:54+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)</title><link href="https://homuchen.com/posts/book-note-money-psychology/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)" /><published>2021-08-07T23:30:00+08:00</published><updated>2021-08-07T23:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-money-psychology</id><content type="html" xml:base="https://homuchen.com/posts/book-note-money-psychology/">&lt;p&gt;生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人，我們懶惰，喜歡走捷徑，有各種誤判及偏見，
 我們的認知有限制，腦袋的容量非常有限，我們短視近利，喜歡立即得到獎賞及滿足，
 我們有各式各樣的思考、認知、感覺進而有了相對應的行為，這些就是心理學在研究的事．&lt;/p&gt;
 
@@ -7,6 +7,22 @@
 就是金錢心理學這本書要探討的內容．&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-1.jpg&quot; alt=&quot;book: Dollards and Sense&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;大綱&quot;&gt;大綱&lt;/h1&gt;
+
+&lt;p&gt;以下為這篇文章的大綱，由於內容較多，部分的章節會再下一篇文章裡再談～&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;基本原則: 機會成本&lt;/li&gt;
+  &lt;li&gt;相對性&lt;/li&gt;
+  &lt;li&gt;心理帳戶&lt;/li&gt;
+  &lt;li&gt;避免痛苦&lt;/li&gt;
+  &lt;li&gt;定錨效應&lt;/li&gt;
+  &lt;li&gt;稟賦效應&lt;/li&gt;
+  &lt;li&gt;期望公平&lt;/li&gt;
+  &lt;li&gt;太在意價格&lt;/li&gt;
+  &lt;li&gt;總結及我如何利用以上現象來設計自己&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;基本原則-機會成本&quot;&gt;基本原則: 機會成本&lt;/h1&gt;
 
@@ -59,17 +75,68 @@
 
 &lt;h1 id=&quot;心理帳戶&quot;&gt;心理帳戶&lt;/h1&gt;
 
+&lt;p&gt;錢就是錢，每一分錢應該都是一樣的，並不會有所不同，但我們有時卻會替錢分類，讓我們先來看看以下這兩種情境:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;今天你已經買了一張一千塊的球賽門票，比賽當天，興沖沖地到了球場，卻突然發現票不見了！這時你會在現場再掏出一千塊來買票嗎?&lt;/li&gt;
+  &lt;li&gt;你沒有預先買票，到了球場時發現你錢包裡的一張一千塊鈔票不見了！此時你會在現場拿一千塊來買票嗎？&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;我想大家對於第一種情況，要再掏錢出來買票應該比較掙扎吧～明明我們損失的都一樣是價值一千塊，不管他是門票還是鈔票，
+但我們的感覺卻不同，後續的行為也可能跟著不同．&lt;/p&gt;
+
+&lt;p&gt;因為我們預先幫我們的錢分類了，在第一種情況裡你買門票用的錢，可能被你歸類在娛樂帳戶上，而第二種情況的錢是沒分類的一般預算，
+也許你心想每個月能花在娛樂上的預算有限，用掉了沒了，所以當損失的是娛樂帳戶裡錢，就不太能再花更多錢在此項目了．&lt;/p&gt;
+
+&lt;h2 id=&quot;認知限制&quot;&gt;認知限制&lt;/h2&gt;
+
+&lt;p&gt;會做這樣的預算編列，並不是壞事，就像前面所以說的，如果要花一筆錢時，要考慮到所以的機會成本幾乎是不太可能，
+我們的大腦裝不下所有選項，但一但我們將預算分類，此時機會成本的選項就會變得少許多，可以更容易做出決定．&lt;/p&gt;
+
+&lt;p&gt;以娛樂預算為例，當你要花錢去看一場球賽時，
+你可以能會想是要看一場球比較值得呢，還是是去看兩場電影，或者省下來之後再帶女朋友一起出去旅行．&lt;/p&gt;
+
+&lt;h2 id=&quot;不好的心理帳戶&quot;&gt;不好的心理帳戶&lt;/h2&gt;
+
+&lt;p&gt;既然心理帳戶有助於我們做決定，那不好的地方在哪兒呢？有時我們會把錢的來源，不小心也分類了，是辛苦賺來的錢、還是發票中獎、
+或者是出差可以報帳，住了一個比較好的飯店，然後自己多花錢吃了豪華晚餐．&lt;/p&gt;
+
+&lt;p&gt;對於比較輕鬆得來的錢，我們就更容易不假思索地花掉，其實錢就是錢，都是一樣的~&lt;/p&gt;
+
 &lt;h1 id=&quot;避免痛苦&quot;&gt;避免痛苦&lt;/h1&gt;
 
-&lt;h1 id=&quot;定錨效應&quot;&gt;定錨效應&lt;/h1&gt;
+&lt;p&gt;人類天生就會試著避開痛苦，當我被熱水燙到，就知道下次要避開，被蛇咬一次，就會十年怕草繩，跟金錢有關的痛苦，
+就是把錢付出去，交給別人的那個瞬間！&lt;/p&gt;
 
-&lt;h1 id=&quot;稟賦效應&quot;&gt;稟賦效應&lt;/h1&gt;
+&lt;p&gt;於是乎，商人就發明了一些方法，來讓我們更少地感知到付錢的痛苦，讓付錢的時間跟享受商品及服務的時間錯開，
+或是讓我們在付錢時，感覺好像付的不是錢XD&lt;/p&gt;
 
-&lt;h1 id=&quot;期望公平&quot;&gt;期望公平&lt;/h1&gt;
+&lt;h2 id=&quot;工具&quot;&gt;工具&lt;/h2&gt;
 
-&lt;h1 id=&quot;太在意價格&quot;&gt;太在意價格&lt;/h1&gt;
+&lt;p&gt;使用信用卡這類工具，可能會讓有些人不小心花了更多錢，在網站上逛逛，一鍵付款，付錢的過程太過方便無痛．&lt;/p&gt;
 
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人，我們懶惰，喜歡走捷徑，有各種誤判及偏見， 我們的認知有限制，腦袋的容量非常有限，我們短視近利，喜歡立即得到獎賞及滿足， 我們有各式各樣的思考、認知、感覺進而有了相對應的行為，這些就是心理學在研究的事．</summary></entry><entry><title type="html">[Google Sheet]我如何利用Google表單來記帳</title><link href="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/" rel="alternate" type="text/html" title="[Google Sheet]我如何利用Google表單來記帳" /><published>2021-07-31T22:30:00+08:00</published><updated>2021-07-31T22:30:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/">&lt;p&gt;利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣，
+&lt;h2 id=&quot;時間上&quot;&gt;時間上&lt;/h2&gt;
+
+&lt;p&gt;透過實際付錢跟享受的時間差，讓我們忘記付錢這件事，可以將付錢的時機大致分為三類:
+預付、後付、邊用邊付、什麼時候付錢真的會影響我們花錢的多寡嗎？有個實驗是這樣的:&lt;/p&gt;
+
+&lt;p&gt;請一群人來實驗室待四十分鐘，然後給他們一筆錢，他們可以選擇將這筆錢花在看有趣的影片，但是比較貴，
+也可以看一些漫畫，這比較便宜，或是有提供一些免費乏味的學術研究給他們看，總之他們可以選擇怎麼用這筆錢，
+來度過這漫長的四十分鐘．&lt;/p&gt;
+
+&lt;p&gt;而付錢的方式就是分成三種預付、後付、邊用邊付:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;預先想好要哪些娛樂，提前支付&lt;/li&gt;
+  &lt;li&gt;在實驗期間，使用娛樂，結束後再支付&lt;/li&gt;
+  &lt;li&gt;在實驗期間，每要使用一項娛樂時，當下付費&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;結果，預付跟後付沒有明顯差別，但是邊用邊付組則是花了最少的錢～，所以可以藉由時時提醒自己付錢的痛苦，來減少不必要的花費，
+就像我在&lt;a href=&quot;/posts/google-sheet-how-to-do-bookkeeping/&quot;&gt;[Google Sheet]我如何利用Google表單來記帳&lt;/a&gt;這篇裡，透過記帳，
+讓自己就算是使用電子錢包、網購、用信用卡時都能感受到付錢之痛．&lt;/p&gt;
+
+&lt;p&gt;剩下的內容，下集待續，掰掰～～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人，我們懶惰，喜歡走捷徑，有各種誤判及偏見， 我們的認知有限制，腦袋的容量非常有限，我們短視近利，喜歡立即得到獎賞及滿足， 我們有各式各樣的思考、認知、感覺進而有了相對應的行為，這些就是心理學在研究的事．</summary></entry><entry><title type="html">[Google Sheet]我如何利用Google表單來記帳</title><link href="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/" rel="alternate" type="text/html" title="[Google Sheet]我如何利用Google表單來記帳" /><published>2021-07-31T22:30:00+08:00</published><updated>2021-07-31T22:30:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/">&lt;p&gt;利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣，
 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-1.jpg&quot; alt=&quot;google sheet bookkeeping&quot; /&gt;&lt;/p&gt;
@@ -114,7 +181,15 @@
 比如預付、後付、信用卡、一鍵購物，讓花錢變得越方便，越無痛，來使得我們花更多．&lt;/p&gt;
 
 &lt;p&gt;所以記帳這行為，不僅是用來追蹤我們消費狀況的一個工具，說不定也能讓我們減少不必要的花費，每次花錢時都會清楚地感受到錢噴出去的感覺，
-哪天更可能因為懶得拿出手機來記，就不花錢了呢～&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><category term="books" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
+哪天更可能因為懶得拿出手機來記，就不花錢了呢～&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;延伸閱讀&quot;&gt;延伸閱讀&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot;&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><category term="books" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;簡介&quot;&gt;簡介&lt;/h1&gt;
 
