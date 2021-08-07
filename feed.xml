@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-07-31T22:38:51+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Google Sheet]我如何利用Google表單來記帳</title><link href="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/" rel="alternate" type="text/html" title="[Google Sheet]我如何利用Google表單來記帳" /><published>2021-07-31T22:30:00+08:00</published><updated>2021-07-31T22:30:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/">&lt;p&gt;利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-07T17:18:48+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費</title><link href="https://homuchen.com/posts/book-note-money-psychology/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費" /><published>2021-08-04T22:30:00+08:00</published><updated>2021-08-04T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-money-psychology</id><content type="html" xml:base="https://homuchen.com/posts/book-note-money-psychology/">&lt;p&gt;生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人，我們懶惰，喜歡走捷徑，有各種誤判及偏見，
+我們的認知有限制，腦袋的容量非常有限，我們短視近利，喜歡立即得到獎賞及滿足，
+我們有各式各樣的思考、認知、感覺進而有了相對應的行為，這些就是心理學在研究的事．&lt;/p&gt;
+
+&lt;p&gt;當這些人的天性碰上了金錢，我們是否能做出好的經濟決策呢？會不會當了許久的冤大頭而不自知，
+或是被誘惑引導到花了一些本來不會花的錢，該如何聰明的花費、花的剛好、花的開心，
+就是金錢心理學這本書要探討的內容．&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-1.jpg&quot; alt=&quot;book: Dollards and Sense&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;基本原則-機會成本&quot;&gt;基本原則: 機會成本&lt;/h1&gt;
+
+&lt;p&gt;一顆蘋果跟一顆橘子給你選，你要哪個？對大部分的人來說，這都不會是個非常困難的選擇，但如果是一顆蘋果50元，跟一顆橘子10元呢？
+感覺是不是變困難了~&lt;/p&gt;
+
+&lt;p&gt;這是因為機會成本變複雜了的關係，在第一個情況中，如果你選擇了蘋果只需要放棄橘子，機會成本只有蘋果或橘子，
+但在後者，如果你選擇了蘋果，你的機會成本可能是任何50元可以買到的東西，可能是五顆橘子、一杯飲料、一個漢堡、
+兩本筆記本、好多隻筆、等等等無限的可能～&lt;/p&gt;
+
+&lt;p&gt;所以當一件事涉及到了金錢的時候，就會變得更為複雜，最理想的情況是，我們在做決策時必須考慮到所有的機會成本，
+但這既困難又不太實際，我們不可能再得到想到所有可能的資訊之後才下決定，
+往往我們會被其他各種心理因素給左右，以下就一一來看吧！&lt;/p&gt;
+
+&lt;h1 id=&quot;相對性&quot;&gt;相對性&lt;/h1&gt;
+
+&lt;h2 id=&quot;艾賓浩斯錯覺&quot;&gt;艾賓浩斯錯覺&lt;/h2&gt;
+&lt;p&gt;首先我先來看一張圖，大家會覺得兩個在中間的橘色圓形圖案，哪一個比較大呢？
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-2.jpg&quot; alt=&quot;ebbinghaus illusion&quot; /&gt;
+是否會覺得右邊的比較大呢？但其實是一樣的! 這就是艾賓浩斯錯覺，是對相對大小感知的一種視力錯覺．&lt;/p&gt;
+
+&lt;h2 id=&quot;金錢的相對大小&quot;&gt;金錢的相對大小&lt;/h2&gt;
+&lt;p&gt;所以我們的大腦這種對相對大小的感知，也一樣會應用到金錢上，先來看一個情境:&lt;/p&gt;
+
+&lt;p&gt;假如今天你想要買一雙鞋，要價2000元，然後店員跟你說，再走路五分鐘的路程之外有一家分店，
+只要1800，那你會去另一個店買嗎？
+再來，今天假設你要買的的是一台電視，要價20000，然後店員也跟你說，走路五分鐘的路程之外有一家分店，
+只要19800，那你會去另一個店買嗎？&lt;/p&gt;
+
+&lt;p&gt;我想有人在第一種情況會選擇去另一家店，而買電視時卻不會，但一樣都是五分鐘路程省200，照理說兩種的選擇應該要一樣才是呀～
+在這裡就是對相對大小的認知偷偷溜進了我們的判斷之中，一樣的200塊，相對於2000感覺省了不少，但相對於20000，好像就沒那麼多了．&lt;/p&gt;
+
+&lt;p&gt;另外還有許多地方，像是買車時，推銷員建議只要再加多少錢，就可以升級某某配件;
+或是在各種商店的收銀櫃台上的小物，相較於你全部買的東西，再多花個幾十塊買一些零食好像也沒什麼;以及在高級餐廳裡開一瓶高價的紅酒，
+這些可能都是商人利用了相對性而促使你做了原先你不會做的交易．&lt;/p&gt;
+
+&lt;h2 id=&quot;誘餌&quot;&gt;誘餌&lt;/h2&gt;
+
+&lt;p&gt;我們人類喜歡比較，那也無可厚非，因為有時不能比較的話，時常無法做出決定，比如說要你對一堂線上課程出價、一顆花椰菜要多少錢、
+500公克的牛肉要多少錢，如果沒有其他資訊，往往不知道改怎麼定價，所以有時商人為了讓你更容易做出決定，故意給你可以比較的內容，
+讓你覺得好像賺到了，比如說原價1000，今天特價600！&lt;/p&gt;
+
+&lt;p&gt;我們可以看看經濟學人雜誌是怎樣做的，訂閱的選項有三種：線上版、印刷版、線上加印刷版，定價分別為59美元、125美元、125美元，
+什麼？！單純印刷版跟線上版加印刷版都一樣只要125美元，傻子才會只訂印刷版．沒錯！確實沒有人是傻子，雙訂閱的人數佔了84%．&lt;/p&gt;
+
+&lt;p&gt;現在我們把傻瓜選項拿掉，只有線上版及雙訂閱，結果選擇雙訂閱的人只剩32%！加上一個無關緊要的選項，竟然讓大家選擇了更高價的選項，
+這是因為在比較單純印刷版及雙訂閱的時候，一樣的價錢，雙訂閱明顯優於印刷版，有東西可以比較的時候，我們人類就是比較開心，覺得賺到！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-3.jpg&quot; alt=&quot;The Econimics: Bait&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;心理帳戶&quot;&gt;心理帳戶&lt;/h1&gt;
+
+&lt;h1 id=&quot;避免痛苦&quot;&gt;避免痛苦&lt;/h1&gt;
+
+&lt;h1 id=&quot;定錨效應&quot;&gt;定錨效應&lt;/h1&gt;
+
+&lt;h1 id=&quot;稟賦效應&quot;&gt;稟賦效應&lt;/h1&gt;
+
+&lt;h1 id=&quot;期望公平&quot;&gt;期望公平&lt;/h1&gt;
+
+&lt;h1 id=&quot;太在意價格&quot;&gt;太在意價格&lt;/h1&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人，我們懶惰，喜歡走捷徑，有各種誤判及偏見， 我們的認知有限制，腦袋的容量非常有限，我們短視近利，喜歡立即得到獎賞及滿足， 我們有各式各樣的思考、認知、感覺進而有了相對應的行為，這些就是心理學在研究的事．</summary></entry><entry><title type="html">[Google Sheet]我如何利用Google表單來記帳</title><link href="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/" rel="alternate" type="text/html" title="[Google Sheet]我如何利用Google表單來記帳" /><published>2021-07-31T22:30:00+08:00</published><updated>2021-07-31T22:30:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-how-to-do-bookkeeping/">&lt;p&gt;利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣，
 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-1.jpg&quot; alt=&quot;google sheet bookkeeping&quot; /&gt;&lt;/p&gt;
@@ -42,7 +113,7 @@
 而付錢就是一種痛苦，所以商人會有許多方法來讓我們忘記痛苦，不小心就花太多錢，
 比如預付、後付、信用卡、一鍵購物，讓花錢變得越方便，越無痛，來使得我們花更多．&lt;/p&gt;
 
-&lt;p&gt;所以記帳這行為，不僅是用來追蹤我們消費狀況的一個工具，說不定也能讓我們減少不必要的花費，每次花錢時都會清楚地感受到前噴出去的感覺，
+&lt;p&gt;所以記帳這行為，不僅是用來追蹤我們消費狀況的一個工具，說不定也能讓我們減少不必要的花費，每次花錢時都會清楚地感受到錢噴出去的感覺，
 哪天更可能因為懶得拿出手機來記，就不花錢了呢～&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><category term="books" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;簡介&quot;&gt;簡介&lt;/h1&gt;
@@ -93,7 +164,7 @@
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;習慣:&lt;/strong&gt; 習慣這兩個字就出現在書名當中，可以知道它有多重要，造就現在我們的狀態的，正是過往以來我們所有的所作所為，
-而我們在過去的每個當下所做的選擇、所做的行為，決大部分並不是我們有意識的，而是無意識的習慣！&lt;/p&gt;
+而我們在過去的每個當下所做的選擇、所做的行為，絕大部分並不是我們有意識的，而是無意識的習慣！&lt;/p&gt;
 
     &lt;p&gt;試想從我們早上醒來，睜開眼睛第一件事是拿起手機賴在床上滑，還是整理床鋪、冥想;早餐是隨便吃吃，還是有注重均衡營養;
 到了工作場所，是先想好今天最重要的任務，還是開始瞎忙;下班之後是躺在沙發上看電視，還是去運動．&lt;/p&gt;
@@ -666,133 +737,7 @@ Content-Length: 11
 
 &lt;hr /&gt;
 
-&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="Web Development" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">A Linux HTTP client tool — curl的介紹及用法</title><link href="https://homuchen.com/posts/linux-http-client-tool-curl-usage/" rel="alternate" type="text/html" title="A Linux HTTP client tool — curl的介紹及用法" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/linux-http-client-tool-curl-usage</id><content type="html" xml:base="https://homuchen.com/posts/linux-http-client-tool-curl-usage/">&lt;p&gt;做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用&lt;a href=&quot;https://www.postman.com/&quot;&gt;postman&lt;/a&gt;這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！&lt;/p&gt;
-
-&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTTP Request message&lt;/li&gt;
-  &lt;li&gt;Curl 的許多參數及用法&lt;/li&gt;
-  &lt;li&gt;如何知道自己curl有沒有寫對&lt;/li&gt;
-  &lt;li&gt;其他常見搭配的用法及使用情境&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/curl-1.jpg&quot; alt=&quot;curl&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;http-request-message&quot;&gt;HTTP Request message&lt;/h1&gt;
-
-&lt;p&gt;作為一個HTTP client，要送出一個request，我們先必須知道送出去的message到底會有哪些東西組成．&lt;/p&gt;
-
-&lt;h2 id=&quot;request-line&quot;&gt;Request line&lt;/h2&gt;
-&lt;p&gt;HTTP message的第一行，由method、URL、version所組成，例如：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET /index.html HTTP/1.1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;header-lines&quot;&gt;Header lines&lt;/h2&gt;
-&lt;p&gt;第二行開始，每一行是為一個header，field及value由冒號隔開，例如&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;Host: www.google.com
-Connection: Close
-Accept-Language: en
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;body&quot;&gt;body&lt;/h2&gt;
-&lt;p&gt;Header結束空一行之後是為body，method是GET的就沒有body，例如你的表單POST的一些資料就會放在body，可能長這樣：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;name=HoMu&amp;amp;phone=0912345678&amp;amp;email=homu@email.com
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;更多關於HTTP message的說明，可以看我之前寫過的文章：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;[Networking] HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;curl&quot;&gt;Curl&lt;/h1&gt;
-&lt;p&gt;所以我們要如何使用curl指令來產生HTTP message呢？！&lt;/p&gt;
-
-&lt;h2 id=&quot;基本&quot;&gt;基本&lt;/h2&gt;
-&lt;p&gt;URL是必須的，什麼參數都沒有，就產生一個GET message&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-x&quot;&gt;-X&lt;/h2&gt;
-&lt;p&gt;設定你想要的method，例如你想要POST，如：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST api.host.com/v1/users
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-h&quot;&gt;-H&lt;/h2&gt;
-&lt;p&gt;加上headers，用冒號隔開field及value，如果想要多個header就多打幾次-H，如：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST \
-     -H 'Content-Type: application/json' \
-     -H 'X-Whatever-Field: value' \
-     api.host.com/v1/users
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-d&quot;&gt;-d&lt;/h2&gt;
-&lt;p&gt;加上body，比如你想POST JSON string的data給你的API：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d '{&quot;name&quot;: &quot;HoMu&quot;, &quot;age&quot;: 30}'
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果你data很多，想在一個檔案裡頭，也可以使用指定檔案路徑的方式，可以為絕對路徑，也可以是相對的，路徑前必須加上@，例如：-d @./data.json&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -X POST -H 'Content-Type: application/json' localhost:3000/api -d @FILEPATH
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;-i&quot;&gt;-i&lt;/h2&gt;
-&lt;p&gt;按下Enter後，你得到會是server傳回來的body，如果你想要看response的header的話，要加上-i&lt;/p&gt;
-
-&lt;h2 id=&quot;-f&quot;&gt;-F&lt;/h2&gt;
-&lt;p&gt;上傳檔案&lt;/p&gt;
-
-&lt;h1 id=&quot;利用nc指令看看自己到了傳了什麼&quot;&gt;利用nc指令看看自己到了傳了什麼&lt;/h1&gt;
-&lt;p&gt;你可能寫了curl指令，不太確定用法，想知道到底curl形成出來的message是不是自己想要的格式，這時可以使用nc指令，在本機端起一個tcp server，在curl這個server，就可以看到HTTP的message囉．&lt;/p&gt;
-
-&lt;h2 id=&quot;nc監聽在port-3000&quot;&gt;nc監聽在port 3000&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;nc -l 3000
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;curl-port-3000&quot;&gt;curl port 3000&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl localhost:3000
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;其他常見使用情況&quot;&gt;其他常見使用情況&lt;/h1&gt;
-&lt;h2 id=&quot;redirect&quot;&gt;redirect&lt;/h2&gt;
-&lt;p&gt;當curl回來的資料是html時，直接在terminal上噴出一堆字也是很難看，這時長搭配redirect io，把回傳回來的html string寫到檔案裡，就可以用瀏覽器打開來了．&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl www.google.com &amp;gt; gg.html
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;jq&quot;&gt;jq&lt;/h2&gt;
-&lt;p&gt;如果content-type是json的話，可以使用jq command幫你parse，不然一堆json string噴在螢幕上，也是眼花．&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl api.host.com/users | jq
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;今天簡單看了一下HTTP message的格式，以及如何用curl來做出自己想要的HTTP Request，並且知道自己到底有沒有寫對．&lt;/p&gt;
-
-&lt;p&gt;感謝大家的收看，如有錯誤歡迎指正，下次見！&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;參考資料&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;jq - &lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><summary type="html">做為一個HTTP client，想要對server發出請求，有許多做法，可能是寫一個python script 或使用其他任何語言，也可以是使用postman這樣的工具，或者是直接在command line上或shell script中使用curl指令．當你想要快速地測試一下某個API，或是explore別人的HTTP service時，直接使用curl是還蠻方便的！甚至直接用shell script來寫爬蟲了！</summary></entry><entry><title type="html">HTTP 簡介，以及使用telnet、nc、curl等指令來探索</title><link href="https://homuchen.com/posts/http-introduction-telnet-nc-curl/" rel="alternate" type="text/html" title="HTTP 簡介，以及使用telnet、nc、curl等指令來探索" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-introduction-telnet-nc-curl</id><content type="html" xml:base="https://homuchen.com/posts/http-introduction-telnet-nc-curl/">&lt;p&gt;在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．&lt;/p&gt;
+&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name></name></author><category term="Web Development" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">HTTP 簡介，以及使用telnet、nc、curl等指令來探索</title><link href="https://homuchen.com/posts/http-introduction-telnet-nc-curl/" rel="alternate" type="text/html" title="HTTP 簡介，以及使用telnet、nc、curl等指令來探索" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-introduction-telnet-nc-curl</id><content type="html" xml:base="https://homuchen.com/posts/http-introduction-telnet-nc-curl/">&lt;p&gt;在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．&lt;/p&gt;
 
 &lt;p&gt;HTTP在OSI模型中，是屬於應用層(Application layer)裡的一個通訊協定，透過傳輸層(Transport layer)的TCP來傳輸資料．&lt;/p&gt;
 
