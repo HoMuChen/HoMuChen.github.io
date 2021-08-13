@@ -1,4 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-11T20:51:03+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)</title><link href="https://homuchen.com/posts/book-note-money-psychology/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)" /><published>2021-08-07T23:30:00+08:00</published><updated>2021-08-07T23:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-money-psychology</id><content type="html" xml:base="https://homuchen.com/posts/book-note-money-psychology/">&lt;p&gt;生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人；我們懶惰，喜歡走捷徑，有各種誤判及偏見；
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-13T23:37:50+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">How to stream data from Blob Storage at your HTTP server using Azure and express.js</title><link href="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/" rel="alternate" type="text/html" title="How to stream data from Blob Storage at your HTTP server using Azure and express.js" /><published>2021-08-13T23:30:00+08:00</published><updated>2021-08-13T23:30:00+08:00</updated><id>https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express</id><content type="html" xml:base="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/">&lt;p&gt;這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式，
+將檔案儲存到本地端，或是當你作為一個Server(此篇使用express.js)時，回傳給你的client，並且根據檔案名稱來設置正確的Content-Type．&lt;/p&gt;
+
+&lt;h1 id=&quot;download-file-from-azure&quot;&gt;Download file from Azure&lt;/h1&gt;
+
+&lt;h2 id=&quot;取得file的readable-stream&quot;&gt;取得file的Readable Stream&lt;/h2&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ShareServiceClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StorageSharedKeyCredential&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@azure/storage-file-share&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ACCOUNT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your storage account&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ACCOUNT_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your account secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;credential&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StorageSharedKeyCredential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ACCOUNT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ACCOUNT_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;serviceClient&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ShareServiceClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;`https://&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ACCOUNT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.file.core.windows.net`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;credential&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//下載data share裡的d4ba71bf-3d38-4e69-9ba2-be4c04179e43.csv&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileClient&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;serviceClient&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getShareClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rootDirectoryClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getFileClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d4ba71bf-3d38-4e69-9ba2-be4c04179e43.csv&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;downloadFileResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//downloadFileResponse.readableStreamBody  ----&amp;gt;&amp;gt; Readable Stream在這裡拉&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;write-to-local-file-or-socket&quot;&gt;Write to local file or socket&lt;/h1&gt;
+
+&lt;h2 id=&quot;把檔案寫入到本地的檔案&quot;&gt;把檔案寫入到本地的檔案&lt;/h2&gt;
+
+&lt;p&gt;使用fs.createWriteStream(path)建立一個file的Writable stream，再將Readable Stream pipe到那裡．&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;local.csv&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;downloadFileResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readableStreamBody&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;creatWriteStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;把檔案傳到http-response-expressjs&quot;&gt;把檔案傳到HTTP Response (express.js)&lt;/h2&gt;
+
+&lt;p&gt;express的handler裡的第二個參數response物件，也是一個writble stream，可以直接將資料pipe過去．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-fs&quot;&gt;app.get('/path', (req, res) =&amp;gt; {
+  downloadFileResponse.readableStreamBody.pipe(res)
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;content-type&quot;&gt;Content-Type&lt;/h1&gt;
+
+&lt;p&gt;使用套件mime-types，可以從想要下載的資料的檔案名中取得MIME type，從而設置到HTTP Response的Content-Type header裡．&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mimeTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;mime-types&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;test.csv&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mimetype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mimeTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mimetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//text/csv&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;最後將以上結合起來，完整的代碼如下:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/HoMuChen/4b5d8ddd98d1cd9547d2315e0f51d3e1.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;跑起來之後，就能透過GET http://localhost:3000/share/filename.csv這樣之類的網址來下載檔案囉～～&lt;/p&gt;
+
+&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nodejs.org/api/stream.html&quot;&gt;Node.js documentation: Stream&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/@azure/storage-file-share&quot;&gt;@azure/storage-file-share&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="express" /><category term="node.js" /><category term="azure" /><category term="stream" /><category term="http" /><category term="api" /><summary type="html">這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式， 將檔案儲存到本地端，或是當你作為一個Server(此篇使用express.js)時，回傳給你的client，並且根據檔案名稱來設置正確的Content-Type．</summary></entry><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)</title><link href="https://homuchen.com/posts/book-note-money-psychology/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)" /><published>2021-08-07T23:30:00+08:00</published><updated>2021-08-07T23:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-money-psychology</id><content type="html" xml:base="https://homuchen.com/posts/book-note-money-psychology/">&lt;p&gt;生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人；我們懶惰，喜歡走捷徑，有各種誤判及偏見；
 我們的認知有限制，腦袋的容量非常有限；我們短視近利，喜歡立即得到獎賞及滿足；
 我們有各式各樣的思考、認知、感覺，進而有了相對應的行為，這些就是心理學在研究的事．&lt;/p&gt;
 
@@ -812,149 +915,4 @@ Content-Length: 11
 
 &lt;hr /&gt;
 
-&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry><entry><title type="html">HTTP 簡介，以及使用telnet、nc、curl等指令來探索</title><link href="https://homuchen.com/posts/http-introduction-telnet-nc-curl/" rel="alternate" type="text/html" title="HTTP 簡介，以及使用telnet、nc、curl等指令來探索" /><published>2021-03-24T20:00:00+08:00</published><updated>2021-03-24T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-introduction-telnet-nc-curl</id><content type="html" xml:base="https://homuchen.com/posts/http-introduction-telnet-nc-curl/">&lt;p&gt;在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．&lt;/p&gt;
-
-&lt;p&gt;HTTP在OSI模型中，是屬於應用層(Application layer)裡的一個通訊協定，透過傳輸層(Transport layer)的TCP來傳輸資料．&lt;/p&gt;
-
-&lt;p&gt;關於application layer在整個分層架構中扮演什麼樣的角色，可以參考我之前寫的文章: &lt;a href=&quot;/posts/networking-application-layer-overview-what-is-socket&quot;&gt;[Networking]Application Layer Overview，什麼是Socket?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;client-server-protocol&quot;&gt;Client server protocol&lt;/h1&gt;
-&lt;p&gt;HTTP是這樣的，想要發起通訊請求的一方作為client(例如你的瀏覽器)，而server則隨時等候，回應client的請求，client首先會建立一個TCP socket，至於TCP連線是怎麼建立，以及資料如何透過TCP connection在client及server之間傳送，則是另外一回事，並不是HTTP需要考慮的事．&lt;/p&gt;
-
-&lt;p&gt;Client送出一個請求，例如我要看youtube! 而youtube的server收到這個請求，則回應給他youtube的介面，以及一些影片的清單．&lt;/p&gt;
-
-&lt;p&gt;HTTP既然作為client及server之間的語言，他必須有個規範大家才聽得懂，不然有人講中文，有人說英文這樣是無法溝通的．以下就來看看HTTP所傳送的資料到底是長怎樣．&lt;/p&gt;
-
-&lt;h1 id=&quot;http-message&quot;&gt;HTTP message&lt;/h1&gt;
-&lt;p&gt;HTTP message分成兩種，請求(request)及回應(response)，他基本上就是人類可以讀懂的文字．&lt;/p&gt;
-
-&lt;h2 id=&quot;request-message&quot;&gt;Request message&lt;/h2&gt;
-&lt;p&gt;以下一個範例，當你在網址上輸入www.google.com時，你的瀏覽送出去的HTTP message可能會是這樣:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET / HTTP/1.1
-Host: www.google.com
-Connection: Close
-User-agent: Mozilla/5.0
-Accept-language: en
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;第一行為request line，由三個部分組成，method、URL、version，分別以空格隔開．&lt;/p&gt;
-
-&lt;p&gt;常見的method有GET 、POST 、PUT 、DELETE 、HEAD等等，GET非常地常見，通常代表著你想要取得的某些資源，而你想取的資源則用URL表示，最後HTTP/1.1就是版本．&lt;a href=&quot;/posts/&quot;&gt;點我看更多關於method的介紹．&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;第二行開始為header lines，field跟value以冒號(:)隔開，上面例子中有Host、Connection、User-agent、Accept-language四個header，還有許許多多的header各自有各自的意義，Host代表server，Connection: Close是叫server回傳完資料後就把TCP connection close掉，關於persistent connections的部分，之後會再寫一篇文章來詳細探討．&lt;/p&gt;
-
-&lt;h2 id=&quot;request-body&quot;&gt;Request body&lt;/h2&gt;
-&lt;p&gt;如果client需要傳送額外的資料給server，就要把資料放在body的部分，是在header lines之後空一行，比如說我要通過一個API新增一個user&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;POST /users HTTP/1.1
-HOST: api.domain.com
-Content-Type: application/json
-Connection: Keep-alive
-
-{&quot;name&quot;: &quot;HoMuChen&quot;, &quot;age&quot;: 30, &quot;gender&quot;: &quot;male&quot;}
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;response-message&quot;&gt;Response message&lt;/h2&gt;
-&lt;p&gt;以下為一個範例:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;HTTP/1.1 200 OK
-Server: nginx/1.14.0 (Ubuntu)
-Date: Wed, 17 Mar 2021 14:34:29 GMT
-Content-Type: text/html
-Content-Length: 614
-Last-Modified: Wed, 17 Mar 2021 10:27:32 GMT
-
-&amp;lt;!doctype html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;........
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;status-line&quot;&gt;Status Line&lt;/h2&gt;
-&lt;p&gt;第一行為status line，由三個部分組成，version、status code、phrase，分別以空格隔開．
-Status code 跟 phrase拜表著回應的結果，常見的有：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;200 OK：成功&lt;/li&gt;
-  &lt;li&gt;301 Moved Permanently: 資源不在此URL，通常搭配著Location的response header，告訴我們要去哪裡取得資源．&lt;/li&gt;
-  &lt;li&gt;400 Bad Request: Request有錯，我server看不懂拉．&lt;/li&gt;
-  &lt;li&gt;404 Not Found: 資源不存在．&lt;/li&gt;
-  &lt;li&gt;500 Internal Server Error: Server出事了…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;header-lines&quot;&gt;Header Lines&lt;/h2&gt;
-&lt;p&gt;第二行開始一樣是header lines，我覺得比較重要的是Content-Type，此header就是說明了放在最後body裡的資料是什麼格式，讓client可以去處理．常見的像是text/html、application/json、image/jpeg、application/pdf等等．&lt;/p&gt;
-
-&lt;h2 id=&quot;body&quot;&gt;Body&lt;/h2&gt;
-&lt;p&gt;結束header lines之後，空一行，後面就是response body的部分，放著的就是request想要的資料，上面例子中就是html document，也可能是一張圖片的binary data，或是一個Restful API的json資料．&lt;/p&gt;
-
-&lt;h1 id=&quot;get-your-hands-dirty&quot;&gt;Get your hands dirty&lt;/h1&gt;
-&lt;h2 id=&quot;telnet&quot;&gt;telnet&lt;/h2&gt;
-&lt;p&gt;最後就來使用一些linux command line tool來驗證上面講的對不對吧！&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;telnet www.google.com 80
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;使用telnet指令，如此一來就跟google建立了一個TCP連線，接下來輸入並且按下Enter&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET / HTTP/1.1
-Host: www.google.com
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-intro-1.jpg&quot; alt=&quot;telnet request response&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;就可以看到google把網頁吐回來拉～～&lt;/p&gt;
-
-&lt;h2 id=&quot;nccurl&quot;&gt;nc、curl&lt;/h2&gt;
-
-&lt;p&gt;除了telnet之後，也可以用nc作為建立tcp連線的指令，這裡我們用nc來建立一個server，-l 監聽在本機的port 3000上&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;nc -l 3000
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;之後在另一個shell，利用curl作為HTTP client，發送HTTP到port 3000&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl localhost:3000
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-intro-2.jpg&quot; alt=&quot;curl response&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;nc的terminal上就會出現這些資訊拉～～也就是curl傳送過來的資料，再來試試看上面開創一個新的user的API call吧&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl -XPOST \
-     -H 'Content-Type: application' \
-     -H 'Connection: Keep-alive' \
-     api.domain.com/users \
-     -d '{&quot;name&quot;: &quot;HoMuChen&quot;, &quot;age&quot;: 30, &quot;gender&quot;: &quot;male&quot;}'
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;nc server就會收到下面的資料拉！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-intro-3.jpg&quot; alt=&quot;curl request&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;HTTP作為網路中最常用的client server 通訊協定，簡單地介紹了HTTP message的格式，他是human readable的text format，熟悉他到底傳來傳去到底在傳什麼，可以幫助我們開發網頁應用時更有底氣．&lt;/p&gt;
-
-&lt;p&gt;也可以學習使用一些linux指令，快速的explore別人的API，或是看看自己送出去的request到底有沒有對．&lt;/p&gt;
-
-&lt;p&gt;感謝您的閱讀~期待下次見！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Networking" /><category term="http" /><category term="linux" /><category term="curl" /><category term="nc" /><category term="telnet" /><summary type="html">在網路的世界裡，HTTP扮演著一個重要角色，當你打開Instagram看著無以計數的照片、打開Youtube看看影片、在google上搜尋著你想要知道的答案、瀏覽著別人的網站文章，這些都是HTTP負責把上述的這些照片、影片、文字、等檔案資源從別處的伺服器搬到你的裝置裡，可能是你的手機、平板或是電腦．</summary></entry></feed>
+&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry></feed>
