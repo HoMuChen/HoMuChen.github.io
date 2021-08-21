@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-13T23:37:50+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">How to stream data from Blob Storage at your HTTP server using Azure and express.js</title><link href="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/" rel="alternate" type="text/html" title="How to stream data from Blob Storage at your HTTP server using Azure and express.js" /><published>2021-08-13T23:30:00+08:00</published><updated>2021-08-13T23:30:00+08:00</updated><id>https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express</id><content type="html" xml:base="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/">&lt;p&gt;這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-21T23:52:15+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)</title><link href="https://homuchen.com/posts/book-note-dollars-and-sense/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)" /><published>2021-08-21T23:40:00+08:00</published><updated>2021-08-21T23:40:00+08:00</updated><id>https://homuchen.com/posts/book-note-dollars-and-sense</id><content type="html" xml:base="https://homuchen.com/posts/book-note-dollars-and-sense/">&lt;p&gt;繼上篇&lt;a href=&quot;/posts/book-note-money-psychology&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;談完部分的內容之後，
+今天在這把剩下講完吧～&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-1.jpg&quot; alt=&quot;book: Dollards and Sense&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;大綱&quot;&gt;大綱&lt;/h1&gt;
+
+&lt;p&gt;以下為這篇文章的大綱&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;定錨效應&lt;/li&gt;
+  &lt;li&gt;稟賦效應&lt;/li&gt;
+  &lt;li&gt;期望公平&lt;/li&gt;
+  &lt;li&gt;太在意價格&lt;/li&gt;
+  &lt;li&gt;總結及我如何利用以上現象來設計自己&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;定錨效應&quot;&gt;定錨效應&lt;/h1&gt;
+
+&lt;p&gt;我們首先先來看一個實驗，請一群受試者回答一個問題: 非洲國家佔聯合國國家的百分之幾?大部分人對這個答案的數字都沒什麼概念，
+但這實驗讓受試者在回答之前，先轉一個被設計過轉盤，這轉盤只會出現25及65這兩個數字，結果發現轉到25的那群人，回答的答案平均是;
+而另一組則是!&lt;/p&gt;
+
+&lt;p&gt;沒有任何原因，我們就是會受到環境影響，會被最一開始的資訊影響，這就是定錨效應，哪怕他毫無意義，毫無邏輯。&lt;/p&gt;
+
+&lt;p&gt;而這些資訊從哪裡來呢？除了在環境中不小心跑進來的之外，主要還有其他兩種，自己過去的經驗以及跟著大眾的腳步。&lt;/p&gt;
+
+&lt;h2 id=&quot;自我因循&quot;&gt;自我因循&lt;/h2&gt;
+&lt;p&gt;問你一瓶可樂多少錢？大概30塊，為什麼定這個價呢～其實也沒有什麼理由，就是因為過去我們看到的價格就都大概是這樣，
+人們會相信自己也是天經地義的事，只是有時自大就是這麼來的。&lt;/p&gt;
+
+&lt;h2 id=&quot;從眾&quot;&gt;從眾&lt;/h2&gt;
+&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010757786&quot;&gt;&lt;strong&gt;影響力&lt;/strong&gt;&lt;/a&gt;一書裡，說明了許多我們人類做出決策、行為時，會受到許許多多各種因素的影響，
+而其中一個就是從眾，尤其是當我們對一件事物越不了解，所知的資訊越少時，就更容易跟著身邊大眾的行為一起行動，
+畢竟我們人是社會性的動物，一般來說，我們不希望被說成是特立獨行、不易合作、自私自利，我們會希望融入群體之中。&lt;/p&gt;
+
+&lt;h1 id=&quot;稟賦效應&quot;&gt;稟賦效應&lt;/h1&gt;
+&lt;p&gt;我們會對於我們擁有的東西，賦予他更高的價值，這就是稟賦效應，可能是我們對它了解的更多，知道他的價值;
+或者我們對他投注的心力越多，就更加愛它．&lt;/p&gt;
+
+&lt;p&gt;所以舉凡像是免費試用、體驗，拍得讓你身歷其境的廣告，都是讓你有種擁有那事物的錯覺，好像你願意掏出更多的錢．甚至是競標，
+當你一直是最高價的暫時得標主時，你腦中可已經有了各種拿到東西後的幻想，在最後一刻被別人出了更高價時，你可能就腦衝再給他加價下去。&lt;/p&gt;
+
+&lt;p&gt;而從另一面來看，因為我們我們所有的事物估值較高，所以比起獲得，我們也會盡量避免失去我們已經擁有的東西，即便他們客觀上的價值是一樣的．&lt;/p&gt;
+
+&lt;h2 id=&quot;損失趨避&quot;&gt;損失趨避&lt;/h2&gt;
+&lt;p&gt;讓我們來玩個遊戲，執一面硬幣，正面的話你可以獲得十萬塊，反面則需要付出十萬塊，你會想參加嗎～&lt;/p&gt;
+
+&lt;p&gt;我想大部分的人都不會參加，因為失去十萬塊的痛苦大於得到十萬塊，使得原本從理性經濟人眼裡看來參不參加都一樣的事產生了變化，
+所以就會有人股票賺一點就獲利了結，而套牢很久卻都不賣，有獲利怕又還回去所以趕快賣掉，而虧損只要不賣，就不算損失，一張不賣！奇蹟自來！&lt;/p&gt;
+
+&lt;h1 id=&quot;期望公平&quot;&gt;期望公平&lt;/h1&gt;
+&lt;p&gt;我們人類喜歡公平甚於自利，先來看看以下這個實驗吧～ 實驗中請來兩個人，並給他們一筆錢要他們分配(比如說100元)，
+其中一個人可以決定要如何分配，而另一個人可以選擇接不接受，但要是不接受的話，大家都沒錢拿～當提議方提出50:50的時候，
+沒有問題，很公平，但當提議方提出90:10的時候，另一個人卻會選擇拒絕，就算拿到10元比起什麼都沒有還要好，但他還是拒絕了!&lt;/p&gt;
+
+&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010793984&quot;&gt;&lt;strong&gt;社交天性&lt;/strong&gt;&lt;/a&gt;一書裡有說到，社會獎賞跟生理獎賞對我們的大腦來說，其實沒有太大的區別！
+我們渴望著兩者，也有類似的神經迴路，社會性獎賞就是比如說上面提到的公平、信任、被認可、被讚美等等，而生理獎賞就像是吃飽喝足、得到十萬塊，
+因此我們會選擇公平而不是10塊錢，因為對我們人類來說，公平也是有某種程度的價值的。&lt;/p&gt;
+
+&lt;p&gt;另外還有哪些地方有這種重視公平甚於實際效用的出現呢？比如說雨天雨傘漲價，讓你寧願淋雨，也不願花一個錢來獲得遮風擋雨的效用;
+Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁火打劫，剝削我們！儘管這些花費會帶來好的實際效用。&lt;/p&gt;
+
+&lt;h1 id=&quot;太在意價格&quot;&gt;太在意價格&lt;/h1&gt;
+
+&lt;p&gt;當我們對一項事物了解的越少，或者可以得到的資訊無法量測時，我們能仰賴的資訊就可能只剩下價格，
+所以有時會有&lt;strong&gt;越貴就是越好&lt;/strong&gt;的迷思，一晚只要500的五星大飯店你敢住嗎？一隻大龍蝦只要500你敢吃嗎～&lt;/p&gt;
+
+&lt;p&gt;我們喜歡確定可量測的事物，面對太未知或負責難以衡量的情況時，會去找個相對簡單的指標來做判斷，
+像是我們的人生好難好複雜，不知道要做什麼該追求什麼，所以有時就陷入賺越多錢越好的情況中，變成太過於只追逐金錢。&lt;/p&gt;
+
+&lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
+
+&lt;p&gt;看完這本書後，知道了如此多人類行為可能會不理性之處，唯有先察覺到，才有辦法做改進，又或者是不需要改進，
+只是可以利用這些心理因素，來讓我們花費所換得的快樂可以最大化。&lt;/p&gt;
+
+&lt;p&gt;看完這本書之後的我，如果未來有出去旅行的機會，可能會更多地選擇將行程的花費預先的支付掉，如此一來在旅行當下，
+你可以不用感到付錢這個動作的痛苦，將心思好好地集中在這躺旅途的體驗上，像是購買度假村的吃到飽方案，
+你就不會在游完泳之後，是否要在海灘邊點個點心飲料間猶豫;也不會在晚餐時，怕太貴而不敢開瓶紅酒來喝，
+雖然吃到飽方案整體下來的花費可能會更多，但卻能換來更好的旅遊體驗。&lt;/p&gt;
+
+&lt;p&gt;相反地，在平時，也許你會想體會到更多的付錢之痛，這樣你才不會多做了一些無謂的消費，所以我在每次要付錢時，不管是用現金、
+信用卡還是行動支付，當下就會拿起手機來記帳，除了放大了花錢的感受，也讓花錢變得更加困難一些。(我如何記帳的可以參考我先前的文章: &lt;a href=&quot;/posts/google-sheet-how-to-do-bookkeeping/&quot;&gt;&lt;strong&gt;[Google Sheet]我如何利用Google表單來記帳&lt;/strong&gt;&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;另外如果你本來想買什麼沒用的小廢物，如果忍下來的話，可以把省下來的錢記到另一個帳戶中，
+可能是旅行呀、買房，或其他你的夢想上，讓自己省錢的習慣有更多的動力，
+帶來一些立即的滿足回饋，在&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot;&gt;&lt;strong&gt;原子習慣&lt;/strong&gt;&lt;/a&gt;中說到，想要改掉一個習慣，
+就要讓他難以去做，想要培養一個好習慣，就要讓這個習慣有獎賞。&lt;/p&gt;
+
+&lt;p&gt;這類研究，是屬於一個叫做行為經濟學的領域，與經濟學不同的是，在經濟學裡，
+假設了每個參與其中的人都是理性的，像機器一樣，一定會符合自身的最大利益來做決策，
+然而結合了心理學，希望能有更準確，更貼近現實的模型來描述各種經濟決策。&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">繼上篇[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)談完部分的內容之後， 今天在這把剩下講完吧～</summary></entry><entry><title type="html">How to stream data from Blob Storage at your HTTP server using Azure and express.js</title><link href="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/" rel="alternate" type="text/html" title="How to stream data from Blob Storage at your HTTP server using Azure and express.js" /><published>2021-08-13T23:30:00+08:00</published><updated>2021-08-13T23:30:00+08:00</updated><id>https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express</id><content type="html" xml:base="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/">&lt;p&gt;這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式，
 將檔案儲存到本地端，或是當你作為一個Server(此篇使用express.js)時，回傳給你的client，並且根據檔案名稱來設置正確的Content-Type．&lt;/p&gt;
 
 &lt;h1 id=&quot;download-file-from-azure&quot;&gt;Download file from Azure&lt;/h1&gt;
@@ -292,7 +383,8 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot;&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><category term="books" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/book-note-dollars-and-sense/&quot;&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;簡介&quot;&gt;簡介&lt;/h1&gt;
 
@@ -741,178 +833,4 @@
       &lt;li&gt;4.4 How to Response to a Health Check?&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry><entry><title type="html">What are HTTP Methods？Which to use and How to use them correctly?</title><link href="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/" rel="alternate" type="text/html" title="What are HTTP Methods？Which to use and How to use them correctly?" /><published>2021-04-04T20:00:00+08:00</published><updated>2021-04-04T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly</id><content type="html" xml:base="https://homuchen.com/posts/http-methods-which-to-use-and-how-to-use-them-correctly/">&lt;p&gt;這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．&lt;/p&gt;
-
-&lt;p&gt;當然寫server的人可以不照著慣例走，不過如此一來，使用這個API的user可能會很不高興，而這個user可以是公司的客戶，可能是公司內部的其他團隊，也可能是未來的自己！&lt;/p&gt;
-
-&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;HTTP Request message格式&lt;/li&gt;
-  &lt;li&gt;常見的methods，以及其特性&lt;/li&gt;
-  &lt;li&gt;分別介紹各個method的用法&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;http-request-message&quot;&gt;HTTP Request message&lt;/h1&gt;
-&lt;p&gt;一個general的HTTP request message如下：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;method&amp;gt; &amp;lt;URL&amp;gt; &amp;lt;version&amp;gt;
-&amp;lt;header&amp;gt;
-...
-...
-&amp;lt;header&amp;gt;
-
-&amp;lt;body&amp;gt; 
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;第一個字就是method，接著為URL跟version，換行後為許多個header，每個header以換行隔開，最後再隔一行之後是body．&lt;/p&gt;
-
-&lt;p&gt;對於HTTP message還不熟的，可以看我之前寫的文章：&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;[Networking] HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;URL代表著資源，而method是你想要對資源進行的操作，常見的method如下表：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/header-1.jpg&quot; alt=&quot;http headers&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;dont-surprise-your-user&quot;&gt;Don’t surprise your user&lt;/h1&gt;
-&lt;p&gt;並不是所有的server都會實作所有的method，而且每個method要做什麼事，也都是由server所決定的，但是一個好的API通常不會做怪怪的事，而是要符合使用者的期待，使其體驗良好，這裡先來解釋一下safe及Idempotent這兩個特性是什麼吧．&lt;/p&gt;
-&lt;h2 id=&quot;safe&quot;&gt;Safe&lt;/h2&gt;
-&lt;p&gt;如果一個request是safe的，指的是他不會導致server去做一些額外的動作，沒有side effect，例如說改變state、刷你信用卡，這樣的request基本上就是read-only的．
-這樣的特性，使得API的user可以大膽放心地去呼叫，實驗你的API，而不必擔心會引發什麼無法挽回的後果，GET、HEAD、OPTIONS都是具有safe特性的method．&lt;/p&gt;
-&lt;h2 id=&quot;idempotent&quot;&gt;Idempotent&lt;/h2&gt;
-&lt;p&gt;一個Idempotent的操作，指的是這樣的操作執行一次跟執行很多次的結果是一樣的．例如數學上的乘以1，乘以0，一個是數字乘以1或乘以0不管多少次，結果都是原本的數字或者是0．&lt;/p&gt;
-
-&lt;p&gt;那有Idempotent的特性，可以帶來什麼好處呢？就是user可以放心的retry，當user不確定剛剛的operation、request有沒有成功時(可能送出後網路突然斷掉、server做完之後再回應之前掛掉、等等…)，就再做一次！&lt;/p&gt;
-
-&lt;p&gt;而HTTP method中，除了POST，其他method都預期應該是Idempotent的，Update好幾次，Delete好幾次，應該都跟只做一次的結果一致．&lt;/p&gt;
-
-&lt;h1 id=&quot;http-methods&quot;&gt;HTTP Methods&lt;/h1&gt;
-&lt;p&gt;看完了共同的特性之後，接著來看看給個method預期是怎麼使用，以及server如何回應各種情況．&lt;/p&gt;
-
-&lt;h2 id=&quot;get&quot;&gt;GET&lt;/h2&gt;
-&lt;p&gt;最常見的method之一，顧名思義就是用來向server索取一些資源．&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;有資源，server就回應200以及資源&lt;/li&gt;
-  &lt;li&gt;沒有資源，404&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;head&quot;&gt;HEAD&lt;/h2&gt;
-&lt;p&gt;跟GET都一樣，但server並不回傳資源本身，而是只回應headers．&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;Response&amp;gt;
-HTTP/1.1 200 OK
-Content-Type: plain/html
-Content-Length: 614
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;options&quot;&gt;OPTIONS&lt;/h2&gt;
-&lt;p&gt;用來詢問server對特定的資源，有支援哪些操作．&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;將結果置於header Allow裡，如下：
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;Response&amp;gt;
-HTTP/1.1 200 OK
-Allow: GET, POST, PUT, OPTIONS
-Content-Length: 0
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;put&quot;&gt;PUT&lt;/h2&gt;
-&lt;p&gt;Replace the entire resource，對應到CRUD裡的update，就是叫server將我request body裡的資料存起來，如果資源本來不存在就create，在的話就replace．&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;200 OK，成功&lt;/li&gt;
-  &lt;li&gt;204 No Content，成功但畫面不需要更新，也就是沒有新的資料產生，client不必取的新的資料，例如說client在更新表單按下save時．&lt;/li&gt;
-  &lt;li&gt;201 Created，如果是create的話，並且在header Location放上資源的URI
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;Response&amp;gt;
-HTTP/1.1 201 Created
-Location: https://api.example.com/users/123 
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;patch&quot;&gt;PATCH&lt;/h2&gt;
-&lt;p&gt;Update parts of the resource，跟PUT一樣是update，不過是partial update或者說是merge．
-比如說原本有個homuchen的user是長這樣：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;{
-    &quot;name&quot;: &quot;HoMuChen&quot;,
-    &quot;age&quot;: 30
-}
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;當你PATCH時，想要將age更新為31&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;Request&amp;gt;
-PATCH /users/homuchen HTTP/1.1
-Content-Type: application/json
-Content-Length: 11
-
-{&quot;age&quot;: 31}
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;結果為&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;{
-    &quot;name&quot;: &quot;HoMuChen&quot;,
-    &quot;age&quot;: 31
-}
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;如果是用PUT，則會整個replace掉，name就不見了&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;{
-    &quot;age&quot;: 31
-}
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;post&quot;&gt;POST&lt;/h2&gt;
-&lt;p&gt;一般來說是指把資料傳給server去做處理，當使用其他的method，語意無法符合時，就會使用POST，常見的有用於Create resources、Search query、Asynchronous tasks．&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;200 OK&lt;/li&gt;
-  &lt;li&gt;201 Created&lt;/li&gt;
-  &lt;li&gt;202 Accepted，server已接受請求，但還需要時間去完成任務．&lt;/li&gt;
-  &lt;li&gt;Search Query: Ex. &lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&quot;&gt;Elasticsearch Query DSL&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;delete&quot;&gt;DELETE&lt;/h2&gt;
-&lt;p&gt;顧名思義，用來刪除資源．&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;200 OK．&lt;/li&gt;
-  &lt;li&gt;207，bulk delete．&lt;/li&gt;
-  &lt;li&gt;404 Not Found，要刪除的資源不存在．&lt;/li&gt;
-  &lt;li&gt;410 Gone，資源已被刪除．&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;HTTP做為網路世界中眾多通訊協定中的一個，只有當我們更加了解他，service provider才能提供更好用、另client user的學習曲線低，用起來很開心的服務．&lt;/p&gt;
-
-&lt;p&gt;今天簡單地討論了各個HTTP Method的用法，每個method有他的語意，只有當server照著大家的預期去做時，才不會造成大家的困擾．&lt;/p&gt;
-
-&lt;p&gt;除了Method之外，還有Response code、Header等其他HTTP的組成需要去了解，最後整個API符合RESTful的style是這一系列文章的目標．&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;感謝大家的閱讀，如有錯誤歡迎指正，我是河穆，我們下次見！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="restful api" /><category term="api" /><category term="http" /><summary type="html">這篇文章主要討論幾個常見的HTTP methods，說明他們分別是否具有哪些特性(Safe、Idempotent)，以及他們應該要怎麼使用，比較會是符合大家的期待．</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry></feed>
