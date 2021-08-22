@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-22T20:11:02+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)</title><link href="https://homuchen.com/posts/book-note-dollars-and-sense/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)" /><published>2021-08-21T23:40:00+08:00</published><updated>2021-08-21T23:40:00+08:00</updated><id>https://homuchen.com/posts/book-note-dollars-and-sense</id><content type="html" xml:base="https://homuchen.com/posts/book-note-dollars-and-sense/">&lt;p&gt;繼上篇&lt;a href=&quot;/posts/book-note-money-psychology&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;談完部分的內容之後，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-22T22:10:19+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">Introduction to HTTP Response Status Codes: How to use them correctly?</title><link href="https://homuchen.com/posts/http-response-status-codes-how-to-use/" rel="alternate" type="text/html" title="Introduction to HTTP Response Status Codes: How to use them correctly?" /><published>2021-08-22T22:00:00+08:00</published><updated>2021-08-22T22:00:00+08:00</updated><id>https://homuchen.com/posts/http-response--status-codes-how-to-use</id><content type="html" xml:base="https://homuchen.com/posts/http-response-status-codes-how-to-use/">&lt;p&gt;這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？&lt;/p&gt;
+
+&lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:
+&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;clien-server-model&quot;&gt;Clien Server Model&lt;/h1&gt;
+
+&lt;p&gt;HTTP是一個Cilent server的架構，客戶端發送一個request，而伺服器端接收到這個request，可能做了些事後，
+必須給個回應，不然客戶端會不知所措，到底你有沒有收到我的請求呢？我的請求是合理的嗎？那最後的結果是成功還是失敗，
+不管怎樣，總要給個回應吧ㄡ。&lt;/p&gt;
+
+&lt;p&gt;所以在HTTP Response的格式中，第一個就是Status Code，用來簡短地表示請求處理的情況，在大部分常見的簡單請求中，
+可能可以只看這個Status code，就知道server處理的情況是如何。&lt;/p&gt;
+
+&lt;p&gt;如果還對HTTP response message的格式還不了解的，可以參考先前的文章: &lt;a href=&quot;/posts/http-introduction-telnet-nc-curl/&quot;&gt;&lt;strong&gt;HTTP簡介&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;status-codes&quot;&gt;Status Codes&lt;/h1&gt;
+
+&lt;p&gt;大致可以將code分為四類，分別以2、3、4及5開頭。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2開頭: 代表請求成功。&lt;/li&gt;
+  &lt;li&gt;3開頭: 需要client在做其他動作，比如說去GET別的URL，或只是content沒變，從cache裡拿就好。&lt;/li&gt;
+  &lt;li&gt;4開頭: client request有問題，syntax有問題或是server看不懂，少了某些參數之類的。&lt;/li&gt;
+  &lt;li&gt;5開頭: server這邊出了一些問題拉～&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Status codes&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2xx&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Good!&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3xx&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Redirection&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4xx&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Client你的錯&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5xx&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Server我出錯惹&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;接下來我們就來看看一些常見的status code吧！&lt;/p&gt;
+
+&lt;h2 id=&quot;2xx&quot;&gt;2xx&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;200 OK&lt;/strong&gt;: OK就是OK! 如果你不知道用什麼，但你要表達請求成功了，那就用200吧～😂&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;201 Created&lt;/strong&gt;: 當request是&lt;strong&gt;PUT&lt;/strong&gt;，要求創建資源時，顧名思義，可以使用201代表資源成功被創建，
+可以在response body裡return整個資源，可以在header Location上，加上新創建的資源的位置。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;202 Accepted&lt;/strong&gt;: 代表你成功接受了請求，然後會asynchronously地處理。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;204 No content&lt;/strong&gt;: 沒有response body，會用到情境像是使用&lt;strong&gt;POST&lt;/strong&gt;或&lt;strong&gt;PATCH&lt;/strong&gt;做update時，
+成功的話，server沒有額外的資訊需要return給client知道。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3xx&quot;&gt;3xx&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;301 Moved Permanently&lt;/strong&gt;: 要求的資源已經搬家了～資源新的位置一般放在Location header中。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;302 Redirect&lt;/strong&gt;: 跟301一樣，會在Location中放上新的URL，跟301不同的是，301是永久性的，就是說舊的URL他之後都不會用了，
+希望用新網頁來取代舊的，而302是暫時的，可能這次有個活動，暫時將頁面導到另個地方，之後有別的活動，又換到新的地方，
+但他還是client繼續使用原本的URL。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4xx&quot;&gt;4xx&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;400 Bad request&lt;/strong&gt;: 請求的內容有誤，或是server看不懂。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;401 Unauthorized&lt;/strong&gt;: Authenticate失敗，例如帳號密碼打錯呀，Token不對呀。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;403 Forbidden&lt;/strong&gt;: User有驗證成功，但他沒有足夠的權限來做這個請求。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;404 Not found&lt;/strong&gt;: 請求的資源不存在！&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;405 Method Not Allowed&lt;/strong&gt;: 對於請求的資源，不支援所要求的method。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5xx&quot;&gt;5xx&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;500 Internal Server Error&lt;/strong&gt;: Server掛掉拉～&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;要使用適當的status code，避免溝通上的誤會，因為可能有懶惰的client看到status code就下了某些判斷，
+所以別特立獨行，給你的API的使用者驚喜🎉🙀&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？</summary></entry><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)</title><link href="https://homuchen.com/posts/book-note-dollars-and-sense/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)" /><published>2021-08-21T23:40:00+08:00</published><updated>2021-08-21T23:40:00+08:00</updated><id>https://homuchen.com/posts/book-note-dollars-and-sense</id><content type="html" xml:base="https://homuchen.com/posts/book-note-dollars-and-sense/">&lt;p&gt;繼上篇&lt;a href=&quot;/posts/book-note-money-psychology&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;談完部分的內容之後，
 今天在這把剩下講完吧～&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-1.jpg&quot; alt=&quot;book: Dollards and Sense&quot; /&gt;&lt;/p&gt;
@@ -785,52 +902,4 @@ Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁�
 
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 
-&lt;p&gt;建立一個下拉選單，選項可以自行輸入，也可以從既有資料的範圍中建立，如此一來當資料有變動時，下拉選單的選項就可以自動更新，而不需要自己再重新輸入新的選項!&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><summary type="html">為什麼要用下拉式選單</summary></entry><entry><title type="html">RESTful API Design — A practical guide</title><link href="https://homuchen.com/posts/http-restful-api-design-practical-guide/" rel="alternate" type="text/html" title="RESTful API Design — A practical guide" /><published>2021-04-13T20:00:00+08:00</published><updated>2021-04-13T20:00:00+08:00</updated><id>https://homuchen.com/posts/http-restful-api-design-practical-guide</id><content type="html" xml:base="https://homuchen.com/posts/http-restful-api-design-practical-guide/">&lt;p&gt;此篇文章將作為接下來一系列關於Restful API design的目錄．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 1:&lt;/strong&gt; 將介紹什麼是API，何時需要他，以及怎樣才會是一個好的API．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 2:&lt;/strong&gt; 在許多種API中，此系列只專注於HTTP RESTful API，為了更好地學習他，必須先了解HTTP Protocol，知道其中各個組成HTTP Message的每一個部分．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 3:&lt;/strong&gt; 介紹何為RESTful API，為什麼他會長這樣，以及其他許多當你在設計API時會遇到情況，例如: Documentation、Pagination、Rate Limiting、Monitoring．&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Part 4:&lt;/strong&gt; 陸續想到一些相關的議題，再放上來！&lt;/p&gt;
-
-&lt;h1 id=&quot;outline&quot;&gt;Outline&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;Introduction
-    &lt;ul&gt;
-      &lt;li&gt;1.1 What is an API?&lt;/li&gt;
-      &lt;li&gt;1.2 What is a good API?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;HTTP Basics
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl&quot;&gt;2.1 A HTTP Overview&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;/posts/http-methods-which-to-use-and-how-to-use-them-correctly&quot;&gt;2.2 HTTP Methods&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;/posts/http-response-status-codes-how-to-use/&quot;&gt;2.3 HTTP Response status codes&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;2.4 HTTP URI&lt;/li&gt;
-      &lt;li&gt;2.5 HTTP Headers&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;/posts/linux-http-client-tool-curl-usage/&quot;&gt;2.6 [Practices] A HTTP client — curl&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;RESTful API and some Practical Guidelines
-    &lt;ul&gt;
-      &lt;li&gt;3.1 What is a RESTful API?&lt;/li&gt;
-      &lt;li&gt;3.2 Identifying Resources&lt;/li&gt;
-      &lt;li&gt;3.2 API first&lt;/li&gt;
-      &lt;li&gt;3.3 An Introduction to OpenAPI&lt;/li&gt;
-      &lt;li&gt;3.4 [Practices] How do I manage a large OpenAPI spec file?&lt;/li&gt;
-      &lt;li&gt;3.5 Pagination&lt;/li&gt;
-      &lt;li&gt;3.6 Rate Limiting&lt;/li&gt;
-      &lt;li&gt;3.7 Monitoring&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Advanced Topics
-    &lt;ul&gt;
-      &lt;li&gt;4.1 Connection management&lt;/li&gt;
-      &lt;li&gt;4.2 Resource Modeling: Fine-grained or Coarse-grained?&lt;/li&gt;
-      &lt;li&gt;4.3 Versioning and Compatibility&lt;/li&gt;
-      &lt;li&gt;4.4 How to Response to a Health Check?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html">此篇文章將作為接下來一系列關於Restful API design的目錄．</summary></entry></feed>
+&lt;p&gt;建立一個下拉選單，選項可以自行輸入，也可以從既有資料的範圍中建立，如此一來當資料有變動時，下拉選單的選項就可以自動更新，而不需要自己再重新輸入新的選項!&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><summary type="html">為什麼要用下拉式選單</summary></entry></feed>
