@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-22T22:10:19+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">Introduction to HTTP Response Status Codes: How to use them correctly?</title><link href="https://homuchen.com/posts/http-response-status-codes-how-to-use/" rel="alternate" type="text/html" title="Introduction to HTTP Response Status Codes: How to use them correctly?" /><published>2021-08-22T22:00:00+08:00</published><updated>2021-08-22T22:00:00+08:00</updated><id>https://homuchen.com/posts/http-response--status-codes-how-to-use</id><content type="html" xml:base="https://homuchen.com/posts/http-response-status-codes-how-to-use/">&lt;p&gt;這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-23T21:50:07+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">Introduction to HTTP Response Status Codes: How to use them correctly?</title><link href="https://homuchen.com/posts/http-response-status-codes-how-to-use/" rel="alternate" type="text/html" title="Introduction to HTTP Response Status Codes: How to use them correctly?" /><published>2021-08-22T22:00:00+08:00</published><updated>2021-08-22T22:00:00+08:00</updated><id>https://homuchen.com/posts/http-response--status-codes-how-to-use</id><content type="html" xml:base="https://homuchen.com/posts/http-response-status-codes-how-to-use/">&lt;p&gt;這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？&lt;/p&gt;
 
 &lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:
 &lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;clien-server-model&quot;&gt;Clien Server Model&lt;/h1&gt;
+&lt;h1 id=&quot;client-server-model&quot;&gt;Client Server Model&lt;/h1&gt;
 
-&lt;p&gt;HTTP是一個Cilent server的架構，客戶端發送一個request，而伺服器端接收到這個request，可能做了些事後，
+&lt;p&gt;HTTP是一個Client-Server的架構，客戶端發送一個request，而伺服器端接收到這個request，可能做了些事後，
 必須給個回應，不然客戶端會不知所措，到底你有沒有收到我的請求呢？我的請求是合理的嗎？那最後的結果是成功還是失敗，
-不管怎樣，總要給個回應吧ㄡ。&lt;/p&gt;
+不管怎樣，總要給個回應吧。&lt;/p&gt;
 
 &lt;p&gt;所以在HTTP Response的格式中，第一個就是Status Code，用來簡短地表示請求處理的情況，在大部分常見的簡單請求中，
 可能可以只看這個Status code，就知道server處理的情況是如何。&lt;/p&gt;
@@ -482,6 +482,16 @@ Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁�
 &lt;p&gt;點選右上角表單裡面的&lt;strong&gt;加到主畫面&lt;/strong&gt;，就能像是Appㄧ樣，在桌面有個小圖示囉～&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-5.jpg&quot; alt=&quot;google form question 3: add to desktop&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;檢視成果&quot;&gt;檢視成果&lt;/h1&gt;
+
+&lt;p&gt;每次在表單送出的資料，都會收集到Google Sheet中，如下圖:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-6.jpg&quot; alt=&quot;google sheet: data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;之後就能利用這些進行各種你想要的統計圖表拉，比如說每天花多少錢在哪些分類上，總共各分類的佔比為何:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/google-sheet-bookkeeping-7.jpg&quot; alt=&quot;google sheet: charts&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 
