@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-23T21:50:07+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">Introduction to HTTP Response Status Codes: How to use them correctly?</title><link href="https://homuchen.com/posts/http-response-status-codes-how-to-use/" rel="alternate" type="text/html" title="Introduction to HTTP Response Status Codes: How to use them correctly?" /><published>2021-08-22T22:00:00+08:00</published><updated>2021-08-22T22:00:00+08:00</updated><id>https://homuchen.com/posts/http-response--status-codes-how-to-use</id><content type="html" xml:base="https://homuchen.com/posts/http-response-status-codes-how-to-use/">&lt;p&gt;這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-08-30T22:32:00+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">幾個我常用的vim的功能</title><link href="https://homuchen.com/posts/some-vim-commands-I-often-use/" rel="alternate" type="text/html" title="幾個我常用的vim的功能" /><published>2021-08-30T22:00:00+08:00</published><updated>2021-08-30T22:00:00+08:00</updated><id>https://homuchen.com/posts/some-vim-commands-I-often-use</id><content type="html" xml:base="https://homuchen.com/posts/some-vim-commands-I-often-use/">&lt;p&gt;作為一個軟體工程師，我們花在文字編輯器上的時間一定佔了一定的比例，
+更精通熟悉我們使用的編輯器的話，開發的效率可以提升很多，今天就來分享一些我蠻常會用到的vim的功能～&lt;/p&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Vim是一個modal editor，可以切換在各個模式之間，一開始時是在&lt;strong&gt;normal mode&lt;/strong&gt;，今天要介紹的功能，
+都是在normal mode下操作的，按&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;可以進入&lt;strong&gt;insert mode&lt;/strong&gt;，按&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;esc&lt;/code&gt;即可以退回normal mode。&lt;/p&gt;
+
+&lt;p&gt;我通常比較常使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;，因為當把指標移到最後時，用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;可以直接在最後面開始輸入。&lt;/p&gt;
+
+&lt;h1 id=&quot;navigation&quot;&gt;Navigation&lt;/h1&gt;
+
+&lt;h2 id=&quot;上下左右&quot;&gt;上下左右&lt;/h2&gt;
+&lt;p&gt;最基本的就是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;l&lt;/code&gt;分別對應到上下左右&lt;/p&gt;
+
+&lt;h2 id=&quot;翻頁&quot;&gt;翻頁&lt;/h2&gt;
+&lt;p&gt;覺得上下按著這樣太慢，可以用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl-U&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl-D&lt;/code&gt;來上下翻頁&lt;/p&gt;
+
+&lt;h2 id=&quot;行首行末&quot;&gt;行首、行末&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;指標會跳掉當行的最前面，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt;則是最後面。&lt;/p&gt;
+
+&lt;h2 id=&quot;字的跳躍&quot;&gt;字的跳躍&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w&lt;/code&gt;可以跳到下一個字的開頭，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;e&lt;/code&gt;則是跳到下一個字的結尾，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt;則是往前跳到前一個字的開頭。&lt;/p&gt;
+
+&lt;h2 id=&quot;---跳躍&quot;&gt;() [] {} 跳躍&lt;/h2&gt;
+&lt;p&gt;指標找到了一對括號的其中一個，想要到另一個的話可以用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;搜尋跳躍&quot;&gt;搜尋跳躍&lt;/h2&gt;
+&lt;p&gt;將指標放在字上，按&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;，就會自動幫你搜尋，並跳到相同的字上，效果相當於用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;搜尋再按&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/vim-5.jpg&quot; alt=&quot;vim: #&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;deletion&quot;&gt;Deletion&lt;/h1&gt;
+
+&lt;h2 id=&quot;刪除一個字母&quot;&gt;刪除一個字母&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;，可以刪除指標上的那個字。&lt;/p&gt;
+
+&lt;h2 id=&quot;刪除一行&quot;&gt;刪除一行&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dd&lt;/code&gt;，刪除指標所在的那一行。&lt;/p&gt;
+
+&lt;h2 id=&quot;刪掉指標後的所有字&quot;&gt;刪掉指標後的所有字&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D&lt;/code&gt;，常用狀況像是複製了一行method，然後刪掉method name跟paramters再打新的。如下圖反白部分:
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/vim-6.jpg&quot; alt=&quot;dw&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;d--navigation-key&quot;&gt;d + {navigation key}&lt;/h2&gt;
+&lt;p&gt;搭配上面提到的各種navigation的方法，比如說:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dw&lt;/code&gt; : 刪掉一個字，從指標到字的尾端，像是下圖反白的部分。
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/vim-1.jpg&quot; alt=&quot;dw&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d%&lt;/code&gt; : 刪掉整個(…)、[…]或{…}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;di&quot;&gt;di&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;diw&lt;/code&gt;：跟&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dw&lt;/code&gt;也是刪掉一個字，但是可以刪掉整個字，效果就相當於先按&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt;讓指標回到字首再&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dw&lt;/code&gt;。
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/vim-2.jpg&quot; alt=&quot;diw&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di&quot;&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di(&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di[&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di{&lt;/code&gt;：刪掉”“內、()、[]及{}的所有字。&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di(&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di)&lt;/code&gt;即可刪掉()中function的paramter
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/vim-3.jpg&quot; alt=&quot;di(&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di&quot;&lt;/code&gt;則是刪掉雙引號中間的所有字，留下雙引號
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/vim-4.jpg&quot; alt=&quot;di&amp;quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;da&quot;&gt;da&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;da&lt;/code&gt;的話跟上述&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;di&lt;/code&gt;都ㄧ樣，只不過會將引號或括號都一併刪除。&lt;/p&gt;
+
+&lt;h2 id=&quot;d-換成-c&quot;&gt;d 換成 c&lt;/h2&gt;
+&lt;p&gt;將上面的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d&lt;/code&gt;都換成&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;，可以有一樣的功能，差別就是會直接進入&lt;strong&gt;insert mode&lt;/strong&gt;，所以可以省去一個按&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;的時間。
+如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cw&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ciw&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci&quot;&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ca(&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;copy-and-paste&quot;&gt;Copy and Paste&lt;/h1&gt;
+
+&lt;h2 id=&quot;複製一行&quot;&gt;複製一行&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yy&lt;/code&gt;複製一行，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;貼上&lt;/p&gt;
+
+&lt;h2 id=&quot;y--navigation-key&quot;&gt;y + {navigation key}&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;一樣可以搭配上面提到的navigation key來複製&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yw&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yiw&lt;/code&gt;: 複製一個字&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yi&quot;&lt;/code&gt;: 複製雙引號內的字&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y%&lt;/code&gt;: 複製成對括號內的字&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;稍微簡單地紀錄一下及分享，希望能有幫助～～ 掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="vim" /><category term="linux" /><summary type="html">作為一個軟體工程師，我們花在文字編輯器上的時間一定佔了一定的比例， 更精通熟悉我們使用的編輯器的話，開發的效率可以提升很多，今天就來分享一些我蠻常會用到的vim的功能～</summary></entry><entry><title type="html">Introduction to HTTP Response Status Codes: How to use them correctly?</title><link href="https://homuchen.com/posts/http-response-status-codes-how-to-use/" rel="alternate" type="text/html" title="Introduction to HTTP Response Status Codes: How to use them correctly?" /><published>2021-08-22T22:00:00+08:00</published><updated>2021-08-22T22:00:00+08:00</updated><id>https://homuchen.com/posts/http-response--status-codes-how-to-use</id><content type="html" xml:base="https://homuchen.com/posts/http-response-status-codes-how-to-use/">&lt;p&gt;這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？&lt;/p&gt;
 
 &lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:
 &lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
@@ -869,47 +959,4 @@ Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁�
 &lt;p&gt;將格式規則設為大於0，格式設定樣式改為字體紅色，綠色及損益率的部分也是一樣！
 &lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/income-statement-8.jpg&quot; alt=&quot;google sheet: format&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;如此一來就大功告成囉🎉&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="finance" /><summary type="html">此篇文章將分享我是如何製作我持有股票的未實現損益表，看起來的成果如下:</summary></entry><entry><title type="html">[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項</title><link href="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/" rel="alternate" type="text/html" title="[Google sheet]如何建立下拉選單，以及從既有資料中自動建立選項" /><published>2021-06-26T20:00:00+08:00</published><updated>2021-06-26T20:00:00+08:00</updated><id>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data</id><content type="html" xml:base="https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/">&lt;h1 id=&quot;為什麼要用下拉式選單&quot;&gt;為什麼要用下拉式選單&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;新增資料更為快速，無需重複填寫&lt;/li&gt;
-  &lt;li&gt;避免誤植，或統一資料的格式及規則&lt;/li&gt;
-  &lt;li&gt;對既有資料鐘進行選擇及後續操作&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;如何建立下拉式選單&quot;&gt;如何建立下拉式選單&lt;/h1&gt;
-
-&lt;h2 id=&quot;自行輸入清單選項&quot;&gt;自行輸入清單選項&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;首先選擇一個或多個你想要建立選單的儲存格&lt;/li&gt;
-  &lt;li&gt;點選 &lt;strong&gt;資料&lt;/strong&gt; -&amp;gt; &lt;strong&gt;資料驗證&lt;/strong&gt;
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/drop-down-1.jpg&quot; alt=&quot;data validation: tool bar&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;在&lt;strong&gt;條件&lt;/strong&gt;選項中，選取&lt;strong&gt;項目清單&lt;/strong&gt;
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/drop-down-2.jpg&quot; alt=&quot;data validation: List of items&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;輸入你想要的選項，選項間以逗號隔開
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/drop-down-3.jpg&quot; alt=&quot;data validation: List of items&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;就大功告成拉
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/drop-down-4.jpg&quot; alt=&quot;drop down menu&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;從既有資料來建立選項&quot;&gt;從既有資料來建立選項&lt;/h2&gt;
-
-&lt;p&gt;有時你想要建立一個選單，其中的選項是來自某一大筆資料中的某一個欄位，
-你不想一筆一筆手動Key，而且你也不想每次資料有變動時，就要重新去更新一次資料驗證，
-此時就可以這麼做，以以下的資料為例:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/drop-down-5.jpg&quot; alt=&quot;example data sheet&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;重複自行輸入清單選項中的第一及第二部&lt;/li&gt;
-  &lt;li&gt;在&lt;strong&gt;條件&lt;/strong&gt;選項中，選取&lt;strong&gt;範圍內的清單&lt;/strong&gt;
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/drop-down-6.jpg&quot; alt=&quot;data validation: List from a range&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;輸入或選取一個範圍，以這裡的例子為例，我們建立一個國家的下拉選項，填入&lt;strong&gt;F2:F&lt;/strong&gt;，代表country那一欄，不包含標頭country本身&lt;/li&gt;
-  &lt;li&gt;大功告成~
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/drop-down-7.jpg&quot; alt=&quot;drop down menu from a range&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-
-&lt;p&gt;建立一個下拉選單，選項可以自行輸入，也可以從既有資料的範圍中建立，如此一來當資料有變動時，下拉選單的選項就可以自動更新，而不需要自己再重新輸入新的選項!&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><summary type="html">為什麼要用下拉式選單</summary></entry></feed>
+&lt;p&gt;如此一來就大功告成囉🎉&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="finance" /><summary type="html">此篇文章將分享我是如何製作我持有股票的未實現損益表，看起來的成果如下:</summary></entry></feed>
