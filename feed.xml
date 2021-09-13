@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-09-05T22:31:18+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">HTTP headers 簡介: 一些常用的headers</title><link href="https://homuchen.com/posts/http-headers/" rel="alternate" type="text/html" title="HTTP headers 簡介: 一些常用的headers" /><published>2021-09-05T00:00:00+08:00</published><updated>2021-09-05T00:00:00+08:00</updated><id>https://homuchen.com/posts/http-headers</id><content type="html" xml:base="https://homuchen.com/posts/http-headers/">&lt;p&gt;在HTTP協議中，headers對於每個request，response提供了一些額外的資訊，基本上他們就是只是一對key value pair，由冒號(:)隔開，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-09-13T23:30:22+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">URL簡介: URL是什麼，由哪些部分組成?</title><link href="https://homuchen.com/posts/what-is-url-and-what-is-it-composed-of/" rel="alternate" type="text/html" title="URL簡介: URL是什麼，由哪些部分組成?" /><published>2021-09-13T22:00:00+08:00</published><updated>2021-09-13T22:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-url-and-what-is-it-composed-of</id><content type="html" xml:base="https://homuchen.com/posts/what-is-url-and-what-is-it-composed-of/">&lt;p&gt;這篇文章將會介紹什麼是URL，為何會需要它，以及它是由哪些部分組成的。&lt;/p&gt;
+
+&lt;h1 id=&quot;什麼是url&quot;&gt;什麼是URL&lt;/h1&gt;
+&lt;p&gt;想像你在一座大城市裡，你搭上一部計程車，想要去你朋友家、你小孩的幼兒園、或是去某某旅館，
+你必須告訴司機地址; 如果你想聯絡到某人的話，會使用電話號碼; 在政府眼裡每個人有身分證字號。&lt;/p&gt;
+
+&lt;p&gt;就像如此，每個東西都有它獨特的識別方法，而且是被大家所公認的，也就是你一說，大家就知道你在說什麼，
+知道你所你指的是哪個東西，而在網路上，這種識別方法就是&lt;strong&gt;URL&lt;/strong&gt;(Uniform Resource Locator)，
+也就是我們在瀏覽器上面常常會輸入的&lt;strong&gt;網址&lt;/strong&gt;，告訴瀏覽器說你想要前往哪個網站，瀏覽哪些資源。&lt;/p&gt;
+
+&lt;h1 id=&quot;url的組成&quot;&gt;URL的組成&lt;/h1&gt;
+&lt;p&gt;以這篇文章的網址&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://homuchen.com/categories&lt;/code&gt;為例，
+他代表的就是一篇部落格文章的資源，如何跟server溝通，server在哪裡，以及我想要的特定資源:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-url-1.jpg&quot; alt=&quot;url format&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https&lt;/code&gt;為&lt;strong&gt;傳輸協議&lt;/strong&gt;，其他還有許多種，比如說ftp、rtsp、ipfs等等…&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;homuchen.com&lt;/code&gt;就是&lt;strong&gt;host&lt;/strong&gt;，用來說明存放資源的伺服器在哪裏，透過DNS可以得到機器的IP位置。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/categories&lt;/code&gt;是&lt;strong&gt;path&lt;/strong&gt;，用來跟server說你要哪個資源。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;general-url-syntax&quot;&gt;General URL Syntax&lt;/h2&gt;
+&lt;p&gt;一般的URL組成如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;scheme&amp;gt;://&amp;lt;user&amp;gt;:&amp;lt;password&amp;gt;@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;path&amp;gt;;&amp;lt;params&amp;gt;?&amp;lt;query&amp;gt;#&amp;lt;frag&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;component&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;scheme&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;用來跟server溝通的通信協議&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;user&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;需要登入驗證過的user才能存取資源&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;password&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;需要登入驗證過的user才能存取資源&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;host&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;一個網域名稱或是IP位置，存放資源的server&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;port&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;server監聽的port，HTTP預設為80，HTTPS則為443&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;server藉由path來判斷client想要的是什麼資源，什麼資源要用什麼樣的path，&lt;br /&gt;由server自己決定，不過RESTful API會有一個關於path設計的慣例，&lt;br /&gt;好讓client不需要記很多或一直看文件，關於後續的文章中會再來討論。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;query&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;以&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt;開始的多對key value pair，每對以&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;隔開，&lt;br /&gt;用來傳送更多的資訊給server，比如說搜尋的過濾條件、影片的開始秒數等等…&lt;br /&gt;比如說: ?q=TSMC&amp;amp;sort=time&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;一個URL，是網路上一個或多個資源的身分證，今天簡單地看了URL的組成，
+對於ㄧ個RESTful API的URL要如何設計，後面再會有詳細的介紹。&lt;/p&gt;
+
+&lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:
+&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><category term="url" /><summary type="html">這篇文章將會介紹什麼是URL，為何會需要它，以及它是由哪些部分組成的。</summary></entry><entry><title type="html">HTTP headers 簡介: 一些常用的headers</title><link href="https://homuchen.com/posts/http-headers/" rel="alternate" type="text/html" title="HTTP headers 簡介: 一些常用的headers" /><published>2021-09-05T00:00:00+08:00</published><updated>2021-09-05T00:00:00+08:00</updated><id>https://homuchen.com/posts/http-headers</id><content type="html" xml:base="https://homuchen.com/posts/http-headers/">&lt;p&gt;在HTTP協議中，headers對於每個request，response提供了一些額外的資訊，基本上他們就是只是一對key value pair，由冒號(:)隔開，
 今天會看看HTTP協議的格式，header在其中的位置，以及介紹一些常用的header們。&lt;/p&gt;
 
 &lt;h1 id=&quot;http-messages&quot;&gt;HTTP messages&lt;/h1&gt;
@@ -982,105 +1053,4 @@ Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁�
 
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 
-&lt;p&gt;利用以上兩個公式，可能成功在試算表上看新聞囉～ 🎉，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><category term="finance" /><summary type="html">此篇文章將分享我是如何在試算表裡查看新聞，看起來像是下面這樣:</summary></entry><entry><title type="html">[讀書筆記] 最高學以致用法: 讓學習發揮最大成果的輸出大全</title><link href="https://homuchen.com/posts/book-notes-output/" rel="alternate" type="text/html" title="[讀書筆記] 最高學以致用法: 讓學習發揮最大成果的輸出大全" /><published>2021-07-14T17:10:00+08:00</published><updated>2021-07-14T17:10:00+08:00</updated><id>https://homuchen.com/posts/book-notes-output</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-output/">&lt;p&gt;不知道大家是否有過這樣的經驗: 讀了許多本書，事後卻說不出來到底讀了什麼;
-看了一場電影、經歷一趟旅程，卻分享不出想法、或是說出從中有哪些收穫．&lt;/p&gt;
-
-&lt;p&gt;大家可能也有聽過，最好的學習方法就是去教人．&lt;/p&gt;
-
-&lt;p&gt;教學就是一種輸出，本書作者認為自我成長的關鍵就是&lt;strong&gt;輸出&lt;/strong&gt;，於本書收集了80個關於說、寫、行動三個面向的輸出，
-每一則皆為兩到三分鐘的時間就能閱讀完的份量，讓我們在自己的日常生活中尋找幾個可以小小進步的地方!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/reading-output-1.jpg&quot; alt=&quot;最高學以致用法: 讓學習發揮最大成果的輸出大全&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;原則&quot;&gt;原則&lt;/h1&gt;
-
-&lt;p&gt;此書的第一部分說明一些原則: 為什麼要輸出、什麼是輸出、輸入輸出的比例多少為好、以及除了輸出之外還需要些什麼?&lt;/p&gt;
-
-&lt;h2 id=&quot;自我成長及改變生活的關鍵&quot;&gt;自我成長及改變生活的關鍵&lt;/h2&gt;
-
-&lt;p&gt;想讓自己成長得更快，重點不是多讀了多少書，關鍵是更多的輸出！透過分享、書寫、實踐，讓自己的記憶更加牢固，
-不管讀了多少書、上了多少課，如果沒有輸出實踐，不僅僅只是忘光光沒有記住而已，你的生活並不會有任何的改變&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;唯一可以改變現實的就是你的行為實踐&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;兩週內運用三次&quot;&gt;兩週內運用三次&lt;/h2&gt;
-
-&lt;p&gt;情報及知識輸入到大腦裡，如果沒有經常運用很快就會忘記&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;透過反覆三次的輸出，讓情報成為長期記憶，儲存在大腦裡．&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;輸入輸出比37&quot;&gt;輸入輸出比3:7&lt;/h2&gt;
-
-&lt;p&gt;有一個實驗是這樣子的，讓一群人去背社交名人錄的資訊，並依照不同的&lt;strong&gt;記憶時間&lt;/strong&gt;，&lt;strong&gt;測驗時間&lt;/strong&gt;，來看看最後誰的成績最好，
-結果發現最後成績最高的，是花了40%時間在學習的組別，年紀越大的則是30%&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;輸入和輸出的黃金比例，應該是3:7&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;輸出之外還要有反饋&quot;&gt;輸出之外還要有反饋&lt;/h2&gt;
-
-&lt;p&gt;單純不斷地輸入輸出，雖然也會有收穫，但如果沒有反饋就難以進步，有了反饋可以更知道下一次輸入的方向&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;補足弱點、發揮強項:&lt;/p&gt;
-
-    &lt;p&gt;在輸出的同時，可以知道哪部分不夠清楚，再回頭去補強輸入，複習或是尋找相關資料，
-另外對於自己有&lt;strong&gt;興趣&lt;/strong&gt;的部分，能夠做延伸學習～&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;解決&lt;strong&gt;為什麼&lt;/strong&gt;們:&lt;/p&gt;
-
-    &lt;p&gt;在輸入輸出的過程中，一定會產生很多的疑問，不要放著這些為什麼不管，解決這些為什麼!&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;實踐&quot;&gt;實踐&lt;/h1&gt;
-
-&lt;p&gt;分為說、寫、行動這三大類，作者整理了80個跟輸出有關的事，以下簡單地列舉一部分:&lt;/p&gt;
-
-&lt;h2 id=&quot;說&quot;&gt;說&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;分享前一天的事、體驗、感受&lt;/li&gt;
-  &lt;li&gt;說正面而不是負面&lt;/li&gt;
-  &lt;li&gt;非語言的表達的重要: 語調、表情、姿勢、肢體、動作&lt;/li&gt;
-  &lt;li&gt;委婉地表達&lt;/li&gt;
-  &lt;li&gt;關於提問、讚美、斥責、道歉、感謝&lt;/li&gt;
-  &lt;li&gt;如何提問&lt;/li&gt;
-  &lt;li&gt;關於簡報、打電話&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;寫&quot;&gt;寫&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;寫下來～ 而且用手寫&lt;/li&gt;
-  &lt;li&gt;關於做筆記、寫摘要&lt;/li&gt;
-  &lt;li&gt;列出清單&lt;/li&gt;
-  &lt;li&gt;彙整想法&lt;/li&gt;
-  &lt;li&gt;製作企劃&lt;/li&gt;
-  &lt;li&gt;引用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;行為&quot;&gt;行為&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;如何採取行動、並持之以恆&lt;/li&gt;
-  &lt;li&gt;笑、哭&lt;/li&gt;
-  &lt;li&gt;關於睡覺、運動&lt;/li&gt;
-  &lt;li&gt;如何寫感想&lt;/li&gt;
-  &lt;li&gt;社群、部落格&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;心得感想&quot;&gt;心得感想&lt;/h1&gt;
-
-&lt;p&gt;讀完這本書之後，意識到原來生活當中，有如此多的面相都是輸出，
-而不是原本以為的發表演說、報告、寫文章而已．&lt;/p&gt;
-
-&lt;p&gt;但就像這本書的主題&lt;strong&gt;輸出&lt;/strong&gt;，如果沒有加以實踐，就不會有收穫，
-這也是我會開始寫這篇文章的原因，並且開始規定自己在輸出完一本書之前，不能再繼續讀下一本😂
-希望這讀書筆記系列可以持之以恆下去!&lt;/p&gt;
-
-&lt;p&gt;也希望以上的內容，能稍微幫助到想認識這本書的人！掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="learning" /><category term="writing" /><category term="books" /><summary type="html">不知道大家是否有過這樣的經驗: 讀了許多本書，事後卻說不出來到底讀了什麼; 看了一場電影、經歷一趟旅程，卻分享不出想法、或是說出從中有哪些收穫．</summary></entry></feed>
+&lt;p&gt;利用以上兩個公式，可能成功在試算表上看新聞囉～ 🎉，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="google sheet" /><category term="drop down list" /><category term="finance" /><summary type="html">此篇文章將分享我是如何在試算表裡查看新聞，看起來像是下面這樣:</summary></entry></feed>
