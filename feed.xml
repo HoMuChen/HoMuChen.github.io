@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-09-20T15:48:57+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Golang] Common verbs of Formatting string</title><link href="https://homuchen.com/posts/golang-common-verbs-for-formatting-string/" rel="alternate" type="text/html" title="[Golang] Common verbs of Formatting string" /><published>2021-09-20T15:30:00+08:00</published><updated>2021-09-20T15:30:00+08:00</updated><id>https://homuchen.com/posts/golang-common-verbs-for-formatting-string</id><content type="html" xml:base="https://homuchen.com/posts/golang-common-verbs-for-formatting-string/">&lt;p&gt;在fmt package裡Printf, Fprintf, Fscanf, Scanf，或像是log package裡的Printf, Fatalf，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-09-27T20:56:23+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">RESTful API簡介: 什麼是RESTful? 以及為何需要它?</title><link href="https://homuchen.com/posts/restful-api-introduction/" rel="alternate" type="text/html" title="RESTful API簡介: 什麼是RESTful? 以及為何需要它?" /><published>2021-09-27T20:00:00+08:00</published><updated>2021-09-27T20:00:00+08:00</updated><id>https://homuchen.com/posts/restful-api-introduction</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-introduction/">&lt;p&gt;在web開發裡，API是幾乎無所不在，而其中最常見的應該就是基於HTTP協議的RESTful API，
+這篇簡介跟討論到底什麼是RESTful，為何有它的出現?&lt;/p&gt;
+
+&lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;首先，什麼是RESTful，可以說它是一種慣例，一個關於HTTP API如何設計的style，
+慣例就是並沒有任何的強制性，但當大家都遵守的慣例時，特立獨行的邊緣人可能就會被排擠，
+至少是難以融入大家的，有了慣例，可以不需要在每次要做事前都要溝通，
+大家就照著以前一般是怎麼做的做就好。&lt;/p&gt;
+
+&lt;p&gt;所以你會希望你要使用的API的夠RESTful的，這樣你用起來才方便、好用，你也會希望你開發的API是RESTful的，
+這樣客戶用起來才會開心。當然你也可以不要，如此一來，客戶要用你的API時，會需要更多地去查看你的文件，
+他們可能就會覺得麻煩、不開心，你就少了一些賺錢的機會了。&lt;/p&gt;
+
+&lt;p&gt;所以接下來看看RESTful API到底是長怎樣吧!&lt;/p&gt;
+
+&lt;h1 id=&quot;resource-based&quot;&gt;Resource based&lt;/h1&gt;
+&lt;p&gt;首先他是&lt;strong&gt;resource based&lt;/strong&gt;的，也就是每個URL對應到的是一個或多個resource、entity，是&lt;strong&gt;名詞&lt;/strong&gt;，
+而不會是動詞，比如說下列這樣就是RESTful:&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;/posts                  -&amp;gt; 代表全部的posts
+/posts/1                -&amp;gt; 代表某一篇post
+/posts/1/comments       -&amp;gt; 代表某一篇post的所以留言
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;那怎樣不是RESTful呢:&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;/getPosts               -&amp;gt; 代表全部的posts
+/getpostComments/1      -&amp;gt; 代表某一篇post的所以留言
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;actions&quot;&gt;Actions&lt;/h1&gt;
+&lt;p&gt;有了名詞，那&lt;strong&gt;動詞&lt;/strong&gt;呢？如果想要對資源做一些操作怎麼辦呢？比如說新增、修改、刪除。
+此時就是使用HTTP的method，&lt;strong&gt;GET&lt;/strong&gt;、&lt;strong&gt;POST&lt;/strong&gt;、&lt;strong&gt;PUT&lt;/strong&gt;、&lt;strong&gt;DELETE&lt;/strong&gt;，分別對應到&lt;strong&gt;讀取&lt;/strong&gt;、&lt;strong&gt;新增&lt;/strong&gt;、&lt;strong&gt;修改&lt;/strong&gt;、&lt;strong&gt;刪除&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;看幾個例子吧!&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET     /posts/1        -&amp;gt; 取得某一篇文章
+POST    /posts          -&amp;gt; 新增一篇文章
+PUT     /posts/2        -&amp;gt; 修改某一篇文章
+DELETE  /posts/2        -&amp;gt; 刪除某一篇文章
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;為什麼restful是長這樣呢&quot;&gt;為什麼RESTful是長這樣呢？&lt;/h1&gt;
+&lt;p&gt;基本上RESTful就是verbs x nouns、操作對上資源，因為HTTP有URL代表資源，還有methods，
+這也是為何基於HTTP的RESTful API自然而然就會長成這樣的原因。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/restful-api-1.jpg&quot; alt=&quot;http versus restful api&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;但HTTP methods有限，所以通常只會有幾種操作，也就是&lt;strong&gt;CRUD&lt;/strong&gt;，
+這也是為何常常RESTful API就是對資源進行CRUD的操作，大部分簡單的應用也許這樣就夠了，
+如果你的應用，無法以簡單的CRUD表示，比如說需要同時對多個資源進行操作才能完成某項任務，
+那可以需要重新思考如何設計URL，model你的resourse，之後會在後續的文章裡再來討論。&lt;/p&gt;
+
+&lt;p&gt;若對於HTTP協議還不熟悉的，可以看這系列文章中，前面關於HTTP的部分。&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;大概知道了RESTful API應該是什麼樣子，還有許多細節的部分，會在後面的文章中慢慢討論，
+比如說URL的設計、如何model resource、documentation、versioning等等…&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">在web開發裡，API是幾乎無所不在，而其中最常見的應該就是基於HTTP協議的RESTful API， 這篇簡介跟討論到底什麼是RESTful，為何有它的出現?</summary></entry><entry><title type="html">[Golang] Common verbs of formatting string</title><link href="https://homuchen.com/posts/golang-common-verbs-for-formatting-string/" rel="alternate" type="text/html" title="[Golang] Common verbs of formatting string" /><published>2021-09-20T15:30:00+08:00</published><updated>2021-09-20T15:30:00+08:00</updated><id>https://homuchen.com/posts/golang-common-verbs-for-formatting-string</id><content type="html" xml:base="https://homuchen.com/posts/golang-common-verbs-for-formatting-string/">&lt;p&gt;在fmt package裡Printf, Fprintf, Fscanf, Scanf，或像是log package裡的Printf, Fatalf，
 只要是function名字後面有f的，就能format你的input，以fmt.Printf為例:&lt;/p&gt;
 &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -1253,81 +1318,4 @@ Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁�
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot;&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/posts/book-note-dollars-and-sense/&quot;&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry><entry><title type="html">[讀書筆記] 習慣致富 人生實踐版</title><link href="https://homuchen.com/posts/book-notes-effort-less-wealth/" rel="alternate" type="text/html" title="[讀書筆記] 習慣致富 人生實踐版" /><published>2021-07-24T22:30:00+08:00</published><updated>2021-07-24T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-notes-effort-less-wealth</id><content type="html" xml:base="https://homuchen.com/posts/book-notes-effort-less-wealth/">&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rich-habit-1.jpg&quot; alt=&quot;book: Effort-less Wealth&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;簡介&quot;&gt;簡介&lt;/h1&gt;
-
-&lt;p&gt;這本書的第一章到第十六章，作者講述了兩對夫婦的故事，從交往、訂婚、結婚、蜜月，講到租房、買房、小孩教育、生活中的各個面向，
-看他們在面對所有財務決策時，如何做不同的選擇，而這些習慣，經過了時間了累積，到最後產生了巨大的差別！&lt;/p&gt;
-
-&lt;p&gt;透過故事，像是看小說一樣，更容易地會去感受到那些習慣的重要，那對底是哪些習慣呢～作者在本書後面的22章一一闡述:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;擁有好習慣，人生是彩色的；擁有壞習慣，人生是黑白的&lt;/li&gt;
-  &lt;li&gt;慎選人生伴侶&lt;/li&gt;
-  &lt;li&gt;避免欲望型消費&lt;/li&gt;
-  &lt;li&gt;節儉，但不小氣&lt;/li&gt;
-  &lt;li&gt;避免隨意購物&lt;/li&gt;
-  &lt;li&gt;成為自己的人生設計師──建構藍圖或計畫&lt;/li&gt;
-  &lt;li&gt;持續投資你的儲蓄存款&lt;/li&gt;
-  &lt;li&gt;謹慎投資&lt;/li&gt;
-  &lt;li&gt;讓你的錢各自歸位&lt;/li&gt;
-  &lt;li&gt;勿陷入「生活方式升級心理」，勿將你的生活加大升級&lt;/li&gt;
-  &lt;li&gt;保持心胸開放，別讓偏見影響你的財務決定&lt;/li&gt;
-  &lt;li&gt;結交有儲蓄習慣的朋友&lt;/li&gt;
-  &lt;li&gt;為你心中最重要的東西儲蓄&lt;/li&gt;
-  &lt;li&gt;金錢等於自由&lt;/li&gt;
-  &lt;li&gt;財富自由的首要條件是身體健康&lt;/li&gt;
-  &lt;li&gt;創造多元收入金流&lt;/li&gt;
-  &lt;li&gt;富裕不只是金錢富裕──七種富裕類型&lt;/li&gt;
-  &lt;li&gt;變有錢並非單一事件&lt;/li&gt;
-  &lt;li&gt;好目標 V.S. 壞目標&lt;/li&gt;
-  &lt;li&gt;好習慣帶來好運，壞習慣帶來厄運&lt;/li&gt;
-  &lt;li&gt;財富消除五十八%的人生問題（與壓力）&lt;/li&gt;
-  &lt;li&gt;財富遊戲計畫&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;心得感想&quot;&gt;心得感想&lt;/h1&gt;
-
-&lt;p&gt;或許可能會覺得這些東西都是老生常談，陳腔濫調，但就像伏爾泰說過的&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Common sense is not so common&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在我們日常生活中，是否這些習慣對富人來說是common sense，但對我們卻不是，或者是我們知道他是簡單的常識，
-卻沒有落實到生活當中，使他們變得平常，透過這次的閱讀，可以檢視自己有哪些是做得不好的部份．&lt;/p&gt;
-
-&lt;p&gt;不過在這本書裡，對於每一個原則及習慣，講的篇幅有限，我覺得可以透過其他的資源來加深學習:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;習慣:&lt;/strong&gt; 習慣這兩個字就出現在書名當中，可以知道它有多重要，造就現在我們的狀態的，正是過往以來我們所有的所作所為，
-而我們在過去的每個當下所做的選擇、所做的行為，絕大部分並不是我們有意識的，而是無意識的習慣！&lt;/p&gt;
-
-    &lt;p&gt;試想從我們早上醒來，睜開眼睛第一件事是拿起手機賴在床上滑，還是整理床鋪、冥想;早餐是隨便吃吃，還是有注重均衡營養;
-到了工作場所，是先想好今天最重要的任務，還是開始瞎忙;下班之後是躺在沙發上看電視，還是去運動．&lt;/p&gt;
-
-    &lt;p&gt;我們不會無時無刻都在努力地做選擇，而是讓習慣驅動著我們，而&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot;&gt;&lt;strong&gt;原子習慣&lt;/strong&gt;&lt;/a&gt;這本書，
-說明了習慣的機制，教我們如何去培養好習慣、除去壞習慣，而不是每天依靠意志力來控制自己，而最後又筋疲力盡地失敗．&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;人際關係:&lt;/strong&gt; &lt;a href=&quot;https://www.books.com.tw/products/0010849837&quot;&gt;&lt;strong&gt;人性的弱點&lt;/strong&gt;&lt;/a&gt;，經典．&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;睡覺:&lt;/strong&gt; &lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot;&gt;&lt;strong&gt;為什麼要睡覺&lt;/strong&gt;&lt;/a&gt;，如果有一種產品，可以讓你記憶力變好、更具創造力及生產力、
-降低罹癌機率、心情更好、走出傷痛、變美麗、皮膚變好、變苗條，那你願意花多錢買這產品呢～一萬？不用！五千？也不用！
-免錢的啦～～只要你每天晚上好好地去睡覺就有了！為什麼要睡、要如何睡？比爾蓋茲也推薦大家看看這本書．&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;運動:&lt;/strong&gt; 運動對我們到底有多少好處，在&lt;a href=&quot;https://www.books.com.tw/products/0010855828&quot;&gt;&lt;strong&gt;真正的快樂處方&lt;/strong&gt;&lt;/a&gt;這本書裡，
-針對運動對我們大腦的影響，如果你想要變得更年輕、聰明、學東西更快、壓力更小更快樂、注意力更集中、更有創造力嗎？那就運動吧！&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;財務決策:&lt;/strong&gt; 本書說我們要有儲蓄及投資的習慣，在現在金融越來越越發達的世界當中，
-我們有越來越多的行為牽涉到金錢，在花錢時時常有許多不理性的行為，可能是被商人誘導，要讓我們花更多的錢，或者只是我們自己懶，
-在&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot;&gt;&lt;strong&gt;金錢心理學&lt;/strong&gt;&lt;/a&gt;裡，讓我們從很多的故事及實驗中，覺察到自己到底有沒有亂花錢的地方．&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;最後除了自己做，最好是身邊的朋友及伴侶都有相同的價值觀，才能一起前進，而不是處處拉扯，祝大家可以找到三觀合的另一半~ 😂&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="habit" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Google Sheet" /><category term="finance" /><category term="google sheet" /><category term="google form" /><summary type="html">利用Google sheet及Google form來客製化自己的記帳App，表單的連結可以放到手機桌面，就像一般App一樣， 每次花費的紀錄，將儲存在試算表裡，後續可以做任何你想要的統計分析．</summary></entry></feed>
