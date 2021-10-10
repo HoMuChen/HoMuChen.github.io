@@ -1,4 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-02T23:01:55+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學</title><link href="https://homuchen.com/posts/book-note-why-we-sleep/" rel="alternate" type="text/html" title="[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學" /><published>2021-10-02T23:00:00+08:00</published><updated>2021-10-02T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-why-we-sleep</id><content type="html" xml:base="https://homuchen.com/posts/book-note-why-we-sleep/">&lt;p&gt;如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-11T00:00:33+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</title><link href="https://homuchen.com/posts/book-note-the-four-hour-work-week/" rel="alternate" type="text/html" title="[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！" /><published>2021-10-10T23:00:00+08:00</published><updated>2021-10-10T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-four-hour-work--week</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-four-hour-work-week/">&lt;p&gt;讀完這本&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;一週工作四小時後&lt;/strong&gt;&lt;/a&gt;後，
+讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、
+認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、
+這本書所提出的內容，最後是我之後可能會做的一些改變！&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;每當發現自己屬於多數陣營時，就是你停下來三思的時候 - 馬克.吐溫&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg&quot; alt=&quot;Book: Four Hour Work Week&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;過去的想法&quot;&gt;過去的想法&lt;/h1&gt;
+
+&lt;h2 id=&quot;fire&quot;&gt;FIRE&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;FIRE&lt;/strong&gt;(Financial Independence Retire Early)&lt;a href=&quot;#1&quot;&gt;[1]&lt;/a&gt;，財務自由、提早退休，
+是我工作之後的幾年一直抱持著的想法，提早規劃退休，儘早儲蓄、投資，打造自己的被動收入，
+等到被動收入可以支付你的生活支出的時候，蹦！自由了～可以不必為了討生活而工作，
+擁有自由去做任何你想要做的事，這些都沒錯，也很棒，那問題在哪裡呢？&lt;/p&gt;
+
+&lt;h2 id=&quot;提早退休&quot;&gt;提早退休&lt;/h2&gt;
+&lt;p&gt;想要每天醒來不用面對老闆工作上要求嗎？等退休; 想要冬天住在滑雪小屋，每天滑雪，
+夏天住在海島別墅，每天躺在海灘做日光浴衝浪嗎？等退休; 想要找份對社會有貢獻、有意義的工作嗎？
+等退休; 想要重拾荒廢已久或培養新的興趣嗎？等退休;&lt;/p&gt;
+
+&lt;p&gt;為了提早退休，於是在現在做了許多犧牲，我不能休太長的假，因為要賺錢，也怕被炒魷魚，我不能花大錢享受奢華的體驗，
+因為要存起來，時間久了以後，就有夠多的被動收入可以資助我們想做的事。當我們每天的生活的目標都是為了提早退休，
+就會變得只追逐金錢，而且有了藉口不去思考更重要的問題: 我想要成為怎樣的人? 我想要做什麼? 
+因為這些問題都可以用一些簡單的理由來搪塞過去，也就是等退休再說、等有時間再說、等錢夠多了再說…&lt;/p&gt;
+
+&lt;h2 id=&quot;想要的生活&quot;&gt;想要的生活&lt;/h2&gt;
+&lt;p&gt;終於!熬了十幾年、二十幾年，退休的這天到來了(40幾歲退休還不賴吧？)，突然間擁有了許多的時間，你卻不知道要做什麼，
+或者是終於去做了你想做很久的事，結果卻發現沒有你想像中的那麼美好。&lt;/p&gt;
+
+&lt;p&gt;除去了所有不喜歡的事之後，迎來的不會是一個美好人生，而會是一片空白，
+因為你不知道你想要追求的目標是什麼，有什麼夢想或是事物想要去體驗，過去的人生都在賺錢拼退休…&lt;/p&gt;
+
+&lt;h1 id=&quot;本書摘要&quot;&gt;本書摘要&lt;/h1&gt;
+&lt;p&gt;本書介紹了一群次文化人士: &lt;strong&gt;新富族&lt;/strong&gt;，以&lt;strong&gt;自由&lt;/strong&gt;及&lt;strong&gt;機動性&lt;/strong&gt;作為新貨幣，
+自己決定何時工作、何時追逐夢想、在哪裡生活的一群人。&lt;/p&gt;
+
+&lt;p&gt;作者提出四個步驟DEAL(Definition、Elimination、Automation、Liberation)，
+引導大家重新設計生活型態，並且自己親身實踐，可以在書中看到許多作者的經驗及故事。&lt;/p&gt;
+
+&lt;h2 id=&quot;d---定義人生&quot;&gt;D - 定義人生&lt;/h2&gt;
+&lt;p&gt;什麼是新富族(New Rich)，首先先來看看新富族跟延後人生族(工作 -&amp;gt; 儲蓄 -&amp;gt; 退休)的差別在哪吧!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-1.jpg&quot; alt=&quot;comparasion between New Rich and Delay&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;所以，誰是新富族？&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;重新安排個人行事曆的員工，他談出一份遠距的工作契約，用十分之一的時間達成百分之九十的產出，
+因而得以自由地去各地滑雪，每月還能有兩週帶家人出門旅遊。&lt;/li&gt;
+  &lt;li&gt;刪去獲利最少的客戶與計畫的老闆，他將所有業務外包，在世界各地旅遊，蒐集罕見的歷史文件，
+同時在網站上遠距工作，展示他的繪圖設計。&lt;/li&gt;
+  &lt;li&gt;選擇孤注一擲，拿出全部身家的學生，建立網路影片租借服務，從一小群HDTV愛好著的利基市場，
+每月賺得五千美元的收入。這項每週兩小時的兼差，讓他能夠全職為動物全力奔走。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以看出新富族他們都有以下的共同點:&lt;/p&gt;
+
+&lt;h3 id=&quot;有目標夢想&quot;&gt;有目標、夢想&lt;/h3&gt;
+&lt;p&gt;知道自己想成為怎樣的人，想要做的事，而不是每天埋首於追求金錢、事業、名聲、家庭、生活的的各種瑣事、
+而忽略了重要的問題，每天致力於除去不想做的事，渴望自由，卻不知道有了時間之後要幹嘛。&lt;/p&gt;
+
+&lt;p&gt;如果不知道自己想做什麼怎麼辦呢？那更不能繼續埋首工作，要開始思考，並且行動跟實驗，
+這邊我推薦另一本書&lt;a href=&quot;https://www.books.com.tw/products/0010733134&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;做自己的生命設計師: 史丹佛最夯的生涯規劃課&lt;/strong&gt;&lt;/a&gt;，
+瘋狂地發想所有可能的選項，並打造原型去實驗，不知道自己喜歡做什麼時，唯有去做做看才會知道是否喜歡。&lt;/p&gt;
+
+&lt;h3 id=&quot;有錢又有閒&quot;&gt;有錢又有閒&lt;/h3&gt;
+&lt;p&gt;你可能會說我哪有那個錢和時間去做這些事！沒錯，目標就是要變得有錢又有閒，後面的EAL就是方法論，
+教你如何擁有更多的自由時間，以及金錢來資助你過上夢想中的生活。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;E(Elimination)，教你去除掉所以不必要花費的時間，維持大部分的產出但同時多出許多時間。&lt;/li&gt;
+  &lt;li&gt;A(Automation)，打造自動創造收入的資產，重點目標是不要花費你的時間，自動的進帳。&lt;/li&gt;
+  &lt;li&gt;L(Liberation)，逍遙自由的機動性，能讓你的財富自動倍增！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;e---排除旁騖&quot;&gt;E - 排除旁騖&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-2.jpg&quot; alt=&quot;80/20 Priciple and Parkinson's Law&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;八十二十法則&quot;&gt;八十/二十法則&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;八十/二十法則&lt;/strong&gt;，80%果來自20%的因，在許多地方都能用上這個法則，比如說全世界的資產分配、
+公司的大部分的利潤來自與少部分的客戶或產品、個人工作的時間與產出，本書作者很喜歡這個法則，
+並在他其他的書裡也反覆提到，重點就是要找到那最重要的20%的事情，去掉80%的時間與精力，
+達到足夠滿足的結果。&lt;/p&gt;
+
+&lt;h3 id=&quot;不必要不重要的工作&quot;&gt;不必要、不重要的工作&lt;/h3&gt;
+&lt;p&gt;作者在書中的例子是，他削減了95幾%的客戶及難搞的客戶，不做他們生意，把精力留給帶來大部分利潤的客戶，
+那些即使你不用聯絡也會持續買單的客戶，結果就是，工作的時間可能只剩下原先的10%，快樂程度高上許多，
+利潤卻只少掉一點。接著再研究在研究五大客戶的特徵，在下週延攬到三個相似的買家，四周下來，作者營收翻倍，
+每週工時從80小時降到15小時！&lt;/p&gt;
+
+&lt;h3 id=&quot;不必要的資訊&quot;&gt;不必要的資訊&lt;/h3&gt;
+&lt;p&gt;大家每天花在閱讀新聞、滑臉書、PTT的時間有多少呢？這些資訊真的都有必要去知道嗎？
+現代人吃進太多不具營養價值的空卡路里，資訊也是一樣，多數資訊不僅耗時，而且跟你的目標無關。&lt;/p&gt;
+
+&lt;p&gt;作者建議，每次要閱讀資訊時，問自己，對我而言，這項資訊有立即、重要的用途嗎? 單單是有關還不夠，
+還必須是立即且重要的，如果資訊無法用在要事上，或是等你要用的時候也已經忘記了，那就等於無用的資訊。&lt;/p&gt;
+
+&lt;h3 id=&quot;帕金森定律&quot;&gt;帕金森定律&lt;/h3&gt;
+&lt;p&gt;我們有多少的時間完成一項任務，我們就會花多少的時間完成，這就是帕金森定律。&lt;/p&gt;
+
+&lt;p&gt;每天朝九晚五工作的社會文化，讓我們必須每天在辦公室待上八個小時，就算工作不需要那麼久的時間來完成，
+我們還是會被迫創造各種活動來填滿時間，如果我們有15小時，就會填滿15小時; 如果我們有8小時，
+就會填滿8小時; 如果你急事，2個小時後要離開辦公室，那你就會神奇地在2個小時內完成工作。&lt;/p&gt;
+
+&lt;p&gt;世界上的每個人真的都需要八個小時來完成工作嗎？！這只是重量不重質的社會遺毒，應該要關注產出，
+而不是在辦公室坐滿八小時，所以員工的下一步就是談出一份遠距工作的契約，好脫離辦公室的框架，
+變得更有效率，這部分會在後面L的章節更多地討論。&lt;/p&gt;
+
+&lt;h2 id=&quot;a---自動進帳&quot;&gt;A - 自動進帳&lt;/h2&gt;
+&lt;p&gt;要想過上奢華生活，或是放手追逐夢想的一個重要要素就是: &lt;strong&gt;收入&lt;/strong&gt;，
+在這一階段，就是要打造出可以自動帶來收入的事業，從尋找Idea、找出利基市場、
+測試廣告效益，最後則是脫身及自動化。&lt;/p&gt;
+
+&lt;p&gt;因為這部分的內容我自己也沒有實踐，細節就不多在這裡分享了，
+有興趣的讀者推薦你去書裡看看～&lt;/p&gt;
+
+&lt;p&gt;簡單分享一個點就是，你可能會覺得所有事情都自己來做比較省錢，自己當客服回覆客戶問題，
+自己處理訂單、出貨，但以工程師的話來說，這樣就有兩個問題，一個是&lt;strong&gt;單點失敗&lt;/strong&gt;，另一個是&lt;strong&gt;無法擴展&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;單點失敗: 一但你不能工作了，整個事業就將無法運作，所以你只能一直一直不停地工作&lt;/li&gt;
+  &lt;li&gt;無法擴展: 當客戶越來越多時，總有一天你將會無法自行處理所有的業務&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;l---逍遙自在&quot;&gt;L - 逍遙自在&lt;/h2&gt;
+&lt;p&gt;如果你每天只在辦公室工作1小時，我想大部分的老闆都會不高興，
+為了能夠自由地掌握自己的時間、去到任何你想去的地方，想辦法談出一份遠距工作契約將會是第一步。&lt;/p&gt;
+
+&lt;p&gt;比如當你有辦法做到達到相同產出，但只花1/4的時間時，如果你還待在辦公室，人們就會要求你繼續工作到八小時，
+以達成4倍的產出，或者你就必須裝忙，來填滿這八小時，這就是社會框架下的辦公室文化。
+所以作者在這一章節中，教你如何一步一步地得到一份遠距的工作，
+跟著書中人物的故事，策略性地、有方法地達成遠距工作的目標。&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;看完之後，非常興奮！立馬先查了一下東南亞各地的生活成本，結果發現去峇里島住一個月，大部分根本比住在台北便宜，
+在曼谷住上五星級的飯店，擁有頂樓無邊際泳池及健身房，跟在台北租個鳥籠的價格也相去不遠，那我幹嘛要住在台北呢XD&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-4.jpg&quot; alt=&quot;Bali&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-5.jpg&quot; alt=&quot;Taipei&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;以上只是利用機動性達成最簡單的地理套利，想要體驗奢華的生活，沒有一定要成為億萬富翁，
+賺錢不是目的，過上你想要過的生活才是。&lt;/p&gt;
+
+&lt;p&gt;重要的是我們要如何利多出來的時間，如果你想滑雪，何不直接住在北海道或阿爾卑斯山;
+如果想學潛水，直接去到個海島國家; 如果你不想旅遊，就去做你任何想做的工作; 如果你不知道要幹嘛，
+就趕快多多去體驗這個世界～&lt;/p&gt;
+
+&lt;p&gt;祝大家都有錢有閒，去實現自己的夢想，讓這世界變得更加美好，掰掰～👋&lt;/p&gt;
+
+&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Playing-Financial-Independence-Retire-Early/dp/1608685802&quot; name=&quot;1&quot; target=&quot;\_blank&quot;&gt;Playing with FIRE(Financial Independence Retire Early): How Far Would You Go for Financial Freedom?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life" /><category term="work" /><summary type="html">讀完這本一週工作四小時後後， 讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、 這本書所提出的內容，最後是我之後可能會做的一些改變！</summary></entry><entry><title type="html">[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學</title><link href="https://homuchen.com/posts/book-note-why-we-sleep/" rel="alternate" type="text/html" title="[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學" /><published>2021-10-02T23:00:00+08:00</published><updated>2021-10-02T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-why-we-sleep</id><content type="html" xml:base="https://homuchen.com/posts/book-note-why-we-sleep/">&lt;p&gt;如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、
 注意力提升、脾氣會變好，不易怒、遠離肥胖及糖尿病及心血管疾病、抵抗力變好不易感冒、
 不易罹癌、變帥變漂亮、更有吸引力～請問你願意花多少錢購買這產品呢？讓我現在告訴你，
 免錢！你每天都有機會享受到這些好處，需要做的就只是好好地睡覺～～😴&lt;/p&gt;
@@ -1322,142 +1479,4 @@ Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁�
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://nodejs.org/api/stream.html&quot;&gt;Node.js documentation: Stream&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/@azure/storage-file-share&quot;&gt;@azure/storage-file-share&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="express" /><category term="node.js" /><category term="azure" /><category term="stream" /><category term="http" /><category term="api" /><summary type="html">這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式， 將檔案儲存到本地端，或是當你作為一個Server(此篇使用express.js)時，回傳給你的client，並且根據檔案名稱來設置正確的Content-Type．</summary></entry><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)</title><link href="https://homuchen.com/posts/book-note-money-psychology/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)" /><published>2021-08-07T23:30:00+08:00</published><updated>2021-08-07T23:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-money-psychology</id><content type="html" xml:base="https://homuchen.com/posts/book-note-money-psychology/">&lt;p&gt;生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人；我們懶惰，喜歡走捷徑，有各種誤判及偏見；
-我們的認知有限制，腦袋的容量非常有限；我們短視近利，喜歡立即得到獎賞及滿足；
-我們有各式各樣的思考、認知、感覺，進而有了相對應的行為，這些就是心理學在研究的事．&lt;/p&gt;
-
-&lt;p&gt;當這些人的天性碰上了金錢，我們是否能做出好的經濟決策呢？會不會當了許久的冤大頭而不自知，
-或是被誘惑引導到花了一些本來不會花的錢，該如何聰明的花費、花得剛好、花得開心，
-就是&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;«金錢心理學»&lt;/strong&gt;&lt;/a&gt;這本書要探討的內容．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-1.jpg&quot; alt=&quot;book: Dollards and Sense&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;大綱&quot;&gt;大綱&lt;/h1&gt;
-
-&lt;p&gt;以下為這篇文章的大綱，由於內容較多，部分的章節會在下一篇文章裡再談～&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;基本原則: 機會成本&lt;/li&gt;
-  &lt;li&gt;相對性&lt;/li&gt;
-  &lt;li&gt;心理帳戶&lt;/li&gt;
-  &lt;li&gt;避免痛苦&lt;/li&gt;
-  &lt;li&gt;定錨效應&lt;/li&gt;
-  &lt;li&gt;稟賦效應&lt;/li&gt;
-  &lt;li&gt;期望公平&lt;/li&gt;
-  &lt;li&gt;太在意價格&lt;/li&gt;
-  &lt;li&gt;總結及我如何利用以上現象來設計自己&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;基本原則-機會成本&quot;&gt;基本原則: 機會成本&lt;/h1&gt;
-
-&lt;p&gt;一顆蘋果跟一顆橘子給你選，你要哪個？對大部分的人來說，這都不會是個非常困難的選擇，但如果是一顆蘋果50元，跟一顆橘子10元呢？
-感覺是不是變困難了~&lt;/p&gt;
-
-&lt;p&gt;這是因為機會成本變複雜了的關係，在第一個情況中，如果你選擇了蘋果只需要放棄橘子，機會成本只有蘋果或橘子，
-但在後者，如果你選擇了蘋果，你的機會成本可能是任何50元可以買到的東西，可能是五顆橘子、一杯飲料、一個漢堡、
-兩本筆記本、好多枝筆、等等等無限的可能～&lt;/p&gt;
-
-&lt;p&gt;所以當一件事涉及到了金錢的時候，就會變得更為複雜，最理想的情況是，我們在做決策時必須考慮到所有的機會成本，
-但這既困難又不太實際，我們不可能在得到想到所有可能的資訊之後才下決定，
-往往我們會被其他各種心理因素給左右，以下就一一來看吧！&lt;/p&gt;
-
-&lt;h1 id=&quot;相對性&quot;&gt;相對性&lt;/h1&gt;
-
-&lt;h2 id=&quot;艾賓浩斯錯覺&quot;&gt;艾賓浩斯錯覺&lt;/h2&gt;
-&lt;p&gt;首先我們先來看一張圖，大家會覺得兩個在中間的橘色圓形圖案，哪一個比較大呢？
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-2.jpg&quot; alt=&quot;ebbinghaus illusion&quot; /&gt;
-是否會覺得右邊的比較大呢？但其實是一樣的! 這就是艾賓浩斯錯覺，是對相對大小感知的一種視力錯覺．&lt;/p&gt;
-
-&lt;h2 id=&quot;金錢的相對大小&quot;&gt;金錢的相對大小&lt;/h2&gt;
-&lt;p&gt;所以我們的大腦這種對相對大小的感知，也一樣會應用到金錢上．先來看一個情境:&lt;/p&gt;
-
-&lt;p&gt;假如今天你想要買一雙鞋，要價2000元，然後店員跟你說，再走路五分鐘的路程之外有一家分店，
-只要1800，那你會去另一個店買嗎？
-再來，今天假設你要買的的是一台電視，要價20000，然後店員也跟你說，走路五分鐘的路程之外有一家分店，
-只要19800，那你會去另一個店買嗎？&lt;/p&gt;
-
-&lt;p&gt;我想有人在第一種情況會選擇去另一家店，而買電視時卻不會，但一樣都是五分鐘路程省200，照理說兩種的選擇應該要一樣才是呀～
-在這裡就是對相對大小的認知偷偷溜進了我們的判斷之中，一樣的200塊，相對於2000感覺省了不少，但相對於20000，好像就沒那麼多了．&lt;/p&gt;
-
-&lt;p&gt;另外還有許多地方，像是買車時，推銷員建議只要再加多少錢，就可以升級某某配件;
-或是在各種商店的收銀櫃台上的小物，相較於你全部買的東西，再多花個幾十塊買一些零食好像也沒什麼;以及在高級餐廳裡開一瓶高價的紅酒，
-這些可能都是商人利用了相對性而促使你做了原先你不會做的交易．&lt;/p&gt;
-
-&lt;h2 id=&quot;誘餌&quot;&gt;誘餌&lt;/h2&gt;
-
-&lt;p&gt;我們人類喜歡比較，那也無可厚非，因為有時不能比較的話，時常無法做出決定，比如說要你對一堂線上課程出價、一顆花椰菜要多少錢、
-500公克的牛肉要多少錢，如果沒有其他資訊，往往不知道該怎麼定價，所以有時商人為了讓你更容易做出決定，故意給你可以比較的內容，
-讓你覺得好像賺到了，比如說原價1000，今天特價600！&lt;/p&gt;
-
-&lt;p&gt;我們可以看看經濟學人雜誌是怎樣做的，訂閱的選項有三種：線上版、印刷版、線上加印刷版，定價分別為59美元、125美元、125美元，
-什麼？！單純印刷版跟線上加印刷版都一樣只要125美元，傻子才會只訂印刷版．沒錯！確實沒有人是傻子，雙訂閱的人數佔了84%．&lt;/p&gt;
-
-&lt;p&gt;現在我們把傻瓜選項拿掉，只有線上版及雙訂閱，結果選擇雙訂閱的人只剩32%！加上一個無關緊要的選項，竟然讓大家選擇了更高價的選項，
-這是因為在比較單純印刷版及雙訂閱的時候，一樣的價錢，雙訂閱明顯優於印刷版，有東西可以比較的時候，我們人類就是比較開心，覺得賺到！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-3.jpg&quot; alt=&quot;The Econimics: Bait&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;心理帳戶&quot;&gt;心理帳戶&lt;/h1&gt;
-
-&lt;p&gt;錢就是錢，每一分錢應該都是一樣的，並不會有所不同，但我們有時卻會替錢分類，讓我們先來看看以下這兩種情境:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;今天你已經買了一張一千塊的球賽門票，比賽當天，興沖沖地到了球場，卻突然發現票不見了！這時你會在現場再掏出一千塊來買票嗎?&lt;/li&gt;
-  &lt;li&gt;你沒有預先買票，到了球場時發現你錢包裡的一張一千塊鈔票不見了！此時你會在現場拿一千塊來買票嗎？&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;我想大家對於第一種情況，要再掏錢出來買票應該比較掙扎吧～明明我們損失的都一樣是價值一千塊，不管他是門票還是鈔票，
-但我們的感覺卻不同，後續的行為也可能跟著不同．&lt;/p&gt;
-
-&lt;p&gt;因為我們預先幫我們的錢分類了，在第一種情況裡你買門票用的錢，可能被你歸類在娛樂帳戶上，而第二種情況的錢是沒分類的一般預算，
-也許你心想每個月能花在娛樂上的預算有限，用掉了沒了，所以當損失的是娛樂帳戶裡的錢，就不太能再花更多錢在此項目了．&lt;/p&gt;
-
-&lt;h2 id=&quot;認知限制&quot;&gt;認知限制&lt;/h2&gt;
-
-&lt;p&gt;會做這樣的預算編列，並不是壞事，就像前面所說的，如果要花一筆錢時，要考慮到所有的機會成本幾乎是不太可能，
-我們的大腦裝不下所有選項，但一旦我們將預算分類，此時機會成本的選項就會變得少許多，可以更容易做出決定．&lt;/p&gt;
-
-&lt;p&gt;以娛樂預算為例，當你要花錢去看一場球賽時，
-你可能會想是要看一場球比較值得呢？還是去看兩場電影？或者省下來之後再帶女朋友一起出去旅行？&lt;/p&gt;
-
-&lt;h2 id=&quot;不好的心理帳戶&quot;&gt;不好的心理帳戶&lt;/h2&gt;
-
-&lt;p&gt;既然心理帳戶有助於我們做決定，那不好的地方在哪兒呢？有時我們會把錢的來源，不小心也分類了，是辛苦賺來的錢、還是發票中獎、
-或者是出差可以報帳，住了一個比較好的飯店，然後自己多花錢吃了豪華晚餐．&lt;/p&gt;
-
-&lt;p&gt;對於比較輕鬆得來的錢，我們就更容易不假思索地花掉，其實錢就是錢，都是一樣的~&lt;/p&gt;
-
-&lt;h1 id=&quot;避免痛苦&quot;&gt;避免痛苦&lt;/h1&gt;
-
-&lt;p&gt;人類天生就會試著避開痛苦，當我被熱水燙到，就知道下次要避開，被蛇咬一次，就會十年怕草繩，跟金錢有關的痛苦，
-就是把錢付出去，交給別人的那個瞬間！&lt;/p&gt;
-
-&lt;p&gt;於是乎，商人就發明了一些方法，來讓我們更少地感知到付錢的痛苦，讓付錢的時間跟享受商品及服務的時間錯開，
-或是讓我們在付錢時，感覺好像付的不是錢XD&lt;/p&gt;
-
-&lt;h2 id=&quot;工具&quot;&gt;工具&lt;/h2&gt;
-
-&lt;p&gt;使用信用卡這類工具，可能會讓有些人不小心花了更多錢，在網站上逛逛，一鍵付款，付錢的過程太過方便無痛．&lt;/p&gt;
-
-&lt;h2 id=&quot;時間上&quot;&gt;時間上&lt;/h2&gt;
-
-&lt;p&gt;透過實際付錢跟享受的時間差，讓我們忘記付錢這件事，可以將付錢的時機大致分為三類，
-預付、後付或邊用邊付、什麼時候付錢真的會影響我們花錢的多寡嗎？有個實驗是這樣的:&lt;/p&gt;
-
-&lt;p&gt;請一群人來實驗室待四十分鐘，然後給他們一筆錢，他們可以選擇將這筆錢花在看有趣的影片，但是比較貴，
-也可以看一些漫畫，這比較便宜，或是有提供一些免費乏味的學術研究給他們看，總之他們可以選擇怎麼用這筆錢，
-來度過這漫長的四十分鐘．&lt;/p&gt;
-
-&lt;p&gt;而付錢的方式就是分成三種預付、後付、邊用邊付:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;預先想好要哪些娛樂，提前支付&lt;/li&gt;
-  &lt;li&gt;在實驗期間，使用娛樂，結束後再支付&lt;/li&gt;
-  &lt;li&gt;在實驗期間，每要使用一項娛樂時，當下付費&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;結果，預付跟後付沒有明顯差別，但是邊用邊付組則是花了最少的錢～所以可以藉由時時提醒自己付錢的痛苦，來減少不必要的花費，
-就像我在&lt;a href=&quot;/posts/google-sheet-how-to-do-bookkeeping/&quot;&gt;[Google Sheet]我如何利用Google表單來記帳&lt;/a&gt;這篇裡，透過記帳，
-讓自己就算是使用電子錢包、網購、用信用卡時都能感受到付錢之痛．&lt;/p&gt;
-
-&lt;p&gt;剩下的內容，下集待續，掰掰～～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">生而為人，而不是一部機器人，我們有情緒，我們有人性而不是聖人；我們懶惰，喜歡走捷徑，有各種誤判及偏見； 我們的認知有限制，腦袋的容量非常有限；我們短視近利，喜歡立即得到獎賞及滿足； 我們有各式各樣的思考、認知、感覺，進而有了相對應的行為，這些就是心理學在研究的事．</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="express" /><category term="node.js" /><category term="azure" /><category term="stream" /><category term="http" /><category term="api" /><summary type="html">這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式， 將檔案儲存到本地端，或是當你作為一個Server(此篇使用express.js)時，回傳給你的client，並且根據檔案名稱來設置正確的Content-Type．</summary></entry></feed>
