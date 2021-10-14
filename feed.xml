@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-14T13:11:34+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</title><link href="https://homuchen.com/posts/book-note-the-four-hour-work-week/" rel="alternate" type="text/html" title="[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！" /><published>2021-10-10T23:00:00+08:00</published><updated>2021-10-10T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-four-hour-work--week</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-four-hour-work-week/">&lt;p&gt;讀完這本&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;一週工作四小時後&lt;/strong&gt;&lt;/a&gt;後，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-14T14:15:15+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">RESTful API: How to design paths and identify resources</title><link href="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/" rel="alternate" type="text/html" title="RESTful API: How to design paths and identify resources" /><published>2021-10-14T13:20:00+08:00</published><updated>2021-10-14T13:20:00+08:00</updated><id>https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/">&lt;p&gt;繼上篇文章&lt;a href=&quot;/posts/restful-api-introduction/&quot;&gt;&lt;strong&gt;RESTful API簡介: 什麼是RESTful? 以及為何需要它?&lt;/strong&gt;&lt;/a&gt;後，
+我們知道了RESTful API是&lt;strong&gt;resource based&lt;/strong&gt;的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。&lt;/p&gt;
+
+&lt;h1 id=&quot;resource-based&quot;&gt;Resource based&lt;/h1&gt;
+&lt;p&gt;每個URL都應該對應到一個或多個資源，使用那些使用者與你的服務互動時會需要用到的資源(名詞)，
+並使用HTTP Method來表明你想要對資源的操作(動詞)，比如說你是一個網誌服務，
+使用者可以看、新增、修改、刪除自己的文章，也能瀏覽別的作者的文章，&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET     /articles               -&amp;gt; 看全部的文章
+GET     /articles/d8e209        -&amp;gt; 看某篇文章
+POST    /articles               -&amp;gt; 新增文章
+PUT     /articles/4f8662        -&amp;gt; 修改某篇文章
+DELETE  /articles/4f8662        -&amp;gt; 刪除某篇文章
+
+GET     /authors/homuchen               -&amp;gt; 看作者homuchen的資訊
+GET     /authors/homuchen/articles      -&amp;gt; 看作者homuchen的所有文章
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;將操作轉成名詞&quot;&gt;將操作轉成名詞&lt;/h1&gt;
+&lt;p&gt;如果你想要進行的操作比較複雜，可能是需要同時對多個資源進行操作，又或者是無法以CRUD之一來表示，
+可以考慮自己創造一個新的Resource。&lt;/p&gt;
+
+&lt;h2 id=&quot;無法以crud表示&quot;&gt;無法以CRUD表示&lt;/h2&gt;
+&lt;p&gt;比如說你想要lock及unlock某篇文章，此時只有一個人可以讀取或修改它，
+HTTP Method裡沒有可以表示lock及unlock的操作，所以就自己創造一個資源叫article-locks，
+並使用PUT、DELETE來操作。&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;PUT     /article-locks/{article_id}     -&amp;gt; Lock住某篇文章
+DELETE  /article-locks/{article_id}     -&amp;gt; Unlock某篇文章
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;牽涉多個資源&quot;&gt;牽涉多個資源&lt;/h2&gt;
+&lt;p&gt;當你的一個任務需要同時對多個資源進行操作時，有兩種做法，一個是讓client發出多個api請求，
+另一個則是定義一個新的endpoint，來幫使用者做完所有的事。&lt;/p&gt;
+
+&lt;p&gt;比如說API的使用者想要發起一筆交易，需要從A帳戶扣一筆錢，在B帳戶新增一筆錢，
+如果讓client自己送出兩個api請求也可以，但是他就要處理其他許多狀況，比如說其中一個api成功，另一個失敗怎麼辦。&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;#還要確保兩個api request同時成功或同時失敗
+
+PUT     /accouts/A/withdrawal   -&amp;gt; 從A帳戶扣一筆錢
+PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;或者可以創造一個新的資源叫transaction，使用PUT來發起一筆交易，而api server則幫client處理了所有該注意的事，
+使這個交易atomic、檢查A帳戶裡的餘額夠不夠等等…&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;PUT     /transactions   -&amp;gt; 發起一筆交易
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;identify-sub-resources-via-path-segments&quot;&gt;Identify sub-resources via path segments&lt;/h1&gt;
+&lt;p&gt;有些資源他本身可能沒有意義，也不會被直接使用，必須仰賴在某些資源下，才知道他所要代表的事物，
+比如說文章底下的留言，如果不知道它們是在哪篇文章底下，留言本身就無法被看懂，
+此時可以使用多段的path來表示parent-child的階層關係。&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;/articles                                       -&amp;gt; 所有文章
+/articles/{article-id}                          -&amp;gt; 某篇文章
+/articles/{article-id}/comments                 -&amp;gt; 某篇文章的所有評論
+/articles/{article-id}/comments/{comment-id}    -&amp;gt; 每篇文章的某則評論
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;今天看了要如何設計我們API的URL，重點就是URL是資源、是名詞，搭配method，表示要對資源進行的操作，
+當操作無法以CRUD表示、或需要同時對多個資源進行操作時，可以考慮創造新的domain entity。
+另外當資料有階層性的關係時，可以使用多段的path還表示。&lt;/p&gt;
+
+&lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">繼上篇文章RESTful API簡介: 什麼是RESTful? 以及為何需要它?後， 我們知道了RESTful API是resource based的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。</summary></entry><entry><title type="html">[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</title><link href="https://homuchen.com/posts/book-note-the-four-hour-work-week/" rel="alternate" type="text/html" title="[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！" /><published>2021-10-10T23:00:00+08:00</published><updated>2021-10-10T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-four-hour-work--week</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-four-hour-work-week/">&lt;p&gt;讀完這本&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;一週工作四小時後&lt;/strong&gt;&lt;/a&gt;後，
 讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、
 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、
 這本書所提出的內容，最後是我之後可能會做的一些改變！&lt;/p&gt;
@@ -1376,107 +1462,4 @@ Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁�
 
 &lt;p&gt;這類研究，是屬於一個叫做行為經濟學的領域，與經濟學不同的是，在經濟學裡，
 假設了每個參與其中的人都是理性的，像機器一樣，一定會符合自身的最大利益來做決策，
-然而結合了心理學，希望能有更準確，更貼近現實的模型來描述各種經濟決策。&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">繼上篇[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)談完部分的內容之後， 今天在這把剩下講完吧～</summary></entry><entry><title type="html">How to stream data from Blob Storage at your HTTP server using Azure and express.js</title><link href="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/" rel="alternate" type="text/html" title="How to stream data from Blob Storage at your HTTP server using Azure and express.js" /><published>2021-08-13T23:30:00+08:00</published><updated>2021-08-13T23:30:00+08:00</updated><id>https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express</id><content type="html" xml:base="https://homuchen.com/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/">&lt;p&gt;這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式，
-將檔案儲存到本地端，或是當你作為一個Server(此篇使用express.js)時，回傳給你的client，並且根據檔案名稱來設置正確的Content-Type．&lt;/p&gt;
-
-&lt;h1 id=&quot;download-file-from-azure&quot;&gt;Download file from Azure&lt;/h1&gt;
-
-&lt;h2 id=&quot;取得file的readable-stream&quot;&gt;取得file的Readable Stream&lt;/h2&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ShareServiceClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StorageSharedKeyCredential&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@azure/storage-file-share&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ACCOUNT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your storage account&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ACCOUNT_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;your account secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;credential&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StorageSharedKeyCredential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ACCOUNT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ACCOUNT_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;serviceClient&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ShareServiceClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;`https://&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ACCOUNT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.file.core.windows.net`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;credential&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//下載data share裡的d4ba71bf-3d38-4e69-9ba2-be4c04179e43.csv&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileClient&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;serviceClient&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getShareClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rootDirectoryClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getFileClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d4ba71bf-3d38-4e69-9ba2-be4c04179e43.csv&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;downloadFileResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//downloadFileResponse.readableStreamBody  ----&amp;gt;&amp;gt; Readable Stream在這裡拉&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;write-to-local-file-or-socket&quot;&gt;Write to local file or socket&lt;/h1&gt;
-
-&lt;h2 id=&quot;把檔案寫入到本地的檔案&quot;&gt;把檔案寫入到本地的檔案&lt;/h2&gt;
-
-&lt;p&gt;使用fs.createWriteStream(path)建立一個file的Writable stream，再將Readable Stream pipe到那裡．&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;local.csv&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;downloadFileResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readableStreamBody&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;creatWriteStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;把檔案傳到http-response-expressjs&quot;&gt;把檔案傳到HTTP Response (express.js)&lt;/h2&gt;
-
-&lt;p&gt;express的handler裡的第二個參數response物件，也是一個writble stream，可以直接將資料pipe過去．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-fs&quot;&gt;app.get('/path', (req, res) =&amp;gt; {
-  downloadFileResponse.readableStreamBody.pipe(res)
-})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&quot;content-type&quot;&gt;Content-Type&lt;/h1&gt;
-
-&lt;p&gt;使用套件mime-types，可以從想要下載的資料的檔案名中取得MIME type，從而設置到HTTP Response的Content-Type header裡．&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mimeTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;mime-types&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;test.csv&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mimetype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mimeTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mimetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//text/csv&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-
-&lt;p&gt;最後將以上結合起來，完整的代碼如下:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/HoMuChen/4b5d8ddd98d1cd9547d2315e0f51d3e1.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;跑起來之後，就能透過GET http://localhost:3000/share/filename.csv這樣之類的網址來下載檔案囉～～&lt;/p&gt;
-
-&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://nodejs.org/api/stream.html&quot;&gt;Node.js documentation: Stream&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/@azure/storage-file-share&quot;&gt;@azure/storage-file-share&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="express" /><category term="node.js" /><category term="azure" /><category term="stream" /><category term="http" /><category term="api" /><summary type="html">這篇文章將會示範如何使用Node.js來下載Azure Blob Storage上的檔案，並且使用Stream的方式， 將檔案儲存到本地端，或是當你作為一個Server(此篇使用express.js)時，回傳給你的client，並且根據檔案名稱來設置正確的Content-Type．</summary></entry></feed>
+然而結合了心理學，希望能有更準確，更貼近現實的模型來描述各種經濟決策。&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">繼上篇[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)談完部分的內容之後， 今天在這把剩下講完吧～</summary></entry></feed>
