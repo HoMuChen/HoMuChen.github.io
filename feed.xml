@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-14T14:15:15+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">RESTful API: How to design paths and identify resources</title><link href="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/" rel="alternate" type="text/html" title="RESTful API: How to design paths and identify resources" /><published>2021-10-14T13:20:00+08:00</published><updated>2021-10-14T13:20:00+08:00</updated><id>https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/">&lt;p&gt;繼上篇文章&lt;a href=&quot;/posts/restful-api-introduction/&quot;&gt;&lt;strong&gt;RESTful API簡介: 什麼是RESTful? 以及為何需要它?&lt;/strong&gt;&lt;/a&gt;後，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-16T23:01:38+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2021-10-16T23:00:00+08:00</published><updated>2021-10-16T23:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/">&lt;p&gt;在&lt;a href=&quot;/posts/message-queue-advantages-use-cases&quot;&gt;上篇文章&lt;/a&gt;中，看完了為何要使用message queue之後，
+今天要討論兩類message broker的差異，分別是&lt;strong&gt;memory based&lt;/strong&gt;及&lt;strong&gt;log based&lt;/strong&gt;，
+memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的，
+就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法，
+然後再討論兩種broker的內部設計的不同，最後就可以比較在各種特性上，兩者的不同。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg&quot; alt=&quot;rabbitmq vs kafka&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;基本特性&quot;&gt;基本特性&lt;/h1&gt;
+&lt;p&gt;Message borker最基本的操作就是produce跟consume，一個產生message，一個消耗message，
+此時我們可以問的幾個問題如下:&lt;/p&gt;
+
+&lt;h2 id=&quot;multiple-consumers&quot;&gt;Multiple consumers&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;當有多個consumer時，每個message會被處理多次嗎？還是只會被其中一個consumer處理到一次？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;load-balancing&quot;&gt;Load balancing&lt;/h3&gt;
+&lt;p&gt;每個message只會被其中&lt;strong&gt;一個&lt;/strong&gt;consumer處理到，所以你可以指派任意多個consumer去consume一個topic，
+當你想要並行處理你的工作時，這會非常有用。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-2-1.jpg&quot; alt=&quot;load balancing&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fan-out&quot;&gt;Fan-out&lt;/h3&gt;
+&lt;p&gt;每個message會被送到&lt;strong&gt;所有&lt;/strong&gt;的consumer去處理，像是broadcast，可以用在當你的message需要到各個不同的系統時，
+比如說一筆交易的資料，需要被送到data warehouse保存、送到BI分析給老闆看、送到使用者的系統來更新他的交易資訊頁面。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-3-1.jpg&quot; alt=&quot;fan-out&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;persistence&quot;&gt;Persistence&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;當broker掛掉時，已經發送過來的messsage會消失嗎？還是等到broker重啟之後，會再重新發送？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;就是顧名思義，producer的每個message，是否會確保送到consumer那邊，broker掛掉，message還會不會在。
+不過consumer有沒有處理好這個message又是另一回事了(見下段Acknowledgements)。&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;當consumer工作到一半掛掉時，如何確保每個message已經被完整地處理好了呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;因為consumer也可能隨時會掛掉，可能在收到訊息之前，或收到訊息但工作到一半時，
+broker為了確保訊息有好好地到達，會使用acknowledgement，
+acknowledgement就是必須由consumer告訴broker，他已經收到message，broker可以將他從queue中移除了，
+至於ack的時機不同會導致訊息被處理的次數的保證的不同。&lt;/p&gt;
+
+&lt;h3 id=&quot;at-most-once&quot;&gt;At most once&lt;/h3&gt;
+&lt;p&gt;先ack，再處理訊息，如果在處理到一半時掛掉，這個訊息就沒被完整處理到了，
+因為已經ack了，broker已經把訊息從queue中移開，不會再發送這個訊息出來，
+所以最差的情況就是沒被處理到，正常的情況就是處理一次，而且最多一次，此為&lt;strong&gt;at most once&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;//consumer first ack the message and the process
+function (message) {
+  queue.ack(message)
+  essage.ack()
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;at-least-once&quot;&gt;At least once&lt;/h3&gt;
+&lt;p&gt;想反地，先處理訊息再ack，如果在處理到一半時掛掉，
+因為還沒ack，broker會再發送這個訊息出來，
+所以最差的情況就是訊息被處理到多次，正常的情況就是處理一次，而且至少一次，此為&lt;strong&gt;at least once&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;//consumer processes the message first and then ack it
+function (message) {
+  process(message)
+  message.ack()
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;internal-design&quot;&gt;Internal Design&lt;/h1&gt;
+&lt;p&gt;現在就來看看message system的內部設計，如此一來就可以知道各個系統的特性以及該如何回答上面的問題，&lt;/p&gt;
+
+&lt;h2 id=&quot;memory-based&quot;&gt;Memory based&lt;/h2&gt;
+&lt;p&gt;這類系統顧名思義，主要使用memory作為message存放的地方，當consumer ack了某個信息後，
+就把它刪掉了，完全不留痕跡。當然很多系統也可以透過設置，決定要不要將信息寫到硬碟上，
+不過主要是用來做recovery的，確保broker本身掛掉時，message不會丟失，
+當確認了message已經成功抵達了它要到的地方後，一樣會把它刪掉。&lt;/p&gt;
+
+&lt;p&gt;此類系統著重的是message從producer到consumer的&lt;strong&gt;過程&lt;/strong&gt;，而不是留下一個永久的&lt;strong&gt;狀態或結果&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;而信息的傳送是由broker主動&lt;strong&gt;push&lt;/strong&gt;給consumer的。&lt;/p&gt;
+
+&lt;h2 id=&quot;log-based&quot;&gt;Log based&lt;/h2&gt;
+&lt;p&gt;而log based的系統則是相反，只有要message進來，就都寫到硬碟上，是一個append only log，
+當consumer要消耗信息時，就是讀取檔案上的資料，讀到盡頭了就等通知，
+等有新的資料繼續被append到檔案中，有點像是Unix tool &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -f&lt;/code&gt; 的感覺。&lt;/p&gt;
+
+&lt;p&gt;此時，信息的傳送consumer去向broker&lt;strong&gt;pull&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-4.jpg&quot; alt=&quot;log based&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;為了不讓寫入的速度被限制一個硬碟上，需要將一個topic的log partitioned，
+每個partition由一台機器負責，可以獨立地讀寫。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-5.jpg&quot; alt=&quot;log partition&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;comparison-between-rabbitmq-and-kafka&quot;&gt;Comparison between RabbitMQ and Kafka&lt;/h1&gt;
+&lt;p&gt;終於可以來看看兩者的比較拉～ 首先奉上一個表格，再來一點一點詳細討論！&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;特性&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;RabbitMQ&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Kafka&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Load Balancing&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Yes, but limited&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Fan-out&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Yes, through exchabge binding&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Yes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Persistence&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Yes, through configuration&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Yes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Inorder delivery&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Yes, conditionally&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;yes, per partition&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;load-balancing-1&quot;&gt;Load Balancing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Memory based: 自然地support了load balancing，當有message時，
+broker輪流地向跟他有建立連結的consumer推送信息，就達成了load balancing的效果，
+越多consumer，就可以平行處理越多的工作。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Log based: 無法天生支援load balancing，因為每個consumer彼此是各自獨立的，分別從頭、
+或從某個地方開始讀取log檔案，所以想達成load balancing，是透過partition的方法:&lt;/p&gt;
+
+    &lt;p&gt;假設我現在有一個topic，並且將它partition成三份，此時就可以assign三個consumer給他，
+看起來就像是這一個topic的message被分給三個consumer，而實際上是每一個partition對應到一個consumer，
+所以！&lt;strong&gt;可以同時平行處理這個topic的consumer的數量，也就會是partition的數量&lt;/strong&gt;。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fan-out-1&quot;&gt;Fan-out&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Memory based: 需要透過額外的設計才能達成，RabbitMQ implememt的AMQP協議，
+exchange binding可以實現pub-sub的patter。&lt;/li&gt;
+  &lt;li&gt;Log based: 自然地support fan-out，每個consumer對log檔案想讀哪就讀哪，想重複讀幾次就讀幾次。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;persistence-1&quot;&gt;Persistence&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Memory based: 透過設置，可以同步將message寫入硬碟，確保不會丟失，不過就只保存到當consumer成功消耗之前。&lt;/li&gt;
+  &lt;li&gt;Log based: 如前面所述，每個message都會寫入硬碟，除非你說要刪掉它，不然就會一直在。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;inorder-delivery&quot;&gt;Inorder delivery&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Memory based: 無法保證message一個一個按照順序的被處理，除非每一個topic只有一個consumer。&lt;/li&gt;
+  &lt;li&gt;Log based: 每個partition上的message，一定是被consumer做一個sequential read的動作，
+所以信息一定會被按照順序讀取，但不同partition之間就沒有順序的保證，他們基本上是獨立的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;use-cases&quot;&gt;Use cases&lt;/h1&gt;
+&lt;p&gt;最後就來看看在哪些場景比較適合使用哪一種產品吧！&lt;/p&gt;
+
+&lt;h2 id=&quot;是否需要被保存下來&quot;&gt;是否需要被保存下來?&lt;/h2&gt;
+&lt;p&gt;如果你想要message被保存下來，那就用log based的messaging system，保存下來有哪些好處呢？&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;可以肆無忌憚地去consume message，可以去嘗試、做實驗，不用怕message會不見，&lt;/li&gt;
+  &lt;li&gt;各種event sourcing的好處，有興趣的可以google它看看～&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;工作昂不昂貴&quot;&gt;工作昂不昂貴?&lt;/h2&gt;
+&lt;p&gt;如果處理一個message的工作量是很大的，需要耗費很多時間才能做完，你可以比較不會想用log based的產品，為什麼呢?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;它無法使用大量的consumer來平行地處理所有的工作，因為&lt;strong&gt;可以平行工作的consumer的數量受限於partition的數量&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;在一個partition裡，只要有個message需要耗費很多的時間，就會造成塞車，也就是&lt;strong&gt;head of line blocking&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;順序重要嗎&quot;&gt;順序重要嗎?&lt;/h2&gt;
+&lt;p&gt;有些類型的message彼此是獨立不相干的，被處理順序是如何並不重要，就沒一定要使用log based的產品，
+但當你需要保留message的順序時，唯有log based的messaging system可以給你保證，不過只限定於同個partition。&lt;/p&gt;
+
+&lt;p&gt;有哪些例子是順序重要的呢? 比如說對一個使用者的帳戶餘額做加減乘除的運算，順序不同結果就不同，
+但你可以使用user id作為partition key，則在每一個partition裡保持對的順序就好，不同的partition間的順序就不重要了。&lt;/p&gt;
+
+&lt;p&gt;感謝你閱讀到這邊～ 希望以上的內容對你有一丁點的幫助，掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="message queue" /><category term="kafka" /><summary type="html">在上篇文章中，看完了為何要使用message queue之後， 今天要討論兩類message broker的差異，分別是memory based及log based， memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的， 就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法， 然後再討論兩種broker的內部設計的不同，最後就可以比較在各種特性上，兩者的不同。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">RESTful API: How to design paths and identify resources</title><link href="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/" rel="alternate" type="text/html" title="RESTful API: How to design paths and identify resources" /><published>2021-10-14T13:20:00+08:00</published><updated>2021-10-14T13:20:00+08:00</updated><id>https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/">&lt;p&gt;繼上篇文章&lt;a href=&quot;/posts/restful-api-introduction/&quot;&gt;&lt;strong&gt;RESTful API簡介: 什麼是RESTful? 以及為何需要它?&lt;/strong&gt;&lt;/a&gt;後，
 我們知道了RESTful API是&lt;strong&gt;resource based&lt;/strong&gt;的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。&lt;/p&gt;
 
 &lt;h1 id=&quot;resource-based&quot;&gt;Resource based&lt;/h1&gt;
@@ -1370,96 +1572,4 @@ server response了&lt;code class=&quot;language-plaintext highlighter-rouge&quot
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 
 &lt;p&gt;要使用適當的status code，避免溝通上的誤會，因為可能有懶惰的client看到status code就下了某些判斷，
-所以別特立獨行，給你的API的使用者驚喜🎉🙀&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？</summary></entry><entry><title type="html">[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)</title><link href="https://homuchen.com/posts/book-note-dollars-and-sense/" rel="alternate" type="text/html" title="[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (下)" /><published>2021-08-21T23:40:00+08:00</published><updated>2021-08-21T23:40:00+08:00</updated><id>https://homuchen.com/posts/book-note-dollars-and-sense</id><content type="html" xml:base="https://homuchen.com/posts/book-note-dollars-and-sense/">&lt;p&gt;繼上篇&lt;a href=&quot;/posts/book-note-money-psychology&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;談完部分的內容之後，
-今天在這把剩下講完吧～&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/dollars-and-sense-1.jpg&quot; alt=&quot;book: Dollards and Sense&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;大綱&quot;&gt;大綱&lt;/h1&gt;
-
-&lt;p&gt;以下為這篇文章的大綱&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;定錨效應&lt;/li&gt;
-  &lt;li&gt;稟賦效應&lt;/li&gt;
-  &lt;li&gt;期望公平&lt;/li&gt;
-  &lt;li&gt;太在意價格&lt;/li&gt;
-  &lt;li&gt;總結及我如何利用以上現象來設計自己&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;定錨效應&quot;&gt;定錨效應&lt;/h1&gt;
-
-&lt;p&gt;我們首先先來看一個實驗，請一群受試者回答一個問題: 非洲國家佔聯合國國家的百分之幾?大部分人對這個答案的數字都沒什麼概念，
-但這實驗讓受試者在回答之前，先轉一個被設計過轉盤，這轉盤只會出現25及65這兩個數字，結果發現轉到25的那群人，回答的答案平均是;
-而另一組則是!&lt;/p&gt;
-
-&lt;p&gt;沒有任何原因，我們就是會受到環境影響，會被最一開始的資訊影響，這就是定錨效應，哪怕他毫無意義，毫無邏輯。&lt;/p&gt;
-
-&lt;p&gt;而這些資訊從哪裡來呢？除了在環境中不小心跑進來的之外，主要還有其他兩種，自己過去的經驗以及跟著大眾的腳步。&lt;/p&gt;
-
-&lt;h2 id=&quot;自我因循&quot;&gt;自我因循&lt;/h2&gt;
-&lt;p&gt;問你一瓶可樂多少錢？大概30塊，為什麼定這個價呢～其實也沒有什麼理由，就是因為過去我們看到的價格就都大概是這樣，
-人們會相信自己也是天經地義的事，只是有時自大就是這麼來的。&lt;/p&gt;
-
-&lt;h2 id=&quot;從眾&quot;&gt;從眾&lt;/h2&gt;
-&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010757786&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;影響力&lt;/strong&gt;&lt;/a&gt;一書裡，說明了許多我們人類做出決策、行為時，會受到許許多多各種因素的影響，
-而其中一個就是從眾，尤其是當我們對一件事物越不了解，所知的資訊越少時，就更容易跟著身邊大眾的行為一起行動，
-畢竟我們人是社會性的動物，一般來說，我們不希望被說成是特立獨行、不易合作、自私自利，我們會希望融入群體之中。&lt;/p&gt;
-
-&lt;h1 id=&quot;稟賦效應&quot;&gt;稟賦效應&lt;/h1&gt;
-&lt;p&gt;我們會對於我們擁有的東西，賦予它更高的價值，這就是稟賦效應，可能是我們對它了解的更多，知道它的價值;
-或者我們對它投注的心力越多，就更加愛它．&lt;/p&gt;
-
-&lt;p&gt;所以舉凡像是免費試用、體驗，拍得讓你身歷其境的廣告，都是讓你有種擁有那事物的錯覺，好像你願意掏出更多的錢．甚至是競標，
-當你一直是最高價的暫時得標主時，你腦中可已經有了各種拿到東西後的幻想，在最後一刻被別人出了更高價時，你可能就腦衝再給它加價下去。&lt;/p&gt;
-
-&lt;p&gt;而從另一面來看，因為我們我們所有的事物估值較高，所以比起獲得，我們也會盡量避免失去我們已經擁有的東西，即便它們客觀上的價值是一樣的．&lt;/p&gt;
-
-&lt;h2 id=&quot;損失趨避&quot;&gt;損失趨避&lt;/h2&gt;
-&lt;p&gt;讓我們來玩個遊戲，擲一面硬幣，正面的話你可以獲得十萬塊，反面則需要付出十萬塊，你會想參加嗎～&lt;/p&gt;
-
-&lt;p&gt;我想大部分的人都不會參加，因為失去十萬塊的痛苦大於得到十萬塊，使得原本從理性經濟人眼裡看來參不參加都一樣的事產生了變化，
-所以就會有人股票賺一點就獲利了結，而套牢很久卻都不賣，有獲利怕又還回去所以趕快賣掉，而虧損只要不賣，就不算損失，一張不賣！奇蹟自來！&lt;/p&gt;
-
-&lt;h1 id=&quot;期望公平&quot;&gt;期望公平&lt;/h1&gt;
-&lt;p&gt;我們人類喜歡公平甚於自利，先來看看以下這個實驗吧～ 實驗中請來兩個人，並給他們一筆錢要他們分配(比如說100元)，
-其中一個人可以決定要如何分配，而另一個人可以選擇接不接受，但要是不接受的話，大家都沒錢拿～當提議方提出50:50的時候，
-沒有問題，很公平，但當提議方提出90:10的時候，另一個人卻會選擇拒絕，就算拿到10元比起什麼都沒有還要好，但他還是拒絕了!&lt;/p&gt;
-
-&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010793984&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;社交天性&lt;/strong&gt;&lt;/a&gt;一書裡有說到，
-社會獎賞跟生理獎賞對我們的大腦來說，其實沒有太大的區別！我們渴望著兩者，也有類似的神經迴路，
-社會性獎賞就是比如說上面提到的公平、信任、被認可、被讚美等等，而生理獎賞就像是吃飽喝足、得到十萬塊，
-因此我們會選擇公平而不是10塊錢，因為對我們人類來說，公平也是有某種程度的價值的。&lt;/p&gt;
-
-&lt;p&gt;另外還有哪些地方有這種重視公平甚於實際效用的出現呢？比如說雨天雨傘漲價，讓你寧願淋雨，也不願花一個錢來獲得遮風擋雨的效用;
-Uber在颱風天漲價，也可能讓你不叫車！因為他們不公平！趁火打劫，剝削我們！儘管這些花費會帶來好的實際效用。&lt;/p&gt;
-
-&lt;h1 id=&quot;太在意價格&quot;&gt;太在意價格&lt;/h1&gt;
-
-&lt;p&gt;當我們對一項事物了解的越少，或者可以得到的資訊無法量測時，我們能仰賴的資訊就可能只剩下價格，
-所以有時會有&lt;strong&gt;越貴就是越好&lt;/strong&gt;的迷思，一晚只要500的五星大飯店你敢住嗎？一隻大龍蝦只要500你敢吃嗎～&lt;/p&gt;
-
-&lt;p&gt;我們喜歡確定可量測的事物，面對太未知或負責難以衡量的情況時，會去找個相對簡單的指標來做判斷，
-像是我們的人生好難好複雜，不知道要做什麼該追求什麼，所以有時就陷入賺越多錢越好的情況中，變成太過於只追逐金錢。&lt;/p&gt;
-
-&lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
-
-&lt;p&gt;看完這本書後，知道了如此多人類行為可能會不理性之處，唯有先察覺到，才有辦法做改進，又或者是不需要改進，
-只是可以利用這些心理因素，來讓我們花費所換得的快樂可以最大化。&lt;/p&gt;
-
-&lt;p&gt;看完這本書之後的我，如果未來有出去旅行的機會，可能會更多地選擇將行程的花費預先的支付掉，如此一來在旅行當下，
-你可以不用感到付錢這個動作的痛苦，將心思好好地集中在這躺旅途的體驗上，像是購買度假村的吃到飽方案，
-你就不會在游完泳之後，是否要在海灘邊點個點心飲料間猶豫;也不會在晚餐時，怕太貴而不敢開瓶紅酒來喝，
-雖然吃到飽方案整體下來的花費可能會更多，但卻能換來更好的旅遊體驗。&lt;/p&gt;
-
-&lt;p&gt;相反地，在平時，也許你會想體會到更多的付錢之痛，這樣你才不會多做了一些無謂的消費，所以我在每次要付錢時，不管是用現金、
-信用卡還是行動支付，當下就會拿起手機來記帳，除了放大了花錢的感受，也讓花錢變得更加困難一些。(我如何記帳的可以參考我先前的文章: &lt;a href=&quot;/posts/google-sheet-how-to-do-bookkeeping/&quot;&gt;&lt;strong&gt;[Google Sheet]我如何利用Google表單來記帳&lt;/strong&gt;&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;另外如果你本來想買什麼沒用的小廢物，如果忍下來的話，可以把省下來的錢記到另一個帳戶中，
-可能是旅行呀、買房，或其他你的夢想上，讓自己省錢的習慣有更多的動力，
-帶來一些立即的滿足回饋，在&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot;&gt;&lt;strong&gt;原子習慣&lt;/strong&gt;&lt;/a&gt;中說到，想要改掉一個習慣，
-就要讓它難以去做，想要培養一個好習慣，就要讓這個習慣有獎賞。&lt;/p&gt;
-
-&lt;p&gt;這類研究，是屬於一個叫做行為經濟學的領域，與經濟學不同的是，在經濟學裡，
-假設了每個參與其中的人都是理性的，像機器一樣，一定會符合自身的最大利益來做決策，
-然而結合了心理學，希望能有更準確，更貼近現實的模型來描述各種經濟決策。&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="finance" /><category term="psychology" /><summary type="html">繼上篇[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)談完部分的內容之後， 今天在這把剩下講完吧～</summary></entry></feed>
+所以別特立獨行，給你的API的使用者驚喜🎉🙀&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？</summary></entry></feed>
