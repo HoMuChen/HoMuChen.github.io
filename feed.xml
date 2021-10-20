@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-19T21:29:20+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2021-10-16T23:00:00+08:00</published><updated>2021-10-16T23:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/">&lt;p&gt;在上篇文章&lt;a href=&quot;/posts/message-queue-advantages-use-cases&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;什麼是message queue? 優點及使用場景&lt;/strong&gt;&lt;/a&gt;中，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-20T19:12:47+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">如何不用做額外的工作，就使你的收入倍增</title><link href="https://homuchen.com/posts/double-your-money-without-any-extra-work/" rel="alternate" type="text/html" title="如何不用做額外的工作，就使你的收入倍增" /><published>2021-10-20T19:00:00+08:00</published><updated>2021-10-20T19:00:00+08:00</updated><id>https://homuchen.com/posts/double-your-money-without-any-extra-work</id><content type="html" xml:base="https://homuchen.com/posts/double-your-money-without-any-extra-work/">&lt;p&gt;有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多，
+而是如何&lt;strong&gt;花更少的錢，來獲得一樣的體驗&lt;/strong&gt;，好讓你金錢的實際價值倍增～&lt;/p&gt;
+
+&lt;p&gt;這是我在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;這本書裡看到的想法，
+作者稱之為自由倍增因子，也就是你能藉由操控這些事，來讓金錢的實際價值倍增，
+他們就是&lt;strong&gt;做什麼&lt;/strong&gt;(what)、&lt;strong&gt;在哪做&lt;/strong&gt;(where)、&lt;strong&gt;何時做&lt;/strong&gt;(when)、&lt;strong&gt;跟誰做&lt;/strong&gt;(whom)。&lt;/p&gt;
+
+&lt;h1 id=&quot;以認養代替購買-以體驗取代擁有&quot;&gt;&lt;del&gt;以認養代替購買&lt;/del&gt; 以體驗取代擁有&lt;/h1&gt;
+&lt;p&gt;想要住在山中的滑雪小屋，每天滑雪嗎？還是想要在某個海島別墅，每天享受日光浴及海灘，
+開著帥氣跑車，享受路人稱羨的眼光嗎？你可能會說，你需要變成億萬富翁才能過上這樣的生活。&lt;/p&gt;
+
+&lt;p&gt;不！你並不需要！你想要的是住在滑雪小屋每天滑雪的生活，而不是擁有一間小屋;
+你想要的是海島風光、沙灘、比基尼，而不是買下一座小島; 你想要的開著跑車耍帥的虛榮心，而不是擁有一台跑車本身，
+財力雄厚與活得像百萬富翁是完全不同的兩件事。&lt;/p&gt;
+
+&lt;h1 id=&quot;地理套利&quot;&gt;地理套利&lt;/h1&gt;
+&lt;p&gt;也就是利用匯率，在消費指數低的國家進行消費，一樣的金錢就可以擁有了更大的購買力！&lt;/p&gt;
+
+&lt;p&gt;當你可以自由地決定你要在哪裡生活時，就可以獲得這項好處，所以脫離在辦公室裡工作的社會框架，
+是作者在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;裡所提倡的，
+不過你是創業者還是受僱於人的打工仔都一樣～&lt;/p&gt;
+
+&lt;p&gt;有時就算不能出國也一樣可以得到一些好處，比如說你最近想學衝浪，那你就可以直接住在宜蘭烏石港、台東東河附近，
+每天，或隔幾天想衝就衝，不需要再耗費通勤的時間跟金錢！&lt;/p&gt;
+
+&lt;h1 id=&quot;時間上的自由&quot;&gt;時間上的自由&lt;/h1&gt;
+&lt;p&gt;當你不用週一到週五，朝九晚五地待在辦公室時，你就可以買週二到週四的便宜機票，
+或是選擇在平日的時候參加任何活動，因為通常假日的收費都比較貴。&lt;/p&gt;
+
+&lt;p&gt;能把工作時間挪到六日，就算工時一樣，也可以相對地為你帶來額外的收入！&lt;/p&gt;
+
+&lt;h1 id=&quot;避免付錢之痛及期待&quot;&gt;避免付錢之痛及期待&lt;/h1&gt;
+&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《金錢心理學》&lt;/strong&gt;&lt;/a&gt;這本書裡說到，
+在體驗消費的當下時，如果要你付錢，你就會感到痛苦，也就沒那麼快樂了～&lt;/p&gt;
+
+&lt;p&gt;所以可以選擇預付的方式，提前預先支付掉活動的費用，讓你在體驗的當下，
+專心地享受美好的部分，除此之外，預訂好活動到活動發生的這段期間，還可以讓你每天都有期待的感覺，
+使得這個活動帶來的效益更多！&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;透過&lt;strong&gt;做什麼&lt;/strong&gt;(what)、&lt;strong&gt;在哪做&lt;/strong&gt;(where)、&lt;strong&gt;何時做&lt;/strong&gt;(when)、&lt;strong&gt;跟誰做&lt;/strong&gt;(whom)，能夠讓你相對變得富有，
+感謝大家的閱讀，在這邊聽我練蕭威，如果你還有什麼讓財富倍增的好方法，歡迎在下面留言跟大家分享唷！ 掰掰～ 👋&lt;/p&gt;
+
+&lt;h1 id=&quot;延伸閱讀&quot;&gt;延伸閱讀&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="finance" /><category term="life style" /><summary type="html">有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多， 而是如何花更少的錢，來獲得一樣的體驗，好讓你金錢的實際價值倍增～</summary></entry><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2021-10-16T23:00:00+08:00</published><updated>2021-10-16T23:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/">&lt;p&gt;在上篇文章&lt;a href=&quot;/posts/message-queue-advantages-use-cases&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;什麼是message queue? 優點及使用場景&lt;/strong&gt;&lt;/a&gt;中，
 看完了為何要使用message queue之後，今天要討論兩類message broker的差異，分別是&lt;strong&gt;memory based&lt;/strong&gt;及&lt;strong&gt;log based&lt;/strong&gt;，
 memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的，
 就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法，
@@ -1459,121 +1506,4 @@ server response了&lt;code class=&quot;language-plaintext highlighter-rouge&quot
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y%&lt;/code&gt;: 複製成對括號內的字&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;稍微簡單地紀錄一下及分享，希望能有幫助～～ 掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="vim" /><category term="linux" /><summary type="html">作為一個軟體工程師，我們花在文字編輯器上的時間一定佔了一定的比例， 更精通熟悉我們使用的編輯器的話，開發的效率可以提升很多，今天就來分享一些我蠻常會用到的vim的功能～</summary></entry><entry><title type="html">Introduction to HTTP Response Status Codes: How to use them correctly?</title><link href="https://homuchen.com/posts/http-response-status-codes-how-to-use/" rel="alternate" type="text/html" title="Introduction to HTTP Response Status Codes: How to use them correctly?" /><published>2021-08-22T22:00:00+08:00</published><updated>2021-08-22T22:00:00+08:00</updated><id>https://homuchen.com/posts/http-response--status-codes-how-to-use</id><content type="html" xml:base="https://homuchen.com/posts/http-response-status-codes-how-to-use/">&lt;p&gt;這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？&lt;/p&gt;
-
-&lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:
-&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;client-server-model&quot;&gt;Client Server Model&lt;/h1&gt;
-
-&lt;p&gt;HTTP是一個Client-Server的架構，客戶端發送一個request，而伺服器端接收到這個request，可能做了些事後，
-必須給個回應，不然客戶端會不知所措，到底你有沒有收到我的請求呢？我的請求是合理的嗎？那最後的結果是成功還是失敗，
-不管怎樣，總要給個回應吧。&lt;/p&gt;
-
-&lt;p&gt;所以在HTTP Response的格式中，第一個就是Status Code，用來簡短地表示請求處理的情況，在大部分常見的簡單請求中，
-可能可以只看這個Status code，就知道server處理的情況是如何。&lt;/p&gt;
-
-&lt;p&gt;如果還對HTTP response message的格式還不了解的，可以參考先前的文章: &lt;a href=&quot;/posts/http-introduction-telnet-nc-curl/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;HTTP簡介&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;status-codes&quot;&gt;Status Codes&lt;/h1&gt;
-
-&lt;p&gt;大致可以將code分為四類，分別以2、3、4及5開頭。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2開頭: 代表請求成功。&lt;/li&gt;
-  &lt;li&gt;3開頭: 需要client在做其他動作，比如說去GET別的URL，或只是content沒變，從cache裡拿就好。&lt;/li&gt;
-  &lt;li&gt;4開頭: client request有問題，syntax有問題或是server看不懂，少了某些參數之類的。&lt;/li&gt;
-  &lt;li&gt;5開頭: server這邊出了一些問題拉～&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Status codes&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2xx&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Good!&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3xx&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Redirection&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4xx&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Client你的錯&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5xx&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Server我出錯惹&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;接下來我們就來看看一些常見的status code吧！&lt;/p&gt;
-
-&lt;h2 id=&quot;2xx&quot;&gt;2xx&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;200 OK&lt;/strong&gt;: OK就是OK! 如果你不知道用什麼，但你要表達請求成功了，那就用200吧～😂&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;201 Created&lt;/strong&gt;: 當request是&lt;strong&gt;PUT&lt;/strong&gt;，要求創建資源時，顧名思義，可以使用201代表資源成功被創建，
-可以在response body裡return整個資源，可以在header Location上，加上新創建的資源的位置。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;202 Accepted&lt;/strong&gt;: 代表你成功接受了請求，然後會asynchronously地處理。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;204 No content&lt;/strong&gt;: 沒有response body，會用到情境像是使用&lt;strong&gt;POST&lt;/strong&gt;或&lt;strong&gt;PATCH&lt;/strong&gt;做update時，
-成功的話，server沒有額外的資訊需要return給client知道。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3xx&quot;&gt;3xx&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;301 Moved Permanently&lt;/strong&gt;: 要求的資源已經搬家了～資源新的位置一般放在Location header中。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;302 Redirect&lt;/strong&gt;: 跟301一樣，會在Location中放上新的URL，跟301不同的是，301是永久性的，就是說舊的URL他之後都不會用了，
-希望用新網頁來取代舊的，而302是暫時的，可能這次有個活動，暫時將頁面導到另個地方，之後有別的活動，又換到新的地方，
-但他還是client繼續使用原本的URL。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4xx&quot;&gt;4xx&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;400 Bad request&lt;/strong&gt;: 請求的內容有誤，或是server看不懂。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;401 Unauthorized&lt;/strong&gt;: Authenticate失敗，例如帳號密碼打錯呀，Token不對呀。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;403 Forbidden&lt;/strong&gt;: User有驗證成功，但他沒有足夠的權限來做這個請求。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;404 Not found&lt;/strong&gt;: 請求的資源不存在！&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;405 Method Not Allowed&lt;/strong&gt;: 對於請求的資源，不支援所要求的method。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5xx&quot;&gt;5xx&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;500 Internal Server Error&lt;/strong&gt;: Server掛掉拉～&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-
-&lt;p&gt;要使用適當的status code，避免溝通上的誤會，因為可能有懶惰的client看到status code就下了某些判斷，
-所以別特立獨行，給你的API的使用者驚喜🎉🙀&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">這篇文章會介紹在HTTP協議中，Response status code的作用，有哪些codes以及該如何去使用他們？</summary></entry></feed>
+&lt;p&gt;稍微簡單地紀錄一下及分享，希望能有幫助～～ 掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="vim" /><category term="linux" /><summary type="html">作為一個軟體工程師，我們花在文字編輯器上的時間一定佔了一定的比例， 更精通熟悉我們使用的編輯器的話，開發的效率可以提升很多，今天就來分享一些我蠻常會用到的vim的功能～</summary></entry></feed>
