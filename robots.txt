@@ -1,5 +1,10 @@
 User-agent: *
 
 Disallow: /norobots/
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /archives/
+Disallow: /page*/$
+Disallow: /assets/css/
 
 Sitemap: https://homuchen.com/sitemap.xml
