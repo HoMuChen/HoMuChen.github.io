@@ -6,5 +6,6 @@ Disallow: /categories/
 Disallow: /archives/
 Disallow: /page*/$
 Disallow: /assets/css/
+Disallow: /assets/js/data/
 
 Sitemap: https://homuchen.com/sitemap.xml
