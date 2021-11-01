@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-10-30T10:39:49+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 用對能量，你就不會累</title><link href="https://homuchen.com/posts/book-note-the-power-of-full-engagement/" rel="alternate" type="text/html" title="[讀書筆記] 用對能量，你就不會累" /><published>2021-10-30T10:30:00+08:00</published><updated>2021-10-30T10:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-power-of-full-engagement</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-power-of-full-engagement/">&lt;p&gt;原文書名為&lt;a href=&quot;https://bookzone.cwgv.com.tw/books/details/BBP291&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《The Power of Full Engagement》&lt;/strong&gt;&lt;/a&gt;，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-01T22:02:38+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">104人力網站爬蟲: 如何只用shell script來抓取資料</title><link href="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/" rel="alternate" type="text/html" title="104人力網站爬蟲: 如何只用shell script來抓取資料" /><published>2021-11-01T20:00:00+08:00</published><updated>2021-11-01T20:00:00+08:00</updated><id>https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq</id><content type="html" xml:base="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/">&lt;p&gt;想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩，
+linux command line tool就有許多好用的工具，
+今天以104人力網站的為例，示範如何只使用shell script，就可以開始抓取資料!&lt;/p&gt;
+
+&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;這邊假設大家已經有網路爬蟲的基本概念了，一般大家寫爬蟲最多人用的就是python，
+流程就是到目標網站上操作，並且一邊觀察chrome dev tool，將http requests用python的requests套件重現，
+之後將response回來的資料做parse，最後存起來，可能是存到檔案或是資料庫裡。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/104-1.jpg&quot; alt=&quot;爬蟲流程: 用command line tool來實現&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;前面三個步驟是觀察，後面要進行動作，共有三個主要的動作，
+分別為: 發起HTTP請求、處理HTTP回應的資料，將處理好的資料存起來。&lt;/p&gt;
+
+&lt;p&gt;而這三個動作，分別都有好用的command line tool可以直接使用，分別為:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Make HTTP requests: &lt;strong&gt;curl&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Parse JSON response data: &lt;strong&gt;jq&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Save data: &lt;strong&gt;redirect »&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;curl&quot;&gt;curl&lt;/h1&gt;
+&lt;p&gt;curl是個HTTP client，相當於python的requests套件，想要在104上搜尋&lt;strong&gt;軟體工程師&lt;/strong&gt;&lt;strong&gt;第1頁&lt;/strong&gt;的結果，
+可以使用下列的指令，有兩個querystring的參數: keyword及page。&lt;/p&gt;
+
+&lt;p&gt;其他還有許多篩選條件像是地區，年資，有興趣的去104網站自己按按就知道該使用哪些參數囉，這裡就不再多做描述。&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Referer: https://www.104.com.tw/jobs/search'&lt;/span&gt; https://www.104.com.tw/jobs/search/list?keyword&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;軟體工程師&amp;amp;page&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;對HTTP message或curl的使用還不熟的，可以參考我之前寫過的文章:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/linux-http-client-tool-curl-usage/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;A Linux HTTP client tool — curl的介紹及用法&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;jq-1&quot;&gt;jq &lt;a href=&quot;#1&quot;&gt;&lt;strong&gt;[1]&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;成功取得回應後，可以看到terminal上噴出一堆密密麻麻的資訊，難以去閱讀，今天為例的104 API，
+回傳的是application/json的資料格式，可以將這坨資料pipe到jq&lt;a href=&quot;#1&quot;&gt;&lt;strong&gt;[1]&lt;/strong&gt;&lt;/a&gt;指令上，他可以幫我們parse JSON格式的資料，
+也可以做其他的動作，包括選擇我們要的欄位、map、filter、transform等等，詳細的使用方法可以到官網看他們的文件。&lt;/p&gt;
+
+&lt;p&gt;104的api回傳JSON格式的資料很方便，但很多網站沒有或是找不到這種API可以使用，就必須處理html的解析，
+我有找到一個工具&lt;strong&gt;pup&lt;/strong&gt;&lt;a href=&quot;#2&quot;&gt;&lt;strong&gt;[2]&lt;/strong&gt;&lt;/a&gt;，看起來也蠻好用的，如果你知道其他更好用的方法，也歡迎留言跟大家分享唷～&lt;/p&gt;
+
+&lt;h1 id=&quot;redirect&quot;&gt;redirect&lt;/h1&gt;
+&lt;p&gt;處理好回應後，最後將資料導到file裡存起來就好囉~ 如果寫到同一份檔案當中，記得使用&lt;strong&gt;»&lt;/strong&gt;，
+才不會把先前的資料給蓋掉唷。&lt;/p&gt;
+
+&lt;h1 id=&quot;完整程式碼&quot;&gt;完整程式碼&lt;/h1&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;  Usage:&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;      sh ./&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;basename&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;keyword &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;page&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;  Example:&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;      sh ./&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;basename&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; 軟體工程師 1&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;      sh ./&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;basename&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; 專案管理 2&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;fi
+
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;keyword&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;
+
+curl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Referer: https://www.104.com.tw/jobs/search'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  https://www.104.com.tw/jobs/search/list&lt;span class=&quot;se&quot;&gt;\?\&amp;amp;&lt;/span&gt;keyword&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$keyword&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;amp;&lt;/span&gt;page&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$page&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  | jq
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;前面為防呆的檢查，確保使用者有輸入關鍵字及頁數，用起來就像這樣:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sh ./104.sh 軟體工程師 1
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;得到的結果如下:
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/104-2.jpg&quot; alt=&quot;data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果只想要資料的list，可以再pipe到jq做進一步的處理:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sh ./104.sh 軟體工程師 1 | jq .data.list
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;得到的結果如下:
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/104-3.jpg&quot; alt=&quot;data&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;結語&quot;&gt;結語&lt;/h1&gt;
+&lt;p&gt;有時只想要簡易的爬蟲，不想要大張旗鼓地寫個python時，就可以寫個shell script，加上crontab就能去抓取資料。&lt;/p&gt;
+
+&lt;p&gt;比如我只是想記錄某個keyword資料量的每天趨勢變化，就可以&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sh ./104.sh 軟體工程師 1 | jq .data.totalCount &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; data.csv
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;一天跑個一次，一份csv檔案，就可以達到我們想要目的。&lt;/p&gt;
+
+&lt;p&gt;感謝你閱讀到這邊～希望以上的內容對你有一丁點的幫助，掰掰～ 👋&lt;/p&gt;
+
+&lt;h1 id=&quot;附錄&quot;&gt;附錄&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;jq - &lt;a href=&quot;https://stedolan.github.io/jq/&quot; target=&quot;_blank&quot; name=&quot;1&quot;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;pup - &lt;a href=&quot;https://github.com/ericchiang/pup&quot; target=&quot;_blank&quot; name=&quot;2&quot;&gt;https://github.com/ericchiang/pup&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crawler" /><category term="http" /><category term="curl" /><category term="linux" /><summary type="html">想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩， linux command line tool就有許多好用的工具， 今天以104人力網站的為例，示範如何只使用shell script，就可以開始抓取資料!</summary></entry><entry><title type="html">[讀書筆記] 用對能量，你就不會累</title><link href="https://homuchen.com/posts/book-note-the-power-of-full-engagement/" rel="alternate" type="text/html" title="[讀書筆記] 用對能量，你就不會累" /><published>2021-10-30T10:30:00+08:00</published><updated>2021-10-30T10:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-power-of-full-engagement</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-power-of-full-engagement/">&lt;p&gt;原文書名為&lt;a href=&quot;https://bookzone.cwgv.com.tw/books/details/BBP291&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《The Power of Full Engagement》&lt;/strong&gt;&lt;/a&gt;，
 作者提出&lt;strong&gt;能量管理&lt;/strong&gt;的概念，幫助我們找回對生活與工作的熱情和意義！&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg&quot; alt=&quot;Book: The Power of Full Engagement&quot; /&gt;&lt;/p&gt;
@@ -33,22 +158,22 @@
 但在其它面向，也需要注意。你有多久沒有純粹為了喜悅、放鬆做一件事了呢？
 有多久沒有檢視平常的作為跟核心的價值觀相不相符呢?&lt;/p&gt;
 
-&lt;p&gt;Tim在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;裡也有提到相關的概念，
+&lt;p&gt;Tim在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;裡也有提到相關的概念，
 工作及興趣都是週期性的，並且提出&lt;strong&gt;迷你退休&lt;/strong&gt;: 將一般累積在人生後半段的退休時光平均分散在一生當中，
 對這本書有興趣的朋友，可以看我之前寫的讀書筆記:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;突破極限接受訓練&quot;&gt;突破極限、接受訓練&lt;/h2&gt;
 &lt;p&gt;就像肌肉想要變強壯一樣，我們需要鍛鍊它，讓它突破現有界線一點，再讓他休息恢復，
-就像在&lt;a href=&quot;https://www.books.com.tw/products/0010752714&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《刻意練習》&lt;/strong&gt;&lt;/a&gt;裡說的，
+就像在&lt;a href=&quot;https://www.books.com.tw/products/0010752714&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《刻意練習》&lt;/strong&gt;&lt;/a&gt;裡說的，
 要&lt;strong&gt;走出舒適圈一點點&lt;/strong&gt;，一點點就好唷！&lt;/p&gt;
 
 &lt;p&gt;而在情緒、心智及精神層面也一樣是如此，在後面的章節中，可以看到許多個案，如何針對他們在各方面的能量進行鍛鍊。&lt;/p&gt;
 
 &lt;h2 id=&quot;建立儀式&quot;&gt;建立儀式&lt;/h2&gt;
 &lt;p&gt;我們的意志力是有限的，靠著自律、意志力想要長久地逼自己去做一件事是不實際的，
-這也是在&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;一書裡所提倡的。
+這也是在&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;一書裡所提倡的。
 想要改變，去做一件事，有個好的辦法就是讓他成為習慣、儀式化，也就是可以不假思索地就去做它。&lt;/p&gt;
 
 &lt;p&gt;習慣占了我們一天中大部分的時間，想一下你一早起床，你需要克服萬難，用盡一切力氣將自己拖到浴室，然後刷牙洗臉嗎？
@@ -65,8 +190,8 @@
 在這裡我額外推薦一些書。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;睡眠: &lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《為什麼要睡覺》&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;運動: &lt;a href=&quot;https://www.books.com.tw/products/0010855828&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《真正的快樂處方：瑞典國民書！腦科學實證的健康生活提案》&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;睡眠: &lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《為什麼要睡覺》&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;運動: &lt;a href=&quot;https://www.books.com.tw/products/0010855828&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《真正的快樂處方：瑞典國民書！腦科學實證的健康生活提案》&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;情緒&quot;&gt;情緒&lt;/h2&gt;
@@ -79,7 +204,7 @@
 沒有營養，且容易過量。&lt;/p&gt;
 
 &lt;p&gt;如果不知道要做什麼，推薦可以來這裡看看
-&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_hobbies&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;維基百科 List_of_hobbies&lt;/strong&gt;&lt;/a&gt;，
+&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_hobbies&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;維基百科 List_of_hobbies&lt;/strong&gt;&lt;/a&gt;，
 或是google&lt;strong&gt;嗜好清單&lt;/strong&gt;，從裡面看看，覺得有感到興趣的就做吧！
 就單純是為了好玩，培養一些跟平常生活無關的嗜好，但說不定也會擦撞出某些火花。&lt;/p&gt;
 
@@ -95,7 +220,7 @@
 &lt;h2 id=&quot;心智&quot;&gt;心智&lt;/h2&gt;
 &lt;p&gt;作者指的心智能量主要有兩個，一個是&lt;strong&gt;專注&lt;/strong&gt;，另一個為&lt;strong&gt;理性樂觀&lt;/strong&gt;。&lt;/p&gt;
 
-&lt;p&gt;關於專注，&lt;a href=&quot;https://www.books.com.tw/products/0010758381&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《Deep Work深度工作力：淺薄時代，個人成功的關鍵能力》&lt;/strong&gt;&lt;/a&gt;，
+&lt;p&gt;關於專注，&lt;a href=&quot;https://www.books.com.tw/products/0010758381&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《Deep Work深度工作力：淺薄時代，個人成功的關鍵能力》&lt;/strong&gt;&lt;/a&gt;，
 這本書是專門討論現代人失去了深度思考、深度工作的能力，被電子郵件及社群綁架分心的議題。&lt;/p&gt;
 
 &lt;p&gt;理性樂觀則為接受世界原本的樣子，但永遠積極努力，朝向期望的結果或解決方式邁進。與之相反的就是悲觀、或者是盲目樂觀，
@@ -116,7 +241,7 @@
 很少停下來思考自己最重視的東西。&lt;/p&gt;
 
 &lt;p&gt;但如果像我一樣，不知道自己最重視的價值觀是什麼怎麼辦～這就真的要停下來好好想想了，
-在&lt;a href=&quot;https://en.wikipedia.org/wiki/Rokeach_Value_Survey&quot; target=&quot;\_blank&quot;&gt;Rokeach Value Survey&lt;/a&gt;中，
+在&lt;a href=&quot;https://en.wikipedia.org/wiki/Rokeach_Value_Survey&quot; target=&quot;_blank&quot;&gt;Rokeach Value Survey&lt;/a&gt;中，
 有列出36項價值觀，可以認真思考，從中選出5項你最重視的，隨著人生再過，這5項價值觀也會再隨之調整，
 它們將成為我們度過人生的基本原則。&lt;/p&gt;
 
@@ -127,7 +252,7 @@
 &lt;h2 id=&quot;建立儀式-1&quot;&gt;建立儀式&lt;/h2&gt;
 &lt;p&gt;有了目標及知道首先要改進的目標後，選一個想要鍛鍊的目標肌肉，一個就好，提出明確的行動指南，
 在某個時間地點或情景該怎麼行動，將其轉為自發性的行為，
-關於這部分可以延伸參考&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;，
+關於這部分可以延伸參考&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;，
 針對如何建立習慣，有系統性的認識。&lt;/p&gt;
 
 &lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
@@ -141,12 +266,12 @@
 &lt;h1 id=&quot;延伸閱讀&quot;&gt;延伸閱讀&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/posts/book-note-why-we-sleep/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/posts/book-note-why-we-sleep/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="habit" /><category term="self improvement" /><summary type="html">原文書名為《The Power of Full Engagement》， 作者提出能量管理的概念，幫助我們找回對生活與工作的熱情和意義！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">懶人早餐: 15分鐘，高纖高蛋白低碳水</title><link href="https://homuchen.com/posts/lazy-breakfast/" rel="alternate" type="text/html" title="懶人早餐: 15分鐘，高纖高蛋白低碳水" /><published>2021-10-26T17:30:00+08:00</published><updated>2021-10-26T17:30:00+08:00</updated><id>https://homuchen.com/posts/lazy-breakfast</id><content type="html" xml:base="https://homuchen.com/posts/lazy-breakfast/">&lt;p&gt;想少吃些外食的精緻碳水，於是乎開始研究自己下廚，在&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="habit" /><category term="self improvement" /><summary type="html">原文書名為《The Power of Full Engagement》， 作者提出能量管理的概念，幫助我們找回對生活與工作的熱情和意義！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">懶人早餐: 15分鐘，高纖高蛋白低碳水</title><link href="https://homuchen.com/posts/lazy-breakfast/" rel="alternate" type="text/html" title="懶人早餐: 15分鐘，高纖高蛋白低碳水" /><published>2021-10-26T17:30:00+08:00</published><updated>2021-10-26T17:30:00+08:00</updated><id>https://homuchen.com/posts/lazy-breakfast</id><content type="html" xml:base="https://homuchen.com/posts/lazy-breakfast/">&lt;p&gt;想少吃些外食的精緻碳水，於是乎開始研究自己下廚，在&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;
 裡有說到，想要開始培養一個新習慣時，
 要讓他容易去做，不會太麻煩，目標小一點，好容易踏出第一步並且持之以恆。
 所以我開始下廚的重點是&lt;strong&gt;簡單&lt;/strong&gt;、&lt;strong&gt;方便&lt;/strong&gt;、&lt;strong&gt;懶人&lt;/strong&gt;，
@@ -189,7 +314,7 @@
 &lt;p&gt;簡單記錄了一下開始下廚的動機及想法，希望對你有所幫助，如果你有更懶的撇步，歡迎下面留言跟大家分享唷！掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="food" /><category term="life style" /><category term="habit" /><summary type="html">想少吃些外食的精緻碳水，於是乎開始研究自己下廚，在《原子習慣》 裡有說到，想要開始培養一個新習慣時， 要讓他容易去做，不會太麻煩，目標小一點，好容易踏出第一步並且持之以恆。 所以我開始下廚的重點是簡單、方便、懶人， 而不會是美味(可能是個人廚藝問題)、便宜， 並且先只從早餐開始做起，今天就簡單分享一下我做了些什麼吧！</summary></entry><entry><title type="html">如何不用做額外的工作，就使你的收入倍增</title><link href="https://homuchen.com/posts/double-your-money-without-any-extra-work/" rel="alternate" type="text/html" title="如何不用做額外的工作，就使你的收入倍增" /><published>2021-10-20T19:00:00+08:00</published><updated>2021-10-20T19:00:00+08:00</updated><id>https://homuchen.com/posts/double-your-money-without-any-extra-work</id><content type="html" xml:base="https://homuchen.com/posts/double-your-money-without-any-extra-work/">&lt;p&gt;有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多，
 而是如何&lt;strong&gt;花更少的錢，來獲得一樣的體驗&lt;/strong&gt;，好讓你金錢的實際價值倍增～&lt;/p&gt;
 
-&lt;p&gt;這是我在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;這本書裡看到的想法，
+&lt;p&gt;這是我在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;這本書裡看到的想法，
 作者稱之為自由倍增因子，也就是你能藉由操控這些事，來讓金錢的實際價值倍增，
 他們就是&lt;strong&gt;做什麼&lt;/strong&gt;(what)、&lt;strong&gt;在哪做&lt;/strong&gt;(where)、&lt;strong&gt;何時做&lt;/strong&gt;(when)、&lt;strong&gt;跟誰做&lt;/strong&gt;(whom)。&lt;/p&gt;
 
@@ -205,7 +330,7 @@
 &lt;p&gt;也就是利用匯率，在消費指數低的國家進行消費，一樣的金錢就可以擁有了更大的購買力！&lt;/p&gt;
 
 &lt;p&gt;當你可以自由地決定你要在哪裡生活時，就可以獲得這項好處，所以脫離在辦公室裡工作的社會框架，
-是作者在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;裡所提倡的，
+是作者在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;裡所提倡的，
 不過你是創業者還是受僱於人的打工仔都一樣～&lt;/p&gt;
 
 &lt;p&gt;有時就算不能出國也一樣可以得到一些好處，比如說你最近想學衝浪，那你就可以直接住在宜蘭烏石港、台東東河附近，
@@ -218,7 +343,7 @@
 &lt;p&gt;能把工作時間挪到六日，就算工時一樣，也可以相對地為你帶來額外的收入！&lt;/p&gt;
 
 &lt;h1 id=&quot;避免付錢之痛及期待&quot;&gt;避免付錢之痛及期待&lt;/h1&gt;
-&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《金錢心理學》&lt;/strong&gt;&lt;/a&gt;這本書裡說到，
+&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《金錢心理學》&lt;/strong&gt;&lt;/a&gt;這本書裡說到，
 在體驗消費的當下時，如果要你付錢，你就會感到痛苦，也就沒那麼快樂了～&lt;/p&gt;
 
 &lt;p&gt;所以可以選擇預付的方式，提前預先支付掉活動的費用，讓你在體驗的當下，
@@ -231,9 +356,9 @@
 
 &lt;h1 id=&quot;延伸閱讀&quot;&gt;延伸閱讀&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="finance" /><category term="life style" /><category term="self improvement" /><summary type="html">有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多， 而是如何花更少的錢，來獲得一樣的體驗，好讓你金錢的實際價值倍增～</summary></entry><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2021-10-16T23:00:00+08:00</published><updated>2021-10-16T23:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/">&lt;p&gt;在上篇文章&lt;a href=&quot;/posts/message-queue-advantages-use-cases&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;什麼是message queue? 優點及使用場景&lt;/strong&gt;&lt;/a&gt;中，
+&lt;p&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="finance" /><category term="life style" /><category term="self improvement" /><summary type="html">有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多， 而是如何花更少的錢，來獲得一樣的體驗，好讓你金錢的實際價值倍增～</summary></entry><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2021-10-16T23:00:00+08:00</published><updated>2021-10-16T23:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/">&lt;p&gt;在上篇文章&lt;a href=&quot;/posts/message-queue-advantages-use-cases&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;什麼是message queue? 優點及使用場景&lt;/strong&gt;&lt;/a&gt;中，
 看完了為何要使用message queue之後，今天要討論兩類message broker的差異，分別是&lt;strong&gt;memory based&lt;/strong&gt;及&lt;strong&gt;log based&lt;/strong&gt;，
 memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的，
 就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法，
@@ -435,7 +560,7 @@ exchange binding可以實現pub-sub的patter。&lt;/li&gt;
 &lt;p&gt;有哪些例子是順序重要的呢? 比如說對一個使用者的帳戶餘額做加減乘除的運算，順序不同結果就不同，
 但你可以使用user id作為partition key，則在每一個partition裡保持對的順序就好，不同的partition間的順序就不重要了。&lt;/p&gt;
 
-&lt;p&gt;感謝你閱讀到這邊～ 希望以上的內容對你有一丁點的幫助，掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="message queue" /><category term="kafka" /><summary type="html">在上篇文章什麼是message queue? 優點及使用場景中， 看完了為何要使用message queue之後，今天要討論兩類message broker的差異，分別是memory based及log based， memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的， 就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法， 然後再討論兩種broker的內部設計的不同，最後就可以比較在各種特性上，兩者的不同。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">RESTful API: How to design paths and identify resources</title><link href="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/" rel="alternate" type="text/html" title="RESTful API: How to design paths and identify resources" /><published>2021-10-14T13:20:00+08:00</published><updated>2021-10-14T13:20:00+08:00</updated><id>https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/">&lt;p&gt;繼上篇文章&lt;a href=&quot;/posts/restful-api-introduction/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;RESTful API簡介: 什麼是RESTful? 以及為何需要它?&lt;/strong&gt;&lt;/a&gt;後，
+&lt;p&gt;感謝你閱讀到這邊～ 希望以上的內容對你有一丁點的幫助，掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="message queue" /><category term="kafka" /><summary type="html">在上篇文章什麼是message queue? 優點及使用場景中， 看完了為何要使用message queue之後，今天要討論兩類message broker的差異，分別是memory based及log based， memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的， 就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法， 然後再討論兩種broker的內部設計的不同，最後就可以比較在各種特性上，兩者的不同。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">RESTful API: How to design paths and identify resources</title><link href="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/" rel="alternate" type="text/html" title="RESTful API: How to design paths and identify resources" /><published>2021-10-14T13:20:00+08:00</published><updated>2021-10-14T13:20:00+08:00</updated><id>https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-how-to-design-paths-and-identify-resources/">&lt;p&gt;繼上篇文章&lt;a href=&quot;/posts/restful-api-introduction/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;RESTful API簡介: 什麼是RESTful? 以及為何需要它?&lt;/strong&gt;&lt;/a&gt;後，
 我們知道了RESTful API是&lt;strong&gt;resource based&lt;/strong&gt;的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。&lt;/p&gt;
 
 &lt;h1 id=&quot;resource-based&quot;&gt;Resource based&lt;/h1&gt;
@@ -521,8 +646,8 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 
 &lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">繼上篇文章RESTful API簡介: 什麼是RESTful? 以及為何需要它?後， 我們知道了RESTful API是resource based的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。</summary></entry><entry><title type="html">[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</title><link href="https://homuchen.com/posts/book-note-the-four-hour-work-week/" rel="alternate" type="text/html" title="[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！" /><published>2021-10-10T23:00:00+08:00</published><updated>2021-10-10T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-four-hour-work--week</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-four-hour-work-week/">&lt;p&gt;讀完這本&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;後，
-讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、
+&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">繼上篇文章RESTful API簡介: 什麼是RESTful? 以及為何需要它?後， 我們知道了RESTful API是resource based的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。</summary></entry><entry><title type="html">[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</title><link href="https://homuchen.com/posts/book-note-the-four-hour-work-week/" rel="alternate" type="text/html" title="[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！" /><published>2021-10-10T23:00:00+08:00</published><updated>2021-10-31T21:11:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-four-hour-work--week</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-four-hour-work-week/">&lt;p&gt;讀完這本&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;後，
+讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、拒當社畜、
 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、
 這本書所提出的內容，最後是我之後可能會做的一些改變！&lt;/p&gt;
 
@@ -586,7 +711,7 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 而忽略了重要的問題，每天致力於除去不想做的事，渴望自由，卻不知道有了時間之後要幹嘛。&lt;/p&gt;
 
 &lt;p&gt;如果不知道自己想做什麼怎麼辦呢？那更不能繼續埋首工作，要開始思考，並且行動跟實驗，
-這邊我推薦另一本書&lt;a href=&quot;https://www.books.com.tw/products/0010733134&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《做自己的生命設計師: 史丹佛最夯的生涯規劃課》&lt;/strong&gt;&lt;/a&gt;，
+這邊我推薦另一本書&lt;a href=&quot;https://www.books.com.tw/products/0010733134&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《做自己的生命設計師: 史丹佛最夯的生涯規劃課》&lt;/strong&gt;&lt;/a&gt;，
 瘋狂地發想所有可能的選項，並打造原型去實驗，不知道自己喜歡做什麼時，唯有去做做看才會知道是否喜歡。&lt;/p&gt;
 
 &lt;h3 id=&quot;有錢又有閒&quot;&gt;有錢又有閒&lt;/h3&gt;
@@ -661,9 +786,9 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 &lt;p&gt;看完之後，非常興奮！立馬先查了一下東南亞各地的生活成本，結果發現去峇里島住一個月，大部分根本比住在台北便宜，
 在曼谷住上五星級的飯店，擁有頂樓無邊際泳池及健身房，跟在台北租個鳥籠的價格也相去不遠，那我幹嘛要住在台北呢XD&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-4.jpg&quot; alt=&quot;Bali&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-4.jpg&quot; alt=&quot;Living in Bali&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-5.jpg&quot; alt=&quot;Taipei&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-5.jpg&quot; alt=&quot;Living in Taipei&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;以上只是利用機動性達成最簡單的地理套利，想要體驗奢華的生活，沒有一定要成為億萬富翁，
 賺錢不是目的，過上你想要過的生活才是。&lt;/p&gt;
@@ -677,8 +802,8 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 &lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Playing-Financial-Independence-Retire-Early/dp/1608685802&quot; name=&quot;1&quot; target=&quot;\_blank&quot;&gt;Playing with FIRE(Financial Independence Retire Early): How Far Would You Go for Financial Freedom?&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="work" /><category term="self improvement" /><summary type="html">讀完這本《一週工作四小時》後， 讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、 這本書所提出的內容，最後是我之後可能會做的一些改變！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學</title><link href="https://homuchen.com/posts/book-note-why-we-sleep/" rel="alternate" type="text/html" title="[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學" /><published>2021-10-02T23:00:00+08:00</published><updated>2021-10-02T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-why-we-sleep</id><content type="html" xml:base="https://homuchen.com/posts/book-note-why-we-sleep/">&lt;p&gt;如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Playing-Financial-Independence-Retire-Early/dp/1608685802&quot; name=&quot;1&quot; target=&quot;_blank&quot;&gt;Playing with FIRE(Financial Independence Retire Early): How Far Would You Go for Financial Freedom?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="work" /><category term="self improvement" /><summary type="html">讀完這本《一週工作四小時》後， 讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、拒當社畜、 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、 這本書所提出的內容，最後是我之後可能會做的一些改變！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學</title><link href="https://homuchen.com/posts/book-note-why-we-sleep/" rel="alternate" type="text/html" title="[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學" /><published>2021-10-02T23:00:00+08:00</published><updated>2021-10-02T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-why-we-sleep</id><content type="html" xml:base="https://homuchen.com/posts/book-note-why-we-sleep/">&lt;p&gt;如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、
 注意力提升、脾氣會變好，不易怒、遠離肥胖及糖尿病及心血管疾病、抵抗力變好不易感冒、
 不易罹癌、變帥變漂亮、更有吸引力～請問你願意花多少錢購買這產品呢？讓我現在告訴你，
 免錢！你每天都有機會享受到這些好處，需要做的就只是好好地睡覺～～😴&lt;/p&gt;
@@ -686,7 +811,7 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg&quot; alt=&quot;book: why we slepp&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;大綱&quot;&gt;大綱&lt;/h1&gt;
-&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;《為什麼要睡覺》&lt;/strong&gt;&lt;/a&gt;裡，
+&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《為什麼要睡覺》&lt;/strong&gt;&lt;/a&gt;裡，
 首先解釋睡覺的生理機制，我們的身體是透過怎樣的設計，讓我們感到疲憊想睡，
 越理解它，才能越知道如何不去破壞它，搞到自己失眠。&lt;/p&gt;
 
@@ -886,13 +1011,13 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 &lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a name=&quot;1&quot;&gt;J. Jenkins and K. Dallenbach, “Obliviscence During Sleep and Waking,” The American Journal of Psichology, Vol. 35, 1924, pp. 605-612. doi:10.2307/1414040&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nm1TxQj9IsQ&quot; target=&quot;\_blank&quot; name=&quot;2&quot;&gt;Youtube: Master Your Sleep &amp;amp; Be More Alert When Awake&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nm1TxQj9IsQ&quot; target=&quot;_blank&quot; name=&quot;2&quot;&gt;Youtube: Master Your Sleep &amp;amp; Be More Alert When Awake&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="psychology" /><category term="health" /><category term="sleep" /><summary type="html">如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、 注意力提升、脾氣會變好，不易怒、遠離肥胖及糖尿病及心血管疾病、抵抗力變好不易感冒、 不易罹癌、變帥變漂亮、更有吸引力～請問你願意花多少錢購買這產品呢？讓我現在告訴你， 免錢！你每天都有機會享受到這些好處，需要做的就只是好好地睡覺～～😴</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">RESTful API簡介: 什麼是RESTful? 以及為何需要它?</title><link href="https://homuchen.com/posts/restful-api-introduction/" rel="alternate" type="text/html" title="RESTful API簡介: 什麼是RESTful? 以及為何需要它?" /><published>2021-09-27T20:00:00+08:00</published><updated>2021-09-27T20:00:00+08:00</updated><id>https://homuchen.com/posts/restful-api-introduction</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-introduction/">&lt;p&gt;在web開發裡，API是幾乎無所不在，而其中最常見的應該就是基於HTTP協議的RESTful API，
 這篇簡介跟討論到底什麼是RESTful，為何有它的出現?&lt;/p&gt;
 
 &lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;首先，什麼是RESTful，可以說它是一種慣例，一個關於HTTP API如何設計的style，
@@ -1307,75 +1432,4 @@ response time:    2125.11 ms
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;在這篇文章記錄了常用的verbs，除了自己忘記可以回來看，也希望能幫助到有需要的人，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="formatting" /><summary type="html">在fmt package裡Printf, Fprintf, Fscanf, Scanf，或像是log package裡的Printf, Fatalf， 只要是function名字後面有f的，就能format你的input，以fmt.Printf為例: ```go fmt.Printf(“My name is %s. I am %d years old”, “HoMuChen”, 30)</summary></entry><entry><title type="html">URL簡介: URL是什麼，由哪些部分組成?</title><link href="https://homuchen.com/posts/what-is-url-and-what-is-it-composed-of/" rel="alternate" type="text/html" title="URL簡介: URL是什麼，由哪些部分組成?" /><published>2021-09-13T22:00:00+08:00</published><updated>2021-09-13T22:00:00+08:00</updated><id>https://homuchen.com/posts/what-is-url-and-what-is-it-composed-of</id><content type="html" xml:base="https://homuchen.com/posts/what-is-url-and-what-is-it-composed-of/">&lt;p&gt;這篇文章將會介紹什麼是URL，為何會需要它，以及它是由哪些部分組成的。&lt;/p&gt;
-
-&lt;h1 id=&quot;什麼是url&quot;&gt;什麼是URL&lt;/h1&gt;
-&lt;p&gt;想像你在一座大城市裡，你搭上一部計程車，想要去你朋友家、你小孩的幼兒園、或是去某某旅館，
-你必須告訴司機地址; 如果你想聯絡到某人的話，會使用電話號碼; 在政府眼裡每個人有身分證字號。&lt;/p&gt;
-
-&lt;p&gt;就像如此，每個東西都有它獨特的識別方法，而且是被大家所公認的，也就是你一說，大家就知道你在說什麼，
-知道你所指的是哪個東西，而在網路上，這種識別方法就是&lt;strong&gt;URL&lt;/strong&gt;(Uniform Resource Locator)，
-也就是我們在瀏覽器上面常常會輸入的&lt;strong&gt;網址&lt;/strong&gt;，告訴瀏覽器說你想要前往哪個網站，瀏覽哪些資源。&lt;/p&gt;
-
-&lt;h1 id=&quot;url的組成&quot;&gt;URL的組成&lt;/h1&gt;
-&lt;p&gt;以這篇文章的網址&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://homuchen.com/categories&lt;/code&gt;為例，
-他代表的就是一篇部落格文章的資源，如何跟server溝通，server在哪裡，以及我想要的特定資源:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/http-url-1.jpg&quot; alt=&quot;url format&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https&lt;/code&gt;為&lt;strong&gt;傳輸協議&lt;/strong&gt;，其他還有許多種，比如說ftp、rtsp、ipfs等等…&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;homuchen.com&lt;/code&gt;就是&lt;strong&gt;host&lt;/strong&gt;，用來說明存放資源的伺服器在哪裏，透過DNS可以得到機器的IP位置。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/categories&lt;/code&gt;是&lt;strong&gt;path&lt;/strong&gt;，用來跟server說你要哪個資源。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;general-url-syntax&quot;&gt;General URL Syntax&lt;/h2&gt;
-&lt;p&gt;一般的URL組成如下:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;scheme&amp;gt;://&amp;lt;user&amp;gt;:&amp;lt;password&amp;gt;@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;path&amp;gt;;&amp;lt;params&amp;gt;?&amp;lt;query&amp;gt;#&amp;lt;frag&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;component&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;scheme&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;用來跟server溝通的通信協議&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;user&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;需要登入驗證過的user才能存取資源&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;password&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;需要登入驗證過的user才能存取資源&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;host&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;一個網域名稱或是IP位置，存放資源的server&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;port&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;server監聽的port，HTTP預設為80，HTTPS則為443&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;path&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;server藉由path來判斷client想要的是什麼資源，什麼資源要用什麼樣的path，&lt;br /&gt;由server自己決定，不過RESTful API會有一個關於path設計的慣例，&lt;br /&gt;好讓client不需要記很多或一直看文件，關於後續的文章中會再來討論。&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;query&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;以&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt;開始的多對key value pair，每對以&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;隔開，&lt;br /&gt;用來傳送更多的資訊給server，比如說搜尋的過濾條件、影片的開始秒數等等…&lt;br /&gt;比如說: ?q=TSMC&amp;amp;sort=time&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;一個URL，是網路上一個或多個資源的身分證，今天簡單地看了URL的組成，
-對於ㄧ個RESTful API的URL要如何設計，後面再會有詳細的介紹。&lt;/p&gt;
-
-&lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:
-&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><category term="url" /><summary type="html">這篇文章將會介紹什麼是URL，為何會需要它，以及它是由哪些部分組成的。</summary></entry></feed>
+&lt;p&gt;在這篇文章記錄了常用的verbs，除了自己忘記可以回來看，也希望能幫助到有需要的人，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="formatting" /><summary type="html">在fmt package裡Printf, Fprintf, Fscanf, Scanf，或像是log package裡的Printf, Fatalf， 只要是function名字後面有f的，就能format你的input，以fmt.Printf為例: ```go fmt.Printf(“My name is %s. I am %d years old”, “HoMuChen”, 30)</summary></entry></feed>
