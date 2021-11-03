@@ -1,4 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-02T11:02:31+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">104人力網站爬蟲: 如何只用shell script來抓取資料</title><link href="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/" rel="alternate" type="text/html" title="104人力網站爬蟲: 如何只用shell script來抓取資料" /><published>2021-11-01T20:00:00+08:00</published><updated>2021-11-01T20:00:00+08:00</updated><id>https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq</id><content type="html" xml:base="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/">&lt;p&gt;想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-03T21:04:13+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2021-11-03T21:03:00+08:00</published><updated>2021-11-03T21:03:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/">&lt;p&gt;人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
+對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。&lt;/p&gt;
+
+&lt;h1 id=&quot;邁向成功的公式&quot;&gt;邁向成功的公式&lt;/h1&gt;
+&lt;p&gt;找到你目標，然後走到底，這樣就成功了，那要怎麼走到底呢?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg&quot; alt=&quot;邁向成功的公式及書單&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;有了目標以後，每天你做出選擇，相對應地有一些行為，
+但是最好將其變為習慣，否則將難以持之以恆，因為我們的意志力是有限的。
+然後為了取得進步，不能每次都做一樣的事，必須踏出舒適圈才會有所改變，
+並且知道有些成果是需要些時間才能顯現。&lt;/p&gt;
+
+&lt;p&gt;而在這過程中間有許多的曲折及困難，比如說做了幾天就半途而廢，找一堆理由藉口，
+或是做了一陣子卻看不到成果就放棄了，也可能是一開始有進步，
+但到了某個階段卻停滯不前了，不知道該如何更進一步，
+不然就是你覺得好累，沒有力氣能量繼續，又或者是你根本不知道你的目標是什麼? 
+該往哪裡前進? 也沒有動力前進。&lt;/p&gt;
+
+&lt;p&gt;在上述每個環節中卡關的，在這裡推薦相對應的書&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;不想半途而廢: &lt;a href=&quot;#原子習慣&quot;&gt;&lt;strong&gt;原子習慣&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;著急看到成果: &lt;a href=&quot;#複利效應&quot;&gt;&lt;strong&gt;複利效應&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;停滯不前: &lt;a href=&quot;#刻意練習&quot;&gt;&lt;strong&gt;刻意練習&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;沒有力氣、覺得無趣: &lt;a href=&quot;#一週工作四小時&quot;&gt;&lt;strong&gt;一週工作四小時&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;找不到人生目標: &lt;a href=&quot;#做自己的生命設計師&quot;&gt;&lt;strong&gt;做自己的生命設計師&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;原子習慣&quot;&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;選擇很重要，但其實人生並沒有那麼多重大的選擇時刻，影響你這個人最多的，是組成你每天生活的習慣。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/self-improvement-books-1.jpg&quot; alt=&quot;書: 原子習慣&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;習慣佔據你人生的八、九成，試想一下每天醒來，躺在床上滑一下手機，
+走去浴室刷牙洗臉，要不要吃早餐，早餐要吃什麼，通勤去上班的路上在做什麼，
+工作時如何面對同事，面對事情是如何處理，下班了之後要做什麼，要去運動嗎?
+還是回家躺在沙發上耍廢，該準時就寢嗎？還是東摸摸西摸摸又到了半夜了，
+跟人聊天會抱怨最近發生的負面的事嗎？&lt;/p&gt;
+
+&lt;p&gt;上述說的這些事，你都不需要在當下耗費心思去做選擇，而是不假思索地反應出來，
+但他們就是你現在會成為怎樣的人的根本原因，所以我們要致力於培養好的習慣、去除壞的習慣。&lt;/p&gt;
+
+&lt;p&gt;你可能也想這麼做，但就是時常失敗，這本書將系統化地分析習慣的基本原理及組成，簡單的說就是:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;提示 -&amp;gt; 渴望 -&amp;gt; 回應 -&amp;gt; 獎賞&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;並且從各個面向提出可行動的方案及建議，幫助你過關斬將，培養新的習慣。&lt;/p&gt;
+
+&lt;h2 id=&quot;你可以期待獲得什麼&quot;&gt;你可以期待獲得什麼?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;了解習慣對人生的重要&lt;/li&gt;
+  &lt;li&gt;系統化地分析習慣是如何形成的&lt;/li&gt;
+  &lt;li&gt;該要如何養成好習慣&lt;/li&gt;
+  &lt;li&gt;該要如何去除壞習慣&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;複利效應&quot;&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010814286&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《複利效應》&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;每天微小的改變並不亦察覺，經過時間的累積卻會產生巨大的影響。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/self-improvement-books-2.jpg&quot; alt=&quot;書: 複利效應&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;或許大家都聽過複利效應，應該通常是在財務儲蓄領域上，但這概念可以應用在生活的各個面向上，
+我們每天做的事，影響可能很小，多吃一片洋芋片、多抽一根菸、晚上熬夜少睡一個小時，造成的影響幾乎無法察覺，
+但經過時間的累積，改變就會很巨大，這跟上面的原子習慣是相呼應的。&lt;/p&gt;
+
+&lt;h2 id=&quot;你可以期待獲得什麼-1&quot;&gt;你可以期待獲得什麼?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;了解複利效應是什麼? 並且適用於人生各個方面&lt;/li&gt;
+  &lt;li&gt;認清世上沒有魔法，唯有努力才有回報&lt;/li&gt;
+  &lt;li&gt;努力的方向要對，如何加速看到成果&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;刻意練習&quot;&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010752714&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《刻意練習》&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;透過刻意練習，善用大腦和身體的適應力，每個人都能改善技能，甚至創造出你本來以為自己沒有的能力，達到顛峰表現。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/self-improvement-books-3.jpg&quot; alt=&quot;書: 刻意練習&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如何在某個領域邁向頂尖、擁有高手級的表現，只要一直一直不斷地做、不斷地練習就好了嗎？&lt;/p&gt;
+
+&lt;p&gt;其實光是這樣是不夠的，比如說你已經會開車，然後你每天開了好幾個小時的車，但你卻不會因此變成舒馬赫，
+辛苦的媽媽每天煮三餐，但卻不會因此成為超級大廚。那該要如何&lt;strong&gt;刻意練習&lt;/strong&gt;來持續取得進步呢？&lt;/p&gt;
+
+&lt;p&gt;這邊簡單地說就是針對你想進步的目標，進行&lt;strong&gt;突破目前極限&lt;/strong&gt;的練習，目標必須&lt;strong&gt;明確&lt;/strong&gt;，
+而且可以&lt;strong&gt;量測&lt;/strong&gt;或獲得&lt;strong&gt;回饋&lt;/strong&gt;，知道自己確實有在進步並進行修正。&lt;/p&gt;
+
+&lt;h2 id=&quot;你可以期待獲得什麼-2&quot;&gt;你可以期待獲得什麼?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;知道大腦是具可塑性的，如何學習及改變&lt;/li&gt;
+  &lt;li&gt;持續取得進步的要素的什麼？ 並不是一萬個小時就好&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;一週工作四小時&quot;&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;誰說一週要工作四十小時，朝九晚五地待在辦公室，打破社會框架，有錢有閒地實現自己的夢想&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg&quot; alt=&quot;書: 一週工作四小時&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;人們總說等我賺夠了錢我就要怎樣怎樣，等我退休了我就要去做什麼，那何不現在就開始呢？！&lt;/p&gt;
+
+&lt;p&gt;追求夢想、做自己的興趣及想做的事，不用等到退休，作者提出&lt;strong&gt;迷你退休&lt;/strong&gt;的概念，
+將大把退休時光平均分散在一生當中，不要盲目地工作、追逐金錢，只將目標放在提早退休上，
+而是開始漸漸地擺脫不想做的工作，擁抱自由及機動性，開始重拾各種興趣、嘗試你的夢想，
+否則等到退休那天，你可能也會茫茫然不知道要幹嘛，因為一直以來，從沒有停下來好好思考過。&lt;/p&gt;
+
+&lt;p&gt;延伸閱讀:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/book-note-the-power-of-full-engagement/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 用對能量，你就不會累&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;你可以期待獲得什麼-3&quot;&gt;你可以期待獲得什麼?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;認識新富族: 不再朝九晚五待在辦公室工作，擁抱自由及機動性的族群&lt;/li&gt;
+  &lt;li&gt;除去大部分非必要且會花費你時間的事，擁抱更多的自由&lt;/li&gt;
+  &lt;li&gt;打造自動進帳的事業&lt;/li&gt;
+  &lt;li&gt;看看作者的有趣的經歷及如何達成上述目標&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;做自己的生命設計師&quot;&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010733134&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《做自己的生命設計師》&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;透過打造原型、進行實驗，發想繼而嘗試人生各種可能，才能找到熱情&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/self-improvement-books-4.jpg&quot; alt=&quot;書: 做自己的生命設計師&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不知道自己的人生要做什麼嗎？第一步就是要去想，隨意的發想，如果你連想都沒想過的話一件事，
+你不可能會在你的人生中去做那件事，甚至去喜歡他，所以第一步就是發揮想像力，無所限制地記錄下所以可能會喜歡的想法。&lt;/p&gt;
+
+&lt;p&gt;接著要針對那些想法，打造原型去實驗，什麼是原型呢？在產品設計的領域裡，
+就是用來驗證設計的產品是否適切，有無欠考量或未發現的盲點，必要時在正式生產前加以更正。&lt;/p&gt;
+
+&lt;p&gt;而在人生領域中，就是去稍微體驗你想做的事，而不用100%一下子就All in，比如說你喜歡喝咖啡，想開間咖啡廳，
+那你不應該是馬上辭職，準備個幾百萬就開始要開店，而是可以先透過蒐集資訊、訪談好幾位咖啡店店長、去打工、
+或是做一下咖啡廳裡各個職位的工作，來測試自己有沒有盲點，到底是不是真的喜歡這件事。&lt;/p&gt;
+
+&lt;h2 id=&quot;你可以期待獲得什麼-4&quot;&gt;你可以期待獲得什麼?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;人生迷惘怎麼辦&lt;/li&gt;
+  &lt;li&gt;該如何去發想，找出可能會喜歡的事&lt;/li&gt;
+  &lt;li&gt;該如何打造原型，去測試自己的新的人生&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;感謝你看到這邊～ 希望這些內容能帶給你一點啟發，我也是閱讀這些書過後，學習到了許多及產生很多新的想法，
+但更重要的是將其實踐在生活當中，首先先透過書寫分享，讓自己複習一遍，
+之後有更多親身實驗的結果，會在跟大家分享! 掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><summary type="html">人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功， 對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">104人力網站爬蟲: 如何只用shell script來抓取資料</title><link href="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/" rel="alternate" type="text/html" title="104人力網站爬蟲: 如何只用shell script來抓取資料" /><published>2021-11-01T20:00:00+08:00</published><updated>2021-11-01T20:00:00+08:00</updated><id>https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq</id><content type="html" xml:base="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/">&lt;p&gt;想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩，
 linux command line tool就有許多好用的工具，
 今天以104人力網站的為例，示範如何只使用shell script，就可以開始抓取資料!&lt;/p&gt;
 
@@ -1077,359 +1233,4 @@ DELETE  /posts/2        -&amp;gt; 刪除某一篇文章
 
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 &lt;p&gt;大概知道了RESTful API應該是什麼樣子，還有許多細節的部分，會在後面的文章中慢慢討論，
-比如說URL的設計、如何model resource、documentation、versioning等等…&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">在web開發裡，API是幾乎無所不在，而其中最常見的應該就是基於HTTP協議的RESTful API， 這篇簡介跟討論到底什麼是RESTful，為何有它的出現?</summary></entry><entry><title type="html">[Golang] Common verbs of formatting string</title><link href="https://homuchen.com/posts/golang-common-verbs-for-formatting-string/" rel="alternate" type="text/html" title="[Golang] Common verbs of formatting string" /><published>2021-09-20T15:30:00+08:00</published><updated>2021-09-20T15:30:00+08:00</updated><id>https://homuchen.com/posts/golang-common-verbs-for-formatting-string</id><content type="html" xml:base="https://homuchen.com/posts/golang-common-verbs-for-formatting-string/">&lt;p&gt;在fmt package裡Printf, Fprintf, Fscanf, Scanf，或像是log package裡的Printf, Fatalf，
-只要是function名字後面有f的，就能format你的input，以fmt.Printf為例:&lt;/p&gt;
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;My name is %s. I am %d years old&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;HoMuChen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;//My name is HoMuChen. I am 30 years old&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;第一個參數將會是最後輸出的字串，不過中間我們可以看到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%s&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%d&lt;/code&gt;的東西，稱之為&lt;strong&gt;verb&lt;/strong&gt;，
-verb會被後面的參數取代掉，並且是依照你指定的格式，這篇文章將會分享一寫常用的verb。&lt;/p&gt;
-
-&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;以下為一個常用的verbs表格，依照要format的值的型態做分類，後面再詳細說明:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;category&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;syntax&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;general&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%v&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;value in default format&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%T&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;type&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%%&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;literal % sign&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;boolean&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%t&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;true or false&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;interger&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%b&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;binary&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%o&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;base 8&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%d&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;base 10&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%x&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;base 16&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%X&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;base 16 with upper-case letters&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;floating&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%e&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;scientific notation&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%f&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;decimal point but no exponent&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%g&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;for large exponents&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;string&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%s&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;string&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%q&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;double quoted string&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;padding&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%10s&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;width 10 string&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%-10s&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;width 10 string left padding&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%10d&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;width 10 digit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%010d&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;width 10 digit filled with 0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;floating precision&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%8f&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;width 8 floating number&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%8.2f&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;width 8 with 2 digit presicion floating number&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;%.2f&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2 digit presicion floating number&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&quot;general&quot;&gt;General&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%v&lt;/code&gt;: 根據不同的值的型態，預設的格式&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;type&lt;/th&gt;
-          &lt;th style=&quot;text-align: left&quot;&gt;format&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;boolean&lt;/td&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;%t&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;string&lt;/td&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;%s&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;int&lt;/td&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;%d&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;float32,float64&lt;/td&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;%g&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%T&lt;/code&gt;: 值的型態
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The type of this value is %T&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;I am a string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;//The type of this value is string&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The type of this value is %T&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;//The type of this value is bool&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%%&lt;/code&gt;: 真的想要%的時候
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%v %%&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;//100 %&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;boolean&quot;&gt;Boolean&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%t&lt;/code&gt;:
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;This is %t&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;integer&quot;&gt;Integer&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%b&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%d&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%x&lt;/code&gt;: base 2, 10, 16
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;base 2: %b, base 10: %d, base 16: %x&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;//base 2: 11111111, base 10: 255, base 16: ff&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;floating-point-number&quot;&gt;Floating point number&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%e&lt;/code&gt;: 科學記號表示&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%f&lt;/code&gt;: 十進位表示，預設顯示到小數點後六位。
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%f&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;123.123456789&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;//123.123457&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%g&lt;/code&gt;: 小數點後很多位的話，用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%g&lt;/code&gt;全部顯示出來。
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%g&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;123.123456789&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;//123.123456789&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;string&quot;&gt;String&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%s&lt;/code&gt;: 就是字串～&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%q&lt;/code&gt;: 以雙引號括起來的字串，就不需要再額外寫類似&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&quot;&lt;/code&gt;escape掉。&lt;/p&gt;
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%q&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;I am a string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;//&quot;I am a string&quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;padding&quot;&gt;Padding&lt;/h1&gt;
-&lt;p&gt;有時我們想要輸出的字串是一樣長度的，可以在前面加上一個數字，代表你想要長度，以下例子:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%10s&lt;/code&gt;: 寬度為10的字串
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;David&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Mu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;HoMuChen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Noname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;User: %10s does something&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;User:      David does something
-User:         Mu does something
-User:   HoMuChen does something
-User:     Noname does something
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%-10s&lt;/code&gt;: 寬度為10的字串，左邊對齊
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;David&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Mu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;HoMuChen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Noname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;User: %-10s does something&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;User: David      does something
-User: Mu         does something
-User: HoMuChen   does something
-User: Noname     does something
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%-7d&lt;/code&gt;: 寬度為7的整數，左邊對齊
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;contentLengths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;614&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12345&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contentLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contentLengths&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content length: %-7d bytes&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contentLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;content length: 70      bytes
-content length: 240     bytes
-content length: 614     bytes
-content length: 12345   bytes
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;floating-point-number-precision&quot;&gt;Floating point number precision&lt;/h1&gt;
-&lt;p&gt;也可以指定浮點數的總長度及小數點後要到第幾位。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%10f&lt;/code&gt;: 總長度為10的浮點數，小數點後預設為6位，如果需要超過長度10才能表示，還是會超過。
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response time: %10f ms&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;25.35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response time: %10f ms&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;125.35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response time: %10f ms&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2125.11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;response time:  25.350000 ms
-response time: 125.350000 ms
-response time: 2125.110000 ms //長度超過9了
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%.2f&lt;/code&gt;: 指定小數點後到第2位。
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response time: %.2f ms&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;25.35123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// response time: 25.35 ms&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%10.2f&lt;/code&gt;: 總長度為10，且只小數點後兩位
-    &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response time: %10.2f ms&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;25.35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response time: %10.2f ms&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;125.35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response time: %10.2f ms&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2125.11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;response time:      25.35 ms
-response time:     125.35 ms
-response time:    2125.11 ms
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;在這篇文章記錄了常用的verbs，除了自己忘記可以回來看，也希望能幫助到有需要的人，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="formatting" /><summary type="html">在fmt package裡Printf, Fprintf, Fscanf, Scanf，或像是log package裡的Printf, Fatalf， 只要是function名字後面有f的，就能format你的input，以fmt.Printf為例: ```go fmt.Printf(“My name is %s. I am %d years old”, “HoMuChen”, 30)</summary></entry></feed>
+比如說URL的設計、如何model resource、documentation、versioning等等…&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">在web開發裡，API是幾乎無所不在，而其中最常見的應該就是基於HTTP協議的RESTful API， 這篇簡介跟討論到底什麼是RESTful，為何有它的出現?</summary></entry></feed>
