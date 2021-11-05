@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-03T21:13:56+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2021-11-03T21:03:00+08:00</published><updated>2021-11-03T21:03:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/">&lt;p&gt;人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-05T13:22:41+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Golang] 如何逐行讀取檔案，或使用shell pipe到go process</title><link href="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/" rel="alternate" type="text/html" title="[Golang] 如何逐行讀取檔案，或使用shell pipe到go process" /><published>2021-11-05T13:00:00+08:00</published><updated>2021-11-05T13:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/">&lt;p&gt;這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料，
+最後示範直接用unix pipe將資料pipe給我們的go程式，做到像下面這樣的事:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;words.txt | go run ./wc.go
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;bufioscanner&quot;&gt;bufio.Scanner&lt;/h1&gt;
+&lt;p&gt;我們將使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bufio.Scanner&lt;/code&gt;來一行一行地讀取檔案內容，先看看會用到的function們的signature:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;func NewScanner(r io.Reader) *Scanner&lt;/li&gt;
+  &lt;li&gt;func (s *Scanner) Scan() bool&lt;/li&gt;
+  &lt;li&gt;func (s *Scanner) Text() string&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;bufio之所以叫做bufio，就是因為他在io的基礎上，加上了buffer，
+這邊我們使用的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bufio.Scanner&lt;/code&gt;，一樣是從&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io.Reader&lt;/code&gt;裡Read資料出來，但會先將資料存在他的buffer裡面，
+呼叫&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Text()&lt;/code&gt;可以拿到資料，呼叫&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scan()&lt;/code&gt;則是叫他繼續讀取下一筆資料。&lt;/p&gt;
+
+&lt;p&gt;預設上，每一次Scan就是讀取一行，如果回傳值為&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false&lt;/code&gt;就代表已經沒有資料了，
+除了一次讀取一行之外，還有其他的方式，但今天這裡就不介紹了～&lt;/p&gt;
+
+&lt;h1 id=&quot;範例程式&quot;&gt;範例程式&lt;/h1&gt;
+&lt;p&gt;以下示範讀取一個檔案(words.txt)，算出每一行的字出現幾次，並將結果打印至螢幕上:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;words.txt: &lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-txt&quot;&gt;apple
+banana
+orange
+apple
+apple
+orange
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wc.go:&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;bufio&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;io&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;log&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;os&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;err&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./words.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;err&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fatalf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;error when reading file with message: %v&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bufio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewScanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Scan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s: %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;shell-pipe&quot;&gt;Shell Pipe&lt;/h1&gt;
+&lt;p&gt;既然我們已經可以從檔案中一行一行讀取資料了，那要不要試試看這樣！
+利用shell pipe從上一個程式的stdout中讀取資料。&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;words.txt | go run ./wc.go
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;想要達成上面的用法，相當簡單，只要把我們wc function的參數，從使用&lt;strong&gt;*os.File&lt;/strong&gt;改成&lt;strong&gt;os.Stdin&lt;/strong&gt;就行了～
+因為他們都有implement &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io.Reader&lt;/code&gt;，也就是main function變成如下:&lt;/p&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;separate-io-from-logic&quot;&gt;Separate IO from Logic&lt;/h1&gt;
+&lt;p&gt;前面我們將wc算完的結果，直接&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fmt.Printf&lt;/code&gt;到stdout上，但有時如果我們想寫到檔案裡，
+或是寫到network socket時，就不太方便。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wc&lt;/code&gt;應該只專注在word count一件事上就好，
+不需要管input是從哪裡來的，就像前面我們使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*os.File&lt;/code&gt;後面用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;os.Stdin&lt;/code&gt;一樣，
+也不用管output要寫到哪裡去，所以我們再將程式改寫如下:&lt;/p&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;os&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;io&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;bufio&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Writer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bufio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewScanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Scan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%s: %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wc&lt;/code&gt;就只管將結果寫到一個可以寫的地方，至於它是什麼地方，就由呼叫他的人來決定！&lt;/p&gt;
+
+&lt;p&gt;By the way, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wc&lt;/code&gt;這名字取的不好，因為我們實現的是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uniq -c&lt;/code&gt;這個command，而不是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wc&lt;/code&gt;😄&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;感謝你的閱讀～ 今天學到了如何使用bufio.Scanner來一行一行地讀取檔案，另外也體會到了interface的強大，
+io.Reader及io.Writer是個很好的例子，並且利用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;os.Stdin&lt;/code&gt;就可以使用shell pipe ( | )，
+跟其他linux command一起搭配完成任務！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="linux" /><summary type="html">這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料， 最後示範直接用unix pipe將資料pipe給我們的go程式，做到像下面這樣的事: 1 cat words.txt | go run ./wc.go</summary></entry><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2021-11-03T21:03:00+08:00</published><updated>2021-11-03T21:03:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/">&lt;p&gt;人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
 對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。&lt;/p&gt;
 
 &lt;h1 id=&quot;邁向成功的公式&quot;&gt;邁向成功的公式&lt;/h1&gt;
@@ -1168,69 +1368,4 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 &lt;ol&gt;
   &lt;li&gt;&lt;a name=&quot;1&quot;&gt;J. Jenkins and K. Dallenbach, “Obliviscence During Sleep and Waking,” The American Journal of Psichology, Vol. 35, 1924, pp. 605-612. doi:10.2307/1414040&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nm1TxQj9IsQ&quot; target=&quot;_blank&quot; name=&quot;2&quot;&gt;Youtube: Master Your Sleep &amp;amp; Be More Alert When Awake&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="psychology" /><category term="health" /><category term="sleep" /><summary type="html">如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、 注意力提升、脾氣會變好，不易怒、遠離肥胖及糖尿病及心血管疾病、抵抗力變好不易感冒、 不易罹癌、變帥變漂亮、更有吸引力～請問你願意花多少錢購買這產品呢？讓我現在告訴你， 免錢！你每天都有機會享受到這些好處，需要做的就只是好好地睡覺～～😴</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">RESTful API簡介: 什麼是RESTful? 以及為何需要它?</title><link href="https://homuchen.com/posts/restful-api-introduction/" rel="alternate" type="text/html" title="RESTful API簡介: 什麼是RESTful? 以及為何需要它?" /><published>2021-09-27T20:00:00+08:00</published><updated>2021-09-27T20:00:00+08:00</updated><id>https://homuchen.com/posts/restful-api-introduction</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-introduction/">&lt;p&gt;在web開發裡，API是幾乎無所不在，而其中最常見的應該就是基於HTTP協議的RESTful API，
-這篇簡介跟討論到底什麼是RESTful，為何有它的出現?&lt;/p&gt;
-
-&lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;首先，什麼是RESTful，可以說它是一種慣例，一個關於HTTP API如何設計的style，
-慣例就是並沒有任何的強制性，但當大家都遵守的慣例時，特立獨行的邊緣人可能就會被排擠，
-至少是難以融入大家的，有了慣例，可以不需要在每次要做事前都要溝通，
-大家就照著以前一般是怎麼做的做就好。&lt;/p&gt;
-
-&lt;p&gt;所以你會希望你要使用的API的夠RESTful的，這樣你用起來才方便、好用，你也會希望你開發的API是RESTful的，
-這樣客戶用起來才會開心。當然你也可以不要，如此一來，客戶要用你的API時，會需要更多地去查看你的文件，
-他們可能就會覺得麻煩、不開心，你就少了一些賺錢的機會了。&lt;/p&gt;
-
-&lt;p&gt;所以接下來看看RESTful API到底是長怎樣吧!&lt;/p&gt;
-
-&lt;h1 id=&quot;resource-based&quot;&gt;Resource based&lt;/h1&gt;
-&lt;p&gt;首先他是&lt;strong&gt;resource based&lt;/strong&gt;的，也就是每個URL對應到的是一個或多個resource、entity，是&lt;strong&gt;名詞&lt;/strong&gt;，
-而不會是動詞，比如說下列這樣就是RESTful:&lt;/p&gt;
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;/posts                  -&amp;gt; 代表全部的posts
-/posts/1                -&amp;gt; 代表某一篇post
-/posts/1/comments       -&amp;gt; 代表某一篇post的所以留言
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;那怎樣不是RESTful呢:&lt;/p&gt;
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;/getPosts               -&amp;gt; 代表全部的posts
-/getpostComments/1      -&amp;gt; 代表某一篇post的所以留言
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h1 id=&quot;actions&quot;&gt;Actions&lt;/h1&gt;
-&lt;p&gt;有了名詞，那&lt;strong&gt;動詞&lt;/strong&gt;呢？如果想要對資源做一些操作怎麼辦呢？比如說新增、修改、刪除。
-此時就是使用HTTP的method，&lt;strong&gt;GET&lt;/strong&gt;、&lt;strong&gt;POST&lt;/strong&gt;、&lt;strong&gt;PUT&lt;/strong&gt;、&lt;strong&gt;DELETE&lt;/strong&gt;，分別對應到&lt;strong&gt;讀取&lt;/strong&gt;、&lt;strong&gt;新增&lt;/strong&gt;、&lt;strong&gt;修改&lt;/strong&gt;、&lt;strong&gt;刪除&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;看幾個例子吧!&lt;/p&gt;
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;GET     /posts/1        -&amp;gt; 取得某一篇文章
-POST    /posts          -&amp;gt; 新增一篇文章
-PUT     /posts/2        -&amp;gt; 修改某一篇文章
-DELETE  /posts/2        -&amp;gt; 刪除某一篇文章
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;為什麼restful是長這樣呢&quot;&gt;為什麼RESTful是長這樣呢？&lt;/h1&gt;
-&lt;p&gt;基本上RESTful就是verbs x nouns、操作對上資源，因為HTTP有URL代表資源，還有methods，
-這也是為何基於HTTP的RESTful API自然而然就會長成這樣的原因。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/restful-api-1.jpg&quot; alt=&quot;http versus restful api&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;但HTTP methods有限，所以通常只會有幾種操作，也就是&lt;strong&gt;CRUD&lt;/strong&gt;，
-這也是為何常常RESTful API就是對資源進行CRUD的操作，大部分簡單的應用也許這樣就夠了，
-如果你的應用，無法以簡單的CRUD表示，比如說需要同時對多個資源進行操作才能完成某項任務，
-那可以需要重新思考如何設計URL，model你的resourse，之後會在後續的文章裡再來討論。&lt;/p&gt;
-
-&lt;p&gt;若對於HTTP協議還不熟悉的，可以看這系列文章中，前面關於HTTP的部分。&lt;/p&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;大概知道了RESTful API應該是什麼樣子，還有許多細節的部分，會在後面的文章中慢慢討論，
-比如說URL的設計、如何model resource、documentation、versioning等等…&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">在web開發裡，API是幾乎無所不在，而其中最常見的應該就是基於HTTP協議的RESTful API， 這篇簡介跟討論到底什麼是RESTful，為何有它的出現?</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="psychology" /><category term="health" /><category term="sleep" /><summary type="html">如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、 注意力提升、脾氣會變好，不易怒、遠離肥胖及糖尿病及心血管疾病、抵抗力變好不易感冒、 不易罹癌、變帥變漂亮、更有吸引力～請問你願意花多少錢購買這產品呢？讓我現在告訴你， 免錢！你每天都有機會享受到這些好處，需要做的就只是好好地睡覺～～😴</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
