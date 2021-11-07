@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-05T13:22:41+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Golang] 如何逐行讀取檔案，或使用shell pipe到go process</title><link href="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/" rel="alternate" type="text/html" title="[Golang] 如何逐行讀取檔案，或使用shell pipe到go process" /><published>2021-11-05T13:00:00+08:00</published><updated>2021-11-05T13:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/">&lt;p&gt;這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-07T13:46:25+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">密碼學是什麼? 有何用途以及要解決什麼樣的問題?</title><link href="https://homuchen.com/posts/what-problems-cryptography-to-solve/" rel="alternate" type="text/html" title="密碼學是什麼? 有何用途以及要解決什麼樣的問題?" /><published>2021-11-07T13:30:00+08:00</published><updated>2021-11-07T13:30:00+08:00</updated><id>https://homuchen.com/posts/what-problems-cryptography-to-solve</id><content type="html" xml:base="https://homuchen.com/posts/what-problems-cryptography-to-solve/">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;如何在有惡意的第三方的情況下安全的通訊&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;密碼學要解決的問題大概可以以上面這一句話來概括，這篇文章主要的目的，
+就是要來深入探討這句話，通訊的本質是什麼，會面臨什麼問題，
+以及什麼樣才是&lt;strong&gt;安全&lt;/strong&gt;的通訊，要達到哪些目標才算安全呢?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/why-cryptography-0.jpg&quot; alt=&quot;what is communication and cryptography?&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;通訊-communication&quot;&gt;通訊 (communication)&lt;/h1&gt;
+&lt;h2 id=&quot;什麼是通訊&quot;&gt;什麼是通訊&lt;/h2&gt;
+&lt;p&gt;就是將信息(message)由一方傳達到另一方，比如說對話、傳小紙條、寫信或Email、傳LINE、
+通電話、上網看網頁、使用社群網站等等等… 各式各樣的訊息，在各處流動，尤其是現在網際網路發達的時代，
+訊息的來源可能來自世界各地，更多元、更即時、也更大量。&lt;/p&gt;
+
+&lt;h2 id=&quot;惡意第三方&quot;&gt;惡意第三方&lt;/h2&gt;
+&lt;p&gt;試想一下，你在跟人對話，旁邊有人在偷聽; 視線範圍內沒人，但卻隔牆有耳;
+小時候在教室裡傳紙條，被中間的同學打開來看; 特務電影中，駭客在路邊的一台小車裡，
+監聽著你撥打的電話; 以上的種種的例子，都是有第三方得到了別人中間通信的內容。&lt;/p&gt;
+
+&lt;h2 id=&quot;通訊的媒介都是公開的&quot;&gt;通訊的媒介都是公開的&lt;/h2&gt;
+&lt;p&gt;我們在跟別人講話，訊息在空氣中透過聲波傳送; 我們傳紙條寫信，將信息寫在紙上傳遞;
+古代打仗，有傳令兵、馬拉松跑者，帶著重要的情報在路上奔波; 
+講電話時，則是將訊息轉化為電磁波發送出去。&lt;/p&gt;
+
+&lt;p&gt;不管你用的通訊方法是哪個，都需要一個媒介來傳遞，而這個媒介是&lt;strong&gt;公開&lt;/strong&gt;的!
+沒有辦法阻止別人來讀取當中的資料，就算你是有護衛的傳令兵，也可能被殺了然後被奪取令旗。&lt;/p&gt;
+
+&lt;h1 id=&quot;密碼學的出現&quot;&gt;密碼學的出現&lt;/h1&gt;
+&lt;p&gt;所以密碼學的出現，就是為了解決以上的問題，在古代戰爭中已經有許多的密碼學的蹤跡，
+世界大戰時，破解德軍加密過的訊息，也是當時戰爭中相當重要的一環。&lt;/p&gt;
+
+&lt;h1 id=&quot;什麼是安全&quot;&gt;什麼是安全&lt;/h1&gt;
+&lt;p&gt;上述所舉的例子，其實只提到安全其中的一個部分，也就是信息不想被第三方看到，
+但其實還有其他可能被惡意攻擊的面相，以下就來討論，要達到所謂的安全，需要顧到的環節。&lt;/p&gt;
+
+&lt;p&gt;以下將用一個例子來說明，假設有兩個人名為Alice跟Bob，他們倆是筆友，透過寫實體信的方式互通往來，
+而有一個壞人Charlie想要偷看信件並破壞兩方感情，來看看Charlie有哪些招數可以用吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/why-cryptography-1.jpg&quot; alt=&quot;communication in adverities&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;偷看-sniffing&quot;&gt;偷看 (Sniffing)&lt;/h2&gt;
+&lt;p&gt;Charlie要做壞事的第一步，當然就是先偷看他們通信的內容是什麼？只要到收信者的信箱那邊等，
+或是去找郵差襲擊他，都可以達到這個目地，把信拿出來看一看再放回去，Alice跟Bob的甜言蜜語，
+或是要約會的時間地點都會被知道。&lt;/p&gt;
+
+&lt;h2 id=&quot;竄改-tempering&quot;&gt;竄改 (Tempering)&lt;/h2&gt;
+&lt;p&gt;再更進一步，Charlie可以將信中的內容做更改，比如說約會時間為下午1點，可以改成4點、7點、10點，
+這跟提款單或支票使用數字要用大寫是一樣的意思，就是為了防止內容被修改過卻看不出來。&lt;/p&gt;
+
+&lt;h2 id=&quot;冒充-impersonation&quot;&gt;冒充 (Impersonation)&lt;/h2&gt;
+&lt;p&gt;如果Charlie有辦法模仿他們的字跡，就可以直接寫一封新的信！在真實世界中，我們就是透過字跡、簽名，
+來認證信息的來源是不是本人，但不乏看過許多冒用簽名的例子。&lt;/p&gt;
+
+&lt;p&gt;通話的話是使用聲音，視訊可以看長相，但聲音也可以合成，影像也可以，看看最近當紅的小玉deepfake風暴就知道了，
+所以到底該如何證明一份訊息的來源是真的出自本人，也是一個重要的問題！&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;感謝你的閱讀～ 今天學習到了密碼學的目的，了解到通訊不安全的本質，壞人可能透過哪些方法來做壞事，
+包括偷看、竄改及冒充。&lt;/p&gt;
+
+&lt;p&gt;該如何怎麼防範這些問題，就是密碼學的核心，至於密碼學是如何做到這些事的，
+這篇文章還沒有說明，之後有機會再補上!
+如果有人留言敲碗要的話，我就立馬開始寫！哈哈，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html">如何在有惡意的第三方的情況下安全的通訊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[Golang] 如何逐行讀取檔案，或使用shell pipe到go process</title><link href="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/" rel="alternate" type="text/html" title="[Golang] 如何逐行讀取檔案，或使用shell pipe到go process" /><published>2021-11-05T13:00:00+08:00</published><updated>2021-11-05T13:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/">&lt;p&gt;這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料，
 最後示範直接用unix pipe將資料pipe給我們的go程式，做到像下面這樣的事:&lt;/p&gt;
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;words.txt | go run ./wc.go
@@ -1159,213 +1223,4 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Playing-Financial-Independence-Retire-Early/dp/1608685802&quot; name=&quot;1&quot; target=&quot;_blank&quot;&gt;Playing with FIRE(Financial Independence Retire Early): How Far Would You Go for Financial Freedom?&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="work" /><category term="self improvement" /><summary type="html">讀完這本《一週工作四小時》後， 讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、拒當社畜、 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、 這本書所提出的內容，最後是我之後可能會做的一些改變！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學</title><link href="https://homuchen.com/posts/book-note-why-we-sleep/" rel="alternate" type="text/html" title="[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學" /><published>2021-10-02T23:00:00+08:00</published><updated>2021-10-02T23:00:00+08:00</updated><id>https://homuchen.com/posts/book-note-why-we-sleep</id><content type="html" xml:base="https://homuchen.com/posts/book-note-why-we-sleep/">&lt;p&gt;如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、
-注意力提升、脾氣會變好，不易怒、遠離肥胖及糖尿病及心血管疾病、抵抗力變好不易感冒、
-不易罹癌、變帥變漂亮、更有吸引力～請問你願意花多少錢購買這產品呢？讓我現在告訴你，
-免錢！你每天都有機會享受到這些好處，需要做的就只是好好地睡覺～～😴&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg&quot; alt=&quot;book: why we slepp&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;大綱&quot;&gt;大綱&lt;/h1&gt;
-&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《為什麼要睡覺》&lt;/strong&gt;&lt;/a&gt;裡，
-首先解釋睡覺的生理機制，我們的身體是透過怎樣的設計，讓我們感到疲憊想睡，
-越理解它，才能越知道如何不去破壞它，搞到自己失眠。&lt;/p&gt;
-
-&lt;p&gt;接著說明在各個方面睡覺帶來的好處，及沒有睡覺的壞處。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;睡覺的機制: 身體怎麼知道要睡覺了?&lt;/li&gt;
-  &lt;li&gt;睡覺的過程: 睡著時大腦在幹嘛？&lt;/li&gt;
-  &lt;li&gt;記憶&lt;/li&gt;
-  &lt;li&gt;注意力&lt;/li&gt;
-  &lt;li&gt;情緒&lt;/li&gt;
-  &lt;li&gt;心血管系統&lt;/li&gt;
-  &lt;li&gt;肥胖&lt;/li&gt;
-  &lt;li&gt;美容覺&lt;/li&gt;
-  &lt;li&gt;免疫力&lt;/li&gt;
-  &lt;li&gt;創造力&lt;/li&gt;
-  &lt;li&gt;如何睡得更好&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;睡眠的生理機制&quot;&gt;睡眠的生理機制&lt;/h1&gt;
-&lt;p&gt;或許我們都聽過或經歷過去旅行有時差睡不著、聽過或使用褪黑激素、喝杯咖啡或茶來驅逐睡意，
-這些跟睡眠有關的身理機制是什麼，是這本書一開始時要討論的。&lt;/p&gt;
-
-&lt;h2 id=&quot;近日節律&quot;&gt;近日節律&lt;/h2&gt;
-&lt;p&gt;也就是常聽到的生理時鐘，我們的身體會有一個近乎24小時的節奏，讓你每天會醒來、想睡，還控制其他節律模式，
-包括飲食時間、情緒、代謝、核心溫度等等等…&lt;/p&gt;
-
-&lt;p&gt;而這個身理時鐘在哪裡呢？就是在我們腦中的是&lt;strong&gt;視力交叉上核&lt;/strong&gt;，他每天都會利用大自然之中最穩定的訊號源: &lt;strong&gt;陽光&lt;/strong&gt;來調校，
-並透過&lt;strong&gt;褪黑激素&lt;/strong&gt;，來告訴我們的大腦及身體: 天黑了！該睡覺囉～&lt;/p&gt;
-
-&lt;p&gt;但每個人的週期也可能會偏移，所以有人會是晨型人，而有人卻是夜貓子，因為如此一來有在演化上的優勢，
-就可以錯開大家睡覺的時間，有人守夜，避免睡覺時被偷襲，增加生存的機會。&lt;/p&gt;
-
-&lt;p&gt;不過現代社會的作息卻比較適合晨型人，一早要起床上學、上班，所以對於夜貓子也不要太苛刻，
-他們也不是故意要晚睡晚起，天生的基因讓他們如此，期許在未來的社會裡，可以有新設計的社會制度，
-讓大家都睡飽飽～&lt;/p&gt;
-
-&lt;h2 id=&quot;腺苷&quot;&gt;腺苷&lt;/h2&gt;
-&lt;p&gt;另一種會讓我們想睡的，就是腦中的一個化學物質: &lt;strong&gt;腺苷&lt;/strong&gt;，從我們一早醒來開始，
-我們的大腦就會開始累積腺苷，只要我們不睡，腺苷的濃度就會越來越高，
-而隨著濃度越來越高的腺苷，我們的睡眠壓力就會越大，越來越想睡覺。&lt;/p&gt;
-
-&lt;p&gt;而有一種物質，會卡住腺苷受體的位置，使我們的腦感受不到睡眠壓力，他就是&lt;strong&gt;咖啡因&lt;/strong&gt;，
-所以在攝取咖啡因之後，我們的精神會變好，不過只要待身體將咖啡因代謝掉之後，就會開始想睡。&lt;/p&gt;
-
-&lt;p&gt;咖啡因待謝的速度因人而異，半衰期可能3~6個小時，所以如果你晚上6點喝一杯咖啡，到了12點，
-有可能身體裡還有一半的咖啡因還沒代謝掉，以至於睡不著。&lt;/p&gt;
-
-&lt;h1 id=&quot;睡覺的組成&quot;&gt;睡覺的組成&lt;/h1&gt;
-&lt;p&gt;隨著科技的進步，我們可以記錄睡覺時的腦波腦部活動，得知睡眠有個&lt;strong&gt;1.5個小時&lt;/strong&gt;的週期，
-每個週期又由&lt;strong&gt;非快速動眼睡眠&lt;/strong&gt;跟&lt;strong&gt;快速動眼睡眠&lt;/strong&gt;組成，越接近天亮的週期裡，快速動眼睡眠的比重會越多。&lt;/p&gt;
-
-&lt;p&gt;如果你讓自己晚睡或早起，這兩種睡眠少掉的比重就不一樣，我們需要這兩種睡眠，缺一不可，他們各有不同的功能。&lt;/p&gt;
-
-&lt;h2 id=&quot;非快速動眼睡眠&quot;&gt;非快速動眼睡眠&lt;/h2&gt;
-&lt;p&gt;此時的大腦，各個腦區協調一致，發出同步且緩慢的腦波，所以需要&lt;strong&gt;跨腦區協作&lt;/strong&gt;的功能跟非快速動眼睡眠息息相關，
-比如說記憶要將短期記憶轉為長期記憶，需要負責短期記憶跟長期記憶的腦區的溝通;
-又比如本能的衝動跟理性的控制，也是需要我們的本能腦與掌握高級認知的額葉做溝通，所以如果沒睡好，
-可能記憶力會變差，情緒容易波動，這些會在下面的章節中詳細說明。&lt;/p&gt;
-
-&lt;h2 id=&quot;快速動眼睡眠&quot;&gt;快速動眼睡眠&lt;/h2&gt;
-&lt;p&gt;此時的腦波看起來就像醒著一樣，掌管情緒及記憶的腦區特別興奮，作夢也是發生在此一階段，
-在腦內上演各種小劇場，並且偏好把各種不相關的記憶拿來組合，所以跟創造力息息相關。&lt;/p&gt;
-
-&lt;h1 id=&quot;記憶&quot;&gt;記憶&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;在學習前的睡眠有助於形成新記憶，學習後的睡眠也能幫助鞏固記憶。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;我們的睡眠分為&lt;strong&gt;短期記憶&lt;/strong&gt;(工作記憶)及&lt;strong&gt;長期記憶&lt;/strong&gt;，由不同腦區負責，分別為&lt;strong&gt;海馬迴&lt;/strong&gt;及&lt;strong&gt;皮質&lt;/strong&gt;，
-短期記憶的容量有限，將記憶從短期轉為長期的機制，也還持續在研究當中，
-不過睡眠一定扮演著重要的角色，能將記憶從海馬迴搬到皮質，以鞏固記憶，並且清空了海馬迴，
-讓你可以繼續學習新事物，而在這之中，跨腦區溝通的非快速動眼睡眠起到了相當的作用。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/sleep-1.jpg&quot; alt=&quot;the benifit of sleep for memory&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;實驗---睡眠之後的學習&quot;&gt;實驗 - 睡眠之後的學習&lt;/h2&gt;
-&lt;p&gt;請兩組人分別記憶100組人臉跟名字的對照，記完之後，一組經歷90分鐘的午睡，另一組不能睡，之後再記100組，
-對於後面100組事實進行測驗，測驗結果顯示，有經過一晚睡眠的組別比起另一組，多記得了20%的事實。
-這個實驗針對睡眠之後的學習，指出睡眠能清出工作記憶，有利於我們記住新的記憶。&lt;/p&gt;
-
-&lt;h2 id=&quot;實驗---學習之後的睡眠&quot;&gt;實驗 - 學習之後的睡眠&lt;/h2&gt;
-&lt;p&gt;另一個實驗則測試學習之後的睡眠對記憶的影響，一樣先請參與者記憶一份語文資料，在這之後的八小時裡，
-分別測試睡與不睡，記憶流失的情況，結果發現睡覺組比起不睡組，表現好了20%-40%&lt;a href=&quot;#1&quot;&gt;[1]&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h1 id=&quot;注意力&quot;&gt;注意力&lt;/h1&gt;
-&lt;p&gt;很明顯地，睡不飽會無法集中注意力，這點似乎毋庸置疑，每個或多或少都有親身體會過，
-&lt;strong&gt;專注力的短暫喪失&lt;/strong&gt;，看書看一看，不知道前幾秒鐘讀了哪些東西，恍神發呆頭突然點了一下，
-如果你在開車，這短短的一兩秒鐘就足以喪命，接著來看看睡眠不足對注意力的影響到底有多大，
-利用實驗將結果量化，讓我們知道多少程度的睡眠剝奪，對我們人身安全有多大的影響！&lt;/p&gt;
-
-&lt;h2 id=&quot;實驗---注意力喪失&quot;&gt;實驗 - 注意力喪失&lt;/h2&gt;
-&lt;p&gt;在實驗室中，用來測量注意力的方法如下: 讓受試者一看到電腦裡亮起的燈，就必須馬上按按鈕，
-並記錄反應時間，雖然不同程度的睡眠剝奪都有造成反應時間變長，但這裡我們更關心的是完全失去反應的失神，
-也就是可能出車禍的那個瞬間的次數。&lt;/p&gt;
-
-&lt;p&gt;實驗結果為，經過一整天連續24小時不睡覺，失神的次數多了400%，如果繼續不睡覺，這個次數可以繼續上升。
-而每晚只睡4小時且連續6天的受試者，表現跟一整天不睡的人一樣，失神的次數多達了400%，如果連續到11天，
-則表現跟持續48小時不睡一樣。接下來最令人擔心的是每晚睡6小時的受試者，這也許跟許多人平常的睡眠時間差不多了，
-在經過10晚的只睡6小時後，失神的次數的表現跟連續24小時沒睡一樣！多了400%，&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/sleep-2.jpg&quot; alt=&quot;the lack of concentration due to sleeplessness&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;情緒&quot;&gt;情緒&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;睡眠不足時，腦中的情緒中心反應會更強烈&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;沒睡飽，情緒會暴躁可能不是沒有原因的，可以看看我們的大腦，在睡眠缺乏時會如何反應。&lt;strong&gt;杏仁核&lt;/strong&gt;，
-負責威脅偵測、啟動我們身體&lt;strong&gt;戰或逃反應&lt;/strong&gt;的中心，是對於我們生存至關重要的本能機制，當我們遇到危險時，
-心跳會加速、血壓升高、緊張、集中注意力已準備戰鬥或逃跑，以下一個實驗，就是檢視缺乏睡眠時的杏仁核。&lt;/p&gt;
-
-&lt;h2 id=&quot;實驗---情緒反應&quot;&gt;實驗 - 情緒反應&lt;/h2&gt;
-&lt;p&gt;讓受試者分別觀看不同情緒梯度的照片，從情緒中立的照片比如說一張卓子、一顆蘋果，到有負面威脅感照片，
-像是著火的房子，張著獠牙的蛇等等…一組受試者是有睡飽的，另一組則沒睡，可以觀測到沒睡覺的受試者，
-在看到帶有情緒的圖片時，杏仁核的反應多了60%!&lt;/p&gt;
-
-&lt;h1 id=&quot;心血管系統&quot;&gt;心血管系統&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;缺肥睡眠將導至心跳加速、血壓升高、提高冠狀動脈粥狀硬化的機率&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;睡眠不足對於心血管的影響的根本原因，就是它導致了交感神經過於興奮，在許多睡眠缺乏的時候裡，都發現了交感神經的興奮，
-交感神經是個激動的系統，必要時會使心跳加快、呼吸急促、與增加肌肉張力等功能，
-使人焦慮繃緊，進入備戰狀態，長時間處於這個狀態就像是車子引擎一直以高速運轉一樣，
-活塞、油封、排檔等各個部件也會開始損壞。&lt;/p&gt;
-
-&lt;p&gt;而夜晚睡覺時，又是生長激素分泌最旺盛的時候，生長激素能對身體進行修復，當然也包括我們的血管，
-睡眠不足對血管造成傷害又減少修復的機會，以致心血管疾病發生的機率的上升。&lt;/p&gt;
-
-&lt;h2 id=&quot;實驗---日光節約時間&quot;&gt;實驗 - 日光節約時間&lt;/h2&gt;
-&lt;p&gt;全球性的一場大實驗，約15億人參與，每年從冬令時間轉為夏令時間的那天，少掉了一個小時的睡眠時間，
-結果隔天帶來心臟病發作尖峰😱&lt;/p&gt;
-
-&lt;h1 id=&quot;肥胖&quot;&gt;肥胖&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;沒睡飽會更餓、想吃更多、更傾向於吃垃圾食物、且身體捨不得消耗掉脂肪作為能量來源&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;我們的身體有兩種控制食慾的激素，&lt;strong&gt;瘦素&lt;/strong&gt;，及&lt;strong&gt;飢餓素&lt;/strong&gt;，顧名思義，瘦素濃度高時，讓我們感覺飽了沒什麼食慾，
-飢餓素會啟動強烈的飢餓的感覺，而睡眠不足會使瘦素濃度降低，飢餓素的濃度升高，導致我們吃吃吃～&lt;/p&gt;
-
-&lt;p&gt;除了吃更多之外，還會無法控制衝動，吃下更多的垃圾食物，睡眠缺乏時，前額葉皮質，也就是能深思熟慮、控制決定的區域，
-變得不活躍，而較原始的腦部構造，也就是驅動慾望的區域對食物的反應也增強了，這種不在審慎自制而是轉向原始慾望的腦部活動，
-使我們選擇食物時，傾向吃那些吃起來比較爽的垃圾～&lt;/p&gt;
-
-&lt;p&gt;最後！睡眠不足時，身體會捨不得捨棄脂肪，所以消耗脂肪以作為熱量來源的比例會變少，
-基於以上種種原因，對於想要擁有更好的體態的人，一定要好好睡覺呀！&lt;/p&gt;
-
-&lt;h1 id=&quot;美容覺&quot;&gt;美容覺&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;睡飽飽會更有吸引力!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;有個實驗室這樣的，讓一群18到30歲受試者分別拍兩次照片，一次是睡飽飽，另一次只睡五小時，
-之後請一群人來對照片評分，針對的項目有健康狀況、疲勞程度、吸引力。&lt;/p&gt;
-
-&lt;p&gt;結果出爐～一個人經過一夜短眠之後，&lt;strong&gt;較不健康&lt;/strong&gt;、&lt;strong&gt;比較疲倦&lt;/strong&gt;、且明顯&lt;strong&gt;缺乏吸引力&lt;/strong&gt;，美容覺得以印證！&lt;/p&gt;
-
-&lt;h1 id=&quot;免疫力&quot;&gt;免疫力&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;睡得越少，愈可能感冒，且對付癌症的殺手細胞數量減少&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;每個人可能都有過經驗，當感冒時，渾身不舒服，只想好好躺下來睡一覺，此時的免疫系統刺激你的睡眠系統，
-要求更多的睡眠時間，幫助加強戰力！可以知道睡眠和免疫系統之間，有非常密切的雙向關係。&lt;/p&gt;
-
-&lt;h2 id=&quot;實驗---噴病毒實驗&quot;&gt;實驗 - 噴病毒實驗&lt;/h2&gt;
-&lt;p&gt;請一群受試者來到實驗中進行為期一週的實驗，首先往他們的鼻子裡噴了許多病毒，接下來的一週裡，
-不斷採集血液和唾液樣本，還有鼻涕，利用血液及唾液中的免疫抗體和鼻涕的量來確認他是不是得了感冒。&lt;/p&gt;
-
-&lt;p&gt;這些人依睡眠量被分為四組，&lt;/p&gt;
-
-&lt;h1 id=&quot;創造力&quot;&gt;創造力&lt;/h1&gt;
-&lt;p&gt;TODO&lt;/p&gt;
-
-&lt;h1 id=&quot;如何睡得更好&quot;&gt;如何睡得更好&lt;/h1&gt;
-&lt;h2 id=&quot;光線&quot;&gt;光線&lt;/h2&gt;
-&lt;p&gt;現代生活充斥著各種電子產品，就算到了晚上，燈光通明，看著電視、用電腦、滑手機等等的活動，
-讓我們一直暴露於光照之下，干擾了我們大腦利用光線來同步近日節律。在該產生褪黑激素，
-叫我們身體準備睡覺的時候，卻還是很亮！大腦誤以為還沒天黑，以至於晚上難以入眠。&lt;/p&gt;
-
-&lt;p&gt;到了晚上，減少暴露於光線之下，電腦手機可以使用夜覽模式，減少藍光，調低室內的燈光亮度。&lt;/p&gt;
-
-&lt;p&gt;晚上的必要照明，可以使用來自水平視線以下的光，因為我們眼睛被設計用來接收光的部分，他的目標是對準著天上的。&lt;a href=&quot;#2&quot;&gt;[2]&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;溫度&quot;&gt;溫度&lt;/h2&gt;
-&lt;p&gt;別在接近睡覺的時間運動，體溫過高將不利於入睡，也可以在睡前洗個熱水澡，利用充滿血液的表面皮膚散熱，
-降低我們的核心溫度，涼爽的室溫也比溫暖的室溫更容易入睡。&lt;/p&gt;
-
-&lt;h2 id=&quot;心情&quot;&gt;心情&lt;/h2&gt;
-&lt;p&gt;最後心情要放鬆，腦袋別胡思亂想，不要為明天憂慮，因為明天自有明天的憂慮，或許可以把待辦事項寫下來，
-透過寫這個動作，清空你的腦袋。做做腹式呼吸或冥想，調整呼吸的速率，來使副交感神經作用，好好鬆一下～～&lt;/p&gt;
-
-&lt;p&gt;最後祝大家睡得飽、睡得好、睡得呱呱叫，擁有健康的身體及聰明的腦袋，掰掰～～👋&lt;/p&gt;
-
-&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a name=&quot;1&quot;&gt;J. Jenkins and K. Dallenbach, “Obliviscence During Sleep and Waking,” The American Journal of Psichology, Vol. 35, 1924, pp. 605-612. doi:10.2307/1414040&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nm1TxQj9IsQ&quot; target=&quot;_blank&quot; name=&quot;2&quot;&gt;Youtube: Master Your Sleep &amp;amp; Be More Alert When Awake&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="psychology" /><category term="health" /><category term="sleep" /><summary type="html">如果有一個產品，只要你使用它，就可以擁有更好記憶力、學習能力、 注意力提升、脾氣會變好，不易怒、遠離肥胖及糖尿病及心血管疾病、抵抗力變好不易感冒、 不易罹癌、變帥變漂亮、更有吸引力～請問你願意花多少錢購買這產品呢？讓我現在告訴你， 免錢！你每天都有機會享受到這些好處，需要做的就只是好好地睡覺～～😴</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/sleep-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="work" /><category term="self improvement" /><summary type="html">讀完這本《一週工作四小時》後， 讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、拒當社畜、 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、 這本書所提出的內容，最後是我之後可能會做的一些改變！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
