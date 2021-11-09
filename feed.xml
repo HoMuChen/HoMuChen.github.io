@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-07T13:46:25+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">密碼學是什麼? 有何用途以及要解決什麼樣的問題?</title><link href="https://homuchen.com/posts/what-problems-cryptography-to-solve/" rel="alternate" type="text/html" title="密碼學是什麼? 有何用途以及要解決什麼樣的問題?" /><published>2021-11-07T13:30:00+08:00</published><updated>2021-11-07T13:30:00+08:00</updated><id>https://homuchen.com/posts/what-problems-cryptography-to-solve</id><content type="html" xml:base="https://homuchen.com/posts/what-problems-cryptography-to-solve/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-09T15:10:11+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動</title><link href="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/" rel="alternate" type="text/html" title="Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動" /><published>2021-11-09T10:00:00+08:00</published><updated>2021-11-09T10:00:00+08:00</updated><id>https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process</id><content type="html" xml:base="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/">&lt;p&gt;這篇文章將介紹如何使用Nodejs的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline&lt;/code&gt; module來一行一行地讀取檔案，
+接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧，
+如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;words.txt | node wc.js
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;readline&quot;&gt;readline&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;createInterface:&lt;/strong&gt;&lt;br /&gt;
+首先使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline.createInterface()&lt;/code&gt;，需要一個input參數，他需要是一個&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;，
+這裡我們使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fs.createReadStream()&lt;/code&gt;打開我們的檔案，並作為input，傳給createInterface。&lt;/p&gt;
+
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createInterface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createReadStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./words.txt&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Event: “line”&lt;/strong&gt;&lt;br /&gt;
+接著就可以監聽&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;line&lt;/code&gt; event，每當從input讀取到換行(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\r&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\r\n&lt;/code&gt;)，line event就會被發送。
+callback function有一個參數，它是個字串。
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Event: “close”&lt;/strong&gt;&lt;br /&gt;
+當input stream結束的時候，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;close&lt;/code&gt; event就會被發送。
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;完整程式碼&quot;&gt;完整程式碼&lt;/h2&gt;
+&lt;p&gt;最後我們就利用上面的資訊，寫一隻&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wc.js&lt;/code&gt;，來計算檔案中每個字出現的次數，將結果以JSON的格式輸出至stdout上。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createReadStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./words.txt&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createInterface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;unix-pipe&quot;&gt;unix pipe&lt;/h1&gt;
+&lt;p&gt;這邊示範如何從stdin中讀取資料流，就可以使用shell pipe ( | )，讀取來自前一個程式的output了。&lt;/p&gt;
+
+&lt;p&gt;只需將&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline.createInterface&lt;/code&gt;&lt;/strong&gt;的input參數，從&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fs.createReadStream('./words.txt')&lt;/code&gt;&lt;/strong&gt;改成
+&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;process.stdin&lt;/code&gt;&lt;/strong&gt;就行了！因為他們都是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;的implementation。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//只改了這行&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createInterface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;summary&lt;/h1&gt;
+&lt;p&gt;感謝你的閱讀～ 這篇文章示範了如何使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline&lt;/code&gt;模組來逐行讀取檔案，
+並且看到了兩個&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;的實例，體會到了stream的好用之處。&lt;/p&gt;
+
+&lt;p&gt;另外我還有寫過另一篇一樣功能，只不過是用golang寫的，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;可以類比為golang中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io.Reader&lt;/code&gt;
+，有興趣的可以看看:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[Golang] 如何逐行讀取檔案，或使用shell pipe到go process&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;其他stream的實例:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;How to stream data from Blob Storage at your HTTP server using Azure and express.js&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="node.js" /><category term="linux" /><summary type="html">這篇文章將介紹如何使用Nodejs的readline module來一行一行地讀取檔案， 接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧， 如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:</summary></entry><entry><title type="html">密碼學是什麼? 有何用途以及要解決什麼樣的問題?</title><link href="https://homuchen.com/posts/what-problems-cryptography-to-solve/" rel="alternate" type="text/html" title="密碼學是什麼? 有何用途以及要解決什麼樣的問題?" /><published>2021-11-07T13:30:00+08:00</published><updated>2021-11-07T13:30:00+08:00</updated><id>https://homuchen.com/posts/what-problems-cryptography-to-solve</id><content type="html" xml:base="https://homuchen.com/posts/what-problems-cryptography-to-solve/">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;如何在有惡意的第三方的情況下安全的通訊&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -262,7 +378,11 @@ orange
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 &lt;p&gt;感謝你的閱讀～ 今天學到了如何使用bufio.Scanner來一行一行地讀取檔案，另外也體會到了interface的強大，
 io.Reader及io.Writer是個很好的例子，並且利用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;os.Stdin&lt;/code&gt;就可以使用shell pipe ( | )，
-跟其他linux command一起搭配完成任務！&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="linux" /><summary type="html">這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料， 最後示範直接用unix pipe將資料pipe給我們的go程式，做到像下面這樣的事: 1 cat words.txt | go run ./wc.go</summary></entry><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2021-11-03T21:03:00+08:00</published><updated>2021-11-03T21:03:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/">&lt;p&gt;人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
+跟其他linux command一起搭配完成任務！&lt;/p&gt;
+
+&lt;p&gt;最後，我也有寫一篇一樣功能的Node.js版本，有興趣的可以看一看:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="linux" /><summary type="html">這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料， 最後示範直接用unix pipe將資料pipe給我們的go程式，做到像下面這樣的事: 1 cat words.txt | go run ./wc.go</summary></entry><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2021-11-03T21:03:00+08:00</published><updated>2021-11-03T21:03:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/">&lt;p&gt;人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
 對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。&lt;/p&gt;
 
 &lt;h1 id=&quot;邁向成功的公式&quot;&gt;邁向成功的公式&lt;/h1&gt;
@@ -1066,161 +1186,4 @@ PUT     /accouts/B/deposit      -&amp;gt; 在B帳戶新增一筆錢
 
 &lt;p&gt;這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">繼上篇文章RESTful API簡介: 什麼是RESTful? 以及為何需要它?後， 我們知道了RESTful API是resource based的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。</summary></entry><entry><title type="html">[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</title><link href="https://homuchen.com/posts/book-note-the-four-hour-work-week/" rel="alternate" type="text/html" title="[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！" /><published>2021-10-10T23:00:00+08:00</published><updated>2021-10-31T21:11:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-four-hour-work--week</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-four-hour-work-week/">&lt;p&gt;讀完這本&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;後，
-讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、拒當社畜、
-認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、
-這本書所提出的內容，最後是我之後可能會做的一些改變！&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;每當發現自己屬於多數陣營時，就是你停下來三思的時候 - 馬克.吐溫&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg&quot; alt=&quot;Book: Four Hour Work Week&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;過去的想法&quot;&gt;過去的想法&lt;/h1&gt;
-
-&lt;h2 id=&quot;fire&quot;&gt;FIRE&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;FIRE&lt;/strong&gt;(Financial Independence Retire Early)&lt;a href=&quot;#1&quot;&gt;[1]&lt;/a&gt;，財務自由、提早退休，
-是我工作之後的幾年一直抱持著的想法，提早規劃退休，儘早儲蓄、投資，打造自己的被動收入，
-等到被動收入可以支付你的生活支出的時候，蹦！自由了～可以不必為了討生活而工作，
-擁有自由去做任何你想要做的事，這些都沒錯，也很棒，那問題在哪裡呢？&lt;/p&gt;
-
-&lt;h2 id=&quot;提早退休&quot;&gt;提早退休&lt;/h2&gt;
-&lt;p&gt;想要每天醒來不用面對老闆工作上要求嗎？等退休; 想要冬天住在滑雪小屋，每天滑雪，
-夏天住在海島別墅，每天躺在海灘做日光浴衝浪嗎？等退休; 想要找份對社會有貢獻、有意義的工作嗎？
-等退休; 想要重拾荒廢已久或培養新的興趣嗎？等退休;&lt;/p&gt;
-
-&lt;p&gt;為了提早退休，於是在現在做了許多犧牲，我不能休太長的假，因為要賺錢，也怕被炒魷魚，我不能花大錢享受奢華的體驗，
-因為要存起來，時間久了以後，就有夠多的被動收入可以資助我們想做的事。當我們每天的生活的目標都是為了提早退休，
-就會變得只追逐金錢，而且有了藉口不去思考更重要的問題: 我想要成為怎樣的人? 我想要做什麼? 
-因為這些問題都可以用一些簡單的理由來搪塞過去，也就是等退休再說、等有時間再說、等錢夠多了再說…&lt;/p&gt;
-
-&lt;h2 id=&quot;想要的生活&quot;&gt;想要的生活&lt;/h2&gt;
-&lt;p&gt;終於!熬了十幾年、二十幾年，退休的這天到來了(40幾歲退休還不賴吧？)，突然間擁有了許多的時間，你卻不知道要做什麼，
-或者是終於去做了你想做很久的事，結果卻發現沒有你想像中的那麼美好。&lt;/p&gt;
-
-&lt;p&gt;除去了所有不喜歡的事之後，迎來的不會是一個美好人生，而會是一片空白，
-因為你不知道你想要追求的目標是什麼，有什麼夢想或是事物想要去體驗，過去的人生都在賺錢拼退休…&lt;/p&gt;
-
-&lt;h1 id=&quot;本書摘要&quot;&gt;本書摘要&lt;/h1&gt;
-&lt;p&gt;本書介紹了一群次文化人士: &lt;strong&gt;新富族&lt;/strong&gt;，以&lt;strong&gt;自由&lt;/strong&gt;及&lt;strong&gt;機動性&lt;/strong&gt;作為新貨幣，
-自己決定何時工作、何時追逐夢想、在哪裡生活的一群人。&lt;/p&gt;
-
-&lt;p&gt;作者提出四個步驟DEAL(Definition、Elimination、Automation、Liberation)，
-引導大家重新設計生活型態，並且自己親身實踐，可以在書中看到許多作者的經驗及故事。&lt;/p&gt;
-
-&lt;h2 id=&quot;d---定義人生&quot;&gt;D - 定義人生&lt;/h2&gt;
-&lt;p&gt;什麼是新富族(New Rich)，首先先來看看新富族跟延後人生族(工作 -&amp;gt; 儲蓄 -&amp;gt; 退休)的差別在哪吧!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-1.jpg&quot; alt=&quot;comparasion between New Rich and Delay&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;所以，誰是新富族？&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;重新安排個人行事曆的員工，他談出一份遠距的工作契約，用十分之一的時間達成百分之九十的產出，
-因而得以自由地去各地滑雪，每月還能有兩週帶家人出門旅遊。&lt;/li&gt;
-  &lt;li&gt;刪去獲利最少的客戶與計畫的老闆，他將所有業務外包，在世界各地旅遊，蒐集罕見的歷史文件，
-同時在網站上遠距工作，展示他的繪圖設計。&lt;/li&gt;
-  &lt;li&gt;選擇孤注一擲，拿出全部身家的學生，建立網路影片租借服務，從一小群HDTV愛好著的利基市場，
-每月賺得五千美元的收入。這項每週兩小時的兼差，讓他能夠全職為動物全力奔走。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;可以看出新富族他們都有以下的共同點:&lt;/p&gt;
-
-&lt;h3 id=&quot;有目標夢想&quot;&gt;有目標、夢想&lt;/h3&gt;
-&lt;p&gt;知道自己想成為怎樣的人，想要做的事，而不是每天埋首於追求金錢、事業、名聲、家庭、生活的的各種瑣事、
-而忽略了重要的問題，每天致力於除去不想做的事，渴望自由，卻不知道有了時間之後要幹嘛。&lt;/p&gt;
-
-&lt;p&gt;如果不知道自己想做什麼怎麼辦呢？那更不能繼續埋首工作，要開始思考，並且行動跟實驗，
-這邊我推薦另一本書&lt;a href=&quot;https://www.books.com.tw/products/0010733134&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《做自己的生命設計師: 史丹佛最夯的生涯規劃課》&lt;/strong&gt;&lt;/a&gt;，
-瘋狂地發想所有可能的選項，並打造原型去實驗，不知道自己喜歡做什麼時，唯有去做做看才會知道是否喜歡。&lt;/p&gt;
-
-&lt;h3 id=&quot;有錢又有閒&quot;&gt;有錢又有閒&lt;/h3&gt;
-&lt;p&gt;你可能會說我哪有那個錢和時間去做這些事！沒錯，目標就是要變得有錢又有閒，後面的EAL就是方法論，
-教你如何擁有更多的自由時間，以及金錢來資助你過上夢想中的生活。&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;E(Elimination)，教你去除掉所以不必要花費的時間，維持大部分的產出但同時多出許多時間。&lt;/li&gt;
-  &lt;li&gt;A(Automation)，打造自動創造收入的資產，重點目標是不要花費你的時間，自動的進帳。&lt;/li&gt;
-  &lt;li&gt;L(Liberation)，逍遙自由的機動性，能讓你的財富自動倍增！&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;e---排除旁騖&quot;&gt;E - 排除旁騖&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-2.jpg&quot; alt=&quot;80/20 Priciple and Parkinson's Law&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;八十二十法則&quot;&gt;八十/二十法則&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;八十/二十法則&lt;/strong&gt;，80%果來自20%的因，在許多地方都能用上這個法則，比如說全世界的資產分配、
-公司的大部分的利潤來自與少部分的客戶或產品、個人工作的時間與產出，本書作者很喜歡這個法則，
-並在他其他的書裡也反覆提到，重點就是要找到那最重要的20%的事情，去掉80%的時間與精力，
-達到足夠滿足的結果。&lt;/p&gt;
-
-&lt;h3 id=&quot;不必要不重要的工作&quot;&gt;不必要、不重要的工作&lt;/h3&gt;
-&lt;p&gt;作者在書中的例子是，他削減了95幾%的客戶及難搞的客戶，不做他們生意，把精力留給帶來大部分利潤的客戶，
-那些即使你不用聯絡也會持續買單的客戶，結果就是，工作的時間可能只剩下原先的10%，快樂程度高上許多，
-利潤卻只少掉一點。接著再研究在研究五大客戶的特徵，在下週延攬到三個相似的買家，四周下來，作者營收翻倍，
-每週工時從80小時降到15小時！&lt;/p&gt;
-
-&lt;h3 id=&quot;不必要的資訊&quot;&gt;不必要的資訊&lt;/h3&gt;
-&lt;p&gt;大家每天花在閱讀新聞、滑臉書、PTT的時間有多少呢？這些資訊真的都有必要去知道嗎？
-現代人吃進太多不具營養價值的空卡路里，資訊也是一樣，多數資訊不僅耗時，而且跟你的目標無關。&lt;/p&gt;
-
-&lt;p&gt;作者建議，每次要閱讀資訊時，問自己，對我而言，這項資訊有立即、重要的用途嗎? 單單是有關還不夠，
-還必須是立即且重要的，如果資訊無法用在要事上，或是等你要用的時候也已經忘記了，那就等於無用的資訊。&lt;/p&gt;
-
-&lt;h3 id=&quot;帕金森定律&quot;&gt;帕金森定律&lt;/h3&gt;
-&lt;p&gt;我們有多少的時間完成一項任務，我們就會花多少的時間完成，這就是帕金森定律。&lt;/p&gt;
-
-&lt;p&gt;每天朝九晚五工作的社會文化，讓我們必須每天在辦公室待上八個小時，就算工作不需要那麼久的時間來完成，
-我們還是會被迫創造各種活動來填滿時間，如果我們有15小時，就會填滿15小時; 如果我們有8小時，
-就會填滿8小時; 如果你急事，2個小時後要離開辦公室，那你就會神奇地在2個小時內完成工作。&lt;/p&gt;
-
-&lt;p&gt;世界上的每個人真的都需要八個小時來完成工作嗎？！這只是重量不重質的社會遺毒，應該要關注產出，
-而不是在辦公室坐滿八小時，所以員工的下一步就是談出一份遠距工作的契約，好脫離辦公室的框架，
-變得更有效率，這部分會在後面L的章節更多地討論。&lt;/p&gt;
-
-&lt;h2 id=&quot;a---自動進帳&quot;&gt;A - 自動進帳&lt;/h2&gt;
-&lt;p&gt;要想過上奢華生活，或是放手追逐夢想的一個重要要素就是: &lt;strong&gt;收入&lt;/strong&gt;，
-在這一階段，就是要打造出可以自動帶來收入的事業，從尋找Idea、找出利基市場、
-測試廣告效益，最後則是脫身及自動化。&lt;/p&gt;
-
-&lt;p&gt;因為這部分的內容我自己也沒有實踐，細節就不多在這裡分享了，
-有興趣的讀者推薦你去書裡看看～&lt;/p&gt;
-
-&lt;p&gt;簡單分享一個點就是，你可能會覺得所有事情都自己來做比較省錢，自己當客服回覆客戶問題，
-自己處理訂單、出貨，但以工程師的話來說，這樣就有兩個問題，一個是&lt;strong&gt;單點失敗&lt;/strong&gt;，另一個是&lt;strong&gt;無法擴展&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;單點失敗: 一但你不能工作了，整個事業就將無法運作，所以你只能一直一直不停地工作&lt;/li&gt;
-  &lt;li&gt;無法擴展: 當客戶越來越多時，總有一天你將會無法自行處理所有的業務&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;l---逍遙自在&quot;&gt;L - 逍遙自在&lt;/h2&gt;
-&lt;p&gt;如果你每天只在辦公室工作1小時，我想大部分的老闆都會不高興，
-為了能夠自由地掌握自己的時間、去到任何你想去的地方，想辦法談出一份遠距工作契約將會是第一步。&lt;/p&gt;
-
-&lt;p&gt;比如當你有辦法做到達到相同產出，但只花1/4的時間時，如果你還待在辦公室，人們就會要求你繼續工作到八小時，
-以達成4倍的產出，或者你就必須裝忙，來填滿這八小時，這就是社會框架下的辦公室文化。
-所以作者在這一章節中，教你如何一步一步地得到一份遠距的工作，
-跟著書中人物的故事，策略性地、有方法地達成遠距工作的目標。&lt;/p&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;看完之後，非常興奮！立馬先查了一下東南亞各地的生活成本，結果發現去峇里島住一個月，大部分根本比住在台北便宜，
-在曼谷住上五星級的飯店，擁有頂樓無邊際泳池及健身房，跟在台北租個鳥籠的價格也相去不遠，那我幹嘛要住在台北呢XD&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-4.jpg&quot; alt=&quot;Living in Bali&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-5.jpg&quot; alt=&quot;Living in Taipei&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;以上只是利用機動性達成最簡單的地理套利，想要體驗奢華的生活，沒有一定要成為億萬富翁，
-賺錢不是目的，過上你想要過的生活才是。&lt;/p&gt;
-
-&lt;p&gt;重要的是我們要如何利多出來的時間，如果你想滑雪，何不直接住在北海道或阿爾卑斯山;
-如果想學潛水，直接去到個海島國家; 如果你不想旅遊，就去做你任何想做的工作; 如果你不知道要幹嘛，
-就趕快多多去體驗這個世界～&lt;/p&gt;
-
-&lt;p&gt;祝大家都有錢有閒，去實現自己的夢想，讓這世界變得更加美好，掰掰～👋&lt;/p&gt;
-
-&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Playing-Financial-Independence-Retire-Early/dp/1608685802&quot; name=&quot;1&quot; target=&quot;_blank&quot;&gt;Playing with FIRE(Financial Independence Retire Early): How Far Would You Go for Financial Freedom?&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="work" /><category term="self improvement" /><summary type="html">讀完這本《一週工作四小時》後， 讓我產生了許多在工作上及生活上的新想法，跳脫朝九晚五的社會框架、拒當社畜、 認識了新富族、發掘了更多生活型態的可能性。在這篇文章裡，我將會分享我原先既有的一些想法、 這本書所提出的內容，最後是我之後可能會做的一些改變！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/posts/http-restful-api-design-practical-guide/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;RESTful API Design — A practical guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><summary type="html">繼上篇文章RESTful API簡介: 什麼是RESTful? 以及為何需要它?後， 我們知道了RESTful API是resource based的，今天講著重討論該如何設計resource，也就是HTTP URL中path的部分。</summary></entry></feed>
