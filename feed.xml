@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-11T16:04:35+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">台北捷運在疫情期間各站的進出人數</title><link href="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/" rel="alternate" type="text/html" title="台北捷運在疫情期間各站的進出人數" /><published>2021-11-11T16:04:00+08:00</published><updated>2021-11-11T16:04:00+08:00</updated><id>https://homuchen.com/posts/mrt-transportation-volume-during-pandemic</id><content type="html" xml:base="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/">&lt;p&gt;COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-14T21:36:53+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</title><link href="https://homuchen.com/posts/book-note-atomic-habits/" rel="alternate" type="text/html" title="[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則" /><published>2021-11-14T21:36:00+08:00</published><updated>2021-11-14T21:36:00+08:00</updated><id>https://homuchen.com/posts/book-note-atomic-habits</id><content type="html" xml:base="https://homuchen.com/posts/book-note-atomic-habits/">&lt;p&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;
+這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到，
+卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後，
+作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/self-improvement-books-1.jpg&quot; alt=&quot;書: 原子習慣&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;習慣是什麼&quot;&gt;習慣是什麼&lt;/h1&gt;
+&lt;p&gt;習慣佔據你人生的八、九成，試想一下每天醒來，躺在床上滑一下手機，
+走去浴室刷牙洗臉，要不要吃早餐，早餐要吃什麼，通勤去上班的路上在做什麼，
+工作時如何面對同事，面對事情是如何處理，下班了之後要做什麼，要去運動嗎?
+還是回家躺在沙發上耍廢，該準時就寢嗎？還是東摸摸西摸摸又到了半夜了，
+跟人聊天會抱怨最近發生的負面的事嗎？&lt;/p&gt;
+
+&lt;p&gt;上述說的這些事，你都不需要在當下耗費心思去做選擇，而是不假思索地反應出來，
+但他們就是你現在會成為怎樣的人的根本原因。因為習慣做起來毫不費力，
+而且頻率很高，經過時間的累積後，影響將會慢慢顯現，變得越來越巨大。&lt;/p&gt;
+
+&lt;h1 id=&quot;專注系統而非目標&quot;&gt;專注系統，而非目標&lt;/h1&gt;
+&lt;p&gt;這就有點像是被動收入，專注於打造每天每個月的現金流，而不是獲得一大筆錢，
+被動現金流一旦打造完成之後，無時無刻都可以為你帶來收益。
+但如果你是將目標放在獲得某筆金額，過程中可能會很辛苦，
+並且有人可能還會無所不用其極地來達成，比如說超時工作、
+想辦法投機股票、加密貨幣、偷搶拐騙等等等…&lt;/p&gt;
+
+&lt;p&gt;專注於系統就像是好好地養好一隻會生金蛋的雞一樣，照顧好雞本身，
+自然會帶給你金蛋，如果只專注於目標，就有可能做出殺雞取卵般的行為，
+所以好習慣就是一隻好雞🐔！&lt;/p&gt;
+
+&lt;p&gt;專注於目標也有其他的壞處，比如說你的目標是減重10公斤，
+除了可能會用激進的手段來達成之外，也可能在費盡千辛萬苦終於達成之後，
+你就沒有動力繼續保持健康的生活又復胖，更多的可能是就中途放棄，沒有意志力再進行下去。&lt;/p&gt;
+
+&lt;p&gt;所以該怎麼辦呢？這本書給出解答就是透過習慣來達成你的目標，
+藉由每天的小勝利，讓你成為你想要成為的人，只要知道終點在哪個方向(首先你也要知道方向)，
+每天有朝著那個方向前進就好，而且重點是&lt;strong&gt;不自覺地，輕鬆地&lt;/strong&gt;前進，
+而不用依靠自制力，人的&lt;strong&gt;自制力是有限的&lt;/strong&gt;，每天都依靠意志力，總有一天會累歪的😫&lt;/p&gt;
+
+&lt;h1 id=&quot;四步驟&quot;&gt;四步驟&lt;/h1&gt;
+&lt;p&gt;所以該如何打造自己的習慣系統呢? 作者提出了一個框架，將一個習慣的組成拆解如下:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;提示 -&amp;gt; 渴望 -&amp;gt; 回應 -&amp;gt; 獎賞&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我們從環境中、或是固定的時間地點接收到了提示刺激，引起了我們的渴望，
+接著為了滿足那個渴望，我們做出了回應，也就是一些行為，最後得到了獎賞來滿足那些渴望，
+得到獎賞便增強了整件事的迴路，下次只要遇到一樣的情況，大腦便會想做一樣的事，因為他期待會獲得獎賞。&lt;/p&gt;
+
+&lt;p&gt;以吃垃圾食物為例，我們可能到了週五晚上回到家，經歷了一週辛苦的工作準備迎接週末時，
+洗了個舒服的澡，坐上沙發，以上這些時間地點的提示，就觸發我們想要耍廢的渴望，
+於是乎，我們做出了回應，打開電視打開Netflix，準備好零食飲料，開始耍廢～
+立刻地，我們得到了影劇的刺激，以及充滿糖分、脂肪、鹽分的食物的滿足，大腦覺得開心，
+便增強了我們未來繼續如此作為的可能。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg&quot; alt=&quot;習慣四階段: 提示、渴望、回應、獎賞&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;所以該怎麼培養好習慣，剷除壞習慣呢～作者分別對這個階段提出可行動的方案及建議，
+幫助你過關斬將，往好的方向前進～&lt;/p&gt;
+
+&lt;h1 id=&quot;提示&quot;&gt;提示&lt;/h1&gt;
+&lt;p&gt;所有的習慣始於提示，提示可能是某個特定的時間地點，也可能是來自環境中的某個訊號。&lt;/p&gt;
+&lt;h2 id=&quot;環境中的提示&quot;&gt;環境中的提示&lt;/h2&gt;
+&lt;p&gt;有個實驗是這樣的，在醫院的自助餐裡，改變可樂跟瓶裝水的擺放位置，
+將瓶裝水跟可樂交換放到明顯的位置，結果一句話都不用說，就改變了人們的行為，
+瓶裝水的銷量上升了兩成左右，而可樂的銷量則下滑。&lt;/p&gt;
+
+&lt;p&gt;當我們在家裡，客廳桌上就擺著洋芋片，就算我們本來沒有想吃，也非常有可能隨手就拿起來吃了，
+如果放的是健康的水果，你吃的就不會是洋芋片而會是水果; 如果想養成看書的習慣，
+或許可以在早上整理完床鋪後，放一本書在床頭櫃上; 想認真工作的時候，就不要在有電視的地方，
+把手機丟得離自己遠遠的，以免不時就打開電視或拿起手機滑滑。&lt;/p&gt;
+
+&lt;p&gt;另外，空間的用途最好固定，在床上就是要睡覺，書桌就是要工作的地方，想娛樂時去到客廳，
+擁有一個小角落來看書，當我們想要做某件事時，就去到特定的地方，如此一來，
+身邊的環境也可以幫助我們開始做特定的事。&lt;/p&gt;
+
+&lt;h2 id=&quot;習慣堆疊&quot;&gt;習慣堆疊&lt;/h2&gt;
+&lt;p&gt;提示也可以是自己的某個行為，所以習慣堆疊這招，就是要利用我們原先已經擁有的習慣來作為提示，
+比如說每天早上可能我們會沖杯咖啡，那可以再準備完咖啡，坐到位子上時，就先看10分鐘的書，
+或是工作時，拿起手機要滑時，就做10下伏地挺身，在原有的習慣做完之後，
+立馬接上自己想要習慣。&lt;/p&gt;
+
+&lt;h1 id=&quot;渴望&quot;&gt;渴望&lt;/h1&gt;
+&lt;p&gt;接收到提示之後，我們會產生渴望，Friday night使我們有想要放鬆的渴望，
+看到飲料零食使我們有想要吃它喝它的渴望，所以我們可以為我們想要的習慣創造出渴望。&lt;/p&gt;
+
+&lt;p&gt;有個工程師(不是我)想要培養運動的習慣，他也非常愛看Netflix，所以他將他的跑步機跟電腦改裝，
+只有當他在跑步的時候，才可以打開Netflix😂&lt;/p&gt;
+
+&lt;p&gt;你也可以規定自己當做完需要做的習慣時，才能去做想要的事，把渴望跟需要做的事捆綁在一起，
+也可以跟上述的習慣堆疊合在一起應用，在做完&lt;strong&gt;既有&lt;/strong&gt;的習慣後，去做&lt;strong&gt;需要&lt;/strong&gt;的習慣，然後才能做&lt;strong&gt;想要&lt;/strong&gt;的習慣。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-1.jpg&quot; alt=&quot;習慣堆疊 + 渴望綑綁&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;回應&quot;&gt;回應&lt;/h1&gt;
+&lt;p&gt;回應指的就是你真正去做的那件事的行為，該如何設計你的回應好讓我們養成新的習慣呢!&lt;/p&gt;
+&lt;h2 id=&quot;容易去做&quot;&gt;容易去做&lt;/h2&gt;
+&lt;p&gt;當要去做一個行為的阻力太大時，我們就很可能會放棄。&lt;/p&gt;
+
+&lt;p&gt;假如你像要養成去健身房運動，但你卻選了個健身房離你家30分鐘路程的地方，
+每次當你想去運動，除了要克服想偷懶的心魔外，還要加上30分鐘路程的艱辛。&lt;/p&gt;
+
+&lt;p&gt;相反地，當你想要阻止自己去做一個壞習慣時，要讓他變得困難，比如說看完電視，
+就把電視機整台收進倉庫裡，每次要看的時候，都要把電視從倉庫中搬出來，再接線，
+有時候因為懶，就不會再去做那些自己想要去除的壞習慣了。&lt;/p&gt;
+
+&lt;h2 id=&quot;重複勝於時間次數勝於質量&quot;&gt;重複勝於時間，次數勝於質量&lt;/h2&gt;
+&lt;p&gt;有一門攝影課做了以下的實驗，將學生分成了兩組，一組在整個學期中只要繳交一次期末成品，
+一次定生死，而另一組則是要求學生每週都要繳交練習作業，&lt;/p&gt;
+
+&lt;p&gt;想要運動嗎？每天做一下伏地挺身也行，沒錯！就是一下; 想要跑步嗎？先從一個禮拜去散步三次也好，
+一件事如果是你無法想像你可以持續一生都堅持在做的話，就一定不會持久。&lt;/p&gt;
+
+&lt;p&gt;與其新年新希望，在年初雄心壯志一週上三次健身房，然後做了幾週半途而廢，
+不如每天從散步，做一下伏地挺身開始，持之以恆，久而久之，
+你可以會開始在散步途中跑個100個公尺，或是都做一下伏地挺身了，就開始做了第二下、第三下…&lt;/p&gt;
+
+&lt;h1 id=&quot;獎賞&quot;&gt;獎賞&lt;/h1&gt;
+&lt;p&gt;做完一個習慣後，如果我們得到了獎賞便會增強這個習慣，但如果這個獎賞來的太慢，可能會被我們忽略，
+試想一下所有的壞習慣，獎賞都是來得又快又即時，抽菸時尼古丁立刻進入我們身體當中，
+吃垃圾食物時馬上覺得滿足～ 看劇時立即享受到感官的刺激，而壞處卻是可能很久之後才會來，
+我們人類往往都是短視近利的，所以必須讓我們想要培養的習慣有獎賞之外，還要讓它來的即時。&lt;/p&gt;
+
+&lt;h2 id=&quot;創造立即獎賞&quot;&gt;創造立即獎賞&lt;/h2&gt;
+&lt;p&gt;如果我們想要培養的習慣可能就是沒辦法帶來立即的獎賞該怎麼辦呢?&lt;/p&gt;
+
+&lt;p&gt;有時成功完成習慣帶來的勝利感成就感本身就是很好的獎賞了，在均衡飲食、去運動完後，
+覺得自己真是一個健康的人～強化了成為自己想成為的人的形象，就是很棒的事了，
+除此之外還可以透過一些方法來創造獎賞。&lt;/p&gt;
+
+&lt;p&gt;比如說你想要省錢，每次阻止自己亂花錢時，總是心力交瘁，花了很多的意志力終於阻止自己花錢
+，但卻只是讓自己不去做一件事，而沒有得到什麼，這時候，不妨將成功省下來的錢，存入另一個帳戶，
+這個帳戶可以用來資助自己想做的事，想完成的夢想，如此一來，每次省錢時就有得到一個立即的獎賞的感覺，
+也就是在自己的旅遊、美食或夢想帳戶中添上一筆。&lt;/p&gt;
+
+&lt;p&gt;另外也能透過紀錄的方式，為自己每次成功執行一下習慣時記下一筆，有時為了不想讓紀錄中斷，
+也是一種動力！&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;感謝您的閱讀～ 讀完這本書後，知道了不要再依賴意志力來逼自己達成目標，
+而是可以透過許多方法來設計自已，讓自己掉下好習慣的陷阱，不知不覺中，
+每天往好的方向前進! 期許大家都能每天每天讓自己更加成長一咪咪🤏🎉&lt;/p&gt;
+
+&lt;p&gt;最後跟大家分享我應用所學，在生活中培養新習慣的故事(陸續新增):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/lazy-breakfast/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;懶人早餐: 15分鐘，高纖高蛋白低碳水&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><category term="habit" /><summary type="html">《原子習慣》 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到， 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後， 作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。</summary></entry><entry><title type="html">台北捷運在疫情期間各站的進出人數</title><link href="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/" rel="alternate" type="text/html" title="台北捷運在疫情期間各站的進出人數" /><published>2021-11-11T16:04:00+08:00</published><updated>2021-11-11T16:04:00+08:00</updated><id>https://homuchen.com/posts/mrt-transportation-volume-during-pandemic</id><content type="html" xml:base="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/">&lt;p&gt;COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小，
 以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。&lt;/p&gt;
 
 &lt;h1 id=&quot;資料來源&quot;&gt;資料來源&lt;/h1&gt;
@@ -475,6 +621,11 @@ io.Reader及io.Writer是個很好的例子，並且利用&lt;code class=&quot;la
 
 &lt;p&gt;並且從各個面向提出可行動的方案及建議，幫助你過關斬將，培養新的習慣。&lt;/p&gt;
 
+&lt;p&gt;延伸閱讀:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/book-note-atomic-habits/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;你可以期待獲得什麼&quot;&gt;你可以期待獲得什麼?&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;了解習慣對人生的重要&lt;/li&gt;
@@ -882,9 +1033,13 @@ curl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;p&gt;總共花費花椰菜1/5包=89 x 1/4 = 22.25，毛豆1/4包 = 69 x 1/4 = 17.25，2顆蛋 = 2 x 5 = 10，
 總共49.5元～但是份量有點少，所以也不是說很便宜。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;簡單記錄了一下開始下廚的動機及想法，希望對你有所幫助，如果你有更懶的撇步，歡迎下面留言跟大家分享唷！掰掰～ 👋&lt;/p&gt;
 
-&lt;p&gt;簡單記錄了一下開始下廚的動機及想法，希望對你有所幫助，如果你有更懶的撇步，歡迎下面留言跟大家分享唷！掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="food" /><category term="life style" /><category term="habit" /><summary type="html">想少吃些外食的精緻碳水，於是乎開始研究自己下廚，在《原子習慣》 裡有說到，想要開始培養一個新習慣時， 要讓他容易去做，不會太麻煩，目標小一點，好容易踏出第一步並且持之以恆。 所以我開始下廚的重點是簡單、方便、懶人， 而不會是美味(可能是個人廚藝問題)、便宜， 並且先只從早餐開始做起，今天就簡單分享一下我做了些什麼吧！</summary></entry><entry><title type="html">如何不用做額外的工作，就使你的收入倍增</title><link href="https://homuchen.com/posts/double-your-money-without-any-extra-work/" rel="alternate" type="text/html" title="如何不用做額外的工作，就使你的收入倍增" /><published>2021-10-20T19:00:00+08:00</published><updated>2021-10-20T19:00:00+08:00</updated><id>https://homuchen.com/posts/double-your-money-without-any-extra-work</id><content type="html" xml:base="https://homuchen.com/posts/double-your-money-without-any-extra-work/">&lt;p&gt;有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多，
+&lt;p&gt;延伸閱讀:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/book-note-atomic-habits/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="food" /><category term="life style" /><category term="habit" /><summary type="html">想少吃些外食的精緻碳水，於是乎開始研究自己下廚，在《原子習慣》 裡有說到，想要開始培養一個新習慣時， 要讓他容易去做，不會太麻煩，目標小一點，好容易踏出第一步並且持之以恆。 所以我開始下廚的重點是簡單、方便、懶人， 而不會是美味(可能是個人廚藝問題)、便宜， 並且先只從早餐開始做起，今天就簡單分享一下我做了些什麼吧！</summary></entry><entry><title type="html">如何不用做額外的工作，就使你的收入倍增</title><link href="https://homuchen.com/posts/double-your-money-without-any-extra-work/" rel="alternate" type="text/html" title="如何不用做額外的工作，就使你的收入倍增" /><published>2021-10-20T19:00:00+08:00</published><updated>2021-10-20T19:00:00+08:00</updated><id>https://homuchen.com/posts/double-your-money-without-any-extra-work</id><content type="html" xml:base="https://homuchen.com/posts/double-your-money-without-any-extra-work/">&lt;p&gt;有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多，
 而是如何&lt;strong&gt;花更少的錢，來獲得一樣的體驗&lt;/strong&gt;，好讓你金錢的實際價值倍增～&lt;/p&gt;
 
 &lt;p&gt;這是我在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;這本書裡看到的想法，
@@ -931,206 +1086,4 @@ curl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 
 &lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="finance" /><category term="life style" /><category term="self improvement" /><summary type="html">有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多， 而是如何花更少的錢，來獲得一樣的體驗，好讓你金錢的實際價值倍增～</summary></entry><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2021-10-16T23:00:00+08:00</published><updated>2021-10-16T23:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/">&lt;p&gt;在上篇文章&lt;a href=&quot;/posts/message-queue-advantages-use-cases&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;什麼是message queue? 優點及使用場景&lt;/strong&gt;&lt;/a&gt;中，
-看完了為何要使用message queue之後，今天要討論兩類message broker的差異，分別是&lt;strong&gt;memory based&lt;/strong&gt;及&lt;strong&gt;log based&lt;/strong&gt;，
-memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的，
-就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法，
-然後再討論兩種broker的內部設計的不同，最後就可以比較在各種特性上，兩者的不同。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg&quot; alt=&quot;rabbitmq vs kafka&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;基本特性&quot;&gt;基本特性&lt;/h1&gt;
-&lt;p&gt;Message borker最基本的操作就是produce跟consume，一個產生message，一個消耗message，
-此時我們可以問的幾個問題如下:&lt;/p&gt;
-
-&lt;h2 id=&quot;multiple-consumers&quot;&gt;Multiple consumers&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;當有多個consumer時，每個message會被處理多次嗎？還是只會被其中一個consumer處理到一次？&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;load-balancing&quot;&gt;Load balancing&lt;/h3&gt;
-&lt;p&gt;每個message只會被其中&lt;strong&gt;一個&lt;/strong&gt;consumer處理到，所以你可以指派任意多個consumer去consume一個topic，
-當你想要並行處理你的工作時，這會非常有用。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-2-1.jpg&quot; alt=&quot;load balancing&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;fan-out&quot;&gt;Fan-out&lt;/h3&gt;
-&lt;p&gt;每個message會被送到&lt;strong&gt;所有&lt;/strong&gt;的consumer去處理，像是broadcast，可以用在當你的message需要到各個不同的系統時，
-比如說一筆交易的資料，需要被送到data warehouse保存、送到BI分析給老闆看、送到使用者的系統來更新他的交易資訊頁面。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-3-1.jpg&quot; alt=&quot;fan-out&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;persistence&quot;&gt;Persistence&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;當broker掛掉時，已經發送過來的messsage會消失嗎？還是等到broker重啟之後，會再重新發送？&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;就是顧名思義，producer的每個message，是否會確保送到consumer那邊，broker掛掉，message還會不會在。
-不過consumer有沒有處理好這個message又是另一回事了(見下段Acknowledgements)。&lt;/p&gt;
-
-&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;當consumer工作到一半掛掉時，如何確保每個message已經被完整地處理好了呢？&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;因為consumer也可能隨時會掛掉，可能在收到訊息之前，或收到訊息但工作到一半時，
-broker為了確保訊息有好好地到達，會使用acknowledgement，
-acknowledgement就是必須由consumer告訴broker，他已經收到message，broker可以將他從queue中移除了，
-至於ack的時機不同會導致訊息被處理的次數的保證的不同。&lt;/p&gt;
-
-&lt;h3 id=&quot;at-most-once&quot;&gt;At most once&lt;/h3&gt;
-&lt;p&gt;先ack，再處理訊息，如果在處理到一半時掛掉，這個訊息就沒被完整處理到了，
-因為已經ack了，broker已經把訊息從queue中移開，不會再發送這個訊息出來，
-所以最差的情況就是沒被處理到，正常的情況就是處理一次，而且最多一次，此為&lt;strong&gt;at most once&lt;/strong&gt;。&lt;/p&gt;
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;//consumer first ack the message and the process
-function (message) {
-  queue.ack(message)
-  essage.ack()
-}
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;at-least-once&quot;&gt;At least once&lt;/h3&gt;
-&lt;p&gt;想反地，先處理訊息再ack，如果在處理到一半時掛掉，
-因為還沒ack，broker會再發送這個訊息出來，
-所以最差的情況就是訊息被處理到多次，正常的情況就是處理一次，而且至少一次，此為&lt;strong&gt;at least once&lt;/strong&gt;。&lt;/p&gt;
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;//consumer processes the message first and then ack it
-function (message) {
-  process(message)
-  message.ack()
-}
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;internal-design&quot;&gt;Internal Design&lt;/h1&gt;
-&lt;p&gt;現在就來看看message system的內部設計，如此一來就可以知道各個系統的特性以及該如何回答上面的問題，&lt;/p&gt;
-
-&lt;h2 id=&quot;memory-based&quot;&gt;Memory based&lt;/h2&gt;
-&lt;p&gt;這類系統顧名思義，主要使用memory作為message存放的地方，當consumer ack了某個信息後，
-就把它刪掉了，完全不留痕跡。當然很多系統也可以透過設置，決定要不要將信息寫到硬碟上，
-不過主要是用來做recovery的，確保broker本身掛掉時，message不會丟失，
-當確認了message已經成功抵達了它要到的地方後，一樣會把它刪掉。&lt;/p&gt;
-
-&lt;p&gt;此類系統著重的是message從producer到consumer的&lt;strong&gt;過程&lt;/strong&gt;，而不是留下一個永久的&lt;strong&gt;狀態或結果&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;而信息的傳送是由broker主動&lt;strong&gt;push&lt;/strong&gt;給consumer的。&lt;/p&gt;
-
-&lt;h2 id=&quot;log-based&quot;&gt;Log based&lt;/h2&gt;
-&lt;p&gt;而log based的系統則是相反，只有要message進來，就都寫到硬碟上，是一個append only log，
-當consumer要消耗信息時，就是讀取檔案上的資料，讀到盡頭了就等通知，
-等有新的資料繼續被append到檔案中，有點像是Unix tool &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -f&lt;/code&gt; 的感覺。&lt;/p&gt;
-
-&lt;p&gt;此時，信息的傳送consumer去向broker&lt;strong&gt;pull&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-4.jpg&quot; alt=&quot;log based&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;為了不讓寫入的速度被限制一個硬碟上，需要將一個topic的log partitioned，
-每個partition由一台機器負責，可以獨立地讀寫。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-5.jpg&quot; alt=&quot;log partition&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;comparison-between-rabbitmq-and-kafka&quot;&gt;Comparison between RabbitMQ and Kafka&lt;/h1&gt;
-&lt;p&gt;終於可以來看看兩者的比較拉～ 首先奉上一個表格，再來一點一點詳細討論！&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;特性&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;RabbitMQ&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Kafka&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Load Balancing&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Yes&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Yes, but limited&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Fan-out&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Yes, through exchabge binding&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Yes&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Persistence&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Yes, through configuration&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Yes&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Inorder delivery&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Yes, conditionally&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;yes, per partition&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;load-balancing-1&quot;&gt;Load Balancing&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Memory based: 自然地support了load balancing，當有message時，
-broker輪流地向跟他有建立連結的consumer推送信息，就達成了load balancing的效果，
-越多consumer，就可以平行處理越多的工作。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Log based: 無法天生支援load balancing，因為每個consumer彼此是各自獨立的，分別從頭、
-或從某個地方開始讀取log檔案，所以想達成load balancing，是透過partition的方法:&lt;/p&gt;
-
-    &lt;p&gt;假設我現在有一個topic，並且將它partition成三份，此時就可以assign三個consumer給他，
-看起來就像是這一個topic的message被分給三個consumer，而實際上是每一個partition對應到一個consumer，
-所以！&lt;strong&gt;可以同時平行處理這個topic的consumer的數量，也就會是partition的數量&lt;/strong&gt;。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;fan-out-1&quot;&gt;Fan-out&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Memory based: 需要透過額外的設計才能達成，RabbitMQ implememt的AMQP協議，
-exchange binding可以實現pub-sub的patter。&lt;/li&gt;
-  &lt;li&gt;Log based: 自然地support fan-out，每個consumer對log檔案想讀哪就讀哪，想重複讀幾次就讀幾次。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;persistence-1&quot;&gt;Persistence&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Memory based: 透過設置，可以同步將message寫入硬碟，確保不會丟失，不過就只保存到當consumer成功消耗之前。&lt;/li&gt;
-  &lt;li&gt;Log based: 如前面所述，每個message都會寫入硬碟，除非你說要刪掉它，不然就會一直在。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;inorder-delivery&quot;&gt;Inorder delivery&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Memory based: 無法保證message一個一個按照順序的被處理，除非每一個topic只有一個consumer。&lt;/li&gt;
-  &lt;li&gt;Log based: 每個partition上的message，一定是被consumer做一個sequential read的動作，
-所以信息一定會被按照順序讀取，但不同partition之間就沒有順序的保證，他們基本上是獨立的。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;use-cases&quot;&gt;Use cases&lt;/h1&gt;
-&lt;p&gt;最後就來看看在哪些場景比較適合使用哪一種產品吧！&lt;/p&gt;
-
-&lt;h2 id=&quot;是否需要被保存下來&quot;&gt;是否需要被保存下來?&lt;/h2&gt;
-&lt;p&gt;如果你想要message被保存下來，那就用log based的messaging system，保存下來有哪些好處呢？&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;可以肆無忌憚地去consume message，可以去嘗試、做實驗，不用怕message會不見，&lt;/li&gt;
-  &lt;li&gt;各種event sourcing的好處，有興趣的可以google它看看～&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;工作昂不昂貴&quot;&gt;工作昂不昂貴?&lt;/h2&gt;
-&lt;p&gt;如果處理一個message的工作量是很大的，需要耗費很多時間才能做完，你可以比較不會想用log based的產品，為什麼呢?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;它無法使用大量的consumer來平行地處理所有的工作，因為&lt;strong&gt;可以平行工作的consumer的數量受限於partition的數量&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;在一個partition裡，只要有個message需要耗費很多的時間，就會造成塞車，也就是&lt;strong&gt;head of line blocking&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;順序重要嗎&quot;&gt;順序重要嗎?&lt;/h2&gt;
-&lt;p&gt;有些類型的message彼此是獨立不相干的，被處理順序是如何並不重要，就沒一定要使用log based的產品，
-但當你需要保留message的順序時，唯有log based的messaging system可以給你保證，不過只限定於同個partition。&lt;/p&gt;
-
-&lt;p&gt;有哪些例子是順序重要的呢? 比如說對一個使用者的帳戶餘額做加減乘除的運算，順序不同結果就不同，
-但你可以使用user id作為partition key，則在每一個partition裡保持對的順序就好，不同的partition間的順序就不重要了。&lt;/p&gt;
-
-&lt;p&gt;感謝你閱讀到這邊～ 希望以上的內容對你有一丁點的幫助，掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="message queue" /><category term="kafka" /><summary type="html">在上篇文章什麼是message queue? 優點及使用場景中， 看完了為何要使用message queue之後，今天要討論兩類message broker的差異，分別是memory based及log based， memory based像是使用Redis作為broker或RabbitMQ，而log based最有名的， 就比如說是Kafka。這篇文章會先來看看message broker普遍的基本特性及用法， 然後再討論兩種broker的內部設計的不同，最後就可以比較在各種特性上，兩者的不同。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="finance" /><category term="life style" /><category term="self improvement" /><summary type="html">有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多， 而是如何花更少的錢，來獲得一樣的體驗，好讓你金錢的實際價值倍增～</summary></entry></feed>
