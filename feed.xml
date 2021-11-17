@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-14T21:36:53+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</title><link href="https://homuchen.com/posts/book-note-atomic-habits/" rel="alternate" type="text/html" title="[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則" /><published>2021-11-14T21:36:00+08:00</published><updated>2021-11-14T21:36:00+08:00</updated><id>https://homuchen.com/posts/book-note-atomic-habits</id><content type="html" xml:base="https://homuchen.com/posts/book-note-atomic-habits/">&lt;p&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-17T17:52:01+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">什麼是Hash Function? 有什麼特性及用途?</title><link href="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/" rel="alternate" type="text/html" title="什麼是Hash Function? 有什麼特性及用途?" /><published>2021-11-17T17:52:00+08:00</published><updated>2021-11-17T17:52:00+08:00</updated><id>https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages</id><content type="html" xml:base="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/">&lt;p&gt;在之前一篇文章: &lt;a href=&quot;/posts/what-problems-cryptography-to-solve&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;密碼學是什麼? 有何用途以及要解決什麼樣的問題?&lt;/strong&gt;&lt;/a&gt;
+中討論過密碼學的出現是為了解決什麼問題，這篇文章要討論密碼學裡一個重要的概念，
+&lt;strong&gt;Hash Function&lt;/strong&gt;，其與對稱式加密跟非對稱式加密三者共同構成密碼學裡的核心。&lt;/p&gt;
+
+&lt;h1 id=&quot;賭博遊戲&quot;&gt;賭博遊戲&lt;/h1&gt;
+&lt;p&gt;再開始正式的內容之前，先來想個有趣的問題: &lt;strong&gt;賭博中如何防止莊家出老千?&lt;/strong&gt;
+比如說我們現在玩骰子遊戲，賭大小，1-3是小，4-6是大，
+賭博最怕莊家出老千，莊家看你賭小就作弊讓骰子骰出大，看你賭大就骰小，該如何解決這個問題呢~&lt;/p&gt;
+
+&lt;p&gt;這篇文章講Hash那提出的解法當然跟Hash有關囉，文末再來揭曉，首先先來認識Hash function。&lt;/p&gt;
+
+&lt;h1 id=&quot;什麼是hash-function&quot;&gt;什麼是Hash Function&lt;/h1&gt;
+&lt;p&gt;Function就是有一組輸入然後會產生一組輸出，同樣的輸入會產生出同樣的輸出，
+而hash function的輸出是&lt;strong&gt;固定長度&lt;/strong&gt;的，不同的hash funtion，所產出長度都不同，
+比如說md5為128個bits，sha256顧名思義為256個bits。&lt;/p&gt;
+
+&lt;p&gt;輸出的結果跟輸入的資料相比起來，通常是小很多的，
+所以輸出的結果會被稱為&lt;strong&gt;message digest&lt;/strong&gt;，或是直接稱為&lt;strong&gt;hash value&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg&quot; alt=&quot;hash function&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;hash-function的特性&quot;&gt;Hash function的特性&lt;/h1&gt;
+&lt;p&gt;接下來我們來看看好的hash function還具有其他哪些特性，可以使得他在密碼學裡佔有一席之地。&lt;/p&gt;
+
+&lt;h2 id=&quot;irreversibility&quot;&gt;Irreversibility&lt;/h2&gt;
+&lt;p&gt;不可逆的，單向的，就是說當我們得到一個hash funcition的output時，我們無法反推出其input，&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/hash-function-1.jpg&quot; alt=&quot;hash function: irreversibility&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;collision-resistance&quot;&gt;Collision Resistance&lt;/h2&gt;
+&lt;p&gt;什麼是碰撞? 就是說當有兩個不同的輸入，經過hash function的計算後，得到了一樣的結果時，就是碰撞。&lt;/p&gt;
+
+&lt;p&gt;比如說我們的hash function是將輸入除以5的餘數，這樣當我們的input是1、6、11、16等等等的時候，
+所得到的ouput都是1，就碰撞了。&lt;/p&gt;
+
+&lt;p&gt;所以如果一個好的hash function是collision resistance的話，當我們看到兩個不相同的hash value時，
+我們就知道他們倆的input也是不相同，反之亦然，當看到兩個相同的hash value時，
+我們就知道它是由兩個一樣的input所以計算出來的，因為他不會碰撞，不會有多個input對應到同一個output。&lt;/p&gt;
+
+&lt;h1 id=&quot;用途&quot;&gt;用途&lt;/h1&gt;
+&lt;p&gt;Hash Function就是做出&lt;strong&gt;承諾&lt;/strong&gt;、&lt;strong&gt;指紋&lt;/strong&gt;、&lt;strong&gt;識別&lt;/strong&gt;的方法，怎麼說呢？
+接下來我們來看看在哪些地方有用到hash function吧!&lt;/p&gt;
+
+&lt;h2 id=&quot;承諾&quot;&gt;承諾&lt;/h2&gt;
+&lt;p&gt;比如現在要做出愛妻承諾，我們將10條的愛妻守則經過hash function計算的到一個hash value，
+這個value就是一個承諾。承諾就是不會改變的東西，如果我們偷偷地更改了愛妻守則裡的其中一個字，
+因為改變太微小了，老婆可能不會發現，但只要再經過hash function計算過後，就會發現hash value完全不一樣了～&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/hash-function-2.jpg&quot; alt=&quot;hash function: commitment&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如此一般，hash value的一致可以用來保障我們原始資料是沒有改變的，可以被用在下列這幾個地方:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;檔案校正碼&lt;/li&gt;
+  &lt;li&gt;下載安裝檔&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;用來確定我們收到的檔案是沒有損毀的，以及我下載下來要安裝的東西，不是被惡意的第三方給改過的！&lt;/p&gt;
+
+&lt;h2 id=&quot;隱密的承諾&quot;&gt;隱密的承諾&lt;/h2&gt;
+&lt;p&gt;除了是承諾之外，它還可以是隱密的承諾，也就是說我知道你做了一個承諾，
+但我不知道你承諾的內容是什麼，因為hash function具有不可逆的特性，
+但你可能會說這有什麼用嗎~讓我們來看看吧！&lt;/p&gt;
+
+&lt;h3 id=&quot;密碼儲存&quot;&gt;密碼儲存&lt;/h3&gt;
+&lt;p&gt;當我們使用密碼登入別人的服務時，伺服器要知道使用者的密碼輸入的對不對，那它就要記錄下大家的密碼，
+日後使用者登入的時候才可以比對。不過要是伺服器被駭客侵入，
+或透過其他的方式取得這份使用者密碼清單，那代誌就大條了😱&lt;/p&gt;
+
+&lt;p&gt;所以通常伺服器資料庫都不會直接把密碼紀錄下來，而是將密碼hash過後，再將hash value存起來，
+如此一來就算駭客得到這些hash values，也無法得知原本的密碼是什麼，而每次使用者登入的使用，
+只要再將他輸入的密碼hash過一次，然後跟資料庫裡的比對，一樣的話就代表使用者輸入了正確的密碼了，
+在這裡這個承諾就是密碼本身。&lt;/p&gt;
+
+&lt;h2 id=&quot;識別&quot;&gt;識別&lt;/h2&gt;
+&lt;p&gt;因為hash value是固定長度的，可以將它當作一份資料的識別，比如說身分證字號就是使用一位英文加上九位數字，
+來代表著某一位台灣人。&lt;/p&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;commit d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9 (HEAD -&amp;gt; master)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;相信會使用git的大家對這樣的文字不陌生，
+其中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9&lt;/code&gt;就是將這個commit版本中的所有檔案作為input，使用SHA1 hash出來的，
+長度為160個bits，也就是40個hexadecimal的字母，他就作為這個commit的識別。&lt;/p&gt;
+
+&lt;h3 id=&quot;uuid-v3uuid-v5&quot;&gt;UUID v3、UUID v5&lt;/h3&gt;
+&lt;p&gt;這兩個版本分別使用MD5及SHA1，由於v5使用SHA1會生成160bits的hash value，會將其截斷為128bits。&lt;/p&gt;
+
+&lt;h1 id=&quot;賭博遊戲的解法&quot;&gt;賭博遊戲的解法&lt;/h1&gt;
+&lt;p&gt;現在要來解決文章開頭的問題了～利用的就是hash function的隱密的承諾的特性，提出的解法如下:&lt;/p&gt;
+
+&lt;p&gt;玩家可以先將他要下的賭注hash過，得到一串看不懂的東西，然後公開這串hash value，
+由於不可逆的特性的關係，莊家看不懂玩家到底是賭大還是賭小，等開出結果之後，
+玩家再公布他的賭注，並將此再hash一遍，如果得出的hash value一樣，
+玩家就可以宣稱他看到骰子開獎之後才公布的賭注跟原先的賭注是一樣的，酷吧😎&lt;/p&gt;
+
+&lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
+&lt;p&gt;感謝你的閱讀～ 這篇文章簡單地介紹了什麼是hash function，以及它具有哪些特性，
+還有其用途，包括檔案校正、密碼儲存、git commit、uuid等等…&lt;/p&gt;
+
+&lt;p&gt;在密碼學中，還會搭配對稱式及非對稱式加密來達成一些其他的任務，
+比如說訊息驗證碼(message authentication code)、數位簽章(digital signature)等等…
+後續會再慢慢介紹以上的東西，掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html">在之前一篇文章: 密碼學是什麼? 有何用途以及要解決什麼樣的問題? 中討論過密碼學的出現是為了解決什麼問題，這篇文章要討論密碼學裡一個重要的概念， Hash Function，其與對稱式加密跟非對稱式加密三者共同構成密碼學裡的核心。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</title><link href="https://homuchen.com/posts/book-note-atomic-habits/" rel="alternate" type="text/html" title="[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則" /><published>2021-11-14T21:36:00+08:00</published><updated>2021-11-14T21:36:00+08:00</updated><id>https://homuchen.com/posts/book-note-atomic-habits</id><content type="html" xml:base="https://homuchen.com/posts/book-note-atomic-habits/">&lt;p&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;
 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到，
 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後，
 作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。&lt;/p&gt;
@@ -144,7 +245,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/posts/lazy-breakfast/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;懶人早餐: 15分鐘，高纖高蛋白低碳水&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><category term="habit" /><summary type="html">《原子習慣》 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到， 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後， 作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。</summary></entry><entry><title type="html">台北捷運在疫情期間各站的進出人數</title><link href="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/" rel="alternate" type="text/html" title="台北捷運在疫情期間各站的進出人數" /><published>2021-11-11T16:04:00+08:00</published><updated>2021-11-11T16:04:00+08:00</updated><id>https://homuchen.com/posts/mrt-transportation-volume-during-pandemic</id><content type="html" xml:base="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/">&lt;p&gt;COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小，
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><category term="habit" /><summary type="html">《原子習慣》 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到， 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後， 作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">台北捷運在疫情期間各站的進出人數</title><link href="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/" rel="alternate" type="text/html" title="台北捷運在疫情期間各站的進出人數" /><published>2021-11-11T16:04:00+08:00</published><updated>2021-11-11T16:04:00+08:00</updated><id>https://homuchen.com/posts/mrt-transportation-volume-during-pandemic</id><content type="html" xml:base="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/">&lt;p&gt;COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小，
 以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。&lt;/p&gt;
 
 &lt;h1 id=&quot;資料來源&quot;&gt;資料來源&lt;/h1&gt;
@@ -293,7 +394,7 @@ callback function有一個參數，它是個字串。
 
 &lt;p&gt;其他stream的實例:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;How to stream data from Blob Storage at your HTTP server using Azure and express.js&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="node.js" /><category term="linux" /><summary type="html">這篇文章將介紹如何使用Nodejs的readline module來一行一行地讀取檔案， 接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧， 如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:</summary></entry><entry><title type="html">密碼學是什麼? 有何用途以及要解決什麼樣的問題?</title><link href="https://homuchen.com/posts/what-problems-cryptography-to-solve/" rel="alternate" type="text/html" title="密碼學是什麼? 有何用途以及要解決什麼樣的問題?" /><published>2021-11-07T13:30:00+08:00</published><updated>2021-11-07T13:30:00+08:00</updated><id>https://homuchen.com/posts/what-problems-cryptography-to-solve</id><content type="html" xml:base="https://homuchen.com/posts/what-problems-cryptography-to-solve/">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;How to stream data from Blob Storage at your HTTP server using Azure and express.js&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="node.js" /><category term="linux" /><summary type="html">這篇文章將介紹如何使用Nodejs的readline module來一行一行地讀取檔案， 接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧， 如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:</summary></entry><entry><title type="html">密碼學是什麼? 有何用途以及要解決什麼樣的問題?</title><link href="https://homuchen.com/posts/what-problems-cryptography-to-solve/" rel="alternate" type="text/html" title="密碼學是什麼? 有何用途以及要解決什麼樣的問題?" /><published>2021-11-07T13:30:00+08:00</published><updated>2021-11-17T17:52:00+08:00</updated><id>https://homuchen.com/posts/what-problems-cryptography-to-solve</id><content type="html" xml:base="https://homuchen.com/posts/what-problems-cryptography-to-solve/">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;如何在有惡意的第三方的情況下安全的通訊&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -357,7 +458,14 @@ callback function有一個參數，它是個字串。
 
 &lt;p&gt;該如何怎麼防範這些問題，就是密碼學的核心，至於密碼學是如何做到這些事的，
 這篇文章還沒有說明，之後有機會再補上!
-如果有人留言敲碗要的話，我就立馬開始寫！哈哈，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html">如何在有惡意的第三方的情況下安全的通訊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[Golang] 如何逐行讀取檔案，或使用shell pipe到go process</title><link href="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/" rel="alternate" type="text/html" title="[Golang] 如何逐行讀取檔案，或使用shell pipe到go process" /><published>2021-11-05T13:00:00+08:00</published><updated>2021-11-05T13:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/">&lt;p&gt;這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料，
+如果有人留言敲碗要的話，我就立馬開始寫！哈哈，掰掰～👋&lt;/p&gt;
+
+&lt;h1 id=&quot;延伸閱讀陸續新增&quot;&gt;延伸閱讀(陸續新增)&lt;/h1&gt;
+&lt;p&gt;陸續將密碼學相關文章補上～&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/posts/what-is-hash-function-its-properties-and-usages&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;什麼是Hash Function? 有什麼特性及用途?&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html">如何在有惡意的第三方的情況下安全的通訊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[Golang] 如何逐行讀取檔案，或使用shell pipe到go process</title><link href="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/" rel="alternate" type="text/html" title="[Golang] 如何逐行讀取檔案，或使用shell pipe到go process" /><published>2021-11-05T13:00:00+08:00</published><updated>2021-11-05T13:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/">&lt;p&gt;這篇將示範如何用go的bufio，開啟檔案並且一行一行地讀取資料，
 最後示範直接用unix pipe將資料pipe給我們的go程式，做到像下面這樣的事:&lt;/p&gt;
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;words.txt | go run ./wc.go
@@ -1039,51 +1147,4 @@ curl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/posts/book-note-atomic-habits/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="food" /><category term="life style" /><category term="habit" /><summary type="html">想少吃些外食的精緻碳水，於是乎開始研究自己下廚，在《原子習慣》 裡有說到，想要開始培養一個新習慣時， 要讓他容易去做，不會太麻煩，目標小一點，好容易踏出第一步並且持之以恆。 所以我開始下廚的重點是簡單、方便、懶人， 而不會是美味(可能是個人廚藝問題)、便宜， 並且先只從早餐開始做起，今天就簡單分享一下我做了些什麼吧！</summary></entry><entry><title type="html">如何不用做額外的工作，就使你的收入倍增</title><link href="https://homuchen.com/posts/double-your-money-without-any-extra-work/" rel="alternate" type="text/html" title="如何不用做額外的工作，就使你的收入倍增" /><published>2021-10-20T19:00:00+08:00</published><updated>2021-10-20T19:00:00+08:00</updated><id>https://homuchen.com/posts/double-your-money-without-any-extra-work</id><content type="html" xml:base="https://homuchen.com/posts/double-your-money-without-any-extra-work/">&lt;p&gt;有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多，
-而是如何&lt;strong&gt;花更少的錢，來獲得一樣的體驗&lt;/strong&gt;，好讓你金錢的實際價值倍增～&lt;/p&gt;
-
-&lt;p&gt;這是我在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;這本書裡看到的想法，
-作者稱之為自由倍增因子，也就是你能藉由操控這些事，來讓金錢的實際價值倍增，
-他們就是&lt;strong&gt;做什麼&lt;/strong&gt;(what)、&lt;strong&gt;在哪做&lt;/strong&gt;(where)、&lt;strong&gt;何時做&lt;/strong&gt;(when)、&lt;strong&gt;跟誰做&lt;/strong&gt;(whom)。&lt;/p&gt;
-
-&lt;h1 id=&quot;以認養代替購買-以體驗取代擁有&quot;&gt;&lt;del&gt;以認養代替購買&lt;/del&gt; 以體驗取代擁有&lt;/h1&gt;
-&lt;p&gt;想要住在山中的滑雪小屋，每天滑雪嗎？還是想要在某個海島別墅，每天享受日光浴及海灘，
-開著帥氣跑車，享受路人稱羨的眼光嗎？你可能會說，你需要變成億萬富翁才能過上這樣的生活。&lt;/p&gt;
-
-&lt;p&gt;不！你並不需要！你想要的是住在滑雪小屋每天滑雪的生活，而不是擁有一間小屋;
-你想要的是海島風光、沙灘、比基尼，而不是買下一座小島; 你想要的開著跑車耍帥的虛榮心，而不是擁有一台跑車本身，
-財力雄厚與活得像百萬富翁是完全不同的兩件事。&lt;/p&gt;
-
-&lt;h1 id=&quot;地理套利&quot;&gt;地理套利&lt;/h1&gt;
-&lt;p&gt;也就是利用匯率，在消費指數低的國家進行消費，一樣的金錢就可以擁有了更大的購買力！&lt;/p&gt;
-
-&lt;p&gt;當你可以自由地決定你要在哪裡生活時，就可以獲得這項好處，所以脫離在辦公室裡工作的社會框架，
-是作者在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;裡所提倡的，
-不過你是創業者還是受僱於人的打工仔都一樣～&lt;/p&gt;
-
-&lt;p&gt;有時就算不能出國也一樣可以得到一些好處，比如說你最近想學衝浪，那你就可以直接住在宜蘭烏石港、台東東河附近，
-每天，或隔幾天想衝就衝，不需要再耗費通勤的時間跟金錢！&lt;/p&gt;
-
-&lt;h1 id=&quot;時間上的自由&quot;&gt;時間上的自由&lt;/h1&gt;
-&lt;p&gt;當你不用週一到週五，朝九晚五地待在辦公室時，你就可以買週二到週四的便宜機票，
-或是選擇在平日的時候參加任何活動，因為通常假日的收費都比較貴。&lt;/p&gt;
-
-&lt;p&gt;能把工作時間挪到六日，就算工時一樣，也可以相對地為你帶來額外的收入！&lt;/p&gt;
-
-&lt;h1 id=&quot;避免付錢之痛及期待&quot;&gt;避免付錢之痛及期待&lt;/h1&gt;
-&lt;p&gt;在&lt;a href=&quot;https://www.books.com.tw/products/0010785897&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《金錢心理學》&lt;/strong&gt;&lt;/a&gt;這本書裡說到，
-在體驗消費的當下時，如果要你付錢，你就會感到痛苦，也就沒那麼快樂了～&lt;/p&gt;
-
-&lt;p&gt;所以可以選擇預付的方式，提前預先支付掉活動的費用，讓你在體驗的當下，
-專心地享受美好的部分，除此之外，預訂好活動到活動發生的這段期間，還可以讓你每天都有期待的感覺，
-使得這個活動帶來的效益更多！&lt;/p&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;透過&lt;strong&gt;做什麼&lt;/strong&gt;(what)、&lt;strong&gt;在哪做&lt;/strong&gt;(where)、&lt;strong&gt;何時做&lt;/strong&gt;(when)、&lt;strong&gt;跟誰做&lt;/strong&gt;(whom)，能夠讓你相對變得富有，
-感謝大家的閱讀，在這邊聽我練蕭威，如果你還有什麼讓財富倍增的好方法，歡迎在下面留言跟大家分享唷！ 掰掰～ 👋&lt;/p&gt;
-
-&lt;h1 id=&quot;延伸閱讀&quot;&gt;延伸閱讀&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-money-psychology/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 金錢心理學: 打破你對金錢的迷思，學會聰明花費 (上)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="finance" /><category term="life style" /><category term="self improvement" /><summary type="html">有這麼好康的事？！好拉，當然沒有，在這裡要討論的並不是要讓你的絕對收入倍增，也就是你每個月領的薪水並不會變多， 而是如何花更少的錢，來獲得一樣的體驗，好讓你金錢的實際價值倍增～</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="food" /><category term="life style" /><category term="habit" /><summary type="html">想少吃些外食的精緻碳水，於是乎開始研究自己下廚，在《原子習慣》 裡有說到，想要開始培養一個新習慣時， 要讓他容易去做，不會太麻煩，目標小一點，好容易踏出第一步並且持之以恆。 所以我開始下廚的重點是簡單、方便、懶人， 而不會是美味(可能是個人廚藝問題)、便宜， 並且先只從早餐開始做起，今天就簡單分享一下我做了些什麼吧！</summary></entry></feed>
