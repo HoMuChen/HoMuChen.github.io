@@ -1,4 +1,225 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-21T18:19:56+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[System Design] 淺談Database Partition. Centralized and Distributed.</title><link href="https://homuchen.com/posts/what-is-database-partition-sharding/" rel="alternate" type="text/html" title="[System Design] 淺談Database Partition. Centralized and Distributed." /><published>2021-11-21T18:19:00+08:00</published><updated>2021-11-21T18:19:00+08:00</updated><id>https://homuchen.com/posts/what-is-database-partition-sharding</id><content type="html" xml:base="https://homuchen.com/posts/what-is-database-partition-sharding/">&lt;p&gt;什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼?
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-24T22:11:36+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">Node.js: 7 cryptography concepts using ctypto module</title><link href="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/" rel="alternate" type="text/html" title="Node.js: 7 cryptography concepts using ctypto module" /><published>2021-11-24T22:11:00+08:00</published><updated>2021-11-24T22:11:00+08:00</updated><id>https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module</id><content type="html" xml:base="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/">&lt;p&gt;這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念，
+包含&lt;strong&gt;hash&lt;/strong&gt;、&lt;strong&gt;salt&lt;/strong&gt;、&lt;strong&gt;password hashing&lt;/strong&gt;、
+&lt;strong&gt;MAC(message authentication code)&lt;/strong&gt;、
+&lt;strong&gt;Symmetric Encryption&lt;/strong&gt;及&lt;strong&gt;Asymmetric Encryption&lt;/strong&gt;
+及&lt;strong&gt;Digital Signature&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-1.jpg&quot; alt=&quot;cryptography in node.js cryto module&quot; target=&quot;_blank&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;hash&quot;&gt;Hash&lt;/h1&gt;
+&lt;p&gt;可以使用指令&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openssl list -digest-algorithms&lt;/code&gt;來查詢可用的algorithms，以下使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sha256&lt;/code&gt;為例，
+並輸出&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;base64&lt;/code&gt;的字串。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHash&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;digest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;base64&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;salt&quot;&gt;Salt&lt;/h1&gt;
+&lt;p&gt;randomBytes可以幫我們隨機產生你所想要長度的隨機亂數，用來作為salt，
+它的回傳值是一個Buffer。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;password-hashing&quot;&gt;Password hashing&lt;/h1&gt;
+&lt;p&gt;利用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scrypt&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scryptSync&lt;/code&gt;這個KDF(一個為非同步，一個為同步的API)，
+function的前三個參數分別為:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;欲hash的明文資料，此處為密碼&lt;/li&gt;
+  &lt;li&gt;salt&lt;/li&gt;
+  &lt;li&gt;output的長度&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;scryptSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;passwordHash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hashedPassword&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;scryptSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hashedPassword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;以上例子使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;randomBytes&lt;/code&gt;來產生salt，接著將密碼與salt一起hash成32 bytes的hash value，最後跟salt一起回傳。&lt;/p&gt;
+
+&lt;h1 id=&quot;mac&quot;&gt;MAC&lt;/h1&gt;
+&lt;p&gt;跟hash一樣可以使用指令&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openssl list -digest-algorithms&lt;/code&gt;來查詢可用的演算法。&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHmac&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;my-secret!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;foo bar👻&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hmac&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHmac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;digest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;symmetric-encryption&quot;&gt;Symmetric Encryption&lt;/h1&gt;
+&lt;p&gt;支援的對稱式加密的演算法一樣可以透過這個指令來取得&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openssl list -cipher-algorithms&lt;/code&gt;，此處使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aes256&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createCipheriv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createDecipheriv&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;This is the message I wanna deliver&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;key shared between two parties&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//Encrypt&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cipher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createCipheriv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;aes256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;encryptedMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;utf8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//Decrypt&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decipher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createDecipheriv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;aes256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decryptedMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;encryptedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;utf-8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;utf8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;asymmetric-encryption&quot;&gt;Asymmetric Encryption&lt;/h1&gt;
+&lt;p&gt;首先使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generateKeyPair&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generateKeyPairSync&lt;/code&gt;來產生公鑰及私鑰。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generateKeyPairSync&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generateKeyPairSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rsa&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;modulusLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4096&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;publicKeyEncoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;spki&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;privateKeyEncoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;pkcs8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;cipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;aes-256-cbc&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;passphrase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;top secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;接者使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;publicEncrypt&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;privateDecrypt&lt;/code&gt;來encrypt、decrypt message。&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;publicEncrypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateDecrypt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;I am the message to be encypted🥳&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//加密 Encrypt&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;encryptedData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicEncrypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//解密 Decrypt&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decryptedData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateDecrypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;encryptedData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;digital-signature&quot;&gt;Digital Signature&lt;/h1&gt;
+&lt;p&gt;數位簽章牽扯到hash及非對稱加密，使用crypto module中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createSign&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createVerify&lt;/code&gt;，
+回傳的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sign&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Verify&lt;/code&gt; Object都幫我們做好好囉～&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createSign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createVerify&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//取得你的公私鑰匙&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./ssl/key.pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./ssl/cert.pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;this data must be signed&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//使用私鑰sign&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createSign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rsa-sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;signer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;// 使用公鑰verify&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;verifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createVerify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rsa-sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;verifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isVerified&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;verifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;verify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;summay&quot;&gt;Summay&lt;/h1&gt;
+&lt;p&gt;其實就是從官方document裡，把比較常用的整理到這裡，這篇就只有紀錄在Nodejs裡如何實作，
+並沒有討論為何需要上述的每一個東西，以及有何用途，有機會再陸續補上～ 掰掰👋&lt;/p&gt;
+
+&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nodejs.org/api/crypto.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Crypto | Node.js Documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><category term="node.js" /><summary type="html">這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念， 包含hash、salt、password hashing、 MAC(message authentication code)、 Symmetric Encryption及Asymmetric Encryption 及Digital Signature。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[System Design] 淺談Database Partition. Centralized and Distributed.</title><link href="https://homuchen.com/posts/what-is-database-partition-sharding/" rel="alternate" type="text/html" title="[System Design] 淺談Database Partition. Centralized and Distributed." /><published>2021-11-21T18:19:00+08:00</published><updated>2021-11-21T18:19:00+08:00</updated><id>https://homuchen.com/posts/what-is-database-partition-sharding</id><content type="html" xml:base="https://homuchen.com/posts/what-is-database-partition-sharding/">&lt;p&gt;什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼?
 這些跟NoSQL有關嗎? 在傳統的RDBMS，像是MySQL或PostgreSQL中，這些概念也有用嗎?
 這篇文章將討論上述的問題，看看partition在RDBMS及NoSQL中的實踐應用，以及各種優缺點。&lt;/p&gt;
 
@@ -1170,152 +1391,4 @@ curl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;ol&gt;
   &lt;li&gt;jq - &lt;a href=&quot;https://stedolan.github.io/jq/&quot; target=&quot;_blank&quot; name=&quot;1&quot;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;pup - &lt;a href=&quot;https://github.com/ericchiang/pup&quot; target=&quot;_blank&quot; name=&quot;2&quot;&gt;https://github.com/ericchiang/pup&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crawler" /><category term="http" /><category term="curl" /><category term="linux" /><summary type="html">想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩， linux command line tool就有許多好用的工具， 今天以104人力網站的為例，示範如何只使用shell script，就可以開始抓取資料!</summary></entry><entry><title type="html">[讀書筆記] 用對能量，你就不會累</title><link href="https://homuchen.com/posts/book-note-the-power-of-full-engagement/" rel="alternate" type="text/html" title="[讀書筆記] 用對能量，你就不會累" /><published>2021-10-30T10:30:00+08:00</published><updated>2021-10-30T10:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-power-of-full-engagement</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-power-of-full-engagement/">&lt;p&gt;原文書名為&lt;a href=&quot;https://bookzone.cwgv.com.tw/books/details/BBP291&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《The Power of Full Engagement》&lt;/strong&gt;&lt;/a&gt;，
-作者提出&lt;strong&gt;能量管理&lt;/strong&gt;的概念，幫助我們找回對生活與工作的熱情和意義！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg&quot; alt=&quot;Book: The Power of Full Engagement&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;簡介&quot;&gt;簡介&lt;/h1&gt;
-&lt;p&gt;我們生活在步調緊湊的數位時代，資訊、訊息、工作緊接而來，很多人致力學習時間管理，
-試著把每一分一秒塞得滿滿，卻忘了我們不是機器人，是精力及能量有限的人類。試想一下我們有沒有下面的情況:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;你參加一個四小時的緊湊會議，但到了最後兩小時，你能量大幅滑落，無法集中精神。&lt;/li&gt;
-  &lt;li&gt;工作到了下午，你欲振乏力，失去耐心、脾氣暴躁。&lt;/li&gt;
-  &lt;li&gt;今天是妻子的生日，但經過整天工作之後，沒有力氣出去慶祝，或是會分心想著工作的事。&lt;/li&gt;
-  &lt;li&gt;下班計畫了許多活動要去參加，卻一在拖延，只想到家躺在沙發上看電視，完全沒有力氣。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;有的話就需要好好來管理一下能量拉～&lt;/p&gt;
-
-&lt;h2 id=&quot;不同面向的能量&quot;&gt;不同面向的能量&lt;/h2&gt;
-&lt;p&gt;作者將能量分為四種不同，卻又彼此相關的面向，分別為&lt;strong&gt;身體&lt;/strong&gt;、&lt;strong&gt;情緒&lt;/strong&gt;、&lt;strong&gt;心理&lt;/strong&gt;及&lt;strong&gt;精神&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;身體: 最明顯的一個面向，體現在你有沒有體力做事，會不會容易疲累。&lt;/li&gt;
-  &lt;li&gt;情緒: 缺乏時，就容易出現負面情緒如挫折、失望、憤怒、缺乏耐心、同理心及自信心。&lt;/li&gt;
-  &lt;li&gt;心理: 保持專注、理性樂觀的能力及創造力。&lt;/li&gt;
-  &lt;li&gt;精神: 清楚自己的價值觀，維持動力、毅力及知道目標、方向。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;平衡使用定時更新&quot;&gt;平衡使用、定時更新&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;人生是一場馬拉松嗎? 一場又一場的短跑會不會更好些?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;做每件事全力以赴，能量全開，並且要定時休息、補充能量，不然你就被榨乾了，這道理在身體上很明顯，
-但在其它面向，也需要注意。你有多久沒有純粹為了喜悅、放鬆做一件事了呢？
-有多久沒有檢視平常的作為跟核心的價值觀相不相符呢?&lt;/p&gt;
-
-&lt;p&gt;Tim在&lt;a href=&quot;https://www.books.com.tw/products/0010621037&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《一週工作四小時》&lt;/strong&gt;&lt;/a&gt;裡也有提到相關的概念，
-工作及興趣都是週期性的，並且提出&lt;strong&gt;迷你退休&lt;/strong&gt;: 將一般累積在人生後半段的退休時光平均分散在一生當中，
-對這本書有興趣的朋友，可以看我之前寫的讀書筆記:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;突破極限接受訓練&quot;&gt;突破極限、接受訓練&lt;/h2&gt;
-&lt;p&gt;就像肌肉想要變強壯一樣，我們需要鍛鍊它，讓它突破現有界線一點，再讓他休息恢復，
-就像在&lt;a href=&quot;https://www.books.com.tw/products/0010752714&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《刻意練習》&lt;/strong&gt;&lt;/a&gt;裡說的，
-要&lt;strong&gt;走出舒適圈一點點&lt;/strong&gt;，一點點就好唷！&lt;/p&gt;
-
-&lt;p&gt;而在情緒、心智及精神層面也一樣是如此，在後面的章節中，可以看到許多個案，如何針對他們在各方面的能量進行鍛鍊。&lt;/p&gt;
-
-&lt;h2 id=&quot;建立儀式&quot;&gt;建立儀式&lt;/h2&gt;
-&lt;p&gt;我們的意志力是有限的，靠著自律、意志力想要長久地逼自己去做一件事是不實際的，
-這也是在&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;一書裡所提倡的。
-想要改變，去做一件事，有個好的辦法就是讓他成為習慣、儀式化，也就是可以不假思索地就去做它。&lt;/p&gt;
-
-&lt;p&gt;習慣占了我們一天中大部分的時間，想一下你一早起床，你需要克服萬難，用盡一切力氣將自己拖到浴室，然後刷牙洗臉嗎？
-需要像小孩一樣張開雙手，認真專心地才能穿好衣服、綁好鞋帶嗎？都不需要，因為我們已經養成習慣，這些事做起來毫不費力，
-如此一般，在生活中的其他面向，比如飲食、運動、睡眠、正向、感激、耐心、專注、省思也都可以讓他們習慣化、儀式化。&lt;/p&gt;
-
-&lt;h1 id=&quot;個案分析&quot;&gt;個案分析&lt;/h1&gt;
-&lt;p&gt;在這本書的中間，作者分別就四種不同的能量闡述，並透過很多個案，分析他們的問題，是休息復原不夠，
-還是哪方面需要鍛鍊加強，推薦大家去書中看看個案們的故事，也能找找自己有沒以相似的問題~
-以下就只簡單地總結一下四個面向的內容。&lt;/p&gt;
-
-&lt;h2 id=&quot;身體&quot;&gt;身體&lt;/h2&gt;
-&lt;p&gt;談到呼吸、飲食、睡眠、運動，關於這部分，市面上或網路上也有許多相關的資源，
-在這裡我額外推薦一些書。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;睡眠: &lt;a href=&quot;https://www.books.com.tw/products/0010813161&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《為什麼要睡覺》&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;運動: &lt;a href=&quot;https://www.books.com.tw/products/0010855828&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《真正的快樂處方：瑞典國民書！腦科學實證的健康生活提案》&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;情緒&quot;&gt;情緒&lt;/h2&gt;
-&lt;p&gt;情緒能量的不足，體現在我們會容易升起各種負面情緒，焦慮、急躁、沒耐心、負面悲觀，
-也會使我們做其他事時，無法能量全開、效率不佳，同樣也是需要復原及鍛鍊。&lt;/p&gt;
-
-&lt;h3 id=&quot;復元&quot;&gt;復元&lt;/h3&gt;
-&lt;p&gt;試問一下自己: 最近單純為了喜悅、更新能量的活動佔了多久呢？舉凡種花、打球、看書、做愛、
-從事體育活動、聽音樂會、參觀博物館都可以，看電視也是可以，但容易接受太多心智及情緒的垃圾，
-沒有營養，且容易過量。&lt;/p&gt;
-
-&lt;p&gt;如果不知道要做什麼，推薦可以來這裡看看
-&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_hobbies&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;維基百科 List_of_hobbies&lt;/strong&gt;&lt;/a&gt;，
-或是google&lt;strong&gt;嗜好清單&lt;/strong&gt;，從裡面看看，覺得有感到興趣的就做吧！
-就單純是為了好玩，培養一些跟平常生活無關的嗜好，但說不定也會擦撞出某些火花。&lt;/p&gt;
-
-&lt;h3 id=&quot;鍛鍊&quot;&gt;鍛鍊&lt;/h3&gt;
-&lt;p&gt;在書中的個案有人缺乏自信，有的缺乏同理心，有人沒有耐性，書中分享這些個案鍛鍊自信、同理心及耐性的過程故事，
-在此就不多做描述。&lt;/p&gt;
-
-&lt;h3 id=&quot;包容相對特質&quot;&gt;包容相對特質&lt;/h3&gt;
-&lt;p&gt;個性通常有相對的兩面，熱情和超然、自信與謙虛、小心及大膽、耐心跟急切，大部分人都會比較偏重一面，
-像我就很沒有熱情，超然面對一切😂，比起自信，相對地謙虛很多; 然後非常慢郎中😄
-，檢視自己在哪個特質上最不平衡，就可以找到自己需要鍛鍊的部分。&lt;/p&gt;
-
-&lt;h2 id=&quot;心智&quot;&gt;心智&lt;/h2&gt;
-&lt;p&gt;作者指的心智能量主要有兩個，一個是&lt;strong&gt;專注&lt;/strong&gt;，另一個為&lt;strong&gt;理性樂觀&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;關於專注，&lt;a href=&quot;https://www.books.com.tw/products/0010758381&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《Deep Work深度工作力：淺薄時代，個人成功的關鍵能力》&lt;/strong&gt;&lt;/a&gt;，
-這本書是專門討論現代人失去了深度思考、深度工作的能力，被電子郵件及社群綁架分心的議題。&lt;/p&gt;
-
-&lt;p&gt;理性樂觀則為接受世界原本的樣子，但永遠積極努力，朝向期望的結果或解決方式邁進。與之相反的就是悲觀、或者是盲目樂觀，
-船到橋頭自然直，期待什麼都不做，事情就會變好。&lt;/p&gt;
-
-&lt;h2 id=&quot;精神&quot;&gt;精神&lt;/h2&gt;
-&lt;p&gt;精神能量是指讓生活與內心深層的價值觀吻合，同時超越自我利益，
-它是堆動我們各種行為的力量，維持動力、毅力和方向最強大的支持與來源。&lt;/p&gt;
-
-&lt;p&gt;書中有個女性的故事，想要戒菸卻始終失敗，但在某一刻開始，它就再也沒有拿起一根菸，
-那個時刻就是得知自己懷孕的那天，胎兒的健康給了他實踐目標的力量。&lt;/p&gt;
-
-&lt;h1 id=&quot;付諸行動&quot;&gt;付諸行動&lt;/h1&gt;
-&lt;p&gt;知易行難，我們該如何提升和維持生活中各面向的能量呢？作者提出一個三步驟的進程「目標-真相-行動」。&lt;/p&gt;
-
-&lt;h2 id=&quot;確立目標&quot;&gt;確立目標&lt;/h2&gt;
-&lt;p&gt;首先要回答一個問題: 我們的能量要如何使用，才能符合我們的價值觀？我們的生活步調太匆忙，
-很少停下來思考自己最重視的東西。&lt;/p&gt;
-
-&lt;p&gt;但如果像我一樣，不知道自己最重視的價值觀是什麼怎麼辦～這就真的要停下來好好想想了，
-在&lt;a href=&quot;https://en.wikipedia.org/wiki/Rokeach_Value_Survey&quot; target=&quot;_blank&quot;&gt;Rokeach Value Survey&lt;/a&gt;中，
-有列出36項價值觀，可以認真思考，從中選出5項你最重視的，隨著人生再過，這5項價值觀也會再隨之調整，
-它們將成為我們度過人生的基本原則。&lt;/p&gt;
-
-&lt;h2 id=&quot;知道真相&quot;&gt;知道真相&lt;/h2&gt;
-&lt;p&gt;接著就要誠實地面對我們自己，在日常行為中，有多少是不符合價值觀的，有時我們會自欺欺人，
-覺得自己做得不錯，或是不願面對真相，唯有誠實地面對失敗及做不好的地方才能去改進。&lt;/p&gt;
-
-&lt;h2 id=&quot;建立儀式-1&quot;&gt;建立儀式&lt;/h2&gt;
-&lt;p&gt;有了目標及知道首先要改進的目標後，選一個想要鍛鍊的目標肌肉，一個就好，提出明確的行動指南，
-在某個時間地點或情景該怎麼行動，將其轉為自發性的行為，
-關於這部分可以延伸參考&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;，
-針對如何建立習慣，有系統性的認識。&lt;/p&gt;
-
-&lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
-&lt;p&gt;作者將能量分成四個面向: 身體、情緒、心理及精神，讓我們知道必須照顧到每個面向，
-才能精力滿滿。&lt;/p&gt;
-
-&lt;p&gt;該怎麼照顧呢？就是透過定時的更新復原及鍛鍊，能量是有限的，一昧地使用卻不補充無異於殺雞取卵。&lt;/p&gt;
-
-&lt;p&gt;最後祝福大家每天的生活都能充滿能量～ 找到目標熱情，或者去做好玩的事！ 掰掰～ 👋&lt;/p&gt;
-
-&lt;h1 id=&quot;延伸閱讀&quot;&gt;延伸閱讀&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/posts/book-note-the-four-hour-work-week/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/posts/book-note-why-we-sleep/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 為什麼要睡覺? :睡出健康與學習力、夢出創意的新科學&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="habit" /><category term="self improvement" /><summary type="html">原文書名為《The Power of Full Engagement》， 作者提出能量管理的概念，幫助我們找回對生活與工作的熱情和意義！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/full-engagement-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crawler" /><category term="http" /><category term="curl" /><category term="linux" /><summary type="html">想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩， linux command line tool就有許多好用的工具， 今天以104人力網站的為例，示範如何只使用shell script，就可以開始抓取資料!</summary></entry></feed>
