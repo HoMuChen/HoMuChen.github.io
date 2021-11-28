@@ -1,4 +1,151 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-24T22:11:36+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">Node.js: 7 cryptography concepts using ctypto module</title><link href="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/" rel="alternate" type="text/html" title="Node.js: 7 cryptography concepts using ctypto module" /><published>2021-11-24T22:11:00+08:00</published><updated>2021-11-24T22:11:00+08:00</updated><id>https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module</id><content type="html" xml:base="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/">&lt;p&gt;這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2021-11-28T17:00:01+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?</title><link href="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/" rel="alternate" type="text/html" title="[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?" /><published>2021-11-28T17:00:00+08:00</published><updated>2021-11-28T17:00:00+08:00</updated><id>https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage</id><content type="html" xml:base="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/">&lt;h1 id=&quot;什麼是database-replication&quot;&gt;什麼是database replication?&lt;/h1&gt;
+&lt;p&gt;顧名思義就是將一份資料，複製成多份，並把它放到不同的機器上，
+好像也沒什麼好說的🤪，接著會看看為什麼要做複製，它會帶來什麼好處及壞處，
+再看看要如何做到replication，最後看看在RDBMS、NoSQL或是你自己的系統，是怎麼應用這些概念的。&lt;/p&gt;
+
+&lt;h1 id=&quot;為何要replication&quot;&gt;為何要replication&lt;/h1&gt;
+&lt;h2 id=&quot;資料備份&quot;&gt;資料備份&lt;/h2&gt;
+&lt;p&gt;把一份資料變成多份放到不同的地方，最明顯的好處就是&lt;strong&gt;備份&lt;/strong&gt;，當你的機器壞掉，如果硬碟沒壞，
+其實重啟之後資料還是在那邊，但就怕你的機器整組壞光光，或是就是硬碟爆了無法再使用，
+此時如果資料有複製道別台機器上，就不用怕會有資料的丟失。&lt;/p&gt;
+
+&lt;h2 id=&quot;讀取效能&quot;&gt;讀取效能&lt;/h2&gt;
+&lt;p&gt;資料都在同一台機器時，所有的讀取查詢都必須經由這台機器來完成，一台機器總有他的瓶頸，
+一台不行，那你有試過兩台嗎？三台四台五台嗎～&lt;/p&gt;
+
+&lt;p&gt;對於讀取效能的增進，主要有兩個方向，分別是吞吐量(throughput)及延遲時間(latency)。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;read throughput:&lt;/strong&gt;
+複製了N份，我就有N台機器可以供我查詢拉，平均分散所有的查詢請求到N台機器上，
+預期最多就可以有N倍的throughput。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;read latency:&lt;/strong&gt;
+另外也可以把一些機器放到離user近一點的地方，減少網路封包來回的時間，降低latency，&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;replication帶來的缺點&quot;&gt;Replication帶來的缺點&lt;/h1&gt;
+&lt;h2 id=&quot;儲存空間&quot;&gt;儲存空間&lt;/h2&gt;
+&lt;p&gt;想當然爾，複製了幾份的資料就需要多幾份的磁碟的空間，不過現在硬碟越來越便宜的時代，
+應該不是個大問題。&lt;/p&gt;
+
+&lt;h2 id=&quot;資料的不一致&quot;&gt;資料的不一致&lt;/h2&gt;
+&lt;p&gt;不一致的主要來源就是兩種: &lt;strong&gt;replication&lt;/strong&gt;和&lt;strong&gt;concurrent write&lt;/strong&gt;，
+試想一下資料如果只有單一來源，那要跟誰不一致呢？反之，因為有了replica，
+每份複製要如何保持同步及一致就會是個問題? 會造成什麼consistency的問題，
+後面會在陸續討論。&lt;/p&gt;
+
+&lt;h1 id=&quot;how&quot;&gt;How&lt;/h1&gt;
+&lt;p&gt;接下來，我們來看看要如何複製。假設你今天有一份檔案，不會再修改，
+那就直接將檔案複製一份放到另一台機器上供使用者去讀取，那不就做完了嗎～&lt;/p&gt;
+
+&lt;p&gt;沒錯！就是這個簡單，所以問題是什麼呢？ 問題就在於我們會不斷地修改檔案，
+資料庫會不斷地接收使用者的insert、update，這時要如何保持多處資料的同步一致呢?&lt;/p&gt;
+
+&lt;h1 id=&quot;master-slave&quot;&gt;Master Slave&lt;/h1&gt;
+&lt;p&gt;首先，我們先定義幾個名詞，master為可以接受資料寫入修改的節點，
+而slave就是存放複製的檔案的地方，只負責被讀取，並不會從slave中寫入資料。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg&quot; alt=&quot;master slave repilcation&quot; target=&quot;_blank&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;資料要從master被複製到slave，最簡單的可能就像是直接&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scp&lt;/code&gt;，
+或是你寫備份script，每天固定時間將DB裡的資料寫到另一台DB。&lt;/p&gt;
+
+&lt;p&gt;另外現在許多資料庫都有提供&lt;strong&gt;change data capture&lt;/strong&gt;的功能: 每當一有資料寫入時，
+就會通知你，這有點像是是在application level的trigger，
+像是MangoDB的Change Streams或是AWS Dynamo的Streams。&lt;/p&gt;
+
+&lt;p&gt;而RDBMS也有類似的功能，像是postgreSQL的WAL、MySQL的Binlog，
+如果是cluster的，內部可能也是利用上述的機制來做複製及備份。&lt;/p&gt;
+
+&lt;h1 id=&quot;replication-lag&quot;&gt;Replication lag&lt;/h1&gt;
+&lt;p&gt;資料要從發生寫入的地方，複製到另一個地方，這中間的時間差就是&lt;strong&gt;replication lag&lt;/strong&gt;，
+可能是每天將整個資料庫的檔案做一次備份到別台機器，那lag最長就是一天;
+如果是在每筆資料寫入的時候，就立即透過網路寫入同一筆資料到另一備份中(透過剛剛說的change data capture)，
+那lag可能就是幾毫秒。&lt;/p&gt;
+
+&lt;h2 id=&quot;lag造成不一致&quot;&gt;Lag造成不一致&lt;/h2&gt;
+&lt;p&gt;如上所述，資料寫入後、在replication lag這段時間內，多份的複製間並還沒有同步，
+也就是說他們是不一樣的！不一樣就是不一致！就會有些問題。
+這裡舉兩個例子inconsistency的例子，
+就是會無法達成&lt;strong&gt;read your write consistency&lt;/strong&gt;及&lt;strong&gt;monotonic read consistency&lt;/strong&gt;，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;read your write&lt;/strong&gt;: 寫入一筆資料後在讀取，卻讀不到你剛剛些入的資料，而是取得舊的資料。
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/database-replication-2.jpg&quot; alt=&quot;not read your write consistency&quot; target=&quot;_blank&quot; /&gt;
+如上圖，當你寫入一筆c=3的資料後，資料尚未從master複製到slave，但你馬上從slave讀取，就讀取不到。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;monotonic read&lt;/strong&gt;: 連續的讀取，讀到最新的資料後，接著又讀到舊的資料，經歷了時間上的倒退。
+&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/database-replication-3.jpg&quot; alt=&quot;not monotinic read consistency&quot; target=&quot;_blank&quot; /&gt;
+如上圖，當你讀取c的值時，首先讀到3的值，接著再讀一次反而不見了。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;因為你不知道你是從master還是slave中讀取資料，如果master剛剛接受的新的更新寫入還沒複製到slave，
+則slave上的資料就是舊的，從slave讀取就會導致讀不到你剛剛寫入的資料。&lt;/p&gt;
+
+&lt;h2 id=&quot;解決方法&quot;&gt;解決方法&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;只從master讀取: 但這好像就失去了複製到slave的好處了，read throughput沒有增加，只剩下備份的好處。&lt;/li&gt;
+  &lt;li&gt;當讀自己寫的資料時，從master讀取: 如此一來可以保證有read your write consistency，
+但你要額外判斷query是不是要取得自己的資料。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;為何要知道這些呢&quot;&gt;為何要知道這些呢?&lt;/h1&gt;
+&lt;h2 id=&quot;知道nosql的用法&quot;&gt;知道NoSQL的用法&lt;/h2&gt;
+&lt;p&gt;比如說MongoDB的write有各種設定&lt;a href=&quot;#1&quot;&gt;[1]&lt;/a&gt;，w option可以設為&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;majority&lt;/code&gt;，
+你知道他們的區別及取捨嗎?其核心的概念就是今天所討論的replication所造成的
+consistency及durability的問題，之後有機會再單獨寫一篇講MongoDB的write concern(TODO)。&lt;/p&gt;
+
+&lt;h2 id=&quot;自己的系統也會有replication&quot;&gt;自己的系統也會有replication&lt;/h2&gt;
+&lt;p&gt;隨著系統越來越複雜，你可能也會使用到多個資料產品，比如說你有個主要的資料庫，
+使用者流量越來越大已不堪負荷，可能需要做讀寫分離，
+另外還有像是用elasticsearch等搜尋引擎，用redis作為cache，
+這些都是一份資料可能同時需要存在許多地方，廣義上來說，也都是replicaton，
+以下我們看看cache及讀寫分離這兩個例子。&lt;/p&gt;
+
+&lt;h3 id=&quot;cache&quot;&gt;Cache&lt;/h3&gt;
+&lt;p&gt;常見的做法可能會是加一台cache database，像是redis，
+這也是一種replication，因為你把資料從主要的資料庫裡複製了一份到redis上。&lt;/p&gt;
+
+&lt;p&gt;這時候你就有很多事要決定了，要用cache還是本來的資料庫作為master，
+也就是說一開始寫入的地方要發生在哪裡: cache還是main database?&lt;/p&gt;
+
+&lt;p&gt;還有要多久將兩份資料同步，也就是replication lag會是多久，
+可能會有lag也可以沒有，
+這一切的決定就會衍伸出有&lt;strong&gt;cache aside&lt;/strong&gt;、&lt;strong&gt;read through&lt;/strong&gt;、&lt;strong&gt;write through&lt;/strong&gt;、&lt;strong&gt;write back&lt;/strong&gt;
+等等等的架構設計，有機會再單獨寫一篇講Cache的設計～ (TODO)。&lt;/p&gt;
+
+&lt;h3 id=&quot;讀寫分離&quot;&gt;讀寫分離&lt;/h3&gt;
+&lt;p&gt;當你的RDBMS資料庫無法再負荷的了大量的寫入或查詢時，或許你有聽過讀寫分離，
+就是所有寫入的操作只能在某一台資料庫發生，也就是今天所說的master，
+而其他的查詢都透過slave，其實我也沒有實際做過，但核心的概念就是今天所講的replication。&lt;/p&gt;
+
+&lt;h2 id=&quot;其他&quot;&gt;其他&lt;/h2&gt;
+&lt;h3 id=&quot;cdndns&quot;&gt;CDN、DNS&lt;/h3&gt;
+&lt;p&gt;廣義上CDN及DNS都有replication的概念，將檔案或DNS record複製到鄰近user的機器上，
+DNS甚至複製到了user的本地機器裡，可以看到他們為了支持更好的read performance，
+不管是latency還是throughput，而採用了這樣的架構設計，換來的是inconsistency的問題，
+就像是DNS record的更新，通常要花上幾分鐘甚至是幾天才有辦法同步。&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;今天看了replication是什麼，會帶來哪些好處(resilient、read performace)，
+以及會面對怎樣的問題(inconsistency)，並且知道了一些會用到這些概念的地方，
+不管是他內部就幫你做好的(NoSQL)，還是你自己的系統架構，或者是一些已經存在的別的系統(CDN、DNS)。&lt;/p&gt;
+
+&lt;p&gt;透過更了解replication的概念，對於我們如何使用別人的產品或是自己系統設計上的取捨都有更清楚深刻的見解，
+感謝你的閱讀，有任何問題或是想法都歡迎留言唷～ 掰掰👋&lt;/p&gt;
+
+&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/write-concern/&quot; target=&quot;_blank&quot; id=&quot;1&quot;&gt;&lt;strong&gt;MongoDB Write Concern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html">什麼是database replication? 顧名思義就是將一份資料，複製成多份，並把它放到不同的機器上， 好像也沒什麼好說的🤪，接著會看看為什麼要做複製，它會帶來什麼好處及壞處， 再看看要如何做到replication，最後看看在RDBMS、NoSQL或是你自己的系統，是怎麼應用這些概念的。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Node.js: 7 cryptography concepts using ctypto module</title><link href="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/" rel="alternate" type="text/html" title="Node.js: 7 cryptography concepts using ctypto module" /><published>2021-11-24T22:11:00+08:00</published><updated>2021-11-24T22:11:00+08:00</updated><id>https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module</id><content type="html" xml:base="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/">&lt;p&gt;這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念，
 包含&lt;strong&gt;hash&lt;/strong&gt;、&lt;strong&gt;salt&lt;/strong&gt;、&lt;strong&gt;password hashing&lt;/strong&gt;、
 &lt;strong&gt;MAC(message authentication code)&lt;/strong&gt;、
 &lt;strong&gt;Symmetric Encryption&lt;/strong&gt;及&lt;strong&gt;Asymmetric Encryption&lt;/strong&gt;
@@ -1266,129 +1413,4 @@ io.Reader及io.Writer是個很好的例子，並且利用&lt;code class=&quot;la
 &lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
 &lt;p&gt;感謝你看到這邊～ 希望這些內容能帶給你一點啟發，我也是閱讀這些書過後，學習到了許多及產生很多新的想法，
 但更重要的是將其實踐在生活當中，首先先透過書寫分享，讓自己複習一遍，
-之後有更多親身實驗的結果，會在跟大家分享! 掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><summary type="html">人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功， 對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">104人力網站爬蟲: 如何只用shell script來抓取資料</title><link href="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/" rel="alternate" type="text/html" title="104人力網站爬蟲: 如何只用shell script來抓取資料" /><published>2021-11-01T20:00:00+08:00</published><updated>2021-11-01T20:00:00+08:00</updated><id>https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq</id><content type="html" xml:base="https://homuchen.com/posts/crawler-104-jobs-data-using-shell-scripts-curl-and-jq/">&lt;p&gt;想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩，
-linux command line tool就有許多好用的工具，
-今天以104人力網站的為例，示範如何只使用shell script，就可以開始抓取資料!&lt;/p&gt;
-
-&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;這邊假設大家已經有網路爬蟲的基本概念了，一般大家寫爬蟲最多人用的就是python，
-流程就是到目標網站上操作，並且一邊觀察chrome dev tool，將http requests用python的requests套件重現，
-之後將response回來的資料做parse，最後存起來，可能是存到檔案或是資料庫裡。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/104-1.jpg&quot; alt=&quot;爬蟲流程: 用command line tool來實現&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;前面三個步驟是觀察，後面要進行動作，共有三個主要的動作，
-分別為: 發起HTTP請求、處理HTTP回應的資料，將處理好的資料存起來。&lt;/p&gt;
-
-&lt;p&gt;而這三個動作，分別都有好用的command line tool可以直接使用，分別為:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Make HTTP requests: &lt;strong&gt;curl&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Parse JSON response data: &lt;strong&gt;jq&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Save data: &lt;strong&gt;redirect »&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;curl&quot;&gt;curl&lt;/h1&gt;
-&lt;p&gt;curl是個HTTP client，相當於python的requests套件，想要在104上搜尋&lt;strong&gt;軟體工程師&lt;/strong&gt;&lt;strong&gt;第1頁&lt;/strong&gt;的結果，
-可以使用下列的指令，有兩個querystring的參數: keyword及page。&lt;/p&gt;
-
-&lt;p&gt;其他還有許多篩選條件像是地區，年資，有興趣的去104網站自己按按就知道該使用哪些參數囉，這裡就不再多做描述。&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Referer: https://www.104.com.tw/jobs/search'&lt;/span&gt; https://www.104.com.tw/jobs/search/list?keyword&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;軟體工程師&amp;amp;page&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;對HTTP message或curl的使用還不熟的，可以參考我之前寫過的文章:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/posts/http-introduction-telnet-nc-curl/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;HTTP 簡介，以及使用telnet、nc、curl等指令來探索&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/posts/linux-http-client-tool-curl-usage/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;A Linux HTTP client tool — curl的介紹及用法&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;jq-1&quot;&gt;jq &lt;a href=&quot;#1&quot;&gt;&lt;strong&gt;[1]&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;成功取得回應後，可以看到terminal上噴出一堆密密麻麻的資訊，難以去閱讀，今天為例的104 API，
-回傳的是application/json的資料格式，可以將這坨資料pipe到jq&lt;a href=&quot;#1&quot;&gt;&lt;strong&gt;[1]&lt;/strong&gt;&lt;/a&gt;指令上，他可以幫我們parse JSON格式的資料，
-也可以做其他的動作，包括選擇我們要的欄位、map、filter、transform等等，詳細的使用方法可以到官網看他們的文件。&lt;/p&gt;
-
-&lt;p&gt;104的api回傳JSON格式的資料很方便，但很多網站沒有或是找不到這種API可以使用，就必須處理html的解析，
-我有找到一個工具&lt;strong&gt;pup&lt;/strong&gt;&lt;a href=&quot;#2&quot;&gt;&lt;strong&gt;[2]&lt;/strong&gt;&lt;/a&gt;，看起來也蠻好用的，如果你知道其他更好用的方法，也歡迎留言跟大家分享唷～&lt;/p&gt;
-
-&lt;h1 id=&quot;redirect&quot;&gt;redirect&lt;/h1&gt;
-&lt;p&gt;處理好回應後，最後將資料導到file裡存起來就好囉~ 如果寫到同一份檔案當中，記得使用&lt;strong&gt;»&lt;/strong&gt;，
-才不會把先前的資料給蓋掉唷。&lt;/p&gt;
-
-&lt;h1 id=&quot;完整程式碼&quot;&gt;完整程式碼&lt;/h1&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;  Usage:&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;      sh ./&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;basename&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;keyword &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;page&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;  Example:&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;      sh ./&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;basename&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; 軟體工程師 1&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;      sh ./&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;basename&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; 專案管理 2&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;exit
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;fi
-
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;keyword&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;
-
-curl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Referer: https://www.104.com.tw/jobs/search'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  https://www.104.com.tw/jobs/search/list&lt;span class=&quot;se&quot;&gt;\?\&amp;amp;&lt;/span&gt;keyword&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$keyword&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;amp;&lt;/span&gt;page&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$page&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  | jq
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;前面為防呆的檢查，確保使用者有輸入關鍵字及頁數，用起來就像這樣:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sh ./104.sh 軟體工程師 1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;得到的結果如下:
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/104-2.jpg&quot; alt=&quot;data&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果只想要資料的list，可以再pipe到jq做進一步的處理:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sh ./104.sh 軟體工程師 1 | jq .data.list
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;得到的結果如下:
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/104-3.jpg&quot; alt=&quot;data&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;結語&quot;&gt;結語&lt;/h1&gt;
-&lt;p&gt;有時只想要簡易的爬蟲，不想要大張旗鼓地寫個python時，就可以寫個shell script，加上crontab就能去抓取資料。&lt;/p&gt;
-
-&lt;p&gt;比如我只是想記錄某個keyword資料量的每天趨勢變化，就可以&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sh ./104.sh 軟體工程師 1 | jq .data.totalCount &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; data.csv
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;一天跑個一次，一份csv檔案，就可以達到我們想要目的。&lt;/p&gt;
-
-&lt;p&gt;感謝你閱讀到這邊～希望以上的內容對你有一丁點的幫助，掰掰～ 👋&lt;/p&gt;
-
-&lt;h1 id=&quot;附錄&quot;&gt;附錄&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;jq - &lt;a href=&quot;https://stedolan.github.io/jq/&quot; target=&quot;_blank&quot; name=&quot;1&quot;&gt;https://stedolan.github.io/jq/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;pup - &lt;a href=&quot;https://github.com/ericchiang/pup&quot; target=&quot;_blank&quot; name=&quot;2&quot;&gt;https://github.com/ericchiang/pup&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crawler" /><category term="http" /><category term="curl" /><category term="linux" /><summary type="html">想要抓取網路上的資料，大家可能都會想到python爬蟲，但有時並不需要那麼麻煩， linux command line tool就有許多好用的工具， 今天以104人力網站的為例，示範如何只使用shell script，就可以開始抓取資料!</summary></entry></feed>
+之後有更多親身實驗的結果，會在跟大家分享! 掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><summary type="html">人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功， 對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
