@@ -1,416 +1,535 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-02-09T21:43:14+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 更快樂：哈佛最受歡迎的一堂課</title><link href="https://homuchen.com/posts/book-note-happier/" rel="alternate" type="text/html" title="[讀書筆記] 更快樂：哈佛最受歡迎的一堂課" /><published>2022-02-09T21:19:00+08:00</published><updated>2022-02-09T21:19:00+08:00</updated><id>https://homuchen.com/posts/book-note-happier</id><content type="html" xml:base="https://homuchen.com/posts/book-note-happier/">&lt;p&gt;作者於2002年在哈佛大學開始講授 &lt;strong&gt;正向心理學&lt;/strong&gt;，這門課主要探討的問題就是: &lt;strong&gt;如何幫助自己和別人活得更快樂？&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-13T23:07:27+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">動機: 到底是什麼在驅動、引導我們的行為？</title><link href="https://homuchen.com/posts/motivation-what-motivates-us/" rel="alternate" type="text/html" title="動機: 到底是什麼在驅動、引導我們的行為？" /><published>2022-03-13T23:05:00+08:00</published><updated>2022-03-13T23:05:00+08:00</updated><id>https://homuchen.com/posts/motivation-what-motivates-us</id><content type="html" xml:base="https://homuchen.com/posts/motivation-what-motivates-us/"><![CDATA[<p>我們每天都有許多的行為，不論是認真學習新技能、努力工作、躺在沙發耍廢看劇吃著垃圾食物、
+出門跟朋友去露營、做志工等等等…
+背後都有一股力量在驅動著我們，那股力量就是<strong>獎賞</strong>及<strong>懲罰</strong>，
+我們會為了追求某些獎賞或是避免某些懲罰而去做出某些行為。</p>
 
-&lt;p&gt;第一年只有8人選修，6人退選，第二年學生多達380人，第三度開課時，有855名學生註冊，成為哈佛選修人數最多的科目。&lt;/p&gt;
+<p>但有些實驗卻發現，有時就算是沒有任何獎賞或是懲罰，我們也會想做某些事，甚至有時有了獎賞，
+反而還會減少我們的動力！</p>
 
-&lt;p&gt;該如何解釋哈佛大學的學生對正向心理學的需求日益殷切的現象？大家對快樂學越來越感興趣？
-是現代人越來越憂鬱嗎？(雖然事實上是如此&lt;a href=&quot;#1&quot;&gt;[1]&lt;/a&gt;)還是新的教育方式或生活型態的影響？&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" alt="動機的分類" /></p>
 
-&lt;p&gt;其實『快樂學』並不是現代的產物，從柏拉圖、亞里斯多德、各種宗教及哲學體系、到現在許多市面上的自助書籍，
-無不想探討快樂的問題，而正向心理學，泛指 &lt;strong&gt;『研究人類最佳心理運作狀態的學問』&lt;/strong&gt;，作為學術象牙塔及社會大眾間的橋樑，
-結合了嚴謹的學術研究及有趣的自助運動。&lt;/p&gt;
+<p>今天將從以下幾個面向，來分析驅動著我們行為的那股力量，看看獎賞懲罰系統有哪些組成，
+除此之外還有哪些力量在驅動著我們，最後從腦神經科學的角度來看這一切：</p>
+<ul>
+  <li>獎賞及懲罰: 生理面</li>
+  <li>獎賞及懲罰: 社會面</li>
+  <li>獎賞之外的動機</li>
+  <li>有獎賞反而表現更差</li>
+  <li>什麼時候外部的動機是有用的？</li>
+  <li>內部動機: 自主性、專精及意義</li>
+</ul>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/happier-01.jpg&quot; alt=&quot;book: Happier&quot; /&gt;&lt;/p&gt;
+<h1 id="生理面的獎賞">生理面的獎賞</h1>
+<p>首先是生理的、本能的、為了生存的，也是最顯而易見的一種動機。
+我們餓了就會去找東西吃；口渴了就會去喝水；為了生存下去，食物、水、空氣、陽光、性等等等都是必須的。
+我們的身體被打造成一但基本需求無法滿足，我們就會產生強烈的渴望去做這些事情。</p>
 
-&lt;h1 id=&quot;你快樂嗎&quot;&gt;你快樂嗎?&lt;/h1&gt;
-&lt;p&gt;當我告訴我朋友我正在看正向心理學的相關書籍時，他們就會問我: 你不快樂嗎？😂，好像擔心我會不會跑去自殺似的，
-然而我快樂嗎？這個問題其實我也回答不出來，不知道該要如何去定義及量測快樂，也就無法回答出我到底快不快樂的這個問題。&lt;/p&gt;
+<p>但這就是全部的我們嗎？絕對不是！沒有人會說驅動我們所有行為的都是這類動機，這樣我們跟動物有什麼不一樣呢？</p>
 
-&lt;p&gt;那我們該要如何學習快樂呢？如果無法得知我們到底快不快樂，怎們知道我們的學習有沒有成果呢？&lt;/p&gt;
+<h1 id="社會面的獎賞及懲罰">社會面的獎賞及懲罰</h1>
+<p>而獎賞及懲罰的另外一面是社會性的，我們努力讀書是為了考高分，或是得到父母的稱讚、
+會為了獲得一份好工作而努力，因為期待有著更多的收入，這類動機不單純是為了生存的，我們不做這些也不會死，
+可以軟爛地茶來張口、飯來伸手、不求上進地在原本職務上完成本分就好。</p>
 
-&lt;p&gt;作者對這問題的回答是這樣的: 與其問「你快樂嗎?」這樣的是非題，不如問該「怎麼做可以變得&lt;strong&gt;更&lt;/strong&gt;快樂？」，&lt;/p&gt;
+<p>為什麼我們會想賺更多錢，除了提供更好的生活品質之外(生理的)，賺更多錢也可能代表者更有能力，
+社會地位較高，大家對你的評價會是有能力的，可靠的，這些就是社會性的獎賞。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/happier-03.jpg&quot; alt=&quot;ask the right question: How to become happier?&quot; /&gt;&lt;/p&gt;
+<p>另外我們還會避免社會處罰，比如說不想被大家說閒話，所以我們表現的行為得符合社會期待、
+合乎社會規範，因此必須抑制上述所說的第一種動機，不能因為我們餓了，我就去吃別人的食物；
+不能因為我想做愛，就隨便在路上強暴別人。做這樣的行為在法律上、社會上是會有處罰的，
+因為這種為了在社會裡生存的動機，規範了我們的行為。</p>
 
-&lt;p&gt;你快樂嗎？是個是非題，答案要不是快樂就是不快樂，這意味著快樂只是某段旅程的終點，
-一旦抵達了這個定點，旅程就結束了。&lt;/p&gt;
+<h1 id="獎賞之外的動機">獎賞之外的動機</h1>
+<p>在過去幾百年來，我們都是在這樣的想法下生活，但我們想要激勵自己或是別人去做某些行為時，
+我們的做法通常都是威脅利誘，但這就是全部了嗎？</p>
 
-&lt;p&gt;然後這個定點並不存在，我們永遠都可以活的更快樂，沒人可以時時刻刻都幸福無比，所以與其問你快樂嗎？
-不如問怎麼做才能活得更快樂？追求快樂是個持續進行的過程，今天的我比五年前的我快樂，但願五年後的我比今天的我快樂。&lt;/p&gt;
+<h2 id="猴子解謎遊戲">猴子解謎遊戲</h2>
+<p>讓我們來看看幾個實驗，在很久很久以前，有個人在猴子做了身上做了個實驗，
+把他們跟一個解謎遊戲放在一起，沒有任何訓練跟獎賞，
+結果發現猴子就是會自己去玩、去解決那個問題(將下圖的裝置從左圖變成右圖)，
+並且變得越來越熟練</p>
 
-&lt;h1 id=&quot;未來還是現在&quot;&gt;未來還是現在?&lt;/h1&gt;
-&lt;p&gt;我該做一份人人欣羨，薪水很高但我不喜歡的工作，還是應該做自己喜歡但薪水不高的工作呢？
-是要先忍耐個幾年，有了穩定的經濟基礎後再去追求夢想，還是要毅然決然地踏上追夢的旅程？&lt;/p&gt;
+<p>這就引出了一個問題，即使沒有生存上的需要，也沒有外部的獎賞及處罰，
+還是有一個驅力在驅動著猴子的行為，那這股力量這到底是什麼呢?</p>
 
-&lt;p&gt;著名的米歇爾棉花糖實驗&lt;a href=&quot;#2&quot;&gt;[2]&lt;/a&gt;，顯示了能夠延遲享樂的小孩，未來的成就比較高，但這說明我們該延遲享樂嗎？
-或者是應該要推遲到什麼時候呢？&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-01.jpg" alt="給猴子的解謎遊戲" /></p>
 
-&lt;h2 id=&quot;四種生活類型&quot;&gt;四種生活類型&lt;/h2&gt;
-&lt;p&gt;作者在這裡提供了一個模型來描述四種生活類型:&lt;/p&gt;
+<p>有時我們就是會在沒有外部獎勵的時候去做一些事情，純粹就是為了好玩、樂趣、好奇、挑戰、成就及滿足。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/happier-04.jpg&quot; alt=&quot;四種關於現在與未來的生活類型&quot; /&gt;&lt;/p&gt;
+<h1 id="有獎賞反而表現更差">有獎賞反而表現更差</h1>
+<p>常常我們希望提供獎勵、誘因來鼓勵一些行為，但有時卻會識得其反！提供了獎勵之後，
+反而讓人之後更不會去從事某些行為。</p>
 
-&lt;p&gt;橫軸為現在，越右邊代表對現在越有好處，縱軸為未來，越上面代表你所做的選擇是對未來有好處的，反之亦然，
-接下來我們就一個一個象限來看看吧，也可以想想自己是否在人生的某個時期，這樣地生活著。&lt;/p&gt;
+<p>讓我們來看看以下這一個實驗:</p>
 
-&lt;h2 id=&quot;拼命三郎&quot;&gt;拼命三郎&lt;/h2&gt;
-&lt;p&gt;坐落在左上角的區塊，這一種生活型態做的事都是為了未來的利益，而延遲了立即的享樂，我們把它稱為拼命三郎型。&lt;/p&gt;
+<p>首先實驗人員先去幼兒園觀察一群孩子，看看他們自由的下課時間都會做些什麼，結果發現有一群小孩都會畫畫，
+他們就把那一群小孩挑出來，作為實驗對象。</p>
 
-&lt;p&gt;好好讀書～等考到好大學就輕鬆囉；等上了大學，還要好好顧好成績，參加活動好好實習，才能進到好公司擁有好工作；
-等工作之後，繼續埋頭苦幹，期待著升遷加薪，好好存錢，等到退休或是提早退休之後就爽了！&lt;/p&gt;
+<p>實驗如此進行，將他們分為3組，第一組告訴他們畫畫的話，就給你們獎勵唷～～ 於是他們開始畫，畫完之後給獎勵；第二組則是放他們自己去玩，
+結束後，如果有畫畫的就一樣給獎勵；第三組則是什麼事都沒干預。因為他們原本就就都愛畫畫，所以就都有畫，拿到相對應的獎勵後就放他們回去，
+然後繼續觀察他們的行為。</p>
 
-&lt;p&gt;這種生活型態的人總是在追求著未來的目標，而不是當下的體驗，以為達到目標之後就會開心快樂。的確沒錯，
+<p>結果發現！第一組的小孩畫的變少了！！而第二及第三組都沒有變，所以差別是什麼呢？
+並不是有無獎勵與否，而是有沒有如果怎樣就給你什麼的這種獎勵，
+當小孩為了得到獎勵才去畫畫時，這樣的外部獎勵反而削弱了原本純粹的動機…</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-02.jpg" alt="小孩畫畫獎勵實驗" /></p>
+
+<h1 id="內部動機有哪些">內部動機有哪些</h1>
+<p>所以除了外部的誘因獎賞之外，我們可能純粹為了好玩、樂趣、好奇、挑戰、
+成就及滿足等等的內部的動機去做一些事情，這裡將簡單地把內部動機做一個分類，
+分成三類，分別為: <strong>自主性</strong>、<strong>熟練</strong>及 <strong>意義</strong>。</p>
+
+<h2 id="自主性autonomy">自主性(Autonomy)</h2>
+<p>不知道大家有沒有這樣的經驗，自己本來會去做好的事，一旦媽媽碎念叫你去做那一件事，
+你就反而肚爛不想做了😂</p>
+
+<p>我們人就是不喜歡被操控被命令，相較於被命令的行動，我們對於基於我們自主意志而採取的行動更有動力去做，
+當員工不在被監督，可以用自己的喜歡的方式，在自己喜歡的時間、地點工作時，會更具有生產力。</p>
+
+<p>Google的20%時間，就是給員工20%的工作時間，讓他們自己自己決定要做怎樣的project，
+結果是許多的產品及服務都是在這些時間裡誕生出來的，像是Adsense、Gmail、Google News等等…</p>
+
+<h2 id="熟練matery">熟練(Matery)</h2>
+<p>有時玩遊戲，贏了也不會得到什麼獎勵，但我們就是會想要破關，不斷地一直去練習他熟練他，
+或許我們天生就是喜歡去精進一些能力。</p>
+
+<p>有份論文，調查訪談了幾百位開源軟體的程式開發人員，到底是什麼因素，
+使得他們願意無償地為這些專案付出時間及勞力，結果發現，在有薪及無薪的開發人員中，
+他們為什麼投入開源專案開發的原因，有顯著差異的部分就是<strong>為了增進寫程式的技能</strong><a href="#1">[1]</a>。</p>
+
+<h2 id="意義meaningpurpose">意義(Meaning、Purpose)</h2>
+<p>意義對每個人來說都是不一樣的，找到一份比你自身更大的事物，歸屬於此並擁有使命感，能帶來很大的動力。</p>
+
+<p>有人可能致力於地球環境保育、永續能源，有人可能關心下一代的教育、或者是老人家的照顧需求、
+性別平權、勞工權益等等的議題，而加入各式各樣的機構，與目標理念一致的人一起努力奮鬥是很棒的一件事。</p>
+
+<p>但大部分的人，可能不知道自己的使命，甚至是說人生的意義，這也沒關係！我自己也是還不知道這部分的答案，
+或許我們還在探索的階段，現在能做的，可能就像是<a href="https://www.books.com.tw/products/0010733134"><strong>《做自己的生命設計師</strong>》</a>說的，
+首先先幻想！接著挑幾個想法來打造原型實驗看看，唯有試過做過之後，才能對於自己想要的人生有更清楚的描繪及方向。</p>
+
+<h1 id="總結">總結</h1>
+<p>外部的獎賞及處罰，確實會驅動我們的行為，但我們並不全然是這樣的行動的，甚至有些時候，
+還會反過來損害我們的動機，以上是來自<a href="https://www.books.com.tw/products/0010476180"><strong>《動機，單純的力量》</strong></a>一書的部分簡單摘要。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-03.jpg" alt="動機，單純的力量" /></p>
+
+<h1 id="參考資料">參考資料</h1>
+<ol>
+  <li><a href="https://ocw.mit.edu/courses/sloan-school-of-management/15-352-managing-innovation-emerging-trends-spring-2005/readings/lakhaniwolf.pdf" target="_blank" name="1">Why Hackers Do What They Do: Understanding Motivation and Effort in Free/Open Source Software Projects</a></li>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="self improvement" /><category term="psychology" /><category term="books" /><summary type="html"><![CDATA[有哪些力量驅動著我們每天的行為，做事情的動力到底來自何處，是獎賞或是處罰嗎？ 利誘小孩子來引導他們做我們希望他做的行為是對的嗎?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 更快樂：哈佛最受歡迎的一堂課</title><link href="https://homuchen.com/posts/book-note-happier/" rel="alternate" type="text/html" title="[讀書筆記] 更快樂：哈佛最受歡迎的一堂課" /><published>2022-02-09T21:19:00+08:00</published><updated>2022-02-09T21:19:00+08:00</updated><id>https://homuchen.com/posts/book-note-happier</id><content type="html" xml:base="https://homuchen.com/posts/book-note-happier/"><![CDATA[<p>作者於2002年在哈佛大學開始講授 <strong>正向心理學</strong>，這門課主要探討的問題就是: <strong>如何幫助自己和別人活得更快樂？</strong></p>
+
+<p>第一年只有8人選修，6人退選，第二年學生多達380人，第三度開課時，有855名學生註冊，成為哈佛選修人數最多的科目。</p>
+
+<p>該如何解釋哈佛大學的學生對正向心理學的需求日益殷切的現象？大家對快樂學越來越感興趣？
+是現代人越來越憂鬱嗎？(雖然事實上是如此<a href="#1">[1]</a>)還是新的教育方式或生活型態的影響？</p>
+
+<p>其實『快樂學』並不是現代的產物，從柏拉圖、亞里斯多德、各種宗教及哲學體系、到現在許多市面上的自助書籍，
+無不想探討快樂的問題，而正向心理學，泛指 <strong>『研究人類最佳心理運作狀態的學問』</strong>，作為學術象牙塔及社會大眾間的橋樑，
+結合了嚴謹的學術研究及有趣的自助運動。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-01.jpg" alt="book: Happier" /></p>
+
+<h1 id="你快樂嗎">你快樂嗎?</h1>
+<p>當我告訴我朋友我正在看正向心理學的相關書籍時，他們就會問我: 你不快樂嗎？😂，好像擔心我會不會跑去自殺似的，
+然而我快樂嗎？這個問題其實我也回答不出來，不知道該要如何去定義及量測快樂，也就無法回答出我到底快不快樂的這個問題。</p>
+
+<p>那我們該要如何學習快樂呢？如果無法得知我們到底快不快樂，怎們知道我們的學習有沒有成果呢？</p>
+
+<p>作者對這問題的回答是這樣的: 與其問「你快樂嗎?」這樣的是非題，不如問該「怎麼做可以變得<strong>更</strong>快樂？」，</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-03.jpg" alt="ask the right question: How to become happier?" /></p>
+
+<p>你快樂嗎？是個是非題，答案要不是快樂就是不快樂，這意味著快樂只是某段旅程的終點，
+一旦抵達了這個定點，旅程就結束了。</p>
+
+<p>然後這個定點並不存在，我們永遠都可以活的更快樂，沒人可以時時刻刻都幸福無比，所以與其問你快樂嗎？
+不如問怎麼做才能活得更快樂？追求快樂是個持續進行的過程，今天的我比五年前的我快樂，但願五年後的我比今天的我快樂。</p>
+
+<h1 id="未來還是現在">未來還是現在?</h1>
+<p>我該做一份人人欣羨，薪水很高但我不喜歡的工作，還是應該做自己喜歡但薪水不高的工作呢？
+是要先忍耐個幾年，有了穩定的經濟基礎後再去追求夢想，還是要毅然決然地踏上追夢的旅程？</p>
+
+<p>著名的米歇爾棉花糖實驗<a href="#2">[2]</a>，顯示了能夠延遲享樂的小孩，未來的成就比較高，但這說明我們該延遲享樂嗎？
+或者是應該要推遲到什麼時候呢？</p>
+
+<h2 id="四種生活類型">四種生活類型</h2>
+<p>作者在這裡提供了一個模型來描述四種生活類型:</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-04.jpg" alt="四種關於現在與未來的生活類型" /></p>
+
+<p>橫軸為現在，越右邊代表對現在越有好處，縱軸為未來，越上面代表你所做的選擇是對未來有好處的，反之亦然，
+接下來我們就一個一個象限來看看吧，也可以想想自己是否在人生的某個時期，這樣地生活著。</p>
+
+<h2 id="拼命三郎">拼命三郎</h2>
+<p>坐落在左上角的區塊，這一種生活型態做的事都是為了未來的利益，而延遲了立即的享樂，我們把它稱為拼命三郎型。</p>
+
+<p>好好讀書～等考到好大學就輕鬆囉；等上了大學，還要好好顧好成績，參加活動好好實習，才能進到好公司擁有好工作；
+等工作之後，繼續埋頭苦幹，期待著升遷加薪，好好存錢，等到退休或是提早退休之後就爽了！</p>
+
+<p>這種生活型態的人總是在追求著未來的目標，而不是當下的體驗，以為達到目標之後就會開心快樂。的確沒錯，
 當我們考上好大學放榜的那一瞬間，被錄取升職加薪的那一刻的確很爽，但這樣的快樂卻只能持續一陣子，
-緊接著我們又為著下一個目標繼續打拼。&lt;/p&gt;
+緊接著我們又為著下一個目標繼續打拼。</p>
 
-&lt;p&gt;社會獎勵結果，而不在乎過程，家長老師總說著要考高分，升學找到好工作，卻不太強調學習本身的樂趣；
-大家都想要找一份薪水高，大家稱羨的工作，而不是去做自己喜愛的事，就如美國哲學家愛默生所說的:&lt;/p&gt;
+<p>社會獎勵結果，而不在乎過程，家長老師總說著要考高分，升學找到好工作，卻不太強調學習本身的樂趣；
+大家都想要找一份薪水高，大家稱羨的工作，而不是去做自己喜愛的事，就如美國哲學家愛默生所說的:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;「我們一直想著未來要過什麼樣的生活，但是到頭來，卻像沒有真正活過一樣。」&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p><strong>「我們一直想著未來要過什麼樣的生活，但是到頭來，卻像沒有真正活過一樣。」</strong></p>
+</blockquote>
 
-&lt;h2 id=&quot;享樂主義&quot;&gt;享樂主義&lt;/h2&gt;
-&lt;p&gt;跟拼命三郎相反，總是追求當下立即的享樂，而不顧未來長遠的利益。
+<h2 id="享樂主義">享樂主義</h2>
+<p>跟拼命三郎相反，總是追求當下立即的享樂，而不顧未來長遠的利益。
 不停地吃下垃圾食物，不想工作一直窩在被窩裡看劇都是這一類的生活類型，
-以為幸福的人生就是一連串的享樂經驗，但真的是如此嗎?&lt;/p&gt;
+以為幸福的人生就是一連串的享樂經驗，但真的是如此嗎?</p>
 
-&lt;p&gt;有項心理實驗是以下這樣:&lt;/p&gt;
+<p>有項心理實驗是以下這樣:</p>
 
-&lt;p&gt;他們付費給一些大學生，對他們的要求是什麼都不能做。他們的基本需求得以滿足，
+<p>他們付費給一些大學生，對他們的要求是什麼都不能做。他們的基本需求得以滿足，
 但是被禁止做任何工作。幾個小時之後，這些大學生就開始感到沮喪，儘管參與研究的收入非常可觀，
-但他們寧可放棄參與實驗而選擇其他壓力大、收入沒那麼多的工作。&lt;/p&gt;
+但他們寧可放棄參與實驗而選擇其他壓力大、收入沒那麼多的工作。</p>
 
-&lt;h2 id=&quot;虛無主義&quot;&gt;虛無主義&lt;/h2&gt;
-&lt;p&gt;這一區塊最慘，放棄追尋快樂，覺得人生也沒有意義，賽利格曼的習得性無助(learned helplessness)&lt;a href=&quot;#3&quot;&gt;[3]&lt;/a&gt;
-描述了這一類覺得做什麼努力都徒勞無功的人。&lt;/p&gt;
+<h2 id="虛無主義">虛無主義</h2>
+<p>這一區塊最慘，放棄追尋快樂，覺得人生也沒有意義，賽利格曼的習得性無助(learned helplessness)<a href="#3">[3]</a>
+描述了這一類覺得做什麼努力都徒勞無功的人。</p>
 
-&lt;p&gt;一開始我覺得怎麼會有人是落在這個區塊，再怎樣，至少也可以當個及時行樂的人吧，但仔細想想，我也有過短暫時刻變成這類的人，
+<p>一開始我覺得怎麼會有人是落在這個區塊，再怎樣，至少也可以當個及時行樂的人吧，但仔細想想，我也有過短暫時刻變成這類的人，
 也就是在一直的享樂耍廢過後，連要做什麼來耍廢都不知道了！劇看到不知道要看什麼；遊戲打到很生氣，隊友都是雷包；
-覺得日子空虛，不知道到底要幹什麼😂&lt;/p&gt;
+覺得日子空虛，不知道到底要幹什麼😂</p>
 
-&lt;h2 id=&quot;快樂開朗型&quot;&gt;快樂開朗型&lt;/h2&gt;
-&lt;p&gt;所以到底該立即享樂，還是為了未來的利益忍耐打拼呢？&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;PTT鄉民: 「小孩子才做選擇，我全都要！」&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+<h2 id="快樂開朗型">快樂開朗型</h2>
+<p>所以到底該立即享樂，還是為了未來的利益忍耐打拼呢？</p>
+<blockquote>
+  <p><strong>PTT鄉民: 「小孩子才做選擇，我全都要！」</strong></p>
+</blockquote>
 
-&lt;p&gt;拼命三郎以為達到未來的目標就能快樂，而享樂主義以為只有享樂的過程才是重要的，
-其實應該是要&lt;strong&gt;懂的享受追求目標的過程&lt;/strong&gt;(後面會講到關於設定目標的重要)。&lt;/p&gt;
+<p>拼命三郎以為達到未來的目標就能快樂，而享樂主義以為只有享樂的過程才是重要的，
+其實應該是要<strong>懂的享受追求目標的過程</strong>(後面會講到關於設定目標的重要)。</p>
 
-&lt;p&gt;但有時總有些活動無法同時兼顧現在及未來的利益，像是為了考試K書、儲蓄、加班趕工，
+<p>但有時總有些活動無法同時兼顧現在及未來的利益，像是為了考試K書、儲蓄、加班趕工，
 這時可以穿插一下偶爾享樂的活動是有幫助的，能讓我們添加活力，冥想、休息、散步、發呆、
 悠閒地躺在海邊、看劇、玩遊戲等等，如果無法找到能夠兼顧現在及未來利益的活動，
-不妨就將兩種活動穿插進行。&lt;/p&gt;
+不妨就將兩種活動穿插進行。</p>
 
-&lt;p&gt;延伸閱讀:&lt;/p&gt;
+<p>延伸閱讀:</p>
 
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-the-power-of-full-engagement&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 用對能量，你就不會累&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+<p><a href="/posts/book-note-the-power-of-full-engagement" target="_blank"><strong>[讀書筆記] 用對能量，你就不會累</strong></a></p>
 
-&lt;h1 id=&quot;快樂是什麼&quot;&gt;快樂是什麼？&lt;/h1&gt;
-&lt;p&gt;每個人在人生的不同時期，或是不同的事情上，都或多或少會有上面四種的生活型態，
-而作者認為的快樂就是&lt;strong&gt;要有樂趣，也要有意義&lt;/strong&gt;，要兼顧現在以及未來，
-也就是坐落在快樂開朗型的生活型態。&lt;/p&gt;
+<h1 id="快樂是什麼">快樂是什麼？</h1>
+<p>每個人在人生的不同時期，或是不同的事情上，都或多或少會有上面四種的生活型態，
+而作者認為的快樂就是<strong>要有樂趣，也要有意義</strong>，要兼顧現在以及未來，
+也就是坐落在快樂開朗型的生活型態。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/happier-05.jpg&quot; alt=&quot;快樂是什麼: 有樂趣，也有意義&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-05.jpg" alt="快樂是什麼: 有樂趣，也有意義" /></p>
 
-&lt;p&gt;&lt;strong&gt;樂趣&lt;/strong&gt;是指我們目前感受的正面情緒，是現在的好處； &lt;strong&gt;意義&lt;/strong&gt;則伴隨使命感而來，代表所作所為對將來的好處。&lt;/p&gt;
+<p><strong>樂趣</strong>是指我們目前感受的正面情緒，是現在的好處； <strong>意義</strong>則伴隨使命感而來，代表所作所為對將來的好處。</p>
 
-&lt;h2 id=&quot;何謂樂趣&quot;&gt;何謂樂趣?&lt;/h2&gt;
-&lt;p&gt;正向情緒，也就是我們的感覺，愉悅、高興、極樂、狂喜、滿足、溫暖、舒服等等等…，追求正向情緒是我們的本能天性，
-應該沒有人懷疑為什麼我們會想追求正向情緒吧？&lt;/p&gt;
+<h2 id="何謂樂趣">何謂樂趣?</h2>
+<p>正向情緒，也就是我們的感覺，愉悅、高興、極樂、狂喜、滿足、溫暖、舒服等等等…，追求正向情緒是我們的本能天性，
+應該沒有人懷疑為什麼我們會想追求正向情緒吧？</p>
 
-&lt;h2 id=&quot;何謂意義&quot;&gt;何謂意義?&lt;/h2&gt;
-&lt;p&gt;意義是你的歸屬感、使命感，這個東西帶給你超越他本身的價值。
+<h2 id="何謂意義">何謂意義?</h2>
+<p>意義是你的歸屬感、使命感，這個東西帶給你超越他本身的價值。
 每個人會從不同的事物裡尋找意義，可能是開創事業、環保愛地球、養兒育女、寫程式🤔等等，
-重點是要符合自己的價值觀及特殊嗜好，而不是順從他人或是社會的期望。&lt;/p&gt;
+重點是要符合自己的價值觀及特殊嗜好，而不是順從他人或是社會的期望。</p>
 
-&lt;p&gt;只懂的尋找樂趣，無法得到快樂；一昧地尋求意義，也無法得到快樂。假如為某個行動找到了意義，
-但這項行動卻無法提供立即的滿足，那也無法持之以恆。&lt;/p&gt;
+<p>只懂的尋找樂趣，無法得到快樂；一昧地尋求意義，也無法得到快樂。假如為某個行動找到了意義，
+但這項行動卻無法提供立即的滿足，那也無法持之以恆。</p>
 
-&lt;h1 id=&quot;目標&quot;&gt;目標&lt;/h1&gt;
-&lt;h2 id=&quot;目標與快樂的關係&quot;&gt;目標與快樂的關係&lt;/h2&gt;
-&lt;p&gt;目標的作用，可以讓你活在當下，不會擔憂未來，也不後悔過去，提供你一個指引，
-知道現在走的每一步都是朝著正確的方向前進，如此一來可以更加地享受過程。&lt;/p&gt;
+<h1 id="目標">目標</h1>
+<h2 id="目標與快樂的關係">目標與快樂的關係</h2>
+<p>目標的作用，可以讓你活在當下，不會擔憂未來，也不後悔過去，提供你一個指引，
+知道現在走的每一步都是朝著正確的方向前進，如此一來可以更加地享受過程。</p>
 
-&lt;p&gt;有了目標，但我們的心思卻不是應該要一直看著目標，如果一昧地看著目標會很辛苦，
+<p>有了目標，但我們的心思卻不是應該要一直看著目標，如果一昧地看著目標會很辛苦，
 我們的快樂在於享受過程，朝著目標一步一步前進的過程，而不是達到目標時的快樂。
 當然在達成目標時一定會很快樂、狂喜，但這種感覺沒辦法持續，回想一下你考上大學，成功被好公司錄取的那天，
-快樂的感覺持續了多久呢？幾天還是幾個月，不論如何，他應該沒有持續到現在吧！&lt;/p&gt;
+快樂的感覺持續了多久呢？幾天還是幾個月，不論如何，他應該沒有持續到現在吧！</p>
 
-&lt;p&gt;因為人就是一個會習慣的動物，不管是快樂還是痛苦，有個研究是中樂透的人跟腳被截肢的人，在一段時間過後，
-他們快樂的水平都回到了事發之前的水準，這樣的現象稱為&lt;strong&gt;享樂跑步機&lt;/strong&gt;(Hedonic treadmill)也稱為&lt;strong&gt;享樂適應性&lt;/strong&gt;。&lt;/p&gt;
+<p>因為人就是一個會習慣的動物，不管是快樂還是痛苦，有個研究是中樂透的人跟腳被截肢的人，在一段時間過後，
+他們快樂的水平都回到了事發之前的水準，這樣的現象稱為<strong>享樂跑步機</strong>(Hedonic treadmill)也稱為<strong>享樂適應性</strong>。</p>
 
-&lt;h1 id=&quot;結論&quot;&gt;結論&lt;/h1&gt;
-&lt;p&gt;該要如何才能變得更快樂？這是一個普世的問題，不論你是任何種族、來自任何國家、成長於何種文化、及環境、
-處於何種階層，都會希望生活過得更幸福圓滿。&lt;/p&gt;
+<h1 id="結論">結論</h1>
+<p>該要如何才能變得更快樂？這是一個普世的問題，不論你是任何種族、來自任何國家、成長於何種文化、及環境、
+處於何種階層，都會希望生活過得更幸福圓滿。</p>
 
-&lt;p&gt;這本書有一句話我覺得是貫穿整本書的重點，就是: &lt;strong&gt;要有樂趣，也要有意義&lt;/strong&gt;，無盡的享樂會感到空虛，久了也會不快樂，
-而只有追尋意義、成就，容易成為拼命三郎那樣，只看著未來的目標，忘了去享受當下。&lt;/p&gt;
+<p>這本書有一句話我覺得是貫穿整本書的重點，就是: <strong>要有樂趣，也要有意義</strong>，無盡的享樂會感到空虛，久了也會不快樂，
+而只有追尋意義、成就，容易成為拼命三郎那樣，只看著未來的目標，忘了去享受當下。</p>
 
-&lt;p&gt;要找到個人的意義，需要有充分地對自己了解及認知，知道自己所重視的價值觀及長處，能夠活出言行一致、發揮長處的生活，
-當你的生活充斥著各種與你價值觀相矛盾的事時，必定是不會快樂的。&lt;/p&gt;
+<p>要找到個人的意義，需要有充分地對自己了解及認知，知道自己所重視的價值觀及長處，能夠活出言行一致、發揮長處的生活，
+當你的生活充斥著各種與你價值觀相矛盾的事時，必定是不會快樂的。</p>
 
-&lt;p&gt;這本書後面的章節，還有討論在教育、職場及感情上的應用，不過基本的原則就是上述的這些，有興趣的人可以再去看看唷～&lt;/p&gt;
+<p>這本書後面的章節，還有討論在教育、職場及感情上的應用，不過基本的原則就是上述的這些，有興趣的人可以再去看看唷～</p>
 
-&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://data.gov.tw/dataset/146577&quot; target=&quot;_blank&quot; name=&quot;1&quot;&gt;台灣憂鬱用藥數據&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment#Original_Stanford_experiment&quot; target=&quot;_blank&quot; name=&quot;2&quot;&gt;米歇爾-棉花糖實驗&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Learned_helplessness&quot; target=&quot;_blank&quot; name=&quot;3&quot;&gt;賽利格曼-習得性無助&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="self improvement" /><category term="psychology" /><summary type="html">作者於2002年在哈佛大學開始講授 正向心理學，這門課主要探討的問題就是: 如何幫助自己和別人活得更快樂？</summary></entry><entry><title type="html">《原子習慣》應用: 我是如何養成閱讀習慣</title><link href="https://homuchen.com/posts/how-i-keep-reading/" rel="alternate" type="text/html" title="《原子習慣》應用: 我是如何養成閱讀習慣" /><published>2021-12-09T21:03:00+08:00</published><updated>2021-12-09T21:03:00+08:00</updated><id>https://homuchen.com/posts/how-i-keep-reading</id><content type="html" xml:base="https://homuchen.com/posts/how-i-keep-reading/">&lt;p&gt;出社會以前，完全沒有在看課外讀物的我，是如何養成現在每天都會閱讀的習慣，
-雖然閱讀的時間不多，大約每天30-60分鐘，但跟以前的我相比，已經是巨大的進步了～&lt;/p&gt;
+<h1 id="參考資料">參考資料</h1>
+<ol>
+  <li><a href="https://data.gov.tw/dataset/146577" target="_blank" name="1">台灣憂鬱用藥數據</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment#Original_Stanford_experiment" target="_blank" name="2">米歇爾-棉花糖實驗</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Learned_helplessness" target="_blank" name="3">賽利格曼-習得性無助</a></li>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="self improvement" /><category term="psychology" /><summary type="html"><![CDATA[作者於2002年在哈佛大學開始講授 正向心理學，這門課主要探討的問題就是: 如何幫助自己和別人活得更快樂？]]></summary></entry><entry><title type="html">《原子習慣》應用: 我是如何養成閱讀習慣</title><link href="https://homuchen.com/posts/how-i-keep-reading/" rel="alternate" type="text/html" title="《原子習慣》應用: 我是如何養成閱讀習慣" /><published>2021-12-09T21:03:00+08:00</published><updated>2021-12-09T21:03:00+08:00</updated><id>https://homuchen.com/posts/how-i-keep-reading</id><content type="html" xml:base="https://homuchen.com/posts/how-i-keep-reading/"><![CDATA[<p>出社會以前，完全沒有在看課外讀物的我，是如何養成現在每天都會閱讀的習慣，
+雖然閱讀的時間不多，大約每天30-60分鐘，但跟以前的我相比，已經是巨大的進步了～</p>
 
-&lt;p&gt;這篇文章將依據&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;所提出的框架，
-&lt;strong&gt;提示 -&amp;gt; 渴望 -&amp;gt; 回應 -&amp;gt; 獎賞&lt;/strong&gt;，來分析我閱讀習慣的各個面向，算是原子習慣的應用案例～
-如果沒看過這本書的也可以看看我之前寫的文章:&lt;/p&gt;
+<p>這篇文章將依據<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>所提出的框架，
+<strong>提示 -&gt; 渴望 -&gt; 回應 -&gt; 獎賞</strong>，來分析我閱讀習慣的各個面向，算是原子習慣的應用案例～
+如果沒看過這本書的也可以看看我之前寫的文章:</p>
 
-&lt;p&gt;&lt;a href=&quot;/posts/book-note-atomic-habits/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+<p><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg&quot; alt=&quot;閱讀習慣&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" alt="閱讀習慣" /></p>
 
-&lt;h1 id=&quot;提示&quot;&gt;提示&lt;/h1&gt;
-&lt;p&gt;環境中的提示對你有淺移默化的影響，你無法輕易地待在一個滿是垃圾食物的環境，然後一直靠意志力不去吃零食，
-另外也可以觀察目前的生活上，選擇一些已有的習慣作為提示，將想要培養的習斷堆疊在後面。&lt;/p&gt;
+<h1 id="提示">提示</h1>
+<p>環境中的提示對你有淺移默化的影響，你無法輕易地待在一個滿是垃圾食物的環境，然後一直靠意志力不去吃零食，
+另外也可以觀察目前的生活上，選擇一些已有的習慣作為提示，將想要培養的習斷堆疊在後面。</p>
 
-&lt;p&gt;以下分享我如何利用&lt;strong&gt;環境&lt;/strong&gt;及&lt;strong&gt;習慣堆疊&lt;/strong&gt;來達成閱讀的習慣:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;環境&lt;/strong&gt;: 因為我每天通勤都需要搭捷運，所以我就選擇了這個環境來讀書，因為在捷運上，
-除了滑手機就沒有其他提示及誘惑使你分心。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;習慣堆疊&lt;/strong&gt;: 上捷運站好就位，接著下一步就是拿出書來看，最後讓這個動作不假思索。&lt;/li&gt;
-&lt;/ul&gt;
+<p>以下分享我如何利用<strong>環境</strong>及<strong>習慣堆疊</strong>來達成閱讀的習慣:</p>
+<ul>
+  <li><strong>環境</strong>: 因為我每天通勤都需要搭捷運，所以我就選擇了這個環境來讀書，因為在捷運上，
+除了滑手機就沒有其他提示及誘惑使你分心。</li>
+  <li><strong>習慣堆疊</strong>: 上捷運站好就位，接著下一步就是拿出書來看，最後讓這個動作不假思索。</li>
+</ul>
 
-&lt;h1 id=&quot;渴望&quot;&gt;渴望&lt;/h1&gt;
-&lt;p&gt;提示出現之後，你會產生渴望，比如說晚上下班回到家裡，會有想要明亮燈光的渴望;
-一到了Friday night會有想要放鬆的渴望，那我上捷運會有想要看書的渴望嗎？ 沒有…&lt;/p&gt;
+<h1 id="渴望">渴望</h1>
+<p>提示出現之後，你會產生渴望，比如說晚上下班回到家裡，會有想要明亮燈光的渴望;
+一到了Friday night會有想要放鬆的渴望，那我上捷運會有想要看書的渴望嗎？ 沒有…</p>
 
-&lt;p&gt;但是上捷運會有想要打發這幾十分鐘無聊時間的渴望，所以大部分人的回應都是滑手機，
-那該怎麼辦呢？ 其實沒有渴望就是沒有，也沒關係，再從其他面向著手就好，或者是你自己可以做&lt;strong&gt;渴望綑綁&lt;/strong&gt;，
-也就是做完想要培養的習慣之後，可以做其他你本來就想要做的事，比如說看完15分鐘書後，才可以滑手機。&lt;/p&gt;
+<p>但是上捷運會有想要打發這幾十分鐘無聊時間的渴望，所以大部分人的回應都是滑手機，
+那該怎麼辦呢？ 其實沒有渴望就是沒有，也沒關係，再從其他面向著手就好，或者是你自己可以做<strong>渴望綑綁</strong>，
+也就是做完想要培養的習慣之後，可以做其他你本來就想要做的事，比如說看完15分鐘書後，才可以滑手機。</p>
 
-&lt;p&gt;另外我有想到另一個渴望就是耍帥，捷運上不乏許多正妹，可以看看書，展現一下自己知性上進的一面XD
-有個IG帳號&lt;a href=&quot;https://www.instagram.com/hotdudesreading/&quot; target=&quot;_blank&quot;&gt;hotdudesreading&lt;/a&gt;專門收集在車上看書的帥哥們，
-大概也是一樣的概念😄&lt;/p&gt;
+<p>另外我有想到另一個渴望就是耍帥，捷運上不乏許多正妹，可以看看書，展現一下自己知性上進的一面XD
+有個IG帳號<a href="https://www.instagram.com/hotdudesreading/" target="_blank">hotdudesreading</a>專門收集在車上看書的帥哥們，
+大概也是一樣的概念😄</p>
 
-&lt;h1 id=&quot;回應&quot;&gt;回應&lt;/h1&gt;
-&lt;p&gt;有了渴望之後，接著就是回應，也就是你如何採取行動去回應滿足你的渴望，要養成一個新習慣，
-最好是讓它非常&lt;strong&gt;容易去執行&lt;/strong&gt;。&lt;/p&gt;
+<h1 id="回應">回應</h1>
+<p>有了渴望之後，接著就是回應，也就是你如何採取行動去回應滿足你的渴望，要養成一個新習慣，
+最好是讓它非常<strong>容易去執行</strong>。</p>
 
-&lt;p&gt;我在捷運上看書的情形，就是每次只要看15分鐘！ 就是15分鐘! 不多不少，因為車到站了就要下車了。&lt;/p&gt;
+<p>我在捷運上看書的情形，就是每次只要看15分鐘！ 就是15分鐘! 不多不少，因為車到站了就要下車了。</p>
 
-&lt;p&gt;比起一開始一頭熱，狂看1小時，結果持續不到幾週，持續每天都看15分鐘還要來得更好，
-無需費力的進行了幾年之後，累積的成果也是很可觀，&lt;strong&gt;重複勝於時間，次數勝於質量&lt;/strong&gt;。&lt;/p&gt;
+<p>比起一開始一頭熱，狂看1小時，結果持續不到幾週，持續每天都看15分鐘還要來得更好，
+無需費力的進行了幾年之後，累積的成果也是很可觀，<strong>重複勝於時間，次數勝於質量</strong>。</p>
 
-&lt;h1 id=&quot;獎賞&quot;&gt;獎賞&lt;/h1&gt;
-&lt;p&gt;做完一個習慣後，如果我們得到了獎賞便會增強這個習慣，而且越&lt;strong&gt;立即&lt;/strong&gt;的獎賞越好。&lt;/p&gt;
+<h1 id="獎賞">獎賞</h1>
+<p>做完一個習慣後，如果我們得到了獎賞便會增強這個習慣，而且越<strong>立即</strong>的獎賞越好。</p>
 
-&lt;p&gt;我們可以看到許多壞習慣之所以那麼容易養成，就是因為獎賞來的立即，比如說抽煙、垃圾食物
+<p>我們可以看到許多壞習慣之所以那麼容易養成，就是因為獎賞來的立即，比如說抽煙、垃圾食物
 在你吸了、吃了一口之後，尼古丁、高糖、高鹽的獎賞就馬上來了，
-而會影響健康的後果可能在好幾年後才顯現。&lt;/p&gt;
+而會影響健康的後果可能在好幾年後才顯現。</p>
 
-&lt;p&gt;如果沒有立即的獎賞怎麼辦? 那就自己創造! 我用的方法就是&lt;strong&gt;紀錄&lt;/strong&gt;，紀錄本身也是一種獎賞，
-因為每次的勝利在紀錄上可以記上一筆時，會帶來成就感，而且你也會不想讓一連串的紀錄中斷。&lt;/p&gt;
+<p>如果沒有立即的獎賞怎麼辦? 那就自己創造! 我用的方法就是<strong>紀錄</strong>，紀錄本身也是一種獎賞，
+因為每次的勝利在紀錄上可以記上一筆時，會帶來成就感，而且你也會不想讓一連串的紀錄中斷。</p>
 
-&lt;p&gt;我使用的紀錄APP是種樹APP
-&lt;a href=&quot;https://apps.apple.com/tw/app/forest-%E5%B0%88%E6%B3%A8%E6%A3%AE%E6%9E%97/id866450515&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Forest 專注森林&lt;/strong&gt;&lt;/a&gt;，
-有點像是蕃茄鐘工作法的概念，在種樹期間不能使用其他APP，而且還會幫你種真的樹唷。&lt;/p&gt;
+<p>我使用的紀錄APP是種樹APP
+<a href="https://apps.apple.com/tw/app/forest-%E5%B0%88%E6%B3%A8%E6%A3%AE%E6%9E%97/id866450515" target="_blank"><strong>Forest 專注森林</strong></a>，
+有點像是蕃茄鐘工作法的概念，在種樹期間不能使用其他APP，而且還會幫你種真的樹唷。</p>
 
-&lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
-&lt;p&gt;今天簡單地分享我是如何應用上&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;所提出的框架，
-來培養閱讀習慣，雖然每天讀的時間不多，但持之以恆才是更重要的。感謝您的閱讀，掰掰～👋&lt;/p&gt;
+<h1 id="總結">總結</h1>
+<p>今天簡單地分享我是如何應用上<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>所提出的框架，
+來培養閱讀習慣，雖然每天讀的時間不多，但持之以恆才是更重要的。感謝您的閱讀，掰掰～👋</p>
 
-&lt;h1 id=&quot;延伸閱讀&quot;&gt;延伸閱讀&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/posts/book-note-atomic-habits/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/posts/lazy-breakfast/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;懶人早餐: 15分鐘，高纖高蛋白低碳水&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><category term="self improvement" /><category term="life style" /><category term="books" /><summary type="html">出社會以前，完全沒有在看課外讀物的我，是如何養成現在每天都會閱讀的習慣， 雖然閱讀的時間不多，大約每天30-60分鐘，但跟以前的我相比，已經是巨大的進步了～</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?</title><link href="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/" rel="alternate" type="text/html" title="[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?" /><published>2021-11-28T17:00:00+08:00</published><updated>2021-11-28T17:00:00+08:00</updated><id>https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage</id><content type="html" xml:base="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/">&lt;h1 id=&quot;什麼是database-replication&quot;&gt;什麼是database replication?&lt;/h1&gt;
-&lt;p&gt;顧名思義就是將一份資料，複製成多份，並把它放到不同的機器上，
+<h1 id="延伸閱讀">延伸閱讀</h1>
+<ul>
+  <li><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></li>
+  <li><a href="/posts/lazy-breakfast/" target="_blank"><strong>懶人早餐: 15分鐘，高纖高蛋白低碳水</strong></a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="self improvement" /><category term="life style" /><category term="books" /><summary type="html"><![CDATA[都知道閱讀有許多的好處，但該要該如何培養呢? 這篇文章將分享我是如何從不看書，改變成現在每天都有閱讀的習慣， 利用原子習慣所提出的框架，應用到自己的生活之中。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?</title><link href="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/" rel="alternate" type="text/html" title="[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?" /><published>2021-11-28T17:00:00+08:00</published><updated>2021-11-28T17:00:00+08:00</updated><id>https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage</id><content type="html" xml:base="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/"><![CDATA[<h1 id="什麼是database-replication">什麼是database replication?</h1>
+<p>顧名思義就是將一份資料，複製成多份，並把它放到不同的機器上，
 好像也沒什麼好說的🤪，接著會看看為什麼要做複製，它會帶來什麼好處及壞處，
-再看看要如何做到replication，最後看看在RDBMS、NoSQL或是你自己的系統，是怎麼應用這些概念的。&lt;/p&gt;
+再看看要如何做到replication，最後看看在RDBMS、NoSQL或是你自己的系統，是怎麼應用這些概念的。</p>
 
-&lt;h1 id=&quot;為何要replication&quot;&gt;為何要replication&lt;/h1&gt;
-&lt;h2 id=&quot;資料備份&quot;&gt;資料備份&lt;/h2&gt;
-&lt;p&gt;把一份資料變成多份放到不同的地方，最明顯的好處就是&lt;strong&gt;備份&lt;/strong&gt;，當你的機器壞掉，如果硬碟沒壞，
+<h1 id="為何要replication">為何要replication</h1>
+<h2 id="資料備份">資料備份</h2>
+<p>把一份資料變成多份放到不同的地方，最明顯的好處就是<strong>備份</strong>，當你的機器壞掉，如果硬碟沒壞，
 其實重啟之後資料還是在那邊，但就怕你的機器整組壞光光，或是就是硬碟爆了無法再使用，
-此時如果資料有複製道別台機器上，就不用怕會有資料的丟失。&lt;/p&gt;
+此時如果資料有複製道別台機器上，就不用怕會有資料的丟失。</p>
 
-&lt;h2 id=&quot;讀取效能&quot;&gt;讀取效能&lt;/h2&gt;
-&lt;p&gt;資料都在同一台機器時，所有的讀取查詢都必須經由這台機器來完成，一台機器總有他的瓶頸，
-一台不行，那你有試過兩台嗎？三台四台五台嗎～&lt;/p&gt;
+<h2 id="讀取效能">讀取效能</h2>
+<p>資料都在同一台機器時，所有的讀取查詢都必須經由這台機器來完成，一台機器總有他的瓶頸，
+一台不行，那你有試過兩台嗎？三台四台五台嗎～</p>
 
-&lt;p&gt;對於讀取效能的增進，主要有兩個方向，分別是吞吐量(throughput)及延遲時間(latency)。&lt;/p&gt;
+<p>對於讀取效能的增進，主要有兩個方向，分別是吞吐量(throughput)及延遲時間(latency)。</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;read throughput:&lt;/strong&gt;
+<ul>
+  <li>
+    <p><strong>read throughput:</strong>
 複製了N份，我就有N台機器可以供我查詢拉，平均分散所有的查詢請求到N台機器上，
-預期最多就可以有N倍的throughput。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;read latency:&lt;/strong&gt;
-另外也可以把一些機器放到離user近一點的地方，減少網路封包來回的時間，降低latency，&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+預期最多就可以有N倍的throughput。</p>
+  </li>
+  <li>
+    <p><strong>read latency:</strong>
+另外也可以把一些機器放到離user近一點的地方，減少網路封包來回的時間，降低latency，</p>
+  </li>
+</ul>
 
-&lt;h1 id=&quot;replication帶來的缺點&quot;&gt;Replication帶來的缺點&lt;/h1&gt;
-&lt;h2 id=&quot;儲存空間&quot;&gt;儲存空間&lt;/h2&gt;
-&lt;p&gt;想當然爾，複製了幾份的資料就需要多幾份的磁碟的空間，不過現在硬碟越來越便宜的時代，
-應該不是個大問題。&lt;/p&gt;
+<h1 id="replication帶來的缺點">Replication帶來的缺點</h1>
+<h2 id="儲存空間">儲存空間</h2>
+<p>想當然爾，複製了幾份的資料就需要多幾份的磁碟的空間，不過現在硬碟越來越便宜的時代，
+應該不是個大問題。</p>
 
-&lt;h2 id=&quot;資料的不一致&quot;&gt;資料的不一致&lt;/h2&gt;
-&lt;p&gt;不一致的主要來源就是兩種: &lt;strong&gt;replication&lt;/strong&gt;和&lt;strong&gt;concurrent write&lt;/strong&gt;，
+<h2 id="資料的不一致">資料的不一致</h2>
+<p>不一致的主要來源就是兩種: <strong>replication</strong>和<strong>concurrent write</strong>，
 試想一下資料如果只有單一來源，那要跟誰不一致呢？反之，因為有了replica，
 每份複製要如何保持同步及一致就會是個問題? 會造成什麼consistency的問題，
-後面會在陸續討論。&lt;/p&gt;
+後面會在陸續討論。</p>
 
-&lt;h1 id=&quot;how&quot;&gt;How&lt;/h1&gt;
-&lt;p&gt;接下來，我們來看看要如何複製。假設你今天有一份檔案，不會再修改，
-那就直接將檔案複製一份放到另一台機器上供使用者去讀取，那不就做完了嗎～&lt;/p&gt;
+<h1 id="how">How</h1>
+<p>接下來，我們來看看要如何複製。假設你今天有一份檔案，不會再修改，
+那就直接將檔案複製一份放到另一台機器上供使用者去讀取，那不就做完了嗎～</p>
 
-&lt;p&gt;沒錯！就是這個簡單，所以問題是什麼呢？ 問題就在於我們會不斷地修改檔案，
-資料庫會不斷地接收使用者的insert、update，這時要如何保持多處資料的同步一致呢?&lt;/p&gt;
+<p>沒錯！就是這個簡單，所以問題是什麼呢？ 問題就在於我們會不斷地修改檔案，
+資料庫會不斷地接收使用者的insert、update，這時要如何保持多處資料的同步一致呢?</p>
 
-&lt;h1 id=&quot;master-slave&quot;&gt;Master Slave&lt;/h1&gt;
-&lt;p&gt;首先，我們先定義幾個名詞，master為可以接受資料寫入修改的節點，
-而slave就是存放複製的檔案的地方，只負責被讀取，並不會從slave中寫入資料。&lt;/p&gt;
+<h1 id="master-slave">Master Slave</h1>
+<p>首先，我們先定義幾個名詞，master為可以接受資料寫入修改的節點，
+而slave就是存放複製的檔案的地方，只負責被讀取，並不會從slave中寫入資料。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg&quot; alt=&quot;master slave repilcation&quot; target=&quot;_blank&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" alt="master slave repilcation" target="_blank" /></p>
 
-&lt;p&gt;資料要從master被複製到slave，最簡單的可能就像是直接&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cp&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scp&lt;/code&gt;，
-或是你寫備份script，每天固定時間將DB裡的資料寫到另一台DB。&lt;/p&gt;
+<p>資料要從master被複製到slave，最簡單的可能就像是直接<code class="language-plaintext highlighter-rouge">cp</code>，<code class="language-plaintext highlighter-rouge">scp</code>，
+或是你寫備份script，每天固定時間將DB裡的資料寫到另一台DB。</p>
 
-&lt;p&gt;另外現在許多資料庫都有提供&lt;strong&gt;change data capture&lt;/strong&gt;的功能: 每當一有資料寫入時，
+<p>另外現在許多資料庫都有提供<strong>change data capture</strong>的功能: 每當一有資料寫入時，
 就會通知你，這有點像是是在application level的trigger，
-像是MangoDB的Change Streams或是AWS Dynamo的Streams。&lt;/p&gt;
+像是MangoDB的Change Streams或是AWS Dynamo的Streams。</p>
 
-&lt;p&gt;而RDBMS也有類似的功能，像是postgreSQL的WAL、MySQL的Binlog，
-如果是cluster的，內部可能也是利用上述的機制來做複製及備份。&lt;/p&gt;
+<p>而RDBMS也有類似的功能，像是postgreSQL的WAL、MySQL的Binlog，
+如果是cluster的，內部可能也是利用上述的機制來做複製及備份。</p>
 
-&lt;h1 id=&quot;replication-lag&quot;&gt;Replication lag&lt;/h1&gt;
-&lt;p&gt;資料要從發生寫入的地方，複製到另一個地方，這中間的時間差就是&lt;strong&gt;replication lag&lt;/strong&gt;，
+<h1 id="replication-lag">Replication lag</h1>
+<p>資料要從發生寫入的地方，複製到另一個地方，這中間的時間差就是<strong>replication lag</strong>，
 可能是每天將整個資料庫的檔案做一次備份到別台機器，那lag最長就是一天;
 如果是在每筆資料寫入的時候，就立即透過網路寫入同一筆資料到另一備份中(透過剛剛說的change data capture)，
-那lag可能就是幾毫秒。&lt;/p&gt;
+那lag可能就是幾毫秒。</p>
 
-&lt;h2 id=&quot;lag造成不一致&quot;&gt;Lag造成不一致&lt;/h2&gt;
-&lt;p&gt;如上所述，資料寫入後、在replication lag這段時間內，多份的複製間並還沒有同步，
+<h2 id="lag造成不一致">Lag造成不一致</h2>
+<p>如上所述，資料寫入後、在replication lag這段時間內，多份的複製間並還沒有同步，
 也就是說他們是不一樣的！不一樣就是不一致！就會有些問題。
 這裡舉兩個例子inconsistency的例子，
-就是會無法達成&lt;strong&gt;read your write consistency&lt;/strong&gt;及&lt;strong&gt;monotonic read consistency&lt;/strong&gt;，&lt;/p&gt;
+就是會無法達成<strong>read your write consistency</strong>及<strong>monotonic read consistency</strong>，</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;read your write&lt;/strong&gt;: 寫入一筆資料後在讀取，卻讀不到你剛剛些入的資料，而是取得舊的資料。
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/database-replication-2.jpg&quot; alt=&quot;not read your write consistency&quot; target=&quot;_blank&quot; /&gt;
-如上圖，當你寫入一筆c=3的資料後，資料尚未從master複製到slave，但你馬上從slave讀取，就讀取不到。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;monotonic read&lt;/strong&gt;: 連續的讀取，讀到最新的資料後，接著又讀到舊的資料，經歷了時間上的倒退。
-&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/database-replication-3.jpg&quot; alt=&quot;not monotinic read consistency&quot; target=&quot;_blank&quot; /&gt;
-如上圖，當你讀取c的值時，首先讀到3的值，接著再讀一次反而不見了。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>
+    <p><strong>read your write</strong>: 寫入一筆資料後在讀取，卻讀不到你剛剛些入的資料，而是取得舊的資料。
+<img src="https://storage.googleapis.com/homuchen.com/images/database-replication-2.jpg" alt="not read your write consistency" target="_blank" />
+如上圖，當你寫入一筆c=3的資料後，資料尚未從master複製到slave，但你馬上從slave讀取，就讀取不到。</p>
+  </li>
+  <li>
+    <p><strong>monotonic read</strong>: 連續的讀取，讀到最新的資料後，接著又讀到舊的資料，經歷了時間上的倒退。
+<img src="https://storage.googleapis.com/homuchen.com/images/database-replication-3.jpg" alt="not monotinic read consistency" target="_blank" />
+如上圖，當你讀取c的值時，首先讀到3的值，接著再讀一次反而不見了。</p>
+  </li>
+</ul>
 
-&lt;p&gt;因為你不知道你是從master還是slave中讀取資料，如果master剛剛接受的新的更新寫入還沒複製到slave，
-則slave上的資料就是舊的，從slave讀取就會導致讀不到你剛剛寫入的資料。&lt;/p&gt;
+<p>因為你不知道你是從master還是slave中讀取資料，如果master剛剛接受的新的更新寫入還沒複製到slave，
+則slave上的資料就是舊的，從slave讀取就會導致讀不到你剛剛寫入的資料。</p>
 
-&lt;h2 id=&quot;解決方法&quot;&gt;解決方法&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;只從master讀取: 但這好像就失去了複製到slave的好處了，read throughput沒有增加，只剩下備份的好處。&lt;/li&gt;
-  &lt;li&gt;當讀自己寫的資料時，從master讀取: 如此一來可以保證有read your write consistency，
-但你要額外判斷query是不是要取得自己的資料。&lt;/li&gt;
-&lt;/ol&gt;
+<h2 id="解決方法">解決方法</h2>
+<ol>
+  <li>只從master讀取: 但這好像就失去了複製到slave的好處了，read throughput沒有增加，只剩下備份的好處。</li>
+  <li>當讀自己寫的資料時，從master讀取: 如此一來可以保證有read your write consistency，
+但你要額外判斷query是不是要取得自己的資料。</li>
+</ol>
 
-&lt;h1 id=&quot;為何要知道這些呢&quot;&gt;為何要知道這些呢?&lt;/h1&gt;
-&lt;h2 id=&quot;知道nosql的用法&quot;&gt;知道NoSQL的用法&lt;/h2&gt;
-&lt;p&gt;比如說MongoDB的write有各種設定&lt;a href=&quot;#1&quot;&gt;[1]&lt;/a&gt;，w option可以設為&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;majority&lt;/code&gt;，
+<h1 id="為何要知道這些呢">為何要知道這些呢?</h1>
+<h2 id="知道nosql的用法">知道NoSQL的用法</h2>
+<p>比如說MongoDB的write有各種設定<a href="#1">[1]</a>，w option可以設為<code class="language-plaintext highlighter-rouge">0</code>、<code class="language-plaintext highlighter-rouge">1</code>或<code class="language-plaintext highlighter-rouge">majority</code>，
 你知道他們的區別及取捨嗎?其核心的概念就是今天所討論的replication所造成的
-consistency及durability的問題，之後有機會再單獨寫一篇講MongoDB的write concern(TODO)。&lt;/p&gt;
+consistency及durability的問題，之後有機會再單獨寫一篇講MongoDB的write concern(TODO)。</p>
 
-&lt;h2 id=&quot;自己的系統也會有replication&quot;&gt;自己的系統也會有replication&lt;/h2&gt;
-&lt;p&gt;隨著系統越來越複雜，你可能也會使用到多個資料產品，比如說你有個主要的資料庫，
+<h2 id="自己的系統也會有replication">自己的系統也會有replication</h2>
+<p>隨著系統越來越複雜，你可能也會使用到多個資料產品，比如說你有個主要的資料庫，
 使用者流量越來越大已不堪負荷，可能需要做讀寫分離，
 另外還有像是用elasticsearch等搜尋引擎，用redis作為cache，
 這些都是一份資料可能同時需要存在許多地方，廣義上來說，也都是replicaton，
-以下我們看看cache及讀寫分離這兩個例子。&lt;/p&gt;
+以下我們看看cache及讀寫分離這兩個例子。</p>
 
-&lt;h3 id=&quot;cache&quot;&gt;Cache&lt;/h3&gt;
-&lt;p&gt;常見的做法可能會是加一台cache database，像是redis，
-這也是一種replication，因為你把資料從主要的資料庫裡複製了一份到redis上。&lt;/p&gt;
+<h3 id="cache">Cache</h3>
+<p>常見的做法可能會是加一台cache database，像是redis，
+這也是一種replication，因為你把資料從主要的資料庫裡複製了一份到redis上。</p>
 
-&lt;p&gt;這時候你就有很多事要決定了，要用cache還是本來的資料庫作為master，
-也就是說一開始寫入的地方要發生在哪裡: cache還是main database?&lt;/p&gt;
+<p>這時候你就有很多事要決定了，要用cache還是本來的資料庫作為master，
+也就是說一開始寫入的地方要發生在哪裡: cache還是main database?</p>
 
-&lt;p&gt;還有要多久將兩份資料同步，也就是replication lag會是多久，
+<p>還有要多久將兩份資料同步，也就是replication lag會是多久，
 可能會有lag也可以沒有，
-這一切的決定就會衍伸出有&lt;strong&gt;cache aside&lt;/strong&gt;、&lt;strong&gt;read through&lt;/strong&gt;、&lt;strong&gt;write through&lt;/strong&gt;、&lt;strong&gt;write back&lt;/strong&gt;
-等等等的架構設計，有機會再單獨寫一篇講Cache的設計～ (TODO)。&lt;/p&gt;
+這一切的決定就會衍伸出有<strong>cache aside</strong>、<strong>read through</strong>、<strong>write through</strong>、<strong>write back</strong>
+等等等的架構設計，有機會再單獨寫一篇講Cache的設計～ (TODO)。</p>
 
-&lt;h3 id=&quot;讀寫分離&quot;&gt;讀寫分離&lt;/h3&gt;
-&lt;p&gt;當你的RDBMS資料庫無法再負荷的了大量的寫入或查詢時，或許你有聽過讀寫分離，
+<h3 id="讀寫分離">讀寫分離</h3>
+<p>當你的RDBMS資料庫無法再負荷的了大量的寫入或查詢時，或許你有聽過讀寫分離，
 就是所有寫入的操作只能在某一台資料庫發生，也就是今天所說的master，
-而其他的查詢都透過slave，其實我也沒有實際做過，但核心的概念就是今天所講的replication。&lt;/p&gt;
+而其他的查詢都透過slave，其實我也沒有實際做過，但核心的概念就是今天所講的replication。</p>
 
-&lt;h2 id=&quot;其他&quot;&gt;其他&lt;/h2&gt;
-&lt;h3 id=&quot;cdndns&quot;&gt;CDN、DNS&lt;/h3&gt;
-&lt;p&gt;廣義上CDN及DNS都有replication的概念，將檔案或DNS record複製到鄰近user的機器上，
+<h2 id="其他">其他</h2>
+<h3 id="cdndns">CDN、DNS</h3>
+<p>廣義上CDN及DNS都有replication的概念，將檔案或DNS record複製到鄰近user的機器上，
 DNS甚至複製到了user的本地機器裡，可以看到他們為了支持更好的read performance，
 不管是latency還是throughput，而採用了這樣的架構設計，換來的是inconsistency的問題，
-就像是DNS record的更新，通常要花上幾分鐘甚至是幾天才有辦法同步。&lt;/p&gt;
+就像是DNS record的更新，通常要花上幾分鐘甚至是幾天才有辦法同步。</p>
 
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;今天看了replication是什麼，會帶來哪些好處(resilient、read performace)，
+<h1 id="summary">Summary</h1>
+<p>今天看了replication是什麼，會帶來哪些好處(resilient、read performace)，
 以及會面對怎樣的問題(inconsistency)，並且知道了一些會用到這些概念的地方，
-不管是他內部就幫你做好的(NoSQL)，還是你自己的系統架構，或者是一些已經存在的別的系統(CDN、DNS)。&lt;/p&gt;
+不管是他內部就幫你做好的(NoSQL)，還是你自己的系統架構，或者是一些已經存在的別的系統(CDN、DNS)。</p>
 
-&lt;p&gt;透過更了解replication的概念，對於我們如何使用別人的產品或是自己系統設計上的取捨都有更清楚深刻的見解，
-感謝你的閱讀，有任何問題或是想法都歡迎留言唷～ 掰掰👋&lt;/p&gt;
+<p>透過更了解replication的概念，對於我們如何使用別人的產品或是自己系統設計上的取捨都有更清楚深刻的見解，
+感謝你的閱讀，有任何問題或是想法都歡迎留言唷～ 掰掰👋</p>
 
-&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
+<h1 id="參考資料">參考資料</h1>
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/write-concern/&quot; target=&quot;_blank&quot; id=&quot;1&quot;&gt;&lt;strong&gt;MongoDB Write Concern&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html">什麼是database replication? 顧名思義就是將一份資料，複製成多份，並把它放到不同的機器上， 好像也沒什麼好說的🤪，接著會看看為什麼要做複製，它會帶來什麼好處及壞處， 再看看要如何做到replication，最後看看在RDBMS、NoSQL或是你自己的系統，是怎麼應用這些概念的。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Node.js: 7 cryptography concepts using ctypto module</title><link href="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/" rel="alternate" type="text/html" title="Node.js: 7 cryptography concepts using ctypto module" /><published>2021-11-24T22:11:00+08:00</published><updated>2021-11-24T22:11:00+08:00</updated><id>https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module</id><content type="html" xml:base="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/">&lt;p&gt;這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念，
-包含&lt;strong&gt;hash&lt;/strong&gt;、&lt;strong&gt;salt&lt;/strong&gt;、&lt;strong&gt;password hashing&lt;/strong&gt;、
-&lt;strong&gt;MAC(message authentication code)&lt;/strong&gt;、
-&lt;strong&gt;Symmetric Encryption&lt;/strong&gt;及&lt;strong&gt;Asymmetric Encryption&lt;/strong&gt;
-及&lt;strong&gt;Digital Signature&lt;/strong&gt;。&lt;/p&gt;
+<ol>
+  <li><a href="https://docs.mongodb.com/manual/reference/write-concern/" target="_blank" id="1"><strong>MongoDB Write Concern</strong></a></li>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[database replication是什麼?有什麼好處及缺點，方法又有哪些呢? 可以在許多系統中看到replication的應用， 像是各種NoSQL、自己系統的(讀寫分離、cache、search engine)、CDN、DNS等等...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Node.js: 7 cryptography concepts using ctypto module</title><link href="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/" rel="alternate" type="text/html" title="Node.js: 7 cryptography concepts using ctypto module" /><published>2021-11-24T22:11:00+08:00</published><updated>2021-11-24T22:11:00+08:00</updated><id>https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module</id><content type="html" xml:base="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/"><![CDATA[<p>這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念，
+包含<strong>hash</strong>、<strong>salt</strong>、<strong>password hashing</strong>、
+<strong>MAC(message authentication code)</strong>、
+<strong>Symmetric Encryption</strong>及<strong>Asymmetric Encryption</strong>
+及<strong>Digital Signature</strong>。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-1.jpg&quot; alt=&quot;cryptography in node.js cryto module&quot; target=&quot;_blank&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-1.jpg" alt="cryptography in node.js cryto module" target="_blank" /></p>
 
-&lt;h1 id=&quot;hash&quot;&gt;Hash&lt;/h1&gt;
-&lt;p&gt;可以使用指令&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openssl list -digest-algorithms&lt;/code&gt;來查詢可用的algorithms，以下使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sha256&lt;/code&gt;為例，
-並輸出&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;base64&lt;/code&gt;的字串。&lt;/p&gt;
+<h1 id="hash">Hash</h1>
+<p>可以使用指令<code class="language-plaintext highlighter-rouge">openssl list -digest-algorithms</code>來查詢可用的algorithms，以下使用<code class="language-plaintext highlighter-rouge">sha256</code>為例，
+並輸出<code class="language-plaintext highlighter-rouge">base64</code>的字串。</p>
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHash&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">createHash</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;digest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;base64&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="kd">function</span> <span class="nx">hash</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">createHash</span><span class="p">(</span><span class="dl">'</span><span class="s1">sha256</span><span class="dl">'</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="nx">input</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="dl">'</span><span class="s1">base64</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;salt&quot;&gt;Salt&lt;/h1&gt;
-&lt;p&gt;randomBytes可以幫我們隨機產生你所想要長度的隨機亂數，用來作為salt，
-它的回傳值是一個Buffer。&lt;/p&gt;
+<h1 id="salt">Salt</h1>
+<p>randomBytes可以幫我們隨機產生你所想要長度的隨機亂數，用來作為salt，
+它的回傳值是一個Buffer。</p>
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">randomBytes</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+<span class="kd">function</span> <span class="nx">salt</span><span class="p">(</span><span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">randomBytes</span><span class="p">(</span><span class="nx">len</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">}</span>
 
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;password-hashing&quot;&gt;Password hashing&lt;/h1&gt;
-&lt;p&gt;利用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scrypt&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scryptSync&lt;/code&gt;這個KDF(一個為非同步，一個為同步的API)，
-function的前三個參數分別為:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;欲hash的明文資料，此處為密碼&lt;/li&gt;
-  &lt;li&gt;salt&lt;/li&gt;
-  &lt;li&gt;output的長度&lt;/li&gt;
-&lt;/ol&gt;
+<h1 id="password-hashing">Password hashing</h1>
+<p>利用<code class="language-plaintext highlighter-rouge">scrypt</code>及<code class="language-plaintext highlighter-rouge">scryptSync</code>這個KDF(一個為非同步，一個為同步的API)，
+function的前三個參數分別為:</p>
+<ol>
+  <li>欲hash的明文資料，此處為密碼</li>
+  <li>salt</li>
+  <li>output的長度</li>
+</ol>
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -418,36 +537,36 @@ function的前三個參數分別為:&lt;/p&gt;
 6
 7
 8
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;scryptSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">scryptSync</span><span class="p">,</span> <span class="nx">randomBytes</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;passwordHash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hashedPassword&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;scryptSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<span class="kd">function</span> <span class="nx">passwordHash</span><span class="p">(</span><span class="nx">password</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">salt</span> <span class="o">=</span> <span class="nx">randomBytes</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">hashedPassword</span> <span class="o">=</span> <span class="nx">scryptSync</span><span class="p">(</span><span class="nx">password</span><span class="p">,</span> <span class="nx">salt</span><span class="p">,</span> <span class="mi">32</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
 
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hashedPassword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;以上例子使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;randomBytes&lt;/code&gt;來產生salt，接著將密碼與salt一起hash成32 bytes的hash value，最後跟salt一起回傳。&lt;/p&gt;
+    <span class="k">return</span> <span class="s2">`</span><span class="p">${</span><span class="nx">salt</span><span class="p">}</span><span class="s2">:</span><span class="p">${</span><span class="nx">hashedPassword</span><span class="p">}</span><span class="s2">`</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>以上例子使用<code class="language-plaintext highlighter-rouge">randomBytes</code>來產生salt，接著將密碼與salt一起hash成32 bytes的hash value，最後跟salt一起回傳。</p>
 
-&lt;h1 id=&quot;mac&quot;&gt;MAC&lt;/h1&gt;
-&lt;p&gt;跟hash一樣可以使用指令&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openssl list -digest-algorithms&lt;/code&gt;來查詢可用的演算法。&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<h1 id="mac">MAC</h1>
+<p>跟hash一樣可以使用指令<code class="language-plaintext highlighter-rouge">openssl list -digest-algorithms</code>來查詢可用的演算法。</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHmac&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">createHmac</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;my-secret!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;foo bar👻&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">my-secret!</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">foo bar👻</span><span class="dl">'</span><span class="p">;</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hmac&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHmac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;digest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="kd">const</span> <span class="nx">hmac</span> <span class="o">=</span> <span class="nx">createHmac</span><span class="p">(</span><span class="dl">'</span><span class="s1">sha256</span><span class="dl">'</span><span class="p">,</span> <span class="nx">key</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;symmetric-encryption&quot;&gt;Symmetric Encryption&lt;/h1&gt;
-&lt;p&gt;支援的對稱式加密的演算法一樣可以透過這個指令來取得&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openssl list -cipher-algorithms&lt;/code&gt;，此處使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aes256&lt;/code&gt;。&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<h1 id="symmetric-encryption">Symmetric Encryption</h1>
+<p>支援的對稱式加密的演算法一樣可以透過這個指令來取得<code class="language-plaintext highlighter-rouge">openssl list -cipher-algorithms</code>，此處使用<code class="language-plaintext highlighter-rouge">aes256</code>。</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -460,25 +579,25 @@ function的前三個參數分別為:&lt;/p&gt;
 11
 12
 13
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createCipheriv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createDecipheriv&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">randomBytes</span><span class="p">,</span> <span class="nx">createCipheriv</span><span class="p">,</span> <span class="nx">createDecipheriv</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;This is the message I wanna deliver&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;key shared between two parties&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomBytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">This is the message I wanna deliver</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">key shared between two parties</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">iv</span> <span class="o">=</span> <span class="nx">randomBytes</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
 
-&lt;span class=&quot;c1&quot;&gt;//Encrypt&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cipher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createCipheriv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;aes256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;encryptedMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;utf8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<span class="c1">//Encrypt</span>
+<span class="kd">const</span> <span class="nx">cipher</span> <span class="o">=</span> <span class="nx">createCipheriv</span><span class="p">(</span><span class="dl">'</span><span class="s1">aes256</span><span class="dl">'</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">iv</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">encryptedMessage</span> <span class="o">=</span> <span class="nx">cipher</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="dl">'</span><span class="s1">utf8</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">)</span> <span class="o">+</span> <span class="nx">cipher</span><span class="p">.</span><span class="nx">final</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;c1&quot;&gt;//Decrypt&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decipher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createDecipheriv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;aes256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decryptedMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;encryptedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;utf-8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;utf8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="c1">//Decrypt</span>
+<span class="kd">const</span> <span class="nx">decipher</span> <span class="o">=</span> <span class="nx">createDecipheriv</span><span class="p">(</span><span class="dl">'</span><span class="s1">aes256</span><span class="dl">'</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">iv</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">decryptedMessage</span> <span class="o">=</span> <span class="nx">decipher</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">encryptedMessage</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">utf-8</span><span class="dl">'</span><span class="p">)</span> <span class="o">+</span> <span class="nx">decipher</span><span class="p">.</span><span class="nx">final</span><span class="p">(</span><span class="dl">'</span><span class="s1">utf8</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;asymmetric-encryption&quot;&gt;Asymmetric Encryption&lt;/h1&gt;
-&lt;p&gt;首先使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generateKeyPair&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generateKeyPairSync&lt;/code&gt;來產生公鑰及私鑰。&lt;/p&gt;
+<h1 id="asymmetric-encryption">Asymmetric Encryption</h1>
+<p>首先使用<code class="language-plaintext highlighter-rouge">generateKeyPair</code>或<code class="language-plaintext highlighter-rouge">generateKeyPairSync</code>來產生公鑰及私鑰。</p>
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -493,25 +612,25 @@ function的前三個參數分別為:&lt;/p&gt;
 13
 14
 15
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generateKeyPairSync&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">generateKeyPairSync</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generateKeyPairSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rsa&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;modulusLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4096&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;publicKeyEncoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;spki&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;privateKeyEncoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;pkcs8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;cipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;aes-256-cbc&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;passphrase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;top secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">publicKey</span><span class="p">,</span> <span class="nx">privateKey</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">generateKeyPairSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">rsa</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">modulusLength</span><span class="p">:</span> <span class="mi">4096</span><span class="p">,</span>
+    <span class="na">publicKeyEncoding</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">spki</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pem</span><span class="dl">'</span>
+    <span class="p">},</span>
+    <span class="na">privateKeyEncoding</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pkcs8</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pem</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">cipher</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aes-256-cbc</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">passphrase</span><span class="p">:</span> <span class="dl">'</span><span class="s1">top secret</span><span class="dl">'</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;p&gt;接者使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;publicEncrypt&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;privateDecrypt&lt;/code&gt;來encrypt、decrypt message。&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<p>接者使用<code class="language-plaintext highlighter-rouge">publicEncrypt</code>及<code class="language-plaintext highlighter-rouge">privateDecrypt</code>來encrypt、decrypt message。</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -520,22 +639,22 @@ function的前三個參數分別為:&lt;/p&gt;
 7
 8
 9
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;publicEncrypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateDecrypt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span>  <span class="nx">publicEncrypt</span><span class="p">,</span> <span class="nx">privateDecrypt</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;I am the message to be encypted🥳&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">I am the message to be encypted🥳</span><span class="dl">"</span>
 
-&lt;span class=&quot;c1&quot;&gt;//加密 Encrypt&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;encryptedData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicEncrypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+<span class="c1">//加密 Encrypt</span>
+<span class="kd">const</span> <span class="nx">encryptedData</span> <span class="o">=</span> <span class="nx">publicEncrypt</span><span class="p">(</span><span class="nx">publicKey</span><span class="p">,</span> <span class="nx">Buffer</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
 
-&lt;span class=&quot;c1&quot;&gt;//解密 Decrypt&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;decryptedData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateDecrypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;encryptedData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="c1">//解密 Decrypt</span>
+<span class="kd">const</span> <span class="nx">decryptedData</span> <span class="o">=</span> <span class="nx">privateDecrypt</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span> <span class="nx">encryptedData</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;digital-signature&quot;&gt;Digital Signature&lt;/h1&gt;
-&lt;p&gt;數位簽章牽扯到hash及非對稱加密，使用crypto module中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createSign&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createVerify&lt;/code&gt;，
-回傳的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sign&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Verify&lt;/code&gt; Object都幫我們做好好囉～&lt;/p&gt;
+<h1 id="digital-signature">Digital Signature</h1>
+<p>數位簽章牽扯到hash及非對稱加密，使用crypto module中的<code class="language-plaintext highlighter-rouge">createSign</code>及<code class="language-plaintext highlighter-rouge">createVerify</code>，
+回傳的<code class="language-plaintext highlighter-rouge">Sign</code>及<code class="language-plaintext highlighter-rouge">Verify</code> Object都幫我們做好好囉～</p>
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -553,138 +672,138 @@ function的前三個參數分別為:&lt;/p&gt;
 16
 17
 18
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createSign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createVerify&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;crypto&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">createSign</span><span class="p">,</span> <span class="nx">createVerify</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;c1&quot;&gt;//取得你的公私鑰匙&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./ssl/key.pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./ssl/cert.pem&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<span class="c1">//取得你的公私鑰匙</span>
+<span class="kd">const</span> <span class="nx">publicKey</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./ssl/key.pem</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./ssl/cert.pem</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;this data must be signed&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">this data must be signed</span><span class="dl">'</span><span class="p">;</span>
 
-&lt;span class=&quot;c1&quot;&gt;//使用私鑰sign&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createSign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rsa-sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;signer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;privateKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<span class="c1">//使用私鑰sign</span>
+<span class="kd">const</span> <span class="nx">signer</span> <span class="o">=</span> <span class="nx">createSign</span><span class="p">(</span><span class="dl">'</span><span class="s1">rsa-sha256</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">signer</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">signature</span> <span class="o">=</span> <span class="nx">signer</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
 
 
-&lt;span class=&quot;c1&quot;&gt;// 使用公鑰verify&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;verifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createVerify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rsa-sha256&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;verifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isVerified&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;verifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;verify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;signature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hex&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="c1">// 使用公鑰verify</span>
+<span class="kd">const</span> <span class="nx">verifier</span> <span class="o">=</span> <span class="nx">createVerify</span><span class="p">(</span><span class="dl">'</span><span class="s1">rsa-sha256</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">verifier</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">isVerified</span> <span class="o">=</span> <span class="nx">verifier</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">publicKey</span><span class="p">,</span> <span class="nx">signature</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;summay&quot;&gt;Summay&lt;/h1&gt;
-&lt;p&gt;其實就是從官方document裡，把比較常用的整理到這裡，這篇就只有紀錄在Nodejs裡如何實作，
-並沒有討論為何需要上述的每一個東西，以及有何用途，有機會再陸續補上～ 掰掰👋&lt;/p&gt;
+<h1 id="summay">Summay</h1>
+<p>其實就是從官方document裡，把比較常用的整理到這裡，這篇就只有紀錄在Nodejs裡如何實作，
+並沒有討論為何需要上述的每一個東西，以及有何用途，有機會再陸續補上～ 掰掰👋</p>
 
-&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://nodejs.org/api/crypto.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Crypto | Node.js Documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><category term="node.js" /><summary type="html">這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念， 包含hash、salt、password hashing、 MAC(message authentication code)、 Symmetric Encryption及Asymmetric Encryption 及Digital Signature。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[System Design] 淺談Database Partition. Centralized and Distributed.</title><link href="https://homuchen.com/posts/what-is-database-partition-sharding/" rel="alternate" type="text/html" title="[System Design] 淺談Database Partition. Centralized and Distributed." /><published>2021-11-21T18:19:00+08:00</published><updated>2021-11-21T18:19:00+08:00</updated><id>https://homuchen.com/posts/what-is-database-partition-sharding</id><content type="html" xml:base="https://homuchen.com/posts/what-is-database-partition-sharding/">&lt;p&gt;什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼?
+<h1 id="參考資料">參考資料</h1>
+<ul>
+  <li><a href="https://nodejs.org/api/crypto.html" target="_blank"><strong>Crypto | Node.js Documentation</strong></a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><category term="node.js" /><summary type="html"><![CDATA[這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念， 包含hash、salt、password hashing、 MAC(message authentication code)、 Symmetric Encryption及Asymmetric Encryption 及Digital Signature。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[System Design] 淺談Database Partition. Centralized and Distributed.</title><link href="https://homuchen.com/posts/what-is-database-partition-sharding/" rel="alternate" type="text/html" title="[System Design] 淺談Database Partition. Centralized and Distributed." /><published>2021-11-21T18:19:00+08:00</published><updated>2021-11-21T18:19:00+08:00</updated><id>https://homuchen.com/posts/what-is-database-partition-sharding</id><content type="html" xml:base="https://homuchen.com/posts/what-is-database-partition-sharding/"><![CDATA[<p>什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼?
 這些跟NoSQL有關嗎? 在傳統的RDBMS，像是MySQL或PostgreSQL中，這些概念也有用嗎?
-這篇文章將討論上述的問題，看看partition在RDBMS及NoSQL中的實踐應用，以及各種優缺點。&lt;/p&gt;
+這篇文章將討論上述的問題，看看partition在RDBMS及NoSQL中的實踐應用，以及各種優缺點。</p>
 
-&lt;h1 id=&quot;什麼是partition&quot;&gt;什麼是Partition&lt;/h1&gt;
-&lt;p&gt;Partition原意就是&lt;strong&gt;分拆&lt;/strong&gt;的意思，在資料的世界裡，就是把一份資料，分成許多小份，
-比如說log file的rotation也是，把今年的日記寫在同一本，去年的日記是另一本也是partition。&lt;/p&gt;
+<h1 id="什麼是partition">什麼是Partition</h1>
+<p>Partition原意就是<strong>分拆</strong>的意思，在資料的世界裡，就是把一份資料，分成許多小份，
+比如說log file的rotation也是，把今年的日記寫在同一本，去年的日記是另一本也是partition。</p>
 
-&lt;p&gt;分拆出來的多份資料，並沒有一定要分散到多台機器中，他們可以被分散到多處，
+<p>分拆出來的多份資料，並沒有一定要分散到多台機器中，他們可以被分散到多處，
 也能被放在同一台RDBMS裡的不同table，
-也就是說partition並不是分散式資料庫(Distributed Database)的專利。&lt;/p&gt;
+也就是說partition並不是分散式資料庫(Distributed Database)的專利。</p>
 
-&lt;p&gt;Partion的方式有兩種，分別為vertical及horizontal partition，
+<p>Partion的方式有兩種，分別為vertical及horizontal partition，
 我們看資料的方式通常是使用表格的，也就是說有欄有列，
-vertical partition就是根據欄來做分拆，而horizontal partition是對列進行分拆。&lt;/p&gt;
+vertical partition就是根據欄來做分拆，而horizontal partition是對列進行分拆。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-0.jpg&quot; alt=&quot;vertical partition and horizontal partition&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/partition-0.jpg" alt="vertical partition and horizontal partition" /></p>
 
-&lt;h2 id=&quot;vertical-partition&quot;&gt;Vertical Partition&lt;/h2&gt;
-&lt;p&gt;如下圖，vertical partition是根據欄位來進行拆分，會拆分出schema不同的表格，
-主要是為了效能優化，易於管理等目的，再後面的章節中，再來討論應用場景及優缺點。&lt;/p&gt;
+<h2 id="vertical-partition">Vertical Partition</h2>
+<p>如下圖，vertical partition是根據欄位來進行拆分，會拆分出schema不同的表格，
+主要是為了效能優化，易於管理等目的，再後面的章節中，再來討論應用場景及優缺點。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-1.jpg&quot; alt=&quot;vertical partition&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/partition-1.jpg" alt="vertical partition" /></p>
 
-&lt;h2 id=&quot;horizontal-partition&quot;&gt;Horizontal Partition&lt;/h2&gt;
-&lt;p&gt;horizontal partition，是根據列來進行拆分，
-每個拆分出來的資料集都跟原本的資料集長一樣，只不過是一個子集合。&lt;/p&gt;
+<h2 id="horizontal-partition">Horizontal Partition</h2>
+<p>horizontal partition，是根據列來進行拆分，
+每個拆分出來的資料集都跟原本的資料集長一樣，只不過是一個子集合。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-2.jpg&quot; alt=&quot;horizontal partition&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/partition-2.jpg" alt="horizontal partition" /></p>
 
-&lt;h1 id=&quot;該如何做horizontal-partition&quot;&gt;該如何做Horizontal Partition&lt;/h1&gt;
-&lt;p&gt;要根據列來進行拆分的話，就必須有個方法，來決定每一列是屬於哪一份partition，
+<h1 id="該如何做horizontal-partition">該如何做Horizontal Partition</h1>
+<p>要根據列來進行拆分的話，就必須有個方法，來決定每一列是屬於哪一份partition，
 作法就是選擇一個資料欄位，用這個欄位經過一些運算或判斷來決定這筆資料屬於哪一個partition，
-而這個欄位就稱為&lt;strong&gt;partitioning key&lt;/strong&gt;。&lt;/p&gt;
+而這個欄位就稱為<strong>partitioning key</strong>。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-3.jpg&quot; alt=&quot;partition key&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/partition-3.jpg" alt="partition key" /></p>
 
-&lt;p&gt;在上面的例子中，我們選擇了id做為我們的partition key，將資料拆分為兩份，一份為id是奇數，另一份id是偶數，
+<p>在上面的例子中，我們選擇了id做為我們的partition key，將資料拆分為兩份，一份為id是奇數，另一份id是偶數，
 除了上述使用ID奇偶數的方法外，哪些欄位可以適合作為partition key呢? 又有哪些方法來利用每筆資料的partition key，
-使其分配到特定的partition?&lt;/p&gt;
+使其分配到特定的partition?</p>
 
-&lt;h2 id=&quot;range-based&quot;&gt;Range based&lt;/h2&gt;
-&lt;p&gt;就是指shard key依照某個range來指派partition。舉個例子，假設我們選用birthday做為我們的shard key，
-然後指派出生年在1960年前的為partition 1，1960-1990的為partition 2，1990之後的為partition 3。&lt;/p&gt;
+<h2 id="range-based">Range based</h2>
+<p>就是指shard key依照某個range來指派partition。舉個例子，假設我們選用birthday做為我們的shard key，
+然後指派出生年在1960年前的為partition 1，1960-1990的為partition 2，1990之後的為partition 3。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-4.jpg&quot; alt=&quot;range partition&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/partition-4.jpg" alt="range partition" /></p>
 
-&lt;p&gt;這樣做的缺點是，如果你的資料有一堆1990年後出生的年輕人，那麼partition 3就會有一大堆資料，分散的並不平均。&lt;/p&gt;
+<p>這樣做的缺點是，如果你的資料有一堆1990年後出生的年輕人，那麼partition 3就會有一大堆資料，分散的並不平均。</p>
 
-&lt;p&gt;而優點是做range query時，可以就近就拿到幾乎所有的資料，比如說我想要查詢所有1995-1996出生的人，
-此時只要去到partition 3，就可以拿到所有的資料了。&lt;/p&gt;
+<p>而優點是做range query時，可以就近就拿到幾乎所有的資料，比如說我想要查詢所有1995-1996出生的人，
+此時只要去到partition 3，就可以拿到所有的資料了。</p>
 
-&lt;h2 id=&quot;hash-based&quot;&gt;Hash based&lt;/h2&gt;
-&lt;p&gt;另一個作法，就是先將partition key的值先hash過，如此一來就可以避免使用range partition的缺點，也就是造成hot load，
-但是如此一來，將會損失某些資料既有的連續性及相關性。&lt;/p&gt;
+<h2 id="hash-based">Hash based</h2>
+<p>另一個作法，就是先將partition key的值先hash過，如此一來就可以避免使用range partition的缺點，也就是造成hot load，
+但是如此一來，將會損失某些資料既有的連續性及相關性。</p>
 
-&lt;h1 id=&quot;centralized-or-distributed&quot;&gt;Centralized or Distributed?&lt;/h1&gt;
-&lt;p&gt;看完了partition的相關概念之後，接著就來看看是要將partition放在同一台機器裡(&lt;strong&gt;Centralized&lt;/strong&gt;)，
-或是要分散到多台機器中(&lt;strong&gt;Distributed&lt;/strong&gt;)，來討論有何作法及應用場景，
-相對應的好壞處、以及相關市面上已經有哪些solution。&lt;/p&gt;
+<h1 id="centralized-or-distributed">Centralized or Distributed?</h1>
+<p>看完了partition的相關概念之後，接著就來看看是要將partition放在同一台機器裡(<strong>Centralized</strong>)，
+或是要分散到多台機器中(<strong>Distributed</strong>)，來討論有何作法及應用場景，
+相對應的好壞處、以及相關市面上已經有哪些solution。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-5.jpg&quot; alt=&quot;vertical vs. horizontal partition and centralized vs. distributed&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/partition-5.jpg" alt="vertical vs. horizontal partition and centralized vs. distributed" /></p>
 
-&lt;p&gt;按照上圖的編號的順序一個一個來討論～&lt;/p&gt;
+<p>按照上圖的編號的順序一個一個來討論～</p>
 
-&lt;h2 id=&quot;multiple-tables-1&quot;&gt;Multiple tables [1]&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;應用場景1&lt;/strong&gt;: 將不常用的欄位拆分出來，比如說你有多頁面都會下這樣的查詢:
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'123'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;只有用到name欄位，但你的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;users&lt;/code&gt; table中可能還有description、或是biography等落落長的文字資料，
-平常很少用到，如果放在同一個table的話，每次都還需要將不需要的資料讀取進來。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;應用場景2&lt;/strong&gt;: 除了依照使用頻率來拆分之外，也可以依照資料的性質，比如一些不會改變，
+<h2 id="multiple-tables-1">Multiple tables [1]</h2>
+<ul>
+  <li><strong>應用場景1</strong>: 將不常用的欄位拆分出來，比如說你有多頁面都會下這樣的查詢:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">users</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="s1">'123'</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p>只有用到name欄位，但你的<code class="language-plaintext highlighter-rouge">users</code> table中可能還有description、或是biography等落落長的文字資料，
+平常很少用到，如果放在同一個table的話，每次都還需要將不需要的資料讀取進來。</p>
+  </li>
+  <li><strong>應用場景2</strong>: 除了依照使用頻率來拆分之外，也可以依照資料的性質，比如一些不會改變，
 會用來做聚合計算(COUNT, AVG)的欄位資料，可以拆分到獨自的table。
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AVG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;比如說我只關心訂單的平均價格，但如果&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;orders&lt;/code&gt;table裡包含了所有資訊，類似的query就還是需要將全部的資料都讀取進memory。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;優點&lt;/strong&gt;: 減少不必要讀取，避免佔用server的memory，造成太頻繁的swap。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;缺點&lt;/strong&gt;: 增加了應用程式的複雜度，有些場景需要額外做JOIN來取得資料，而上述的應用場景2，
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">orders</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p>比如說我只關心訂單的平均價格，但如果<code class="language-plaintext highlighter-rouge">orders</code>table裡包含了所有資訊，類似的query就還是需要將全部的資料都讀取進memory。</p>
+  </li>
+  <li><strong>優點</strong>: 減少不必要讀取，避免佔用server的memory，造成太頻繁的swap。</li>
+  <li><strong>缺點</strong>: 增加了應用程式的複雜度，有些場景需要額外做JOIN來取得資料，而上述的應用場景2，
 現在多會搭配一些適合OLAP的dataware house一起使用，對此不太了解但有興趣的朋友，
-可以用關鍵字&lt;strong&gt;OLAP&lt;/strong&gt;、&lt;strong&gt;data warehouse&lt;/strong&gt;、&lt;strong&gt;columnar database&lt;/strong&gt;、&lt;strong&gt;column oriented database&lt;/strong&gt;去搜尋。&lt;/li&gt;
-&lt;/ul&gt;
+可以用關鍵字<strong>OLAP</strong>、<strong>data warehouse</strong>、<strong>columnar database</strong>、<strong>column oriented database</strong>去搜尋。</li>
+</ul>
 
-&lt;h2 id=&quot;table-partition-2&quot;&gt;Table partition [2]&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;應用場景&lt;/strong&gt;: 最常見的就是選擇&lt;strong&gt;時間&lt;/strong&gt;相關的欄位來作為partition key，以下以postgresql為例，
-使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;measurement&lt;/code&gt; table中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;logdate&lt;/code&gt;作為partition key:
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<h2 id="table-partition-2">Table partition [2]</h2>
+<ul>
+  <li><strong>應用場景</strong>: 最常見的就是選擇<strong>時間</strong>相關的欄位來作為partition key，以下以postgresql為例，
+使用<code class="language-plaintext highlighter-rouge">measurement</code> table中的<code class="language-plaintext highlighter-rouge">logdate</code>作為partition key:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;measurement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;city_id&lt;/span&gt;         &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;logdate&lt;/span&gt;         &lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;peaktemp&lt;/span&gt;        &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;unitsales&lt;/span&gt;       &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PARTITION&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RANGE&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">measurement</span> <span class="p">(</span>
+  <span class="n">city_id</span>         <span class="nb">int</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
+  <span class="n">logdate</span>         <span class="nb">date</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
+  <span class="n">peaktemp</span>        <span class="nb">int</span><span class="p">,</span>
+  <span class="n">unitsales</span>       <span class="nb">int</span>
+<span class="p">)</span> <span class="k">PARTITION</span> <span class="k">BY</span> <span class="k">RANGE</span> <span class="p">(</span><span class="n">logdate</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -692,46 +811,46 @@ vertical partition就是根據欄來做分拆，而horizontal partition是對列
 6
 7
 8
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;measurement_y2021m09&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PARTITION&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;OF&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;measurement&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;FOR&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;VALUES&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2021-09-01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TO&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2021-10-01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">measurement_y2021m09</span> <span class="k">PARTITION</span> <span class="k">OF</span> <span class="n">measurement</span>
+    <span class="k">FOR</span> <span class="k">VALUES</span> <span class="k">FROM</span> <span class="p">(</span><span class="s1">'2021-09-01'</span><span class="p">)</span> <span class="k">TO</span> <span class="p">(</span><span class="s1">'2021-10-01'</span><span class="p">);</span>
 
-&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;measurement_y2021m10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PARTITION&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;OF&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;measurement&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;FOR&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;VALUES&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2021-10-01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TO&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2021-11-01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">measurement_y2021m10</span> <span class="k">PARTITION</span> <span class="k">OF</span> <span class="n">measurement</span>
+    <span class="k">FOR</span> <span class="k">VALUES</span> <span class="k">FROM</span> <span class="p">(</span><span class="s1">'2021-10-01'</span><span class="p">)</span> <span class="k">TO</span> <span class="p">(</span><span class="s1">'2021-11-01'</span><span class="p">);</span>
 
-&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;measurement_y2021m11&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PARTITION&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;OF&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;measurement&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;FOR&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;VALUES&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2021-11-01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TO&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2021-12-01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;並按照每個月的range創建partition。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;優點&lt;/strong&gt;: 常見的access patern可能會是讀取最近的資料，對於比較久以前的資料很少去讀取，所以不需要每次讀取都在一個大的table裡尋找，
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">measurement_y2021m11</span> <span class="k">PARTITION</span> <span class="k">OF</span> <span class="n">measurement</span>
+    <span class="k">FOR</span> <span class="k">VALUES</span> <span class="k">FROM</span> <span class="p">(</span><span class="s1">'2021-11-01'</span><span class="p">)</span> <span class="k">TO</span> <span class="p">(</span><span class="s1">'2021-12-01'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p>並按照每個月的range創建partition。</p>
+  </li>
+  <li><strong>優點</strong>: 常見的access patern可能會是讀取最近的資料，對於比較久以前的資料很少去讀取，所以不需要每次讀取都在一個大的table裡尋找，
 藉由partition創造出多的小的table，改善效能。
 另外像是如果你有保留政策(retention policy)的話，也變得相當容易去管理，比如說你只保證保留近一個月的資料，
-所以超過一個月的partition就直接DROP掉就好了！&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;缺點&lt;/strong&gt;: 跟以下的[3]一起說明～&lt;/li&gt;
-&lt;/ul&gt;
+所以超過一個月的partition就直接DROP掉就好了！</li>
+  <li><strong>缺點</strong>: 跟以下的[3]一起說明～</li>
+</ul>
 
-&lt;h2 id=&quot;multiple-rdbms-servers-3&quot;&gt;Multiple RDBMS servers [3]&lt;/h2&gt;
-&lt;p&gt;終於要進到分散式系統的領域了～ 把一份大的檔案分拆成許多小份，當然也有許多益處，
+<h2 id="multiple-rdbms-servers-3">Multiple RDBMS servers [3]</h2>
+<p>終於要進到分散式系統的領域了～ 把一份大的檔案分拆成許多小份，當然也有許多益處，
 讀取效能的優化、更易於管理等等，但隨著資料的長大，資料增加的速度越來越快，
-總有一天一台機器還是會遇到瓶頸，此時就有了將資料放在多台機器的想法。&lt;/p&gt;
+總有一天一台機器還是會遇到瓶頸，此時就有了將資料放在多台機器的想法。</p>
 
-&lt;p&gt;原理都是一樣的，選定一個欄位作為shard key，你的application server將決定這筆資料的要放到哪台DB上，&lt;/p&gt;
+<p>原理都是一樣的，選定一個欄位作為shard key，你的application server將決定這筆資料的要放到哪台DB上，</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-6.jpg&quot; alt=&quot;RDBMS sharding&quot; target=&quot;_blank&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/partition-6.jpg" alt="RDBMS sharding" target="_blank" /></p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;優點&lt;/strong&gt;: 增加了throughput，不管是卡在Disk或是CPU，一台機器不夠寫不夠讀，那你有試過兩台三台十台嗎～&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;缺點&lt;/strong&gt;: application code的複雜度變大了是一定的，除此之外，每個partiton現在已經各自獨立，
+<ul>
+  <li><strong>優點</strong>: 增加了throughput，不管是卡在Disk或是CPU，一台機器不夠寫不夠讀，那你有試過兩台三台十台嗎～</li>
+  <li>
+    <p><strong>缺點</strong>: application code的複雜度變大了是一定的，除此之外，每個partiton現在已經各自獨立，
 跨partition沒有unique constraint、reference constraint，更不可能JOIN
 secondary indexes也必須各自去建立，幾乎許多RDBMS提供的好用的功能，在跨partition時都不能用了，
-只能在自己的application code上去實現。&lt;/p&gt;
+只能在自己的application code上去實現。</p>
 
-    &lt;p&gt;比如說你想做JOIN，但被referenced的table已經被我們做partition了，application code就必須去到每一台機器裡去找，
-然後在程式裡面把資料做結合。&lt;/p&gt;
+    <p>比如說你想做JOIN，但被referenced的table已經被我們做partition了，application code就必須去到每一台機器裡去找，
+然後在程式裡面把資料做結合。</p>
 
-    &lt;p&gt;舉個例子&lt;/p&gt;
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+    <p>舉個例子</p>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -740,394 +859,394 @@ secondary indexes也必須各自去建立，幾乎許多RDBMS提供的好用的�
 7
 8
 9
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;          &lt;span class=&quot;nb&quot;&gt;INTEGER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;PRIMARY&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;        &lt;span class=&quot;nb&quot;&gt;VARCHAR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">users</span> <span class="p">(</span>
+  <span class="n">id</span>          <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+  <span class="n">name</span>        <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">);</span>
 
-&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;          &lt;span class=&quot;nb&quot;&gt;INTEGER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;PRIMARY&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;INTEGER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;REFERENCES&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;我們有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;users&lt;/code&gt;及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;orders&lt;/code&gt; table，orders的user_id是個foreign key指到users的id，
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">orders</span> <span class="p">(</span>
+  <span class="n">id</span>          <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+  <span class="n">user_id</span>     <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">users</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p>我們有<code class="language-plaintext highlighter-rouge">users</code>及<code class="language-plaintext highlighter-rouge">orders</code> table，orders的user_id是個foreign key指到users的id，
 如果我們今天將users及orders用它們的id做partition了，
-則同一個user的orders可能會被分散到不同的機器之中，所以就沒法JOIN拉～&lt;/p&gt;
+則同一個user的orders可能會被分散到不同的機器之中，所以就沒法JOIN拉～</p>
 
-    &lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/partition-7.jpg&quot; alt=&quot;after sharding, not able to join&quot; target=&quot;_blank&quot; /&gt;&lt;/p&gt;
+    <p><img src="https://storage.googleapis.com/homuchen.com/images/partition-7.jpg" alt="after sharding, not able to join" target="_blank" /></p>
 
-    &lt;p&gt;其實這裡的解決方法就是選用user_id作為shard key就好了，但不可能所有的資料集都有辦法使用同樣意義的欄位來做partition。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    <p>其實這裡的解決方法就是選用user_id作為shard key就好了，但不可能所有的資料集都有辦法使用同樣意義的欄位來做partition。</p>
+  </li>
+</ul>
 
-&lt;h2 id=&quot;sharding-in-nosql-4&quot;&gt;Sharding in NoSQL [4]&lt;/h2&gt;
-&lt;p&gt;在大數據時代，為了處理大量資料而冒出的許多NoSQL都有的內建功能，
+<h2 id="sharding-in-nosql-4">Sharding in NoSQL [4]</h2>
+<p>在大數據時代，為了處理大量資料而冒出的許多NoSQL都有的內建功能，
 就跟上面講的原理一樣，只不過這次資料庫本身就幫我們把sharding這件事都處理好拉～
-不需要我們寫任何一行的code，只需要在configuration file或UI上設置一下就好。&lt;/p&gt;
+不需要我們寫任何一行的code，只需要在configuration file或UI上設置一下就好。</p>
 
-&lt;p&gt;而面對的問題還是一樣的，所以大部分的NoSQL提供的API都比較簡單，
-不像RDBMS有各種constraint，可以JOIN，transaction可以用。&lt;/p&gt;
+<p>而面對的問題還是一樣的，所以大部分的NoSQL提供的API都比較簡單，
+不像RDBMS有各種constraint，可以JOIN，transaction可以用。</p>
 
-&lt;p&gt;關於NoSQL怎麼實作sharding的，每種產品也都不同，大家要自己去看他們是如何實作的，shard key怎麼選的，可以自己選嗎?
-是range還是hash partition，如何動態增加或減少shard的數量(這部分這篇文章裡沒有討論到)。&lt;/p&gt;
+<p>關於NoSQL怎麼實作sharding的，每種產品也都不同，大家要自己去看他們是如何實作的，shard key怎麼選的，可以自己選嗎?
+是range還是hash partition，如何動態增加或減少shard的數量(這部分這篇文章裡沒有討論到)。</p>
 
-&lt;p&gt;比如說MongoDB可以自己選擇shard key，也可以選擇shard strategy，
-大家可以根據自己的use case來調整，詳見&lt;a href=&quot;https://docs.mongodb.com/manual/sharding/&quot; target=&quot;_blank&quot;&gt;MongoDB sharding&lt;/a&gt;&lt;/p&gt;
+<p>比如說MongoDB可以自己選擇shard key，也可以選擇shard strategy，
+大家可以根據自己的use case來調整，詳見<a href="https://docs.mongodb.com/manual/sharding/" target="_blank">MongoDB sharding</a></p>
 
-&lt;h2 id=&quot;multiple-services-5&quot;&gt;Multiple services? [5]&lt;/h2&gt;
-&lt;p&gt;其實好像沒看到DB做vertical partition，然後把不同的partition分散到不同的機器上的，就算是column oriented的DB，
-應該也是用horizontal partition的方式來分散它的資料(不太確定)，如果有人想要補充，歡迎留言～開開孤陋寡聞的我的見識。&lt;/p&gt;
+<h2 id="multiple-services-5">Multiple services? [5]</h2>
+<p>其實好像沒看到DB做vertical partition，然後把不同的partition分散到不同的機器上的，就算是column oriented的DB，
+應該也是用horizontal partition的方式來分散它的資料(不太確定)，如果有人想要補充，歡迎留言～開開孤陋寡聞的我的見識。</p>
 
-&lt;p&gt;所以這邊我的Multiple services的意思是指，比如說今天你的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;users&lt;/code&gt; table有個大頭貼的欄位，或是任何大的document或Blob，
+<p>所以這邊我的Multiple services的意思是指，比如說今天你的<code class="language-plaintext highlighter-rouge">users</code> table有個大頭貼的欄位，或是任何大的document或Blob，
 雖然DB也可以存，不過也可以將它拆出來，使用其他的服務像是AWS S3、或是GCP的GCS，好拉，
-其實加這個就只是要讓我的表格不會空一格😂&lt;/p&gt;
+其實加這個就只是要讓我的表格不會空一格😂</p>
 
-&lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
-&lt;p&gt;今天知道了什麼是partition，有分為vertical及horizontal的，以及該如何做horizontal partition，選定shard key，
+<h1 id="總結">總結</h1>
+<p>今天知道了什麼是partition，有分為vertical及horizontal的，以及該如何做horizontal partition，選定shard key，
 以及決定你的shard strategy，不管你是自己做，還是資料庫幫你做好好的，根本的核心概念及會面臨的問題都是一樣的，
 有了這些概念，對於不管是自己家系統的架構，或是別的資料庫產品，都有更好地了解，
-並更清楚地可以根據適合自己問題場景，選擇適當的作法。&lt;/p&gt;
+並更清楚地可以根據適合自己問題場景，選擇適當的作法。</p>
 
-&lt;p&gt;感謝你的閱讀，有很多地方我可能還是不懂或搞錯的，或是有任何想法，更棒的idea想討論的，都歡迎可以留言唷～ 掰掰👋&lt;/p&gt;
+<p>感謝你的閱讀，有很多地方我可能還是不懂或搞錯的，或是有任何想法，更棒的idea想討論的，都歡迎可以留言唷～ 掰掰👋</p>
 
-&lt;h1 id=&quot;參考資料&quot;&gt;參考資料&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.postgresql.org/docs/10/ddl-partitioning.html&quot; target=&quot;_blank&quot;&gt;PostgreSQL: Documentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/understanding-database-sharding&quot; target=&quot;_blank&quot;&gt;Understanding Database Sharding&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/sharding/&quot; target=&quot;_blank&quot;&gt;MongoDB sharding&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html">什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼? 這些跟NoSQL有關嗎? 在傳統的RDBMS，像是MySQL或PostgreSQL中，這些概念也有用嗎? 這篇文章將討論上述的問題，看看partition在RDBMS及NoSQL中的實踐應用，以及各種優缺點。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">什麼是Hash Function? 有什麼特性及用途?</title><link href="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/" rel="alternate" type="text/html" title="什麼是Hash Function? 有什麼特性及用途?" /><published>2021-11-17T17:52:00+08:00</published><updated>2021-11-17T17:52:00+08:00</updated><id>https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages</id><content type="html" xml:base="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/">&lt;p&gt;在之前一篇文章: &lt;a href=&quot;/posts/what-problems-cryptography-to-solve&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;密碼學是什麼? 有何用途以及要解決什麼樣的問題?&lt;/strong&gt;&lt;/a&gt;
+<h1 id="參考資料">參考資料</h1>
+<ul>
+  <li><a href="https://www.postgresql.org/docs/10/ddl-partitioning.html" target="_blank">PostgreSQL: Documentation</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/understanding-database-sharding" target="_blank">Understanding Database Sharding</a></li>
+  <li><a href="https://docs.mongodb.com/manual/sharding/" target="_blank">MongoDB sharding</a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼? 這些跟NoSQL有關嗎? 在傳統的RDBMS，像是MySQL或PostgreSQL中，這些概念也有用嗎? 這篇文章將討論上述的問題，看看partition在RDBMS及NoSQL中的實踐應用，以及各種優缺點。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">什麼是Hash Function? 有什麼特性及用途?</title><link href="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/" rel="alternate" type="text/html" title="什麼是Hash Function? 有什麼特性及用途?" /><published>2021-11-17T17:52:00+08:00</published><updated>2021-11-17T17:52:00+08:00</updated><id>https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages</id><content type="html" xml:base="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/"><![CDATA[<p>在之前一篇文章: <a href="/posts/what-problems-cryptography-to-solve" target="_blank"><strong>密碼學是什麼? 有何用途以及要解決什麼樣的問題?</strong></a>
 中討論過密碼學的出現是為了解決什麼問題，這篇文章要討論密碼學裡一個重要的概念，
-&lt;strong&gt;Hash Function&lt;/strong&gt;，其與對稱式加密跟非對稱式加密三者共同構成密碼學裡的核心。&lt;/p&gt;
+<strong>Hash Function</strong>，其與對稱式加密跟非對稱式加密三者共同構成密碼學裡的核心。</p>
 
-&lt;h1 id=&quot;賭博遊戲&quot;&gt;賭博遊戲&lt;/h1&gt;
-&lt;p&gt;再開始正式的內容之前，先來想個有趣的問題: &lt;strong&gt;賭博中如何防止莊家出老千?&lt;/strong&gt;
+<h1 id="賭博遊戲">賭博遊戲</h1>
+<p>再開始正式的內容之前，先來想個有趣的問題: <strong>賭博中如何防止莊家出老千?</strong>
 比如說我們現在玩骰子遊戲，賭大小，1-3是小，4-6是大，
-賭博最怕莊家出老千，莊家看你賭小就作弊讓骰子骰出大，看你賭大就骰小，該如何解決這個問題呢~&lt;/p&gt;
+賭博最怕莊家出老千，莊家看你賭小就作弊讓骰子骰出大，看你賭大就骰小，該如何解決這個問題呢~</p>
 
-&lt;p&gt;這篇文章講Hash那提出的解法當然跟Hash有關囉，文末再來揭曉，首先先來認識Hash function。&lt;/p&gt;
+<p>這篇文章講Hash那提出的解法當然跟Hash有關囉，文末再來揭曉，首先先來認識Hash function。</p>
 
-&lt;h1 id=&quot;什麼是hash-function&quot;&gt;什麼是Hash Function&lt;/h1&gt;
-&lt;p&gt;Function就是有一組輸入然後會產生一組輸出，同樣的輸入會產生出同樣的輸出，
-而hash function的輸出是&lt;strong&gt;固定長度&lt;/strong&gt;的，不同的hash funtion，所產出長度都不同，
-比如說md5為128個bits，sha256顧名思義為256個bits。&lt;/p&gt;
+<h1 id="什麼是hash-function">什麼是Hash Function</h1>
+<p>Function就是有一組輸入然後會產生一組輸出，同樣的輸入會產生出同樣的輸出，
+而hash function的輸出是<strong>固定長度</strong>的，不同的hash funtion，所產出長度都不同，
+比如說md5為128個bits，sha256顧名思義為256個bits。</p>
 
-&lt;p&gt;輸出的結果跟輸入的資料相比起來，通常是小很多的，
-所以輸出的結果會被稱為&lt;strong&gt;message digest&lt;/strong&gt;，或是直接稱為&lt;strong&gt;hash value&lt;/strong&gt;。&lt;/p&gt;
+<p>輸出的結果跟輸入的資料相比起來，通常是小很多的，
+所以輸出的結果會被稱為<strong>message digest</strong>，或是直接稱為<strong>hash value</strong>。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg&quot; alt=&quot;hash function&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" alt="hash function" /></p>
 
-&lt;h1 id=&quot;hash-function的特性&quot;&gt;Hash function的特性&lt;/h1&gt;
-&lt;p&gt;接下來我們來看看好的hash function還具有其他哪些特性，可以使得他在密碼學裡佔有一席之地。&lt;/p&gt;
+<h1 id="hash-function的特性">Hash function的特性</h1>
+<p>接下來我們來看看好的hash function還具有其他哪些特性，可以使得他在密碼學裡佔有一席之地。</p>
 
-&lt;h2 id=&quot;irreversibility&quot;&gt;Irreversibility&lt;/h2&gt;
-&lt;p&gt;不可逆的，單向的，就是說當我們得到一個hash funcition的output時，我們無法反推出其input，&lt;/p&gt;
+<h2 id="irreversibility">Irreversibility</h2>
+<p>不可逆的，單向的，就是說當我們得到一個hash funcition的output時，我們無法反推出其input，</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/hash-function-1.jpg&quot; alt=&quot;hash function: irreversibility&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/hash-function-1.jpg" alt="hash function: irreversibility" /></p>
 
-&lt;h2 id=&quot;collision-resistance&quot;&gt;Collision Resistance&lt;/h2&gt;
-&lt;p&gt;什麼是碰撞? 就是說當有兩個不同的輸入，經過hash function的計算後，得到了一樣的結果時，就是碰撞。&lt;/p&gt;
+<h2 id="collision-resistance">Collision Resistance</h2>
+<p>什麼是碰撞? 就是說當有兩個不同的輸入，經過hash function的計算後，得到了一樣的結果時，就是碰撞。</p>
 
-&lt;p&gt;比如說我們的hash function是將輸入除以5的餘數，這樣當我們的input是1、6、11、16等等等的時候，
-所得到的ouput都是1，就碰撞了。&lt;/p&gt;
+<p>比如說我們的hash function是將輸入除以5的餘數，這樣當我們的input是1、6、11、16等等等的時候，
+所得到的ouput都是1，就碰撞了。</p>
 
-&lt;p&gt;所以如果一個好的hash function是collision resistance的話，當我們看到兩個不相同的hash value時，
+<p>所以如果一個好的hash function是collision resistance的話，當我們看到兩個不相同的hash value時，
 我們就知道他們倆的input也是不相同，反之亦然，當看到兩個相同的hash value時，
-我們就知道它是由兩個一樣的input所以計算出來的，因為他不會碰撞，不會有多個input對應到同一個output。&lt;/p&gt;
+我們就知道它是由兩個一樣的input所以計算出來的，因為他不會碰撞，不會有多個input對應到同一個output。</p>
 
-&lt;h1 id=&quot;用途&quot;&gt;用途&lt;/h1&gt;
-&lt;p&gt;Hash Function就是做出&lt;strong&gt;承諾&lt;/strong&gt;、&lt;strong&gt;指紋&lt;/strong&gt;、&lt;strong&gt;識別&lt;/strong&gt;的方法，怎麼說呢？
-接下來我們來看看在哪些地方有用到hash function吧!&lt;/p&gt;
+<h1 id="用途">用途</h1>
+<p>Hash Function就是做出<strong>承諾</strong>、<strong>指紋</strong>、<strong>識別</strong>的方法，怎麼說呢？
+接下來我們來看看在哪些地方有用到hash function吧!</p>
 
-&lt;h2 id=&quot;承諾&quot;&gt;承諾&lt;/h2&gt;
-&lt;p&gt;比如現在要做出愛妻承諾，我們將10條的愛妻守則經過hash function計算的到一個hash value，
+<h2 id="承諾">承諾</h2>
+<p>比如現在要做出愛妻承諾，我們將10條的愛妻守則經過hash function計算的到一個hash value，
 這個value就是一個承諾。承諾就是不會改變的東西，如果我們偷偷地更改了愛妻守則裡的其中一個字，
-因為改變太微小了，老婆可能不會發現，但只要再經過hash function計算過後，就會發現hash value完全不一樣了～&lt;/p&gt;
+因為改變太微小了，老婆可能不會發現，但只要再經過hash function計算過後，就會發現hash value完全不一樣了～</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/hash-function-2.jpg&quot; alt=&quot;hash function: commitment&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/hash-function-2.jpg" alt="hash function: commitment" /></p>
 
-&lt;p&gt;如此一般，hash value的一致可以用來保障我們原始資料是沒有改變的，可以被用在下列這幾個地方:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;檔案校正碼&lt;/li&gt;
-  &lt;li&gt;下載安裝檔&lt;/li&gt;
-&lt;/ul&gt;
+<p>如此一般，hash value的一致可以用來保障我們原始資料是沒有改變的，可以被用在下列這幾個地方:</p>
+<ul>
+  <li>檔案校正碼</li>
+  <li>下載安裝檔</li>
+</ul>
 
-&lt;p&gt;用來確定我們收到的檔案是沒有損毀的，以及我下載下來要安裝的東西，不是被惡意的第三方給改過的！&lt;/p&gt;
+<p>用來確定我們收到的檔案是沒有損毀的，以及我下載下來要安裝的東西，不是被惡意的第三方給改過的！</p>
 
-&lt;h2 id=&quot;隱密的承諾&quot;&gt;隱密的承諾&lt;/h2&gt;
-&lt;p&gt;除了是承諾之外，它還可以是隱密的承諾，也就是說我知道你做了一個承諾，
+<h2 id="隱密的承諾">隱密的承諾</h2>
+<p>除了是承諾之外，它還可以是隱密的承諾，也就是說我知道你做了一個承諾，
 但我不知道你承諾的內容是什麼，因為hash function具有不可逆的特性，
-但你可能會說這有什麼用嗎~讓我們來看看吧！&lt;/p&gt;
+但你可能會說這有什麼用嗎~讓我們來看看吧！</p>
 
-&lt;h3 id=&quot;密碼儲存&quot;&gt;密碼儲存&lt;/h3&gt;
-&lt;p&gt;當我們使用密碼登入別人的服務時，伺服器要知道使用者的密碼輸入的對不對，那它就要記錄下大家的密碼，
+<h3 id="密碼儲存">密碼儲存</h3>
+<p>當我們使用密碼登入別人的服務時，伺服器要知道使用者的密碼輸入的對不對，那它就要記錄下大家的密碼，
 日後使用者登入的時候才可以比對。不過要是伺服器被駭客侵入，
-或透過其他的方式取得這份使用者密碼清單，那代誌就大條了😱&lt;/p&gt;
+或透過其他的方式取得這份使用者密碼清單，那代誌就大條了😱</p>
 
-&lt;p&gt;所以通常伺服器資料庫都不會直接把密碼紀錄下來，而是將密碼hash過後，再將hash value存起來，
+<p>所以通常伺服器資料庫都不會直接把密碼紀錄下來，而是將密碼hash過後，再將hash value存起來，
 如此一來就算駭客得到這些hash values，也無法得知原本的密碼是什麼，而每次使用者登入的使用，
 只要再將他輸入的密碼hash過一次，然後跟資料庫裡的比對，一樣的話就代表使用者輸入了正確的密碼了，
-在這裡這個承諾就是密碼本身。&lt;/p&gt;
+在這裡這個承諾就是密碼本身。</p>
 
-&lt;h2 id=&quot;識別&quot;&gt;識別&lt;/h2&gt;
-&lt;p&gt;因為hash value是固定長度的，可以將它當作一份資料的識別，比如說身分證字號就是使用一位英文加上九位數字，
-來代表著某一位台灣人。&lt;/p&gt;
+<h2 id="識別">識別</h2>
+<p>因為hash value是固定長度的，可以將它當作一份資料的識別，比如說身分證字號就是使用一位英文加上九位數字，
+來代表著某一位台灣人。</p>
 
-&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;commit d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9 (HEAD -&amp;gt; master)&lt;/code&gt;&lt;/p&gt;
+<h3 id="git">Git</h3>
+<p><code class="language-plaintext highlighter-rouge">commit d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9 (HEAD -&gt; master)</code></p>
 
-&lt;p&gt;相信會使用git的大家對這樣的文字不陌生，
-其中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9&lt;/code&gt;就是將這個commit版本中的所有檔案作為input，使用SHA1 hash出來的，
-長度為160個bits，也就是40個hexadecimal的字母，他就作為這個commit的識別。&lt;/p&gt;
+<p>相信會使用git的大家對這樣的文字不陌生，
+其中的<code class="language-plaintext highlighter-rouge">d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9</code>就是將這個commit版本中的所有檔案作為input，使用SHA1 hash出來的，
+長度為160個bits，也就是40個hexadecimal的字母，他就作為這個commit的識別。</p>
 
-&lt;h3 id=&quot;uuid-v3uuid-v5&quot;&gt;UUID v3、UUID v5&lt;/h3&gt;
-&lt;p&gt;這兩個版本分別使用MD5及SHA1，由於v5使用SHA1會生成160bits的hash value，會將其截斷為128bits。&lt;/p&gt;
+<h3 id="uuid-v3uuid-v5">UUID v3、UUID v5</h3>
+<p>這兩個版本分別使用MD5及SHA1，由於v5使用SHA1會生成160bits的hash value，會將其截斷為128bits。</p>
 
-&lt;h1 id=&quot;賭博遊戲的解法&quot;&gt;賭博遊戲的解法&lt;/h1&gt;
-&lt;p&gt;現在要來解決文章開頭的問題了～利用的就是hash function的隱密的承諾的特性，提出的解法如下:&lt;/p&gt;
+<h1 id="賭博遊戲的解法">賭博遊戲的解法</h1>
+<p>現在要來解決文章開頭的問題了～利用的就是hash function的隱密的承諾的特性，提出的解法如下:</p>
 
-&lt;p&gt;玩家可以先將他要下的賭注hash過，得到一串看不懂的東西，然後公開這串hash value，
+<p>玩家可以先將他要下的賭注hash過，得到一串看不懂的東西，然後公開這串hash value，
 由於不可逆的特性的關係，莊家看不懂玩家到底是賭大還是賭小，等開出結果之後，
 玩家再公布他的賭注，並將此再hash一遍，如果得出的hash value一樣，
-玩家就可以宣稱他看到骰子開獎之後才公布的賭注跟原先的賭注是一樣的，酷吧😎&lt;/p&gt;
+玩家就可以宣稱他看到骰子開獎之後才公布的賭注跟原先的賭注是一樣的，酷吧😎</p>
 
-&lt;h1 id=&quot;總結&quot;&gt;總結&lt;/h1&gt;
-&lt;p&gt;感謝你的閱讀～ 這篇文章簡單地介紹了什麼是hash function，以及它具有哪些特性，
-還有其用途，包括檔案校正、密碼儲存、git commit、uuid等等…&lt;/p&gt;
+<h1 id="總結">總結</h1>
+<p>感謝你的閱讀～ 這篇文章簡單地介紹了什麼是hash function，以及它具有哪些特性，
+還有其用途，包括檔案校正、密碼儲存、git commit、uuid等等…</p>
 
-&lt;p&gt;在密碼學中，還會搭配對稱式及非對稱式加密來達成一些其他的任務，
+<p>在密碼學中，還會搭配對稱式及非對稱式加密來達成一些其他的任務，
 比如說訊息驗證碼(message authentication code)、數位簽章(digital signature)等等…
-後續會再慢慢介紹以上的東西，掰掰～ 👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html">在之前一篇文章: 密碼學是什麼? 有何用途以及要解決什麼樣的問題? 中討論過密碼學的出現是為了解決什麼問題，這篇文章要討論密碼學裡一個重要的概念， Hash Function，其與對稱式加密跟非對稱式加密三者共同構成密碼學裡的核心。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</title><link href="https://homuchen.com/posts/book-note-atomic-habits/" rel="alternate" type="text/html" title="[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則" /><published>2021-11-14T21:36:00+08:00</published><updated>2021-11-14T21:36:00+08:00</updated><id>https://homuchen.com/posts/book-note-atomic-habits</id><content type="html" xml:base="https://homuchen.com/posts/book-note-atomic-habits/">&lt;p&gt;&lt;a href=&quot;https://www.books.com.tw/products/0010822522&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》&lt;/strong&gt;&lt;/a&gt;
+後續會再慢慢介紹以上的東西，掰掰～ 👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html"><![CDATA[除了了解hash function是什麼及其特性之外，用更生活化的方式來展現這些特性，以及以有趣的應用來更加地熟悉hash function。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</title><link href="https://homuchen.com/posts/book-note-atomic-habits/" rel="alternate" type="text/html" title="[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則" /><published>2021-11-14T21:36:00+08:00</published><updated>2021-11-14T21:36:00+08:00</updated><id>https://homuchen.com/posts/book-note-atomic-habits</id><content type="html" xml:base="https://homuchen.com/posts/book-note-atomic-habits/"><![CDATA[<p><a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>
 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到，
 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後，
-作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。&lt;/p&gt;
+作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/self-improvement-books-1.jpg&quot; alt=&quot;書: 原子習慣&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-1.jpg" alt="書: 原子習慣" /></p>
 
-&lt;h1 id=&quot;習慣是什麼&quot;&gt;習慣是什麼&lt;/h1&gt;
-&lt;p&gt;習慣佔據你人生的八、九成，試想一下每天醒來，躺在床上滑一下手機，
+<h1 id="習慣是什麼">習慣是什麼</h1>
+<p>習慣佔據你人生的八、九成，試想一下每天醒來，躺在床上滑一下手機，
 走去浴室刷牙洗臉，要不要吃早餐，早餐要吃什麼，通勤去上班的路上在做什麼，
 工作時如何面對同事，面對事情是如何處理，下班了之後要做什麼，要去運動嗎?
 還是回家躺在沙發上耍廢，該準時就寢嗎？還是東摸摸西摸摸又到了半夜了，
-跟人聊天會抱怨最近發生的負面的事嗎？&lt;/p&gt;
+跟人聊天會抱怨最近發生的負面的事嗎？</p>
 
-&lt;p&gt;上述說的這些事，你都不需要在當下耗費心思去做選擇，而是不假思索地反應出來，
+<p>上述說的這些事，你都不需要在當下耗費心思去做選擇，而是不假思索地反應出來，
 但他們就是你現在會成為怎樣的人的根本原因。因為習慣做起來毫不費力，
-而且頻率很高，經過時間的累積後，影響將會慢慢顯現，變得越來越巨大。&lt;/p&gt;
+而且頻率很高，經過時間的累積後，影響將會慢慢顯現，變得越來越巨大。</p>
 
-&lt;h1 id=&quot;專注系統而非目標&quot;&gt;專注系統，而非目標&lt;/h1&gt;
-&lt;p&gt;這就有點像是被動收入，專注於打造每天每個月的現金流，而不是獲得一大筆錢，
+<h1 id="專注系統而非目標">專注系統，而非目標</h1>
+<p>這就有點像是被動收入，專注於打造每天每個月的現金流，而不是獲得一大筆錢，
 被動現金流一旦打造完成之後，無時無刻都可以為你帶來收益。
 但如果你是將目標放在獲得某筆金額，過程中可能會很辛苦，
 並且有人可能還會無所不用其極地來達成，比如說超時工作、
-想辦法投機股票、加密貨幣、偷搶拐騙等等等…&lt;/p&gt;
+想辦法投機股票、加密貨幣、偷搶拐騙等等等…</p>
 
-&lt;p&gt;專注於系統就像是好好地養好一隻會生金蛋的雞一樣，照顧好雞本身，
+<p>專注於系統就像是好好地養好一隻會生金蛋的雞一樣，照顧好雞本身，
 自然會帶給你金蛋，如果只專注於目標，就有可能做出殺雞取卵般的行為，
-所以好習慣就是一隻好雞🐔！&lt;/p&gt;
+所以好習慣就是一隻好雞🐔！</p>
 
-&lt;p&gt;專注於目標也有其他的壞處，比如說你的目標是減重10公斤，
+<p>專注於目標也有其他的壞處，比如說你的目標是減重10公斤，
 除了可能會用激進的手段來達成之外，也可能在費盡千辛萬苦終於達成之後，
-你就沒有動力繼續保持健康的生活又復胖，更多的可能是就中途放棄，沒有意志力再進行下去。&lt;/p&gt;
+你就沒有動力繼續保持健康的生活又復胖，更多的可能是就中途放棄，沒有意志力再進行下去。</p>
 
-&lt;p&gt;所以該怎麼辦呢？這本書給出解答就是透過習慣來達成你的目標，
+<p>所以該怎麼辦呢？這本書給出解答就是透過習慣來達成你的目標，
 藉由每天的小勝利，讓你成為你想要成為的人，只要知道終點在哪個方向(首先你也要知道方向)，
-每天有朝著那個方向前進就好，而且重點是&lt;strong&gt;不自覺地，輕鬆地&lt;/strong&gt;前進，
-而不用依靠自制力，人的&lt;strong&gt;自制力是有限的&lt;/strong&gt;，每天都依靠意志力，總有一天會累歪的😫&lt;/p&gt;
+每天有朝著那個方向前進就好，而且重點是<strong>不自覺地，輕鬆地</strong>前進，
+而不用依靠自制力，人的<strong>自制力是有限的</strong>，每天都依靠意志力，總有一天會累歪的😫</p>
 
-&lt;h1 id=&quot;四步驟&quot;&gt;四步驟&lt;/h1&gt;
-&lt;p&gt;所以該如何打造自己的習慣系統呢? 作者提出了一個框架，將一個習慣的組成拆解如下:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;提示 -&amp;gt; 渴望 -&amp;gt; 回應 -&amp;gt; 獎賞&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+<h1 id="四步驟">四步驟</h1>
+<p>所以該如何打造自己的習慣系統呢? 作者提出了一個框架，將一個習慣的組成拆解如下:</p>
+<blockquote>
+  <p><strong>提示 -&gt; 渴望 -&gt; 回應 -&gt; 獎賞</strong></p>
+</blockquote>
 
-&lt;p&gt;我們從環境中、或是固定的時間地點接收到了提示刺激，引起了我們的渴望，
+<p>我們從環境中、或是固定的時間地點接收到了提示刺激，引起了我們的渴望，
 接著為了滿足那個渴望，我們做出了回應，也就是一些行為，最後得到了獎賞來滿足那些渴望，
-得到獎賞便增強了整件事的迴路，下次只要遇到一樣的情況，大腦便會想做一樣的事，因為他期待會獲得獎賞。&lt;/p&gt;
+得到獎賞便增強了整件事的迴路，下次只要遇到一樣的情況，大腦便會想做一樣的事，因為他期待會獲得獎賞。</p>
 
-&lt;p&gt;以吃垃圾食物為例，我們可能到了週五晚上回到家，經歷了一週辛苦的工作準備迎接週末時，
+<p>以吃垃圾食物為例，我們可能到了週五晚上回到家，經歷了一週辛苦的工作準備迎接週末時，
 洗了個舒服的澡，坐上沙發，以上這些時間地點的提示，就觸發我們想要耍廢的渴望，
 於是乎，我們做出了回應，打開電視打開Netflix，準備好零食飲料，開始耍廢～
 立刻地，我們得到了影劇的刺激，以及充滿糖分、脂肪、鹽分的食物的滿足，大腦覺得開心，
-便增強了我們未來繼續如此作為的可能。&lt;/p&gt;
+便增強了我們未來繼續如此作為的可能。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg&quot; alt=&quot;習慣四階段: 提示、渴望、回應、獎賞&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" alt="習慣四階段: 提示、渴望、回應、獎賞" /></p>
 
-&lt;p&gt;所以該怎麼培養好習慣，剷除壞習慣呢～作者分別對這個階段提出可行動的方案及建議，
-幫助你過關斬將，往好的方向前進～&lt;/p&gt;
+<p>所以該怎麼培養好習慣，剷除壞習慣呢～作者分別對這個階段提出可行動的方案及建議，
+幫助你過關斬將，往好的方向前進～</p>
 
-&lt;h1 id=&quot;提示&quot;&gt;提示&lt;/h1&gt;
-&lt;p&gt;所有的習慣始於提示，提示可能是某個特定的時間地點，也可能是來自環境中的某個訊號。&lt;/p&gt;
-&lt;h2 id=&quot;環境中的提示&quot;&gt;環境中的提示&lt;/h2&gt;
-&lt;p&gt;有個實驗是這樣的，在醫院的自助餐裡，改變可樂跟瓶裝水的擺放位置，
+<h1 id="提示">提示</h1>
+<p>所有的習慣始於提示，提示可能是某個特定的時間地點，也可能是來自環境中的某個訊號。</p>
+<h2 id="環境中的提示">環境中的提示</h2>
+<p>有個實驗是這樣的，在醫院的自助餐裡，改變可樂跟瓶裝水的擺放位置，
 將瓶裝水跟可樂交換放到明顯的位置，結果一句話都不用說，就改變了人們的行為，
-瓶裝水的銷量上升了兩成左右，而可樂的銷量則下滑。&lt;/p&gt;
+瓶裝水的銷量上升了兩成左右，而可樂的銷量則下滑。</p>
 
-&lt;p&gt;當我們在家裡，客廳桌上就擺著洋芋片，就算我們本來沒有想吃，也非常有可能隨手就拿起來吃了，
+<p>當我們在家裡，客廳桌上就擺著洋芋片，就算我們本來沒有想吃，也非常有可能隨手就拿起來吃了，
 如果放的是健康的水果，你吃的就不會是洋芋片而會是水果; 如果想養成看書的習慣，
 或許可以在早上整理完床鋪後，放一本書在床頭櫃上; 想認真工作的時候，就不要在有電視的地方，
-把手機丟得離自己遠遠的，以免不時就打開電視或拿起手機滑滑。&lt;/p&gt;
+把手機丟得離自己遠遠的，以免不時就打開電視或拿起手機滑滑。</p>
 
-&lt;p&gt;另外，空間的用途最好固定，在床上就是要睡覺，書桌就是要工作的地方，想娛樂時去到客廳，
+<p>另外，空間的用途最好固定，在床上就是要睡覺，書桌就是要工作的地方，想娛樂時去到客廳，
 擁有一個小角落來看書，當我們想要做某件事時，就去到特定的地方，如此一來，
-身邊的環境也可以幫助我們開始做特定的事。&lt;/p&gt;
+身邊的環境也可以幫助我們開始做特定的事。</p>
 
-&lt;h2 id=&quot;習慣堆疊&quot;&gt;習慣堆疊&lt;/h2&gt;
-&lt;p&gt;提示也可以是自己的某個行為，所以習慣堆疊這招，就是要利用我們原先已經擁有的習慣來作為提示，
+<h2 id="習慣堆疊">習慣堆疊</h2>
+<p>提示也可以是自己的某個行為，所以習慣堆疊這招，就是要利用我們原先已經擁有的習慣來作為提示，
 比如說每天早上可能我們會沖杯咖啡，那可以再準備完咖啡，坐到位子上時，就先看10分鐘的書，
 或是工作時，拿起手機要滑時，就做10下伏地挺身，在原有的習慣做完之後，
-立馬接上自己想要習慣。&lt;/p&gt;
+立馬接上自己想要習慣。</p>
 
-&lt;h1 id=&quot;渴望&quot;&gt;渴望&lt;/h1&gt;
-&lt;p&gt;接收到提示之後，我們會產生渴望，Friday night使我們有想要放鬆的渴望，
-看到飲料零食使我們有想要吃它喝它的渴望，所以我們可以為我們想要的習慣創造出渴望。&lt;/p&gt;
+<h1 id="渴望">渴望</h1>
+<p>接收到提示之後，我們會產生渴望，Friday night使我們有想要放鬆的渴望，
+看到飲料零食使我們有想要吃它喝它的渴望，所以我們可以為我們想要的習慣創造出渴望。</p>
 
-&lt;p&gt;有個工程師(不是我)想要培養運動的習慣，他也非常愛看Netflix，所以他將他的跑步機跟電腦改裝，
-只有當他在跑步的時候，才可以打開Netflix😂&lt;/p&gt;
+<p>有個工程師(不是我)想要培養運動的習慣，他也非常愛看Netflix，所以他將他的跑步機跟電腦改裝，
+只有當他在跑步的時候，才可以打開Netflix😂</p>
 
-&lt;p&gt;你也可以規定自己當做完需要做的習慣時，才能去做想要的事，把渴望跟需要做的事捆綁在一起，
-也可以跟上述的習慣堆疊合在一起應用，在做完&lt;strong&gt;既有&lt;/strong&gt;的習慣後，去做&lt;strong&gt;需要&lt;/strong&gt;的習慣，然後才能做&lt;strong&gt;想要&lt;/strong&gt;的習慣。&lt;/p&gt;
+<p>你也可以規定自己當做完需要做的習慣時，才能去做想要的事，把渴望跟需要做的事捆綁在一起，
+也可以跟上述的習慣堆疊合在一起應用，在做完<strong>既有</strong>的習慣後，去做<strong>需要</strong>的習慣，然後才能做<strong>想要</strong>的習慣。</p>
 
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-1.jpg&quot; alt=&quot;習慣堆疊 + 渴望綑綁&quot; /&gt;&lt;/p&gt;
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-1.jpg" alt="習慣堆疊 + 渴望綑綁" /></p>
 
-&lt;h1 id=&quot;回應&quot;&gt;回應&lt;/h1&gt;
-&lt;p&gt;回應指的就是你真正去做的那件事的行為，該如何設計你的回應好讓我們養成新的習慣呢!&lt;/p&gt;
-&lt;h2 id=&quot;容易去做&quot;&gt;容易去做&lt;/h2&gt;
-&lt;p&gt;當要去做一個行為的阻力太大時，我們就很可能會放棄。&lt;/p&gt;
+<h1 id="回應">回應</h1>
+<p>回應指的就是你真正去做的那件事的行為，該如何設計你的回應好讓我們養成新的習慣呢!</p>
+<h2 id="容易去做">容易去做</h2>
+<p>當要去做一個行為的阻力太大時，我們就很可能會放棄。</p>
 
-&lt;p&gt;假如你像要養成去健身房運動，但你卻選了個健身房離你家30分鐘路程的地方，
-每次當你想去運動，除了要克服想偷懶的心魔外，還要加上30分鐘路程的艱辛。&lt;/p&gt;
+<p>假如你像要養成去健身房運動，但你卻選了個健身房離你家30分鐘路程的地方，
+每次當你想去運動，除了要克服想偷懶的心魔外，還要加上30分鐘路程的艱辛。</p>
 
-&lt;p&gt;相反地，當你想要阻止自己去做一個壞習慣時，要讓他變得困難，比如說看完電視，
+<p>相反地，當你想要阻止自己去做一個壞習慣時，要讓他變得困難，比如說看完電視，
 就把電視機整台收進倉庫裡，每次要看的時候，都要把電視從倉庫中搬出來，再接線，
-有時候因為懶，就不會再去做那些自己想要去除的壞習慣了。&lt;/p&gt;
+有時候因為懶，就不會再去做那些自己想要去除的壞習慣了。</p>
 
-&lt;h2 id=&quot;重複勝於時間次數勝於質量&quot;&gt;重複勝於時間，次數勝於質量&lt;/h2&gt;
-&lt;p&gt;有一門攝影課做了以下的實驗，將學生分成了兩組，一組在整個學期中只要繳交一次期末成品，
-一次定生死，而另一組則是要求學生每週都要繳交練習作業，&lt;/p&gt;
+<h2 id="重複勝於時間次數勝於質量">重複勝於時間，次數勝於質量</h2>
+<p>有一門攝影課做了以下的實驗，將學生分成了兩組，一組在整個學期中只要繳交一次期末成品，
+一次定生死，而另一組則是要求學生每週都要繳交練習作業，</p>
 
-&lt;p&gt;想要運動嗎？每天做一下伏地挺身也行，沒錯！就是一下; 想要跑步嗎？先從一個禮拜去散步三次也好，
-一件事如果是你無法想像你可以持續一生都堅持在做的話，就一定不會持久。&lt;/p&gt;
+<p>想要運動嗎？每天做一下伏地挺身也行，沒錯！就是一下; 想要跑步嗎？先從一個禮拜去散步三次也好，
+一件事如果是你無法想像你可以持續一生都堅持在做的話，就一定不會持久。</p>
 
-&lt;p&gt;與其新年新希望，在年初雄心壯志一週上三次健身房，然後做了幾週半途而廢，
+<p>與其新年新希望，在年初雄心壯志一週上三次健身房，然後做了幾週半途而廢，
 不如每天從散步，做一下伏地挺身開始，持之以恆，久而久之，
-你可以會開始在散步途中跑個100個公尺，或是都做一下伏地挺身了，就開始做了第二下、第三下…&lt;/p&gt;
+你可以會開始在散步途中跑個100個公尺，或是都做一下伏地挺身了，就開始做了第二下、第三下…</p>
 
-&lt;h1 id=&quot;獎賞&quot;&gt;獎賞&lt;/h1&gt;
-&lt;p&gt;做完一個習慣後，如果我們得到了獎賞便會增強這個習慣，但如果這個獎賞來的太慢，可能會被我們忽略，
+<h1 id="獎賞">獎賞</h1>
+<p>做完一個習慣後，如果我們得到了獎賞便會增強這個習慣，但如果這個獎賞來的太慢，可能會被我們忽略，
 試想一下所有的壞習慣，獎賞都是來得又快又即時，抽菸時尼古丁立刻進入我們身體當中，
 吃垃圾食物時馬上覺得滿足～ 看劇時立即享受到感官的刺激，而壞處卻是可能很久之後才會來，
-我們人類往往都是短視近利的，所以必須讓我們想要培養的習慣有獎賞之外，還要讓它來的即時。&lt;/p&gt;
+我們人類往往都是短視近利的，所以必須讓我們想要培養的習慣有獎賞之外，還要讓它來的即時。</p>
 
-&lt;h2 id=&quot;創造立即獎賞&quot;&gt;創造立即獎賞&lt;/h2&gt;
-&lt;p&gt;如果我們想要培養的習慣可能就是沒辦法帶來立即的獎賞該怎麼辦呢?&lt;/p&gt;
+<h2 id="創造立即獎賞">創造立即獎賞</h2>
+<p>如果我們想要培養的習慣可能就是沒辦法帶來立即的獎賞該怎麼辦呢?</p>
 
-&lt;p&gt;有時成功完成習慣帶來的勝利感成就感本身就是很好的獎賞了，在均衡飲食、去運動完後，
+<p>有時成功完成習慣帶來的勝利感成就感本身就是很好的獎賞了，在均衡飲食、去運動完後，
 覺得自己真是一個健康的人～強化了成為自己想成為的人的形象，就是很棒的事了，
-除此之外還可以透過一些方法來創造獎賞。&lt;/p&gt;
+除此之外還可以透過一些方法來創造獎賞。</p>
 
-&lt;p&gt;比如說你想要省錢，每次阻止自己亂花錢時，總是心力交瘁，花了很多的意志力終於阻止自己花錢
+<p>比如說你想要省錢，每次阻止自己亂花錢時，總是心力交瘁，花了很多的意志力終於阻止自己花錢
 ，但卻只是讓自己不去做一件事，而沒有得到什麼，這時候，不妨將成功省下來的錢，存入另一個帳戶，
 這個帳戶可以用來資助自己想做的事，想完成的夢想，如此一來，每次省錢時就有得到一個立即的獎賞的感覺，
-也就是在自己的旅遊、美食或夢想帳戶中添上一筆。&lt;/p&gt;
+也就是在自己的旅遊、美食或夢想帳戶中添上一筆。</p>
 
-&lt;p&gt;另外也能透過紀錄的方式，為自己每次成功執行一下習慣時記下一筆，有時為了不想讓紀錄中斷，
-也是一種動力！&lt;/p&gt;
+<p>另外也能透過紀錄的方式，為自己每次成功執行一下習慣時記下一筆，有時為了不想讓紀錄中斷，
+也是一種動力！</p>
 
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;感謝您的閱讀～ 讀完這本書後，知道了不要再依賴意志力來逼自己達成目標，
+<h1 id="summary">Summary</h1>
+<p>感謝您的閱讀～ 讀完這本書後，知道了不要再依賴意志力來逼自己達成目標，
 而是可以透過許多方法來設計自已，讓自己掉下好習慣的陷阱，不知不覺中，
-每天往好的方向前進! 期許大家都能每天每天讓自己更加成長一咪咪🤏🎉&lt;/p&gt;
+每天往好的方向前進! 期許大家都能每天每天讓自己更加成長一咪咪🤏🎉</p>
 
-&lt;p&gt;最後跟大家分享我應用所學，在生活中培養新習慣的故事(陸續新增):&lt;/p&gt;
+<p>最後跟大家分享我應用所學，在生活中培養新習慣的故事(陸續新增):</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/posts/lazy-breakfast/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;懶人早餐: 15分鐘，高纖高蛋白低碳水&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/posts/how-i-keep-reading/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;《原子習慣》應用: 我是如何養成閱讀習慣&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><category term="habit" /><summary type="html">《原子習慣》 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到， 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後， 作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">台北捷運在疫情期間各站的進出人數</title><link href="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/" rel="alternate" type="text/html" title="台北捷運在疫情期間各站的進出人數" /><published>2021-11-11T16:04:00+08:00</published><updated>2021-11-11T16:04:00+08:00</updated><id>https://homuchen.com/posts/mrt-transportation-volume-during-pandemic</id><content type="html" xml:base="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/">&lt;p&gt;COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小，
-以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。&lt;/p&gt;
+<ul>
+  <li>
+    <p><a href="/posts/lazy-breakfast/" target="_blank"><strong>懶人早餐: 15分鐘，高纖高蛋白低碳水</strong></a></p>
+  </li>
+  <li>
+    <p><a href="/posts/how-i-keep-reading/" target="_blank"><strong>《原子習慣》應用: 我是如何養成閱讀習慣</strong></a></p>
+  </li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><category term="habit" /><summary type="html"><![CDATA[《原子習慣》 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到， 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後， 作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">台北捷運在疫情期間各站的進出人數</title><link href="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/" rel="alternate" type="text/html" title="台北捷運在疫情期間各站的進出人數" /><published>2021-11-11T16:04:00+08:00</published><updated>2021-11-11T16:04:00+08:00</updated><id>https://homuchen.com/posts/mrt-transportation-volume-during-pandemic</id><content type="html" xml:base="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/"><![CDATA[<p>COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小，
+以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。</p>
 
-&lt;h1 id=&quot;資料來源&quot;&gt;資料來源&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://data.taipei/#/dataset/detail?id=63f31c7e-7fc3-418b-bd82-b95158755b4d&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;臺北捷運各站分時進出量統計&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+<h1 id="資料來源">資料來源</h1>
+<p><a href="https://data.taipei/#/dataset/detail?id=63f31c7e-7fc3-418b-bd82-b95158755b4d" target="_blank"><strong>臺北捷運各站分時進出量統計</strong></a></p>
 
-&lt;p&gt;上述連結中的原始資料中，有每個小時從A站進到B站出的人數，每月近一千萬筆的資料，
-在下將其整理為每月某站的總進出站人數&lt;/p&gt;
+<p>上述連結中的原始資料中，有每個小時從A站進到B站出的人數，每月近一千萬筆的資料，
+在下將其整理為每月某站的總進出站人數</p>
 
-&lt;h1 id=&quot;各站進出人數&quot;&gt;各站進出人數&lt;/h1&gt;
-&lt;p&gt;以下橫軸時間為&lt;strong&gt;2020-01 ~ 2021-09&lt;/strong&gt;，縱軸單位為&lt;strong&gt;百萬人&lt;/strong&gt;。&lt;/p&gt;
+<h1 id="各站進出人數">各站進出人數</h1>
+<p>以下橫軸時間為<strong>2020-01 ~ 2021-09</strong>，縱軸單位為<strong>百萬人</strong>。</p>
 
-&lt;h2 id=&quot;台北車站&quot;&gt;台北車站&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/mrt-data-taipei-stattion-0.jpg&quot; alt=&quot;捷運台北車站每月進出站人數&quot; /&gt;&lt;/p&gt;
+<h2 id="台北車站">台北車站</h2>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-taipei-stattion-0.jpg" alt="捷運台北車站每月進出站人數" /></p>
 
-&lt;h2 id=&quot;忠孝復興&quot;&gt;忠孝復興&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/mrt-data-忠孝復興-0.jpg&quot; alt=&quot;捷運忠孝復興每月進出站人數&quot; /&gt;&lt;/p&gt;
+<h2 id="忠孝復興">忠孝復興</h2>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-忠孝復興-0.jpg" alt="捷運忠孝復興每月進出站人數" /></p>
 
-&lt;h2 id=&quot;西門&quot;&gt;西門&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/mrt-data-西門-0.jpg&quot; alt=&quot;捷運西門站每月進出站人數&quot; /&gt;&lt;/p&gt;
+<h2 id="西門">西門</h2>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-西門-0.jpg" alt="捷運西門站每月進出站人數" /></p>
 
-&lt;h2 id=&quot;板橋&quot;&gt;板橋&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/mrt-data-板橋-0.jpg&quot; alt=&quot;捷運板橋站每月進出站人數&quot; /&gt;&lt;/p&gt;
+<h2 id="板橋">板橋</h2>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-板橋-0.jpg" alt="捷運板橋站每月進出站人數" /></p>
 
-&lt;h2 id=&quot;士林&quot;&gt;士林&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/mrt-data-士林-0.jpg&quot; alt=&quot;捷運士林站每月進出站人數&quot; /&gt;&lt;/p&gt;
+<h2 id="士林">士林</h2>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-士林-0.jpg" alt="捷運士林站每月進出站人數" /></p>
 
-&lt;h1 id=&quot;結論&quot;&gt;結論&lt;/h1&gt;
-&lt;p&gt;可以看出各站的趨勢都大同小異，在2020年初小量下滑，在2021五月開始，搭乘捷運的人數大量地縮減。
-另外12月時板橋站有特別多人可能是耶誕城的關係🎄🎅。&lt;/p&gt;
+<h1 id="結論">結論</h1>
+<p>可以看出各站的趨勢都大同小異，在2020年初小量下滑，在2021五月開始，搭乘捷運的人數大量地縮減。
+另外12月時板橋站有特別多人可能是耶誕城的關係🎄🎅。</p>
 
-&lt;p&gt;以上只簡單列出幾站的資料，如果想要看別的站或是想要確切原始數據的話可以跟我說～除此之外，
+<p>以上只簡單列出幾站的資料，如果想要看別的站或是想要確切原始數據的話可以跟我說～除此之外，
 還想知道其他問題的話也可以問我，比如說總進出人數最多的站前幾名，成長或衰退最多的站是哪些?
-等等問題。以上就是這次的分享囉，掰掰～👋&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="生活" /><summary type="html">COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小， 以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。</summary></entry><entry><title type="html">Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動</title><link href="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/" rel="alternate" type="text/html" title="Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動" /><published>2021-11-09T10:00:00+08:00</published><updated>2021-11-09T10:00:00+08:00</updated><id>https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process</id><content type="html" xml:base="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/">&lt;p&gt;這篇文章將介紹如何使用Nodejs的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline&lt;/code&gt; module來一行一行地讀取檔案，
+等等問題。以上就是這次的分享囉，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><summary type="html"><![CDATA[COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小， 以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。]]></summary></entry><entry><title type="html">Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動</title><link href="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/" rel="alternate" type="text/html" title="Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動" /><published>2021-11-09T10:00:00+08:00</published><updated>2021-11-09T10:00:00+08:00</updated><id>https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process</id><content type="html" xml:base="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/"><![CDATA[<p>這篇文章將介紹如何使用Nodejs的<code class="language-plaintext highlighter-rouge">readline</code> module來一行一行地讀取檔案，
 接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧，
-如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:&lt;/p&gt;
+如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:</p>
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;words.txt | node wc.js
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cat </span>words.txt | node wc.js
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;readline&quot;&gt;readline&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;createInterface:&lt;/strong&gt;&lt;br /&gt;
-首先使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline.createInterface()&lt;/code&gt;，需要一個input參數，他需要是一個&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;，
-這裡我們使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fs.createReadStream()&lt;/code&gt;打開我們的檔案，並作為input，傳給createInterface。&lt;/p&gt;
+<h1 id="readline">readline</h1>
+<ul>
+  <li>
+    <p><strong>createInterface:</strong><br />
+首先使用<code class="language-plaintext highlighter-rouge">readline.createInterface()</code>，需要一個input參數，他需要是一個<code class="language-plaintext highlighter-rouge">stream.Readable</code>，
+這裡我們使用<code class="language-plaintext highlighter-rouge">fs.createReadStream()</code>打開我們的檔案，並作為input，傳給createInterface。</p>
 
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createInterface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createReadStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./words.txt&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Event: “line”&lt;/strong&gt;&lt;br /&gt;
-接著就可以監聽&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;line&lt;/code&gt; event，每當從input讀取到換行(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\r&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\r\n&lt;/code&gt;)，line event就會被發送。
+<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span>
+  <span class="na">input</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">./words.txt</span><span class="dl">'</span><span class="p">),</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li><strong>Event: “line”</strong><br />
+接著就可以監聽<code class="language-plaintext highlighter-rouge">line</code> event，每當從input讀取到換行(<code class="language-plaintext highlighter-rouge">\r</code>、<code class="language-plaintext highlighter-rouge">\n</code> or <code class="language-plaintext highlighter-rouge">\r\n</code>)，line event就會被發送。
 callback function有一個參數，它是個字串。
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Event: “close”&lt;/strong&gt;&lt;br /&gt;
-當input stream結束的時候，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;close&lt;/code&gt; event就會被發送。
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">row</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">row</span><span class="p">));</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li><strong>Event: “close”</strong><br />
+當input stream結束的時候，<code class="language-plaintext highlighter-rouge">close</code> event就會被發送。
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">,</span> <span class="nx">doSomething</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
 
-&lt;h2 id=&quot;完整程式碼&quot;&gt;完整程式碼&lt;/h2&gt;
-&lt;p&gt;最後我們就利用上面的資訊，寫一隻&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wc.js&lt;/code&gt;，來計算檔案中每個字出現的次數，將結果以JSON的格式輸出至stdout上。&lt;/p&gt;
+<h2 id="完整程式碼">完整程式碼</h2>
+<p>最後我們就利用上面的資訊，寫一隻<code class="language-plaintext highlighter-rouge">wc.js</code>，來計算檔案中每個字出現的次數，將結果以JSON的格式輸出至stdout上。</p>
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1139,27 +1258,27 @@ callback function有一個參數，它是個字串。
 10
 11
 12
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createReadStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./words.txt&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">./words.txt</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createInterface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span> <span class="nx">input</span> <span class="p">});</span>
+<span class="kd">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="p">{}</span>
 
-&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="nx">row</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="p">})</span>
+<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">count</span><span class="p">)))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;unix-pipe&quot;&gt;unix pipe&lt;/h1&gt;
-&lt;p&gt;這邊示範如何從stdin中讀取資料流，就可以使用shell pipe ( | )，讀取來自前一個程式的output了。&lt;/p&gt;
+<h1 id="unix-pipe">unix pipe</h1>
+<p>這邊示範如何從stdin中讀取資料流，就可以使用shell pipe ( | )，讀取來自前一個程式的output了。</p>
 
-&lt;p&gt;只需將&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline.createInterface&lt;/code&gt;&lt;/strong&gt;的input參數，從&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fs.createReadStream('./words.txt')&lt;/code&gt;&lt;/strong&gt;改成
-&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;process.stdin&lt;/code&gt;&lt;/strong&gt;就行了！因為他們都是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;的implementation。&lt;/p&gt;
+<p>只需將<strong><code class="language-plaintext highlighter-rouge">readline.createInterface</code></strong>的input參數，從<strong><code class="language-plaintext highlighter-rouge">fs.createReadStream('./words.txt')</code></strong>改成
+<strong><code class="language-plaintext highlighter-rouge">process.stdin</code></strong>就行了！因為他們都是<code class="language-plaintext highlighter-rouge">stream.Readable</code>的implementation。</p>
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1171,100 +1290,29 @@ callback function有一個參數，它是個字串。
 10
 11
 12
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
 
-&lt;span class=&quot;c1&quot;&gt;//只改了這行&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+<span class="c1">//只改了這行</span>
+<span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">;</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createInterface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span> <span class="nx">input</span> <span class="p">});</span>
+<span class="kd">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="p">{}</span>
 
-&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;rl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="nx">row</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="p">})</span>
+<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">count</span><span class="p">)))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;h1 id=&quot;summary&quot;&gt;summary&lt;/h1&gt;
-&lt;p&gt;感謝你的閱讀～ 這篇文章示範了如何使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readline&lt;/code&gt;模組來逐行讀取檔案，
-並且看到了兩個&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;的實例，體會到了stream的好用之處。&lt;/p&gt;
+<h1 id="summary">summary</h1>
+<p>感謝你的閱讀～ 這篇文章示範了如何使用<code class="language-plaintext highlighter-rouge">readline</code>模組來逐行讀取檔案，
+並且看到了兩個<code class="language-plaintext highlighter-rouge">stream.Readable</code>的實例，體會到了stream的好用之處。</p>
 
-&lt;p&gt;另外我還有寫過另一篇一樣功能，只不過是用golang寫的，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stream.Readable&lt;/code&gt;可以類比為golang中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io.Reader&lt;/code&gt;
-，有興趣的可以看看:&lt;/p&gt;
+<p>另外我還有寫過另一篇一樣功能，只不過是用golang寫的，<code class="language-plaintext highlighter-rouge">stream.Readable</code>可以類比為golang中的<code class="language-plaintext highlighter-rouge">io.Reader</code>
+，有興趣的可以看看:</p>
 
-&lt;p&gt;&lt;a href=&quot;/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;[Golang] 如何逐行讀取檔案，或使用shell pipe到go process&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+<p><a href="/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/" target="_blank"><strong>[Golang] 如何逐行讀取檔案，或使用shell pipe到go process</strong></a></p>
 
-&lt;p&gt;其他stream的實例:&lt;/p&gt;
+<p>其他stream的實例:</p>
 
-&lt;p&gt;&lt;a href=&quot;/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;How to stream data from Blob Storage at your HTTP server using Azure and express.js&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="node.js" /><category term="linux" /><summary type="html">這篇文章將介紹如何使用Nodejs的readline module來一行一行地讀取檔案， 接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧， 如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:</summary></entry><entry><title type="html">密碼學是什麼? 有何用途以及要解決什麼樣的問題?</title><link href="https://homuchen.com/posts/what-problems-cryptography-to-solve/" rel="alternate" type="text/html" title="密碼學是什麼? 有何用途以及要解決什麼樣的問題?" /><published>2021-11-07T13:30:00+08:00</published><updated>2021-11-17T17:52:00+08:00</updated><id>https://homuchen.com/posts/what-problems-cryptography-to-solve</id><content type="html" xml:base="https://homuchen.com/posts/what-problems-cryptography-to-solve/">&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;如何在有惡意的第三方的情況下安全的通訊&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;密碼學要解決的問題大概可以以上面這一句話來概括，這篇文章主要的目的，
-就是要來深入探討這句話，通訊的本質是什麼，會面臨什麼問題，
-以及什麼樣才是&lt;strong&gt;安全&lt;/strong&gt;的通訊，要達到哪些目標才算安全呢?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/why-cryptography-0.jpg&quot; alt=&quot;what is communication and cryptography?&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;通訊-communication&quot;&gt;通訊 (communication)&lt;/h1&gt;
-&lt;h2 id=&quot;什麼是通訊&quot;&gt;什麼是通訊&lt;/h2&gt;
-&lt;p&gt;就是將信息(message)由一方傳達到另一方，比如說對話、傳小紙條、寫信或Email、傳LINE、
-通電話、上網看網頁、使用社群網站等等等… 各式各樣的訊息，在各處流動，尤其是現在網際網路發達的時代，
-訊息的來源可能來自世界各地，更多元、更即時、也更大量。&lt;/p&gt;
-
-&lt;h2 id=&quot;惡意第三方&quot;&gt;惡意第三方&lt;/h2&gt;
-&lt;p&gt;試想一下，你在跟人對話，旁邊有人在偷聽; 視線範圍內沒人，但卻隔牆有耳;
-小時候在教室裡傳紙條，被中間的同學打開來看; 特務電影中，駭客在路邊的一台小車裡，
-監聽著你撥打的電話; 以上的種種的例子，都是有第三方得到了別人中間通信的內容。&lt;/p&gt;
-
-&lt;h2 id=&quot;通訊的媒介都是公開的&quot;&gt;通訊的媒介都是公開的&lt;/h2&gt;
-&lt;p&gt;我們在跟別人講話，訊息在空氣中透過聲波傳送; 我們傳紙條寫信，將信息寫在紙上傳遞;
-古代打仗，有傳令兵、馬拉松跑者，帶著重要的情報在路上奔波; 
-講電話時，則是將訊息轉化為電磁波發送出去。&lt;/p&gt;
-
-&lt;p&gt;不管你用的通訊方法是哪個，都需要一個媒介來傳遞，而這個媒介是&lt;strong&gt;公開&lt;/strong&gt;的!
-沒有辦法阻止別人來讀取當中的資料，就算你是有護衛的傳令兵，也可能被殺了然後被奪取令旗。&lt;/p&gt;
-
-&lt;h1 id=&quot;密碼學的出現&quot;&gt;密碼學的出現&lt;/h1&gt;
-&lt;p&gt;所以密碼學的出現，就是為了解決以上的問題，在古代戰爭中已經有許多的密碼學的蹤跡，
-世界大戰時，破解德軍加密過的訊息，也是當時戰爭中相當重要的一環。&lt;/p&gt;
-
-&lt;h1 id=&quot;什麼是安全&quot;&gt;什麼是安全&lt;/h1&gt;
-&lt;p&gt;上述所舉的例子，其實只提到安全其中的一個部分，也就是信息不想被第三方看到，
-但其實還有其他可能被惡意攻擊的面相，以下就來討論，要達到所謂的安全，需要顧到的環節。&lt;/p&gt;
-
-&lt;p&gt;以下將用一個例子來說明，假設有兩個人名為Alice跟Bob，他們倆是筆友，透過寫實體信的方式互通往來，
-而有一個壞人Charlie想要偷看信件並破壞兩方感情，來看看Charlie有哪些招數可以用吧。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/homuchen.com/images/why-cryptography-1.jpg&quot; alt=&quot;communication in adverities&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;偷看-sniffing&quot;&gt;偷看 (Sniffing)&lt;/h2&gt;
-&lt;p&gt;Charlie要做壞事的第一步，當然就是先偷看他們通信的內容是什麼？只要到收信者的信箱那邊等，
-或是去找郵差襲擊他，都可以達到這個目地，把信拿出來看一看再放回去，Alice跟Bob的甜言蜜語，
-或是要約會的時間地點都會被知道。&lt;/p&gt;
-
-&lt;h2 id=&quot;竄改-tempering&quot;&gt;竄改 (Tempering)&lt;/h2&gt;
-&lt;p&gt;再更進一步，Charlie可以將信中的內容做更改，比如說約會時間為下午1點，可以改成4點、7點、10點，
-這跟提款單或支票使用數字要用大寫是一樣的意思，就是為了防止內容被修改過卻看不出來。&lt;/p&gt;
-
-&lt;h2 id=&quot;冒充-impersonation&quot;&gt;冒充 (Impersonation)&lt;/h2&gt;
-&lt;p&gt;如果Charlie有辦法模仿他們的字跡，就可以直接寫一封新的信！在真實世界中，我們就是透過字跡、簽名，
-來認證信息的來源是不是本人，但不乏看過許多冒用簽名的例子。&lt;/p&gt;
-
-&lt;p&gt;通話的話是使用聲音，視訊可以看長相，但聲音也可以合成，影像也可以，看看最近當紅的小玉deepfake風暴就知道了，
-所以到底該如何證明一份訊息的來源是真的出自本人，也是一個重要的問題！&lt;/p&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;感謝你的閱讀～ 今天學習到了密碼學的目的，了解到通訊不安全的本質，壞人可能透過哪些方法來做壞事，
-包括偷看、竄改及冒充。&lt;/p&gt;
-
-&lt;p&gt;該如何怎麼防範這些問題，就是密碼學的核心，至於密碼學是如何做到這些事的，
-這篇文章還沒有說明，之後有機會再補上!
-如果有人留言敲碗要的話，我就立馬開始寫！哈哈，掰掰～👋&lt;/p&gt;
-
-&lt;h1 id=&quot;延伸閱讀陸續新增&quot;&gt;延伸閱讀(陸續新增)&lt;/h1&gt;
-&lt;p&gt;陸續將密碼學相關文章補上～&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/posts/what-is-hash-function-its-properties-and-usages&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;什麼是Hash Function? 有什麼特性及用途?&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html">如何在有惡意的第三方的情況下安全的通訊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/why-crytpography-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p><a href="/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/" target="_blank"><strong>How to stream data from Blob Storage at your HTTP server using Azure and express.js</strong></a></p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="node.js" /><category term="linux" /><summary type="html"><![CDATA[這篇文章將介紹如何使用Nodejs的readline module來一行一行地讀取檔案， 接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧， 如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:]]></summary></entry></feed>
