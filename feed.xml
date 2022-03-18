@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-13T23:07:27+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">動機: 到底是什麼在驅動、引導我們的行為？</title><link href="https://homuchen.com/posts/motivation-what-motivates-us/" rel="alternate" type="text/html" title="動機: 到底是什麼在驅動、引導我們的行為？" /><published>2022-03-13T23:05:00+08:00</published><updated>2022-03-13T23:05:00+08:00</updated><id>https://homuchen.com/posts/motivation-what-motivates-us</id><content type="html" xml:base="https://homuchen.com/posts/motivation-what-motivates-us/"><![CDATA[<p>我們每天都有許多的行為，不論是認真學習新技能、努力工作、躺在沙發耍廢看劇吃著垃圾食物、
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-18T11:00:02+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Golang] 4種發起HTTP請求的方式</title><link href="https://homuchen.com/posts/golang-how-to-make-http-requests/" rel="alternate" type="text/html" title="[Golang] 4種發起HTTP請求的方式" /><published>2022-03-18T11:00:00+08:00</published><updated>2022-03-18T11:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-make-http-requests</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-make-http-requests/"><![CDATA[<p>這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法:</p>
+<ul>
+  <li>http.Get</li>
+  <li>http.Post</li>
+  <li>http.PostForm</li>
+  <li>http.NewRequest</li>
+</ul>
+
+<p>一個HTTP Request message不外乎就是<strong>method</strong>、<strong>url</strong>、<strong>headers</strong>跟<strong>body</strong>，如果對於HTTP message還不熟悉的，
+可以看我之前寫過的文章:</p>
+
+<p><a href="/posts/http-introduction-telnet-nc-curl" target="_blank"><strong>HTTP 簡介，以及使用telnet、nc、curl等指令來探索</strong></a></p>
+
+<h1 id="httpget">http.Get</h1>
+<p><code class="language-plaintext highlighter-rouge">func Get(url string) (resp *Response, err error)</code></p>
+
+<p>參數為一個url，沒有headers，也沒有body，就是這麼簡單，如果想要客制化自己的header，就必須使用後面的<code class="language-plaintext highlighter-rouge">http.NewRequest</code>。</p>
+
+<h1 id="httppost">http.Post</h1>
+<p><code class="language-plaintext highlighter-rouge">func Post(url, contentType string, body io.Reader) (resp *Response, err error)</code></p>
+
+<p>參數為url, contentType及body，headers的部分，除了Content-Type之外的，也無法自己自訂，而body是一個io.Reader，
+以下是一個<code class="language-plaintext highlighter-rouge">Content-Type</code>為<code class="language-plaintext highlighter-rouge">appplication/json</code>的例子:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">jsonString</span> <span class="o">:=</span> <span class="s">`{"email": "test@homuchen.com", "name": "homuchen"}`</span>
+<span class="n">http</span><span class="o">.</span><span class="n">Post</span><span class="p">(</span><span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">,</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewReader</span><span class="p">([]</span><span class="kt">byte</span><span class="p">(</span><span class="n">jsonString</span><span class="p">)))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>伺服器端將會收到以下的HTTP message:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>POST /api/users HTTP/1.1
+Host: localhost:5000
+User-Agent: Go-http-client/1.1
+Content-Length: 27
+Content-Type: application/json
+Accept-Encoding: gzip
+
+{"email": "test@gmail.com"}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h1 id="httppostform">http.PostForm</h1>
+<p><code class="language-plaintext highlighter-rouge">func PostForm(url string, data url.Values) (resp *Response, err error)</code></p>
+
+<p>Header <code class="language-plaintext highlighter-rouge">Content-Type</code>會被自動設為<code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code>，body是使用<code class="language-plaintext highlighter-rouge">url.Values</code>來傳遞，
+以下為一個範例:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c">//直接使用字串</span>
+<span class="n">qs</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">url</span><span class="o">.</span><span class="n">ParseQuery</span><span class="p">(</span><span class="s">"email=test@homuchen.com&amp;name=homuchen"</span><span class="p">)</span>
+<span class="n">http</span><span class="o">.</span><span class="n">PostForm</span><span class="p">(</span><span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="n">qs</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c">//使用map</span>
+<span class="n">v</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">)</span>
+<span class="n">v</span><span class="p">[</span><span class="s">"email"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"test@homuchen.com"</span><span class="p">}</span>
+<span class="n">v</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"homuchen"</span><span class="p">}</span>
+
+<span class="n">qs</span> <span class="o">:=</span> <span class="n">url</span><span class="o">.</span><span class="n">Values</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="n">http</span><span class="o">.</span><span class="n">PostForm</span><span class="p">(</span><span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="n">qs</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>以上兩個Reqeust，都會產上下列一樣的HTTP message:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>POST /api/users HTTP/1.1
+Host: localhost:5000
+User-Agent: Go-http-client/1.1
+Content-Length: 39
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+email=test%40homuchen.com&amp;name=homuchen
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h1 id="httpnewrequest">http.NewRequest</h1>
+<p><code class="language-plaintext highlighter-rouge">func NewRequest(method, url string, body io.Reader) (*Request, error)</code></p>
+
+<p>如果想要客制自己的headers就必須使用<code class="language-plaintext highlighter-rouge">NewRequest</code>拉，方法如下:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"http://localhost:5000"</span><span class="p">,</span> <span class="no">nil</span><span class="p">)</span>
+<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
+<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"Accept-Language"</span><span class="p">,</span> <span class="s">"en-us"</span><span class="p">)</span>
+<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"X-Some-Custom-Header"</span><span class="p">,</span> <span class="s">"foo bar"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>最後要發起HTTP請求，則要使用<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">Do</code>method，以下使用<code class="language-plaintext highlighter-rouge">http.DefaultClient</code>作為<code class="language-plaintext highlighter-rouge">http.Client</code>，
+至於要如何使用自己的http.Client就不在此多說拉～</p>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">jsonString</span> <span class="o">:=</span> <span class="s">`{"email": "test@homuchen.com", "name": "homuchen"}`</span>
+<span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewReader</span><span class="p">([]</span><span class="kt">byte</span><span class="p">(</span><span class="n">jsonString</span><span class="p">)))</span>
+<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
+
+<span class="n">res</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">DefaultClient</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>如此一來就會發送出一個跟前面例子一樣的HTTP Request</p>
+
+<h1 id="summary">Summary</h1>
+<p>今天介紹了四種發起HTTP Request的方法，前面三種的彈性比較低但比較方便，有固定的method及content-type，無法隨意更改及加減。</p>
+
+<p>而其實<code class="language-plaintext highlighter-rouge">http.Get</code>就是<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">Get</code>method，<code class="language-plaintext highlighter-rouge">http.Post</code>為<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">Post</code>method，
+<code class="language-plaintext highlighter-rouge">http.PostForm</code>是<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">PostForm</code>method。</p>
+
+<p>最後如果想要加上自己更多的header，就要使用<code class="language-plaintext highlighter-rouge">http.NewRequest</code>，這邊簡單地記錄下使用golang作為http client最基礎的用法，
+希望有幫助到任何人，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="http" /><summary type="html"><![CDATA[這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法: http.Get http.Post http.PostForm http.NewRequest]]></summary></entry><entry><title type="html">動機: 到底是什麼在驅動、引導我們的行為？</title><link href="https://homuchen.com/posts/motivation-what-motivates-us/" rel="alternate" type="text/html" title="動機: 到底是什麼在驅動、引導我們的行為？" /><published>2022-03-13T23:05:00+08:00</published><updated>2022-03-13T23:05:00+08:00</updated><id>https://homuchen.com/posts/motivation-what-motivates-us</id><content type="html" xml:base="https://homuchen.com/posts/motivation-what-motivates-us/"><![CDATA[<p>我們每天都有許多的行為，不論是認真學習新技能、努力工作、躺在沙發耍廢看劇吃著垃圾食物、
 出門跟朋友去露營、做志工等等等…
 背後都有一股力量在驅動著我們，那股力量就是<strong>獎賞</strong>及<strong>懲罰</strong>，
 我們會為了追求某些獎賞或是避免某些懲罰而去做出某些行為。</p>
@@ -1199,120 +1335,4 @@ secondary indexes也必須各自去建立，幾乎許多RDBMS提供的好用的�
 
 <p>以上只簡單列出幾站的資料，如果想要看別的站或是想要確切原始數據的話可以跟我說～除此之外，
 還想知道其他問題的話也可以問我，比如說總進出人數最多的站前幾名，成長或衰退最多的站是哪些?
-等等問題。以上就是這次的分享囉，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><summary type="html"><![CDATA[COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小， 以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。]]></summary></entry><entry><title type="html">Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動</title><link href="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/" rel="alternate" type="text/html" title="Nodejs: 如何逐行讀取檔案，或使用Unix pipe與其他process互動" /><published>2021-11-09T10:00:00+08:00</published><updated>2021-11-09T10:00:00+08:00</updated><id>https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process</id><content type="html" xml:base="https://homuchen.com/posts/nodejs-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-nodejs-process/"><![CDATA[<p>這篇文章將介紹如何使用Nodejs的<code class="language-plaintext highlighter-rouge">readline</code> module來一行一行地讀取檔案，
-接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧，
-如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">cat </span>words.txt | node wc.js
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="readline">readline</h1>
-<ul>
-  <li>
-    <p><strong>createInterface:</strong><br />
-首先使用<code class="language-plaintext highlighter-rouge">readline.createInterface()</code>，需要一個input參數，他需要是一個<code class="language-plaintext highlighter-rouge">stream.Readable</code>，
-這裡我們使用<code class="language-plaintext highlighter-rouge">fs.createReadStream()</code>打開我們的檔案，並作為input，傳給createInterface。</p>
-
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span>
-  <span class="na">input</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">./words.txt</span><span class="dl">'</span><span class="p">),</span>
-<span class="p">});</span>
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-  <li><strong>Event: “line”</strong><br />
-接著就可以監聽<code class="language-plaintext highlighter-rouge">line</code> event，每當從input讀取到換行(<code class="language-plaintext highlighter-rouge">\r</code>、<code class="language-plaintext highlighter-rouge">\n</code> or <code class="language-plaintext highlighter-rouge">\r\n</code>)，line event就會被發送。
-callback function有一個參數，它是個字串。
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">row</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">row</span><span class="p">));</span>
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-  <li><strong>Event: “close”</strong><br />
-當input stream結束的時候，<code class="language-plaintext highlighter-rouge">close</code> event就會被發送。
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">,</span> <span class="nx">doSomething</span><span class="p">);</span>
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-</ul>
-
-<h2 id="完整程式碼">完整程式碼</h2>
-<p>最後我們就利用上面的資訊，寫一隻<code class="language-plaintext highlighter-rouge">wc.js</code>，來計算檔案中每個字出現的次數，將結果以JSON的格式輸出至stdout上。</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">./words.txt</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span> <span class="nx">input</span> <span class="p">});</span>
-<span class="kd">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="nx">row</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="p">})</span>
-<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">count</span><span class="p">)))</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="unix-pipe">unix pipe</h1>
-<p>這邊示範如何從stdin中讀取資料流，就可以使用shell pipe ( | )，讀取來自前一個程式的output了。</p>
-
-<p>只需將<strong><code class="language-plaintext highlighter-rouge">readline.createInterface</code></strong>的input參數，從<strong><code class="language-plaintext highlighter-rouge">fs.createReadStream('./words.txt')</code></strong>改成
-<strong><code class="language-plaintext highlighter-rouge">process.stdin</code></strong>就行了！因為他們都是<code class="language-plaintext highlighter-rouge">stream.Readable</code>的implementation。</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="c1">//只改了這行</span>
-<span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span> <span class="nx">input</span> <span class="p">});</span>
-<span class="kd">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="nx">row</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="p">})</span>
-<span class="nx">rl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">count</span><span class="p">)))</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="summary">summary</h1>
-<p>感謝你的閱讀～ 這篇文章示範了如何使用<code class="language-plaintext highlighter-rouge">readline</code>模組來逐行讀取檔案，
-並且看到了兩個<code class="language-plaintext highlighter-rouge">stream.Readable</code>的實例，體會到了stream的好用之處。</p>
-
-<p>另外我還有寫過另一篇一樣功能，只不過是用golang寫的，<code class="language-plaintext highlighter-rouge">stream.Readable</code>可以類比為golang中的<code class="language-plaintext highlighter-rouge">io.Reader</code>
-，有興趣的可以看看:</p>
-
-<p><a href="/posts/golang-how-to-read-from-file-line-by-line-and-use-shell-pipe-with-go-process/" target="_blank"><strong>[Golang] 如何逐行讀取檔案，或使用shell pipe到go process</strong></a></p>
-
-<p>其他stream的實例:</p>
-
-<p><a href="/posts/how-to-stream-data-from-blob-storage-at-http-server-using-azure-and-express/" target="_blank"><strong>How to stream data from Blob Storage at your HTTP server using Azure and express.js</strong></a></p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="node.js" /><category term="linux" /><summary type="html"><![CDATA[這篇文章將介紹如何使用Nodejs的readline module來一行一行地讀取檔案， 接著既然都可以從檔案中逐行讀取了，那也可以從standard input中逐行讀取吧， 如此一來，就可以跟其他linux command一樣，一起使用pipe！像下面這樣:]]></summary></entry></feed>
+等等問題。以上就是這次的分享囉，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><summary type="html"><![CDATA[COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小， 以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。]]></summary></entry></feed>
