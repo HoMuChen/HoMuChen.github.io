@@ -1,4 +1,380 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-18T11:00:02+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[Golang] 4種發起HTTP請求的方式</title><link href="https://homuchen.com/posts/golang-how-to-make-http-requests/" rel="alternate" type="text/html" title="[Golang] 4種發起HTTP請求的方式" /><published>2022-03-18T11:00:00+08:00</published><updated>2022-03-18T11:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-make-http-requests</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-make-http-requests/"><![CDATA[<p>這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-23T22:31:40+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 做自己的生命設計師</title><link href="https://homuchen.com/posts/book-note-designing-your-life/" rel="alternate" type="text/html" title="[讀書筆記] 做自己的生命設計師" /><published>2022-03-23T22:30:00+08:00</published><updated>2022-03-23T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-designing-your-life</id><content type="html" xml:base="https://homuchen.com/posts/book-note-designing-your-life/"><![CDATA[<p>我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫，
+想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-4.jpg" alt="書: 做自己的生命設計師" /></p>
+
+<p><strong>《做自己的生命設計師》</strong>這本書，就是來試著回答上述這些問題，
+作者在史丹佛大學開設設計人生的課程，將設計思考的工具及心法，應用到你自己的人生當中，
+讓我們開始學習如何做自己的生命設計師吧！</p>
+
+<h1 id="設計思考是什麼">設計思考是什麼</h1>
+<p>設計就是要來解決問題，首先先來看看問題有哪些種類吧！</p>
+
+<h2 id="重力問題">重力問題</h2>
+<p>我最近碰上了一個問題，每每我在騎腳踏車爬坡的時候，那個重力！對就是那個重力！
+都會死死地把我往下拉，害我要花好大力氣才能登頂，該怎麼辦呢～</p>
+
+<p>聽到這樣的問題，大家可能會覺得這人腦子有洞，怎麼會拘泥於這種問題呢？但事實上，
+這種情況在現實生活中，卻可能是可見的，我們可以看看以下幾個例子：</p>
+
+<ul>
+  <li>在我的文化中，以詩人作為職業賺不了錢，我該怎麼辦呢？</li>
+  <li>我想回學校讀書當醫生，但那要再花我5-7年的時間，等到可以開始當醫生時，我都40歲了，怎麼辦？</li>
+</ul>
+
+<p>以上稱為重力問題，因為是無法行動的問題，無法行動的問題就不是問題，
+是一個context、一個場景，一個人生的現實面，我們無法或者是非常難去改變它，
+必須接受它！並且別在這種問題上耗費太多的時間，大家可以思考一下，
+自己有沒有被某種程度的重力問題所困住了呢？</p>
+
+<h2 id="工程問題-vs-設計問題">工程問題 vs. 設計問題</h2>
+<p><strong>工程問題</strong>是一個封閉的問題，有明確的目標，比如說如何使一座橋樑可以承重1000輛車子，
+如何讓筆電螢幕轉軸可以轉10000萬不會壞。</p>
+
+<p>而<strong>設計問題</strong>更加開放，事先對於解法別沒有任何的想像跟預設，例如如何使Mac筆電不用搭配滑鼠使用，
+如何設計一台車，超級美，大家看了會想擁有</p>
+
+<p>遊戲也有這樣類似的分類概念，封閉遊戲及開放遊戲，封閉的遊戲像是圍棋、籃球比賽、各種競技運動等等，
+都是在一定的規則下，追求一個明確的目標；而開放遊戲像是Minecraft、伴家家酒等等，想怎麼玩就怎麼玩，
+沒有一定對錯輸贏。</p>
+
+<p>人生這個遊戲，就是一個開放式的遊戲，並沒有一個明確的目標，所以各種人生的結果都沒有對錯，也沒有好壞，
+只怕你沒有去活出來！設計思考所針對的問題，就是這種開放問題。</p>
+
+<h2 id="設計思考的心態">設計思考的心態</h2>
+<ul>
+  <li>
+    <p><strong>好奇心:</strong> 像個寶寶一樣，帶著好齊心看世界，生活變成一種探索，充滿了各種可能性。</p>
+  </li>
+  <li>
+    <p><strong>行動導向:</strong> 如果想知道自己想做什麼，坐在椅子上想破頭也沒用，去做就對了！多方嘗試，
+打造原型，試著找出可以解決問題的方案。</p>
+  </li>
+  <li>
+    <p><strong>重擬問題:</strong> 確認自己在解決的問題，是真的該解決的問題</p>
+  </li>
+  <li>
+    <p><strong>一切都是過程:</strong> 別執著於目標，專注過程，隨機應變，可以放掉一開始的點子，
+也可以放掉還不錯的點子，別害怕失敗，有時搞砸了，反而會發明出意想不到的驚人設計。</p>
+  </li>
+  <li>
+    <p><strong>通力合作:</strong> 幾乎所以偉大的創作及產品，都是集眾人之力打造出來的</p>
+  </li>
+</ul>
+
+<h1 id="設計人生的步驟">設計人生的步驟</h1>
+<p>知道了我們該專注的問題種類、人生的本質，以及設計思考該擁有的心態之後，
+接下來來看看具體一點的步驟可以怎麼做吧！</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" alt="設計人生的四個步驟" /></p>
+
+<h1 id="衡量現況">衡量現況</h1>
+<p>在我們朝向任何目標方現前進之前，首先我們得要知道自己在哪？
+作者將人生分成四個面向，分別是<strong>健康</strong>、<strong>工作</strong>、<strong>娛樂</strong>、<strong>愛</strong>，
+我們可以用幾句話描述這幾個領域的狀態並評分，為每個方面評分，
+0-10分的話會給幾分，一張圖即能看出哪些方面OK，哪些不OK。</p>
+
+<p>以下是作者自己在工作的方面的描述:</p>
+
+<p>我在史丹佛大學任教，另外還從事私人顧問工作。我主持做自己的生命設計師工作坊，
+並擔任社會則任新創公司VOZ的董事，我覺得工作方面的分數為9分!</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-3.jpg" alt="健康/工作/娛樂/愛的儀表板" /></p>
+
+<p>一張圖可以提供判斷，只有自己知道，目前哪些地方OK與不OK，
+在做完後面的練習、打造原型跟實驗的過程，會不斷地回頭評估衡量，
+問自己幾個問題: 自己滿意目前四個領域的指標嗎？哪些地方需要採取行動？
+找到了棘手問題嗎？它是不是重力問題？，總結來說，這個練習的目的就是要回答一個問題:</p>
+
+<p><strong>最近過得如何？</strong></p>
+
+<h1 id="確定方向">確定方向</h1>
+<p>在茫茫人生的旅途中，知道了自己在哪裡之後，接下來就是要知道前進的方向了。
+你有辦法回答: 最近有什麼目標？我在做什麼？一切有什麼目的？意義是什麼？
+這類的問題嗎？</p>
+
+<p>如果不行的話，那該要怎麼做，才能讓自己的人生方向稍微清楚一些呢？</p>
+
+<h2 id="工作觀">工作觀</h2>
+<p>首先要回答你的工作觀是什麼？不是你想做什麼樣的工作，而是你<strong>為什麼</strong>要工作？
+如果不知道怎麼下手，可以從以下幾個問題切入：</p>
+<ul>
+  <li>什麼是好工作?</li>
+  <li>工作跟個人、他人、社會有什麼關聯？</li>
+  <li>工作跟金錢的關係是什麼？</li>
+  <li>經歷、成長跟成就感跟工作的關聯呢？</li>
+</ul>
+
+<p>就算答案只是為了討生活、賺錢，這樣也沒有錯，在遠古時代，我們的祖先務農種田、打獵採集，
+就也只是為了填飽肚子，可以生存下去而已。只不過在現在的時代裡，工作越來越多樣多元，
+也佔據了我們人生中大部分的時間，如果他是一件你覺得好玩的事，或者是有意義的事！
+那不是更棒嗎～</p>
+
+<h2 id="人生觀">人生觀</h2>
+<p>人生觀就是問: 人生的意義跟目的是什麼？真是個大哉問，
+或許我們可以把問題簡化為哪些價值觀對你來說重要的，
+體驗、成長、滿足、名利、個人成就、與家人、社區、世界的關係等等等…</p>
+
+<p>大家可以google: list of values，就能看到洋洋灑灑的一堆，Loyalty、Spirituality、
+Humility、Compassion、Honesty、Kindness、Integrity、Selflessness…</p>
+
+<p>從中挑選一些你覺得重要的，作為你的人生信條，而這些價值觀也不是固定不變的，
+或許在你經歷你的人生過程中，每個階段所重視的會不一樣，也隨著經驗越多，
+會越來越清楚自己真正想要追求的是什麼？</p>
+
+<h2 id="所做所為跟人生觀有無一致">所做所為跟人生觀有無一致</h2>
+<p>常常工作觀、人生觀與所作所為的不一致，就是造成我們不快樂的原因，
+比如說你是位非常重視環保、永續環境發展的人，結果你卻在一家塑化企業上班！</p>
+
+<p>清楚了工作觀及人生觀之後，算是稍微比較知道人生該往哪個方向前進了，
+不過也就是大概的方向而已，具體的路有千千百百條，該走哪條路呢？讓我們繼續探索下去吧！</p>
+
+<h1 id="發想點子">發想點子</h1>
+<h2 id="從現在及過去生活中找">從現在及過去生活中找</h2>
+<ul>
+  <li>記錄生活，留心觀察生活中的每個事件</li>
+  <li>找出心流</li>
+  <li>觀察過去的經驗</li>
+</ul>
+
+<h2 id="卡住了怎麼辦">卡住了怎麼辦</h2>
+<ul>
+  <li>必須先想出可能會喜歡什麼，才能知道真正會喜歡什麼</li>
+  <li>心智圖發想</li>
+  <li>不要批判，可能會覺得有趣，但不確定有什麼用，這很正常</li>
+  <li>船錨問題: 卡在第一個想到的解決方案</li>
+  <li>打造原型: fail fast and fail forward</li>
+</ul>
+
+<h2 id="奧德賽計畫">奧德賽計畫</h2>
+<ul>
+  <li>想出三個5年計畫</li>
+  <li>最簡單的三種:
+    <ol>
+      <li>現在心裡想的</li>
+      <li>如果你的工作消失了，你會做什麼謀生</li>
+      <li>如果你有錢有閒，不管任何面子問題，你會想做什麼</li>
+    </ol>
+  </li>
+  <li>視覺化: 一個標題、時間軸、要問的問題</li>
+  <li>資源、喜歡的程度、自信的程度、一致性</li>
+</ul>
+
+<h1 id="打造原型">打造原型</h1>
+<p>有了方向跟計畫之後，接下來就是要要去實行了，那該怎麼去做呢？並不是一頭熱，
+拋頭顱灑熱血，一股作氣地All-in下去，先來看看這樣做的話，會有什麼缺點吧。</p>
+
+<p>比如說你想開咖啡廳，就直接租下店面、裝潢、買下設備、雇人、宣傳然後開始營業，
+這樣可能會非常危險。能不能盈利生存下次是一回事，說不定做了幾個月之後你會發現，
+其實你喜歡的是好喝的咖啡本身，或者是美美的咖啡廳裝潢，
+但對於經營一間咖啡廳所要做的其他瑣事都感到非常厭煩，或許專心於製作咖啡當個咖啡師更適合，
+或者是根本是想當室內設計師🤔</p>
+
+<h2 id="原型prototyping">原型(prototyping)</h2>
+<p>那該怎麼做呢？就是要打造原型，原型是什麼呢？原型是一個小型的、實驗性質的產品，
+用來驗證想法或釐清需求，而在人生的道路上，原型就可以驗證自己的點子可不可行，
+釐清到底是不是自己想要的需求。</p>
+
+<h2 id="有哪些方法">有哪些方法？</h2>
+<p>產品的原型，就是用小小的成本來打造，而人生想法的原型該要怎麼去進行呢？有以下幾種方法可以參考:</p>
+<ul>
+  <li>
+    <p><strong>原型訪談</strong>:
+在真正要做一件事之後，可以先跟已經在做那件的事的人聊聊，通過其他人的經驗及視角，
+或許會得到一些新的想法，並且更加清楚現實的情況是不是跟自己幻想的一樣，
+免得是自己腦補太多😂</p>
+  </li>
+  <li>
+    <p><strong>原型體驗</strong>:
+除了對話，再來就是身體力行，或許可以請朋友帶你體驗她上班一天的生活，
+或著是無償提供自己的勞力一週，參與某些專案，或者是去實習三個月。</p>
+
+    <p>在一開始開咖啡廳的例子中，可能可以先去咖啡廳打工看看，做做看各個面向的工作，
+來確認自己是否真的喜歡那件事情。</p>
+  </li>
+  <li>
+    <p><strong>腦力激盪</strong>:
+有時有了長期計畫，卻想不出點子方法或原型來試試，可以腦力激盪來想想。找一群人3-6個，
+如果可以是一起做奧德賽計畫的夥伴更好</p>
+  </li>
+</ul>
+
+<h1 id="結論">結論</h1>
+<p>好的人生不是用想的想出來的，也不是找出來的，並不會有個工作或是人生在那邊等著你去找到他，
+找到之後，就像童話故事書裡的王子公主，在一起之後就從此幸福美滿。</p>
+
+<p>也不用執著於《靈魂急轉彎》裡的Spark，覺得人生一定有那個一個使命，最適合你的事物在那等著你，
+你一定要先知道那是什麼，才有辦法過人生。</p>
+
+<p>人生有無限種可能，沒有任何一種好過另外一種，首先知道自己的工作觀及人生觀，決定了方向，
+接著發想出各種可能、做出計畫，最後也是最重要的一步，就是真正地去做他！
+在做的過程中，邊做邊修正，更加地了解自己。期許大家都能活出豐盛的人生～～🎉</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><summary type="html"><![CDATA[我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫， 想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2022-03-22T22:30:00+08:00</published><updated>2022-03-22T22:30:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/"><![CDATA[<p>人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
+對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。</p>
+
+<h1 id="邁向成功的公式">邁向成功的公式</h1>
+<p>找到你目標，然後走到底，這樣就成功了，那要怎麼走到底呢?</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" alt="邁向成功的公式及書單" /></p>
+
+<p>有了目標以後，每天你做出選擇，相對應地有一些行為，
+但是最好將其變為習慣，否則將難以持之以恆，因為我們的意志力是有限的。
+然後為了取得進步，不能每次都做一樣的事，必須踏出舒適圈才會有所改變，
+並且知道有些成果是需要些時間才能顯現。</p>
+
+<p>而在這過程中間有許多的曲折及困難，比如說做了幾天就半途而廢，找一堆理由藉口，
+或是做了一陣子卻看不到成果就放棄了，也可能是一開始有進步，
+但到了某個階段卻停滯不前了，不知道該如何更進一步，
+不然就是你覺得好累，沒有力氣能量繼續，又或者是你根本不知道你的目標是什麼? 
+該往哪裡前進? 也沒有動力前進。</p>
+
+<p>在上述每個環節中卡關的，在這裡推薦相對應的書</p>
+<ul>
+  <li>
+    <p>不想半途而廢: <a href="#原子習慣"><strong>原子習慣</strong></a></p>
+  </li>
+  <li>
+    <p>著急看到成果: <a href="#複利效應"><strong>複利效應</strong></a></p>
+  </li>
+  <li>
+    <p>停滯不前: <a href="#刻意練習"><strong>刻意練習</strong></a></p>
+  </li>
+  <li>
+    <p>沒有力氣、覺得無趣: <a href="#一週工作四小時"><strong>一週工作四小時</strong></a></p>
+  </li>
+  <li>
+    <p>找不到人生目標: <a href="#做自己的生命設計師"><strong>做自己的生命設計師</strong></a></p>
+  </li>
+</ul>
+
+<h1 id="原子習慣"><a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a></h1>
+<p>選擇很重要，但其實人生並沒有那麼多重大的選擇時刻，影響你這個人最多的，是組成你每天生活的習慣。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-1.jpg" alt="書: 原子習慣" /></p>
+
+<p>習慣佔據你人生的八、九成，試想一下每天醒來，躺在床上滑一下手機，
+走去浴室刷牙洗臉，要不要吃早餐，早餐要吃什麼，通勤去上班的路上在做什麼，
+工作時如何面對同事，面對事情是如何處理，下班了之後要做什麼，要去運動嗎?
+還是回家躺在沙發上耍廢，該準時就寢嗎？還是東摸摸西摸摸又到了半夜了，
+跟人聊天會抱怨最近發生的負面的事嗎？</p>
+
+<p>上述說的這些事，你都不需要在當下耗費心思去做選擇，而是不假思索地反應出來，
+但他們就是你現在會成為怎樣的人的根本原因，所以我們要致力於培養好的習慣、去除壞的習慣。</p>
+
+<p>你可能也想這麼做，但就是時常失敗，這本書將系統化地分析習慣的基本原理及組成，簡單的說就是:</p>
+
+<blockquote>
+  <p><strong>提示 -&gt; 渴望 -&gt; 回應 -&gt; 獎賞</strong></p>
+</blockquote>
+
+<p>並且從各個面向提出可行動的方案及建議，幫助你過關斬將，培養新的習慣。</p>
+
+<p>延伸閱讀:</p>
+<ul>
+  <li><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></li>
+</ul>
+
+<h2 id="你可以期待獲得什麼">你可以期待獲得什麼?</h2>
+<ul>
+  <li>了解習慣對人生的重要</li>
+  <li>系統化地分析習慣是如何形成的</li>
+  <li>該要如何養成好習慣</li>
+  <li>該要如何去除壞習慣</li>
+</ul>
+
+<h1 id="複利效應"><a href="https://www.books.com.tw/products/0010814286" target="_blank"><strong>《複利效應》</strong></a></h1>
+<p>每天微小的改變並不亦察覺，經過時間的累積卻會產生巨大的影響。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-2.jpg" alt="書: 複利效應" /></p>
+
+<p>或許大家都聽過複利效應，應該通常是在財務儲蓄領域上，但這概念可以應用在生活的各個面向上，
+我們每天做的事，影響可能很小，多吃一片洋芋片、多抽一根菸、晚上熬夜少睡一個小時，造成的影響幾乎無法察覺，
+但經過時間的累積，改變就會很巨大，這跟上面的原子習慣是相呼應的。</p>
+
+<h2 id="你可以期待獲得什麼-1">你可以期待獲得什麼?</h2>
+<ul>
+  <li>了解複利效應是什麼? 並且適用於人生各個方面</li>
+  <li>認清世上沒有魔法，唯有努力才有回報</li>
+  <li>努力的方向要對，如何加速看到成果</li>
+</ul>
+
+<h1 id="刻意練習"><a href="https://www.books.com.tw/products/0010752714" target="_blank"><strong>《刻意練習》</strong></a></h1>
+<blockquote>
+  <p>透過刻意練習，善用大腦和身體的適應力，每個人都能改善技能，甚至創造出你本來以為自己沒有的能力，達到顛峰表現。</p>
+</blockquote>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-3.jpg" alt="書: 刻意練習" /></p>
+
+<p>如何在某個領域邁向頂尖、擁有高手級的表現，只要一直一直不斷地做、不斷地練習就好了嗎？</p>
+
+<p>其實光是這樣是不夠的，比如說你已經會開車，然後你每天開了好幾個小時的車，但你卻不會因此變成舒馬赫，
+辛苦的媽媽每天煮三餐，但卻不會因此成為超級大廚。那該要如何<strong>刻意練習</strong>來持續取得進步呢？</p>
+
+<p>這邊簡單地說就是針對你想進步的目標，進行<strong>突破目前極限</strong>的練習，目標必須<strong>明確</strong>，
+而且可以<strong>量測</strong>或獲得<strong>回饋</strong>，知道自己確實有在進步並進行修正。</p>
+
+<h2 id="你可以期待獲得什麼-2">你可以期待獲得什麼?</h2>
+<ul>
+  <li>知道大腦是具可塑性的，如何學習及改變</li>
+  <li>持續取得進步的要素的什麼？ 並不是一萬個小時就好</li>
+</ul>
+
+<h1 id="一週工作四小時"><a href="https://www.books.com.tw/products/0010621037" target="_blank"><strong>《一週工作四小時》</strong></a></h1>
+<p>誰說一週要工作四十小時，朝九晚五地待在辦公室，打破社會框架，有錢有閒地實現自己的夢想</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/four-hour-work-week-0.jpg" alt="書: 一週工作四小時" /></p>
+
+<p>人們總說等我賺夠了錢我就要怎樣怎樣，等我退休了我就要去做什麼，那何不現在就開始呢？！</p>
+
+<p>追求夢想、做自己的興趣及想做的事，不用等到退休，作者提出<strong>迷你退休</strong>的概念，
+將大把退休時光平均分散在一生當中，不要盲目地工作、追逐金錢，只將目標放在提早退休上，
+而是開始漸漸地擺脫不想做的工作，擁抱自由及機動性，開始重拾各種興趣、嘗試你的夢想，
+否則等到退休那天，你可能也會茫茫然不知道要幹嘛，因為一直以來，從沒有停下來好好思考過。</p>
+
+<p>延伸閱讀:</p>
+<ul>
+  <li><a href="/posts/book-note-the-four-hour-work-week/" target="_blank"><strong>[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</strong></a></li>
+  <li><a href="/posts/book-note-the-power-of-full-engagement/" target="_blank"><strong>[讀書筆記] 用對能量，你就不會累</strong></a></li>
+</ul>
+
+<h2 id="你可以期待獲得什麼-3">你可以期待獲得什麼?</h2>
+<ul>
+  <li>認識新富族: 不再朝九晚五待在辦公室工作，擁抱自由及機動性的族群</li>
+  <li>除去大部分非必要且會花費你時間的事，擁抱更多的自由</li>
+  <li>打造自動進帳的事業</li>
+  <li>看看作者的有趣的經歷及如何達成上述目標</li>
+</ul>
+
+<h1 id="做自己的生命設計師"><a href="https://www.books.com.tw/products/0010733134" target="_blank"><strong>《做自己的生命設計師》</strong></a></h1>
+<p>透過打造原型、進行實驗，發想繼而嘗試人生各種可能，才能找到熱情</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-4.jpg" alt="書: 做自己的生命設計師" /></p>
+
+<p>不知道自己的人生要做什麼嗎？第一步就是要去想，隨意的發想，如果你連想都沒想過的話一件事，
+你不可能會在你的人生中去做那件事，甚至去喜歡他，所以第一步就是發揮想像力，無所限制地記錄下所以可能會喜歡的想法。</p>
+
+<p>接著要針對那些想法，打造原型去實驗，什麼是原型呢？在產品設計的領域裡，
+就是用來驗證設計的產品是否適切，有無欠考量或未發現的盲點，必要時在正式生產前加以更正。</p>
+
+<p>而在人生領域中，就是去稍微體驗你想做的事，而不用100%一下子就All in，比如說你喜歡喝咖啡，想開間咖啡廳，
+那你不應該是馬上辭職，準備個幾百萬就開始要開店，而是可以先透過蒐集資訊、訪談好幾位咖啡店店長、去打工、
+或是做一下咖啡廳裡各個職位的工作，來測試自己有沒有盲點，到底是不是真的喜歡這件事。</p>
+
+<h2 id="你可以期待獲得什麼-4">你可以期待獲得什麼?</h2>
+<ul>
+  <li>人生迷惘怎麼辦</li>
+  <li>該如何去發想，找出可能會喜歡的事</li>
+  <li>該如何打造原型，去測試自己的新的人生</li>
+</ul>
+
+<p>延伸閱讀:</p>
+<ul>
+  <li><a href="/posts/book-note-designing-your-life/" target="_blank"><strong>[讀書筆記] 做自己的生命設計師</strong></a></li>
+</ul>
+
+<h1 id="summary">Summary</h1>
+<p>感謝你看到這邊～ 希望這些內容能帶給你一點啟發，我也是閱讀這些書過後，學習到了許多及產生很多新的想法，
+但更重要的是將其實踐在生活當中，首先先透過書寫分享，讓自己複習一遍，
+之後有更多親身實驗的結果，會在跟大家分享! 掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><summary type="html"><![CDATA[人生感到迷惘嗎？找不到目標，或是無法堅持培養好習慣嗎？該如何在各方面取得實際進步? 這篇文章將推薦五本自我成長的書單，期望能幫助大家過上想過的生活。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[Golang] 4種發起HTTP請求的方式</title><link href="https://homuchen.com/posts/golang-how-to-make-http-requests/" rel="alternate" type="text/html" title="[Golang] 4種發起HTTP請求的方式" /><published>2022-03-18T11:00:00+08:00</published><updated>2022-03-18T11:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-make-http-requests</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-make-http-requests/"><![CDATA[<p>這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法:</p>
 <ul>
   <li>http.Get</li>
   <li>http.Post</li>
@@ -1151,188 +1527,4 @@ secondary indexes也必須各自去建立，幾乎許多RDBMS提供的好用的�
 
 <p>在密碼學中，還會搭配對稱式及非對稱式加密來達成一些其他的任務，
 比如說訊息驗證碼(message authentication code)、數位簽章(digital signature)等等…
-後續會再慢慢介紹以上的東西，掰掰～ 👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html"><![CDATA[除了了解hash function是什麼及其特性之外，用更生活化的方式來展現這些特性，以及以有趣的應用來更加地熟悉hash function。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</title><link href="https://homuchen.com/posts/book-note-atomic-habits/" rel="alternate" type="text/html" title="[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則" /><published>2021-11-14T21:36:00+08:00</published><updated>2021-11-14T21:36:00+08:00</updated><id>https://homuchen.com/posts/book-note-atomic-habits</id><content type="html" xml:base="https://homuchen.com/posts/book-note-atomic-habits/"><![CDATA[<p><a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>
-這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到，
-卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後，
-作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-1.jpg" alt="書: 原子習慣" /></p>
-
-<h1 id="習慣是什麼">習慣是什麼</h1>
-<p>習慣佔據你人生的八、九成，試想一下每天醒來，躺在床上滑一下手機，
-走去浴室刷牙洗臉，要不要吃早餐，早餐要吃什麼，通勤去上班的路上在做什麼，
-工作時如何面對同事，面對事情是如何處理，下班了之後要做什麼，要去運動嗎?
-還是回家躺在沙發上耍廢，該準時就寢嗎？還是東摸摸西摸摸又到了半夜了，
-跟人聊天會抱怨最近發生的負面的事嗎？</p>
-
-<p>上述說的這些事，你都不需要在當下耗費心思去做選擇，而是不假思索地反應出來，
-但他們就是你現在會成為怎樣的人的根本原因。因為習慣做起來毫不費力，
-而且頻率很高，經過時間的累積後，影響將會慢慢顯現，變得越來越巨大。</p>
-
-<h1 id="專注系統而非目標">專注系統，而非目標</h1>
-<p>這就有點像是被動收入，專注於打造每天每個月的現金流，而不是獲得一大筆錢，
-被動現金流一旦打造完成之後，無時無刻都可以為你帶來收益。
-但如果你是將目標放在獲得某筆金額，過程中可能會很辛苦，
-並且有人可能還會無所不用其極地來達成，比如說超時工作、
-想辦法投機股票、加密貨幣、偷搶拐騙等等等…</p>
-
-<p>專注於系統就像是好好地養好一隻會生金蛋的雞一樣，照顧好雞本身，
-自然會帶給你金蛋，如果只專注於目標，就有可能做出殺雞取卵般的行為，
-所以好習慣就是一隻好雞🐔！</p>
-
-<p>專注於目標也有其他的壞處，比如說你的目標是減重10公斤，
-除了可能會用激進的手段來達成之外，也可能在費盡千辛萬苦終於達成之後，
-你就沒有動力繼續保持健康的生活又復胖，更多的可能是就中途放棄，沒有意志力再進行下去。</p>
-
-<p>所以該怎麼辦呢？這本書給出解答就是透過習慣來達成你的目標，
-藉由每天的小勝利，讓你成為你想要成為的人，只要知道終點在哪個方向(首先你也要知道方向)，
-每天有朝著那個方向前進就好，而且重點是<strong>不自覺地，輕鬆地</strong>前進，
-而不用依靠自制力，人的<strong>自制力是有限的</strong>，每天都依靠意志力，總有一天會累歪的😫</p>
-
-<h1 id="四步驟">四步驟</h1>
-<p>所以該如何打造自己的習慣系統呢? 作者提出了一個框架，將一個習慣的組成拆解如下:</p>
-<blockquote>
-  <p><strong>提示 -&gt; 渴望 -&gt; 回應 -&gt; 獎賞</strong></p>
-</blockquote>
-
-<p>我們從環境中、或是固定的時間地點接收到了提示刺激，引起了我們的渴望，
-接著為了滿足那個渴望，我們做出了回應，也就是一些行為，最後得到了獎賞來滿足那些渴望，
-得到獎賞便增強了整件事的迴路，下次只要遇到一樣的情況，大腦便會想做一樣的事，因為他期待會獲得獎賞。</p>
-
-<p>以吃垃圾食物為例，我們可能到了週五晚上回到家，經歷了一週辛苦的工作準備迎接週末時，
-洗了個舒服的澡，坐上沙發，以上這些時間地點的提示，就觸發我們想要耍廢的渴望，
-於是乎，我們做出了回應，打開電視打開Netflix，準備好零食飲料，開始耍廢～
-立刻地，我們得到了影劇的刺激，以及充滿糖分、脂肪、鹽分的食物的滿足，大腦覺得開心，
-便增強了我們未來繼續如此作為的可能。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" alt="習慣四階段: 提示、渴望、回應、獎賞" /></p>
-
-<p>所以該怎麼培養好習慣，剷除壞習慣呢～作者分別對這個階段提出可行動的方案及建議，
-幫助你過關斬將，往好的方向前進～</p>
-
-<h1 id="提示">提示</h1>
-<p>所有的習慣始於提示，提示可能是某個特定的時間地點，也可能是來自環境中的某個訊號。</p>
-<h2 id="環境中的提示">環境中的提示</h2>
-<p>有個實驗是這樣的，在醫院的自助餐裡，改變可樂跟瓶裝水的擺放位置，
-將瓶裝水跟可樂交換放到明顯的位置，結果一句話都不用說，就改變了人們的行為，
-瓶裝水的銷量上升了兩成左右，而可樂的銷量則下滑。</p>
-
-<p>當我們在家裡，客廳桌上就擺著洋芋片，就算我們本來沒有想吃，也非常有可能隨手就拿起來吃了，
-如果放的是健康的水果，你吃的就不會是洋芋片而會是水果; 如果想養成看書的習慣，
-或許可以在早上整理完床鋪後，放一本書在床頭櫃上; 想認真工作的時候，就不要在有電視的地方，
-把手機丟得離自己遠遠的，以免不時就打開電視或拿起手機滑滑。</p>
-
-<p>另外，空間的用途最好固定，在床上就是要睡覺，書桌就是要工作的地方，想娛樂時去到客廳，
-擁有一個小角落來看書，當我們想要做某件事時，就去到特定的地方，如此一來，
-身邊的環境也可以幫助我們開始做特定的事。</p>
-
-<h2 id="習慣堆疊">習慣堆疊</h2>
-<p>提示也可以是自己的某個行為，所以習慣堆疊這招，就是要利用我們原先已經擁有的習慣來作為提示，
-比如說每天早上可能我們會沖杯咖啡，那可以再準備完咖啡，坐到位子上時，就先看10分鐘的書，
-或是工作時，拿起手機要滑時，就做10下伏地挺身，在原有的習慣做完之後，
-立馬接上自己想要習慣。</p>
-
-<h1 id="渴望">渴望</h1>
-<p>接收到提示之後，我們會產生渴望，Friday night使我們有想要放鬆的渴望，
-看到飲料零食使我們有想要吃它喝它的渴望，所以我們可以為我們想要的習慣創造出渴望。</p>
-
-<p>有個工程師(不是我)想要培養運動的習慣，他也非常愛看Netflix，所以他將他的跑步機跟電腦改裝，
-只有當他在跑步的時候，才可以打開Netflix😂</p>
-
-<p>你也可以規定自己當做完需要做的習慣時，才能去做想要的事，把渴望跟需要做的事捆綁在一起，
-也可以跟上述的習慣堆疊合在一起應用，在做完<strong>既有</strong>的習慣後，去做<strong>需要</strong>的習慣，然後才能做<strong>想要</strong>的習慣。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-1.jpg" alt="習慣堆疊 + 渴望綑綁" /></p>
-
-<h1 id="回應">回應</h1>
-<p>回應指的就是你真正去做的那件事的行為，該如何設計你的回應好讓我們養成新的習慣呢!</p>
-<h2 id="容易去做">容易去做</h2>
-<p>當要去做一個行為的阻力太大時，我們就很可能會放棄。</p>
-
-<p>假如你像要養成去健身房運動，但你卻選了個健身房離你家30分鐘路程的地方，
-每次當你想去運動，除了要克服想偷懶的心魔外，還要加上30分鐘路程的艱辛。</p>
-
-<p>相反地，當你想要阻止自己去做一個壞習慣時，要讓他變得困難，比如說看完電視，
-就把電視機整台收進倉庫裡，每次要看的時候，都要把電視從倉庫中搬出來，再接線，
-有時候因為懶，就不會再去做那些自己想要去除的壞習慣了。</p>
-
-<h2 id="重複勝於時間次數勝於質量">重複勝於時間，次數勝於質量</h2>
-<p>有一門攝影課做了以下的實驗，將學生分成了兩組，一組在整個學期中只要繳交一次期末成品，
-一次定生死，而另一組則是要求學生每週都要繳交練習作業，</p>
-
-<p>想要運動嗎？每天做一下伏地挺身也行，沒錯！就是一下; 想要跑步嗎？先從一個禮拜去散步三次也好，
-一件事如果是你無法想像你可以持續一生都堅持在做的話，就一定不會持久。</p>
-
-<p>與其新年新希望，在年初雄心壯志一週上三次健身房，然後做了幾週半途而廢，
-不如每天從散步，做一下伏地挺身開始，持之以恆，久而久之，
-你可以會開始在散步途中跑個100個公尺，或是都做一下伏地挺身了，就開始做了第二下、第三下…</p>
-
-<h1 id="獎賞">獎賞</h1>
-<p>做完一個習慣後，如果我們得到了獎賞便會增強這個習慣，但如果這個獎賞來的太慢，可能會被我們忽略，
-試想一下所有的壞習慣，獎賞都是來得又快又即時，抽菸時尼古丁立刻進入我們身體當中，
-吃垃圾食物時馬上覺得滿足～ 看劇時立即享受到感官的刺激，而壞處卻是可能很久之後才會來，
-我們人類往往都是短視近利的，所以必須讓我們想要培養的習慣有獎賞之外，還要讓它來的即時。</p>
-
-<h2 id="創造立即獎賞">創造立即獎賞</h2>
-<p>如果我們想要培養的習慣可能就是沒辦法帶來立即的獎賞該怎麼辦呢?</p>
-
-<p>有時成功完成習慣帶來的勝利感成就感本身就是很好的獎賞了，在均衡飲食、去運動完後，
-覺得自己真是一個健康的人～強化了成為自己想成為的人的形象，就是很棒的事了，
-除此之外還可以透過一些方法來創造獎賞。</p>
-
-<p>比如說你想要省錢，每次阻止自己亂花錢時，總是心力交瘁，花了很多的意志力終於阻止自己花錢
-，但卻只是讓自己不去做一件事，而沒有得到什麼，這時候，不妨將成功省下來的錢，存入另一個帳戶，
-這個帳戶可以用來資助自己想做的事，想完成的夢想，如此一來，每次省錢時就有得到一個立即的獎賞的感覺，
-也就是在自己的旅遊、美食或夢想帳戶中添上一筆。</p>
-
-<p>另外也能透過紀錄的方式，為自己每次成功執行一下習慣時記下一筆，有時為了不想讓紀錄中斷，
-也是一種動力！</p>
-
-<h1 id="summary">Summary</h1>
-<p>感謝您的閱讀～ 讀完這本書後，知道了不要再依賴意志力來逼自己達成目標，
-而是可以透過許多方法來設計自已，讓自己掉下好習慣的陷阱，不知不覺中，
-每天往好的方向前進! 期許大家都能每天每天讓自己更加成長一咪咪🤏🎉</p>
-
-<p>最後跟大家分享我應用所學，在生活中培養新習慣的故事(陸續新增):</p>
-
-<ul>
-  <li>
-    <p><a href="/posts/lazy-breakfast/" target="_blank"><strong>懶人早餐: 15分鐘，高纖高蛋白低碳水</strong></a></p>
-  </li>
-  <li>
-    <p><a href="/posts/how-i-keep-reading/" target="_blank"><strong>《原子習慣》應用: 我是如何養成閱讀習慣</strong></a></p>
-  </li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><category term="habit" /><summary type="html"><![CDATA[《原子習慣》 這本書收首先帶我們了解到習慣是什麼，它就是我們平常不太會去注意到， 卻是很大地影響我們人生的一件事，更清楚地認識了習慣及其重要之後， 作者將習慣拆解成四個階段，提出一個框架，好讓我們可以一步一步地培養好習慣、斷除壞習慣。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-atomic-hanit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">台北捷運在疫情期間各站的進出人數</title><link href="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/" rel="alternate" type="text/html" title="台北捷運在疫情期間各站的進出人數" /><published>2021-11-11T16:04:00+08:00</published><updated>2021-11-11T16:04:00+08:00</updated><id>https://homuchen.com/posts/mrt-transportation-volume-during-pandemic</id><content type="html" xml:base="https://homuchen.com/posts/mrt-transportation-volume-during-pandemic/"><![CDATA[<p>COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小，
-以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。</p>
-
-<h1 id="資料來源">資料來源</h1>
-<p><a href="https://data.taipei/#/dataset/detail?id=63f31c7e-7fc3-418b-bd82-b95158755b4d" target="_blank"><strong>臺北捷運各站分時進出量統計</strong></a></p>
-
-<p>上述連結中的原始資料中，有每個小時從A站進到B站出的人數，每月近一千萬筆的資料，
-在下將其整理為每月某站的總進出站人數</p>
-
-<h1 id="各站進出人數">各站進出人數</h1>
-<p>以下橫軸時間為<strong>2020-01 ~ 2021-09</strong>，縱軸單位為<strong>百萬人</strong>。</p>
-
-<h2 id="台北車站">台北車站</h2>
-<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-taipei-stattion-0.jpg" alt="捷運台北車站每月進出站人數" /></p>
-
-<h2 id="忠孝復興">忠孝復興</h2>
-<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-忠孝復興-0.jpg" alt="捷運忠孝復興每月進出站人數" /></p>
-
-<h2 id="西門">西門</h2>
-<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-西門-0.jpg" alt="捷運西門站每月進出站人數" /></p>
-
-<h2 id="板橋">板橋</h2>
-<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-板橋-0.jpg" alt="捷運板橋站每月進出站人數" /></p>
-
-<h2 id="士林">士林</h2>
-<p><img src="https://storage.googleapis.com/homuchen.com/images/mrt-data-士林-0.jpg" alt="捷運士林站每月進出站人數" /></p>
-
-<h1 id="結論">結論</h1>
-<p>可以看出各站的趨勢都大同小異，在2020年初小量下滑，在2021五月開始，搭乘捷運的人數大量地縮減。
-另外12月時板橋站有特別多人可能是耶誕城的關係🎄🎅。</p>
-
-<p>以上只簡單列出幾站的資料，如果想要看別的站或是想要確切原始數據的話可以跟我說～除此之外，
-還想知道其他問題的話也可以問我，比如說總進出人數最多的站前幾名，成長或衰退最多的站是哪些?
-等等問題。以上就是這次的分享囉，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><summary type="html"><![CDATA[COVID-19爆發以來，台灣人民的生活跟世界其他國家相比，受到的影響相對較小， 以下將分享台北捷運各站，在疫情期間(2020-01 ~ 2021-09)，每個月的進出站人數資料數據。]]></summary></entry></feed>
+後續會再慢慢介紹以上的東西，掰掰～ 👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html"><![CDATA[除了了解hash function是什麼及其特性之外，用更生活化的方式來展現這些特性，以及以有趣的應用來更加地熟悉hash function。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
