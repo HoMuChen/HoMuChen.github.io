@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-23T22:31:40+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 做自己的生命設計師</title><link href="https://homuchen.com/posts/book-note-designing-your-life/" rel="alternate" type="text/html" title="[讀書筆記] 做自己的生命設計師" /><published>2022-03-23T22:30:00+08:00</published><updated>2022-03-23T22:30:00+08:00</updated><id>https://homuchen.com/posts/book-note-designing-your-life</id><content type="html" xml:base="https://homuchen.com/posts/book-note-designing-your-life/"><![CDATA[<p>我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-25T11:14:15+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 做自己的生命設計師</title><link href="https://homuchen.com/posts/book-note-designing-your-life/" rel="alternate" type="text/html" title="[讀書筆記] 做自己的生命設計師" /><published>2022-03-23T22:30:00+08:00</published><updated>2022-03-25T11:14:00+08:00</updated><id>https://homuchen.com/posts/book-note-designing-your-life</id><content type="html" xml:base="https://homuchen.com/posts/book-note-designing-your-life/"><![CDATA[<p>我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫，
 想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-4.jpg" alt="書: 做自己的生命設計師" /></p>
@@ -130,39 +130,38 @@ Humility、Compassion、Honesty、Kindness、Integrity、Selflessness…</p>
 不過也就是大概的方向而已，具體的路有千千百百條，該走哪條路呢？讓我們繼續探索下去吧！</p>
 
 <h1 id="發想點子">發想點子</h1>
+<p>該如何想出一些生活上或工作上可以嘗試的點子呢～</p>
+
 <h2 id="從現在及過去生活中找">從現在及過去生活中找</h2>
 <ul>
-  <li>記錄生活，留心觀察生活中的每個事件</li>
-  <li>找出心流</li>
-  <li>觀察過去的經驗</li>
+  <li><strong>記錄生活</strong>: 留心觀察生活中的每個事件
+從中找出進入<strong>心流</strong>的時候，心流是什麼呢？就是一種全心投入的狀態，
+注意不到周遭的事，以及會忘記時間的流逝<a href="#1">[1]</a></li>
+  <li>觀察<strong>過去的經驗</strong>: 如果現在的生活真的沒什麼是你喜歡的，那可以回想過去的經驗中，
+哪段時光是你覺得最棒的</li>
 </ul>
 
 <h2 id="卡住了怎麼辦">卡住了怎麼辦</h2>
-<ul>
-  <li>必須先想出可能會喜歡什麼，才能知道真正會喜歡什麼</li>
-  <li>心智圖發想</li>
-  <li>不要批判，可能會覺得有趣，但不確定有什麼用，這很正常</li>
-  <li>船錨問題: 卡在第一個想到的解決方案</li>
-  <li>打造原型: fail fast and fail forward</li>
-</ul>
+<p>有可能你覺得你的人生就很無趣，無法現在或過去找出可能喜歡的事，
+那就來瘋狂亂想吧～首先不要批判自己想到的任何點子，扼殺創意，先得出大量的點子再說！</p>
 
-<h2 id="奧德賽計畫">奧德賽計畫</h2>
-<ul>
-  <li>想出三個5年計畫</li>
-  <li>最簡單的三種:
-    <ol>
-      <li>現在心裡想的</li>
-      <li>如果你的工作消失了，你會做什麼謀生</li>
-      <li>如果你有錢有閒，不管任何面子問題，你會想做什麼</li>
-    </ol>
-  </li>
-  <li>視覺化: 一個標題、時間軸、要問的問題</li>
-  <li>資源、喜歡的程度、自信的程度、一致性</li>
-</ul>
+<blockquote>
+  <p>必須先想出可能會喜歡什麼，才能知道真正會喜歡什麼</p>
+</blockquote>
+
+<h2 id="心智圖發想">心智圖發想</h2>
+<p>利用心智圖，以一個詞彙為中心，想出三四個與之有關的詞彙，再對每個新詞彙重複進行一樣的動作，
+得到三四層的字詞聯想，給自己一個時間限制快速做完，避免大腦的審查機制，以下是G先生做的練習:</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-4.jpg" alt="心智圖" /></p>
+
+<p>最後，從最外層的字詞中挑選幾個組合起來，組成兩個可能的點子，從下面心智圖中，
+或許G先生可以兼職帶領探索營隊，服務喜愛戶外活動的孩子？那不如在海灘上辦個<strong>海盜營隊</strong>。
+或是調職到有海灘的分店！</p>
 
 <h1 id="打造原型">打造原型</h1>
 <p>有了方向跟計畫之後，接下來就是要要去實行了，那該怎麼去做呢？並不是一頭熱，
-拋頭顱灑熱血，一股作氣地All-in下去，先來看看這樣做的話，會有什麼缺點吧。</p>
+拋頭顱灑熱血，一股作氣地All-in下去，如果這樣做的話，會有什麼缺點呢?</p>
 
 <p>比如說你想開咖啡廳，就直接租下店面、裝潢、買下設備、雇人、宣傳然後開始營業，
 這樣可能會非常危險。能不能盈利生存下次是一回事，說不定做了幾個月之後你會發現，
@@ -173,7 +172,7 @@ Humility、Compassion、Honesty、Kindness、Integrity、Selflessness…</p>
 <h2 id="原型prototyping">原型(prototyping)</h2>
 <p>那該怎麼做呢？就是要打造原型，原型是什麼呢？原型是一個小型的、實驗性質的產品，
 用來驗證想法或釐清需求，而在人生的道路上，原型就可以驗證自己的點子可不可行，
-釐清到底是不是自己想要的需求。</p>
+釐清到底是不是自己想要的需求，fail fast and fail forward。</p>
 
 <h2 id="有哪些方法">有哪些方法？</h2>
 <p>產品的原型，就是用小小的成本來打造，而人生想法的原型該要怎麼去進行呢？有以下幾種方法可以參考:</p>
@@ -208,7 +207,12 @@ Humility、Compassion、Honesty、Kindness、Integrity、Selflessness…</p>
 
 <p>人生有無限種可能，沒有任何一種好過另外一種，首先知道自己的工作觀及人生觀，決定了方向，
 接著發想出各種可能、做出計畫，最後也是最重要的一步，就是真正地去做他！
-在做的過程中，邊做邊修正，更加地了解自己。期許大家都能活出豐盛的人生～～🎉</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><summary type="html"><![CDATA[我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫， 想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2022-03-22T22:30:00+08:00</published><updated>2022-03-22T22:30:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/"><![CDATA[<p>人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
+在做的過程中，邊做邊修正，更加地了解自己。期許大家都能活出豐盛的人生～～🎉</p>
+
+<h1 id="參考資料">參考資料</h1>
+<ol>
+  <li><a href="https://www.books.com.tw/products/0010816703" target="_blank" name="1">《心流: 高手都在研究的最優體驗心理學》</a></li>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><summary type="html"><![CDATA[我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫， 想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2022-03-22T22:30:00+08:00</published><updated>2022-03-22T22:30:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/"><![CDATA[<p>人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
 對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。</p>
 
 <h1 id="邁向成功的公式">邁向成功的公式</h1>
