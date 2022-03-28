@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-25T11:14:15+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 做自己的生命設計師</title><link href="https://homuchen.com/posts/book-note-designing-your-life/" rel="alternate" type="text/html" title="[讀書筆記] 做自己的生命設計師" /><published>2022-03-23T22:30:00+08:00</published><updated>2022-03-25T11:14:00+08:00</updated><id>https://homuchen.com/posts/book-note-designing-your-life</id><content type="html" xml:base="https://homuchen.com/posts/book-note-designing-your-life/"><![CDATA[<p>我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-03-28T20:44:24+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">如何在Mac OS中使用command line來將文字複製到剪貼簿</title><link href="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/" rel="alternate" type="text/html" title="如何在Mac OS中使用command line來將文字複製到剪貼簿" /><published>2022-03-28T20:40:00+08:00</published><updated>2022-03-28T20:40:00+08:00</updated><id>https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line</id><content type="html" xml:base="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/"><![CDATA[<p>在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？
+那就是可以透過<strong>pbcopy</strong>及<strong>pbpaste</strong>指令，也下為一些例子。</p>
+
+<h1 id="複製">複製</h1>
+<ul>
+  <li>複製<code class="language-plaintext highlighter-rouge">123</code>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">echo </span>123 | pbcopy
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>將<code class="language-plaintext highlighter-rouge">words.txt</code>檔案中的文字，複製到剪貼簿
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cat </span>words.txt | pbcopy
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>或是</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>pbcopy &lt; words.txt
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="貼上">貼上</h1>
+<ul>
+  <li>輸出至stdout
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>pbpaste
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>輸出到檔案裡
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>pbpaste <span class="o">&gt;</span> some.txt
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>雖然也可以用滑鼠把想複製的字選起來再按command + C，但有時候就是不想碰到滑鼠！我想這就是工程師的浪漫吧😎</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="command line" /><summary type="html"><![CDATA[在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？ 那就是可以透過pbcopy及pbpaste指令，也下為一些例子。]]></summary></entry><entry><title type="html">[讀書筆記] 做自己的生命設計師</title><link href="https://homuchen.com/posts/book-note-designing-your-life/" rel="alternate" type="text/html" title="[讀書筆記] 做自己的生命設計師" /><published>2022-03-23T22:30:00+08:00</published><updated>2022-03-25T11:14:00+08:00</updated><id>https://homuchen.com/posts/book-note-designing-your-life</id><content type="html" xml:base="https://homuchen.com/posts/book-note-designing-your-life/"><![CDATA[<p>我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫，
 想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-4.jpg" alt="書: 做自己的生命設計師" /></p>
@@ -1430,105 +1467,4 @@ secondary indexes也必須各自去建立，幾乎許多RDBMS提供的好用的�
   <li><a href="https://www.postgresql.org/docs/10/ddl-partitioning.html" target="_blank">PostgreSQL: Documentation</a></li>
   <li><a href="https://www.digitalocean.com/community/tutorials/understanding-database-sharding" target="_blank">Understanding Database Sharding</a></li>
   <li><a href="https://docs.mongodb.com/manual/sharding/" target="_blank">MongoDB sharding</a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼? 這些跟NoSQL有關嗎? 在傳統的RDBMS，像是MySQL或PostgreSQL中，這些概念也有用嗎? 這篇文章將討論上述的問題，看看partition在RDBMS及NoSQL中的實踐應用，以及各種優缺點。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">什麼是Hash Function? 有什麼特性及用途?</title><link href="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/" rel="alternate" type="text/html" title="什麼是Hash Function? 有什麼特性及用途?" /><published>2021-11-17T17:52:00+08:00</published><updated>2021-11-17T17:52:00+08:00</updated><id>https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages</id><content type="html" xml:base="https://homuchen.com/posts/what-is-hash-function-its-properties-and-usages/"><![CDATA[<p>在之前一篇文章: <a href="/posts/what-problems-cryptography-to-solve" target="_blank"><strong>密碼學是什麼? 有何用途以及要解決什麼樣的問題?</strong></a>
-中討論過密碼學的出現是為了解決什麼問題，這篇文章要討論密碼學裡一個重要的概念，
-<strong>Hash Function</strong>，其與對稱式加密跟非對稱式加密三者共同構成密碼學裡的核心。</p>
-
-<h1 id="賭博遊戲">賭博遊戲</h1>
-<p>再開始正式的內容之前，先來想個有趣的問題: <strong>賭博中如何防止莊家出老千?</strong>
-比如說我們現在玩骰子遊戲，賭大小，1-3是小，4-6是大，
-賭博最怕莊家出老千，莊家看你賭小就作弊讓骰子骰出大，看你賭大就骰小，該如何解決這個問題呢~</p>
-
-<p>這篇文章講Hash那提出的解法當然跟Hash有關囉，文末再來揭曉，首先先來認識Hash function。</p>
-
-<h1 id="什麼是hash-function">什麼是Hash Function</h1>
-<p>Function就是有一組輸入然後會產生一組輸出，同樣的輸入會產生出同樣的輸出，
-而hash function的輸出是<strong>固定長度</strong>的，不同的hash funtion，所產出長度都不同，
-比如說md5為128個bits，sha256顧名思義為256個bits。</p>
-
-<p>輸出的結果跟輸入的資料相比起來，通常是小很多的，
-所以輸出的結果會被稱為<strong>message digest</strong>，或是直接稱為<strong>hash value</strong>。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" alt="hash function" /></p>
-
-<h1 id="hash-function的特性">Hash function的特性</h1>
-<p>接下來我們來看看好的hash function還具有其他哪些特性，可以使得他在密碼學裡佔有一席之地。</p>
-
-<h2 id="irreversibility">Irreversibility</h2>
-<p>不可逆的，單向的，就是說當我們得到一個hash funcition的output時，我們無法反推出其input，</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/hash-function-1.jpg" alt="hash function: irreversibility" /></p>
-
-<h2 id="collision-resistance">Collision Resistance</h2>
-<p>什麼是碰撞? 就是說當有兩個不同的輸入，經過hash function的計算後，得到了一樣的結果時，就是碰撞。</p>
-
-<p>比如說我們的hash function是將輸入除以5的餘數，這樣當我們的input是1、6、11、16等等等的時候，
-所得到的ouput都是1，就碰撞了。</p>
-
-<p>所以如果一個好的hash function是collision resistance的話，當我們看到兩個不相同的hash value時，
-我們就知道他們倆的input也是不相同，反之亦然，當看到兩個相同的hash value時，
-我們就知道它是由兩個一樣的input所以計算出來的，因為他不會碰撞，不會有多個input對應到同一個output。</p>
-
-<h1 id="用途">用途</h1>
-<p>Hash Function就是做出<strong>承諾</strong>、<strong>指紋</strong>、<strong>識別</strong>的方法，怎麼說呢？
-接下來我們來看看在哪些地方有用到hash function吧!</p>
-
-<h2 id="承諾">承諾</h2>
-<p>比如現在要做出愛妻承諾，我們將10條的愛妻守則經過hash function計算的到一個hash value，
-這個value就是一個承諾。承諾就是不會改變的東西，如果我們偷偷地更改了愛妻守則裡的其中一個字，
-因為改變太微小了，老婆可能不會發現，但只要再經過hash function計算過後，就會發現hash value完全不一樣了～</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/hash-function-2.jpg" alt="hash function: commitment" /></p>
-
-<p>如此一般，hash value的一致可以用來保障我們原始資料是沒有改變的，可以被用在下列這幾個地方:</p>
-<ul>
-  <li>檔案校正碼</li>
-  <li>下載安裝檔</li>
-</ul>
-
-<p>用來確定我們收到的檔案是沒有損毀的，以及我下載下來要安裝的東西，不是被惡意的第三方給改過的！</p>
-
-<h2 id="隱密的承諾">隱密的承諾</h2>
-<p>除了是承諾之外，它還可以是隱密的承諾，也就是說我知道你做了一個承諾，
-但我不知道你承諾的內容是什麼，因為hash function具有不可逆的特性，
-但你可能會說這有什麼用嗎~讓我們來看看吧！</p>
-
-<h3 id="密碼儲存">密碼儲存</h3>
-<p>當我們使用密碼登入別人的服務時，伺服器要知道使用者的密碼輸入的對不對，那它就要記錄下大家的密碼，
-日後使用者登入的時候才可以比對。不過要是伺服器被駭客侵入，
-或透過其他的方式取得這份使用者密碼清單，那代誌就大條了😱</p>
-
-<p>所以通常伺服器資料庫都不會直接把密碼紀錄下來，而是將密碼hash過後，再將hash value存起來，
-如此一來就算駭客得到這些hash values，也無法得知原本的密碼是什麼，而每次使用者登入的使用，
-只要再將他輸入的密碼hash過一次，然後跟資料庫裡的比對，一樣的話就代表使用者輸入了正確的密碼了，
-在這裡這個承諾就是密碼本身。</p>
-
-<h2 id="識別">識別</h2>
-<p>因為hash value是固定長度的，可以將它當作一份資料的識別，比如說身分證字號就是使用一位英文加上九位數字，
-來代表著某一位台灣人。</p>
-
-<h3 id="git">Git</h3>
-<p><code class="language-plaintext highlighter-rouge">commit d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9 (HEAD -&gt; master)</code></p>
-
-<p>相信會使用git的大家對這樣的文字不陌生，
-其中的<code class="language-plaintext highlighter-rouge">d9a1e4f5f1fe19b05bafb4176b2c9a6b89c14bc9</code>就是將這個commit版本中的所有檔案作為input，使用SHA1 hash出來的，
-長度為160個bits，也就是40個hexadecimal的字母，他就作為這個commit的識別。</p>
-
-<h3 id="uuid-v3uuid-v5">UUID v3、UUID v5</h3>
-<p>這兩個版本分別使用MD5及SHA1，由於v5使用SHA1會生成160bits的hash value，會將其截斷為128bits。</p>
-
-<h1 id="賭博遊戲的解法">賭博遊戲的解法</h1>
-<p>現在要來解決文章開頭的問題了～利用的就是hash function的隱密的承諾的特性，提出的解法如下:</p>
-
-<p>玩家可以先將他要下的賭注hash過，得到一串看不懂的東西，然後公開這串hash value，
-由於不可逆的特性的關係，莊家看不懂玩家到底是賭大還是賭小，等開出結果之後，
-玩家再公布他的賭注，並將此再hash一遍，如果得出的hash value一樣，
-玩家就可以宣稱他看到骰子開獎之後才公布的賭注跟原先的賭注是一樣的，酷吧😎</p>
-
-<h1 id="總結">總結</h1>
-<p>感謝你的閱讀～ 這篇文章簡單地介紹了什麼是hash function，以及它具有哪些特性，
-還有其用途，包括檔案校正、密碼儲存、git commit、uuid等等…</p>
-
-<p>在密碼學中，還會搭配對稱式及非對稱式加密來達成一些其他的任務，
-比如說訊息驗證碼(message authentication code)、數位簽章(digital signature)等等…
-後續會再慢慢介紹以上的東西，掰掰～ 👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><summary type="html"><![CDATA[除了了解hash function是什麼及其特性之外，用更生活化的方式來展現這些特性，以及以有趣的應用來更加地熟悉hash function。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[什麼是partition，vertical跟horizontal partition有何不同? 阿sharding又是什麼? 這些跟NoSQL有關嗎? 在傳統的RDBMS，像是MySQL或PostgreSQL中，這些概念也有用嗎? 這篇文章將討論上述的問題，看看partition在RDBMS及NoSQL中的實踐應用，以及各種優缺點。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/hash-function-5.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
