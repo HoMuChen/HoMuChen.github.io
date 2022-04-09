@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-02T22:10:20+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術</title><link href="https://homuchen.com/posts/book-note-remote-work-go/" rel="alternate" type="text/html" title="[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術" /><published>2022-04-02T22:04:00+08:00</published><updated>2022-04-02T22:04:00+08:00</updated><id>https://homuchen.com/posts/book-note-remote-work-go</id><content type="html" xml:base="https://homuchen.com/posts/book-note-remote-work-go/"><![CDATA[<p>為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-09T12:52:09+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">如何開始開發你的API: API first principle and OpenAPI</title><link href="https://homuchen.com/posts/api-first-principle-openapi/" rel="alternate" type="text/html" title="如何開始開發你的API: API first principle and OpenAPI" /><published>2022-04-09T12:50:00+08:00</published><updated>2022-04-09T12:50:00+08:00</updated><id>https://homuchen.com/posts/api-first-principle-openapi</id><content type="html" xml:base="https://homuchen.com/posts/api-first-principle-openapi/"><![CDATA[<h1 id="api-first">API first</h1>
+<p>在一頭熱開始寫code實作你的API service之前，應該首先要關注API中的<strong>I</strong>字，也就是<strong>interface</strong>，
+interface是作為服務提供者及服務使用者溝通的介面，為什麼要首先定義好interface呢？有幾下幾個好處:</p>
+
+<h2 id="更早得到回饋">更早得到回饋</h2>
+<p>為什麼要寫API，總是因為有人要用嘛～有人希望我們提供某些服務，而API就是使用這些服務的入口及介面，
+如果我們可以在開工之前，就先把介面設計定義好，並交給客戶，如此一來，
+客戶們就可以先看看我們所提供的介面好不好用，有沒有任何的問題，想要的功能有沒有齊全，
+如果有需要修改或增減的地方，就能儘早地得到回饋！在真正投入心血開發之前，導正方向～</p>
+
+<h2 id="更穩定">更穩定</h2>
+<p>由於上述的原因，我們的介面就會更穩定，更少需要變動，整個系統以更容易去維護。
+介面的變動往往牽涉到多方人員，越多人依賴這個介面，一旦要改動就麻煩了，所牽涉的層面就越廣。</p>
+
+<p>但也並不是說介面就一定不會變，在整個產品的生命週期中，一定會經歷持續改善的過程，可能要加新功能，
+，或是發現有更好用的介面，只是在我們應該盡最大的努力來維持介面的穩定。</p>
+
+<h2 id="併行開發">併行開發</h2>
+<p>最後，一旦<strong>介面</strong>定義好了之後，服務提供者及使用者就可以同時針對這個介面來進行工作了，
+當兩邊都完成各自的工作後，就可以接起來看看有沒有成功，
+如此一來就可以避免掉使用者苦苦等著提供者完成的窘境。</p>
+
+<p>那在完成實作之前，該要先如何描述這個介面呢？這個描述的方法或語言應該要是一個標準，
+如此一來，各方單位才能看得懂，而這個標準就是<strong>OpenAPI</strong>。</p>
+
+<h1 id="openapi">OpenAPI</h1>
+<p>OpenAPI是一個描述RESTful API的標準，藉由寫下OpenAPI的spec檔案，
+可以讓不管是電腦或是人類的使用者知道，你的API可以做到哪些事，提供了什麼功能及怎麼使用，
+而不需要再去看source code，或者是真的打打看你的API service來得知！</p>
+
+<p>這裡就不詳細說明OpenAPI該怎麼使用了，想了解的去官網查詢～</p>
+
+<ul>
+  <li><a href="https://swagger.io/specification/" target="_blank"><strong>OpenAPI Specification</strong></a></li>
+</ul>
+
+<p>這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:</p>
+
+<ul>
+  <li><a href="/posts/http-restful-api-design-practical-guide/" target="_blank"><strong>RESTful API Design — A practical guide</strong></a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html"><![CDATA[開發API應該要使用怎樣的流程，先定義好介面有哪些好處，以及可以使用哪些工具呢？(OpenAPI 3.0)]]></summary></entry><entry><title type="html">[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術</title><link href="https://homuchen.com/posts/book-note-remote-work-go/" rel="alternate" type="text/html" title="[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術" /><published>2022-04-02T22:04:00+08:00</published><updated>2022-04-02T22:04:00+08:00</updated><id>https://homuchen.com/posts/book-note-remote-work-go</id><content type="html" xml:base="https://homuchen.com/posts/book-note-remote-work-go/"><![CDATA[<p>為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決，
 不管是以<strong>雇主</strong>的角度還是以<strong>員工</strong>的角度，在這本書<a href="https://www.books.com.tw/products/0010856669/"><strong>《遠距工作模式》</strong></a>裡都有提及。</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" alt="書: 遠距工作模式" /></p>
@@ -1161,225 +1201,4 @@ DNS甚至複製到了user的本地機器裡，可以看到他們為了支持更�
 
 <ol>
   <li><a href="https://docs.mongodb.com/manual/reference/write-concern/" target="_blank" id="1"><strong>MongoDB Write Concern</strong></a></li>
-</ol>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[database replication是什麼?有什麼好處及缺點，方法又有哪些呢? 可以在許多系統中看到replication的應用， 像是各種NoSQL、自己系統的(讀寫分離、cache、search engine)、CDN、DNS等等...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Node.js: 7 cryptography concepts using ctypto module</title><link href="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/" rel="alternate" type="text/html" title="Node.js: 7 cryptography concepts using ctypto module" /><published>2021-11-24T22:11:00+08:00</published><updated>2021-11-24T22:11:00+08:00</updated><id>https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module</id><content type="html" xml:base="https://homuchen.com/posts/cryptography-in-nodejs-using-crypto-module/"><![CDATA[<p>這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念，
-包含<strong>hash</strong>、<strong>salt</strong>、<strong>password hashing</strong>、
-<strong>MAC(message authentication code)</strong>、
-<strong>Symmetric Encryption</strong>及<strong>Asymmetric Encryption</strong>
-及<strong>Digital Signature</strong>。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-1.jpg" alt="cryptography in node.js cryto module" target="_blank" /></p>
-
-<h1 id="hash">Hash</h1>
-<p>可以使用指令<code class="language-plaintext highlighter-rouge">openssl list -digest-algorithms</code>來查詢可用的algorithms，以下使用<code class="language-plaintext highlighter-rouge">sha256</code>為例，
-並輸出<code class="language-plaintext highlighter-rouge">base64</code>的字串。</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">createHash</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">function</span> <span class="nx">hash</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">createHash</span><span class="p">(</span><span class="dl">'</span><span class="s1">sha256</span><span class="dl">'</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="nx">input</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="dl">'</span><span class="s1">base64</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="salt">Salt</h1>
-<p>randomBytes可以幫我們隨機產生你所想要長度的隨機亂數，用來作為salt，
-它的回傳值是一個Buffer。</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">randomBytes</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">function</span> <span class="nx">salt</span><span class="p">(</span><span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">randomBytes</span><span class="p">(</span><span class="nx">len</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span>
-
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="password-hashing">Password hashing</h1>
-<p>利用<code class="language-plaintext highlighter-rouge">scrypt</code>及<code class="language-plaintext highlighter-rouge">scryptSync</code>這個KDF(一個為非同步，一個為同步的API)，
-function的前三個參數分別為:</p>
-<ol>
-  <li>欲hash的明文資料，此處為密碼</li>
-  <li>salt</li>
-  <li>output的長度</li>
-</ol>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">scryptSync</span><span class="p">,</span> <span class="nx">randomBytes</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">function</span> <span class="nx">passwordHash</span><span class="p">(</span><span class="nx">password</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">const</span> <span class="nx">salt</span> <span class="o">=</span> <span class="nx">randomBytes</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
-    <span class="kd">const</span> <span class="nx">hashedPassword</span> <span class="o">=</span> <span class="nx">scryptSync</span><span class="p">(</span><span class="nx">password</span><span class="p">,</span> <span class="nx">salt</span><span class="p">,</span> <span class="mi">32</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="s2">`</span><span class="p">${</span><span class="nx">salt</span><span class="p">}</span><span class="s2">:</span><span class="p">${</span><span class="nx">hashedPassword</span><span class="p">}</span><span class="s2">`</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-<p>以上例子使用<code class="language-plaintext highlighter-rouge">randomBytes</code>來產生salt，接著將密碼與salt一起hash成32 bytes的hash value，最後跟salt一起回傳。</p>
-
-<h1 id="mac">MAC</h1>
-<p>跟hash一樣可以使用指令<code class="language-plaintext highlighter-rouge">openssl list -digest-algorithms</code>來查詢可用的演算法。</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">createHmac</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">my-secret!</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">foo bar👻</span><span class="dl">'</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">hmac</span> <span class="o">=</span> <span class="nx">createHmac</span><span class="p">(</span><span class="dl">'</span><span class="s1">sha256</span><span class="dl">'</span><span class="p">,</span> <span class="nx">key</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="symmetric-encryption">Symmetric Encryption</h1>
-<p>支援的對稱式加密的演算法一樣可以透過這個指令來取得<code class="language-plaintext highlighter-rouge">openssl list -cipher-algorithms</code>，此處使用<code class="language-plaintext highlighter-rouge">aes256</code>。</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">randomBytes</span><span class="p">,</span> <span class="nx">createCipheriv</span><span class="p">,</span> <span class="nx">createDecipheriv</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">This is the message I wanna deliver</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">key shared between two parties</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">iv</span> <span class="o">=</span> <span class="nx">randomBytes</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
-
-<span class="c1">//Encrypt</span>
-<span class="kd">const</span> <span class="nx">cipher</span> <span class="o">=</span> <span class="nx">createCipheriv</span><span class="p">(</span><span class="dl">'</span><span class="s1">aes256</span><span class="dl">'</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">iv</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">encryptedMessage</span> <span class="o">=</span> <span class="nx">cipher</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="dl">'</span><span class="s1">utf8</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">)</span> <span class="o">+</span> <span class="nx">cipher</span><span class="p">.</span><span class="nx">final</span><span class="p">(</span><span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="c1">//Decrypt</span>
-<span class="kd">const</span> <span class="nx">decipher</span> <span class="o">=</span> <span class="nx">createDecipheriv</span><span class="p">(</span><span class="dl">'</span><span class="s1">aes256</span><span class="dl">'</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">iv</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">decryptedMessage</span> <span class="o">=</span> <span class="nx">decipher</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">encryptedMessage</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">utf-8</span><span class="dl">'</span><span class="p">)</span> <span class="o">+</span> <span class="nx">decipher</span><span class="p">.</span><span class="nx">final</span><span class="p">(</span><span class="dl">'</span><span class="s1">utf8</span><span class="dl">'</span><span class="p">);</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="asymmetric-encryption">Asymmetric Encryption</h1>
-<p>首先使用<code class="language-plaintext highlighter-rouge">generateKeyPair</code>或<code class="language-plaintext highlighter-rouge">generateKeyPairSync</code>來產生公鑰及私鑰。</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">generateKeyPairSync</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">publicKey</span><span class="p">,</span> <span class="nx">privateKey</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">generateKeyPairSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">rsa</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
-    <span class="na">modulusLength</span><span class="p">:</span> <span class="mi">4096</span><span class="p">,</span>
-    <span class="na">publicKeyEncoding</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">spki</span><span class="dl">'</span><span class="p">,</span>
-        <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pem</span><span class="dl">'</span>
-    <span class="p">},</span>
-    <span class="na">privateKeyEncoding</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pkcs8</span><span class="dl">'</span><span class="p">,</span>
-        <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pem</span><span class="dl">'</span><span class="p">,</span>
-        <span class="na">cipher</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aes-256-cbc</span><span class="dl">'</span><span class="p">,</span>
-        <span class="na">passphrase</span><span class="p">:</span> <span class="dl">'</span><span class="s1">top secret</span><span class="dl">'</span>
-    <span class="p">}</span>
-<span class="p">})</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>接者使用<code class="language-plaintext highlighter-rouge">publicEncrypt</code>及<code class="language-plaintext highlighter-rouge">privateDecrypt</code>來encrypt、decrypt message。</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span>  <span class="nx">publicEncrypt</span><span class="p">,</span> <span class="nx">privateDecrypt</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">I am the message to be encypted🥳</span><span class="dl">"</span>
-
-<span class="c1">//加密 Encrypt</span>
-<span class="kd">const</span> <span class="nx">encryptedData</span> <span class="o">=</span> <span class="nx">publicEncrypt</span><span class="p">(</span><span class="nx">publicKey</span><span class="p">,</span> <span class="nx">Buffer</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
-
-<span class="c1">//解密 Decrypt</span>
-<span class="kd">const</span> <span class="nx">decryptedData</span> <span class="o">=</span> <span class="nx">privateDecrypt</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span> <span class="nx">encryptedData</span><span class="p">);</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="digital-signature">Digital Signature</h1>
-<p>數位簽章牽扯到hash及非對稱加密，使用crypto module中的<code class="language-plaintext highlighter-rouge">createSign</code>及<code class="language-plaintext highlighter-rouge">createVerify</code>，
-回傳的<code class="language-plaintext highlighter-rouge">Sign</code>及<code class="language-plaintext highlighter-rouge">Verify</code> Object都幫我們做好好囉～</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">createSign</span><span class="p">,</span> <span class="nx">createVerify</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="c1">//取得你的公私鑰匙</span>
-<span class="kd">const</span> <span class="nx">publicKey</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./ssl/key.pem</span><span class="dl">'</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./ssl/cert.pem</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">this data must be signed</span><span class="dl">'</span><span class="p">;</span>
-
-<span class="c1">//使用私鑰sign</span>
-<span class="kd">const</span> <span class="nx">signer</span> <span class="o">=</span> <span class="nx">createSign</span><span class="p">(</span><span class="dl">'</span><span class="s1">rsa-sha256</span><span class="dl">'</span><span class="p">);</span>
-<span class="nx">signer</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">signature</span> <span class="o">=</span> <span class="nx">signer</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
-
-
-<span class="c1">// 使用公鑰verify</span>
-<span class="kd">const</span> <span class="nx">verifier</span> <span class="o">=</span> <span class="nx">createVerify</span><span class="p">(</span><span class="dl">'</span><span class="s1">rsa-sha256</span><span class="dl">'</span><span class="p">);</span>
-<span class="nx">verifier</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">isVerified</span> <span class="o">=</span> <span class="nx">verifier</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">publicKey</span><span class="p">,</span> <span class="nx">signature</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hex</span><span class="dl">'</span><span class="p">);</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="summay">Summay</h1>
-<p>其實就是從官方document裡，把比較常用的整理到這裡，這篇就只有紀錄在Nodejs裡如何實作，
-並沒有討論為何需要上述的每一個東西，以及有何用途，有機會再陸續補上～ 掰掰👋</p>
-
-<h1 id="參考資料">參考資料</h1>
-<ul>
-  <li><a href="https://nodejs.org/api/crypto.html" target="_blank"><strong>Crypto | Node.js Documentation</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="crypto" /><category term="node.js" /><summary type="html"><![CDATA[這篇要介紹nodejs中的crypto module的用法，如何使用這個module來實現密碼學中常見的概念， 包含hash、salt、password hashing、 MAC(message authentication code)、 Symmetric Encryption及Asymmetric Encryption 及Digital Signature。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/nodejs-crytpo-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[database replication是什麼?有什麼好處及缺點，方法又有哪些呢? 可以在許多系統中看到replication的應用， 像是各種NoSQL、自己系統的(讀寫分離、cache、search engine)、CDN、DNS等等...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

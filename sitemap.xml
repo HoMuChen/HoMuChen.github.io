@@ -46,7 +46,7 @@
 </url>
 <url>
 <loc>https://homuchen.com/posts/system-design-data-model-relational-vs-document/</loc>
-<lastmod>2022-03-25T11:14:00+08:00</lastmod>
+<lastmod>2020-12-28T20:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>https://homuchen.com/posts/http-introduction-telnet-nc-curl/</loc>
@@ -62,7 +62,7 @@
 </url>
 <url>
 <loc>https://homuchen.com/posts/http-restful-api-design-practical-guide/</loc>
-<lastmod>2021-04-13T20:00:00+08:00</lastmod>
+<lastmod>2022-04-09T12:50:00+08:00</lastmod>
 </url>
 <url>
 <loc>https://homuchen.com/posts/google-sheet-create-a-drop-down-list-from-existed-data/</loc>
@@ -223,6 +223,10 @@
 <url>
 <loc>https://homuchen.com/posts/book-note-remote-work-go/</loc>
 <lastmod>2022-04-02T22:04:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://homuchen.com/posts/api-first-principle-openapi/</loc>
+<lastmod>2022-04-09T12:50:00+08:00</lastmod>
 </url>
 <url>
 <loc>https://homuchen.com/about/</loc>
