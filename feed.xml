@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-09T12:52:09+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">如何開始開發你的API: API first principle and OpenAPI</title><link href="https://homuchen.com/posts/api-first-principle-openapi/" rel="alternate" type="text/html" title="如何開始開發你的API: API first principle and OpenAPI" /><published>2022-04-09T12:50:00+08:00</published><updated>2022-04-09T12:50:00+08:00</updated><id>https://homuchen.com/posts/api-first-principle-openapi</id><content type="html" xml:base="https://homuchen.com/posts/api-first-principle-openapi/"><![CDATA[<h1 id="api-first">API first</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-14T22:35:43+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">REST API Design: Pagination</title><link href="https://homuchen.com/posts/restful-api-pagination/" rel="alternate" type="text/html" title="REST API Design: Pagination" /><published>2022-04-14T22:35:00+08:00</published><updated>2022-04-14T22:35:00+08:00</updated><id>https://homuchen.com/posts/restful-api-pagination</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-pagination/"><![CDATA[<h1 id="為何要pagination">為何要Pagination</h1>
+<p>一個response如果資料太多，回應太慢，一定會造成使用者的體驗不佳，進而流失用戶，
+而pagination就是使reponse回應速度的加快的做法之一。</p>
+
+<p>比如說你在用instagram，在探索頁面中一眼看到的貼文可能只有10幾篇，
+此時你就不需要一次抓回來30篇甚至是更多的貼文資料，藉此來減少用戶等待的時間，
+只有當用戶繼續將螢幕往下滾時，再抓取下一個10幾篇的資料就好。</p>
+
+<p>以下來看看兩種Pagination的做法，<code class="language-plaintext highlighter-rouge">offset</code>及<code class="language-plaintext highlighter-rouge">keyset</code>:</p>
+
+<h1 id="offset-pagination">Offset Pagination</h1>
+<p>最基本的做法就是使用<code class="language-plaintext highlighter-rouge">offset</code>及<code class="language-plaintext highlighter-rouge">limit</code>，一樣的概念在<code class="language-plaintext highlighter-rouge">SQL</code>語法中也可以看到:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">items</span> <span class="k">LIMIT</span> <span class="mi">20</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>而在HTTP API裡，則會像是這樣</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl http://api.exmaple.com/items?offset<span class="o">=</span>0&amp;limit<span class="o">=</span>10
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>也有一些服務會使用其他的名字，例如<code class="language-plaintext highlighter-rouge">Elasticsearch</code>用的<code class="language-plaintext highlighter-rouge">from</code>及<code class="language-plaintext highlighter-rouge">size</code>，都是代表一樣的意思，
+從第幾則資料開始(offset、from)算，總共抓取幾則資料(limit、size)。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/pagination-1.jpg" alt="offset pagination" /></p>
+
+<h2 id="offset-pagination可能的問題">offset pagination可能的問題</h2>
+<ul>
+  <li>
+    <p>當offset很大時，比如說offset=1000000，API server必須scan一百萬的資料，效能不彰。</p>
+  </li>
+  <li>
+    <p>再來就是當你的資料持續再增加時，可能會造成一些混亂，以下面的例子為例:</p>
+
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">GET /items?offset=0&amp;limit=10</code></li>
+      <li>增加了5筆資料</li>
+      <li>再一次<code class="language-plaintext highlighter-rouge">GET /items?offset=0&amp;limit=10</code>，結果其中5筆是第一次query裡已經有出現的了</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="keyset-pagination">Keyset Pagination</h1>
+<p>不是使用offset，而是使用某個key作為指定的起始點，比如說<code class="language-plaintext highlighter-rouge">created_at</code>，HTTP request看起來可能像是這樣</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl http://api.exmaple.com/items?limit<span class="o">=</span>10&amp;created_at:lte:2022-04-10T00:00:00
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>只抓取創建時間比2022-04-10T00:00:00還要早的資料，想翻頁時，
+就將created_at:lte的時間指定為上一次回傳的最後一筆資料的created_at就好了，如此一來，
+就不會有後來新增的資料跑進來的問題了。</p>
+
+<p>而且通常所使用的key在資料庫中會建立索引，也可以避免上述使用offset造成的large database scan的問題。</p>
+
+<hr />
+
+<p>這是RESTful API一系列文章中的一篇，想了解更多關於RESTful API及HTTP的，可以看這篇目錄:</p>
+
+<p><a href="/posts/http-restful-api-design-practical-guide/" target="_blank"><strong>RESTful API Design — A practical guide</strong></a></p>
+
+<p>感謝您的閱讀~期待下次見！</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html"><![CDATA[什麼是Pagination？為何要使用，以及在HTTP API設計中該如何實作呢？]]></summary></entry><entry><title type="html">如何開始開發你的API: API first principle and OpenAPI</title><link href="https://homuchen.com/posts/api-first-principle-openapi/" rel="alternate" type="text/html" title="如何開始開發你的API: API first principle and OpenAPI" /><published>2022-04-09T12:50:00+08:00</published><updated>2022-04-09T12:50:00+08:00</updated><id>https://homuchen.com/posts/api-first-principle-openapi</id><content type="html" xml:base="https://homuchen.com/posts/api-first-principle-openapi/"><![CDATA[<h1 id="api-first">API first</h1>
 <p>在一頭熱開始寫code實作你的API service之前，應該首先要關注API中的<strong>I</strong>字，也就是<strong>interface</strong>，
 interface是作為服務提供者及服務使用者溝通的介面，為什麼要首先定義好interface呢？有幾下幾個好處:</p>
 
@@ -1054,151 +1116,4 @@ email=test%40homuchen.com&amp;name=homuchen
 <ul>
   <li><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></li>
   <li><a href="/posts/lazy-breakfast/" target="_blank"><strong>懶人早餐: 15分鐘，高纖高蛋白低碳水</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="self improvement" /><category term="life style" /><category term="books" /><summary type="html"><![CDATA[都知道閱讀有許多的好處，但該要該如何培養呢? 這篇文章將分享我是如何從不看書，改變成現在每天都有閱讀的習慣， 利用原子習慣所提出的框架，應用到自己的生活之中。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?</title><link href="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/" rel="alternate" type="text/html" title="[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?" /><published>2021-11-28T17:00:00+08:00</published><updated>2021-11-28T17:00:00+08:00</updated><id>https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage</id><content type="html" xml:base="https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/"><![CDATA[<h1 id="什麼是database-replication">什麼是database replication?</h1>
-<p>顧名思義就是將一份資料，複製成多份，並把它放到不同的機器上，
-好像也沒什麼好說的🤪，接著會看看為什麼要做複製，它會帶來什麼好處及壞處，
-再看看要如何做到replication，最後看看在RDBMS、NoSQL或是你自己的系統，是怎麼應用這些概念的。</p>
-
-<h1 id="為何要replication">為何要replication</h1>
-<h2 id="資料備份">資料備份</h2>
-<p>把一份資料變成多份放到不同的地方，最明顯的好處就是<strong>備份</strong>，當你的機器壞掉，如果硬碟沒壞，
-其實重啟之後資料還是在那邊，但就怕你的機器整組壞光光，或是就是硬碟爆了無法再使用，
-此時如果資料有複製道別台機器上，就不用怕會有資料的丟失。</p>
-
-<h2 id="讀取效能">讀取效能</h2>
-<p>資料都在同一台機器時，所有的讀取查詢都必須經由這台機器來完成，一台機器總有他的瓶頸，
-一台不行，那你有試過兩台嗎？三台四台五台嗎～</p>
-
-<p>對於讀取效能的增進，主要有兩個方向，分別是吞吐量(throughput)及延遲時間(latency)。</p>
-
-<ul>
-  <li>
-    <p><strong>read throughput:</strong>
-複製了N份，我就有N台機器可以供我查詢拉，平均分散所有的查詢請求到N台機器上，
-預期最多就可以有N倍的throughput。</p>
-  </li>
-  <li>
-    <p><strong>read latency:</strong>
-另外也可以把一些機器放到離user近一點的地方，減少網路封包來回的時間，降低latency，</p>
-  </li>
-</ul>
-
-<h1 id="replication帶來的缺點">Replication帶來的缺點</h1>
-<h2 id="儲存空間">儲存空間</h2>
-<p>想當然爾，複製了幾份的資料就需要多幾份的磁碟的空間，不過現在硬碟越來越便宜的時代，
-應該不是個大問題。</p>
-
-<h2 id="資料的不一致">資料的不一致</h2>
-<p>不一致的主要來源就是兩種: <strong>replication</strong>和<strong>concurrent write</strong>，
-試想一下資料如果只有單一來源，那要跟誰不一致呢？反之，因為有了replica，
-每份複製要如何保持同步及一致就會是個問題? 會造成什麼consistency的問題，
-後面會在陸續討論。</p>
-
-<h1 id="how">How</h1>
-<p>接下來，我們來看看要如何複製。假設你今天有一份檔案，不會再修改，
-那就直接將檔案複製一份放到另一台機器上供使用者去讀取，那不就做完了嗎～</p>
-
-<p>沒錯！就是這個簡單，所以問題是什麼呢？ 問題就在於我們會不斷地修改檔案，
-資料庫會不斷地接收使用者的insert、update，這時要如何保持多處資料的同步一致呢?</p>
-
-<h1 id="master-slave">Master Slave</h1>
-<p>首先，我們先定義幾個名詞，master為可以接受資料寫入修改的節點，
-而slave就是存放複製的檔案的地方，只負責被讀取，並不會從slave中寫入資料。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" alt="master slave repilcation" target="_blank" /></p>
-
-<p>資料要從master被複製到slave，最簡單的可能就像是直接<code class="language-plaintext highlighter-rouge">cp</code>，<code class="language-plaintext highlighter-rouge">scp</code>，
-或是你寫備份script，每天固定時間將DB裡的資料寫到另一台DB。</p>
-
-<p>另外現在許多資料庫都有提供<strong>change data capture</strong>的功能: 每當一有資料寫入時，
-就會通知你，這有點像是是在application level的trigger，
-像是MangoDB的Change Streams或是AWS Dynamo的Streams。</p>
-
-<p>而RDBMS也有類似的功能，像是postgreSQL的WAL、MySQL的Binlog，
-如果是cluster的，內部可能也是利用上述的機制來做複製及備份。</p>
-
-<h1 id="replication-lag">Replication lag</h1>
-<p>資料要從發生寫入的地方，複製到另一個地方，這中間的時間差就是<strong>replication lag</strong>，
-可能是每天將整個資料庫的檔案做一次備份到別台機器，那lag最長就是一天;
-如果是在每筆資料寫入的時候，就立即透過網路寫入同一筆資料到另一備份中(透過剛剛說的change data capture)，
-那lag可能就是幾毫秒。</p>
-
-<h2 id="lag造成不一致">Lag造成不一致</h2>
-<p>如上所述，資料寫入後、在replication lag這段時間內，多份的複製間並還沒有同步，
-也就是說他們是不一樣的！不一樣就是不一致！就會有些問題。
-這裡舉兩個例子inconsistency的例子，
-就是會無法達成<strong>read your write consistency</strong>及<strong>monotonic read consistency</strong>，</p>
-
-<ul>
-  <li>
-    <p><strong>read your write</strong>: 寫入一筆資料後在讀取，卻讀不到你剛剛些入的資料，而是取得舊的資料。
-<img src="https://storage.googleapis.com/homuchen.com/images/database-replication-2.jpg" alt="not read your write consistency" target="_blank" />
-如上圖，當你寫入一筆c=3的資料後，資料尚未從master複製到slave，但你馬上從slave讀取，就讀取不到。</p>
-  </li>
-  <li>
-    <p><strong>monotonic read</strong>: 連續的讀取，讀到最新的資料後，接著又讀到舊的資料，經歷了時間上的倒退。
-<img src="https://storage.googleapis.com/homuchen.com/images/database-replication-3.jpg" alt="not monotinic read consistency" target="_blank" />
-如上圖，當你讀取c的值時，首先讀到3的值，接著再讀一次反而不見了。</p>
-  </li>
-</ul>
-
-<p>因為你不知道你是從master還是slave中讀取資料，如果master剛剛接受的新的更新寫入還沒複製到slave，
-則slave上的資料就是舊的，從slave讀取就會導致讀不到你剛剛寫入的資料。</p>
-
-<h2 id="解決方法">解決方法</h2>
-<ol>
-  <li>只從master讀取: 但這好像就失去了複製到slave的好處了，read throughput沒有增加，只剩下備份的好處。</li>
-  <li>當讀自己寫的資料時，從master讀取: 如此一來可以保證有read your write consistency，
-但你要額外判斷query是不是要取得自己的資料。</li>
-</ol>
-
-<h1 id="為何要知道這些呢">為何要知道這些呢?</h1>
-<h2 id="知道nosql的用法">知道NoSQL的用法</h2>
-<p>比如說MongoDB的write有各種設定<a href="#1">[1]</a>，w option可以設為<code class="language-plaintext highlighter-rouge">0</code>、<code class="language-plaintext highlighter-rouge">1</code>或<code class="language-plaintext highlighter-rouge">majority</code>，
-你知道他們的區別及取捨嗎?其核心的概念就是今天所討論的replication所造成的
-consistency及durability的問題，之後有機會再單獨寫一篇講MongoDB的write concern(TODO)。</p>
-
-<h2 id="自己的系統也會有replication">自己的系統也會有replication</h2>
-<p>隨著系統越來越複雜，你可能也會使用到多個資料產品，比如說你有個主要的資料庫，
-使用者流量越來越大已不堪負荷，可能需要做讀寫分離，
-另外還有像是用elasticsearch等搜尋引擎，用redis作為cache，
-這些都是一份資料可能同時需要存在許多地方，廣義上來說，也都是replicaton，
-以下我們看看cache及讀寫分離這兩個例子。</p>
-
-<h3 id="cache">Cache</h3>
-<p>常見的做法可能會是加一台cache database，像是redis，
-這也是一種replication，因為你把資料從主要的資料庫裡複製了一份到redis上。</p>
-
-<p>這時候你就有很多事要決定了，要用cache還是本來的資料庫作為master，
-也就是說一開始寫入的地方要發生在哪裡: cache還是main database?</p>
-
-<p>還有要多久將兩份資料同步，也就是replication lag會是多久，
-可能會有lag也可以沒有，
-這一切的決定就會衍伸出有<strong>cache aside</strong>、<strong>read through</strong>、<strong>write through</strong>、<strong>write back</strong>
-等等等的架構設計，有機會再單獨寫一篇講Cache的設計～ (TODO)。</p>
-
-<h3 id="讀寫分離">讀寫分離</h3>
-<p>當你的RDBMS資料庫無法再負荷的了大量的寫入或查詢時，或許你有聽過讀寫分離，
-就是所有寫入的操作只能在某一台資料庫發生，也就是今天所說的master，
-而其他的查詢都透過slave，其實我也沒有實際做過，但核心的概念就是今天所講的replication。</p>
-
-<h2 id="其他">其他</h2>
-<h3 id="cdndns">CDN、DNS</h3>
-<p>廣義上CDN及DNS都有replication的概念，將檔案或DNS record複製到鄰近user的機器上，
-DNS甚至複製到了user的本地機器裡，可以看到他們為了支持更好的read performance，
-不管是latency還是throughput，而採用了這樣的架構設計，換來的是inconsistency的問題，
-就像是DNS record的更新，通常要花上幾分鐘甚至是幾天才有辦法同步。</p>
-
-<h1 id="summary">Summary</h1>
-<p>今天看了replication是什麼，會帶來哪些好處(resilient、read performace)，
-以及會面對怎樣的問題(inconsistency)，並且知道了一些會用到這些概念的地方，
-不管是他內部就幫你做好的(NoSQL)，還是你自己的系統架構，或者是一些已經存在的別的系統(CDN、DNS)。</p>
-
-<p>透過更了解replication的概念，對於我們如何使用別人的產品或是自己系統設計上的取捨都有更清楚深刻的見解，
-感謝你的閱讀，有任何問題或是想法都歡迎留言唷～ 掰掰👋</p>
-
-<h1 id="參考資料">參考資料</h1>
-
-<ol>
-  <li><a href="https://docs.mongodb.com/manual/reference/write-concern/" target="_blank" id="1"><strong>MongoDB Write Concern</strong></a></li>
-</ol>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[database replication是什麼?有什麼好處及缺點，方法又有哪些呢? 可以在許多系統中看到replication的應用， 像是各種NoSQL、自己系統的(讀寫分離、cache、search engine)、CDN、DNS等等...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="self improvement" /><category term="life style" /><category term="books" /><summary type="html"><![CDATA[都知道閱讀有許多的好處，但該要該如何培養呢? 這篇文章將分享我是如何從不看書，改變成現在每天都有閱讀的習慣， 利用原子習慣所提出的框架，應用到自己的生活之中。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
