@@ -1,4 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-14T22:35:43+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">REST API Design: Pagination</title><link href="https://homuchen.com/posts/restful-api-pagination/" rel="alternate" type="text/html" title="REST API Design: Pagination" /><published>2022-04-14T22:35:00+08:00</published><updated>2022-04-14T22:35:00+08:00</updated><id>https://homuchen.com/posts/restful-api-pagination</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-pagination/"><![CDATA[<h1 id="為何要pagination">為何要Pagination</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-17T15:54:10+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN攻略: 想進場跑步該如何挑選鞋子？</title><link href="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/" rel="alternate" type="text/html" title="STEPN攻略: 想進場跑步該如何挑選鞋子？" /><published>2022-04-17T15:49:00+08:00</published><updated>2022-04-17T15:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start</id><content type="html" xml:base="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/"><![CDATA[<p>在考慮進場<strong>STEPN</strong>邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家，
+買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-shoes-0.jpg" alt="STEPN shoes price" /></p>
+
+<p>可以看到上圖，在撰寫這篇文章時(2022-04-16)，
+最便宜的鞋在市場上的價格已經來到約12SOL，折合美金約為1224USD，台幣為35655NTD。</p>
+
+<h1 id="認識鞋子">認識鞋子</h1>
+<p>首先我們先要認識鞋子，好知道哪些因素會影響價格，就算有時有些因素不太影響價格，
+卻會影響到之後跑步賺錢的效率！</p>
+
+<p>鞋子有分品質(Quality)，分別為Common、Uncommon、Rare、Epic、Legendary，
+今天只就Common的鞋討論，因為最便宜的鞋只會是這種😂</p>
+
+<h2 id="鞋子基礎數值">鞋子基礎數值</h2>
+<p>每雙鞋子都會有四種基礎素質，
+分別為<strong>Efficiency</strong>、<strong>Luck</strong>、<strong>Comfort</strong>、<strong>Resilience</strong>，這些數值目前看起來對價格是沒有影響的，
+一般的鞋子(Common)的這四種素質都會是<strong>1-10</strong>的隨機分佈，
+所以一樣的錢買到4個素質都是10的就是最好了啦～</p>
+
+<p>而以跑步賺錢效率來說，最直接影響的數值就是Efficiency及Resilience，
+Efficiency越高跑步時產生的GST越多，而Resilience越高，會讓鞋子不容易壞，需要維修的費用較少！</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-shoes-2.jpg" alt="STEPN shoes fundementals" /></p>
+
+<p>上圖可以看到，左邊的鞋的素質就比右邊的要好上許多。</p>
+
+<p>至於素質的影響有多大，之後會再寫一篇效率對於每天GST的生成的實測實驗(TODO)。</p>
+
+<h2 id="鞋子等級">鞋子等級</h2>
+
+<h3 id="升等花費">升等花費</h3>
+<p>鞋子可以升等，隨著等級的增加，所需要花費的GST及時間都會隨著增加，
+最高可以升到30等，以下先簡單列出1-10等升級所需的花費。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>等級</th>
+      <th>花費GST</th>
+      <th>累積花費GST</th>
+      <th>花費時間(小時)</th>
+      <th>累積花費時間</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+      <td>6</td>
+      <td>3</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>10</td>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>10</td>
+      <td>20</td>
+      <td>5</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>6</td>
+      <td>6</td>
+      <td>26</td>
+      <td>6</td>
+      <td>21</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>7</td>
+      <td>7</td>
+      <td>33</td>
+      <td>7</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>8</td>
+      <td>8</td>
+      <td>41</td>
+      <td>8</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>9</td>
+      <td>9</td>
+      <td>50</td>
+      <td>9</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>10</td>
+      <td>30</td>
+      <td>80</td>
+      <td>10</td>
+      <td>55</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="升等可以幹嘛呢">升等可以幹嘛呢？</h3>
+<p>Common的鞋子每升一級可以有4點的點數讓你分配到上述的基礎數值上，
+至於該不該要花GST來升級鞋子以提升之後每天的產出效率，
+一樣要先等之後會再寫一篇效率對於每天GST的生成的實測實驗(TODO)。</p>
+
+<p>另外升級還會開通一些功能，升到5級的鞋子才可以開啟鑄造(mint)的功能，10級就可以出租(目前尚未開放)，</p>
+
+<p>可以看到市場上的鞋子幾乎不是Lv0就是Lv5，這就是因為5等才可以鑄造的原因，
+而鑄造次數就是影響鞋子價格最主要的因素。</p>
+
+<h2 id="鑄造mint次數">鑄造(mint)次數</h2>
+<p>兩雙5級以上的鞋子再加上一些花費，就可以鑄造出一雙新的鞋子，而每一雙鞋子<strong>最多只能鑄造7次</strong>。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>鞋子等級</th>
+      <th>鑄造所需花費GST</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>150</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>250</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>6</td>
+      <td>300</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>7</td>
+      <td>350</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>舉個例子:</p>
+<ul>
+  <li>兩雙鑄造次數皆為0的鞋，需花費200GST來鑄造出一雙新鞋</li>
+  <li>一雙鑄造次數為2，另一雙為0的話，就需要花費100 + 150 = 250GST</li>
+</ul>
+
+<p>所以這也就是為什麼LV5的鞋子還比較便宜的原因，因為他們已經被鑄造過兩次了，
+而第三次的鑄造會比前兩次要多花50GST。</p>
+
+<h1 id="結論">結論</h1>
+<p>買一雙Lv5，鑄造次數已經2次的鞋，且Efficiency及Resilience數值好的鞋，
+是殖利率最高，最快回本的方法(大約30-40天)，鞋子本身比較便宜之後，
+又幫你免費升級了5次(省了20GST)，讓你跑步時可以賺到更多GST。</p>
+
+<p>但如果你想要玩鑄造，持續投入所賺到的GST時，期待鞋子漲價，賣鞋獲利的話，
+就要小心不要買到鑄造次數已經是2次或甚至是3次的鞋子啦～</p>
+
+<p>就像買股票有人是為了賺價差，有人賺股息，根據你的目的及風險偏好，來決定你的投資策略囉～</p>
+
+<h1 id="參考資料">參考資料</h1>
+<ul>
+  <li><a href="https://whitepaper.stepn.com/game-fi-elements/shoe-minting" target="_blank">STEPN白皮書: 鞋子鑄造</a></li>
+  <li><a href="https://stepn-simulator.xyz/mint/eng/" target="_blank">鞋子鑄造計算機</a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[在考慮進場STEPN邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家， 買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。]]></summary></entry><entry><title type="html">REST API Design: Pagination</title><link href="https://homuchen.com/posts/restful-api-pagination/" rel="alternate" type="text/html" title="REST API Design: Pagination" /><published>2022-04-14T22:35:00+08:00</published><updated>2022-04-14T22:35:00+08:00</updated><id>https://homuchen.com/posts/restful-api-pagination</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-pagination/"><![CDATA[<h1 id="為何要pagination">為何要Pagination</h1>
 <p>一個response如果資料太多，回應太慢，一定會造成使用者的體驗不佳，進而流失用戶，
 而pagination就是使reponse回應速度的加快的做法之一。</p>
 
@@ -1051,69 +1276,4 @@ email=test%40homuchen.com&amp;name=homuchen
   <li><a href="https://data.gov.tw/dataset/146577" target="_blank" name="1">台灣憂鬱用藥數據</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment#Original_Stanford_experiment" target="_blank" name="2">米歇爾-棉花糖實驗</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Learned_helplessness" target="_blank" name="3">賽利格曼-習得性無助</a></li>
-</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="self improvement" /><category term="psychology" /><summary type="html"><![CDATA[作者於2002年在哈佛大學開始講授 正向心理學，這門課主要探討的問題就是: 如何幫助自己和別人活得更快樂？]]></summary></entry><entry><title type="html">《原子習慣》應用: 我是如何養成閱讀習慣</title><link href="https://homuchen.com/posts/how-i-keep-reading/" rel="alternate" type="text/html" title="《原子習慣》應用: 我是如何養成閱讀習慣" /><published>2021-12-09T21:03:00+08:00</published><updated>2021-12-09T21:03:00+08:00</updated><id>https://homuchen.com/posts/how-i-keep-reading</id><content type="html" xml:base="https://homuchen.com/posts/how-i-keep-reading/"><![CDATA[<p>出社會以前，完全沒有在看課外讀物的我，是如何養成現在每天都會閱讀的習慣，
-雖然閱讀的時間不多，大約每天30-60分鐘，但跟以前的我相比，已經是巨大的進步了～</p>
-
-<p>這篇文章將依據<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>所提出的框架，
-<strong>提示 -&gt; 渴望 -&gt; 回應 -&gt; 獎賞</strong>，來分析我閱讀習慣的各個面向，算是原子習慣的應用案例～
-如果沒看過這本書的也可以看看我之前寫的文章:</p>
-
-<p><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" alt="閱讀習慣" /></p>
-
-<h1 id="提示">提示</h1>
-<p>環境中的提示對你有淺移默化的影響，你無法輕易地待在一個滿是垃圾食物的環境，然後一直靠意志力不去吃零食，
-另外也可以觀察目前的生活上，選擇一些已有的習慣作為提示，將想要培養的習斷堆疊在後面。</p>
-
-<p>以下分享我如何利用<strong>環境</strong>及<strong>習慣堆疊</strong>來達成閱讀的習慣:</p>
-<ul>
-  <li><strong>環境</strong>: 因為我每天通勤都需要搭捷運，所以我就選擇了這個環境來讀書，因為在捷運上，
-除了滑手機就沒有其他提示及誘惑使你分心。</li>
-  <li><strong>習慣堆疊</strong>: 上捷運站好就位，接著下一步就是拿出書來看，最後讓這個動作不假思索。</li>
-</ul>
-
-<h1 id="渴望">渴望</h1>
-<p>提示出現之後，你會產生渴望，比如說晚上下班回到家裡，會有想要明亮燈光的渴望;
-一到了Friday night會有想要放鬆的渴望，那我上捷運會有想要看書的渴望嗎？ 沒有…</p>
-
-<p>但是上捷運會有想要打發這幾十分鐘無聊時間的渴望，所以大部分人的回應都是滑手機，
-那該怎麼辦呢？ 其實沒有渴望就是沒有，也沒關係，再從其他面向著手就好，或者是你自己可以做<strong>渴望綑綁</strong>，
-也就是做完想要培養的習慣之後，可以做其他你本來就想要做的事，比如說看完15分鐘書後，才可以滑手機。</p>
-
-<p>另外我有想到另一個渴望就是耍帥，捷運上不乏許多正妹，可以看看書，展現一下自己知性上進的一面XD
-有個IG帳號<a href="https://www.instagram.com/hotdudesreading/" target="_blank">hotdudesreading</a>專門收集在車上看書的帥哥們，
-大概也是一樣的概念😄</p>
-
-<h1 id="回應">回應</h1>
-<p>有了渴望之後，接著就是回應，也就是你如何採取行動去回應滿足你的渴望，要養成一個新習慣，
-最好是讓它非常<strong>容易去執行</strong>。</p>
-
-<p>我在捷運上看書的情形，就是每次只要看15分鐘！ 就是15分鐘! 不多不少，因為車到站了就要下車了。</p>
-
-<p>比起一開始一頭熱，狂看1小時，結果持續不到幾週，持續每天都看15分鐘還要來得更好，
-無需費力的進行了幾年之後，累積的成果也是很可觀，<strong>重複勝於時間，次數勝於質量</strong>。</p>
-
-<h1 id="獎賞">獎賞</h1>
-<p>做完一個習慣後，如果我們得到了獎賞便會增強這個習慣，而且越<strong>立即</strong>的獎賞越好。</p>
-
-<p>我們可以看到許多壞習慣之所以那麼容易養成，就是因為獎賞來的立即，比如說抽煙、垃圾食物
-在你吸了、吃了一口之後，尼古丁、高糖、高鹽的獎賞就馬上來了，
-而會影響健康的後果可能在好幾年後才顯現。</p>
-
-<p>如果沒有立即的獎賞怎麼辦? 那就自己創造! 我用的方法就是<strong>紀錄</strong>，紀錄本身也是一種獎賞，
-因為每次的勝利在紀錄上可以記上一筆時，會帶來成就感，而且你也會不想讓一連串的紀錄中斷。</p>
-
-<p>我使用的紀錄APP是種樹APP
-<a href="https://apps.apple.com/tw/app/forest-%E5%B0%88%E6%B3%A8%E6%A3%AE%E6%9E%97/id866450515" target="_blank"><strong>Forest 專注森林</strong></a>，
-有點像是蕃茄鐘工作法的概念，在種樹期間不能使用其他APP，而且還會幫你種真的樹唷。</p>
-
-<h1 id="總結">總結</h1>
-<p>今天簡單地分享我是如何應用上<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>所提出的框架，
-來培養閱讀習慣，雖然每天讀的時間不多，但持之以恆才是更重要的。感謝您的閱讀，掰掰～👋</p>
-
-<h1 id="延伸閱讀">延伸閱讀</h1>
-<ul>
-  <li><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></li>
-  <li><a href="/posts/lazy-breakfast/" target="_blank"><strong>懶人早餐: 15分鐘，高纖高蛋白低碳水</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="self improvement" /><category term="life style" /><category term="books" /><summary type="html"><![CDATA[都知道閱讀有許多的好處，但該要該如何培養呢? 這篇文章將分享我是如何從不看書，改變成現在每天都有閱讀的習慣， 利用原子習慣所提出的框架，應用到自己的生活之中。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/reading-habit-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="self improvement" /><category term="psychology" /><summary type="html"><![CDATA[作者於2002年在哈佛大學開始講授 正向心理學，這門課主要探討的問題就是: 如何幫助自己和別人活得更快樂？]]></summary></entry></feed>
