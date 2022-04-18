@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-17T15:54:10+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN攻略: 想進場跑步該如何挑選鞋子？</title><link href="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/" rel="alternate" type="text/html" title="STEPN攻略: 想進場跑步該如何挑選鞋子？" /><published>2022-04-17T15:49:00+08:00</published><updated>2022-04-17T15:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start</id><content type="html" xml:base="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/"><![CDATA[<p>在考慮進場<strong>STEPN</strong>邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-18T11:06:35+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN攻略: 想進場跑步該如何挑選鞋子？</title><link href="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/" rel="alternate" type="text/html" title="STEPN攻略: 想進場跑步該如何挑選鞋子？" /><published>2022-04-17T15:49:00+08:00</published><updated>2022-04-17T15:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start</id><content type="html" xml:base="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/"><![CDATA[<p>在考慮進場<strong>STEPN</strong>邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家，
 買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-shoes-0.jpg" alt="STEPN shoes price" /></p>
@@ -492,12 +492,12 @@ interface是作為服務提供者及服務使用者溝通的介面，為什麼�
   </li>
 </ul>
 
-<p>雖然也可以用滑鼠把想複製的字選起來再按command + C，但有時候就是不想碰到滑鼠！我想這就是工程師的浪漫吧😎</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="command line" /><summary type="html"><![CDATA[在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？ 那就是可以透過pbcopy及pbpaste指令，也下為一些例子。]]></summary></entry><entry><title type="html">[讀書筆記] 做自己的生命設計師</title><link href="https://homuchen.com/posts/book-note-designing-your-life/" rel="alternate" type="text/html" title="[讀書筆記] 做自己的生命設計師" /><published>2022-03-23T22:30:00+08:00</published><updated>2022-03-25T11:14:00+08:00</updated><id>https://homuchen.com/posts/book-note-designing-your-life</id><content type="html" xml:base="https://homuchen.com/posts/book-note-designing-your-life/"><![CDATA[<p>我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫，
+<p>雖然也可以用滑鼠把想複製的字選起來再按command + C，但有時候就是不想碰到滑鼠！我想這就是工程師的浪漫吧😎</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="command line" /><summary type="html"><![CDATA[在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？ 那就是可以透過pbcopy及pbpaste指令，也下為一些例子。]]></summary></entry><entry><title type="html">[讀書筆記] 做自己的生命設計師</title><link href="https://homuchen.com/posts/book-note-designing-your-life/" rel="alternate" type="text/html" title="[讀書筆記] 做自己的生命設計師" /><published>2022-03-23T22:30:00+08:00</published><updated>2022-04-18T11:05:00+08:00</updated><id>https://homuchen.com/posts/book-note-designing-your-life</id><content type="html" xml:base="https://homuchen.com/posts/book-note-designing-your-life/"><![CDATA[<p>我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫，
 想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-4.jpg" alt="書: 做自己的生命設計師" /></p>
 
-<p><strong>《做自己的生命設計師》</strong>這本書，就是來試著回答上述這些問題，
+<p><a href="https://www.books.com.tw/products/0010733134" target="_blank"><strong>《做自己的生命設計師》</strong></a>這本書，就是來試著回答上述這些問題，
 作者在史丹佛大學開設設計人生的課程，將設計思考的工具及心法，應用到你自己的人生當中，
 讓我們開始學習如何做自己的生命設計師吧！</p>
 
@@ -703,9 +703,15 @@ Humility、Compassion、Honesty、Kindness、Integrity、Selflessness…</p>
 接著發想出各種可能、做出計畫，最後也是最重要的一步，就是真正地去做他！
 在做的過程中，邊做邊修正，更加地了解自己。期許大家都能活出豐盛的人生～～🎉</p>
 
+<p>延伸閱讀:</p>
+
+<ul>
+  <li><a href="/posts/self-improvement-books/" target="_blank"><strong>成功是什麼? 5本關於自我成長的推薦書單</strong></a></li>
+</ul>
+
 <h1 id="參考資料">參考資料</h1>
 <ol>
-  <li><a href="https://www.books.com.tw/products/0010816703" target="_blank" name="1">《心流: 高手都在研究的最優體驗心理學》</a></li>
+  <li><a href="https://www.books.com.tw/products/0010816703" target="_blank" name="1"><strong>《心流: 高手都在研究的最優體驗心理學》</strong></a></li>
 </ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><summary type="html"><![CDATA[我的生活該要怎麼度過呢？找不到喜歡感到熱情的事怎麼辦？對未來的職涯感到迷茫， 想要一份我喜歡的、我所熱愛的、最好是有意義，可以改變的世界的工作，該怎麼去進行呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-design-life-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">成功是什麼? 5本關於自我成長的推薦書單</title><link href="https://homuchen.com/posts/self-improvement-books/" rel="alternate" type="text/html" title="成功是什麼? 5本關於自我成長的推薦書單" /><published>2022-03-22T22:30:00+08:00</published><updated>2022-03-22T22:30:00+08:00</updated><id>https://homuchen.com/posts/self-improvement-books</id><content type="html" xml:base="https://homuchen.com/posts/self-improvement-books/"><![CDATA[<p>人生該怎麼過? 成功是什麼? 我覺得就是從你現在的位置出發，到達你想要的生活，這樣就成功了。所以怎樣才算是成功，
 對每個人而言都不一樣，因為每個人的目標不同，重視的核心價值觀也不同。</p>
 
