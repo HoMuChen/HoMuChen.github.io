@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-18T11:06:35+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN攻略: 想進場跑步該如何挑選鞋子？</title><link href="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/" rel="alternate" type="text/html" title="STEPN攻略: 想進場跑步該如何挑選鞋子？" /><published>2022-04-17T15:49:00+08:00</published><updated>2022-04-17T15:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start</id><content type="html" xml:base="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/"><![CDATA[<p>在考慮進場<strong>STEPN</strong>邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-21T13:26:04+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN: 從2022-04-10進場至今的收益紀錄</title><link href="https://homuchen.com/posts/stepn-record-everyday-income/" rel="alternate" type="text/html" title="STEPN: 從2022-04-10進場至今的收益紀錄" /><published>2022-04-21T13:25:00+08:00</published><updated>2022-04-21T13:25:00+08:00</updated><id>https://homuchen.com/posts/stepn-record-everyday-income</id><content type="html" xml:base="https://homuchen.com/posts/stepn-record-everyday-income/"><![CDATA[<p>真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？
+對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！</p>
+
+<p>這篇文章紀錄了我從2022-04-10進場，花了多少錢買鞋子，
+以及後續每天的產出，希望能幫助還在觀望的玩家對實際情形有近一步的了解～</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" alt="STEPN" /></p>
+
+<h1 id="投入金額-410">投入金額 (4/10)</h1>
+<p>在4/10以10.1SOL購入第一雙runner的鞋子，當時1SOL = 110USD，而1USD = 28.9 NTD，
+所以投入的金額為<strong>32108 NTD</strong>。</p>
+
+<h1 id="每天產出持續更新">每天產出(持續更新)</h1>
+
+<p>下圖是<strong>Runner</strong>的鞋，跑<strong>五分速(12km/hr)</strong>的收益，
+中間有下降是因為在測試效率值對產出有多大的影響，綠線為效率值，藍色柱為GST產出(已扣掉每天2.88GST的維修費)。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-income-02.jpg" alt="收益圖表" /></p>
+
+<p>原始資料如下:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>日期</th>
+      <th>消耗能量</th>
+      <th>效率</th>
+      <th>收入</th>
+      <th>維修支出</th>
+      <th>total(GST)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2022-04-11</td>
+      <td>2.2</td>
+      <td>25.3</td>
+      <td>8.46</td>
+      <td>3.24</td>
+      <td>5.22</td>
+    </tr>
+    <tr>
+      <td>2022-04-12</td>
+      <td>1.8</td>
+      <td>25.3</td>
+      <td>8.96</td>
+      <td>2.88</td>
+      <td>6.08</td>
+    </tr>
+    <tr>
+      <td>2022-04-13</td>
+      <td>2.0</td>
+      <td>25.3</td>
+      <td>9.69</td>
+      <td>2.88</td>
+      <td>6.81</td>
+    </tr>
+    <tr>
+      <td>2022-04-14</td>
+      <td>2.0</td>
+      <td>25.3</td>
+      <td>9.74</td>
+      <td>2.88</td>
+      <td>6.86</td>
+    </tr>
+    <tr>
+      <td>2022-04-15</td>
+      <td>2.0</td>
+      <td>25.3</td>
+      <td>9.48</td>
+      <td>2.88</td>
+      <td>6.60</td>
+    </tr>
+    <tr>
+      <td>2022-04-16</td>
+      <td>2.0</td>
+      <td>9.7</td>
+      <td>5.81</td>
+      <td>2.72</td>
+      <td>2.93</td>
+    </tr>
+    <tr>
+      <td>2022-04-17</td>
+      <td>2.0</td>
+      <td>14.7</td>
+      <td>8.08</td>
+      <td>2.88</td>
+      <td>5.20</td>
+    </tr>
+    <tr>
+      <td>2022-04-18</td>
+      <td>2.0</td>
+      <td>19.7</td>
+      <td>8.62</td>
+      <td>2.88</td>
+      <td>5.74</td>
+    </tr>
+    <tr>
+      <td>2022-04-19</td>
+      <td>2.0</td>
+      <td>24.7</td>
+      <td>9.26</td>
+      <td>2.88</td>
+      <td>6.38</td>
+    </tr>
+    <tr>
+      <td>2022-04-20</td>
+      <td>2.0</td>
+      <td>27.7</td>
+      <td>10.4</td>
+      <td>2.88</td>
+      <td>7.52</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="總結">總結</h1>
+<p>可以預期在27.7的效率值(LV5的鞋)下，每天可以有<strong>7.5GST</strong>的進帳，以1GST = 130NTD來算的話，
+一天有975塊台幣，所以<strong>33天</strong>就可以回本啦～</p>
+
+<p>33天的回本的前提是，效率27.7、LV5的鞋子(runner)，以12km/hr的速度跑(之後再來做跑步速度對賺錢速率的影響的實測)，
+LV5的鞋可以直接從市場購買，或是自己從LV0開始升上去，但升到LV5需要花費20GST，而且買LV0的鞋通常又比較貴！</p>
+
+<p>什麼？！LV0比LV5還要貴！這是為什麼呢？想知道該如何選鞋進場的跑友們，可以參考我之前的一篇文章:</p>
+
+<ul>
+  <li><a href="/posts/stepn-how-to-choose-shoes-to-start/" target="_blank"><strong>STEPN攻略: 想進場跑步該如何挑選鞋子？</strong></a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？ 對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN攻略: 想進場跑步該如何挑選鞋子？</title><link href="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/" rel="alternate" type="text/html" title="STEPN攻略: 想進場跑步該如何挑選鞋子？" /><published>2022-04-17T15:49:00+08:00</published><updated>2022-04-17T15:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start</id><content type="html" xml:base="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/"><![CDATA[<p>在考慮進場<strong>STEPN</strong>邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家，
 買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-shoes-0.jpg" alt="STEPN shoes price" /></p>
@@ -223,7 +350,7 @@ Efficiency越高跑步時產生的GST越多，而Resilience越高，會讓鞋子
 <ul>
   <li><a href="https://whitepaper.stepn.com/game-fi-elements/shoe-minting" target="_blank">STEPN白皮書: 鞋子鑄造</a></li>
   <li><a href="https://stepn-simulator.xyz/mint/eng/" target="_blank">鞋子鑄造計算機</a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[在考慮進場STEPN邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家， 買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。]]></summary></entry><entry><title type="html">REST API Design: Pagination</title><link href="https://homuchen.com/posts/restful-api-pagination/" rel="alternate" type="text/html" title="REST API Design: Pagination" /><published>2022-04-14T22:35:00+08:00</published><updated>2022-04-14T22:35:00+08:00</updated><id>https://homuchen.com/posts/restful-api-pagination</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-pagination/"><![CDATA[<h1 id="為何要pagination">為何要Pagination</h1>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[在考慮進場STEPN邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家， 買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">REST API Design: Pagination</title><link href="https://homuchen.com/posts/restful-api-pagination/" rel="alternate" type="text/html" title="REST API Design: Pagination" /><published>2022-04-14T22:35:00+08:00</published><updated>2022-04-14T22:35:00+08:00</updated><id>https://homuchen.com/posts/restful-api-pagination</id><content type="html" xml:base="https://homuchen.com/posts/restful-api-pagination/"><![CDATA[<h1 id="為何要pagination">為何要Pagination</h1>
 <p>一個response如果資料太多，回應太慢，一定會造成使用者的體驗不佳，進而流失用戶，
 而pagination就是使reponse回應速度的加快的做法之一。</p>
 
@@ -1133,153 +1260,4 @@ email=test%40homuchen.com&amp;name=homuchen
 <h1 id="參考資料">參考資料</h1>
 <ol>
   <li><a href="https://ocw.mit.edu/courses/sloan-school-of-management/15-352-managing-innovation-emerging-trends-spring-2005/readings/lakhaniwolf.pdf" target="_blank" name="1">Why Hackers Do What They Do: Understanding Motivation and Effort in Free/Open Source Software Projects</a></li>
-</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="self improvement" /><category term="psychology" /><category term="books" /><summary type="html"><![CDATA[有哪些力量驅動著我們每天的行為，做事情的動力到底來自何處，是獎賞或是處罰嗎？ 利誘小孩子來引導他們做我們希望他做的行為是對的嗎?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 更快樂：哈佛最受歡迎的一堂課</title><link href="https://homuchen.com/posts/book-note-happier/" rel="alternate" type="text/html" title="[讀書筆記] 更快樂：哈佛最受歡迎的一堂課" /><published>2022-02-09T21:19:00+08:00</published><updated>2022-02-09T21:19:00+08:00</updated><id>https://homuchen.com/posts/book-note-happier</id><content type="html" xml:base="https://homuchen.com/posts/book-note-happier/"><![CDATA[<p>作者於2002年在哈佛大學開始講授 <strong>正向心理學</strong>，這門課主要探討的問題就是: <strong>如何幫助自己和別人活得更快樂？</strong></p>
-
-<p>第一年只有8人選修，6人退選，第二年學生多達380人，第三度開課時，有855名學生註冊，成為哈佛選修人數最多的科目。</p>
-
-<p>該如何解釋哈佛大學的學生對正向心理學的需求日益殷切的現象？大家對快樂學越來越感興趣？
-是現代人越來越憂鬱嗎？(雖然事實上是如此<a href="#1">[1]</a>)還是新的教育方式或生活型態的影響？</p>
-
-<p>其實『快樂學』並不是現代的產物，從柏拉圖、亞里斯多德、各種宗教及哲學體系、到現在許多市面上的自助書籍，
-無不想探討快樂的問題，而正向心理學，泛指 <strong>『研究人類最佳心理運作狀態的學問』</strong>，作為學術象牙塔及社會大眾間的橋樑，
-結合了嚴謹的學術研究及有趣的自助運動。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-01.jpg" alt="book: Happier" /></p>
-
-<h1 id="你快樂嗎">你快樂嗎?</h1>
-<p>當我告訴我朋友我正在看正向心理學的相關書籍時，他們就會問我: 你不快樂嗎？😂，好像擔心我會不會跑去自殺似的，
-然而我快樂嗎？這個問題其實我也回答不出來，不知道該要如何去定義及量測快樂，也就無法回答出我到底快不快樂的這個問題。</p>
-
-<p>那我們該要如何學習快樂呢？如果無法得知我們到底快不快樂，怎們知道我們的學習有沒有成果呢？</p>
-
-<p>作者對這問題的回答是這樣的: 與其問「你快樂嗎?」這樣的是非題，不如問該「怎麼做可以變得<strong>更</strong>快樂？」，</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-03.jpg" alt="ask the right question: How to become happier?" /></p>
-
-<p>你快樂嗎？是個是非題，答案要不是快樂就是不快樂，這意味著快樂只是某段旅程的終點，
-一旦抵達了這個定點，旅程就結束了。</p>
-
-<p>然後這個定點並不存在，我們永遠都可以活的更快樂，沒人可以時時刻刻都幸福無比，所以與其問你快樂嗎？
-不如問怎麼做才能活得更快樂？追求快樂是個持續進行的過程，今天的我比五年前的我快樂，但願五年後的我比今天的我快樂。</p>
-
-<h1 id="未來還是現在">未來還是現在?</h1>
-<p>我該做一份人人欣羨，薪水很高但我不喜歡的工作，還是應該做自己喜歡但薪水不高的工作呢？
-是要先忍耐個幾年，有了穩定的經濟基礎後再去追求夢想，還是要毅然決然地踏上追夢的旅程？</p>
-
-<p>著名的米歇爾棉花糖實驗<a href="#2">[2]</a>，顯示了能夠延遲享樂的小孩，未來的成就比較高，但這說明我們該延遲享樂嗎？
-或者是應該要推遲到什麼時候呢？</p>
-
-<h2 id="四種生活類型">四種生活類型</h2>
-<p>作者在這裡提供了一個模型來描述四種生活類型:</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-04.jpg" alt="四種關於現在與未來的生活類型" /></p>
-
-<p>橫軸為現在，越右邊代表對現在越有好處，縱軸為未來，越上面代表你所做的選擇是對未來有好處的，反之亦然，
-接下來我們就一個一個象限來看看吧，也可以想想自己是否在人生的某個時期，這樣地生活著。</p>
-
-<h2 id="拼命三郎">拼命三郎</h2>
-<p>坐落在左上角的區塊，這一種生活型態做的事都是為了未來的利益，而延遲了立即的享樂，我們把它稱為拼命三郎型。</p>
-
-<p>好好讀書～等考到好大學就輕鬆囉；等上了大學，還要好好顧好成績，參加活動好好實習，才能進到好公司擁有好工作；
-等工作之後，繼續埋頭苦幹，期待著升遷加薪，好好存錢，等到退休或是提早退休之後就爽了！</p>
-
-<p>這種生活型態的人總是在追求著未來的目標，而不是當下的體驗，以為達到目標之後就會開心快樂。的確沒錯，
-當我們考上好大學放榜的那一瞬間，被錄取升職加薪的那一刻的確很爽，但這樣的快樂卻只能持續一陣子，
-緊接著我們又為著下一個目標繼續打拼。</p>
-
-<p>社會獎勵結果，而不在乎過程，家長老師總說著要考高分，升學找到好工作，卻不太強調學習本身的樂趣；
-大家都想要找一份薪水高，大家稱羨的工作，而不是去做自己喜愛的事，就如美國哲學家愛默生所說的:</p>
-
-<blockquote>
-  <p><strong>「我們一直想著未來要過什麼樣的生活，但是到頭來，卻像沒有真正活過一樣。」</strong></p>
-</blockquote>
-
-<h2 id="享樂主義">享樂主義</h2>
-<p>跟拼命三郎相反，總是追求當下立即的享樂，而不顧未來長遠的利益。
-不停地吃下垃圾食物，不想工作一直窩在被窩裡看劇都是這一類的生活類型，
-以為幸福的人生就是一連串的享樂經驗，但真的是如此嗎?</p>
-
-<p>有項心理實驗是以下這樣:</p>
-
-<p>他們付費給一些大學生，對他們的要求是什麼都不能做。他們的基本需求得以滿足，
-但是被禁止做任何工作。幾個小時之後，這些大學生就開始感到沮喪，儘管參與研究的收入非常可觀，
-但他們寧可放棄參與實驗而選擇其他壓力大、收入沒那麼多的工作。</p>
-
-<h2 id="虛無主義">虛無主義</h2>
-<p>這一區塊最慘，放棄追尋快樂，覺得人生也沒有意義，賽利格曼的習得性無助(learned helplessness)<a href="#3">[3]</a>
-描述了這一類覺得做什麼努力都徒勞無功的人。</p>
-
-<p>一開始我覺得怎麼會有人是落在這個區塊，再怎樣，至少也可以當個及時行樂的人吧，但仔細想想，我也有過短暫時刻變成這類的人，
-也就是在一直的享樂耍廢過後，連要做什麼來耍廢都不知道了！劇看到不知道要看什麼；遊戲打到很生氣，隊友都是雷包；
-覺得日子空虛，不知道到底要幹什麼😂</p>
-
-<h2 id="快樂開朗型">快樂開朗型</h2>
-<p>所以到底該立即享樂，還是為了未來的利益忍耐打拼呢？</p>
-<blockquote>
-  <p><strong>PTT鄉民: 「小孩子才做選擇，我全都要！」</strong></p>
-</blockquote>
-
-<p>拼命三郎以為達到未來的目標就能快樂，而享樂主義以為只有享樂的過程才是重要的，
-其實應該是要<strong>懂的享受追求目標的過程</strong>(後面會講到關於設定目標的重要)。</p>
-
-<p>但有時總有些活動無法同時兼顧現在及未來的利益，像是為了考試K書、儲蓄、加班趕工，
-這時可以穿插一下偶爾享樂的活動是有幫助的，能讓我們添加活力，冥想、休息、散步、發呆、
-悠閒地躺在海邊、看劇、玩遊戲等等，如果無法找到能夠兼顧現在及未來利益的活動，
-不妨就將兩種活動穿插進行。</p>
-
-<p>延伸閱讀:</p>
-
-<p><a href="/posts/book-note-the-power-of-full-engagement" target="_blank"><strong>[讀書筆記] 用對能量，你就不會累</strong></a></p>
-
-<h1 id="快樂是什麼">快樂是什麼？</h1>
-<p>每個人在人生的不同時期，或是不同的事情上，都或多或少會有上面四種的生活型態，
-而作者認為的快樂就是<strong>要有樂趣，也要有意義</strong>，要兼顧現在以及未來，
-也就是坐落在快樂開朗型的生活型態。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/happier-05.jpg" alt="快樂是什麼: 有樂趣，也有意義" /></p>
-
-<p><strong>樂趣</strong>是指我們目前感受的正面情緒，是現在的好處； <strong>意義</strong>則伴隨使命感而來，代表所作所為對將來的好處。</p>
-
-<h2 id="何謂樂趣">何謂樂趣?</h2>
-<p>正向情緒，也就是我們的感覺，愉悅、高興、極樂、狂喜、滿足、溫暖、舒服等等等…，追求正向情緒是我們的本能天性，
-應該沒有人懷疑為什麼我們會想追求正向情緒吧？</p>
-
-<h2 id="何謂意義">何謂意義?</h2>
-<p>意義是你的歸屬感、使命感，這個東西帶給你超越他本身的價值。
-每個人會從不同的事物裡尋找意義，可能是開創事業、環保愛地球、養兒育女、寫程式🤔等等，
-重點是要符合自己的價值觀及特殊嗜好，而不是順從他人或是社會的期望。</p>
-
-<p>只懂的尋找樂趣，無法得到快樂；一昧地尋求意義，也無法得到快樂。假如為某個行動找到了意義，
-但這項行動卻無法提供立即的滿足，那也無法持之以恆。</p>
-
-<h1 id="目標">目標</h1>
-<h2 id="目標與快樂的關係">目標與快樂的關係</h2>
-<p>目標的作用，可以讓你活在當下，不會擔憂未來，也不後悔過去，提供你一個指引，
-知道現在走的每一步都是朝著正確的方向前進，如此一來可以更加地享受過程。</p>
-
-<p>有了目標，但我們的心思卻不是應該要一直看著目標，如果一昧地看著目標會很辛苦，
-我們的快樂在於享受過程，朝著目標一步一步前進的過程，而不是達到目標時的快樂。
-當然在達成目標時一定會很快樂、狂喜，但這種感覺沒辦法持續，回想一下你考上大學，成功被好公司錄取的那天，
-快樂的感覺持續了多久呢？幾天還是幾個月，不論如何，他應該沒有持續到現在吧！</p>
-
-<p>因為人就是一個會習慣的動物，不管是快樂還是痛苦，有個研究是中樂透的人跟腳被截肢的人，在一段時間過後，
-他們快樂的水平都回到了事發之前的水準，這樣的現象稱為<strong>享樂跑步機</strong>(Hedonic treadmill)也稱為<strong>享樂適應性</strong>。</p>
-
-<h1 id="結論">結論</h1>
-<p>該要如何才能變得更快樂？這是一個普世的問題，不論你是任何種族、來自任何國家、成長於何種文化、及環境、
-處於何種階層，都會希望生活過得更幸福圓滿。</p>
-
-<p>這本書有一句話我覺得是貫穿整本書的重點，就是: <strong>要有樂趣，也要有意義</strong>，無盡的享樂會感到空虛，久了也會不快樂，
-而只有追尋意義、成就，容易成為拼命三郎那樣，只看著未來的目標，忘了去享受當下。</p>
-
-<p>要找到個人的意義，需要有充分地對自己了解及認知，知道自己所重視的價值觀及長處，能夠活出言行一致、發揮長處的生活，
-當你的生活充斥著各種與你價值觀相矛盾的事時，必定是不會快樂的。</p>
-
-<p>這本書後面的章節，還有討論在教育、職場及感情上的應用，不過基本的原則就是上述的這些，有興趣的人可以再去看看唷～</p>
-
-<h1 id="參考資料">參考資料</h1>
-<ol>
-  <li><a href="https://data.gov.tw/dataset/146577" target="_blank" name="1">台灣憂鬱用藥數據</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment#Original_Stanford_experiment" target="_blank" name="2">米歇爾-棉花糖實驗</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Learned_helplessness" target="_blank" name="3">賽利格曼-習得性無助</a></li>
-</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="self improvement" /><category term="psychology" /><summary type="html"><![CDATA[作者於2002年在哈佛大學開始講授 正向心理學，這門課主要探討的問題就是: 如何幫助自己和別人活得更快樂？]]></summary></entry></feed>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="self improvement" /><category term="psychology" /><category term="books" /><summary type="html"><![CDATA[有哪些力量驅動著我們每天的行為，做事情的動力到底來自何處，是獎賞或是處罰嗎？ 利誘小孩子來引導他們做我們希望他做的行為是對的嗎?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
