@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-21T13:26:04+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN: 從2022-04-10進場至今的收益紀錄</title><link href="https://homuchen.com/posts/stepn-record-everyday-income/" rel="alternate" type="text/html" title="STEPN: 從2022-04-10進場至今的收益紀錄" /><published>2022-04-21T13:25:00+08:00</published><updated>2022-04-21T13:25:00+08:00</updated><id>https://homuchen.com/posts/stepn-record-everyday-income</id><content type="html" xml:base="https://homuchen.com/posts/stepn-record-everyday-income/"><![CDATA[<p>真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-24T21:47:01+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</title><link href="https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test/" rel="alternate" type="text/html" title="STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？" /><published>2022-04-24T21:40:00+08:00</published><updated>2022-04-24T21:40:00+08:00</updated><id>https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test</id><content type="html" xml:base="https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test/"><![CDATA[<p>買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後，
+點數要加到哪裡呢？今天這篇文章將分享我實測下來的結果，升級並提升效率值後，
+但每次跑步GST的產出有多少的影響！</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" alt="STEPN shoes price" /></p>
+
+<h1 id="實測數據">實測數據</h1>
+<p>以下是我11天的十跑紀錄，每次皆為花費2能量，以5分速(12km/hr)跑10分鐘的GST的紀錄，
+橫軸為鞋子的效率值，縱軸為GST產出。</p>
+
+<h2 id="散佈圖">散佈圖</h2>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-eff-01.jpg" alt="STEPN: efficiency vs. gst outcome scatter chart" /></p>
+
+<h2 id="原始數據">原始數據</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>效率</th>
+      <th>產出(GST)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9.7</td>
+      <td>5.81</td>
+    </tr>
+    <tr>
+      <td>14.7</td>
+      <td>8.08</td>
+    </tr>
+    <tr>
+      <td>19.7</td>
+      <td>8.62</td>
+    </tr>
+    <tr>
+      <td>24.7</td>
+      <td>9.26</td>
+    </tr>
+    <tr>
+      <td>25.3</td>
+      <td>9.69</td>
+    </tr>
+    <tr>
+      <td>25.3</td>
+      <td>9.74</td>
+    </tr>
+    <tr>
+      <td>25.3</td>
+      <td>9.48</td>
+    </tr>
+    <tr>
+      <td>27.7</td>
+      <td>10.4</td>
+    </tr>
+    <tr>
+      <td>31.7</td>
+      <td>11.27</td>
+    </tr>
+    <tr>
+      <td>35.7</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <td>35.7</td>
+      <td>11.83</td>
+    </tr>
+    <tr>
+      <td>35.7</td>
+      <td>11.6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="資產累積的速度">資產累積的速度</h1>
+<p>讓我們從另一個角度來看是否要升級鞋子增加效率，也就是GST的累積數，分別為三種情況:</p>
+
+<ol>
+  <li>完全不升級鞋子 (假設每天產出5.5GST)</li>
+  <li>持續投入，升級到效率值約為25 (假設每天產出9.5GST)</li>
+  <li>持續投入，升級到效率值約為35 (假設每天產出11.5GST)</li>
+</ol>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-eff-02.jpg" alt="STEPN: gst outcome chart group by level" /></p>
+
+<p>可以看到將鞋升到約LV5，也就是效率值大約25的話，雖然前三天賺得幾乎得要再投入，
+但7天之後，就會彎道超車將不升級的鞋比下去了。</p>
+
+<p>如果持續投入到效率值35，15天就可以超過效率值25的鞋，並且之後每天約多產出2GST。</p>
+
+<h1 id="結論">結論</h1>
+<p>如果你認為這個項目會持續一兩個月以上都還不會死掉的話，
+那將鞋子升級到9等會是比較好的做法(如果你有要跑步賺錢的話)，
+在高上去的等級我就沒有測試了。</p>
+
+<p>為什麼是停在9等呢？因為從九升到十會需要30GST，CP值比較低，不過LV10的鞋可以出租，
+等之後開放出租的時候再來升等吧！</p>
+
+<p>想知道完整遊戲收入情況的，可以看我之前寫過的一篇文章:</p>
+
+<ul>
+  <li><a href="/posts/stepn-record-everyday-income/" target="_blank"><strong>STEPN: 從2022-04-10進場至今的收益紀錄</strong></a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後， 點數要加到哪裡呢？今天這篇文章將分享我實測下來的結果，升級並提升效率值後， 但每次跑步GST的產出有多少的影響！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN: 從2022-04-10進場至今的收益紀錄</title><link href="https://homuchen.com/posts/stepn-record-everyday-income/" rel="alternate" type="text/html" title="STEPN: 從2022-04-10進場至今的收益紀錄" /><published>2022-04-21T13:25:00+08:00</published><updated>2022-04-23T23:29:00+08:00</updated><id>https://homuchen.com/posts/stepn-record-everyday-income</id><content type="html" xml:base="https://homuchen.com/posts/stepn-record-everyday-income/"><![CDATA[<p>真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？
 對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！</p>
 
 <p>這篇文章紀錄了我從2022-04-10進場，花了多少錢買鞋子，
@@ -11,13 +113,20 @@
 所以投入的金額為<strong>32108 NTD</strong>。</p>
 
 <h1 id="每天產出持續更新">每天產出(持續更新)</h1>
-
-<p>下圖是<strong>Runner</strong>的鞋，跑<strong>五分速(12km/hr)</strong>的收益，
-中間有下降是因為在測試效率值對產出有多大的影響，綠線為效率值，藍色柱為GST產出(已扣掉每天2.88GST的維修費)。</p>
+<p>下圖是<strong>Runner</strong>的鞋，跑<strong>五分速(12km/hr)</strong>每天的收益(已扣掉每天維修費)。</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-income-02.jpg" alt="收益圖表" /></p>
 
-<p>原始資料如下:</p>
+<h2 id="2022-04-16">2022-04-16</h2>
+<p>換了一雙低等的鞋子開始做效率測試，維修費用變低</p>
+
+<h2 id="2022-04-23">2022-04-23</h2>
+<p>點了4點點數到resilience，鞋子損耗從八點變為六點</p>
+
+<h2 id="2022-04-24">2022-04-24</h2>
+<p>購入第三雙鞋，達到每天4點能量，後面無法維持五分速，以致收入沒到兩倍😂</p>
+
+<h2 id="原始資料">原始資料</h2>
 
 <table>
   <thead>
@@ -27,7 +136,7 @@
       <th>效率</th>
       <th>收入</th>
       <th>維修支出</th>
-      <th>total(GST)</th>
+      <th>淨收入(GST)</th>
     </tr>
   </thead>
   <tbody>
@@ -111,6 +220,38 @@
       <td>2.88</td>
       <td>7.52</td>
     </tr>
+    <tr>
+      <td>2022-04-21</td>
+      <td>2.0</td>
+      <td>31.7</td>
+      <td>11.27</td>
+      <td>2.96</td>
+      <td>8.31</td>
+    </tr>
+    <tr>
+      <td>2022-04-22</td>
+      <td>2.0</td>
+      <td>35.7</td>
+      <td>11.4</td>
+      <td>3.02</td>
+      <td>8.00</td>
+    </tr>
+    <tr>
+      <td>2022-04-23</td>
+      <td>2.0</td>
+      <td>35.7</td>
+      <td>11.83</td>
+      <td>2.40</td>
+      <td>9.43</td>
+    </tr>
+    <tr>
+      <td>2022-04-24</td>
+      <td>4.0</td>
+      <td>35.7</td>
+      <td>22.66</td>
+      <td>4.92</td>
+      <td>17.74</td>
+    </tr>
   </tbody>
 </table>
 
@@ -153,7 +294,8 @@ Efficiency越高跑步時產生的GST越多，而Resilience越高，會讓鞋子
 
 <p>上圖可以看到，左邊的鞋的素質就比右邊的要好上許多。</p>
 
-<p>至於素質的影響有多大，之後會再寫一篇效率對於每天GST的生成的實測實驗(TODO)。</p>
+<p>至於素質的影響有多大，
+可以看這一篇<a href="/posts/stepn-efficiency-vs-gst-outcome-test/" target="_blank"><strong>STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</strong></a></p>
 
 <h2 id="鞋子等級">鞋子等級</h2>
 
@@ -266,7 +408,7 @@ Efficiency越高跑步時產生的GST越多，而Resilience越高，會讓鞋子
 <h3 id="升等可以幹嘛呢">升等可以幹嘛呢？</h3>
 <p>Common的鞋子每升一級可以有4點的點數讓你分配到上述的基礎數值上，
 至於該不該要花GST來升級鞋子以提升之後每天的產出效率，
-一樣要先等之後會再寫一篇效率對於每天GST的生成的實測實驗(TODO)。</p>
+一樣可以看這篇<a href="/posts/stepn-efficiency-vs-gst-outcome-test/" target="_blank"><strong>STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</strong></a></p>
 
 <p>另外升級還會開通一些功能，升到5級的鞋子才可以開啟鑄造(mint)的功能，10級就可以出租(目前尚未開放)，</p>
 
@@ -453,7 +595,8 @@ interface是作為服務提供者及服務使用者溝通的介面，為什麼�
 <ul>
   <li><a href="/posts/http-restful-api-design-practical-guide/" target="_blank"><strong>RESTful API Design — A practical guide</strong></a></li>
 </ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html"><![CDATA[開發API應該要使用怎樣的流程，先定義好介面有哪些好處，以及可以使用哪些工具呢？(OpenAPI 3.0)]]></summary></entry><entry><title type="html">[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術</title><link href="https://homuchen.com/posts/book-note-remote-work-go/" rel="alternate" type="text/html" title="[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術" /><published>2022-04-02T22:04:00+08:00</published><updated>2022-04-02T22:04:00+08:00</updated><id>https://homuchen.com/posts/book-note-remote-work-go</id><content type="html" xml:base="https://homuchen.com/posts/book-note-remote-work-go/"><![CDATA[<p>為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決，
-不管是以<strong>雇主</strong>的角度還是以<strong>員工</strong>的角度，在這本書<a href="https://www.books.com.tw/products/0010856669/"><strong>《遠距工作模式》</strong></a>裡都有提及。</p>
+不管是以<strong>雇主</strong>的角度還是以<strong>員工</strong>的角度，
+在這本書<a href="https://www.books.com.tw/products/0010856669/" target="_blank"><strong>《遠距工作模式》</strong></a>裡都有提及。</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" alt="書: 遠距工作模式" /></p>
 
@@ -582,7 +725,7 @@ interface是作為服務提供者及服務使用者溝通的介面，為什麼�
 有興趣的朋友可以去找來看看唷～</p>
 
 <p>未來我自己也可能會朝向這方向來調整我的工作模式，想嘗試看看<strong>數位遊牧</strong>的生活型態，
-有後續動作及消息，再上來更新！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="remote work" /><summary type="html"><![CDATA[為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決， 不管是以雇主的角度還是以員工的角度，在這本書《遠距工作模式》裡都有提及。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">如何在Mac OS中使用command line來將文字複製到剪貼簿</title><link href="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/" rel="alternate" type="text/html" title="如何在Mac OS中使用command line來將文字複製到剪貼簿" /><published>2022-03-28T20:40:00+08:00</published><updated>2022-03-28T20:40:00+08:00</updated><id>https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line</id><content type="html" xml:base="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/"><![CDATA[<p>在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？
+有後續動作及消息，再上來更新！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="remote work" /><summary type="html"><![CDATA[為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決， 不管是以雇主的角度還是以員工的角度， 在這本書《遠距工作模式》裡都有提及。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">如何在Mac OS中使用command line來將文字複製到剪貼簿</title><link href="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/" rel="alternate" type="text/html" title="如何在Mac OS中使用command line來將文字複製到剪貼簿" /><published>2022-03-28T20:40:00+08:00</published><updated>2022-03-28T20:40:00+08:00</updated><id>https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line</id><content type="html" xml:base="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/"><![CDATA[<p>在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？
 那就是可以透過<strong>pbcopy</strong>及<strong>pbpaste</strong>指令，也下為一些例子。</p>
 
 <h1 id="複製">複製</h1>
@@ -1141,123 +1284,4 @@ email=test%40homuchen.com&amp;name=homuchen
 <code class="language-plaintext highlighter-rouge">http.PostForm</code>是<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">PostForm</code>method。</p>
 
 <p>最後如果想要加上自己更多的header，就要使用<code class="language-plaintext highlighter-rouge">http.NewRequest</code>，這邊簡單地記錄下使用golang作為http client最基礎的用法，
-希望有幫助到任何人，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="http" /><summary type="html"><![CDATA[這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法: http.Get http.Post http.PostForm http.NewRequest]]></summary></entry><entry><title type="html">動機: 到底是什麼在驅動、引導我們的行為？</title><link href="https://homuchen.com/posts/motivation-what-motivates-us/" rel="alternate" type="text/html" title="動機: 到底是什麼在驅動、引導我們的行為？" /><published>2022-03-13T23:05:00+08:00</published><updated>2022-03-13T23:05:00+08:00</updated><id>https://homuchen.com/posts/motivation-what-motivates-us</id><content type="html" xml:base="https://homuchen.com/posts/motivation-what-motivates-us/"><![CDATA[<p>我們每天都有許多的行為，不論是認真學習新技能、努力工作、躺在沙發耍廢看劇吃著垃圾食物、
-出門跟朋友去露營、做志工等等等…
-背後都有一股力量在驅動著我們，那股力量就是<strong>獎賞</strong>及<strong>懲罰</strong>，
-我們會為了追求某些獎賞或是避免某些懲罰而去做出某些行為。</p>
-
-<p>但有些實驗卻發現，有時就算是沒有任何獎賞或是懲罰，我們也會想做某些事，甚至有時有了獎賞，
-反而還會減少我們的動力！</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" alt="動機的分類" /></p>
-
-<p>今天將從以下幾個面向，來分析驅動著我們行為的那股力量，看看獎賞懲罰系統有哪些組成，
-除此之外還有哪些力量在驅動著我們，最後從腦神經科學的角度來看這一切：</p>
-<ul>
-  <li>獎賞及懲罰: 生理面</li>
-  <li>獎賞及懲罰: 社會面</li>
-  <li>獎賞之外的動機</li>
-  <li>有獎賞反而表現更差</li>
-  <li>什麼時候外部的動機是有用的？</li>
-  <li>內部動機: 自主性、專精及意義</li>
-</ul>
-
-<h1 id="生理面的獎賞">生理面的獎賞</h1>
-<p>首先是生理的、本能的、為了生存的，也是最顯而易見的一種動機。
-我們餓了就會去找東西吃；口渴了就會去喝水；為了生存下去，食物、水、空氣、陽光、性等等等都是必須的。
-我們的身體被打造成一但基本需求無法滿足，我們就會產生強烈的渴望去做這些事情。</p>
-
-<p>但這就是全部的我們嗎？絕對不是！沒有人會說驅動我們所有行為的都是這類動機，這樣我們跟動物有什麼不一樣呢？</p>
-
-<h1 id="社會面的獎賞及懲罰">社會面的獎賞及懲罰</h1>
-<p>而獎賞及懲罰的另外一面是社會性的，我們努力讀書是為了考高分，或是得到父母的稱讚、
-會為了獲得一份好工作而努力，因為期待有著更多的收入，這類動機不單純是為了生存的，我們不做這些也不會死，
-可以軟爛地茶來張口、飯來伸手、不求上進地在原本職務上完成本分就好。</p>
-
-<p>為什麼我們會想賺更多錢，除了提供更好的生活品質之外(生理的)，賺更多錢也可能代表者更有能力，
-社會地位較高，大家對你的評價會是有能力的，可靠的，這些就是社會性的獎賞。</p>
-
-<p>另外我們還會避免社會處罰，比如說不想被大家說閒話，所以我們表現的行為得符合社會期待、
-合乎社會規範，因此必須抑制上述所說的第一種動機，不能因為我們餓了，我就去吃別人的食物；
-不能因為我想做愛，就隨便在路上強暴別人。做這樣的行為在法律上、社會上是會有處罰的，
-因為這種為了在社會裡生存的動機，規範了我們的行為。</p>
-
-<h1 id="獎賞之外的動機">獎賞之外的動機</h1>
-<p>在過去幾百年來，我們都是在這樣的想法下生活，但我們想要激勵自己或是別人去做某些行為時，
-我們的做法通常都是威脅利誘，但這就是全部了嗎？</p>
-
-<h2 id="猴子解謎遊戲">猴子解謎遊戲</h2>
-<p>讓我們來看看幾個實驗，在很久很久以前，有個人在猴子做了身上做了個實驗，
-把他們跟一個解謎遊戲放在一起，沒有任何訓練跟獎賞，
-結果發現猴子就是會自己去玩、去解決那個問題(將下圖的裝置從左圖變成右圖)，
-並且變得越來越熟練</p>
-
-<p>這就引出了一個問題，即使沒有生存上的需要，也沒有外部的獎賞及處罰，
-還是有一個驅力在驅動著猴子的行為，那這股力量這到底是什麼呢?</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-01.jpg" alt="給猴子的解謎遊戲" /></p>
-
-<p>有時我們就是會在沒有外部獎勵的時候去做一些事情，純粹就是為了好玩、樂趣、好奇、挑戰、成就及滿足。</p>
-
-<h1 id="有獎賞反而表現更差">有獎賞反而表現更差</h1>
-<p>常常我們希望提供獎勵、誘因來鼓勵一些行為，但有時卻會識得其反！提供了獎勵之後，
-反而讓人之後更不會去從事某些行為。</p>
-
-<p>讓我們來看看以下這一個實驗:</p>
-
-<p>首先實驗人員先去幼兒園觀察一群孩子，看看他們自由的下課時間都會做些什麼，結果發現有一群小孩都會畫畫，
-他們就把那一群小孩挑出來，作為實驗對象。</p>
-
-<p>實驗如此進行，將他們分為3組，第一組告訴他們畫畫的話，就給你們獎勵唷～～ 於是他們開始畫，畫完之後給獎勵；第二組則是放他們自己去玩，
-結束後，如果有畫畫的就一樣給獎勵；第三組則是什麼事都沒干預。因為他們原本就就都愛畫畫，所以就都有畫，拿到相對應的獎勵後就放他們回去，
-然後繼續觀察他們的行為。</p>
-
-<p>結果發現！第一組的小孩畫的變少了！！而第二及第三組都沒有變，所以差別是什麼呢？
-並不是有無獎勵與否，而是有沒有如果怎樣就給你什麼的這種獎勵，
-當小孩為了得到獎勵才去畫畫時，這樣的外部獎勵反而削弱了原本純粹的動機…</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-02.jpg" alt="小孩畫畫獎勵實驗" /></p>
-
-<h1 id="內部動機有哪些">內部動機有哪些</h1>
-<p>所以除了外部的誘因獎賞之外，我們可能純粹為了好玩、樂趣、好奇、挑戰、
-成就及滿足等等的內部的動機去做一些事情，這裡將簡單地把內部動機做一個分類，
-分成三類，分別為: <strong>自主性</strong>、<strong>熟練</strong>及 <strong>意義</strong>。</p>
-
-<h2 id="自主性autonomy">自主性(Autonomy)</h2>
-<p>不知道大家有沒有這樣的經驗，自己本來會去做好的事，一旦媽媽碎念叫你去做那一件事，
-你就反而肚爛不想做了😂</p>
-
-<p>我們人就是不喜歡被操控被命令，相較於被命令的行動，我們對於基於我們自主意志而採取的行動更有動力去做，
-當員工不在被監督，可以用自己的喜歡的方式，在自己喜歡的時間、地點工作時，會更具有生產力。</p>
-
-<p>Google的20%時間，就是給員工20%的工作時間，讓他們自己自己決定要做怎樣的project，
-結果是許多的產品及服務都是在這些時間裡誕生出來的，像是Adsense、Gmail、Google News等等…</p>
-
-<h2 id="熟練matery">熟練(Matery)</h2>
-<p>有時玩遊戲，贏了也不會得到什麼獎勵，但我們就是會想要破關，不斷地一直去練習他熟練他，
-或許我們天生就是喜歡去精進一些能力。</p>
-
-<p>有份論文，調查訪談了幾百位開源軟體的程式開發人員，到底是什麼因素，
-使得他們願意無償地為這些專案付出時間及勞力，結果發現，在有薪及無薪的開發人員中，
-他們為什麼投入開源專案開發的原因，有顯著差異的部分就是<strong>為了增進寫程式的技能</strong><a href="#1">[1]</a>。</p>
-
-<h2 id="意義meaningpurpose">意義(Meaning、Purpose)</h2>
-<p>意義對每個人來說都是不一樣的，找到一份比你自身更大的事物，歸屬於此並擁有使命感，能帶來很大的動力。</p>
-
-<p>有人可能致力於地球環境保育、永續能源，有人可能關心下一代的教育、或者是老人家的照顧需求、
-性別平權、勞工權益等等的議題，而加入各式各樣的機構，與目標理念一致的人一起努力奮鬥是很棒的一件事。</p>
-
-<p>但大部分的人，可能不知道自己的使命，甚至是說人生的意義，這也沒關係！我自己也是還不知道這部分的答案，
-或許我們還在探索的階段，現在能做的，可能就像是<a href="https://www.books.com.tw/products/0010733134"><strong>《做自己的生命設計師</strong>》</a>說的，
-首先先幻想！接著挑幾個想法來打造原型實驗看看，唯有試過做過之後，才能對於自己想要的人生有更清楚的描繪及方向。</p>
-
-<h1 id="總結">總結</h1>
-<p>外部的獎賞及處罰，確實會驅動我們的行為，但我們並不全然是這樣的行動的，甚至有些時候，
-還會反過來損害我們的動機，以上是來自<a href="https://www.books.com.tw/products/0010476180"><strong>《動機，單純的力量》</strong></a>一書的部分簡單摘要。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/motivation-03.jpg" alt="動機，單純的力量" /></p>
-
-<h1 id="參考資料">參考資料</h1>
-<ol>
-  <li><a href="https://ocw.mit.edu/courses/sloan-school-of-management/15-352-managing-innovation-emerging-trends-spring-2005/readings/lakhaniwolf.pdf" target="_blank" name="1">Why Hackers Do What They Do: Understanding Motivation and Effort in Free/Open Source Software Projects</a></li>
-</ol>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="self improvement" /><category term="psychology" /><category term="books" /><summary type="html"><![CDATA[有哪些力量驅動著我們每天的行為，做事情的動力到底來自何處，是獎賞或是處罰嗎？ 利誘小孩子來引導他們做我們希望他做的行為是對的嗎?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/motivation-00.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+希望有幫助到任何人，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="http" /><summary type="html"><![CDATA[這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法: http.Get http.Post http.PostForm http.NewRequest]]></summary></entry></feed>
