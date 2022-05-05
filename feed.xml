@@ -1,4 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-04-24T21:47:01+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</title><link href="https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test/" rel="alternate" type="text/html" title="STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？" /><published>2022-04-24T21:40:00+08:00</published><updated>2022-04-24T21:40:00+08:00</updated><id>https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test</id><content type="html" xml:base="https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test/"><![CDATA[<p>買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-05-05T17:19:09+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">掌握這3個原則，打造出最適合自己的代辦清單系統</title><link href="https://homuchen.com/posts/book-note-todo-list-formula/" rel="alternate" type="text/html" title="掌握這3個原則，打造出最適合自己的代辦清單系統" /><published>2022-05-05T17:18:00+08:00</published><updated>2022-05-05T17:18:00+08:00</updated><id>https://homuchen.com/posts/book-note-todo-list-formula</id><content type="html" xml:base="https://homuchen.com/posts/book-note-todo-list-formula/"><![CDATA[<p>這篇文章將探討為何要使用待辦清單系統，有哪些基本的原則，並分析現存各種待辦清單系統的優缺點，
+了解他們分別滿足及不滿足哪些原則，好讓我們可以應用這些原則，設計最適合你自己的待辦清單系統。</p>
+
+<h1 id="為何要使用待辦清單">為何要使用待辦清單</h1>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-2.jpg" alt="why should we use todo list system" /></p>
+
+<h2 id="決定優先順序">決定優先順序</h2>
+<p>決定好每時每刻，當下應該要應該要專注的事，就是待辦事項系統是最大的價值。</p>
+
+<p>待辦事項的目標並不是要讓你完成更多的事，也不是要你把所有的項目都上上去，
+然後專心於把全部都打上勾勾，而是讓我們知道該<strong>優先</strong>做哪些任務，專注於<strong>高價值</strong>的事！</p>
+
+<h2 id="幫助達成目標">幫助達成目標</h2>
+<p>並不是所有的事都值得要去做，當有一件事項出現時，不管他是自己想到的還是別人的要求的，
+知道<strong>為什麼</strong>要做它是很重要的，它必須符合公司的目標、團隊的目標或者是自己的目標。</p>
+
+<p>每個事項都是用來幫助你達成某個目標才是有意義的，否則就容易陷入很忙卻是在瞎忙的狀態！</p>
+
+<h2 id="減輕壓力">減輕壓力</h2>
+<p>將待辦事項寫下來，能夠使它不在縈繞於腦海之中。或許你也有過這樣的經驗，
+要做的事情很多，心心念念擔心著未完成的事，結果睡不著甚至做惡夢。</p>
+
+<p>將待辦事項寫下來，並決定好優先順序，就能一次專注於當下的工作，
+也不用擔心會忘記其他的事項，並隨著事項一個一個的完成，
+感到一步步朝著目標前進的信心，就能夠減輕許多的心理壓力。</p>
+
+<h1 id="三個大原則">三個大原則</h1>
+<p>待辦事項系統玲瑯滿目，有沒有一些基本的原則是我們可以把握的呢？以下為大家簡單總結出三個原則：</p>
+
+<ul>
+  <li>清單必須要有截止日期</li>
+  <li>清單不能太長</li>
+  <li>每項任務要有背景，並與特別目標連結</li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-3.jpg" alt="todo list system principles" /></p>
+
+<h2 id="要有截止日期">要有截止日期</h2>
+<p>如果沒有截止日期，它就只是一個願望清單，缺少了急迫性，就像信用卡帳單、稅單一樣，你會拖到最後一刻才去繳費。</p>
+
+<blockquote>
+  <p>Parkinson’s Law：Work expands so as to fill the time available for its completion.</p>
+</blockquote>
+
+<p><strong>帕金森定律</strong>: 工作總會填滿它可用的完成時間，給你八個小時的時間完成一項任務，你就會花八個小時把它完成；
+如果你小孩生病了，必須在兩個小時之後離開公司，那你就會神奇地在兩個小時內完成工作！</p>
+
+<h2 id="清單不能太長">清單不能太長</h2>
+<p>面對一份落落長的清單及太多的選擇，會使得我們決策癱瘓，選擇太多造成難以做出選擇進而行動，
+就算我們真的成功地做了一連串的抉擇，也耗費了許多心智能量，造成<strong>決策疲勞</strong>。</p>
+
+<p>做決定跟意志力是一樣的，他們是有限的心智資源，所以可以看到許多成大事的人，
+都會避免自己在小地方上需要做選擇，比如賈伯斯跟祖克柏每天都穿一樣的衣服，
+艾因斯坦也是一樣的灰西裝一直穿。</p>
+
+<p>並且太長的清單，也會使你覺得有一堆未完成事項而感到沮喪。</p>
+
+<p>有哪些方法可以幫助清單不要太長呢？</p>
+
+<ul>
+  <li>區隔出當前任務及未來任務</li>
+  <li>篩選: 可以在兩分鐘之內做完的事，就直接做完，跟達成目標願景無關的事，也不值得寫下來去做。</li>
+  <li>分類: 可以依據目標、專案、時間、地點任何你想要的方式分類，每一類的清單就不會太長。</li>
+</ul>
+
+<h2 id="與特定目標連結">與特定目標連結</h2>
+<p>任務間要有關聯，要知道情境也就是<strong>為什麼</strong>要做這項任務，必須要有目標，
+再將目標拆解出許多小的、可以行動的事項，這些事項才是真正重要的！</p>
+
+<p>要如何將目標拆解出任務可以參考<strong>S.M.A.R.T原則</strong>，由管理學大師彼得‧杜拉克(Peter Drucker)提出，
+分別為Specific（明確的）、Measurable（可衡量的）、Achievable（可達成的）、
+Relevant（相關的）和Time-bound（有時限的）。</p>
+
+<h1 id="有哪些待辦清單系統">有哪些待辦清單系統</h1>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-4.jpg" alt="待辦清單系統優缺點" /></p>
+
+<h2 id="全包式清單">全包式清單</h2>
+<p>只要任務一出現，一想到什麼就全部寫下來</p>
+
+<ul>
+  <li>好處: 減輕大腦負擔，將未完成任務寫下來，就能卸除它們佔用你的大腦。</li>
+  <li>缺點: 全部的任務寫在一起，使得清單太長難以從中做出選擇，沒有截止日期、也無法跟目標關聯。</li>
+</ul>
+
+<h2 id="任務--開始日期--截止日期">任務 + 開始日期 + 截止日期</h2>
+<p>除了記下任務之外，為每項任務加上開始及截止時間</p>
+
+<ul>
+  <li>好處: 有了截止日期才有急迫性，不會落入帕金森定律的陷阱裡；並且可依日期來決定的優先事項。</li>
+  <li>缺點: 沒有每項任務的情境、分類，以及跟目標的關聯。</li>
+</ul>
+
+<h2 id="總工作清單--每日工作清單">總工作清單 + 每日工作清單</h2>
+<p>就像<a href="https://www.books.com.tw/products/0010803003" target="_blank"><strong>《子彈筆記》</strong></a>裡的基本元素，
+Future Log、Monthly Log及Daily Log，將未來清單與近期或每日清單分開。</p>
+
+<ul>
+  <li>好處: 跟全包式清單一樣可以做到大腦傾存，區隔當前與未來任務，就能有份較短的優先清單。</li>
+  <li>缺點: 沒有情境分類跟目標關聯、跟截止日期。</li>
+</ul>
+
+<h2 id="專案清單">專案清單</h2>
+<p>依照專案分項，將隸屬於同一份專案的待辦事項寫於同一份清單之中。</p>
+
+<p>比如說你今年的目標專案有出書、整修房子、夏威夷旅遊等等…在整修房子裡的待辦事項可能就會像這樣:</p>
+
+<ul>
+  <li>聯絡設計師</li>
+  <li>進行諮詢，風格、需求定調</li>
+  <li>購買DIY地板材料</li>
+  <li>地板施工</li>
+  <li>購買DIY牆壁材料</li>
+  <li>牆壁施工</li>
+  <li>購買傢俱</li>
+  <li>組裝傢俱</li>
+  <li>
+    <p>軟裝擺設</p>
+  </li>
+  <li>好處: 每個任務之間都有關聯，並且是為特定目標前進，而每個專案的清單也不會太長。</li>
+  <li>缺點: 沒有截止日期。</li>
+</ul>
+
+<h2 id="看板kanban">看板(Kanban)</h2>
+<p>Kanban緣起於Toyota的生產管理系統，看起來就像是下圖這樣:</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-5.jpg" alt="看板系統" /></p>
+
+<p>主要組成有欄、列、卡片、WIP limit，每張卡片即是一項任務，可以將相關的任務放在同一欄
+，並區分出<strong>未開始</strong>、<strong>進行中</strong>及<strong>完成</strong>等列，而進行中的任務數量會有一個上限。</p>
+
+<ul>
+  <li>好處: 有區分出總任務及當前任務清單，WIP limit(work in progress limit)可以定義出一個不會太長的優先事項。</li>
+  <li>缺點: 沒有截止日期。</li>
+</ul>
+
+<h1 id="結論">結論</h1>
+<p>綜合以上的幾點原則，有下列這些要點是我們可以行動的:</p>
+
+<ol>
+  <li>區隔當前與未來任務</li>
+  <li>知道任務的背景及原因，對目標有貢獻</li>
+  <li>把專案拆成多項單獨任務</li>
+  <li>加上截止日期</li>
+  <li>當前任務數量限制</li>
+</ol>
+
+<p>以上的內容為<a href="https://www.books.com.tw/products/0010831893" target="_blank"><strong>《一流工作者都在用的待辦清單》</strong></a>的節錄。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-1.jpg" alt="book: To-Do List Formula: A Stress-Free Guide To Creating To-Do Lists That Work!" /></p>
+
+<p>掌握核心的原則，才能根據每個人不同的情況去做變化，依照自己的需求，就設計出最適合自己的系統！</p>
+
+<p>而我自己是如何利用這些原則，
+並搭配工具<a href="https://www.notion.so/" target="_blank"><strong>Notion</strong></a>來打造自己的Kanban based的待辦系統，
+可以參考我的另一篇文章:</p>
+
+<ul>
+  <li><strong>我如何使用Notion打造Kanban based的待辦清單(TODO)</strong></li>
+</ul>
+
+<p>感謝您的閱讀～希望以上內容對大家有所幫助，並祝福大家都可以朝自己想要的生活前進！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="productivity" /><category term="notion" /><summary type="html"><![CDATA[待辦清單要如何設計？這本書《一流工作者都在用的待辦清單》將任務清單應該具備的原則列舉出來， 並分析各種待辦清單系統的優缺點，讓讀者可以根據自己的情況，設計出最符合自己的待辦清單！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-4.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-4.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</title><link href="https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test/" rel="alternate" type="text/html" title="STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？" /><published>2022-04-24T21:40:00+08:00</published><updated>2022-04-24T21:40:00+08:00</updated><id>https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test</id><content type="html" xml:base="https://homuchen.com/posts/stepn-efficiency-vs-gst-outcome-test/"><![CDATA[<p>買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後，
 點數要加到哪裡呢？今天這篇文章將分享我實測下來的結果，升級並提升效率值後，
 但每次跑步GST的產出有多少的影響！</p>
 
@@ -69,6 +231,14 @@
       <td>35.7</td>
       <td>11.6</td>
     </tr>
+    <tr>
+      <td>39.7</td>
+      <td>12.87</td>
+    </tr>
+    <tr>
+      <td>39.7</td>
+      <td>12.26</td>
+    </tr>
   </tbody>
 </table>
 
@@ -100,7 +270,7 @@
 
 <ul>
   <li><a href="/posts/stepn-record-everyday-income/" target="_blank"><strong>STEPN: 從2022-04-10進場至今的收益紀錄</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後， 點數要加到哪裡呢？今天這篇文章將分享我實測下來的結果，升級並提升效率值後， 但每次跑步GST的產出有多少的影響！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN: 從2022-04-10進場至今的收益紀錄</title><link href="https://homuchen.com/posts/stepn-record-everyday-income/" rel="alternate" type="text/html" title="STEPN: 從2022-04-10進場至今的收益紀錄" /><published>2022-04-21T13:25:00+08:00</published><updated>2022-04-23T23:29:00+08:00</updated><id>https://homuchen.com/posts/stepn-record-everyday-income</id><content type="html" xml:base="https://homuchen.com/posts/stepn-record-everyday-income/"><![CDATA[<p>真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後， 點數要加到哪裡呢？今天這篇文章將分享我實測下來的結果，升級並提升效率值後， 但每次跑步GST的產出有多少的影響！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN: 從2022-04-10進場至今的收益紀錄</title><link href="https://homuchen.com/posts/stepn-record-everyday-income/" rel="alternate" type="text/html" title="STEPN: 從2022-04-10進場至今的收益紀錄" /><published>2022-04-21T13:25:00+08:00</published><updated>2022-05-05T14:52:00+08:00</updated><id>https://homuchen.com/posts/stepn-record-everyday-income</id><content type="html" xml:base="https://homuchen.com/posts/stepn-record-everyday-income/"><![CDATA[<p>真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？
 對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！</p>
 
 <p>這篇文章紀錄了我從2022-04-10進場，花了多少錢買鞋子，
@@ -118,13 +288,13 @@
 <p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-income-02.jpg" alt="收益圖表" /></p>
 
 <h2 id="2022-04-16">2022-04-16</h2>
-<p>換了一雙低等的鞋子開始做效率測試，維修費用變低</p>
+<p>以12.5SOL購入第二雙LV0鞋，開始做效率測試。</p>
 
 <h2 id="2022-04-23">2022-04-23</h2>
-<p>點了4點點數到resilience，鞋子損耗從八點變為六點</p>
+<p>點了4點點數到resilience，鞋子損耗從八點變為六點。</p>
 
 <h2 id="2022-04-24">2022-04-24</h2>
-<p>購入第三雙鞋，達到每天4點能量，後面無法維持五分速，以致收入沒到兩倍😂</p>
+<p>購入第三雙鞋，達到每天4點能量可以跑20分鐘，後面的時間無法維持五分速，以致收入沒到兩倍😂</p>
 
 <h2 id="原始資料">原始資料</h2>
 
@@ -252,6 +422,94 @@
       <td>4.92</td>
       <td>17.74</td>
     </tr>
+    <tr>
+      <td>2022-04-25</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>24.46</td>
+      <td>4.92</td>
+      <td>19.54</td>
+    </tr>
+    <tr>
+      <td>2022-04-26</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>24.34</td>
+      <td>4.92</td>
+      <td>19.42</td>
+    </tr>
+    <tr>
+      <td>2022-04-27</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>23.63</td>
+      <td>4.92</td>
+      <td>18.71</td>
+    </tr>
+    <tr>
+      <td>2022-04-28</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>24.01</td>
+      <td>4.92</td>
+      <td>19.09</td>
+    </tr>
+    <tr>
+      <td>2022-04-29</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>24.78</td>
+      <td>4.92</td>
+      <td>19.86</td>
+    </tr>
+    <tr>
+      <td>2022-04-30</td>
+      <td>3.0</td>
+      <td>39.7</td>
+      <td>17.76</td>
+      <td>3.69</td>
+      <td>14.07</td>
+    </tr>
+    <tr>
+      <td>2022-05-01</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>24.14</td>
+      <td>4.92</td>
+      <td>19.22</td>
+    </tr>
+    <tr>
+      <td>2022-05-02</td>
+      <td>3.0</td>
+      <td>39.7</td>
+      <td>17.02</td>
+      <td>3.69</td>
+      <td>13.33</td>
+    </tr>
+    <tr>
+      <td>2022-05-03</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>24.52</td>
+      <td>4.92</td>
+      <td>19.60</td>
+    </tr>
+    <tr>
+      <td>2022-05-04</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>23.93</td>
+      <td>4.92</td>
+      <td>19.01</td>
+    </tr>
+    <tr>
+      <td>2022-05-05</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>23.75</td>
+      <td>4.92</td>
+      <td>18.83</td>
+    </tr>
   </tbody>
 </table>
 
@@ -266,6 +524,12 @@ LV5的鞋可以直接從市場購買，或是自己從LV0開始升上去，但�
 
 <ul>
   <li><a href="/posts/stepn-how-to-choose-shoes-to-start/" target="_blank"><strong>STEPN攻略: 想進場跑步該如何挑選鞋子？</strong></a></li>
+</ul>
+
+<p>不只想升到LV5，想繼續往上升級的，可以參考我另一篇寫關於鞋子效率值對賺錢速度的實測:</p>
+
+<ul>
+  <li><a href="/posts/stepn-efficiency-vs-gst-outcome-test/" target="_blank"><strong>STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</strong></a></li>
 </ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？ 對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN攻略: 想進場跑步該如何挑選鞋子？</title><link href="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/" rel="alternate" type="text/html" title="STEPN攻略: 想進場跑步該如何挑選鞋子？" /><published>2022-04-17T15:49:00+08:00</published><updated>2022-04-17T15:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start</id><content type="html" xml:base="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/"><![CDATA[<p>在考慮進場<strong>STEPN</strong>邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家，
 買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。</p>
 
@@ -1148,140 +1412,4 @@ Humility、Compassion、Honesty、Kindness、Integrity、Selflessness…</p>
 <h1 id="summary">Summary</h1>
 <p>感謝你看到這邊～ 希望這些內容能帶給你一點啟發，我也是閱讀這些書過後，學習到了許多及產生很多新的想法，
 但更重要的是將其實踐在生活當中，首先先透過書寫分享，讓自己複習一遍，
-之後有更多親身實驗的結果，會在跟大家分享! 掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><summary type="html"><![CDATA[人生感到迷惘嗎？找不到目標，或是無法堅持培養好習慣嗎？該如何在各方面取得實際進步? 這篇文章將推薦五本自我成長的書單，期望能幫助大家過上想過的生活。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[Golang] 4種發起HTTP請求的方式</title><link href="https://homuchen.com/posts/golang-how-to-make-http-requests/" rel="alternate" type="text/html" title="[Golang] 4種發起HTTP請求的方式" /><published>2022-03-18T11:00:00+08:00</published><updated>2022-03-18T11:00:00+08:00</updated><id>https://homuchen.com/posts/golang-how-to-make-http-requests</id><content type="html" xml:base="https://homuchen.com/posts/golang-how-to-make-http-requests/"><![CDATA[<p>這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法:</p>
-<ul>
-  <li>http.Get</li>
-  <li>http.Post</li>
-  <li>http.PostForm</li>
-  <li>http.NewRequest</li>
-</ul>
-
-<p>一個HTTP Request message不外乎就是<strong>method</strong>、<strong>url</strong>、<strong>headers</strong>跟<strong>body</strong>，如果對於HTTP message還不熟悉的，
-可以看我之前寫過的文章:</p>
-
-<p><a href="/posts/http-introduction-telnet-nc-curl" target="_blank"><strong>HTTP 簡介，以及使用telnet、nc、curl等指令來探索</strong></a></p>
-
-<h1 id="httpget">http.Get</h1>
-<p><code class="language-plaintext highlighter-rouge">func Get(url string) (resp *Response, err error)</code></p>
-
-<p>參數為一個url，沒有headers，也沒有body，就是這麼簡單，如果想要客制化自己的header，就必須使用後面的<code class="language-plaintext highlighter-rouge">http.NewRequest</code>。</p>
-
-<h1 id="httppost">http.Post</h1>
-<p><code class="language-plaintext highlighter-rouge">func Post(url, contentType string, body io.Reader) (resp *Response, err error)</code></p>
-
-<p>參數為url, contentType及body，headers的部分，除了Content-Type之外的，也無法自己自訂，而body是一個io.Reader，
-以下是一個<code class="language-plaintext highlighter-rouge">Content-Type</code>為<code class="language-plaintext highlighter-rouge">appplication/json</code>的例子:</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="n">jsonString</span> <span class="o">:=</span> <span class="s">`{"email": "test@homuchen.com", "name": "homuchen"}`</span>
-<span class="n">http</span><span class="o">.</span><span class="n">Post</span><span class="p">(</span><span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">,</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewReader</span><span class="p">([]</span><span class="kt">byte</span><span class="p">(</span><span class="n">jsonString</span><span class="p">)))</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>伺服器端將會收到以下的HTTP message:</p>
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>POST /api/users HTTP/1.1
-Host: localhost:5000
-User-Agent: Go-http-client/1.1
-Content-Length: 27
-Content-Type: application/json
-Accept-Encoding: gzip
-
-{"email": "test@gmail.com"}
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="httppostform">http.PostForm</h1>
-<p><code class="language-plaintext highlighter-rouge">func PostForm(url string, data url.Values) (resp *Response, err error)</code></p>
-
-<p>Header <code class="language-plaintext highlighter-rouge">Content-Type</code>會被自動設為<code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code>，body是使用<code class="language-plaintext highlighter-rouge">url.Values</code>來傳遞，
-以下為一個範例:</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="c">//直接使用字串</span>
-<span class="n">qs</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">url</span><span class="o">.</span><span class="n">ParseQuery</span><span class="p">(</span><span class="s">"email=test@homuchen.com&amp;name=homuchen"</span><span class="p">)</span>
-<span class="n">http</span><span class="o">.</span><span class="n">PostForm</span><span class="p">(</span><span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="n">qs</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="c">//使用map</span>
-<span class="n">v</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">)</span>
-<span class="n">v</span><span class="p">[</span><span class="s">"email"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"test@homuchen.com"</span><span class="p">}</span>
-<span class="n">v</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"homuchen"</span><span class="p">}</span>
-
-<span class="n">qs</span> <span class="o">:=</span> <span class="n">url</span><span class="o">.</span><span class="n">Values</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="n">http</span><span class="o">.</span><span class="n">PostForm</span><span class="p">(</span><span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="n">qs</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>以上兩個Reqeust，都會產上下列一樣的HTTP message:</p>
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>POST /api/users HTTP/1.1
-Host: localhost:5000
-User-Agent: Go-http-client/1.1
-Content-Length: 39
-Content-Type: application/x-www-form-urlencoded
-Accept-Encoding: gzip
-
-email=test%40homuchen.com&amp;name=homuchen
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h1 id="httpnewrequest">http.NewRequest</h1>
-<p><code class="language-plaintext highlighter-rouge">func NewRequest(method, url string, body io.Reader) (*Request, error)</code></p>
-
-<p>如果想要客制自己的headers就必須使用<code class="language-plaintext highlighter-rouge">NewRequest</code>拉，方法如下:</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"http://localhost:5000"</span><span class="p">,</span> <span class="no">nil</span><span class="p">)</span>
-<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
-<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"Accept-Language"</span><span class="p">,</span> <span class="s">"en-us"</span><span class="p">)</span>
-<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"X-Some-Custom-Header"</span><span class="p">,</span> <span class="s">"foo bar"</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>最後要發起HTTP請求，則要使用<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">Do</code>method，以下使用<code class="language-plaintext highlighter-rouge">http.DefaultClient</code>作為<code class="language-plaintext highlighter-rouge">http.Client</code>，
-至於要如何使用自己的http.Client就不在此多說拉～</p>
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="n">jsonString</span> <span class="o">:=</span> <span class="s">`{"email": "test@homuchen.com", "name": "homuchen"}`</span>
-<span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"http://localhost:5000/api/users"</span><span class="p">,</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewReader</span><span class="p">([]</span><span class="kt">byte</span><span class="p">(</span><span class="n">jsonString</span><span class="p">)))</span>
-<span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
-
-<span class="n">res</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">DefaultClient</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>如此一來就會發送出一個跟前面例子一樣的HTTP Request</p>
-
-<h1 id="summary">Summary</h1>
-<p>今天介紹了四種發起HTTP Request的方法，前面三種的彈性比較低但比較方便，有固定的method及content-type，無法隨意更改及加減。</p>
-
-<p>而其實<code class="language-plaintext highlighter-rouge">http.Get</code>就是<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">Get</code>method，<code class="language-plaintext highlighter-rouge">http.Post</code>為<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">Post</code>method，
-<code class="language-plaintext highlighter-rouge">http.PostForm</code>是<code class="language-plaintext highlighter-rouge">http.Client</code>的<code class="language-plaintext highlighter-rouge">PostForm</code>method。</p>
-
-<p>最後如果想要加上自己更多的header，就要使用<code class="language-plaintext highlighter-rouge">http.NewRequest</code>，這邊簡單地記錄下使用golang作為http client最基礎的用法，
-希望有幫助到任何人，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="golang" /><category term="http" /><summary type="html"><![CDATA[這篇文章將介紹如何使用golang作為http client，來發起http request，將介紹以下4種做法: http.Get http.Post http.PostForm http.NewRequest]]></summary></entry></feed>
+之後有更多親身實驗的結果，會在跟大家分享! 掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="self improvement" /><summary type="html"><![CDATA[人生感到迷惘嗎？找不到目標，或是無法堅持培養好習慣嗎？該如何在各方面取得實際進步? 這篇文章將推薦五本自我成長的書單，期望能幫助大家過上想過的生活。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/self-improvement-books-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
