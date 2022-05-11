@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-05-08T20:51:32+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">架設個人網站、撰寫部落格帶給我的5個好處</title><link href="https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me/" rel="alternate" type="text/html" title="架設個人網站、撰寫部落格帶給我的5個好處" /><published>2022-05-08T20:31:00+08:00</published><updated>2022-05-08T20:31:00+08:00</updated><id>https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me</id><content type="html" xml:base="https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me/"><![CDATA[<p>開始認真規律的寫部落格寫到現在，大概過了近一年的時間，這篇文章將分享
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-05-11T20:46:58+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">架設個人網站、撰寫部落格帶給我的5個好處</title><link href="https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me/" rel="alternate" type="text/html" title="架設個人網站、撰寫部落格帶給我的5個好處" /><published>2022-05-08T20:31:00+08:00</published><updated>2022-05-08T20:31:00+08:00</updated><id>https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me</id><content type="html" xml:base="https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me/"><![CDATA[<p>開始認真規律的寫部落格寫到現在，大概過了近一年的時間，這篇文章將分享
 寫部落格帶給了我哪些好處:</p>
 
 <ul>
@@ -9,7 +9,7 @@
   <li>SEO知識及Markdown語法</li>
 </ul>
 
-<p><img src="https://storage.googleapis.com/homuchen.com/images/personal-blog-advantages.jpg" alt="personal blog advantages" /></p>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/personal-blog-advantages.jpg" alt="personal blog advantages" loading="lazy" /></p>
 
 <h1 id="積極學習">積極學習</h1>
 <p>當你需要規律的有產出的時候，等於變相地要求自己有所學習及成長，如果寫不出來，
@@ -69,7 +69,7 @@
 
 <h1 id="為何要使用待辦清單">為何要使用待辦清單</h1>
 
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-2.jpg" alt="why should we use todo list system" /></p>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-2.jpg" alt="why should we use todo list system" loading="lazy" /></p>
 
 <h2 id="決定優先順序">決定優先順序</h2>
 <p>決定好每時每刻，當下應該要應該要專注的事，就是待辦事項系統是最大的價值。</p>
@@ -100,7 +100,7 @@
   <li>每項任務要有背景，並與特別目標連結</li>
 </ul>
 
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-3.jpg" alt="todo list system principles" /></p>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-3.jpg" alt="todo list system principles" loading="lazy" /></p>
 
 <h2 id="要有截止日期">要有截止日期</h2>
 <p>如果沒有截止日期，它就只是一個願望清單，缺少了急迫性，就像信用卡帳單、稅單一樣，你會拖到最後一刻才去繳費。</p>
@@ -140,7 +140,7 @@ Relevant（相關的）和Time-bound（有時限的）。</p>
 
 <h1 id="有哪些待辦清單系統">有哪些待辦清單系統</h1>
 
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-4.jpg" alt="待辦清單系統優缺點" /></p>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-4.jpg" alt="待辦清單系統優缺點" loading="lazy" /></p>
 
 <h2 id="全包式清單">全包式清單</h2>
 <p>只要任務一出現，一想到什麼就全部寫下來</p>
@@ -191,7 +191,7 @@ Future Log、Monthly Log及Daily Log，將未來清單與近期或每日清單�
 <h2 id="看板kanban">看板(Kanban)</h2>
 <p>Kanban緣起於Toyota的生產管理系統，看起來就像是下圖這樣:</p>
 
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-5.jpg" alt="看板系統" /></p>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-5.jpg" alt="看板系統" loading="lazy" /></p>
 
 <p>主要組成有欄、列、卡片、WIP limit，每張卡片即是一項任務，可以將相關的任務放在同一欄
 ，並區分出<strong>未開始</strong>、<strong>進行中</strong>及<strong>完成</strong>等列，而進行中的任務數量會有一個上限。</p>
@@ -214,7 +214,7 @@ Future Log、Monthly Log及Daily Log，將未來清單與近期或每日清單�
 
 <p>以上的內容為<a href="https://www.books.com.tw/products/0010831893" target="_blank"><strong>《一流工作者都在用的待辦清單》</strong></a>的節錄。</p>
 
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-1.jpg" alt="book: To-Do List Formula: A Stress-Free Guide To Creating To-Do Lists That Work!" /></p>
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-1.jpg" alt="book: To-Do List Formula: A Stress-Free Guide To Creating To-Do Lists That Work!" loading="lazy" /></p>
 
 <p>掌握核心的原則，才能根據每個人不同的情況去做變化，依照自己的需求，就設計出最適合自己的系統！</p>
 
@@ -336,7 +336,7 @@ Future Log、Monthly Log及Daily Log，將未來清單與近期或每日清單�
 
 <ul>
   <li><a href="/posts/stepn-record-everyday-income/" target="_blank"><strong>STEPN: 從2022-04-10進場至今的收益紀錄</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後， 點數要加到哪裡呢？今天這篇文章將分享我實測下來的結果，升級並提升效率值後， 但每次跑步GST的產出有多少的影響！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN: 從2022-04-10進場至今的收益紀錄</title><link href="https://homuchen.com/posts/stepn-record-everyday-income/" rel="alternate" type="text/html" title="STEPN: 從2022-04-10進場至今的收益紀錄" /><published>2022-04-21T13:25:00+08:00</published><updated>2022-05-08T21:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-record-everyday-income</id><content type="html" xml:base="https://homuchen.com/posts/stepn-record-everyday-income/"><![CDATA[<p>真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[買了跑鞋開始跑步的大家可能會有些疑問，我應該升級我的跑鞋嗎？升級了之後， 點數要加到哪裡呢？今天這篇文章將分享我實測下來的結果，升級並提升效率值後， 但每次跑步GST的產出有多少的影響！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN: 從2022-04-10進場至今的收益紀錄</title><link href="https://homuchen.com/posts/stepn-record-everyday-income/" rel="alternate" type="text/html" title="STEPN: 從2022-04-10進場至今的收益紀錄" /><published>2022-04-21T13:25:00+08:00</published><updated>2022-05-11T20:45:00+08:00</updated><id>https://homuchen.com/posts/stepn-record-everyday-income</id><content type="html" xml:base="https://homuchen.com/posts/stepn-record-everyday-income/"><![CDATA[<p>真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？
 對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！</p>
 
 <p>這篇文章紀錄了我從2022-04-10進場，花了多少錢買鞋子，
@@ -583,6 +583,30 @@ Future Log、Monthly Log及Daily Log，將未來清單與近期或每日清單�
       <td>25.14</td>
       <td>4.92</td>
       <td>20.22</td>
+    </tr>
+    <tr>
+      <td>2022-05-09</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>23.95</td>
+      <td>4.92</td>
+      <td>19.03</td>
+    </tr>
+    <tr>
+      <td>2022-05-10</td>
+      <td>4.0</td>
+      <td>39.7</td>
+      <td>23.42</td>
+      <td>4.92</td>
+      <td>18.50</td>
+    </tr>
+    <tr>
+      <td>2022-05-11</td>
+      <td>2.0</td>
+      <td>39.7</td>
+      <td>11.60</td>
+      <td>2.46</td>
+      <td>9.14</td>
     </tr>
   </tbody>
 </table>
