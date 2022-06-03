@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-05-16T22:14:10+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">為什麼逛完IKEA要來隻霜淇淋: 峰終定律</title><link href="https://homuchen.com/posts/peak-end-rule/" rel="alternate" type="text/html" title="為什麼逛完IKEA要來隻霜淇淋: 峰終定律" /><published>2022-05-16T22:12:00+08:00</published><updated>2022-05-16T22:12:00+08:00</updated><id>https://homuchen.com/posts/peak-end-rule</id><content type="html" xml:base="https://homuchen.com/posts/peak-end-rule/"><![CDATA[<p>為什麼IKEA會在最後結帳區的前後，設置餐廳區及有賣霜淇淋的小吃部呢？
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-06-04T00:03:51+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">如何使用Notion打造Kanban based的待辦清單</title><link href="https://homuchen.com/posts/notion-kanban-board/" rel="alternate" type="text/html" title="如何使用Notion打造Kanban based的待辦清單" /><published>2022-06-04T00:02:00+08:00</published><updated>2022-06-04T00:02:00+08:00</updated><id>https://homuchen.com/posts/notion-kanban-board</id><content type="html" xml:base="https://homuchen.com/posts/notion-kanban-board/"><![CDATA[<p>待辦清單的首要任務是幫助我們整理心智，在眾多的選擇中，優先認出當下最該先執行的事項，
+而不會被一堆的事項搞到非常憂慮，什麼都想做卻什麼都做不好，甚至是都沒有開始做。</p>
+
+<p>這篇文章將簡單分享我認為<strong>待辦清單系統應該具有哪些原則</strong>，什麼是<strong>Kanban</strong>，
+以及我如何使用<strong>Notion</strong>，來打造自己的Kanban based的待辦清單系統，Let’s go！</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-0.jpg" alt="notion kanban todo list system" loading="lazy" /></p>
+
+<h1 id="三大待辦清單原則">三大待辦清單原則</h1>
+<p>市面上的待辦事項系統玲瑯滿目，有沒有一些基本的原則是我們可以把握的呢？以下為大家簡單總結出三項原則：</p>
+
+<ul>
+  <li>
+    <p><strong>要有截止日期:</strong>
+沒有截止日期，沒有急迫性，大家就是會拖，懶就是人的天性，我想不用多說什麼，大家應該多少都能感同身受吧😂</p>
+  </li>
+  <li>
+    <p><strong>清單不能太長:</strong>
+選項太多也會導致不知道要選哪一項任務來進行，也就是<strong>決策癱瘓</strong>，就算費力地做了選擇，也會導致<strong>決策疲勞</strong>，
+耗費了許多能量在決策上。</p>
+  </li>
+  <li>
+    <p><strong>與目標連結:</strong>
+要知道<strong>為什麼</strong>要做每項任務，它必須可以幫助你達成某項目標，否則做了很多事，很可能只是在瞎忙。</p>
+  </li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-3.jpg" alt="todo list system principles" loading="lazy" /></p>
+
+<p>關於待辦清單的原則，想看更詳盡的解釋，可以參考我之前寫過的一篇文章:</p>
+
+<p><a href="/posts/book-note-todo-list-formula/" target="_blank"><strong>掌握這3個原則，打造出最適合自己的代辦清單系統</strong></a></p>
+
+<h1 id="kanban是什麼">Kanban是什麼</h1>
+<p>Kanban緣起於Toyota的生產管理系統，看起來就像是下圖這樣:</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-5.jpg" alt="看板系統" loading="lazy" /></p>
+
+<p>主要組成有<strong>欄(column)</strong>、<strong>列</strong>、<strong>卡片(card)</strong>、<strong>WIP limit</strong>，每張卡片即是一項任務，
+可以將相關的任務放在同一欄，也可以使用顏色分類，並在每一列區分出<strong>未開始</strong>、<strong>進行中</strong>及<strong>完成</strong>，
+而進行中的任務數量會有一個上限，也就是WIP limit(Work in Progress Limit)。</p>
+
+<h2 id="組成">組成</h2>
+<ul>
+  <li><strong>Cards</strong>: 每一張卡片即代表一個任務事項。</li>
+  <li><strong>Columns</strong>: Kanban最明顯的特徵就是有著不同狀態的直欄: <strong>未開始</strong>、<strong>進行中</strong>及<strong>完成</strong>，
+藉著將卡片移動來移動去以及視覺化，能夠對當前的進度及狀態一目瞭然。</li>
+  <li><strong>WIP limit</strong>: 而對於進行中的那一欄，有一個卡片的數量上限限制，可以避免我們任務越積越多，
+並且首先專注於最重要的幾件事上。</li>
+</ul>
+
+<h2 id="好處">好處</h2>
+<ul>
+  <li><strong>視覺化</strong>: 對於所以進行中及未開始的能夠一目瞭然，如果是一個團隊，
+成員間也能迅速地同步所有任務事項的狀態。</li>
+  <li><strong>決定優先事項</strong>: 每個當下只需專注於進行中的事項，把他們做完之前，不需要擔心其他的事，
+可以減少心智負擔，也不用擔心是否會忘掉其他任務，因為你有把它們寫在未開始的那欄。</li>
+</ul>
+
+<h1 id="使用notion來實作">使用Notion來實作</h1>
+<p>最後也是最重要的，將利用Notion這套軟體，來打造自己的Kanban，
+並且可以符合上述說的三個原則: <strong>有截止日期</strong>、<strong>不能太長</strong>、<strong>與目標連結</strong>。</p>
+
+<p>原本的Kanban系統因為有WIP limit的關係，有符合清單不能太長的原則，
+但缺少了截止日期及與特定目標連結，
+接下來我將一步一步地示範如何利用<a href="https://www.notion.so/" target="_blank"><strong>Notion</strong></a>，
+來完善我們Kanban待辦清單系統！</p>
+
+<h2 id="建立表格">建立表格</h2>
+<p>首先第一步，新增一個頁面，並且選擇<strong>Table</strong>。
+<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-1.jpg" alt="notion: create a table" loading="lazy" /></p>
+
+<p>接著系統會要你選擇資料來源，這邊就選<strong>New database</strong>。
+<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-2.jpg" alt="notion: create a table" loading="lazy" /></p>
+
+<h2 id="新增欄位">新增欄位</h2>
+<p>現在需要來定義我們的資料庫裡需要的欄位了，這邊我們是會需要名稱、任務狀態、截至日期、目標或專案。
+<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-3.jpg" alt="notion: create columns" loading="lazy" /></p>
+
+<ol>
+  <li>
+    <p>狀態(Status): 為一個單選欄，主要的狀態就分為未開始、進行中、已完成，可以取用自己喜歡的名字，
+也可以有更多的狀態，這邊最主要的目的就是區分出進行中的任務。</p>
+  </li>
+  <li>
+    <p>目標或專案(Project): 每個任務會有附屬於一個目標或是專案之下，記錄下來，可以知道為什麼要做這個任務，
+當事項太多時，也可以利用這個欄位來做篩選。</p>
+  </li>
+  <li>
+    <p>截止日期或時間區間(Deadline): 加上截止日期，為自己增加急迫性，否則就很容易一拖再拖，
+後續也會利用這個欄位來建立timeline的視覺畫圖表，有利於我們使用截止日期來決定哪些任務應該趕快開始進行。</p>
+  </li>
+</ol>
+
+<h2 id="新增board-view">新增Board view</h2>
+<p>建立好資料後，就可以使用board view的功能，按照下圖的步驟，來使得系統像一個看板拉！
+<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-4.jpg" alt="notion: add board view" loading="lazy" /></p>
+
+<p>完成後，就可以在板上將任務拖拉移動來更改狀態，可以依照個人習慣的不同，每天或每個禮拜，
+決定好要先專注於哪些任務。</p>
+
+<h2 id="新增timeline-view">新增Timeline view</h2>
+<p>再新增一個timeline view，步驟如下圖:
+<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-5.jpg" alt="notion: add timeline view" loading="lazy" /></p>
+
+<p>可以看到紅線的位置就是當天，有了這張圖表，就可以一目瞭然的看出，
+哪些任務已經快可以開始或是截止日期已經逼近了，可以據此來調整你的優先事項唷！</p>
+
+<h1 id="總結">總結</h1>
+<p>今天簡單地分享了好的待辦清單系統應該要具有的原則: 截止日期、不能太長、與目標連結，
+也認識了一個常見於敏捷開發團隊的系統: 看板(Kanban)，最後使用了Notion來實作。</p>
+
+<p>祝大家生產力高高，每天都可以順利地往自己的目標邁進！ 掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="notion" /><category term="productivity" /><category term="kanban" /><summary type="html"><![CDATA[待辦清單系統應該具有哪些原則，什麼是Kanban， 以及我如何使用Notion，來打造自己的Kanban based的待辦清單系統]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/notion-kanban-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/notion-kanban-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">為什麼逛完IKEA要來隻霜淇淋: 峰終定律</title><link href="https://homuchen.com/posts/peak-end-rule/" rel="alternate" type="text/html" title="為什麼逛完IKEA要來隻霜淇淋: 峰終定律" /><published>2022-05-16T22:12:00+08:00</published><updated>2022-05-16T22:12:00+08:00</updated><id>https://homuchen.com/posts/peak-end-rule</id><content type="html" xml:base="https://homuchen.com/posts/peak-end-rule/"><![CDATA[<p>為什麼IKEA會在最後結帳區的前後，設置餐廳區及有賣霜淇淋的小吃部呢？
 這麼做對我們購物的體驗有什麼影響嗎？<strong>峰終定律</strong>可能可以給我們一點答案。</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/peak-end-rule-1.jpg" alt="IKEA 冰淇淋" /></p>
@@ -1146,41 +1258,4 @@ interface是作為服務提供者及服務使用者溝通的介面，為什麼�
 有興趣的朋友可以去找來看看唷～</p>
 
 <p>未來我自己也可能會朝向這方向來調整我的工作模式，想嘗試看看<strong>數位遊牧</strong>的生活型態，
-有後續動作及消息，再上來更新！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="remote work" /><summary type="html"><![CDATA[為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決， 不管是以雇主的角度還是以員工的角度， 在這本書《遠距工作模式》裡都有提及。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">如何在Mac OS中使用command line來將文字複製到剪貼簿</title><link href="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/" rel="alternate" type="text/html" title="如何在Mac OS中使用command line來將文字複製到剪貼簿" /><published>2022-03-28T20:40:00+08:00</published><updated>2022-03-28T20:40:00+08:00</updated><id>https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line</id><content type="html" xml:base="https://homuchen.com/posts/mac-os-copy-to-clipboard-using-command-line/"><![CDATA[<p>在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？
-那就是可以透過<strong>pbcopy</strong>及<strong>pbpaste</strong>指令，也下為一些例子。</p>
-
-<h1 id="複製">複製</h1>
-<ul>
-  <li>複製<code class="language-plaintext highlighter-rouge">123</code>
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">echo </span>123 | pbcopy
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-  <li>將<code class="language-plaintext highlighter-rouge">words.txt</code>檔案中的文字，複製到剪貼簿
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">cat </span>words.txt | pbcopy
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-
-    <p>或是</p>
-
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>pbcopy &lt; words.txt
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-</ul>
-
-<h1 id="貼上">貼上</h1>
-<ul>
-  <li>輸出至stdout
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>pbpaste
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-  <li>輸出到檔案裡
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>pbpaste <span class="o">&gt;</span> some.txt
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-</ul>
-
-<p>雖然也可以用滑鼠把想複製的字選起來再按command + C，但有時候就是不想碰到滑鼠！我想這就是工程師的浪漫吧😎</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="command line" /><summary type="html"><![CDATA[在Mac OS裡，該如何使用command line的指令來將你想要的資料複製到剪貼簿呢？ 那就是可以透過pbcopy及pbpaste指令，也下為一些例子。]]></summary></entry></feed>
+有後續動作及消息，再上來更新！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="remote work" /><summary type="html"><![CDATA[為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決， 不管是以雇主的角度還是以員工的角度， 在這本書《遠距工作模式》裡都有提及。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
