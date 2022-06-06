@@ -1,4 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-06-04T00:03:51+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">如何使用Notion打造Kanban based的待辦清單</title><link href="https://homuchen.com/posts/notion-kanban-board/" rel="alternate" type="text/html" title="如何使用Notion打造Kanban based的待辦清單" /><published>2022-06-04T00:02:00+08:00</published><updated>2022-06-04T00:02:00+08:00</updated><id>https://homuchen.com/posts/notion-kanban-board</id><content type="html" xml:base="https://homuchen.com/posts/notion-kanban-board/"><![CDATA[<p>待辦清單的首要任務是幫助我們整理心智，在眾多的選擇中，優先認出當下最該先執行的事項，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-06-07T00:09:14+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">HTTP API: 該如何管理一份很大的OpenAPI document？</title><link href="https://homuchen.com/posts/how-to-manage-a-large-openapi-document-file/" rel="alternate" type="text/html" title="HTTP API: 該如何管理一份很大的OpenAPI document？" /><published>2022-06-07T00:07:00+08:00</published><updated>2022-06-07T00:07:00+08:00</updated><id>https://homuchen.com/posts/how-to-manage-a-large-openapi-document-file</id><content type="html" xml:base="https://homuchen.com/posts/how-to-manage-a-large-openapi-document-file/"><![CDATA[<p>OpenAPI的document文件可以變得非常大一份，特別是當你有好幾百個routes的時候，
+這時候單一份的yaml檔管理起來可能會非常頭大，這篇文章將分享在這種情況下，
+我是如何將一份大的檔案拆分成許多小的檔案，易於管理。</p>
+
+<h1 id="openapi-specification">OpenAPI Specification</h1>
+<p>OpenAPI也被稱為Swagger，是一個用來描述你的API的標準，可以根據這個標準來撰寫你的文件，
+我想你應該很熟悉了，如果還不熟的，
+可以先看看官方的說明: <a href="https://swagger.io/specification/" target="_blank">OpenAPI specification</a>。</p>
+
+<h1 id="我如何拆分檔案">我如何拆分檔案</h1>
+<h2 id="使用json格式">使用JSON格式</h2>
+<p>官網上的範例文件都是使用yaml，而我偏好使用JSON，基於以下幾個理由：</p>
+
+<ul>
+  <li>許多語言都內建支援JSON格式，尤其是javascript，JSON的J就是這樣來的。</li>
+  <li>可以直接由程式控制，將需要共用的(<strong>response</strong>、<strong>schema</strong>、<strong>parameter</strong>)寫在不同檔案，要用的時候在import進來就好。</li>
+  <li>除了以上常常會需要共用的，造成spec檔案會變的很大的一個因素就是有太多的<strong>path</strong>，也能將path依照你想要方式做拆分。</li>
+</ul>
+
+<p>寫起來就會像是下面這樣:</p>
+
+<h3 id="indexjs">index.js</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">schemas</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/schemas</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">securitySchemes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/securitySchemes</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">parameters</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/parameters</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">responses</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/responses</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./paths</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">openapi</span><span class="p">:</span> <span class="dl">'</span><span class="s1">3.0.0</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">info</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Example API Overview</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1.0.0</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">contact</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">API Support</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">email</span><span class="p">:</span> <span class="dl">'</span><span class="s1">b98901052@ntu.edu.tw</span><span class="dl">'</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="na">servers</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/api/v1</span><span class="dl">'</span>
+  <span class="p">}],</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">schemas</span><span class="p">:</span> <span class="nx">schemas</span><span class="p">,</span>
+    <span class="na">parameters</span><span class="p">:</span> <span class="nx">parameters</span><span class="p">,</span>
+    <span class="na">responses</span><span class="p">:</span> <span class="nx">responses</span><span class="p">,</span>
+    <span class="na">securitySchemes</span><span class="p">:</span> <span class="nx">securitySchemes</span>
+  <span class="p">},</span>
+  <span class="na">paths</span><span class="p">:</span> <span class="nx">paths</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="pathsjs">paths.js</h3>
+<p>可能就會長得像下面這樣:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">pets</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./pets</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./users</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">stores</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./stores</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span><span class="nx">pets</span><span class="p">,</span>
+  <span class="p">...</span><span class="nx">users</span><span class="p">,</span>
+  <span class="p">...</span><span class="nx">stores</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>可以將所有<code class="language-plaintext highlighter-rouge">/pets</code>開頭的路由放到<code class="language-plaintext highlighter-rouge">pets.js</code>，以此類推，如此一來就便於管理，
+不會有一份檔案裡頭有好幾百個path，
+可以更快地知道要修改一個endpoints要去到哪一支相對應的檔案。</p>
+
+<h2 id="輸出">輸出</h2>
+<p>當你要輸出JSON檔時，只需要把上述<code class="language-plaintext highlighter-rouge">Object</code>做一個<code class="language-plaintext highlighter-rouge">JSON.stringify</code>就行，或是依賴其他套件轉成<code class="language-plaintext highlighter-rouge">YAML</code>的格式。</p>
+
+<h2 id="限制">限制</h2>
+<p>但前提是你使用的動態語言，像是<code class="language-plaintext highlighter-rouge">javascript</code>、<code class="language-plaintext highlighter-rouge">python</code>等等，才有這樣方便的好處。</p>
+
+<h2 id="就是想用yaml">就是想用YAML</h2>
+<p>其實不用JSON也是可以，上述的方法一樣可以套用到YAML檔，
+也就是將一些可以重複使用的schema、response，以及拆分出來的path們放到不同的檔案，
+只是可能需要依賴一些額外的library來幫你做合併的動作。</p>
+
+<p>像是<a href="https://github.com/APIDevTools/swagger-cli" target="_blank">swagger-cli</a>，
+就可以讓你把<code class="language-plaintext highlighter-rouge">$ref</code>的目標，放到不同的檔案。</p>
+
+<h1 id="總結">總結</h1>
+<p>想要拆分一份大的OpenAPI spec檔以便於管理，核心的關鍵就跟寫程式是一樣的，DRY(Don’t repeat yourself)，
+將會重複使用的部分拆出來，在原先的OpenAPI spec也能做到，就是使用<code class="language-plaintext highlighter-rouge">$ref</code>，
+但今天更近一步跟大家分享將其寫在不同的檔案的方法: 使用<code class="language-plaintext highlighter-rouge">JSON</code>格式、利用其他套件<code class="language-plaintext highlighter-rouge">swagger-cli</code>。</p>
+
+<p>希望以上的內容對你有一丁點的幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><category term="openapi" /><summary type="html"><![CDATA[OpenAPI的document文件可以變得非常大一份，特別是當你有好幾百個routes的時候， 這時候單一份的yaml檔管理起來可能會非常頭大，這篇文章將分享在這種情況下， 我是如何將一份大的檔案拆分成許多小的檔案，易於管理。]]></summary></entry><entry><title type="html">如何使用Notion打造Kanban based的待辦清單</title><link href="https://homuchen.com/posts/notion-kanban-board/" rel="alternate" type="text/html" title="如何使用Notion打造Kanban based的待辦清單" /><published>2022-06-04T00:02:00+08:00</published><updated>2022-06-04T00:02:00+08:00</updated><id>https://homuchen.com/posts/notion-kanban-board</id><content type="html" xml:base="https://homuchen.com/posts/notion-kanban-board/"><![CDATA[<p>待辦清單的首要任務是幫助我們整理心智，在眾多的選擇中，優先認出當下最該先執行的事項，
 而不會被一堆的事項搞到非常憂慮，什麼都想做卻什麼都做不好，甚至是都沒有開始做。</p>
 
 <p>這篇文章將簡單分享我認為<strong>待辦清單系統應該具有哪些原則</strong>，什麼是<strong>Kanban</strong>，
@@ -1127,135 +1249,4 @@ interface是作為服務提供者及服務使用者溝通的介面，為什麼�
 
 <ul>
   <li><a href="/posts/http-restful-api-design-practical-guide/" target="_blank"><strong>RESTful API Design — A practical guide</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><summary type="html"><![CDATA[開發API應該要使用怎樣的流程，先定義好介面有哪些好處，以及可以使用哪些工具呢？(OpenAPI 3.0)]]></summary></entry><entry><title type="html">[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術</title><link href="https://homuchen.com/posts/book-note-remote-work-go/" rel="alternate" type="text/html" title="[讀書筆記] 遠距工作模式: 麥肯錫、IBM、英特爾、eBay都在用的職場工作術" /><published>2022-04-02T22:04:00+08:00</published><updated>2022-04-02T22:04:00+08:00</updated><id>https://homuchen.com/posts/book-note-remote-work-go</id><content type="html" xml:base="https://homuchen.com/posts/book-note-remote-work-go/"><![CDATA[<p>為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決，
-不管是以<strong>雇主</strong>的角度還是以<strong>員工</strong>的角度，
-在這本書<a href="https://www.books.com.tw/products/0010856669/" target="_blank"><strong>《遠距工作模式》</strong></a>裡都有提及。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" alt="書: 遠距工作模式" /></p>
-
-<h1 id="為何要遠距工作">為何要遠距工作</h1>
-<p>遠距工作會帶來好處呢？以下從雇主或員工的角度來看待這個問題</p>
-
-<h2 id="遠離令人分心的辦公室環境">遠離令人分心的辦公室環境</h2>
-<p>在辦公室中，可能會有各種分心的來源，容易被不斷地打擾，時間被切割成許多的碎片，
-對於有些需要<strong>長時間不被打斷</strong>，才能進入狀況的任務，這樣的環境並不適合。</p>
-
-<p>當然並不是說其他的地方就沒這問題，在家可能充滿各種誘惑，冰箱裡的零食、
-小孩或配偶的干擾，但你擁有了在哪裡工作的自主權，就可以更主動地來處理這個問題。</p>
-
-<h2 id="省下通勤的時間">省下通勤的時間</h2>
-<p>每天擠在電車、火車裡，或者是開車塞中公路車陣中，這樣的事情實在是很難讓人快樂起來。</p>
-
-<p>有些人會把通勤時間拿來利用，我自己也不例外<a href="/posts/how-i-keep-reading/" target="_blank">(<strong>《原子習慣》應用: 我是如何養成閱讀習慣</strong>)</a>，
-在電車裡閱讀，或是開車的時候邊聽有聲書，
-不過如果可以好好地在家裡做這些事，不是更棒嗎？😄</p>
-
-<h2 id="逃離朝九晚五">逃離朝九晚五</h2>
-<p>下午得接小孩放學嗎？去參加小孩在學校裡的活動？或者你是夜貓子想要睡到中午，
-晚上在火力全開最有效率的工作，做得到這些正式正式彈性上班最棒的好處之一，
-<strong>重要的是工作成果，而非準時打卡</strong>。</p>
-
-<h2 id="不用擠在都會區">不用擠在都會區</h2>
-<p>大公司的總部集中在都會區，為了取得好的工作機會，必須來到都市，
-但卻可能犧牲了自由、美妙的鄉間土地與新鮮的空氣，房子那麼貴！
-交通也擁擠，我們真的願意付出那些金錢代價，換一間鳥籠住嗎？</p>
-
-<p>但都市確實有便利的生活及刺激的娛樂，這之間的取捨就看個人喜好了，
-不過遠距工作提供了另一種可能的選擇。</p>
-
-<h2 id="真正的奢華">真正的奢華</h2>
-<p>我有個夢想，等到退休之後之後我要幹嘛幹嘛，為何要等到退休呢？！
-常常就是因為要上班的關係～</p>
-
-<p>我想要去到某個雪國，好好地滑雪滑上一個月，精進我的技能，如果是受限於要在某地上班的話，
-一年可以出國滑個十天好像就很了不起了。不一定要是滑雪，你可能有各種夢想，可能是衝浪、
-環遊世界、帶小孩去參加各種活動，或者只是多待在家裡陪伴家人，<strong>人生並不需要畫分出拼命工作與退休養老的界線！</strong></p>
-
-<p>在<a href="https://www.books.com.tw/products/0010621037" target="_blankA"><strong>《一週工作四小時》</strong></a>這本書裡，
-作者稱這類擁有時間及機動性的族群為<strong>新富族</strong>，擁有決定何時工作及在哪裡工作的自由，就能使你的財富倍增！</p>
-
-<p>延伸閱讀:</p>
-
-<ul>
-  <li><a href="/posts/book-note-the-four-hour-work-week/" target="_blank"><strong>[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</strong></a></li>
-  <li><a href="/posts/double-your-money-without-any-extra-work/" target="_blank"><strong>如何不用做額外的工作，就使你的收入倍增</strong></a></li>
-</ul>
-
-<h2 id="世界人才庫">世界人才庫</h2>
-<p>當你公司的工作模式不在需要進辦公室時，來自全球的人才都可以為你所用。</p>
-
-<p>除了找到人才外，把人才留住也是至關重要的問題，如果不是遠端工作，
-那有些離職原因可能就是跟工作本身無關的，例如結婚了、受夠這裡的天氣了、
-想多陪陪家人，或單純想換個新環境？一但遠端工作，好人才就不必離職，也能做他想做的事！</p>
-
-<h2 id="省錢">省錢</h2>
-<p>省錢並不是遠距工作的主要目標，但如果可以省錢，又何嘗不是件好事呢？
-在提升了大家的生活品質、還能爭取來自世界各地的人才的同時，
-提高生產力減少人力及不需要辦公室，都能額外帶來省錢的好處。</p>
-
-<h2 id="成果導向">成果導向</h2>
-<p>在辦公室上班蠻容易會有這樣的問題:</p>
-
-<p><strong>準時到公司又晚離開 + 好相處的好人 = 好員工？</strong></p>
-
-<p>但其實有可能他根本沒有太多工作的產出，僅憑著他有出現在辦公室又很聽話，就覺得他工作的效率棒棒。
-一旦實施遠距工作，擁有了在何時何地工作的自由，付出的代價就是需要追蹤任務及回報進度，
-而公開的工作成果使得有沒有產出就一目瞭然，無所遁形了，雇主也可以更客觀的評量員工的績效，
-而不只是憑感覺。</p>
-
-<h1 id="藉口及問題">藉口及問題</h1>
-<h2 id="我怎麼知道員工有沒有在工作">我怎麼知道員工有沒有在工作?</h2>
-<p>其實如果身為雇主你有這樣的質疑，那你應該一開始就不應該聘請這位員工，如果他真的會偷懶，
-不管是在辦公室還是在遠處，都一樣會偷懶～</p>
-
-<p>而且遠端工作，更容易是成果導向的，避免掉員工其實只是待在辦公室裝忙給你看的這種狀況！</p>
-
-<h2 id="家裡充滿誘惑">家裡充滿誘惑</h2>
-<p>電視機就在那裡，遊樂器也在那邊，冰箱裡有好吃的冰淇淋，還有一堆待洗衣物，
-家裡有各式各樣的事物可能吸引你，你說要如何在家工作呢？</p>
-
-<p>答案很簡單，因為你有工作得做，而你是個負責任的人。
-另外對抗誘惑最好的方法就是有趣且有成就感的工作，如果使命感不明確，工作太枯燥無味，
-我想你的問題是該換一份工作，而不是在哪裡工作。</p>
-
-<p>當然有時環境就是會有影響，後面內容就有建議可以將工作與私人的空間做出明確的區隔。</p>
-
-<h2 id="我現在就要答案">我現在就要答案</h2>
-<p>如果在辦公室裡，很容易就去打擾別人，其實很多問題可以自己找到答案，
-或者是先將問題釐清想清楚一點，但如果同事就在你旁邊，隨口就去問他好像沒什麼大不了的，
-所以容易就會打斷同事專心工作的時間。</p>
-
-<p>並不是每個問題都需要立即獲得解答，可以依照事件的緊急程度來決定溝通的管道，
-不急的問題使用Email，稍微急一點的可以使用些即時通訊的軟體，很急的話就能直接打電話給遠距工作的同事，</p>
-
-<p>讓同事自己決定何時回覆的你的訊息，避免在需要一段長時間專心工作的時候被打斷，導致效率降低。</p>
-
-<h1 id="一些具體的作法">一些具體的作法</h1>
-<h2 id="出去社交">出去社交</h2>
-<p>許多人對於遠距工作的恐懼在於覺得太過孤僻，跟同事跟人都沒有相處互動，
-但就算在家裡，你也可以跟配偶、子女、家人或是鄰居有高品質的互動，
-不過工作跟私人時間要區分好就是了。</p>
-
-<p>另外沒人說你一定要一直宅著在家裡工作呀～
-你可以去咖啡廳、共享工作空間、去公園跟路人打籃球，或者是做志工，
-遠距工作不表示你非得被綁在家裡的書桌前。</p>
-
-<h2 id="設立明確界限">設立明確界限</h2>
-<p>原先朝九晚五的好處就是上下班容易切分清楚，中間的通勤也能作為緩衝，
-使得你知道離開辦公室到家裡就可以好好地放鬆，週末的時間，基本上也不會被公事給打擾，</p>
-
-<p>而在家工作，你一早醒來在床上打開筆電，回覆電子信箱，接著做早餐然後邊吃邊工作，
-用完晚餐後，你又覺得好像得跟誰誰誰聯絡一下，可能不小心就從早上七點工作到晚上九點，
-所以就算是遠距工作，上下班的時間也必須清楚，一來可以讓自己工作時更容易進入狀態及下班時就不要工作，
-二來也是可以讓你的共事者知道何時是找得到你的時間。</p>
-
-<p>而在空間上，在家也要區分出一個區塊是特地用來工作的，要工作就要到那邊去，
-離開那裡你就是卸載，另外人體工學的基本需求也要好好滿足，
-有張合適的工作桌、椅子螢幕等等設備，自己的健康自己要顧呀！</p>
-
-<h1 id="結論">結論</h1>
-<p>以上從這本書裡，就我比較有感覺的幾個點在這邊跟大家分享，書中還有許多其他的面向及觀點，
-有興趣的朋友可以去找來看看唷～</p>
-
-<p>未來我自己也可能會朝向這方向來調整我的工作模式，想嘗試看看<strong>數位遊牧</strong>的生活型態，
-有後續動作及消息，再上來更新！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="remote work" /><summary type="html"><![CDATA[為何要遠距工作？遠距工作有哪些好處？常見會遇到的問題有哪些？該如何解決， 不管是以雇主的角度還是以員工的角度， 在這本書《遠距工作模式》裡都有提及。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-remote-work-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="api" /><category term="http" /><category term="restful api" /><category term="openapi" /><summary type="html"><![CDATA[開發API應該要使用怎樣的流程，先定義好介面有哪些好處，以及可以使用哪些工具呢？(OpenAPI 3.0)]]></summary></entry></feed>
