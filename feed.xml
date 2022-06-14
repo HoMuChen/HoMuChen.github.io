@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-06-10T21:53:40+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">房間DIY改造: 老舊家具及櫃體篇</title><link href="https://homuchen.com/posts/room-makeover-furniture/" rel="alternate" type="text/html" title="房間DIY改造: 老舊家具及櫃體篇" /><published>2022-06-10T21:52:00+08:00</published><updated>2022-06-10T21:52:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-furniture</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-furniture/"><![CDATA[<p>想DIY重新裝潢佈置自己的房間，家裏有老舊家具或櫃體還是堪用的丟掉可惜，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-06-14T23:36:35+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">遠端工作有哪些缺點？以及該如何克服？</title><link href="https://homuchen.com/posts/remote-working-disadvantages/" rel="alternate" type="text/html" title="遠端工作有哪些缺點？以及該如何克服？" /><published>2022-06-14T23:36:00+08:00</published><updated>2022-06-14T23:36:00+08:00</updated><id>https://homuchen.com/posts/remote-working-disadvantages</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-disadvantages/"><![CDATA[<p>在上一篇文章: <a href="/posts/remote-working-advantages/" target="_blank">遠端工作有哪些好處？</a>中，
+提到了許多遠端工作的優點，今天將來看看有哪些缺點，並且提出相對應的解決辦法！</p>
+
+<h1 id="遠端工作的缺點">遠端工作的缺點:</h1>
+<h2 id="1-工作和生活混在一起">1. 工作和生活混在一起</h2>
+<p>不用到辦公室上班，意味著你必須<strong>自己決何時何地工作</strong>，這是優點，同時也可能是個缺點！</p>
+
+<p>早上起床準備早餐，出門通勤到辦公室，準備個咖啡開始工作，跟同事吃午餐，下午繼續工作，下班去運動，
+回家吃個晚飯好好休息結束一天。每天在辦公室的生活很可能就像這樣，很規律也不用多想，什麼時間到了就做什麼事，
+有生產力、社交、健康及下班後自己的時間。</p>
+
+<p>接著我們來看看遠距工作可能的樣子: 早上起床準備早餐，邊吃早餐邊收發Email，準備個咖啡開始工作，
+想到今天是NBA總決賽的日子，打開電視機看了一下比賽，遲遲才開始工作，中午吃完午飯又睡個午覺，
+結果發現工作趕不完，一直到熬夜到睡前都持續工作著。</p>
+
+<p>如此一般，如果沒有自律及自我管理的能力時，遠端工作反而可能是悲劇的開始，
+<strong>不是無法脫離工作，就是無法好好開始工作</strong>～</p>
+
+<h3 id="怎麼辦">怎麼辦？</h3>
+<p>就像在<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>一書中講到的，
+組成我們每一天大部分是習慣，而不是有意識的選擇，而自由的生活使得我們會不斷地面臨選擇!</p>
+
+<p>我現在要開始工作了嗎？還是看一下NBA，晚上再補就好？我要在客廳用筆電工作嗎？
+還是去書房？我現在要出門運動去嗎？這樣還要換衣服好懶喔…</p>
+
+<p>解決辦法就是<strong>使生活行程習慣化</strong>，使之成為不需假以思索就會自動去執行的<strong>慣例(routine)</strong>，
+替自己加上一些限制，<strong>明確地規定自己何時要在何地做什麼事</strong>，<strong>區分出工作及生活休閒的區域</strong>。</p>
+
+<p>延伸閱讀:</p>
+<ul>
+  <li><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></li>
+  <li><a href="/posts/how-i-keep-reading/" target="_blank"><strong>《原子習慣》應用: 我是如何養成閱讀習慣</strong></a></li>
+</ul>
+
+<h2 id="2-缺乏社交孤單寂寞覺得冷">2. 缺乏社交，孤單寂寞覺得冷</h2>
+<p>自己一個人在家工作，沒人可以閒聊，少了茶水間的八卦，偶爾也是會感到孤單的。
+雖然不會有人打擾你，造成你專注工作的中斷，不過人畢竟是社會性的動物，人與人的連結還是必須的。</p>
+
+<h3 id="怎麼辦-1">怎麼辦？</h3>
+<p>少了跟同事的社交，那你可以跟其他人社交呀～ 有了在哪裡都能工作的自由，除了家裡之外，你還有許多的選擇。</p>
+
+<p>像是可以去咖啡廳、coworking space工作，找朋友一起工作(前提是他也可以遠端XD)，
+或是在一些遠距工作者的社團揪團～</p>
+
+<p>以我自己來說，遠距工作之後，反而跟很多許久不見的老友見面，因為我可以直接在他家工作XD，
+有些則是因為地點的關係，去找不在台北的朋友也方便多了，未來出國的話，也可以找在當地工作生活的朋友們😄，
+不過社交跟專心工作之間還是必須要做出取捨拉。</p>
+
+<h2 id="3-瑣碎的工作變多">3. 瑣碎的工作變多</h2>
+<p>基於雇主與員工間的信任，有些公司會制定出的相關準則，
+像是要回報工作進度狀況、寫工作日誌，或者原本相較彈性的工作內容，
+主管為了監督是否在家真的有在工作，而制定了完成期限。這些政策無疑地都是在增加員工們瑣碎的工作內容與壓力。</p>
+
+<h3 id="怎麼辦-2">怎麼辦？</h3>
+<p>跟老闆培養好信任的基礎是最根本的～一旦老闆相信你會把工作做好，他也就不會時時刻刻要一直關心你的進度。</p>
+
+<p>不過如果是剛轉換工作型態，定時回報工作進度或許是不太能避免的，必須要給老闆一個期待，
+讓他知道他可以期望你在哪個時間點完成哪些任務，而這也是我跟老闆說要遠端工作所用的其中一招，
+之後會再寫一篇我是如何說服我老闆遠距工作的(TODO)。</p>
+
+<p>另外有工作日誌並不一定是個壞事，當員工將完成的事記錄下來，有沒有偷懶就一目瞭然，
+雇主對於員工的績效評估會更加客觀，完全以工作成果來看，而不是這個員工有沒有早到晚走，聽不聽話，好不好相處…
+如果員工可以在更短的時間內做完任務，相對地就有更多的時間做自己事，也不用待在辦公室的座位上裝忙😂</p>
+
+<h1 id="結論">結論</h1>
+<p>更多的自由，並不一定會帶來更多的幸福，以前人們會追求工作與生活的平衡(work life balance)，
+上班與私生活有明確的分界，要有夠多的時間可以從事自己的興趣。
+但遠端工作後，工作與生活更多像是融合在了一起，能做到生活即工作，工作即是生活那是最好，
+但並不是每個人都能那麼喜歡自己的工作，所以不妨替自己加上一些限制，明確界定工作的時間及地點，
+或許會更有效率，以及下班後能夠真正地放鬆。</p>
+
+<p>並不是每個人都適合遠端工作，如果你喜歡規律穩定地生活，大部分的行程活動是被安排確定好的，
+那遠端工作可能不適合你。祝大家都能順利地向著自己理想的生活型態上前進！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[在上一篇文章: 遠端工作有哪些好處？中， 提到了許多遠端工作的優點，今天將來看看有哪些缺點，並且提出相對應的解決辦法！]]></summary></entry><entry><title type="html">房間DIY改造: 老舊家具及櫃體篇</title><link href="https://homuchen.com/posts/room-makeover-furniture/" rel="alternate" type="text/html" title="房間DIY改造: 老舊家具及櫃體篇" /><published>2022-06-10T21:52:00+08:00</published><updated>2022-06-10T21:52:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-furniture</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-furniture/"><![CDATA[<p>想DIY重新裝潢佈置自己的房間，家裏有老舊家具或櫃體還是堪用的丟掉可惜，
 ，又或者它是系統家具，做死的也不想費功夫整個打掉，
 但又跟欲改造的風格會格格不入，該怎麼辦呢？</p>
 
@@ -69,7 +141,7 @@
 <p>成果還算滿意～ 唯一預料之外的就是花費的時間比預期的多，等過一段時間如果有災情的話再跟大家報告😂。</p>
 
 <p>之後也會陸續在改造牆面、地板、及新傢俱的添購擺設，
-如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想DIY重新裝潢佈置自己的房間，家裏有老舊家具或櫃體還是堪用的丟掉可惜， ，又或者它是系統家具，做死的也不想費功夫整個打掉， 但又跟欲改造的風格會格格不入，該怎麼辦呢？]]></summary></entry><entry><title type="html">遠端工作有哪些好處？</title><link href="https://homuchen.com/posts/remote-working-advantages/" rel="alternate" type="text/html" title="遠端工作有哪些好處？" /><published>2022-06-10T00:00:00+08:00</published><updated>2022-06-10T00:00:00+08:00</updated><id>https://homuchen.com/posts/remote-working-advantages</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-advantages/"><![CDATA[<p>這篇文章將分享<strong>遠端工作</strong>有哪些好處，也就是我在慢慢轉變為<strong>數位遊牧</strong>生活型態的過程中，
+如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想DIY重新裝潢佈置自己的房間，家裏有老舊家具或櫃體還是堪用的丟掉可惜， ，又或者它是系統家具，做死的也不想費功夫整個打掉， 但又跟欲改造的風格會格格不入，該怎麼辦呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">遠端工作有哪些好處？</title><link href="https://homuchen.com/posts/remote-working-advantages/" rel="alternate" type="text/html" title="遠端工作有哪些好處？" /><published>2022-06-10T00:00:00+08:00</published><updated>2022-06-10T00:00:00+08:00</updated><id>https://homuchen.com/posts/remote-working-advantages</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-advantages/"><![CDATA[<p>這篇文章將分享<strong>遠端工作</strong>有哪些好處，也就是我在慢慢轉變為<strong>數位遊牧</strong>生活型態的過程中，
 所體會的一些點:</p>
 <ul>
   <li>節省通勤時間</li>
@@ -1067,230 +1139,4 @@ LV5的鞋可以直接從市場購買，或是自己從LV0開始升上去，但�
 
 <ul>
   <li><a href="/posts/stepn-efficiency-vs-gst-outcome-test/" target="_blank"><strong>STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？ 對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">STEPN攻略: 想進場跑步該如何挑選鞋子？</title><link href="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/" rel="alternate" type="text/html" title="STEPN攻略: 想進場跑步該如何挑選鞋子？" /><published>2022-04-17T15:49:00+08:00</published><updated>2022-04-17T15:49:00+08:00</updated><id>https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start</id><content type="html" xml:base="https://homuchen.com/posts/stepn-how-to-choose-shoes-to-start/"><![CDATA[<p>在考慮進場<strong>STEPN</strong>邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家，
-買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-shoes-0.jpg" alt="STEPN shoes price" /></p>
-
-<p>可以看到上圖，在撰寫這篇文章時(2022-04-16)，
-最便宜的鞋在市場上的價格已經來到約12SOL，折合美金約為1224USD，台幣為35655NTD。</p>
-
-<h1 id="認識鞋子">認識鞋子</h1>
-<p>首先我們先要認識鞋子，好知道哪些因素會影響價格，就算有時有些因素不太影響價格，
-卻會影響到之後跑步賺錢的效率！</p>
-
-<p>鞋子有分品質(Quality)，分別為Common、Uncommon、Rare、Epic、Legendary，
-今天只就Common的鞋討論，因為最便宜的鞋只會是這種😂</p>
-
-<h2 id="鞋子基礎數值">鞋子基礎數值</h2>
-<p>每雙鞋子都會有四種基礎素質，
-分別為<strong>Efficiency</strong>、<strong>Luck</strong>、<strong>Comfort</strong>、<strong>Resilience</strong>，這些數值目前看起來對價格是沒有影響的，
-一般的鞋子(Common)的這四種素質都會是<strong>1-10</strong>的隨機分佈，
-所以一樣的錢買到4個素質都是10的就是最好了啦～</p>
-
-<p>而以跑步賺錢效率來說，最直接影響的數值就是Efficiency及Resilience，
-Efficiency越高跑步時產生的GST越多，而Resilience越高，會讓鞋子不容易壞，需要維修的費用較少！</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/stepn-shoes-2.jpg" alt="STEPN shoes fundementals" /></p>
-
-<p>上圖可以看到，左邊的鞋的素質就比右邊的要好上許多。</p>
-
-<p>至於素質的影響有多大，
-可以看這一篇<a href="/posts/stepn-efficiency-vs-gst-outcome-test/" target="_blank"><strong>STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</strong></a></p>
-
-<h2 id="鞋子等級">鞋子等級</h2>
-
-<h3 id="升等花費">升等花費</h3>
-<p>鞋子可以升等，隨著等級的增加，所需要花費的GST及時間都會隨著增加，
-最高可以升到30等，以下先簡單列出1-10等升級所需的花費。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>等級</th>
-      <th>花費GST</th>
-      <th>累積花費GST</th>
-      <th>花費時間(小時)</th>
-      <th>累積花費時間</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>3</td>
-      <td>3</td>
-      <td>6</td>
-      <td>3</td>
-      <td>6</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>4</td>
-      <td>4</td>
-      <td>10</td>
-      <td>4</td>
-      <td>10</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>5</td>
-      <td>10</td>
-      <td>20</td>
-      <td>5</td>
-      <td>15</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>6</td>
-      <td>6</td>
-      <td>26</td>
-      <td>6</td>
-      <td>21</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>7</td>
-      <td>7</td>
-      <td>33</td>
-      <td>7</td>
-      <td>28</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>8</td>
-      <td>8</td>
-      <td>41</td>
-      <td>8</td>
-      <td>36</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>9</td>
-      <td>9</td>
-      <td>50</td>
-      <td>9</td>
-      <td>45</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>10</td>
-      <td>30</td>
-      <td>80</td>
-      <td>10</td>
-      <td>55</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="升等可以幹嘛呢">升等可以幹嘛呢？</h3>
-<p>Common的鞋子每升一級可以有4點的點數讓你分配到上述的基礎數值上，
-至於該不該要花GST來升級鞋子以提升之後每天的產出效率，
-一樣可以看這篇<a href="/posts/stepn-efficiency-vs-gst-outcome-test/" target="_blank"><strong>STEPN實測: 效率對產出的影響？我應該要升級我的跑鞋嗎？</strong></a></p>
-
-<p>另外升級還會開通一些功能，升到5級的鞋子才可以開啟鑄造(mint)的功能，10級就可以出租(目前尚未開放)，</p>
-
-<p>可以看到市場上的鞋子幾乎不是Lv0就是Lv5，這就是因為5等才可以鑄造的原因，
-而鑄造次數就是影響鞋子價格最主要的因素。</p>
-
-<h2 id="鑄造mint次數">鑄造(mint)次數</h2>
-<p>兩雙5級以上的鞋子再加上一些花費，就可以鑄造出一雙新的鞋子，而每一雙鞋子<strong>最多只能鑄造7次</strong>。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>鞋子等級</th>
-      <th>鑄造所需花費GST</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>100</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>2</td>
-      <td>100</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>3</td>
-      <td>150</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>4</td>
-      <td>200</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>5</td>
-      <td>250</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>6</td>
-      <td>300</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>7</td>
-      <td>350</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>舉個例子:</p>
-<ul>
-  <li>兩雙鑄造次數皆為0的鞋，需花費200GST來鑄造出一雙新鞋</li>
-  <li>一雙鑄造次數為2，另一雙為0的話，就需要花費100 + 150 = 250GST</li>
-</ul>
-
-<p>所以這也就是為什麼LV5的鞋子還比較便宜的原因，因為他們已經被鑄造過兩次了，
-而第三次的鑄造會比前兩次要多花50GST。</p>
-
-<h1 id="結論">結論</h1>
-<p>買一雙Lv5，鑄造次數已經2次的鞋，且Efficiency及Resilience數值好的鞋，
-是殖利率最高，最快回本的方法(大約30-40天)，鞋子本身比較便宜之後，
-又幫你免費升級了5次(省了20GST)，讓你跑步時可以賺到更多GST。</p>
-
-<p>但如果你想要玩鑄造，持續投入所賺到的GST時，期待鞋子漲價，賣鞋獲利的話，
-就要小心不要買到鑄造次數已經是2次或甚至是3次的鞋子啦～</p>
-
-<p>就像買股票有人是為了賺價差，有人賺股息，根據你的目的及風險偏好，來決定你的投資策略囉～</p>
-
-<h1 id="參考資料">參考資料</h1>
-<ul>
-  <li><a href="https://whitepaper.stepn.com/game-fi-elements/shoe-minting" target="_blank">STEPN白皮書: 鞋子鑄造</a></li>
-  <li><a href="https://stepn-simulator.xyz/mint/eng/" target="_blank">鞋子鑄造計算機</a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[在考慮進場STEPN邊跑邊賺嗎？對於想買鞋嘗試玩玩看的玩家， 買鞋時有哪些點是需要考量及注意的呢？將在這篇文章一一介紹。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="crypto" /><category term="stepn" /><summary type="html"><![CDATA[真的可以賺到錢嗎？每天可以賺錢的速度有多快，幾天才可以回本呢？ 對於還在猶豫不決、思考著到底要不要進場的玩家們，這些大概就是最重要的問題吧！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/stepn-income-01.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
