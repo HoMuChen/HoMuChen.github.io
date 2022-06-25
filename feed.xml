@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-06-22T23:51:25+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">遠端工作模式對於雇主有哪些好處？</title><link href="https://homuchen.com/posts/remote-working-advantages-for-boss/" rel="alternate" type="text/html" title="遠端工作模式對於雇主有哪些好處？" /><published>2022-06-22T11:50:00+08:00</published><updated>2022-06-22T11:50:00+08:00</updated><id>https://homuchen.com/posts/remote-working-advantages-for-boss</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-advantages-for-boss/"><![CDATA[<p>在上篇文章中: <a href="/posts/remote-working-advantages/"><strong>遠端工作有哪些好處？</strong></a>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-06-26T00:01:59+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">淺談各種資料庫cache策略: cache aside、read through、write through、write back</title><link href="https://homuchen.com/posts/databse-chache-strategies/" rel="alternate" type="text/html" title="淺談各種資料庫cache策略: cache aside、read through、write through、write back" /><published>2022-06-25T23:54:00+08:00</published><updated>2022-06-25T23:54:00+08:00</updated><id>https://homuchen.com/posts/databse-chache-strategies</id><content type="html" xml:base="https://homuchen.com/posts/databse-chache-strategies/"><![CDATA[<p>資料庫的快取策略那麼多種: <strong>cache aside</strong>、<strong>read through</strong>、<strong>write through</strong>、<strong>write back</strong>，
+常常哪個是哪個也分不清楚、記不起來，今天將分享這些策略背後的內功心法，
+讓大家不用在為了記不起這些招式的名稱而傷腦筋。</p>
+
+<h1 id="什麼是資料庫快取database-cache">什麼是資料庫快取(database cache)?</h1>
+<p>快取是一種策略，用來增進你的應用程式及資料庫的效能，
+作法是將常使用的資料放在具有更快存取速度的的記憶體中(in memory)，
+而達成這樣的目的的策略又有好多種:</p>
+
+<ul>
+  <li>cache aside</li>
+  <li>read through</li>
+  <li>write through</li>
+  <li>write back</li>
+</ul>
+
+<p>有沒有系統性的方法可以歸納這些策略，各自的優缺點即適用的情況又是為何？
+讓我們接著看下去！</p>
+
+<h1 id="replication">Replication</h1>
+<p>其中最核心的關鍵就是: <strong>cahce就是一種replication</strong>，因為資料一部分放在資料庫中，
+而另一個放在快取，這樣就是一種replication，在分散式系統中，要做replication就只要問兩個問題:</p>
+
+<ol>
+  <li>誰是Master？誰是Slave？</li>
+  <li>複製的過程是同步的還是非同步的？</li>
+</ol>
+
+<p>之前有寫過一篇關於replication的文章: 
+<a href="/posts/what-and-why-database-replication-advantage-and-disadvantage/" target="_blank"><strong>[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?</strong></a>，有興趣的朋友可以再去看看～</p>
+
+<h2 id="master-or-slave">Master or Slave</h2>
+<p>首先，我們先定義幾個名詞，master就是接受資料寫入修改的最一開始的節點，
+而slave就是將master的改變複製一份過來存放的地方。</p>
+
+<p>換句話説，資料要寫入，就是寫到master，然後會在複製一份到slave。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" alt="master slave repilcation" target="_blank" /></p>
+
+<h2 id="synchronous-or-asynchronous-replication">Synchronous or Asynchronous replication</h2>
+<p>從master複製到slave間的過程，會有一個時間差，
+同步及非同步的複製差別在於有沒有等到資料確定被複製到了slave才會回傳寫入成功。</p>
+
+<ul>
+  <li>synchronous: 當資料寫入到master時，唯有等到他確定被複製到了slave，才會ack成功。</li>
+  <li>asynchronous: 資料一寫入到master，不等它被複製到了slave，就ack成功。</li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/database-cache-1.jpg" alt="Synchronous or Asynchronous replication" target="_blank" /></p>
+
+<h1 id="各種cache策略">各種cache策略</h1>
+<p>知道了Replication之後，要怎麼將這些觀念應用在cache上呢？就是將以下兩種情況排列組合！就會得到四種快取策略拉～</p>
+
+<ol>
+  <li>資料庫作為master vs. 快取作為master</li>
+  <li>asynchronous vs. asynchronous replication</li>
+</ol>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/database-cache-0.jpg" alt="Cache strategies" target="_blank" /></p>
+
+<p>基本上，使用資料庫作為master，可以<strong>保證資料不會丟失</strong>；
+若使用快取作為master，則是<strong>適合write heavy並且可以容許資料丟失</strong>的應用。
+而<strong>同步跟不同步則決定了資料是否會有不一致</strong>的現象。
+接著就讓我們分別更加仔細地看他們個別的作法及優缺點吧。</p>
+
+<h2 id="cache-aside">cache aside</h2>
+<ul>
+  <li>
+    <p>寫入: 資料寫入時就是寫到主要的資料庫中。</p>
+  </li>
+  <li>
+    <p>讀取: 應用程式讀取資料時，會先檢查是否有在快取中了，有的話就回傳，沒有的話就去資料庫中讀取，並存放一份在快取中，
+因為這個複製的動作是當這筆有被讀取到時才會進行，所以為非同步的複製。</p>
+  </li>
+  <li>
+    <p>優點: 資料直接寫入到資料庫中，就保證不會丟失，最容易實現，因為寫入時的動作跟沒有快取時是一模一樣的。</p>
+  </li>
+  <li>
+    <p>缺點: 第一次讀取時一定會cache miss，而非同步的複製就可能造成資料間的不一致。</p>
+  </li>
+</ul>
+
+<h2 id="read-through">read through</h2>
+<ul>
+  <li>
+    <p>寫入: 資料寫入時就是寫到主要的資料庫中。</p>
+  </li>
+  <li>
+    <p>讀取: 跟cache aside非常相似，唯一差別在於應用程式只直接從緩存去拿資料，不需要同時知道緩存及資料庫的存在，
+而由快取本身決定要去哪裡拿資料。</p>
+  </li>
+  <li>
+    <p>優點: 應用程式的程式碼會更加簡潔。</p>
+  </li>
+  <li>
+    <p>缺點: 同cache aside。</p>
+  </li>
+</ul>
+
+<h2 id="write-through">write through</h2>
+<ul>
+  <li>
+    <p>寫入: 寫入時直接寫入緩存及資料庫，必須等到兩者都寫入成功才成功。</p>
+  </li>
+  <li>
+    <p>讀取: 直接讀取緩存，通常搭配read through，如此一來，應用程式都將只需面對緩存就好。</p>
+  </li>
+  <li>
+    <p>優點: 不會有cache miss。</p>
+  </li>
+  <li>
+    <p>缺點: 寫入資料要等到快取及資料庫都寫入成功後才算成功，所以會增加寫入延遲。</p>
+  </li>
+</ul>
+
+<h2 id="write-backwrite-behind">write back、write behind</h2>
+<ul>
+  <li>
+    <p>寫入: 寫入時直接寫入緩存，在以非同步的方式寫入到資料庫，這麼做可能有幾個原因，
+你的應用有大量write而資料庫負荷不了，可能在緩存那邊做一個batch insert。</p>
+  </li>
+  <li>
+    <p>讀取: 直接讀取緩存。</p>
+  </li>
+  <li>
+    <p>優點: 不會有cache miss、適用於write heavy的應用、減少對資料庫的負荷。</p>
+  </li>
+  <li>
+    <p>缺點: 資料有可能會丟失，當資料還未被成功從緩存複製到資料庫時，如果緩存這時掛掉，那些資料就不見了。</p>
+  </li>
+</ul>
+
+<h1 id="結論">結論</h1>
+<p>今天從另一個角度來看看各種緩存策略，寫入到資料庫的，不會有資料丟失的問題，
+同步及異步的複製則決定了資料的一致性，write heavy的應用可以考慮第一時間寫入緩存。</p>
+
+<p>策略沒有絕對的對錯，根據你的使用場景(write to read ratio、persistency、consistency)，選擇最適合的方案。
+希望今天的分享對你有一丁點兒的幫助，祝大家事業成功、生活美滿！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[資料庫的快取策略那麼多種: cache aside、read through、write through、write back， 常常哪個是哪個也分不清楚、記不起來，今天將分享這些策略背後的內功心法， 讓大家不用在為了記不起這些招式的名稱而傷腦筋。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-cache-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-cache-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">遠端工作模式對於雇主有哪些好處？</title><link href="https://homuchen.com/posts/remote-working-advantages-for-boss/" rel="alternate" type="text/html" title="遠端工作模式對於雇主有哪些好處？" /><published>2022-06-22T11:50:00+08:00</published><updated>2022-06-22T11:50:00+08:00</updated><id>https://homuchen.com/posts/remote-working-advantages-for-boss</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-advantages-for-boss/"><![CDATA[<p>在上篇文章中: <a href="/posts/remote-working-advantages/"><strong>遠端工作有哪些好處？</strong></a>
 以員工、接案者或自由工作者分享了遠距工作模式有哪些好處？今天換個角度！
 來看看身為老闆的話，這樣的工作模式會帶來哪些好處。</p>
 
@@ -728,70 +865,4 @@ Pool越大，可能就越容易找到合適的人。</p>
 <ol>
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/8857625/" target="_blank" id="1">Redelmeier D. A., Kahneman D. (1996). Patients’ memories of painful medical treatments: real-time and retrospective evaluations of two minimally invasive procedures.</a></li>
   <li><a href="https://zh.m.wikipedia.org/zh-tw/%E8%A1%8C%E7%82%BA%E7%B6%93%E6%BF%9F%E5%AD%B8" target="_blank" id="2">行為經濟學</a></li>
-</ol>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="psychology" /><summary type="html"><![CDATA[為什麼IKEA會在最後結帳區的前後，設置餐廳區及有賣霜淇淋的小吃部呢？ 這麼做對我們購物的體驗有什麼影響嗎？峰終定律可能可以給我們一點答案。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/peak-end-rule-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/peak-end-rule-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">架設個人網站、撰寫部落格帶給我的5個好處</title><link href="https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me/" rel="alternate" type="text/html" title="架設個人網站、撰寫部落格帶給我的5個好處" /><published>2022-05-08T20:31:00+08:00</published><updated>2022-05-08T20:31:00+08:00</updated><id>https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me</id><content type="html" xml:base="https://homuchen.com/posts/advantages-personal-website-and-blog-brings-to-me/"><![CDATA[<p>開始認真規律的寫部落格寫到現在，大概過了近一年的時間，這篇文章將分享
-寫部落格帶給了我哪些好處:</p>
-
-<ul>
-  <li>積極學習</li>
-  <li>豐富生活</li>
-  <li>分享輸出</li>
-  <li>個人品牌</li>
-  <li>SEO知識及Markdown語法</li>
-</ul>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/personal-blog-advantages.jpg" alt="personal blog advantages" loading="lazy" /></p>
-
-<h1 id="積極學習">積極學習</h1>
-<p>當你需要規律的有產出的時候，等於變相地要求自己有所學習及成長，如果寫不出來，
-就代表最近這些日子沒有什麼長進了😂</p>
-
-<p>寫作就是 <strong>輸入</strong> + <strong>處理</strong> + <strong>輸出</strong>，不管是工作專業上的、一般的閱讀或是實踐一些新得到的想法都好，
-為了要有東西輸出，就會逼自己持續的輸入及思考。</p>
-
-<h1 id="豐富生活">豐富生活</h1>
-<p>除了成長之外，適當的休息及玩樂也是必要的！但休閒娛樂也有分為被動及主動的，
-低品質及高品質的活動。</p>
-
-<p>躺在沙發上吃垃圾食物看劇是一種休閒，研究室內設計，
-準備DIY改造房間也是一種休閒，都很有趣！我也喜歡耍廢！但是收穫到的卻是截然不同的！</p>
-
-<p>在<a href="https://www.books.com.tw/products/0010814436" target="_blank"><strong>《要忙, 就忙得有意義》</strong></a>一書裡有提到，
-該如何讓我們的一生過得充實，完成很多事呢？其實很多時候只是我們忘記了，我們沒有創造出值得記憶的事物，
-比如你每天的通勤一小時，如果都是不假思索，
-同一路線上班下班，就這樣過了30年，在那7800個小時裡(1x5x52x30)，你會記得什麼呢?</p>
-
-<p>那如果你一天換個交通方式，一天繞個路去探索別家早餐店，是不是就彷彿記得更多的事，擁有了更多時間呢？
-所以每天可以問問自己: <strong>今天跟昨天有什麼不一樣呢？</strong></p>
-
-<h1 id="分享輸出">分享輸出</h1>
-<p>透過寫作輸出，可以讓我的學習更加地深刻，大家都知道教學就是最好的學習，當你要去教導別人一個概念時，
-如果自己理解得不夠清楚，就可能會卡關，所以可以趁著寫作輸出時，找出自己還不是理解得很透徹的點。</p>
-
-<p>延伸閱讀:</p>
-<ul>
-  <li><a href="/posts/book-notes-output/" target="_blank"><strong>[讀書筆記] 最高學以致用法: 讓學習發揮最大成果的輸出大全</strong></a></li>
-</ul>
-
-<h1 id="個人品牌">個人品牌</h1>
-<p>曾經有位素不謀面的朋友的朋友，表示他願意幫我看我的履歷，並且向他們公司(全球市值前10)進行內部推薦，
-問他為什麼願意這樣幫助我呢？他說因為他看過了我的部落格！</p>
-
-<p>這就是自我營銷、個人品牌的強大，在現今網路發達的年代，將自己行銷出去的門檻變得非常低，
-部落格(或其他平台)不僅可以讓大家認識你，各種機會也會自己找上門來！</p>
-
-<p>面試找工作時，公司只能透過幾次會談，在幾個小時的時間來了解你，那何不透過部落格，
-讓他們可以更多地知道你的強項！</p>
-
-<h1 id="seo及markdown">SEO及Markdown</h1>
-<p>技術面上的收穫，就是了解到更多關於SEO的知識，既然都花心力寫了，當然還是會想要觸及到更多的群眾，
-不過我覺得還是真誠且有價值的內容才是最重要的，只是SEO的一些知識，可以幫你加速這個過程。</p>
-
-<p>而我的部落格是用Jekyll建置的，是一個基於markdown語法來產出靜態網頁的程式，所以我在寫文章時，
-都是對著黑白畫面的文字介面，也讓我更熟悉了markdown語法～</p>
-
-<h1 id="結論">結論</h1>
-<p>最一開始寫作的初衷，就只是為了讓自己的學習可以更加深刻，不過後來發現它帶來了許多的好處，
-其中最主要的，就是會<strong>讓生活變得更加地充實</strong>！有意識的、好好地度過每一天，
-而不是虛度光陰，等到老的時候，想不起來這輩子都到底幹了些什麼😂</p>
-
-<p>這邊簡單地跟大家分享～希望對大家有一丁點兒的幫助，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="self improvement" /><summary type="html"><![CDATA[開始認真規律的寫部落格寫到現在，大概過了近一年的時間，這篇文章將分享 寫部落格帶給了我哪些好處:]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/personal-blog-advantages.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/personal-blog-advantages.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ol>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="psychology" /><summary type="html"><![CDATA[為什麼IKEA會在最後結帳區的前後，設置餐廳區及有賣霜淇淋的小吃部呢？ 這麼做對我們購物的體驗有什麼影響嗎？峰終定律可能可以給我們一點答案。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/peak-end-rule-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/peak-end-rule-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
