@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-09T00:50:43+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">[讀書筆記] 少才是力量: 簡單高效6大原則</title><link href="https://homuchen.com/posts/book-note-the-power-of-less/" rel="alternate" type="text/html" title="[讀書筆記] 少才是力量: 簡單高效6大原則" /><published>2022-07-09T00:48:00+08:00</published><updated>2022-07-09T00:48:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-power-of-less</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-power-of-less/"><![CDATA[<p>在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-11T00:20:41+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)</title><link href="https://homuchen.com/posts/room-makeover-wall/" rel="alternate" type="text/html" title="房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)" /><published>2022-07-11T00:18:00+08:00</published><updated>2022-07-11T00:18:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-wall</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-wall/"><![CDATA[<p>今天要分享我在改造房間的過程中，針對牆壁這一部分做了些什麼，首先就來看看成果吧！</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" alt="牆壁改造Before and After" loading="lazy" /></p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-2.jpg" alt="牆壁改造Before and After" loading="lazy" /></p>
+
+<h1 id="要改善的點">要改善的點</h1>
+<p>從Before的照片中可以看到，牆壁的顏色不均、二十幾年的海報(我妹貼的)、
+醜醜的變電箱及管線、黃黃的開關面板及月曆貼起來的窗戶😂，
+所以這次牆壁改造的點，除了窗簾直接請人家做之後，其他的有:</p>
+
+<ul>
+  <li>牆壁重新粉刷</li>
+  <li>開關面板安裝</li>
+  <li>變電箱及線路裝飾</li>
+</ul>
+
+<h1 id="油漆粉刷">油漆粉刷</h1>
+<h2 id="廠牌及顏色">廠牌及顏色</h2>
+<p>我使用的是得利乳膠漆1501白，以及00NN 62/000的電腦調色。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-3.jpg" alt="油漆: 1501白、00NN 62/000" loading="lazy" /></p>
+
+<p>如果大家不想要房間那麼無聊都是白色，都要不知道要如何配色時，在這邊提供幾個原則給跟我一樣不是美學專業的人們:</p>
+
+<ol>
+  <li><strong>顏色不要太多種</strong></li>
+  <li><strong>中性色或低彩度</strong></li>
+</ol>
+
+<p>顏色不要太多種我想大家都知道，但如果連要選兩三個顏色來配都不知道怎麼選怎麼辦，我推薦使用中性色，也就是黑白灰，
+完全沒有出錯的可能😂。</p>
+
+<p>另外也可以使用低彩度(飽和度)的顏色，就算真的選得不好，整個房間也會有種粉粉的感覺，也就是莫蘭迪色的原理。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-4.jpg" alt="彩度" loading="lazy" /></p>
+
+<p>而得利的電腦調色色號一共有三個組成: 色相、明度跟彩度，最後面的三個數字就是彩度，大家就可以挑選最後三個數字比較小的顏色囉～
+想更多了解得利油漆色號的意義的，
+推薦看看這部影片<a href="https://www.youtube.com/watch?v=zsmQunVavLE" target="_blank"><strong>油漆小妹線上聊色卡，顏色該怎麼挑選?</strong></a>。</p>
+
+<h1 id="開關面板安裝">開關面板安裝</h1>
+<p>開關面板老舊發黃，按鍵也不好按，就可以考慮換掉～如果害怕自己接線的話，可以請水電工來做，
+工錢也是一個幾十塊而已。</p>
+
+<p>如果想自己來，推薦<a href="https://www.youtube.com/watch?v=X-6-yiAWK6A" target="_blank"><strong>宅水電的教學影片</strong></a>，
+<strong>開關有分雙切單切</strong>，單切就是一個開關控制一個電路，
+雙切是兩個開關控制一個電路，就比如說門口跟床頭的開關都可以控制同一個大燈，
+買的時候需要注意一下是買到雙切還是單切，雙切的開關在單切電路中還是可以使用，
+但<strong>如果你買到單切開關，就無法在你家的雙切電路中使用</strong>囉～</p>
+
+<p>詳細的施工過程可以參考網路上，有需多的資料可以去學習，記得施工的時候把總開關關掉比較安全！</p>
+
+<h1 id="變電箱及線路遮醜">變電箱及線路遮醜</h1>
+<p>選擇使用掛畫來遮擋，上蝦皮就有許多的選擇，背面我是用藍丁膠把畫黏在牆壁上，
+照片上這四幅畫含運費總共花了我1186元。</p>
+
+<h1 id="總結">總結</h1>
+<p>成果還算滿意～</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-5.jpg" alt="房間DIY改造" loading="lazy" /></p>
+
+<p>這次總共購買的清單如下:</p>
+
+<ol>
+  <li>得利乳膠漆1501白(3.75公升): 1000元</li>
+  <li>00NN 62/000(1公升): 380元</li>
+  <li>四幅掛畫: 1186元</li>
+  <li>三個國際牌開關面板: 603元</li>
+</ol>
+
+<p>總共～～ 3169元！</p>
+
+<p>之前有針對老舊櫃體及大門的部分做過改造，有興趣的朋友可以看我之前寫過的文章～</p>
+
+<ul>
+  <li><a href="/posts/room-makeover-furniture/" target="_blank"><strong>房間DIY改造: 老舊家具及櫃體篇</strong></a></li>
+  <li><a href="/posts/room-makeover-door/" target="_blank"><strong>房間DIY改造: 大門篇，如何用剩的乳膠漆來改造大門</strong></a></li>
+</ul>
+
+<p>之後就剩下改造地板、及新傢俱的添購(床、工作桌椅)，
+如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想改造自己的房間，怕沒有美感的自己不知道要怎麼選油漆顏色嗎？發黃的開關面板及醜醜的變電箱該怎麼辦？ 今天將分享我如何改造，在沒有什麼美學素養的前提下該如何進行！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 少才是力量: 簡單高效6大原則</title><link href="https://homuchen.com/posts/book-note-the-power-of-less/" rel="alternate" type="text/html" title="[讀書筆記] 少才是力量: 簡單高效6大原則" /><published>2022-07-09T00:48:00+08:00</published><updated>2022-07-09T00:48:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-power-of-less</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-power-of-less/"><![CDATA[<p>在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸，
 許多人都想在每天24小時的時間裡，完成更多的事，各種時間管理的方法層出不窮，
 不過這本書卻是要大家簡化生活，作者要跟大家分享<strong>如何做更少的事，卻可以成就更多</strong>！</p>
 
@@ -845,116 +926,4 @@ Pool越大，可能就越容易找到合適的人。</p>
 將會重複使用的部分拆出來，在原先的OpenAPI spec也能做到，就是使用<code class="language-plaintext highlighter-rouge">$ref</code>，
 但今天更近一步跟大家分享將其寫在不同的檔案的方法: 使用<code class="language-plaintext highlighter-rouge">JSON</code>格式、利用其他套件<code class="language-plaintext highlighter-rouge">swagger-cli</code>。</p>
 
-<p>希望以上的內容對你有一丁點的幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><category term="openapi" /><summary type="html"><![CDATA[OpenAPI的document文件可以變得非常大一份，特別是當你有好幾百個routes的時候， 這時候單一份的yaml檔管理起來可能會非常頭大，這篇文章將分享在這種情況下， 我是如何將一份大的檔案拆分成許多小的檔案，易於管理。]]></summary></entry><entry><title type="html">如何使用Notion打造Kanban based的待辦清單</title><link href="https://homuchen.com/posts/notion-kanban-board/" rel="alternate" type="text/html" title="如何使用Notion打造Kanban based的待辦清單" /><published>2022-06-04T00:02:00+08:00</published><updated>2022-06-04T00:02:00+08:00</updated><id>https://homuchen.com/posts/notion-kanban-board</id><content type="html" xml:base="https://homuchen.com/posts/notion-kanban-board/"><![CDATA[<p>待辦清單的首要任務是幫助我們整理心智，在眾多的選擇中，優先認出當下最該先執行的事項，
-而不會被一堆的事項搞到非常憂慮，什麼都想做卻什麼都做不好，甚至是都沒有開始做。</p>
-
-<p>這篇文章將簡單分享我認為<strong>待辦清單系統應該具有哪些原則</strong>，什麼是<strong>Kanban</strong>，
-以及我如何使用<strong>Notion</strong>，來打造自己的Kanban based的待辦清單系統，Let’s go！</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-0.jpg" alt="notion kanban todo list system" loading="lazy" /></p>
-
-<h1 id="三大待辦清單原則">三大待辦清單原則</h1>
-<p>市面上的待辦事項系統玲瑯滿目，有沒有一些基本的原則是我們可以把握的呢？以下為大家簡單總結出三項原則：</p>
-
-<ul>
-  <li>
-    <p><strong>要有截止日期:</strong>
-沒有截止日期，沒有急迫性，大家就是會拖，懶就是人的天性，我想不用多說什麼，大家應該多少都能感同身受吧😂</p>
-  </li>
-  <li>
-    <p><strong>清單不能太長:</strong>
-選項太多也會導致不知道要選哪一項任務來進行，也就是<strong>決策癱瘓</strong>，就算費力地做了選擇，也會導致<strong>決策疲勞</strong>，
-耗費了許多能量在決策上。</p>
-  </li>
-  <li>
-    <p><strong>與目標連結:</strong>
-要知道<strong>為什麼</strong>要做每項任務，它必須可以幫助你達成某項目標，否則做了很多事，很可能只是在瞎忙。</p>
-  </li>
-</ul>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-3.jpg" alt="todo list system principles" loading="lazy" /></p>
-
-<p>關於待辦清單的原則，想看更詳盡的解釋，可以參考我之前寫過的一篇文章:</p>
-
-<p><a href="/posts/book-note-todo-list-formula/" target="_blank"><strong>掌握這3個原則，打造出最適合自己的代辦清單系統</strong></a></p>
-
-<h1 id="kanban是什麼">Kanban是什麼</h1>
-<p>Kanban緣起於Toyota的生產管理系統，看起來就像是下圖這樣:</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-to-do-5.jpg" alt="看板系統" loading="lazy" /></p>
-
-<p>主要組成有<strong>欄(column)</strong>、<strong>列</strong>、<strong>卡片(card)</strong>、<strong>WIP limit</strong>，每張卡片即是一項任務，
-可以將相關的任務放在同一欄，也可以使用顏色分類，並在每一列區分出<strong>未開始</strong>、<strong>進行中</strong>及<strong>完成</strong>，
-而進行中的任務數量會有一個上限，也就是WIP limit(Work in Progress Limit)。</p>
-
-<h2 id="組成">組成</h2>
-<ul>
-  <li><strong>Cards</strong>: 每一張卡片即代表一個任務事項。</li>
-  <li><strong>Columns</strong>: Kanban最明顯的特徵就是有著不同狀態的直欄: <strong>未開始</strong>、<strong>進行中</strong>及<strong>完成</strong>，
-藉著將卡片移動來移動去以及視覺化，能夠對當前的進度及狀態一目瞭然。</li>
-  <li><strong>WIP limit</strong>: 而對於進行中的那一欄，有一個卡片的數量上限限制，可以避免我們任務越積越多，
-並且首先專注於最重要的幾件事上。</li>
-</ul>
-
-<h2 id="好處">好處</h2>
-<ul>
-  <li><strong>視覺化</strong>: 對於所以進行中及未開始的能夠一目瞭然，如果是一個團隊，
-成員間也能迅速地同步所有任務事項的狀態。</li>
-  <li><strong>決定優先事項</strong>: 每個當下只需專注於進行中的事項，把他們做完之前，不需要擔心其他的事，
-可以減少心智負擔，也不用擔心是否會忘掉其他任務，因為你有把它們寫在未開始的那欄。</li>
-</ul>
-
-<h1 id="使用notion來實作">使用Notion來實作</h1>
-<p>最後也是最重要的，將利用Notion這套軟體，來打造自己的Kanban，
-並且可以符合上述說的三個原則: <strong>有截止日期</strong>、<strong>不能太長</strong>、<strong>與目標連結</strong>。</p>
-
-<p>原本的Kanban系統因為有WIP limit的關係，有符合清單不能太長的原則，
-但缺少了截止日期及與特定目標連結，
-接下來我將一步一步地示範如何利用<a href="https://www.notion.so/" target="_blank"><strong>Notion</strong></a>，
-來完善我們Kanban待辦清單系統！</p>
-
-<h2 id="建立表格">建立表格</h2>
-<p>首先第一步，新增一個頁面，並且選擇<strong>Table</strong>。
-<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-1.jpg" alt="notion: create a table" loading="lazy" /></p>
-
-<p>接著系統會要你選擇資料來源，這邊就選<strong>New database</strong>。
-<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-2.jpg" alt="notion: create a table" loading="lazy" /></p>
-
-<h2 id="新增欄位">新增欄位</h2>
-<p>現在需要來定義我們的資料庫裡需要的欄位了，這邊我們是會需要名稱、任務狀態、截至日期、目標或專案。
-<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-3.jpg" alt="notion: create columns" loading="lazy" /></p>
-
-<ol>
-  <li>
-    <p>狀態(Status): 為一個單選欄，主要的狀態就分為未開始、進行中、已完成，可以取用自己喜歡的名字，
-也可以有更多的狀態，這邊最主要的目的就是區分出進行中的任務。</p>
-  </li>
-  <li>
-    <p>目標或專案(Project): 每個任務會有附屬於一個目標或是專案之下，記錄下來，可以知道為什麼要做這個任務，
-當事項太多時，也可以利用這個欄位來做篩選。</p>
-  </li>
-  <li>
-    <p>截止日期或時間區間(Deadline): 加上截止日期，為自己增加急迫性，否則就很容易一拖再拖，
-後續也會利用這個欄位來建立timeline的視覺畫圖表，有利於我們使用截止日期來決定哪些任務應該趕快開始進行。</p>
-  </li>
-</ol>
-
-<h2 id="新增board-view">新增Board view</h2>
-<p>建立好資料後，就可以使用board view的功能，按照下圖的步驟，來使得系統像一個看板拉！
-<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-4.jpg" alt="notion: add board view" loading="lazy" /></p>
-
-<p>完成後，就可以在板上將任務拖拉移動來更改狀態，可以依照個人習慣的不同，每天或每個禮拜，
-決定好要先專注於哪些任務。</p>
-
-<h2 id="新增timeline-view">新增Timeline view</h2>
-<p>再新增一個timeline view，步驟如下圖:
-<img src="https://storage.googleapis.com/homuchen.com/images/notion-kanban-5.jpg" alt="notion: add timeline view" loading="lazy" /></p>
-
-<p>可以看到紅線的位置就是當天，有了這張圖表，就可以一目瞭然的看出，
-哪些任務已經快可以開始或是截止日期已經逼近了，可以據此來調整你的優先事項唷！</p>
-
-<h1 id="總結">總結</h1>
-<p>今天簡單地分享了好的待辦清單系統應該要具有的原則: 截止日期、不能太長、與目標連結，
-也認識了一個常見於敏捷開發團隊的系統: 看板(Kanban)，最後使用了Notion來實作。</p>
-
-<p>祝大家生產力高高，每天都可以順利地往自己的目標邁進！ 掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="notion" /><category term="productivity" /><category term="kanban" /><summary type="html"><![CDATA[待辦清單系統應該具有哪些原則，什麼是Kanban， 以及我如何使用Notion，來打造自己的Kanban based的待辦清單系統]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/notion-kanban-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/notion-kanban-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>希望以上的內容對你有一丁點的幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><category term="openapi" /><summary type="html"><![CDATA[OpenAPI的document文件可以變得非常大一份，特別是當你有好幾百個routes的時候， 這時候單一份的yaml檔管理起來可能會非常頭大，這篇文章將分享在這種情況下， 我是如何將一份大的檔案拆分成許多小的檔案，易於管理。]]></summary></entry></feed>
