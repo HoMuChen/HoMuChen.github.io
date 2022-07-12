@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-11T00:20:41+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)</title><link href="https://homuchen.com/posts/room-makeover-wall/" rel="alternate" type="text/html" title="房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)" /><published>2022-07-11T00:18:00+08:00</published><updated>2022-07-11T00:18:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-wall</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-wall/"><![CDATA[<p>今天要分享我在改造房間的過程中，針對牆壁這一部分做了些什麼，首先就來看看成果吧！</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-12T21:23:21+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">三個數位遊牧可以尋找住宿的方法及各平台</title><link href="https://homuchen.com/posts/remote-working-where-to-find-accommodation/" rel="alternate" type="text/html" title="三個數位遊牧可以尋找住宿的方法及各平台" /><published>2022-07-12T21:20:00+08:00</published><updated>2022-07-12T21:20:00+08:00</updated><id>https://homuchen.com/posts/remote-working-where-to-find-accommodation</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-where-to-find-accommodation/"><![CDATA[<p>作為一名數位遊牧者，找住的地方一定是我們會常常遇到的問題，
+每當要移動到下一個地點時，就必須再做一次這個事情。</p>
+
+<p>幸運的是，隨著遠距工作越來越盛行，也有越來越多的服務提供住宿選項給你，
+今天將分享以下幾種尋找住宿的方法以及相對應的平台網站，花費依次由高到低:</p>
+<ul>
+  <li><strong>短期住宿</strong></li>
+  <li><strong>Coliving space</strong></li>
+  <li><strong>House sitting</strong></li>
+</ul>
+
+<h1 id="短期住宿">短期住宿</h1>
+<p>租房子通常會有一個一年或半年的租約，但身為數位遊牧，可能沒想在一個地方待那麼久，或是有簽證的限制，
+此時短期住宿會是一個方便的選擇，最簡單的方式就是用各大訂房網站，找飯店。</p>
+
+<p>現在也有越來越多的平台，專門提供這樣的物件給遠距工作者，除了住宿外，特別幫你設想到遠距工作者所需要工作環境。</p>
+
+<p><strong>優點:</strong> 簡單方便選擇多，上網瀏覽一根手指頭搞定，奢華還是簡易根據自己的</p>
+
+<p><strong>缺點:</strong> 蠻多物件都可以睡到兩三四個人，如果你是邊緣人，只有自己一個人去的話，
+  除非你真的很不缺錢，不然一個月的租金也是蠻可觀的，如果有伴的，租個完整房原來share真的是蠻不錯的，
+  如果找不到分母，有缺人的朋友，也可以聯絡我看看唷！😂</p>
+
+<ul>
+  <li><a href="https://www.anyplace.com" target="_blank"><strong>Anyplace</strong></a></li>
+  <li><a href="https://airbnb.com" target="_blank"><strong>Airbnb</strong></a></li>
+</ul>
+
+<h1 id="coliving-space">Coliving space</h1>
+<p>Coliving space也常稱為share house，就是會有一起使用公共區域，像是客廳、廚房、工作的空間等等，
+自己的房間可能跟其他人共用也可能有自己一間，就看你荷包夠不夠深。</p>
+
+<p><strong>優點:</strong> 住在coliving space最大的好處就是會有室友，能夠認識來自世界各地各行各業的人，一起工作生活一起玩。</p>
+
+<p><strong>缺點:</strong> 自己隱私的空間略少，如果你比較喜歡有多一點自己的空間的人，工作之餘不想太多社交的，
+可能就需要找有自己一間房間的，但你去洗澡、廁所、用廚房還是會遇到人拉😄</p>
+
+<p>有些平台甚至是有特定的社群，像是遠距工作社群、衝浪社群！
+更多的平台及房源可以在google上<strong>搜尋 coliving space + 地點</strong>。</p>
+
+<ul>
+  <li><a href="https://www.coworksurf.com/" target="_blank"><strong>coworksurf.com</strong></a></li>
+  <li><a href="https://coliving.com/" target="_blank"><strong>coliving.com</strong></a></li>
+  <li><a href="https://www.outsite.co/" target="_blank"><strong>outside.co</strong></a></li>
+</ul>
+
+<h1 id="house-sitting">House sitting</h1>
+<p>最省的方式就是House sitting拉～ sitting也就是照顧的意思，幫屋主完成一些任務，通常是照顧寵物或是植物，就可以換到免費的住宿。</p>
+
+<p><strong>優點:</strong> 免費！經濟面比較有考量的朋友可以試試，真正落實遊牧民族逐水草而居的生活，
+  <strong>逐免費住宿而居</strong>😂，畢竟住宿應該是佔遊牧生活開銷上最大的一筆了。</p>
+
+<p><strong>缺點:</strong> 因為任務通常都是每天要做的，所以每天就只能待在住宿地點附近，沒有辦法跑太遠～
+  有些雇主可能允許出去住個一晚，但基本上，缺點就是會被綁在同一個地方，附近可能不一定有你想去的地方之類的。</p>
+
+<ul>
+  <li><a href="https://www.trustedhousesitters.com/"><strong>TrustedHousesitters</strong></a></li>
+  <li><a href="https://www.nomador.com/"><strong>Nomador</strong></a></li>
+  <li><a href="https://www.housecarers.com/"><strong>HouseCarers</strong></a></li>
+  <li><a href="https://www.mindmyhouse.com/"><strong>MindMyHouse</strong></a></li>
+  <li><a href="https://www.housesitmatch.com/"><strong>HouseSitMatch</strong></a></li>
+</ul>
+
+<p>祝大家在追逐自己理想的生活上一路順遂～如果想更即時地看我數位遊牧流浪去哪，
+或是不想看這麼多字，想看精簡點的圖文表達的話，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。
+掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[作為一名數位遊牧者，找住的地方一定是我們會常常遇到的問題， 每當要移動到下一個地點時，就必須再做一次這個事情。]]></summary></entry><entry><title type="html">房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)</title><link href="https://homuchen.com/posts/room-makeover-wall/" rel="alternate" type="text/html" title="房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)" /><published>2022-07-11T00:18:00+08:00</published><updated>2022-07-11T00:18:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-wall</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-wall/"><![CDATA[<p>今天要分享我在改造房間的過程中，針對牆壁這一部分做了些什麼，首先就來看看成果吧！</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" alt="牆壁改造Before and After" loading="lazy" /></p>
 
@@ -804,126 +869,4 @@ Pool越大，可能就越容易找到合適的人。</p>
 
 <p>祝大家在追逐自己理想的生活上一路順遂～如果想更即時地看我數位遊牧流浪去哪，
 或是不想看這麼多字，想看精簡點的圖文表達的話，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。
-掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[這篇文章將分享遠端工作有哪些好處，也就是我在慢慢轉變為數位遊牧生活型態的過程中， 所體會的一些點: 節省通勤時間 時間彈性 地點彈性 專注工作、生產力提升 省錢]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/remote-work-advantages-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/remote-work-advantages-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">HTTP API: 該如何管理一份很大的OpenAPI document？</title><link href="https://homuchen.com/posts/how-to-manage-a-large-openapi-document-file/" rel="alternate" type="text/html" title="HTTP API: 該如何管理一份很大的OpenAPI document？" /><published>2022-06-07T00:07:00+08:00</published><updated>2022-06-07T00:07:00+08:00</updated><id>https://homuchen.com/posts/how-to-manage-a-large-openapi-document-file</id><content type="html" xml:base="https://homuchen.com/posts/how-to-manage-a-large-openapi-document-file/"><![CDATA[<p>OpenAPI的document文件可以變得非常大一份，特別是當你有好幾百個routes的時候，
-這時候單一份的yaml檔管理起來可能會非常頭大，這篇文章將分享在這種情況下，
-我是如何將一份大的檔案拆分成許多小的檔案，易於管理。</p>
-
-<h1 id="openapi-specification">OpenAPI Specification</h1>
-<p>OpenAPI也被稱為Swagger，是一個用來描述你的API的標準，可以根據這個標準來撰寫你的文件，
-我想你應該很熟悉了，如果還不熟的，
-可以先看看官方的說明: <a href="https://swagger.io/specification/" target="_blank">OpenAPI specification</a>。</p>
-
-<h1 id="我如何拆分檔案">我如何拆分檔案</h1>
-<h2 id="使用json格式">使用JSON格式</h2>
-<p>官網上的範例文件都是使用yaml，而我偏好使用JSON，基於以下幾個理由：</p>
-
-<ul>
-  <li>許多語言都內建支援JSON格式，尤其是javascript，JSON的J就是這樣來的。</li>
-  <li>可以直接由程式控制，將需要共用的(<strong>response</strong>、<strong>schema</strong>、<strong>parameter</strong>)寫在不同檔案，要用的時候在import進來就好。</li>
-  <li>除了以上常常會需要共用的，造成spec檔案會變的很大的一個因素就是有太多的<strong>path</strong>，也能將path依照你想要方式做拆分。</li>
-</ul>
-
-<p>寫起來就會像是下面這樣:</p>
-
-<h3 id="indexjs">index.js</h3>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">schemas</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/schemas</span><span class="dl">'</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">securitySchemes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/securitySchemes</span><span class="dl">'</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">parameters</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/parameters</span><span class="dl">'</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">responses</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/responses</span><span class="dl">'</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./paths</span><span class="dl">'</span><span class="p">)</span>
-
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">openapi</span><span class="p">:</span> <span class="dl">'</span><span class="s1">3.0.0</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">info</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Example API Overview</span><span class="dl">'</span><span class="p">,</span>
-    <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1.0.0</span><span class="dl">'</span><span class="p">,</span>
-    <span class="na">contact</span><span class="p">:</span> <span class="p">{</span>
-      <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">API Support</span><span class="dl">'</span><span class="p">,</span>
-      <span class="na">email</span><span class="p">:</span> <span class="dl">'</span><span class="s1">b98901052@ntu.edu.tw</span><span class="dl">'</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="na">servers</span><span class="p">:</span> <span class="p">[{</span>
-    <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/api/v1</span><span class="dl">'</span>
-  <span class="p">}],</span>
-  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">schemas</span><span class="p">:</span> <span class="nx">schemas</span><span class="p">,</span>
-    <span class="na">parameters</span><span class="p">:</span> <span class="nx">parameters</span><span class="p">,</span>
-    <span class="na">responses</span><span class="p">:</span> <span class="nx">responses</span><span class="p">,</span>
-    <span class="na">securitySchemes</span><span class="p">:</span> <span class="nx">securitySchemes</span>
-  <span class="p">},</span>
-  <span class="na">paths</span><span class="p">:</span> <span class="nx">paths</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="pathsjs">paths.js</h3>
-<p>可能就會長得像下面這樣:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">pets</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./pets</span><span class="dl">'</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./users</span><span class="dl">'</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">stores</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./stores</span><span class="dl">'</span><span class="p">)</span>
-
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="p">...</span><span class="nx">pets</span><span class="p">,</span>
-  <span class="p">...</span><span class="nx">users</span><span class="p">,</span>
-  <span class="p">...</span><span class="nx">stores</span><span class="p">,</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-<p>可以將所有<code class="language-plaintext highlighter-rouge">/pets</code>開頭的路由放到<code class="language-plaintext highlighter-rouge">pets.js</code>，以此類推，如此一來就便於管理，
-不會有一份檔案裡頭有好幾百個path，
-可以更快地知道要修改一個endpoints要去到哪一支相對應的檔案。</p>
-
-<h2 id="輸出">輸出</h2>
-<p>當你要輸出JSON檔時，只需要把上述<code class="language-plaintext highlighter-rouge">Object</code>做一個<code class="language-plaintext highlighter-rouge">JSON.stringify</code>就行，或是依賴其他套件轉成<code class="language-plaintext highlighter-rouge">YAML</code>的格式。</p>
-
-<h2 id="限制">限制</h2>
-<p>但前提是你使用的動態語言，像是<code class="language-plaintext highlighter-rouge">javascript</code>、<code class="language-plaintext highlighter-rouge">python</code>等等，才有這樣方便的好處。</p>
-
-<h2 id="就是想用yaml">就是想用YAML</h2>
-<p>其實不用JSON也是可以，上述的方法一樣可以套用到YAML檔，
-也就是將一些可以重複使用的schema、response，以及拆分出來的path們放到不同的檔案，
-只是可能需要依賴一些額外的library來幫你做合併的動作。</p>
-
-<p>像是<a href="https://github.com/APIDevTools/swagger-cli" target="_blank">swagger-cli</a>，
-就可以讓你把<code class="language-plaintext highlighter-rouge">$ref</code>的目標，放到不同的檔案。</p>
-
-<h1 id="總結">總結</h1>
-<p>想要拆分一份大的OpenAPI spec檔以便於管理，核心的關鍵就跟寫程式是一樣的，DRY(Don’t repeat yourself)，
-將會重複使用的部分拆出來，在原先的OpenAPI spec也能做到，就是使用<code class="language-plaintext highlighter-rouge">$ref</code>，
-但今天更近一步跟大家分享將其寫在不同的檔案的方法: 使用<code class="language-plaintext highlighter-rouge">JSON</code>格式、利用其他套件<code class="language-plaintext highlighter-rouge">swagger-cli</code>。</p>
-
-<p>希望以上的內容對你有一丁點的幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="http" /><category term="restful api" /><category term="api" /><category term="openapi" /><summary type="html"><![CDATA[OpenAPI的document文件可以變得非常大一份，特別是當你有好幾百個routes的時候， 這時候單一份的yaml檔管理起來可能會非常頭大，這篇文章將分享在這種情況下， 我是如何將一份大的檔案拆分成許多小的檔案，易於管理。]]></summary></entry></feed>
+掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[這篇文章將分享遠端工作有哪些好處，也就是我在慢慢轉變為數位遊牧生活型態的過程中， 所體會的一些點: 節省通勤時間 時間彈性 地點彈性 專注工作、生產力提升 省錢]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/remote-work-advantages-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/remote-work-advantages-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
