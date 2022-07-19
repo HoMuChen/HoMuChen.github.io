@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-18T22:58:05+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">我是如何跟我老闆談要遠端工作的？</title><link href="https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely/" rel="alternate" type="text/html" title="我是如何跟我老闆談要遠端工作的？" /><published>2022-07-18T22:53:00+08:00</published><updated>2022-07-18T22:53:00+08:00</updated><id>https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely</id><content type="html" xml:base="https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely/"><![CDATA[<p>隨著科技越來越發達，有越來越多職務可以只透過網路就完成大部分的工作，到辦公室上班不在是必須。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-19T23:19:13+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？</title><link href="https://homuchen.com/posts/productivity-zeigarnik-effect/" rel="alternate" type="text/html" title="柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？" /><published>2022-07-19T23:00:00+08:00</published><updated>2022-07-19T23:00:00+08:00</updated><id>https://homuchen.com/posts/productivity-zeigarnik-effect</id><content type="html" xml:base="https://homuchen.com/posts/productivity-zeigarnik-effect/"><![CDATA[<p>不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡，
+不過一旦那些餐點已經上過了，卻好像就立刻忘記了。</p>
+
+<h1 id="柴嘉尼效應zeigarnik-effect">柴嘉尼效應(Zeigarnik Effect)</h1>
+<p><strong>我們對未完成的事情會比起已完成的事情更容易記住</strong>，這就是柴嘉尼效應。</p>
+
+<p>布魯瑪.柴嘉尼(Bluma Zeigarnik)，二十世紀初俄國的一位心理學家，也是在某天下午觀察咖啡廳的服務生時，
+有了這個假設，換句話說，未完成的工作比起完成的工作，佔了我們更多的腦容量。</p>
+
+<h1 id="實驗">實驗</h1>
+<p>柴嘉尼找了一群小孩來參與實驗，讓他們去執行一共20個小任務，包含拼圖、捏黏土等等，
+有些任務完成了有些沒有完成，最後要求這些小孩回想做了哪些任務，
+結果發現孩子們<strong>記得的未完成任務的數量，是已完成項目的兩倍</strong>。</p>
+
+<h1 id="應用">應用</h1>
+<p>現代人越來越多事務，工作上收不完的電子郵件、回不完的訊息、接踵而來的任務，
+娛樂上看不完的影集跟電影，玩不完的景點，更容易會有越來越多未完成的事懸在心上。</p>
+
+<p>要做的事情越來越多，心心念念擔心著未完成的事，害怕自己會忘記漏掉什麼，結果睡不著甚至做惡夢，
+這樣焦慮的經驗不知道大家有沒有體驗過？</p>
+
+<h2 id="寫下來">寫下來</h2>
+<p>該怎麼辦呢？其實有一招簡單的方法，就是<strong>把那些事務寫下來！</strong>，一旦記下來了，就可以暫時不去管他們了，
+就像我之前寫過的文章: <a href="/posts/book-note-todo-list-formula/" target="_blank"><strong>掌握這3個原則，打造出最適合自己的代辦清單系統</strong></a>裡有提到的，
+待辦清單能夠幫助我們減輕壓力，將所有尚未完成或必須要做但還沒辦法馬上開始做的事都寫下來，清空你的大腦。</p>
+
+<p>所以不管你是工作到一半，有有其他工作項目進來，那就寫下來; 通勤到一半，想到下班之後要去辦一些事情，一樣寫下來;
+靈機一動來了個點子，也是寫下來，然後就可以回去做你原本正在的做的事情，可能是專心工作、跟朋友聚會玩樂或者就單純是在放空。</p>
+
+<p>有人也會利用一天睡前的時間將今天未完成的事項寫下來，做為明天的待辦事項，雖然事情一樣尚未完成，但透過寫下來這個動作，
+或許就能稍微幫助你減輕壓力。祝大家每天晚上都能睡個好覺😴，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="psychology" /><category term="productivity" /><summary type="html"><![CDATA[不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡， 不過一旦那些餐點已經上過了，卻好像就立刻忘記了。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">我是如何跟我老闆談要遠端工作的？</title><link href="https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely/" rel="alternate" type="text/html" title="我是如何跟我老闆談要遠端工作的？" /><published>2022-07-18T22:53:00+08:00</published><updated>2022-07-18T22:53:00+08:00</updated><id>https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely</id><content type="html" xml:base="https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely/"><![CDATA[<p>隨著科技越來越發達，有越來越多職務可以只透過網路就完成大部分的工作，到辦公室上班不在是必須。
 如果你很幸運地工作內容允許，而且你又想遠端工作的話，那最大的阻礙大概就是老闆的心態了，
 這篇文章將分享，我是如何跟我的老闆談我要遠端工作的。</p>
 
@@ -370,7 +400,7 @@
 
 <p>作者用自己親身實驗，證明每次只針對少量的目標去進行，達成率可以更高。</p>
 
-<p>祝大家能順利地在朝著自己目標前進～掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><summary type="html"><![CDATA[在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸， 許多人都想在每天24小時的時間裡，完成更多的事，各種時間管理的方法層出不窮， 不過這本書卻是要大家簡化生活，作者要跟大家分享如何做更少的事，卻可以成就更多！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">淺談各種資料庫cache策略: cache aside、read through、write through、write back</title><link href="https://homuchen.com/posts/databse-chache-strategies/" rel="alternate" type="text/html" title="淺談各種資料庫cache策略: cache aside、read through、write through、write back" /><published>2022-06-25T23:54:00+08:00</published><updated>2022-06-25T23:54:00+08:00</updated><id>https://homuchen.com/posts/databse-chache-strategies</id><content type="html" xml:base="https://homuchen.com/posts/databse-chache-strategies/"><![CDATA[<p>資料庫的快取策略那麼多種: <strong>cache aside</strong>、<strong>read through</strong>、<strong>write through</strong>、<strong>write back</strong>，
+<p>祝大家能順利地在朝著自己目標前進～掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="productivity" /><summary type="html"><![CDATA[在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸， 許多人都想在每天24小時的時間裡，完成更多的事，各種時間管理的方法層出不窮， 不過這本書卻是要大家簡化生活，作者要跟大家分享如何做更少的事，卻可以成就更多！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">淺談各種資料庫cache策略: cache aside、read through、write through、write back</title><link href="https://homuchen.com/posts/databse-chache-strategies/" rel="alternate" type="text/html" title="淺談各種資料庫cache策略: cache aside、read through、write through、write back" /><published>2022-06-25T23:54:00+08:00</published><updated>2022-06-25T23:54:00+08:00</updated><id>https://homuchen.com/posts/databse-chache-strategies</id><content type="html" xml:base="https://homuchen.com/posts/databse-chache-strategies/"><![CDATA[<p>資料庫的快取策略那麼多種: <strong>cache aside</strong>、<strong>read through</strong>、<strong>write through</strong>、<strong>write back</strong>，
 常常哪個是哪個也分不清楚、記不起來，今天將分享這些策略背後的內功心法，
 讓大家不用在為了記不起這些招式的名稱而傷腦筋。</p>
 
@@ -798,75 +828,4 @@ Pool越大，可能就越容易找到合適的人。</p>
 或許會更有效率，以及下班後能夠真正地放鬆。</p>
 
 <p>並不是每個人都適合遠端工作，如果你喜歡規律穩定地生活，大部分的行程活動是被安排確定好的，
-那遠端工作可能不適合你。祝大家都能順利地向著自己理想的生活型態上前進！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[在上一篇文章: 遠端工作有哪些好處？中， 提到了許多遠端工作的優點，今天將來看看有哪些缺點，並且提出相對應的解決辦法！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/remote-working-disadvantages-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/remote-working-disadvantages-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">房間DIY改造: 老舊家具及櫃體篇</title><link href="https://homuchen.com/posts/room-makeover-furniture/" rel="alternate" type="text/html" title="房間DIY改造: 老舊家具及櫃體篇" /><published>2022-06-10T21:52:00+08:00</published><updated>2022-06-10T21:52:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-furniture</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-furniture/"><![CDATA[<p>想DIY重新裝潢佈置自己的房間，家裏有老舊家具或櫃體還是堪用的丟掉可惜，
-，又或者它是系統家具，做死的也不想費功夫整個打掉，
-但又跟欲改造的風格會格格不入，該怎麼辦呢？</p>
-
-<p>這篇文章將分享有哪些方法可以改造老舊櫃體，各有哪些優缺點，我最後是怎麼做的，花了多少跟多少錢，
-以及最後的成果分享～(見下圖)</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-0.jpg" alt="老舊櫃體改造Before and After" loading="lazy" /></p>
-
-<h1 id="有哪些方法可以改造家具">有哪些方法可以改造家具</h1>
-<p>常見的有兩種方式，分別為: <strong>貼皮</strong>及<strong>上漆</strong>。</p>
-
-<h2 id="貼皮">貼皮</h2>
-<p>表面平整的家具才比較適合使用貼皮，不平整的表面，壁貼將難以施工，
-貼皮比起油漆，就是除了顏色之外，還可以仿造出另一種材質的感覺，
-常見的像是木紋、清水模、大理石等等。</p>
-
-<p>另外家具表面如果有小傷口、刮痕、坑洞的話，利用貼皮的方式也能使之平整唷。</p>
-
-<h2 id="家具漆">家具漆</h2>
-<p>google家具漆，應該就可以看到市面上許多品牌都有在販售，而基本上就是底漆加上水凝瓷漆。</p>
-
-<p>害怕自己美感不佳的話，可以直接買廠商調好的顏色，
-如果想要自己調顏色，可以去特力屋，跟他們說你想要漆傢俱的，根據你傢俱的材質，
-他們會告訴你需不要需要額外購買底漆，而面漆的顏色就可以使用電腦調色，
-好處就是可以一併跟牆壁的油漆一起買，做統一的顏色搭配調整。</p>
-
-<h1 id="施工過程">施工過程</h1>
-<p>我這次選擇使用貼皮的方式來將衣櫃改造，因為櫃體表面還算很平整，
-下次再用漆的方式來處理凹凸不平的門的部分，未來可以做個比較。</p>
-
-<p>施工的過程如下:
-<img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-1.jpg" alt="家具貼皮施工過程" loading="lazy" /></p>
-
-<h2 id="清理">清理</h2>
-<p>第一步就是把傢俱表面清理乾淨，有灰塵的話，容易導致壁貼不黏。</p>
-
-<h2 id="拆換把手">拆換把手</h2>
-<p>把手的部分，不論你有沒有想換，都可以先拆下來，門片的背面會有螺絲，轉下來即可，
-如此一來會有一個平整的表面，會比較好貼，等貼完之後再裝上去就好了。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-2.jpg" alt="門片把手背後螺絲" loading="lazy" /></p>
-
-<p>如果想更換把手的話，網路上也有需多把手可以選購，要注意的是孔距必須跟你原本的把手孔距一樣，
-不然你就要自己再鑽孔了。</p>
-
-<p>我的話因為找不到一樣孔距的，所以就乾脆買了一孔的就好，如下圖:</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-3.jpg" alt="門片把手改造: Before and After" loading="lazy" /></p>
-
-<h2 id="貼">貼</h2>
-<p>接著剪下一片壁貼，建議尺寸大小可以略大於實際需要的面積，就可以有比較多的緩衝可以避免貼歪。</p>
-
-<p>記得背膠的紙一點點撕開就好，邊撕邊貼的同時，只是刮刀或是直尺等工具，將空氣擠出，確保壁貼表面的平整。</p>
-
-<h2 id="裁切">裁切</h2>
-<p>貼完之後，再將邊緣多餘的紙利用美工刀裁切整齊！</p>
-
-<h2 id="裝上把手">裝上把手</h2>
-<p>等都貼完裁完了之後，不管把手是新是舊，最後把它們裝上就好拉～</p>
-
-<h1 id="總共時間及金錢花費">總共時間及金錢花費</h1>
-<p>如同第一張圖大家所看到的，那一面牆的總面積約為350 x 380 平方公分，
-每一片門片因為左右都有凸起，所以要分三次貼，上下兩排總共8扇門，花了<strong>10幾個小時！</strong></p>
-
-<p>而壁貼購買的是倆好壁貼的無印白衫木，123cm x 1000cm，要價<strong>新台幣3090！</strong></p>
-
-<h1 id="總結">總結</h1>
-<p>成果還算滿意～ 唯一預料之外的就是花費的時間比預期的多，等過一段時間如果有災情的話再跟大家報告😂。</p>
-
-<p>之後也會陸續在改造牆面、地板、及新傢俱的添購擺設，
-如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想DIY重新裝潢佈置自己的房間，家裏有老舊家具或櫃體還是堪用的丟掉可惜， ，又或者它是系統家具，做死的也不想費功夫整個打掉， 但又跟欲改造的風格會格格不入，該怎麼辦呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-furniture-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+那遠端工作可能不適合你。祝大家都能順利地向著自己理想的生活型態上前進！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[在上一篇文章: 遠端工作有哪些好處？中， 提到了許多遠端工作的優點，今天將來看看有哪些缺點，並且提出相對應的解決辦法！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/remote-working-disadvantages-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/remote-working-disadvantages-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
