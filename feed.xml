@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-19T23:19:13+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？</title><link href="https://homuchen.com/posts/productivity-zeigarnik-effect/" rel="alternate" type="text/html" title="柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？" /><published>2022-07-19T23:00:00+08:00</published><updated>2022-07-19T23:00:00+08:00</updated><id>https://homuchen.com/posts/productivity-zeigarnik-effect</id><content type="html" xml:base="https://homuchen.com/posts/productivity-zeigarnik-effect/"><![CDATA[<p>不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-22T16:35:05+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">房間DIY改造: 地板篇</title><link href="https://homuchen.com/posts/room-makeover-floor/" rel="alternate" type="text/html" title="房間DIY改造: 地板篇" /><published>2022-07-22T16:00:00+08:00</published><updated>2022-07-22T16:00:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-floor</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-floor/"><![CDATA[<p>房間最大部分的面積不是牆壁就是地板了！今天要分享我在改造房間的過程中，
+針對地板這一部分怎麼做，首先就來看看成果吧！</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" alt="地板改造Before and After" loading="lazy" /></p>
+
+<h1 id="地板種類">地板種類</h1>
+<p>這邊只討論便於DIY，也相對比較便宜的產品: <strong>免膠地板</strong>及<strong>卡扣地板</strong>，價格都大約落在2800～3600/坪。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-4.jpg" alt="免膠卡扣地板比較" target="_blank" /></p>
+
+<h2 id="免膠地板">免膠地板</h2>
+<p>防水防潮且不太熱脹冷縮，施工超級簡單，鋪上去就好了，適合在租屋處使用，要離開時還可以拔起來帶走。</p>
+
+<p><strong>缺點:</strong> 家具太重，質地沒那麼硬的地板還是<strong>會有壓痕</strong>，另外並<strong>沒有像廣告說的那麼防滑</strong>，安裝的時候還是要鋪好鋪滿，
+  整個填滿地板面積，卡住才不會滑動，不然就會出現這支影片說的問題:
+  <a href="https://www.youtube.com/watch?v=0Emrchr9mBU" target="_blank">90s免膠科技地板 ｜黑特｜缺點盤點</a>。</p>
+
+<p><strong>產品:</strong></p>
+<ul>
+  <li><a href="https://www.peachy.com.tw/SalePage/Index/6610606" target="_blank">崔勾地板</a></li>
+  <li><a href="https://www.90shomestyle.com/pages/90s-technology-floor" target="_blank">90s免膠科技地板</a></li>
+  <li><a href="https://www.trplus.com.tw/TR_Tools_Building/c/EC_10344012" target="_blank">特力+: 免膠地板</a></li>
+</ul>
+
+<h2 id="卡扣地板">卡扣地板</h2>
+<p>基本上一樣是塑膠製品，優點都是可以防水防潮且不會熱脹冷縮，SPC的材質有參入石粉，所以質地較硬，
+也比較冰涼。</p>
+
+<p><strong>缺點:</strong> 但比起免膠地板，施工<strong>對地面要求較高，需要平整</strong>，否則完工後踩起來會有聲音。</p>
+
+<p><strong>產品:</strong></p>
+<ul>
+  <li><a href="https://www.90shomestyle.com/pages/90s-%E9%A0%82%E7%B4%9Aspc%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF" target="_blank">90s卡扣地板</a></li>
+  <li><a href="https://www.trplus.com.tw/TR_Floor_Building/c/EC_10000989" target="_blank">特力+: 卡扣地板</a></li>
+</ul>
+
+<h1 id="施工過程">施工過程</h1>
+<p>這次選用的免膠地板，為什麼？因為我懶！就選最方便的😂，還有老房子地板不是那麼平整，減少些施工的難度。</p>
+
+<h2 id="拼法">拼法</h2>
+<p>拼法有許多種，基本我是採用亂紋拼法，裁下來剩多長就直接再下一行使用，節省材料。
+<img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-3.jpg" alt="地板拼法" loading="lazy" /></p>
+
+<p>像下圖就是簡單擺一下，全部對齊的拼法，可以看到交接處就會有一條明顯的痕跡。
+<img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-2.jpg" alt="一字拼法" loading="lazy" /></p>
+
+<h1 id="總結">總結</h1>
+<p>成果還算滿意～ 完工時間2022-07-21，如果未來有什麼災情，再上來更新紀錄跟大家分享。</p>
+
+<p>房間地板面積約<strong>5坪</strong>，總共<strong>花費15000元及3個多小時的時間</strong>！</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-1.jpg" alt="房間改造一隅" loading="lazy" /></p>
+
+<p>之前有針對老舊櫃體、大門及牆壁的部分做過改造，有興趣的朋友可以看我之前寫過的文章～</p>
+
+<ul>
+  <li><a href="/posts/room-makeover-furniture/" target="_blank"><strong>房間DIY改造: 老舊家具及櫃體篇</strong></a></li>
+  <li><a href="/posts/room-makeover-door/" target="_blank"><strong>房間DIY改造: 大門篇，如何用剩的乳膠漆來改造大門</strong></a></li>
+  <li><a href="/posts/room-makeover-wall/" target="_blank"><strong>房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)</strong></a></li>
+</ul>
+
+<p>之後就剩下傢俱的添購(床、工作桌椅)，
+如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想改造自己的房間的地板，免膠地板還是SPC卡扣地板，施作過程有什麼要注意的嗎？會花多少錢跟時間？ 這篇文章將給你我親身經驗的解答。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？</title><link href="https://homuchen.com/posts/productivity-zeigarnik-effect/" rel="alternate" type="text/html" title="柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？" /><published>2022-07-19T23:00:00+08:00</published><updated>2022-07-19T23:00:00+08:00</updated><id>https://homuchen.com/posts/productivity-zeigarnik-effect</id><content type="html" xml:base="https://homuchen.com/posts/productivity-zeigarnik-effect/"><![CDATA[<p>不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡，
 不過一旦那些餐點已經上過了，卻好像就立刻忘記了。</p>
 
 <h1 id="柴嘉尼效應zeigarnik-effect">柴嘉尼效應(Zeigarnik Effect)</h1>
@@ -241,11 +303,12 @@
 
 <p>總共～～ 3169元！</p>
 
-<p>之前有針對老舊櫃體及大門的部分做過改造，有興趣的朋友可以看我之前寫過的文章～</p>
+<p>另外還有針對老舊櫃體、大門及牆壁的部分做過改造，有興趣的朋友可以看我之前寫過的文章～</p>
 
 <ul>
   <li><a href="/posts/room-makeover-furniture/" target="_blank"><strong>房間DIY改造: 老舊家具及櫃體篇</strong></a></li>
   <li><a href="/posts/room-makeover-door/" target="_blank"><strong>房間DIY改造: 大門篇，如何用剩的乳膠漆來改造大門</strong></a></li>
+  <li><a href="/posts/room-makeover-floor/" target="_blank"><strong>房間DIY改造: 地板篇</strong></a></li>
 </ul>
 
 <p>之後就剩下改造地板、及新傢俱的添購(床、工作桌椅)，
@@ -676,6 +739,13 @@ Pool越大，可能就越容易找到合適的人。</p>
   <li><a href="https://085717.tw/product_inside02" target="_blank">得利乳膠漆 1501白</a></li>
   <li><a href="http://www.nipponpaint.com.tw/product.php?tab=product_link&amp;productId=64" target="_blank">立邦 護壁寶</a></li>
   <li><a href="https://shopee.tw/search?keyword=%E5%8A%A0%E5%AE%89%E7%89%8C%20lp1x90g" target="_blank">把手: 加安牌 lp1x90g</a></li>
+</ul>
+
+<p>之前還有針對老舊櫃體、牆壁及地板的部分做過改造，有興趣的朋友可以看我之前寫過的文章～</p>
+<ul>
+  <li><a href="/posts/room-makeover-furniture/" target="_blank"><strong>房間DIY改造: 老舊家具及櫃體篇</strong></a></li>
+  <li><a href="/posts/room-makeover-wall/" target="_blank"><strong>房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)</strong></a></li>
+  <li><a href="/posts/room-makeover-floor/" target="_blank"><strong>房間DIY改造: 地板篇</strong></a></li>
 </ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想DIY重新裝潢佈置自己的房間，房門不想費功夫整個換掉， 但又跟欲改造的風格會格格不入，該怎麼辦呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-door-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-door-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">你可以在這46個國家拿到數位遊牧簽證!</title><link href="https://homuchen.com/posts/digital-nomad-visa-in-46-countries/" rel="alternate" type="text/html" title="你可以在這46個國家拿到數位遊牧簽證!" /><published>2022-06-18T00:12:00+08:00</published><updated>2022-06-18T00:12:00+08:00</updated><id>https://homuchen.com/posts/digital-nomad-visa-in-46-countries</id><content type="html" xml:base="https://homuchen.com/posts/digital-nomad-visa-in-46-countries/"><![CDATA[<p>如果你是個企業家、接案工作者、或像我一樣是個可以遠端工作的打工仔，
 那麼你可能對數位遊牧(digital nomad)這樣的生活型態有興趣～</p>
 
@@ -756,76 +826,4 @@ Pool越大，可能就越容易找到合適的人。</p>
 <ul>
   <li><a href="https://lifehacker.com/you-can-get-a-digital-nomad-visa-in-these-46-countrie-1849058910" target="_blank">You Can Get a ‘Digital Nomad’ Visa in These 46 Countries</a></li>
   <li><a href="https://hbr.org/2022/05/how-digital-nomad-visas-can-boost-local-economies?ab=hero-subleft-2" target="_blank">How “Digital Nomad” Visas Can Boost Local Economies</a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[如果你是個企業家、接案工作者、或像我一樣是個可以遠端工作的打工仔， 那麼你可能對數位遊牧(digital nomad)這樣的生活型態有興趣～]]></summary></entry><entry><title type="html">遠端工作有哪些缺點？以及該如何克服？</title><link href="https://homuchen.com/posts/remote-working-disadvantages/" rel="alternate" type="text/html" title="遠端工作有哪些缺點？以及該如何克服？" /><published>2022-06-14T23:36:00+08:00</published><updated>2022-06-14T23:36:00+08:00</updated><id>https://homuchen.com/posts/remote-working-disadvantages</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-disadvantages/"><![CDATA[<p>在上一篇文章: <a href="/posts/remote-working-advantages/" target="_blank">遠端工作有哪些好處？</a>中，
-提到了許多遠端工作的優點，今天將來看看有哪些缺點，並且提出相對應的解決辦法！</p>
-
-<h1 id="遠端工作的缺點">遠端工作的缺點:</h1>
-<h2 id="1-工作和生活混在一起">1. 工作和生活混在一起</h2>
-<p>不用到辦公室上班，意味著你必須<strong>自己決何時何地工作</strong>，這是優點，同時也可能是個缺點！</p>
-
-<p>早上起床準備早餐，出門通勤到辦公室，準備個咖啡開始工作，跟同事吃午餐，下午繼續工作，下班去運動，
-回家吃個晚飯好好休息結束一天。每天在辦公室的生活很可能就像這樣，很規律也不用多想，什麼時間到了就做什麼事，
-有生產力、社交、健康及下班後自己的時間。</p>
-
-<p>接著我們來看看遠距工作可能的樣子: 早上起床準備早餐，邊吃早餐邊收發Email，準備個咖啡開始工作，
-想到今天是NBA總決賽的日子，打開電視機看了一下比賽，遲遲才開始工作，中午吃完午飯又睡個午覺，
-結果發現工作趕不完，一直到熬夜到睡前都持續工作著。</p>
-
-<p>如此一般，如果沒有自律及自我管理的能力時，遠端工作反而可能是悲劇的開始，
-<strong>不是無法脫離工作，就是無法好好開始工作</strong>～</p>
-
-<h3 id="怎麼辦">怎麼辦？</h3>
-<p>就像在<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>一書中講到的，
-組成我們每一天大部分是習慣，而不是有意識的選擇，而自由的生活使得我們會不斷地面臨選擇!</p>
-
-<p>我現在要開始工作了嗎？還是看一下NBA，晚上再補就好？我要在客廳用筆電工作嗎？
-還是去書房？我現在要出門運動去嗎？這樣還要換衣服好懶喔…</p>
-
-<p>解決辦法就是<strong>使生活行程習慣化</strong>，使之成為不需假以思索就會自動去執行的<strong>慣例(routine)</strong>，
-替自己加上一些限制，<strong>明確地規定自己何時要在何地做什麼事</strong>，<strong>區分出工作及生活休閒的區域</strong>。</p>
-
-<p>延伸閱讀:</p>
-<ul>
-  <li><a href="/posts/book-note-atomic-habits/" target="_blank"><strong>[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</strong></a></li>
-  <li><a href="/posts/how-i-keep-reading/" target="_blank"><strong>《原子習慣》應用: 我是如何養成閱讀習慣</strong></a></li>
-</ul>
-
-<h2 id="2-缺乏社交孤單寂寞覺得冷">2. 缺乏社交，孤單寂寞覺得冷</h2>
-<p>自己一個人在家工作，沒人可以閒聊，少了茶水間的八卦，偶爾也是會感到孤單的。
-雖然不會有人打擾你，造成你專注工作的中斷，不過人畢竟是社會性的動物，人與人的連結還是必須的。</p>
-
-<h3 id="怎麼辦-1">怎麼辦？</h3>
-<p>少了跟同事的社交，那你可以跟其他人社交呀～ 有了在哪裡都能工作的自由，除了家裡之外，你還有許多的選擇。</p>
-
-<p>像是可以去咖啡廳、coworking space工作，找朋友一起工作(前提是他也可以遠端XD)，
-或是在一些遠距工作者的社團揪團～</p>
-
-<p>以我自己來說，遠距工作之後，反而跟很多許久不見的老友見面，因為我可以直接在他家工作XD，
-有些則是因為地點的關係，去找不在台北的朋友也方便多了，未來出國的話，也可以找在當地工作生活的朋友們😄，
-不過社交跟專心工作之間還是必須要做出取捨拉。</p>
-
-<h2 id="3-瑣碎的工作變多">3. 瑣碎的工作變多</h2>
-<p>基於雇主與員工間的信任，有些公司會制定出的相關準則，
-像是要回報工作進度狀況、寫工作日誌，或者原本相較彈性的工作內容，
-主管為了監督是否在家真的有在工作，而制定了完成期限。這些政策無疑地都是在增加員工們瑣碎的工作內容與壓力。</p>
-
-<h3 id="怎麼辦-2">怎麼辦？</h3>
-<p>跟老闆培養好信任的基礎是最根本的～一旦老闆相信你會把工作做好，他也就不會時時刻刻要一直關心你的進度。</p>
-
-<p>不過如果是剛轉換工作型態，定時回報工作進度或許是不太能避免的，必須要給老闆一個期待，
-讓他知道他可以期望你在哪個時間點完成哪些任務，而這也是我跟老闆說要遠端工作所用的其中一招，
-之後會再寫一篇我是如何說服我老闆遠距工作的(TODO)。</p>
-
-<p>另外有工作日誌並不一定是個壞事，當員工將完成的事記錄下來，有沒有偷懶就一目瞭然，
-雇主對於員工的績效評估會更加客觀，完全以工作成果來看，而不是這個員工有沒有早到晚走，聽不聽話，好不好相處…
-如果員工可以在更短的時間內做完任務，相對地就有更多的時間做自己事，也不用待在辦公室的座位上裝忙😂</p>
-
-<h1 id="結論">結論</h1>
-<p>更多的自由，並不一定會帶來更多的幸福，以前人們會追求工作與生活的平衡(work life balance)，
-上班與私生活有明確的分界，要有夠多的時間可以從事自己的興趣。
-但遠端工作後，工作與生活更多像是融合在了一起，能做到生活即工作，工作即是生活那是最好，
-但並不是每個人都能那麼喜歡自己的工作，所以不妨替自己加上一些限制，明確界定工作的時間及地點，
-或許會更有效率，以及下班後能夠真正地放鬆。</p>
-
-<p>並不是每個人都適合遠端工作，如果你喜歡規律穩定地生活，大部分的行程活動是被安排確定好的，
-那遠端工作可能不適合你。祝大家都能順利地向著自己理想的生活型態上前進！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[在上一篇文章: 遠端工作有哪些好處？中， 提到了許多遠端工作的優點，今天將來看看有哪些缺點，並且提出相對應的解決辦法！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/remote-working-disadvantages-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/remote-working-disadvantages-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[如果你是個企業家、接案工作者、或像我一樣是個可以遠端工作的打工仔， 那麼你可能對數位遊牧(digital nomad)這樣的生活型態有興趣～]]></summary></entry></feed>
