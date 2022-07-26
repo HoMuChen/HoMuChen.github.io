@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-22T16:35:05+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">房間DIY改造: 地板篇</title><link href="https://homuchen.com/posts/room-makeover-floor/" rel="alternate" type="text/html" title="房間DIY改造: 地板篇" /><published>2022-07-22T16:00:00+08:00</published><updated>2022-07-22T16:00:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-floor</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-floor/"><![CDATA[<p>房間最大部分的面積不是牆壁就是地板了！今天要分享我在改造房間的過程中，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-07-26T23:57:24+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">想要簡單卻高效的生活嗎？ 五個有關簡化生活，時間管理的法則</title><link href="https://homuchen.com/posts/five-time-management-laws/" rel="alternate" type="text/html" title="想要簡單卻高效的生活嗎？ 五個有關簡化生活，時間管理的法則" /><published>2022-07-26T23:56:00+08:00</published><updated>2022-07-26T23:56:00+08:00</updated><id>https://homuchen.com/posts/five-time-management-laws</id><content type="html" xml:base="https://homuchen.com/posts/five-time-management-laws/"><![CDATA[<blockquote>
+  <p>You can do anything, but you can’t do everything.</p>
+</blockquote>
+
+<p>每天被一大堆事務包圍，覺得喘不過氣忙不過來嗎？或許你可以試試簡化你的生活，
+今天要介紹一些前人所觀察歸納出的一些法則及心理現象，
+將其應用在生活中，幫助我們簡單生活卻不簡單。</p>
+
+<h1 id="帕雷托法則pareto-principle8020法則">帕雷托法則(Pareto principle、80/20法則)</h1>
+<blockquote>
+  <p>80% of consequences come from 20% of the causes.</p>
+</blockquote>
+
+<p>80%成果來自20%的原因，在許多地方都能用上這個法則，比如全世界的財富分配，大部分的財富集中在少數有錢人手中;
+公司的大部分的利潤來自與少部分的客戶或產品。</p>
+
+<p>所以我們能做什麼呢？就是要找到那最重要的20%的事情，就能省下80%的時間與精力，達到足夠滿足的結果，
+不去追求完美，將擁有更多的資源能去從事其他的工作、興趣及夢想。</p>
+
+<p>這也是<strong>簡單生活</strong>的核心，在生活各個面向上都只將心力首先花在最重要的事務上，
+不管是工作項目、客戶、人際關係、擁有的物質、從事的興趣、接收的資訊等等，
+<strong>你可以做任何事情，但不能全部的事情都做</strong>。</p>
+
+<h1 id="帕金森定理parkinsons-law">帕金森定理(Parkinson’s Law)</h1>
+<blockquote>
+  <p>Work will expand to fill the time allotted for its completion.</p>
+</blockquote>
+
+<p>我們有多少的時間完成一項任務，我們就會花多少的時間完成，這就是帕金森定律。
+當我們給一項任務一天的時間來完成時，我們就會花到一天；如果你有急事，2個小時後必須要離開，要
+那你就會神奇地在2個小時內完成工作。</p>
+
+<p>所以我們能做什麼呢？可以為你的任務設定合理的時間及截止日期，
+就像我之前在<a href="/posts/book-note-todo-list-formula/" target="_blank"><strong>掌握這3個原則，打造出最適合自己的代辦清單系統</strong></a>
+這篇文章中提到的，待辦清單中的事項必須要有截止日期，否則你就是拖拖拖，拖到最後一刻可以完成的他的時候才去完成。</p>
+
+<h1 id="carlsons-law">Carlson’s Law</h1>
+<blockquote>
+  <p>Interrupted work will be less effective and will take more time than if completed in a continuous manner.</p>
+</blockquote>
+
+<p>如果一件任務被中斷多次，它所花的時間講比起一次做完更多。
+這本書: <a href="https://www.books.com.tw/products/0010758381" target="_blank"><strong>《Deep Work深度工作力：淺薄時代，個人成功的關鍵能力》</strong></a>就是專門再講這一個主題的書，有興趣的朋友可以去找來看看～</p>
+
+<p>所以我們能做什麼呢？去除所有可能會干擾你的專注時間的事物，利用意志力來限制自己是不明智的決定，
+不如<strong>打造一個去除分心事務的環境</strong>，比如把手機放到離工作區域遠一點的地方，在家規劃出一個專門用來工作的區域等等，
+或是使用像是<a href="https://zh.wikipedia.org/zh-tw/%E7%95%AA%E8%8C%84%E5%B7%A5%E4%BD%9C%E6%B3%95" target="blank"><strong>番茄鐘工作法</strong></a>來幫助自己。</p>
+
+<p>最近我在家或到處遊牧工作的時候，除了咖啡廳，也會選擇去圖書館工作，把自己沈浸到一個無法分心的環境，
+順便重溫以前當學生的感覺，也能看看學生妹子😎</p>
+
+<h1 id="illichs-lawlaw-of-diminishing-returns邊際效用遞減">Illich’s Law(Law of diminishing returns、邊際效用遞減)</h1>
+<blockquote>
+  <p>Productivity decreases after a certain period of continuous work.</p>
+</blockquote>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/five-time-management-laws-1.jpg" alt="Law of diminishing returns" /></p>
+
+<p>生產力是會隨著工作的時間跟著下降的。</p>
+
+<p>所以我們能做什麼呢？<strong>休息！</strong>我們的能量有限，不管是身體、情緒、心理還是精神，
+都應該有個使用及恢復的週期，Work hard, Play hard！</p>
+
+<p>延伸閱讀:</p>
+<ul>
+  <li><a href="/posts/book-note-the-power-of-full-engagement/" target="_blank"><strong>[讀書筆記] 用對能量，你就不會累</strong></a></li>
+</ul>
+
+<h1 id="laborits-lawthe-law-of-the-least-effort最小努力原則">Laborit’s Law(The Law of the Least Effort、最小努力原則)</h1>
+
+<p>人會採取可能耗費最少勞動的行為，來完成特定任務：即，將必要之努力最小化。</p>
+
+<p>這就是我們的本能，節省能量來完成任務，以提升我們的生存機率，
+並且會傾向從事一些會獲得立即滿足的行動，比如說吃垃圾食物(立即取得高熱量)、
+滑社群應用程式(立即得到一些社交互動或資訊)、看劇耍廢(立即獲得感官娛樂刺激)。</p>
+
+<p>所以我們能做什麼呢？每天先從最困難最重要的事開始，並且在完成任務後，給自己立即的獎勵，
+這也是在<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>《原子習慣》</strong></a>一書中所提到的養成習慣四步驟框架中的<strong>獎賞</strong>部分。</p>
+
+<p>延伸閱讀:</p>
+<ul>
+  <li><a href="/posts/book-note-atomic-habits/" target="_blank">[讀書筆記] 原子習慣: 細微改變帶來巨大成就的實證法則</a></li>
+</ul>
+
+<h1 id="結論">結論</h1>
+<p>前兩個法則都跟<strong>不要太多</strong>有關，做的少但卻不一定成就的少，
+<strong>知道自己的目標，找出最重要的事先做，專注並適當休息，養成習慣</strong>，
+如此一來不只能更高效也能減輕壓力。</p>
+
+<p>簡單生活，不簡單，首要重點是知道自己的目標，找出最重要的事，祝大家都能活出自己想要的生活！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="psychology" /><category term="productivity" /><summary type="html"><![CDATA[每天被一大堆事務包圍，覺得喘不過氣忙不過來嗎？或許你可以試試簡化你的生活， 今天要介紹一些前人所觀察歸納出的一些法則及心理現象， 將其應用在生活中，幫助我們簡單生活卻不簡單。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/five-time-management-laws-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/five-time-management-laws-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">房間DIY改造: 地板篇</title><link href="https://homuchen.com/posts/room-makeover-floor/" rel="alternate" type="text/html" title="房間DIY改造: 地板篇" /><published>2022-07-22T16:00:00+08:00</published><updated>2022-07-22T16:00:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-floor</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-floor/"><![CDATA[<p>房間最大部分的面積不是牆壁就是地板了！今天要分享我在改造房間的過程中，
 針對地板這一部分怎麼做，首先就來看看成果吧！</p>
 
 <p><img src="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" alt="地板改造Before and After" loading="lazy" /></p>
@@ -746,84 +835,4 @@ Pool越大，可能就越容易找到合適的人。</p>
   <li><a href="/posts/room-makeover-furniture/" target="_blank"><strong>房間DIY改造: 老舊家具及櫃體篇</strong></a></li>
   <li><a href="/posts/room-makeover-wall/" target="_blank"><strong>房間DIY改造: 牆壁篇(油漆、開關面板、變電箱遮掩)</strong></a></li>
   <li><a href="/posts/room-makeover-floor/" target="_blank"><strong>房間DIY改造: 地板篇</strong></a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想DIY重新裝潢佈置自己的房間，房門不想費功夫整個換掉， 但又跟欲改造的風格會格格不入，該怎麼辦呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-door-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-door-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">你可以在這46個國家拿到數位遊牧簽證!</title><link href="https://homuchen.com/posts/digital-nomad-visa-in-46-countries/" rel="alternate" type="text/html" title="你可以在這46個國家拿到數位遊牧簽證!" /><published>2022-06-18T00:12:00+08:00</published><updated>2022-06-18T00:12:00+08:00</updated><id>https://homuchen.com/posts/digital-nomad-visa-in-46-countries</id><content type="html" xml:base="https://homuchen.com/posts/digital-nomad-visa-in-46-countries/"><![CDATA[<p>如果你是個企業家、接案工作者、或像我一樣是個可以遠端工作的打工仔，
-那麼你可能對數位遊牧(digital nomad)這樣的生活型態有興趣～</p>
-
-<h1 id="數位遊牧">數位遊牧</h1>
-<p>什麼是數位遊牧呢？就是只要有電腦跟網路，你就可以在任何你想要的地方工作！</p>
-
-<p>你有實現環遊世界、體驗各地的文化跟認識世界各地的人的夢想嗎？
-不用等到退休！現在就可以收拾你的行囊，前往你夢想中的國度！</p>
-
-<p>延伸閱讀:</p>
-
-<ul>
-  <li><a href="/posts/book-note-the-four-hour-work-week/" target="_blank"><strong>[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</strong></a></li>
-  <li><a href="/posts/remote-working-advantages/" target="_blank"><strong>遠端工作有哪些好處？</strong></a></li>
-  <li><a href="/posts/double-your-money-without-any-extra-work/" target="_blank"><strong>如何不用做額外的工作，就使你的收入倍增</strong></a></li>
-</ul>
-
-<h1 id="數位遊牧簽證">數位遊牧簽證</h1>
-<p>但如果你只是持旅遊簽證，你在一個國家待的時間就會有限，有了數位簽證，
-將可以<strong>在當地待一個月到四年不等的時間</strong>。</p>
-
-<p>這類簽證通常需要你的工作及收入證明，以確保你不會跟當地人搶當地的工作的機會。</p>
-
-<p>以下為國家列表:</p>
-
-<ol>
-  <li>Anguilla</li>
-  <li>Antigua &amp; Barbuda</li>
-  <li>Aruba</li>
-  <li>Australia</li>
-  <li>Barbados</li>
-  <li>Belize</li>
-  <li>Bermuda</li>
-  <li>Brazil</li>
-  <li>Cambodia</li>
-  <li>Cape Verde</li>
-  <li>Cayman Islands</li>
-  <li>Colombia</li>
-  <li>Costa Rica</li>
-  <li>Croatia</li>
-  <li>Curacao</li>
-  <li>Cyprus</li>
-  <li>Czech Republic</li>
-  <li>Dominica</li>
-  <li>Dubai, UAE</li>
-  <li>Ecuador</li>
-  <li>Estonia</li>
-  <li>Georgia</li>
-  <li>Germany</li>
-  <li>Greece</li>
-  <li>Grenada</li>
-  <li>Iceland</li>
-  <li>Indonesia</li>
-  <li>Italy</li>
-  <li>Jamaica</li>
-  <li>Malta</li>
-  <li>Mauritius</li>
-  <li>Mexico</li>
-  <li>Montenegro</li>
-  <li>Montserrat</li>
-  <li>Norway</li>
-  <li>Panama</li>
-  <li>Portugal</li>
-  <li>Romania</li>
-  <li>Serbia</li>
-  <li>Seychelles</li>
-  <li>Spain</li>
-  <li>Sri Lanka</li>
-  <li>St. Lucia</li>
-  <li>Taiwan</li>
-  <li>Thailand</li>
-  <li>Vietnam</li>
-</ol>
-
-<p>如果對以上國家有興趣的，可以google 國家名 + digital nomand visa來看看申請辦法唷～</p>
-
-<h1 id="參考資料">參考資料</h1>
-<ul>
-  <li><a href="https://lifehacker.com/you-can-get-a-digital-nomad-visa-in-these-46-countrie-1849058910" target="_blank">You Can Get a ‘Digital Nomad’ Visa in These 46 Countries</a></li>
-  <li><a href="https://hbr.org/2022/05/how-digital-nomad-visas-can-boost-local-economies?ab=hero-subleft-2" target="_blank">How “Digital Nomad” Visas Can Boost Local Economies</a></li>
-</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[如果你是個企業家、接案工作者、或像我一樣是個可以遠端工作的打工仔， 那麼你可能對數位遊牧(digital nomad)這樣的生活型態有興趣～]]></summary></entry></feed>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想DIY重新裝潢佈置自己的房間，房門不想費功夫整個換掉， 但又跟欲改造的風格會格格不入，該怎麼辦呢？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-door-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-door-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
