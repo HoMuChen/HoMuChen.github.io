@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-08-18T17:55:34+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">五種從高處俯瞰皇后鎮周遭景色的方法</title><link href="https://homuchen.com/posts/new-zealand-queenstown-overlook/" rel="alternate" type="text/html" title="五種從高處俯瞰皇后鎮周遭景色的方法" /><published>2022-08-18T17:00:00+08:00</published><updated>2022-08-18T17:00:00+08:00</updated><id>https://homuchen.com/posts/new-zealand-queenstown-overlook</id><content type="html" xml:base="https://homuchen.com/posts/new-zealand-queenstown-overlook/"><![CDATA[<p>冬天從皇后鎮高處往下看，有藍天、白雪覆蓋的山頭、咖啡色及綠色植被、湖泊及城鎮，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-08-22T17:04:08+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">台北人每天上下班都會花多少時間跟費用通勤呢？</title><link href="https://homuchen.com/posts/how-much-commute-time-taipei/" rel="alternate" type="text/html" title="台北人每天上下班都會花多少時間跟費用通勤呢？" /><published>2022-08-22T16:50:00+08:00</published><updated>2022-08-22T16:50:00+08:00</updated><id>https://homuchen.com/posts/how-much-commute-time-taipei</id><content type="html" xml:base="https://homuchen.com/posts/how-much-commute-time-taipei/"><![CDATA[<p>通勤是辦公室及學校生活必須的部分，太長的通勤時間對生活滿意度真的是一大影響，
+來看看在台北市工作的人們，每天都會花多少時間跟金錢在通勤上吧！</p>
+
+<h1 id="通勤時間統計">通勤時間統計</h1>
+<p>以下為690名受訪者通勤時間的分佈，其中以<strong>16-30分鐘佔比最多</strong>，佔了40.8%，其次為15分鐘以內。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/how-much-commute-time-taipei-0.jpg" alt="台北人通勤時間分佈" /></p>
+
+<p>平均而言，一趟所需的通勤時間約為<strong>29分鐘</strong>。</p>
+
+<h1 id="通勤費用統計">通勤費用統計</h1>
+<p>以下為690名受訪者通勤費用的分佈，其中一趟所需花費的通勤交通費用在<strong>20元以下佔比最多</strong>，為36%，其次是21-40元。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/how-much-commute-time-taipei-1.jpg" alt="台北人通勤費用分佈" /></p>
+
+<p>平均而言，一趟所需的通勤費用約為<strong>42.6元</strong>。</p>
+
+<h1 id="總結">總結</h1>
+<p>每天來回一趟去上班上學，平均需要花<strong>58分鐘</strong>及<strong>85.2元</strong>，如果可以遠端工作的話，這些就都省下來了！
+省下來的時間，可以做任何自己想做的事，煮個健康的早餐晚餐、運動或是發展其他的興趣，
+這就是遠端工作最顯而易見的好處了～</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/how-much-commute-time-taipei-2.jpg" alt="台北人通勤時間及花費" /></p>
+
+<p>關於遠端工作其他更多的好處，之前也有些過一篇分享，有興趣的朋友可以看看:</p>
+
+<ul>
+  <li><a href="/posts/remote-working-advantages/" target="_blank"><strong>遠端工作有哪些好處？</strong></a></li>
+</ul>
+
+<h1 id="資料來源">資料來源</h1>
+<ul>
+  <li><a href="https://data.taipei/dataset/detail?id=e8600a47-0788-414e-af8e-c065444b07aa" target="_blank">台北市資料太平臺: 107 年第 1 次(5 月)臺北市交通民意調查報告</a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><summary type="html"><![CDATA[通勤是辦公室及學校生活必須的部分，太長的通勤時間對生活滿意度真的是一大影響， 來看看在台北市工作的人們，每天都會花多少時間跟金錢在通勤上吧！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/how-much-commute-time-taipei-2.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/how-much-commute-time-taipei-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">五種從高處俯瞰皇后鎮周遭景色的方法</title><link href="https://homuchen.com/posts/new-zealand-queenstown-overlook/" rel="alternate" type="text/html" title="五種從高處俯瞰皇后鎮周遭景色的方法" /><published>2022-08-18T17:00:00+08:00</published><updated>2022-08-18T17:00:00+08:00</updated><id>https://homuchen.com/posts/new-zealand-queenstown-overlook</id><content type="html" xml:base="https://homuchen.com/posts/new-zealand-queenstown-overlook/"><![CDATA[<p>冬天從皇后鎮高處往下看，有藍天、白雪覆蓋的山頭、咖啡色及綠色植被、湖泊及城鎮，
 可以將所有的美景盡攬眼底，真的是非常壯闊。</p>
 
 <p>今天將介紹幾種方法，讓你從高處俯瞰整個皇后鎮，依序由高度高的到高度低的是:</p>
@@ -715,141 +748,4 @@
 
 <p>作者用自己親身實驗，證明每次只針對少量的目標去進行，達成率可以更高。</p>
 
-<p>祝大家能順利地在朝著自己目標前進～掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="productivity" /><summary type="html"><![CDATA[在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸， 許多人都想在每天24小時的時間裡，完成更多的事，各種時間管理的方法層出不窮， 不過這本書卻是要大家簡化生活，作者要跟大家分享如何做更少的事，卻可以成就更多！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">淺談各種資料庫cache策略: cache aside、read through、write through、write back</title><link href="https://homuchen.com/posts/databse-chache-strategies/" rel="alternate" type="text/html" title="淺談各種資料庫cache策略: cache aside、read through、write through、write back" /><published>2022-06-25T23:54:00+08:00</published><updated>2022-06-25T23:54:00+08:00</updated><id>https://homuchen.com/posts/databse-chache-strategies</id><content type="html" xml:base="https://homuchen.com/posts/databse-chache-strategies/"><![CDATA[<p>資料庫的快取策略那麼多種: <strong>cache aside</strong>、<strong>read through</strong>、<strong>write through</strong>、<strong>write back</strong>，
-常常哪個是哪個也分不清楚、記不起來，今天將分享這些策略背後的內功心法，
-讓大家不用在為了記不起這些招式的名稱而傷腦筋。</p>
-
-<h1 id="什麼是資料庫快取database-cache">什麼是資料庫快取(database cache)?</h1>
-<p>快取是一種策略，用來增進你的應用程式及資料庫的效能，
-作法是將常使用的資料放在具有更快存取速度的的記憶體中(in memory)，
-而達成這樣的目的的策略又有好多種:</p>
-
-<ul>
-  <li>cache aside</li>
-  <li>read through</li>
-  <li>write through</li>
-  <li>write back</li>
-</ul>
-
-<p>有沒有系統性的方法可以歸納這些策略，各自的優缺點即適用的情況又是為何？
-讓我們接著看下去！</p>
-
-<h1 id="replication">Replication</h1>
-<p>其中最核心的關鍵就是: <strong>cahce就是一種replication</strong>，因為資料一部分放在資料庫中，
-而另一個放在快取，這樣就是一種replication，在分散式系統中，要做replication就只要問兩個問題:</p>
-
-<ol>
-  <li>誰是Master？誰是Slave？</li>
-  <li>複製的過程是同步的還是非同步的？</li>
-</ol>
-
-<p>之前有寫過一篇關於replication的文章: 
-<a href="/posts/what-and-why-database-replication-advantage-and-disadvantage/" target="_blank"><strong>[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?</strong></a>，有興趣的朋友可以再去看看～</p>
-
-<h2 id="master-or-slave">Master or Slave</h2>
-<p>首先，我們先定義幾個名詞，master就是接受資料寫入修改的最一開始的節點，
-而slave就是將master的改變複製一份過來存放的地方。</p>
-
-<p>換句話説，資料要寫入，就是寫到master，然後會在複製一份到slave。</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/database-replication-1.jpg" alt="master slave repilcation" target="_blank" /></p>
-
-<h2 id="synchronous-or-asynchronous-replication">Synchronous or Asynchronous replication</h2>
-<p>從master複製到slave間的過程，會有一個時間差，
-同步及非同步的複製差別在於有沒有等到資料確定被複製到了slave才會回傳寫入成功。</p>
-
-<ul>
-  <li>synchronous: 當資料寫入到master時，唯有等到他確定被複製到了slave，才會ack成功。</li>
-  <li>asynchronous: 資料一寫入到master，不等它被複製到了slave，就ack成功。</li>
-</ul>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/database-cache-1.jpg" alt="Synchronous or Asynchronous replication" target="_blank" /></p>
-
-<h1 id="各種cache策略">各種cache策略</h1>
-<p>知道了Replication之後，要怎麼將這些觀念應用在cache上呢？就是將以下兩種情況排列組合！就會得到四種快取策略拉～</p>
-
-<ol>
-  <li>資料庫作為master vs. 快取作為master</li>
-  <li>asynchronous vs. asynchronous replication</li>
-</ol>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/database-cache-0.jpg" alt="Cache strategies" target="_blank" /></p>
-
-<p>基本上，使用資料庫作為master，可以<strong>保證資料不會丟失</strong>；
-若使用快取作為master，則是<strong>適合write heavy並且可以容許資料丟失</strong>的應用。
-而<strong>同步跟不同步則決定了資料是否會有不一致</strong>的現象。
-接著就讓我們分別更加仔細地看他們個別的作法及優缺點吧。</p>
-
-<h2 id="cache-aside">cache aside</h2>
-<ul>
-  <li>
-    <p>寫入: 資料寫入時就是寫到主要的資料庫中。</p>
-  </li>
-  <li>
-    <p>讀取: 應用程式讀取資料時，會先檢查是否有在快取中了，有的話就回傳，沒有的話就去資料庫中讀取，並存放一份在快取中，
-因為這個複製的動作是當這筆有被讀取到時才會進行，所以為非同步的複製。</p>
-  </li>
-  <li>
-    <p>優點: 資料直接寫入到資料庫中，就保證不會丟失，最容易實現，因為寫入時的動作跟沒有快取時是一模一樣的。</p>
-  </li>
-  <li>
-    <p>缺點: 第一次讀取時一定會cache miss，而非同步的複製就可能造成資料間的不一致。</p>
-  </li>
-</ul>
-
-<h2 id="read-through">read through</h2>
-<ul>
-  <li>
-    <p>寫入: 資料寫入時就是寫到主要的資料庫中。</p>
-  </li>
-  <li>
-    <p>讀取: 跟cache aside非常相似，唯一差別在於應用程式只直接從緩存去拿資料，不需要同時知道緩存及資料庫的存在，
-而由快取本身決定要去哪裡拿資料。</p>
-  </li>
-  <li>
-    <p>優點: 應用程式的程式碼會更加簡潔。</p>
-  </li>
-  <li>
-    <p>缺點: 同cache aside。</p>
-  </li>
-</ul>
-
-<h2 id="write-through">write through</h2>
-<ul>
-  <li>
-    <p>寫入: 寫入時直接寫入緩存及資料庫，必須等到兩者都寫入成功才成功。</p>
-  </li>
-  <li>
-    <p>讀取: 直接讀取緩存，通常搭配read through，如此一來，應用程式都將只需面對緩存就好。</p>
-  </li>
-  <li>
-    <p>優點: 不會有cache miss。</p>
-  </li>
-  <li>
-    <p>缺點: 寫入資料要等到快取及資料庫都寫入成功後才算成功，所以會增加寫入延遲。</p>
-  </li>
-</ul>
-
-<h2 id="write-backwrite-behind">write back、write behind</h2>
-<ul>
-  <li>
-    <p>寫入: 寫入時直接寫入緩存，在以非同步的方式寫入到資料庫，這麼做可能有幾個原因，
-你的應用有大量write而資料庫負荷不了，可能在緩存那邊做一個batch insert。</p>
-  </li>
-  <li>
-    <p>讀取: 直接讀取緩存。</p>
-  </li>
-  <li>
-    <p>優點: 不會有cache miss、適用於write heavy的應用、減少對資料庫的負荷。</p>
-  </li>
-  <li>
-    <p>缺點: 資料有可能會丟失，當資料還未被成功從緩存複製到資料庫時，如果緩存這時掛掉，那些資料就不見了。</p>
-  </li>
-</ul>
-
-<h1 id="結論">結論</h1>
-<p>今天從另一個角度來看看各種緩存策略，寫入到資料庫的，不會有資料丟失的問題，
-同步及異步的複製則決定了資料的一致性，write heavy的應用可以考慮第一時間寫入緩存。</p>
-
-<p>策略沒有絕對的對錯，根據你的使用場景(write to read ratio、persistency、consistency)，選擇最適合的方案。
-希望今天的分享對你有一丁點兒的幫助，祝大家事業成功、生活美滿！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="system design" /><category term="database" /><summary type="html"><![CDATA[資料庫的快取策略那麼多種: cache aside、read through、write through、write back， 常常哪個是哪個也分不清楚、記不起來，今天將分享這些策略背後的內功心法， 讓大家不用在為了記不起這些招式的名稱而傷腦筋。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/database-cache-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/database-cache-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>祝大家能順利地在朝著自己目標前進～掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="productivity" /><summary type="html"><![CDATA[在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸， 許多人都想在每天24小時的時間裡，完成更多的事，各種時間管理的方法層出不窮， 不過這本書卻是要大家簡化生活，作者要跟大家分享如何做更少的事，卻可以成就更多！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
