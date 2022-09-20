@@ -1,4 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-09-05T23:13:16+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">台北人每天上下班都會花多少時間跟費用通勤呢？</title><link href="https://homuchen.com/posts/how-much-commute-time-taipei/" rel="alternate" type="text/html" title="台北人每天上下班都會花多少時間跟費用通勤呢？" /><published>2022-08-22T16:50:00+08:00</published><updated>2022-08-22T16:50:00+08:00</updated><id>https://homuchen.com/posts/how-much-commute-time-taipei</id><content type="html" xml:base="https://homuchen.com/posts/how-much-commute-time-taipei/"><![CDATA[<p>通勤是辦公室及學校生活必須的部分，太長的通勤時間對生活滿意度真的是一大影響，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2022-09-20T12:22:14+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">在紐西蘭皇后鎮周圍滑雪要花多少錢?</title><link href="https://homuchen.com/posts/new-zealand-ski-coast/" rel="alternate" type="text/html" title="在紐西蘭皇后鎮周圍滑雪要花多少錢?" /><published>2022-09-20T12:18:00+08:00</published><updated>2022-09-20T12:18:00+08:00</updated><id>https://homuchen.com/posts/new-zealand-ski-coast</id><content type="html" xml:base="https://homuchen.com/posts/new-zealand-ski-coast/"><![CDATA[<p>夏天想滑雪怎麼辦？當然就是去南半球囉～這篇文章會帶你看看去到紐西蘭滑雪的主要花費，將包含以下幾點:</p>
+<ul>
+  <li>雪場纜車票</li>
+  <li>裝備租借</li>
+  <li>交通</li>
+</ul>
+
+<p>其他還有像是機票、飲食、住宿就不討論囉～</p>
+
+<h1 id="雪場纜車票">雪場纜車票</h1>
+<p>結論先行: 一天的纜車票平均為<strong>85~150紐幣</strong>。</p>
+
+<p>價差主要來自於一次購買多少天。一次買三四天以上的話，每天的價格大約就是100紐幣。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>雪場</th>
+      <th>1 Day</th>
+      <th>2 Days</th>
+      <th>3 Days</th>
+      <th>4+ Days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The Remarkables</td>
+      <td>139</td>
+      <td>129</td>
+      <td>109</td>
+      <td>99</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Coronet Peak</td>
+      <td>139</td>
+      <td>129</td>
+      <td>109</td>
+      <td>99</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Cardrona</td>
+      <td>150</td>
+      <td>140</td>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Treble Cone</td>
+      <td>105</td>
+      <td>100</td>
+      <td>85</td>
+      <td>85</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>皇后鎮附近大概有四個雪場:  <strong>The Remarkables</strong>、<strong>Coronet Peak</strong>、<strong>Cardrona</strong>、<strong>Treble Cone</strong>，
+其中Treble Cone有較多的高級雪道，較不建議新手前往。</p>
+
+<p>所有的雪票都可以上網先購買，到雪場的第一天在出示QR code給櫃檯工作人員，拿到一張卡就可以開始滑囉～</p>
+
+<h2 id="購票網站連結">購票網站連結</h2>
+<ul>
+  <li><a href="https://shop.theremarkables.co.nz/lift-pass" target="_blank"><strong>The Remarkables</strong></a></li>
+  <li><a href="https://shop.coronetpeak.co.nz/lift-pass" target="_blank"><strong>Coronet Peak</strong></a></li>
+  <li><a href="https://new.cardrona.com/lift-pass-packages#Lift-Passes" target="_blank"><strong>Cardrona</strong></a></li>
+  <li><a href="https://new.treblecone.com/lift-pass-packages" target="_blank"><strong>Treble Cone</strong></a></li>
+</ul>
+
+<h1 id="裝備租借">裝備租借</h1>
+<p>結論先行: 一天的裝備租借(雪板、靴子)平均為<strong>28~60紐幣</strong>。</p>
+
+<p>爲什麼差距這麼大呢？主要就是看你是在鎮上租，還是在雪場上租。</p>
+
+<ul>
+  <li>鎮上租Board and Boats: 每天30紐幣(租一兩天)、每天28紐幣(ㄧ次租3天以上)</li>
+  <li>雪場租Board and Boats: 每天約55紐幣</li>
+</ul>
+
+<p>上面購買纜車的連結網站中，也可以一併租雪具，就不會那麼貴，
+但最便宜的還是自己在鎮上租好然後扛上去雪場吧～
+滑雪前一天的下午或晚上去店裡租就好了。</p>
+
+<h2 id="鎮上雪具店">鎮上雪具店</h2>
+<ul>
+  <li><a href="https://goo.gl/maps/dK1UoCbXaCR6Y43G9" target="_blank"><strong>Green Toad Snowboard &amp; Ski Shop</strong></a></li>
+  <li><a href="https://g.page/t7-queenstown?share" target="_blank"><strong>Torpedo7 Queenstown</strong></a></li>
+</ul>
+
+<h1 id="雪場交通">雪場交通</h1>
+<h2 id="自行開車">自行開車</h2>
+<p>自行開車的話，費用就是你們租車的錢跟油錢。</p>
+
+<p>天氣不好下雪時，會要求上雪鍊。如果害怕開山路或不想裝雪鏈，可以選擇搭接駁車，
+Cardrona的話，開車到山腳下搭免費接駁車，但只有Cardrona山腳下的接駁車是免費的～</p>
+
+<h2 id="接駁車">接駁車</h2>
+<p>從皇后鎮鎮搭接駁車前往雪場，離鎮上較近的The Remarlables、Coronet Peak雪場要<strong>20紐幣</strong>，較遠的Cardrona要<strong>35紐幣</strong>。</p>
+
+<h2 id="接駁車連結">接駁車連結</h2>
+<ul>
+  <li><a href="https://shop.theremarkables.co.nz/express-ski-bus" target="_blank"><strong>The Remarkables、Coronet Peak</strong></a></li>
+  <li><a href="https://www.cardrona.com/winter/plan/getting-here-transport-parking#queenstown" target="_blank"><strong>Cardrona</strong></a></li>
+</ul>
+
+<h1 id="總結">總結</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>價格(紐幣)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>纜車票</td>
+      <td>85-150</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>裝備</td>
+      <td>28-60</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>交通</td>
+      <td>0-35</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Total</td>
+      <td>113-245</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>平均每天的花費會落在<strong>113-245紐幣</strong>之間，折合台幣約為<strong>2100-4568元</strong>。</p>
+
+<p>想省點錢的話就是一次購買三四天以上的雪票，
+當然買季票就更便宜拉，大家可以自行去網站上看看。</p>
+
+<p>裝備租借要在鎮上租，不要在雪場上租。交通的話，如果你敢在路上嘗試伸出大拇指搭便車到雪場，
+又是省了一筆😂(其實看到不少人這樣做)。</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="New Zealand" /><summary type="html"><![CDATA[夏天想滑雪怎麼辦？當然就是去南半球囉～這篇文章會帶你看看去到紐西蘭滑雪的主要花費，將包含以下幾點: 雪場纜車票 裝備租借 交通]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/new-zealand-ski-coast.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/new-zealand-ski-coast.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">台北人每天上下班都會花多少時間跟費用通勤呢？</title><link href="https://homuchen.com/posts/how-much-commute-time-taipei/" rel="alternate" type="text/html" title="台北人每天上下班都會花多少時間跟費用通勤呢？" /><published>2022-08-22T16:50:00+08:00</published><updated>2022-08-22T16:50:00+08:00</updated><id>https://homuchen.com/posts/how-much-commute-time-taipei</id><content type="html" xml:base="https://homuchen.com/posts/how-much-commute-time-taipei/"><![CDATA[<p>通勤是辦公室及學校生活必須的部分，太長的通勤時間對生活滿意度真的是一大影響，
 來看看在台北市工作的人們，每天都會花多少時間跟金錢在通勤上吧！</p>
 
 <h1 id="通勤時間統計">通勤時間統計</h1>
@@ -597,155 +749,4 @@
 </ul>
 
 <p>之後就剩下改造地板、及新傢俱的添購(床、工作桌椅)，
-如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想改造自己的房間，怕沒有美感的自己不知道要怎麼選油漆顏色嗎？發黃的開關面板及醜醜的變電箱該怎麼辦？ 今天將分享我如何改造，在沒有什麼美學素養的前提下該如何進行！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[讀書筆記] 少才是力量: 簡單高效6大原則</title><link href="https://homuchen.com/posts/book-note-the-power-of-less/" rel="alternate" type="text/html" title="[讀書筆記] 少才是力量: 簡單高效6大原則" /><published>2022-07-09T00:48:00+08:00</published><updated>2022-07-09T00:48:00+08:00</updated><id>https://homuchen.com/posts/book-note-the-power-of-less</id><content type="html" xml:base="https://homuchen.com/posts/book-note-the-power-of-less/"><![CDATA[<p>在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸，
-許多人都想在每天24小時的時間裡，完成更多的事，各種時間管理的方法層出不窮，
-不過這本書卻是要大家簡化生活，作者要跟大家分享<strong>如何做更少的事，卻可以成就更多</strong>！</p>
-
-<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" alt="少才是力量" loading="lazy" /></p>
-
-<p>作者是<a href="https://zenhabits.net/" target="_blank"><strong>zenhabits.net</strong></a>網站的創辦人，
-在幾年裡，作者每次<strong>只專注一個目標</strong>，而不是一心多用，並且用這個方法完成了以下的目標，
-並將過程記錄在部落格中:</p>
-
-<ol>
-  <li>每天慢跑</li>
-  <li>健康飲食</li>
-  <li>做事更有條理、更高效</li>
-  <li>接受訓練，跑兩次馬拉松</li>
-  <li>做兩份工作，收入翻一倍</li>
-  <li>每天早起</li>
-  <li>成為素食主義者</li>
-  <li>參加兩次鐵人三項全能比賽</li>
-  <li>成功經營部落格「禪習慣」</li>
-  <li>還清所有債務</li>
-  <li>存下第一筆應急基金</li>
-  <li>簡化日常生活</li>
-  <li>清理家中雜物</li>
-  <li>減重18公斤</li>
-  <li>撰寫並出版兩版暢銷電子書</li>
-  <li>完成小說初稿</li>
-  <li>辭掉工作、創業</li>
-  <li>成功經營第二個部落格「寫以致用」</li>
-  <li>出版這本書</li>
-</ol>
-
-<p>在做以上這些事的同時，還養育著6個孩子，作者跟每個人一樣一天只有24小時，
-為何能做到這麼多事呢？有人可能過了好幾年想完成上面一件事都無疾而終，
-重點就是<strong>簡化生活，自我設限，抓住重點！</strong></p>
-
-<h1 id="六大原則">六大原則</h1>
-<p>作者在本書中提出以下六大原則，幫助你大幅提高工作效率，同時簡化生活，
-並且告訴大家可以馬上開始採取的行動！</p>
-
-<ol>
-  <li>自我設限</li>
-  <li>抓住重點</li>
-  <li>化繁為簡</li>
-  <li>集中精神</li>
-  <li>養成習慣</li>
-  <li>小處著手</li>
-</ol>
-
-<h1 id="自我設限">自我設限</h1>
-
-<blockquote>
-  <p>You can do anything but you can’t do everything.</p>
-</blockquote>
-
-<p>信箱裡的電子郵件太多？就給自己設個限，每天只能看兩次，
-每次只能回五封，你就會提高效率，只發最重要的郵件。</p>
-
-<p>常常買了一大堆不需要或不想要的東西嗎，如果先設個預算上限，你就只會買最迫切需要的東西。</p>
-
-<p>待辦事項清單裡被塞滿了一串長長的任務，結果完成的卻少之又少，不如為清單數量設定一個上限，
-集中精力完成，我自己也有將之運用在自己的待辦清單系統上，對於這個議題有興趣的朋友，
-可以看看我之前寫的文章:</p>
-
-<ul>
-  <li><a href="/posts/book-note-todo-list-formula/" target="_blank"><strong>掌握這3個原則，打造出最適合自己的代辦清單系統</strong></a></li>
-  <li><a href="/posts/notion-kanban-board/" target="_blank"><strong>如何使用Notion打造Kanban based的待辦清單</strong></a></li>
-</ul>
-
-<h2 id="為什麼要設限">為什麼要設限</h2>
-<ul>
-  <li>能夠把事情簡化，生活更易於掌控，壓力也會比較小。</li>
-  <li>更加專注自身，找出最重要的事，集中精力完成少量任務，幫助你實現目標。</li>
-</ul>
-
-<h2 id="我們可以怎麼做呢">我們可以怎麼做呢</h2>
-<p>首先可以先問問自己這幾個問題:</p>
-<ul>
-  <li>生活裡的哪些領域壓的我喘不過氣？</li>
-  <li>我想怎麼簡化他們？</li>
-  <li>除了需要完成的任務，我需不需要限制自己擁有的物品、接收的資訊、承擔的責任？</li>
-  <li>設定一個限制，執行一段時間後在檢視看看這個限制需不需要做調整。</li>
-</ul>
-
-<h1 id="抓住重點及化繁為簡">抓住重點及化繁為簡</h1>
-<p>在簡化生活、刪減項目、限制資訊、減少承諾、清理雜物之前，
-你必須要先知道什麼東西對你是最重要的。一旦清楚了之後，
-將不重要的東西刪去就變得簡單。</p>
-
-<h2 id="我們可以怎麼做呢-1">我們可以怎麼做呢</h2>
-<p>首先可以先問問自己這幾個問題:</p>
-<ul>
-  <li>我的價值觀是什麼？</li>
-  <li>我的目標是什麼？</li>
-  <li>我對什麼有熱情？</li>
-  <li>哪些任務能帶來最大或長遠的回報？</li>
-  <li>是需要還是想要？</li>
-</ul>
-
-<h1 id="集中精神">集中精神</h1>
-<p><strong>專注</strong>是提高效率的最佳工具。</p>
-
-<p>就像在<a href="https://www.books.com.tw/products/0010906940" target="_blank"><strong>《Deep Work深度工作力》</strong></a>一書中講到的，
-當某項任務被完全中斷的時候，人得花超過20分鐘才能完全回到之前的狀態，
-如果你頻繁地在工作之間切換時，就會破壞深度工作的執行，降低效率。</p>
-
-<p>專注在「唯一任務」，強力建議一次只做一件事，有助於保持心理健康，提高工作效率。</p>
-
-<h2 id="我們可以怎麼做呢-2">我們可以怎麼做呢</h2>
-<ul>
-  <li>每天早上起床的<strong>第一件事，就是做自心中的首要任務</strong>。</li>
-  <li>做一件任務時，儘量<strong>排除外界的干擾</strong>。</li>
-  <li>如果有別的任務插進來，將他們紀錄或寫下來，然後繼續回來工作。</li>
-</ul>
-
-<h1 id="養成習慣">養成習慣</h1>
-<p>有許多書籍是在講習慣的重要、機制以及如何培養一個好習慣，
-像是
-<a href="https://www.books.com.tw/products/0010560033" target="_blank"><strong>為什麼我們這樣生活，那樣工作？</strong></a>，
-<a href="https://www.books.com.tw/products/0010822522" target="_blank"><strong>原子習慣</strong></a>，</p>
-
-<h2 id="我們可以怎麼做呢-3">我們可以怎麼做呢</h2>
-<ul>
-  <li>選擇<strong>一種</strong>習慣，對！就是只選一個！</li>
-  <li>寫下計畫，公開目標</li>
-  <li>每天彙報進度</li>
-  <li>慶祝新習慣養成～🎉</li>
-</ul>
-
-<h1 id="小處著手start-small">小處著手(start small)</h1>
-<p>讓一個習慣更容易持之以恆的方式就是先從小目標開始。</p>
-
-<p>比如你想減重，與其在頭一個禮拜上了五天的健身房，每天三餐都自己準備健康低熱量的飲食，然後做了一兩個禮拜就放棄，
-那還不如只要求自己從每天多走5分鐘的路，每週少吃幾餐宵夜，少喝幾杯飲料開始，持續一段較長的時間。</p>
-
-<p>以下是各個領域的一些例子:</p>
-
-<ul>
-  <li>運動: 每天運動5-10分鐘，而不是60分鐘</li>
-  <li>早起: 提早15分鐘起床，而不是2小時</li>
-  <li>健康飲食: 先進行細微調整，而不是徹底改變飲食</li>
-  <li>清理雜物: 先整理一個抽屜，而不是試圖一口氣把整個家或辦公室清理乾淨</li>
-</ul>
-
-<h1 id="總結">總結</h1>
-<p>少就是力量，簡化生活，既可以減輕壓力，卻又不會讓你達成的事變少，
-重點就是要<strong>決定優先順序</strong>，當有一大堆事要做時，往往會因為太過混亂而停滯不前，
-集中精力，一次只面對一項任務時，效率可能會大幅提升。</p>
-
-<p>作者用自己親身實驗，證明每次只針對少量的目標去進行，達成率可以更高。</p>
-
-<p>祝大家能順利地在朝著自己目標前進～掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="讀書筆記" /><category term="books" /><category term="life style" /><category term="productivity" /><summary type="html"><![CDATA[在現在這個時代裡，我們被太多的資訊、選擇及任務轟炸， 許多人都想在每天24小時的時間裡，完成更多的事，各種時間管理的方法層出不窮， 不過這本書卻是要大家簡化生活，作者要跟大家分享如何做更少的事，卻可以成就更多！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/book-note-the-power-of-less-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想改造自己的房間，怕沒有美感的自己不知道要怎麼選油漆顏色嗎？發黃的開關面板及醜醜的變電箱該怎麼辦？ 今天將分享我如何改造，在沒有什麼美學素養的前提下該如何進行！]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-wall-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
