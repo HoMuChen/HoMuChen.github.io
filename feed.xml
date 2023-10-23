@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2023-08-10T14:01:58+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">簡易老家房間DIY改造，成果如何、購物清單及總共花了多少錢呢？</title><link href="https://homuchen.com/posts/room-makeover-overview/" rel="alternate" type="text/html" title="簡易老家房間DIY改造，成果如何、購物清單及總共花了多少錢呢？" /><published>2023-01-12T17:00:00+08:00</published><updated>2023-01-12T17:00:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-overview</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-overview/"><![CDATA[<p>因為開啟了全遠端工作模式的關係，不是在環遊世界工作，就是在家工作。退掉了台北租屋處回到老家之後，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2023-10-23T23:33:08+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">遠端工作職缺數變化: 104求職網站搜尋結果統計</title><link href="https://homuchen.com/posts/remote-jobs-trend/" rel="alternate" type="text/html" title="遠端工作職缺數變化: 104求職網站搜尋結果統計" /><published>2023-10-23T20:00:00+08:00</published><updated>2023-10-23T20:00:00+08:00</updated><id>https://homuchen.com/posts/remote-jobs-trend</id><content type="html" xml:base="https://homuchen.com/posts/remote-jobs-trend/"><![CDATA[<p>疫情(Covid-19)的關係，算是打開了所以工作遠端的大門，這篇文章利用了網路爬蟲程式，
+不間斷地收集104求職網站中有提到<strong>遠端</strong>的職缺數。</p>
+
+<h1 id="圖表">圖表</h1>
+<p>從2021年11月至今的資料，圖表如下:</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/remote-jobs-trend.jpg" alt="遠端職缺數趨勢圖" /></p>
+
+<h1 id="原始資料">原始資料</h1>
+<p>原始資料我就放在<a href="https://docs.google.com/spreadsheets/d/1VHkQlnWTwu7CR8kn5GjNFzIL_-IHqaF_bAp6EybNEHI/edit?usp=sharing">google試算表</a>上，有興趣的朋友可以自行取用。</p>
+
+<h1 id="結論">結論</h1>
+<p>可以看到整體趨勢是一直往上的，過去我在公司中應徵找人的時候也是這種感覺，來面試的人幾乎都會詢問是否可以遠端工作，
+在遠端工作越來越普遍的當下，企業也該加減思考如何擁抱遠端工作。</p>
+
+<p>自從2022年6月開始，我在沒有轉職的情況下，開啟了全遠端的工作模式，更多的關於遠端工作的資訊可以參考我之前的文章:</p>
+<ul>
+  <li><a href="/posts/remote-working-advantages"><strong>遠端工作有哪些好處？</strong></a></li>
+  <li><a href="/posts/remote-working-disadvantages"><strong>遠端工作有哪些缺點？以及該如何克服？</strong></a></li>
+  <li><a href="/posts/how-i-tell-my-boss-i-want-to-work-remotely"><strong>我是如何跟我老闆談要遠端工作的？</strong></a></li>
+</ul>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><summary type="html"><![CDATA[疫情(Covid-19)的關係，算是打開了所以工作遠端的大門，這篇文章利用了網路爬蟲程式， 不間斷地收集104求職網站中有提到遠端的職缺數。]]></summary></entry><entry><title type="html">簡易老家房間DIY改造，成果如何、購物清單及總共花了多少錢呢？</title><link href="https://homuchen.com/posts/room-makeover-overview/" rel="alternate" type="text/html" title="簡易老家房間DIY改造，成果如何、購物清單及總共花了多少錢呢？" /><published>2023-01-12T17:00:00+08:00</published><updated>2023-01-12T17:00:00+08:00</updated><id>https://homuchen.com/posts/room-makeover-overview</id><content type="html" xml:base="https://homuchen.com/posts/room-makeover-overview/"><![CDATA[<p>因為開啟了全遠端工作模式的關係，不是在環遊世界工作，就是在家工作。退掉了台北租屋處回到老家之後，
 有了改造房間的念頭，這篇文章要簡單分享改造房間最後的成果，以及總共花費了多少錢～(文末有購物清單)</p>
 
 <h1 id="成果">成果</h1>
@@ -711,69 +731,4 @@ Cardrona的話，開車到山腳下搭免費接駁車，但只有Cardrona山腳�
 就算是在辦公室，也不要太依賴同步的溝通，真的沒那麼重要緊急的事，
 多練習使用<a href="https://weworkremotely.com/everything-you-need-to-know-about-asynchronous-communication-in-remote-working-environments" target="_blank"><strong>非同步溝通</strong></a>，能給彼此都多專注工作的時間，以及為遠距工作的轉型無縫接軌！</p>
 
-<p>祝大家在前往自己理想生活型態的道路上在進一步！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><category term="life style" /><category term="digital nomad" /><summary type="html"><![CDATA[想遠端工作該如何跟老闆說？該怎樣說服老闆？今天將分享一些讓雇主及員工都雙贏的想法！]]></summary></entry><entry><title type="html">三個數位遊牧可以尋找住宿的方法及各平台</title><link href="https://homuchen.com/posts/remote-working-where-to-find-accommodation/" rel="alternate" type="text/html" title="三個數位遊牧可以尋找住宿的方法及各平台" /><published>2022-07-12T21:20:00+08:00</published><updated>2022-07-12T21:20:00+08:00</updated><id>https://homuchen.com/posts/remote-working-where-to-find-accommodation</id><content type="html" xml:base="https://homuchen.com/posts/remote-working-where-to-find-accommodation/"><![CDATA[<p>作為一名數位遊牧者，找住的地方一定是我們會常常遇到的問題，
-每當要移動到下一個地點時，就必須再做一次這個事情。</p>
-
-<p>幸運的是，隨著遠距工作越來越盛行，也有越來越多的服務提供住宿選項給你，
-今天將分享以下幾種尋找住宿的方法以及相對應的平台網站，花費依次由高到低:</p>
-<ul>
-  <li><strong>短期住宿</strong></li>
-  <li><strong>Coliving space</strong></li>
-  <li><strong>House sitting</strong></li>
-</ul>
-
-<h1 id="短期住宿">短期住宿</h1>
-<p>租房子通常會有一個一年或半年的租約，但身為數位遊牧，可能沒想在一個地方待那麼久，或是有簽證的限制，
-此時短期住宿會是一個方便的選擇，最簡單的方式就是用各大訂房網站，找飯店。</p>
-
-<p>現在也有越來越多的平台，專門提供這樣的物件給遠距工作者，除了住宿外，特別幫你設想到遠距工作者所需要工作環境。</p>
-
-<p><strong>優點:</strong> 簡單方便選擇多，上網瀏覽一根手指頭搞定，奢華還是簡易根據自己的</p>
-
-<p><strong>缺點:</strong> 蠻多物件都可以睡到兩三四個人，如果你是邊緣人，只有自己一個人去的話，
-  除非你真的很不缺錢，不然一個月的租金也是蠻可觀的，如果有伴的，租個完整房原來share真的是蠻不錯的，
-  如果找不到分母，有缺人的朋友，也可以聯絡我看看唷！😂</p>
-
-<ul>
-  <li><a href="https://www.anyplace.com" target="_blank"><strong>Anyplace</strong></a></li>
-  <li><a href="https://airbnb.com" target="_blank"><strong>Airbnb</strong></a></li>
-</ul>
-
-<h1 id="coliving-space">Coliving space</h1>
-<p>Coliving space也常稱為share house，就是會有一起使用公共區域，像是客廳、廚房、工作的空間等等，
-自己的房間可能跟其他人共用也可能有自己一間，就看你荷包夠不夠深。</p>
-
-<p><strong>優點:</strong> 住在coliving space最大的好處就是會有室友，能夠認識來自世界各地各行各業的人，一起工作生活一起玩。</p>
-
-<p><strong>缺點:</strong> 自己隱私的空間略少，如果你比較喜歡有多一點自己的空間的人，工作之餘不想太多社交的，
-可能就需要找有自己一間房間的，但你去洗澡、廁所、用廚房還是會遇到人拉😄</p>
-
-<p>有些平台甚至是有特定的社群，像是遠距工作社群、衝浪社群！
-更多的平台及房源可以在google上<strong>搜尋 coliving space + 地點</strong>。</p>
-
-<ul>
-  <li><a href="https://www.coworksurf.com/" target="_blank"><strong>coworksurf.com</strong></a></li>
-  <li><a href="https://coliving.com/" target="_blank"><strong>coliving.com</strong></a></li>
-  <li><a href="https://www.outsite.co/" target="_blank"><strong>outside.co</strong></a></li>
-</ul>
-
-<h1 id="house-sitting">House sitting</h1>
-<p>最省的方式就是House sitting拉～ sitting也就是照顧的意思，幫屋主完成一些任務，通常是照顧寵物或是植物，就可以換到免費的住宿。</p>
-
-<p><strong>優點:</strong> 免費！經濟面比較有考量的朋友可以試試，真正落實遊牧民族逐水草而居的生活，
-  <strong>逐免費住宿而居</strong>😂，畢竟住宿應該是佔遊牧生活開銷上最大的一筆了。</p>
-
-<p><strong>缺點:</strong> 因為任務通常都是每天要做的，所以每天就只能待在住宿地點附近，沒有辦法跑太遠～
-  有些雇主可能允許出去住個一晚，但基本上，缺點就是會被綁在同一個地方，附近可能不一定有你想去的地方之類的。</p>
-
-<ul>
-  <li><a href="https://www.trustedhousesitters.com/"><strong>TrustedHousesitters</strong></a></li>
-  <li><a href="https://www.nomador.com/"><strong>Nomador</strong></a></li>
-  <li><a href="https://www.housecarers.com/"><strong>HouseCarers</strong></a></li>
-  <li><a href="https://www.mindmyhouse.com/"><strong>MindMyHouse</strong></a></li>
-  <li><a href="https://www.housesitmatch.com/"><strong>HouseSitMatch</strong></a></li>
-</ul>
-
-<p>祝大家在追逐自己理想的生活上一路順遂～如果想更即時地看我數位遊牧流浪去哪，
-或是不想看這麼多字，想看精簡點的圖文表達的話，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。
-掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="remote work" /><category term="digital nomad" /><summary type="html"><![CDATA[作為一名數位遊牧者，找住的地方一定是我們會常常遇到的問題， 每當要移動到下一個地點時，就必須再做一次這個事情。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/remote-working-where-to-find-accommodation-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/remote-working-where-to-find-accommodation-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>祝大家在前往自己理想生活型態的道路上在進一步！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><category term="life style" /><category term="digital nomad" /><summary type="html"><![CDATA[想遠端工作該如何跟老闆說？該怎樣說服老闆？今天將分享一些讓雇主及員工都雙贏的想法！]]></summary></entry></feed>
