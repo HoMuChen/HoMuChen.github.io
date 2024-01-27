@@ -1,4 +1,215 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2023-10-23T23:33:08+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">遠端工作職缺數變化: 104求職網站搜尋結果統計</title><link href="https://homuchen.com/posts/remote-jobs-trend/" rel="alternate" type="text/html" title="遠端工作職缺數變化: 104求職網站搜尋結果統計" /><published>2023-10-23T20:00:00+08:00</published><updated>2023-10-23T20:00:00+08:00</updated><id>https://homuchen.com/posts/remote-jobs-trend</id><content type="html" xml:base="https://homuchen.com/posts/remote-jobs-trend/"><![CDATA[<p>疫情(Covid-19)的關係，算是打開了所以工作遠端的大門，這篇文章利用了網路爬蟲程式，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2024-01-27T15:27:19+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2024-01-27T10:00:00+08:00</published><updated>2024-01-27T10:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/"><![CDATA[<p>Message broker主要有分為兩類，分別是<strong>memory based</strong>及<strong>log based</strong>，
+Redis或RabbitMQ作為broker的是memory based的，而log based最有名的，
+就是Kafka。這兩種有何不同呢？何時又該選用哪種message queue？</p>
+
+<p>這篇文章首先會討論message broker普遍的基本特性及用法，
+然後再探討兩種broker內部設計的不同，最後就可以比較在各種特性上，兩者的不同。</p>
+
+<p>在上篇文章<a href="/posts/message-queue-advantages-use-cases" target="_blank"><strong>什麼是message queue? 優點及使用場景</strong></a>中，
+看完了為何要使用message queue之後，今天要討論兩類message broker的差異，分別是<strong>memory based</strong>及<strong>log based</strong>，</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" alt="rabbitmq vs kafka" /></p>
+
+<h1 id="基本特性">基本特性</h1>
+<p>Message borker最基本的操作就是produce跟consume，一個產生message，一個消耗message，
+此時我們可以問的幾個問題如下:</p>
+
+<h2 id="multiple-consumers">Multiple consumers</h2>
+<blockquote>
+  <p>當有多個consumer時，每個message會被處理多次嗎？還是只會被其中一個consumer處理到一次？</p>
+</blockquote>
+
+<h3 id="load-balancing">Load balancing</h3>
+<p>每個message只會被其中<strong>一個</strong>consumer處理到，所以你可以指派任意多個consumer去consume一個topic，
+當你想要並行處理你的工作時，這會非常有用。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-2-1.jpg" alt="load balancing" /></p>
+
+<h3 id="fan-out">Fan-out</h3>
+<p>每個message會被送到<strong>所有</strong>的consumer去處理，像是broadcast，可以用在當你的message需要到各個不同的系統時，
+比如說一筆交易的資料，需要被送到data warehouse保存、送到BI分析給老闆看、送到使用者的系統來更新他的交易資訊頁面。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-3-1.jpg" alt="fan-out" /></p>
+
+<h2 id="persistence">Persistence</h2>
+<blockquote>
+  <p>當broker掛掉時，已經發送過來的messsage會消失嗎？還是等到broker重啟之後，會再重新發送？</p>
+</blockquote>
+
+<p>就是顧名思義，producer的每個message，是否會確保送到consumer那邊，broker掛掉，message還會不會在。
+不過consumer有沒有處理好這個message又是另一回事了(見下段Acknowledgements)。</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<blockquote>
+  <p>當consumer工作到一半掛掉時，如何確保每個message已經被完整地處理好了呢？</p>
+</blockquote>
+
+<p>因為consumer也可能隨時會掛掉，可能在收到訊息之前，或收到訊息但工作到一半時，
+broker為了確保訊息有好好地到達，會使用acknowledgement，
+acknowledgement就是必須由consumer告訴broker，他已經收到message，broker可以將他從queue中移除了，
+至於ack的時機不同會導致訊息被處理的次數的保證的不同。</p>
+
+<h3 id="at-most-once">At most once</h3>
+<p>先ack，再處理訊息，如果在處理到一半時掛掉，這個訊息就沒被完整處理到了，
+因為已經ack了，broker已經把訊息從queue中移開，不會再發送這個訊息出來，
+所以最差的情況就是沒被處理到，正常的情況就是處理一次，而且最多一次，此為<strong>at most once</strong>。</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>//consumer first ack the message and the process
+function (message) {
+  queue.ack(message)
+  essage.ack()
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="at-least-once">At least once</h3>
+<p>想反地，先處理訊息再ack，如果在處理到一半時掛掉，
+因為還沒ack，broker會再發送這個訊息出來，
+所以最差的情況就是訊息被處理到多次，正常的情況就是處理一次，而且至少一次，此為<strong>at least once</strong>。</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>//consumer processes the message first and then ack it
+function (message) {
+  process(message)
+  message.ack()
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h1 id="internal-design">Internal Design</h1>
+<p>現在就來看看message system的內部設計，如此一來就可以知道各個系統的特性以及該如何回答上面的問題，</p>
+
+<h2 id="memory-based">Memory based</h2>
+<p>這類系統顧名思義，主要使用memory作為message存放的地方，當consumer ack了某個信息後，
+就把它刪掉了，完全不留痕跡。當然很多系統也可以透過設置，決定要不要將信息寫到硬碟上，
+不過主要是用來做recovery的，確保broker本身掛掉時，message不會丟失，
+當確認了message已經成功抵達了它要到的地方後，一樣會把它刪掉。</p>
+
+<p>此類系統著重的是message從producer到consumer的<strong>過程</strong>，而不是留下一個永久的<strong>狀態或結果</strong>。</p>
+
+<p>而信息的傳送是由broker主動<strong>push</strong>給consumer的。</p>
+
+<h2 id="log-based">Log based</h2>
+<p>而log based的系統則是相反，只有要message進來，就都寫到硬碟上，是一個append only log，
+當consumer要消耗信息時，就是讀取檔案上的資料，讀到盡頭了就等通知，
+等有新的資料繼續被append到檔案中，有點像是Unix tool <code class="language-plaintext highlighter-rouge">tail -f</code> 的感覺。</p>
+
+<p>此時，信息的傳送consumer去向broker<strong>pull</strong>。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-4.jpg" alt="log based" /></p>
+
+<p>為了不讓寫入的速度被限制一個硬碟上，需要將一個topic的log partitioned，
+每個partition由一台機器負責，可以獨立地讀寫。</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-5.jpg" alt="log partition" /></p>
+
+<h1 id="comparison-between-rabbitmq-and-kafka">Comparison between RabbitMQ and Kafka</h1>
+<p>終於可以來看看兩者的比較拉～ 首先奉上一個表格，再來一點一點詳細討論！</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>特性</th>
+      <th style="text-align: left">RabbitMQ</th>
+      <th style="text-align: left">Kafka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Load Balancing</td>
+      <td style="text-align: left">Yes</td>
+      <td style="text-align: left">Yes, but limited</td>
+    </tr>
+    <tr>
+      <td>Fan-out</td>
+      <td style="text-align: left">Yes, through exchabge binding</td>
+      <td style="text-align: left">Yes</td>
+    </tr>
+    <tr>
+      <td>Persistence</td>
+      <td style="text-align: left">Yes, through configuration</td>
+      <td style="text-align: left">Yes</td>
+    </tr>
+    <tr>
+      <td>Inorder delivery</td>
+      <td style="text-align: left">Yes, conditionally</td>
+      <td style="text-align: left">yes, per partition</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="load-balancing-1">Load Balancing</h2>
+<ul>
+  <li>Memory based: 自然地support了load balancing，當有message時，
+broker輪流地向跟他有建立連結的consumer推送信息，就達成了load balancing的效果，
+越多consumer，就可以平行處理越多的工作。</li>
+  <li>
+    <p>Log based: 無法天生支援load balancing，因為每個consumer彼此是各自獨立的，分別從頭、
+或從某個地方開始讀取log檔案，所以想達成load balancing，是透過partition的方法:</p>
+
+    <p>假設我現在有一個topic，並且將它partition成三份，此時就可以assign三個consumer給他，
+看起來就像是這一個topic的message被分給三個consumer，而實際上是每一個partition對應到一個consumer，
+所以！<strong>可以同時平行處理這個topic的consumer的數量，也就會是partition的數量</strong>。</p>
+  </li>
+</ul>
+
+<h2 id="fan-out-1">Fan-out</h2>
+<ul>
+  <li>Memory based: 需要透過額外的設計才能達成，RabbitMQ implememt的AMQP協議，
+exchange binding可以實現pub-sub的patter。</li>
+  <li>Log based: 自然地support fan-out，每個consumer對log檔案想讀哪就讀哪，想重複讀幾次就讀幾次。</li>
+</ul>
+
+<h2 id="persistence-1">Persistence</h2>
+<ul>
+  <li>Memory based: 透過設置，可以同步將message寫入硬碟，確保不會丟失，不過就只保存到當consumer成功消耗之前。</li>
+  <li>Log based: 如前面所述，每個message都會寫入硬碟，除非你說要刪掉它，不然就會一直在。</li>
+</ul>
+
+<h2 id="inorder-delivery">Inorder delivery</h2>
+<ul>
+  <li>Memory based: 無法保證message一個一個按照順序的被處理，除非每一個topic只有一個consumer。</li>
+  <li>Log based: 每個partition上的message，一定是被consumer做一個sequential read的動作，
+所以信息一定會被按照順序讀取，但不同partition之間就沒有順序的保證，他們基本上是獨立的。</li>
+</ul>
+
+<h1 id="use-cases">Use cases</h1>
+<p>最後就來看看在哪些場景比較適合使用哪一種產品吧！根據以下幾個問題及情境分別回答:</p>
+<ul>
+  <li>是否需要被保存下來?</li>
+  <li>工作昂不昂貴?</li>
+  <li>順序重要嗎?</li>
+</ul>
+
+<h2 id="是否需要被保存下來">是否需要被保存下來?</h2>
+<p>如果你想要message被保存下來，那就用log based的messaging system，保存下來有哪些好處呢？</p>
+
+<ol>
+  <li>可以肆無忌憚地去consume message，可以去嘗試、做實驗，不用怕message會不見，</li>
+  <li>各種event sourcing的好處，有興趣的可以google它看看～</li>
+</ol>
+
+<h2 id="工作昂不昂貴">工作昂不昂貴?</h2>
+<p>如果處理一個message的工作量是很大的，需要耗費很多時間才能做完，你可以比較不會想用log based的產品，為什麼呢?</p>
+
+<ol>
+  <li>它無法使用大量的consumer來平行地處理所有的工作，因為<strong>可以平行工作的consumer的數量受限於partition的數量</strong></li>
+  <li>在一個partition裡，只要有個message需要耗費很多的時間，就會造成塞車，也就是<strong>head of line blocking</strong>。</li>
+</ol>
+
+<h2 id="順序重要嗎">順序重要嗎?</h2>
+<p>有些類型的message彼此是獨立不相干的，被處理順序是如何並不重要，就沒一定要使用log based的產品，
+但當你需要保留message的順序時，唯有log based的messaging system可以給你保證，不過只限定於同個partition。</p>
+
+<p>有哪些例子是順序重要的呢? 比如說對一個使用者的帳戶餘額做加減乘除的運算，順序不同結果就不同，
+但你可以使用user id作為partition key，則在每一個partition裡保持對的順序就好，不同的partition間的順序就不重要了。</p>
+
+<p>感謝你閱讀到這邊～ 希望以上的內容對你有一丁點的幫助，掰掰～ 👋</p>]]></content><author><name>HoMuChen</name></author><category term="Web Development" /><category term="message queue" /><category term="kafka" /><summary type="html"><![CDATA[Message broker主要有分為兩類，分別是memory based及log based， Redis或RabbitMQ作為broker的是memory based的，而log based最有名的， 就是Kafka。這兩種有何不同呢？何時又該選用哪種message queue？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/rabbitmq-kafka-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">遠端工作職缺數變化: 104求職網站搜尋結果統計</title><link href="https://homuchen.com/posts/remote-jobs-trend/" rel="alternate" type="text/html" title="遠端工作職缺數變化: 104求職網站搜尋結果統計" /><published>2023-10-23T20:00:00+08:00</published><updated>2023-10-23T20:00:00+08:00</updated><id>https://homuchen.com/posts/remote-jobs-trend</id><content type="html" xml:base="https://homuchen.com/posts/remote-jobs-trend/"><![CDATA[<p>疫情(Covid-19)的關係，算是打開了所以工作遠端的大門，這篇文章利用了網路爬蟲程式，
 不間斷地收集104求職網站中有提到<strong>遠端</strong>的職缺數。</p>
 
 <h1 id="圖表">圖表</h1>
@@ -656,79 +867,4 @@ Cardrona的話，開車到山腳下搭免費接駁車，但只有Cardrona山腳�
 靈機一動來了個點子，也是寫下來，然後就可以回去做你原本正在的做的事情，可能是專心工作、跟朋友聚會玩樂或者就單純是在放空。</p>
 
 <p>有人也會利用一天睡前的時間將今天未完成的事項寫下來，做為明天的待辦事項，雖然事情一樣尚未完成，但透過寫下來這個動作，
-或許就能稍微幫助你減輕壓力。祝大家每天晚上都能睡個好覺😴，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="psychology" /><category term="productivity" /><summary type="html"><![CDATA[不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡， 不過一旦那些餐點已經上過了，卻好像就立刻忘記了。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">我是如何跟我老闆談要遠端工作的？</title><link href="https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely/" rel="alternate" type="text/html" title="我是如何跟我老闆談要遠端工作的？" /><published>2022-07-18T22:53:00+08:00</published><updated>2022-07-18T22:53:00+08:00</updated><id>https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely</id><content type="html" xml:base="https://homuchen.com/posts/how-i-tell-my-boss-i-want-to-work-remotely/"><![CDATA[<p>隨著科技越來越發達，有越來越多職務可以只透過網路就完成大部分的工作，到辦公室上班不在是必須。
-如果你很幸運地工作內容允許，而且你又想遠端工作的話，那最大的阻礙大概就是老闆的心態了，
-這篇文章將分享，我是如何跟我的老闆談我要遠端工作的。</p>
-
-<h1 id="創造價值">創造價值</h1>
-<p>如果一個談判或是決策，只能對單方面有利，不是你死就是我活，一方做出讓步讓另一方得利，
-那這樣的零和遊戲我想很難成功，因為誰也不想當犧牲的那一個。</p>
-
-<p>所以第一個步驟就是創造價值，這個遠距工作模式的轉變，會創造出哪些價值，
-可以由雇主跟員工一起來分配享受這些這些價值，也就是除了員工想在家裡爽，或是去環遊世界之外，
-雇主也必須從中得到好處才行。</p>
-
-<p>如果你沒那麼想遠端工作，或許可以看看我之前寫過的文章，來被我推坑吧～</p>
-<ul>
-  <li><a href="/posts/remote-working-advantages/" target="_blank"><strong>遠端工作有哪些好處？</strong></a></li>
-  <li><a href="/posts/book-note-the-four-hour-work-week/" target="_blank"><strong>[讀書筆記] 一週工作4小時: 擺脫朝九晚五的窮忙生活，晉身「新富族」！</strong></a></li>
-</ul>
-
-<h1 id="對老闆有哪些好處">對老闆有哪些好處</h1>
-<p>首先如果你是員工，以雇主的角度來看遠端工作這件事，說之以理，告訴你的老闆，如果你們合作的工作模式是遠距的話，
-可能可以有哪些好處呢？</p>
-
-<ul>
-  <li>
-    <p><strong>節省開銷</strong>: 一旦遠距就可以省下辦公室，可能不一定完全不用，但就可以小一點，
-地點或許也不用那麼市中心，水電費也能省下不少。</p>
-  </li>
-  <li>
-    <p><strong>生產力更高</strong>: 如果你離開辦公室可以更專心，產出更高，那就證明給你的老闆看！
-一開始或許可以要求每週幾天的遠端工作就好，在那幾天當中證明給雇主看生產力是可以更好的。</p>
-  </li>
-  <li>
-    <p><strong>吸納或留住人才</strong>: 一但遠端工作，全世界的人才都可以為你所用，並且原本的好員工也不用因為非工作的因素而要離職，
-比如說回鄉照顧老母、跟配偶搬到別的城市生活等等…</p>
-  </li>
-</ul>
-
-<p>之前有寫過一篇這個主題的分享，有興趣的朋友可以參考以下這篇文章:</p>
-<ul>
-  <li><a href="/posts/remote-working-advantages-for-boss/" target="_blank"><strong>遠端工作模式對於雇主有哪些好處？</strong></a></li>
-</ul>
-
-<h1 id="提出計畫">提出計畫</h1>
-<p>有時候雇主面對未知的事物也是會害怕，
-擔心的不外乎就是怎麼知道員工在家有沒有認真工作呢？找不到人怎麼辦呢？</p>
-
-<p>此時我們可以提出一些計畫，主要目的就是讓老闆不要那麼擔心:</p>
-
-<ul>
-  <li>
-    <p><strong>給老闆工作成果的預期</strong>: 主動溝通報告，讓他事先有個一些預期</p>
-  </li>
-  <li>
-    <p><strong>給老闆找得到你的預期</strong>: 都已經遠距工作了，就是要擁有自己安排何時何地工作的自由，
-不可能隨時隨地都待命著，那與其當老闆要找你時才找不到，不如定下一段時間，
-比如說保證每天早上的10點到12點是一定找得到你的，其餘的時間就可以自己安排，
-去玩🤪或者是擁有一大段不被打擾可以專注工作的時間。</p>
-  </li>
-  <li>
-    <p><strong>漸進式實驗</strong>:  一開始或許可以要求每週幾天的遠端工作就好，
-如果有任何需要，或真的覺得不行，隨時可以回辦公室。
-一旦成功得到幾天的遠距工作時間，就要努力好好證明給老闆看是可行的！</p>
-  </li>
-</ul>
-
-<h1 id="總結">總結</h1>
-<p>其實一切的基礎都是個信任問題，平時好好表現，我想在你提出需求的時候，老闆應該是會仔細考慮的。</p>
-
-<p>如果還沒信任就趕快累積，透過小型的遠距工作實驗展現可行性，
-甚至就算老闆不同意遠距工作時，在辦公室的時候也能主動匯報工作進度，建立你自律主動的形象。</p>
-
-<p>最後，遠距工作模式可能不只是你的問題而已，而是整間公司的政策，在平時跟同事的合作上，
-就算是在辦公室，也不要太依賴同步的溝通，真的沒那麼重要緊急的事，
-多練習使用<a href="https://weworkremotely.com/everything-you-need-to-know-about-asynchronous-communication-in-remote-working-environments" target="_blank"><strong>非同步溝通</strong></a>，能給彼此都多專注工作的時間，以及為遠距工作的轉型無縫接軌！</p>
-
-<p>祝大家在前往自己理想生活型態的道路上在進一步！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="remote work" /><category term="life style" /><category term="digital nomad" /><summary type="html"><![CDATA[想遠端工作該如何跟老闆說？該怎樣說服老闆？今天將分享一些讓雇主及員工都雙贏的想法！]]></summary></entry></feed>
+或許就能稍微幫助你減輕壓力。祝大家每天晚上都能睡個好覺😴，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="psychology" /><category term="productivity" /><summary type="html"><![CDATA[不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡， 不過一旦那些餐點已經上過了，卻好像就立刻忘記了。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
