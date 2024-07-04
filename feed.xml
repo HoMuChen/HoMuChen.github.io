@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2024-01-27T15:27:19+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2024-01-27T10:00:00+08:00</published><updated>2024-01-27T10:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/"><![CDATA[<p>Message broker主要有分為兩類，分別是<strong>memory based</strong>及<strong>log based</strong>，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-tw"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://homuchen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://homuchen.com/" rel="alternate" type="text/html" hreflang="zh-tw" /><updated>2024-07-04T14:45:48+08:00</updated><id>https://homuchen.com/feed.xml</id><title type="html">HoMuChen</title><subtitle>Hi! This is HoMuchen, 陳河穆. I am a software engineer working at Largitdata now. This is where I record whatever I learned.</subtitle><entry><title type="html">一天要擁有多少的空閒時間才會快樂?</title><link href="https://homuchen.com/posts/how-much-free-time-to-be-happy/" rel="alternate" type="text/html" title="一天要擁有多少的空閒時間才會快樂?" /><published>2024-07-04T12:00:00+08:00</published><updated>2024-07-04T12:00:00+08:00</updated><id>https://homuchen.com/posts/how-much-free-time-to-be-happy</id><content type="html" xml:base="https://homuchen.com/posts/how-much-free-time-to-be-happy/"><![CDATA[<p>總是覺得好多事情想做，卻沒有足夠的時間，如果退休不工作了，每天就能有大把的時間去做想做的事，
+這可能是許多人的夢想及努力的目標，當然我也不例外．</p>
+
+<p>但! 擁有更多的空閒時間，真的就會更快樂嗎？</p>
+
+<h1 id="有更多的時間就會快樂嗎">有更多的時間就會快樂嗎？</h1>
+<p>根據這篇論文<a href="https://www.apa.org/pubs/journals/releases/psp-pspp0000391.pdf" target="_blank">Having Too Little or Too Much Time Is Linked to Lower Subjective Well-being</a>的研究，<strong>擁有太少或太多的自由時間，都會導致主觀幸福感的下降</strong>！(這篇論文分析了2012-2013年，21736位美國人的資料)</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/how-much-free-time-0.jpg" alt="空閒時間 vs. 主觀幸福感" /></p>
+
+<p>研究結果顯示，在<strong>空閒時間不足2小時、與超過5小時時，主觀幸福感都有下降的趨勢</strong>，
+這裡的空閒時間指的是個人有多少時間可以用於自主活動，也就是人們想做的事，包括放空、放鬆、看電視，
+也包含比較積極的休閒項目、像是運動、體育競賽、純粹的社交活動等等．</p>
+
+<h1 id="時間太多也會不快樂">時間太多也會不快樂？！</h1>
+<p>自由可運用的時間太少會導致不幸福，這大家都可以想像的到，但竟然連時間太多也會不快樂嗎？！</p>
+
+<p>不知道大家有沒有這樣的經驗，國小放暑假的時候，在漫長的空閒時光裡感到無聊，那就有過類似的體會．
+很多人都會這樣，對虛晃度日感到反感，總想做點什麼，略為繁忙是有價值的，它能賦予我們日常生活一種目的感．</p>
+
+<p>但想擁用有目的感並不一定要做有給薪的工作，志工活動、或者是有助於兒童或家庭健全的工作，同樣都能提供目的感，
+最後，有些非工作的活動(如追求嗜好或從事體育活動)也被視為有生產力且有意義的．</p>
+
+<h1 id="重點在於我們把時間花去哪兒了">重點在於我們把時間花去哪兒了？</h1>
+<p><strong>所以真正的問題不是在於到底擁有多少時間，而是要如何支出及豐富所擁有的時間．</strong></p>
+
+<p>以上需要多少空閑時間會影響快樂是我在<a href="https://www.books.com.tw/products/0010939311"><strong>更快樂的1小時：UCLA爆紅的時間幸福學，教你聚焦於最重要的事</strong></a>這本書中看到的．</p>
+
+<p><img src="https://storage.googleapis.com/homuchen.com/images/book-note-happier-hour-1.jpg" alt="更快樂的1小時: UCLA爆紅的時間幸福學, 教你聚焦於最重要的事" /></p>
+
+<p>作者闡述擁有多少時間不是重點，而是你如何使用支出他們，這本書確實是一本投資指南，只不過不是投資金錢，而是你最寶貴的資源──時間。</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><summary type="html"><![CDATA[總是覺得好多事情想做，卻沒有足夠的時間，如果退休不工作了，每天就能有大把的時間去做想做的事， 這可能是許多人的夢想及努力的目標，當然我也不例外．]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/how-much-free-time-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/how-much-free-time-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">RabbitMQ和Kafka有何不同？何時該選用哪種產品？</title><link href="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/" rel="alternate" type="text/html" title="RabbitMQ和Kafka有何不同？何時該選用哪種產品？" /><published>2024-01-27T10:00:00+08:00</published><updated>2024-01-27T10:00:00+08:00</updated><id>https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka</id><content type="html" xml:base="https://homuchen.com/posts/difference-bwtween-rabbitmq-and-kafka/"><![CDATA[<p>Message broker主要有分為兩類，分別是<strong>memory based</strong>及<strong>log based</strong>，
 Redis或RabbitMQ作為broker的是memory based的，而log based最有名的，
 就是Kafka。這兩種有何不同呢？何時又該選用哪種message queue？</p>
 
@@ -837,34 +867,4 @@ Cardrona的話，開車到山腳下搭免費接駁車，但只有Cardrona山腳�
 </ul>
 
 <p>之後就剩下傢俱的添購(床、工作桌椅)，
-如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想改造自己的房間的地板，免膠地板還是SPC卡扣地板，施作過程有什麼要注意的嗎？會花多少錢跟時間？ 這篇文章將給你我親身經驗的解答。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？</title><link href="https://homuchen.com/posts/productivity-zeigarnik-effect/" rel="alternate" type="text/html" title="柴嘉尼效應: 如何減輕心理負擔、更高效地完成工作？" /><published>2022-07-19T23:00:00+08:00</published><updated>2022-07-19T23:00:00+08:00</updated><id>https://homuchen.com/posts/productivity-zeigarnik-effect</id><content type="html" xml:base="https://homuchen.com/posts/productivity-zeigarnik-effect/"><![CDATA[<p>不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡，
-不過一旦那些餐點已經上過了，卻好像就立刻忘記了。</p>
-
-<h1 id="柴嘉尼效應zeigarnik-effect">柴嘉尼效應(Zeigarnik Effect)</h1>
-<p><strong>我們對未完成的事情會比起已完成的事情更容易記住</strong>，這就是柴嘉尼效應。</p>
-
-<p>布魯瑪.柴嘉尼(Bluma Zeigarnik)，二十世紀初俄國的一位心理學家，也是在某天下午觀察咖啡廳的服務生時，
-有了這個假設，換句話說，未完成的工作比起完成的工作，佔了我們更多的腦容量。</p>
-
-<h1 id="實驗">實驗</h1>
-<p>柴嘉尼找了一群小孩來參與實驗，讓他們去執行一共20個小任務，包含拼圖、捏黏土等等，
-有些任務完成了有些沒有完成，最後要求這些小孩回想做了哪些任務，
-結果發現孩子們<strong>記得的未完成任務的數量，是已完成項目的兩倍</strong>。</p>
-
-<h1 id="應用">應用</h1>
-<p>現代人越來越多事務，工作上收不完的電子郵件、回不完的訊息、接踵而來的任務，
-娛樂上看不完的影集跟電影，玩不完的景點，更容易會有越來越多未完成的事懸在心上。</p>
-
-<p>要做的事情越來越多，心心念念擔心著未完成的事，害怕自己會忘記漏掉什麼，結果睡不著甚至做惡夢，
-這樣焦慮的經驗不知道大家有沒有體驗過？</p>
-
-<h2 id="寫下來">寫下來</h2>
-<p>該怎麼辦呢？其實有一招簡單的方法，就是<strong>把那些事務寫下來！</strong>，一旦記下來了，就可以暫時不去管他們了，
-就像我之前寫過的文章: <a href="/posts/book-note-todo-list-formula/" target="_blank"><strong>掌握這3個原則，打造出最適合自己的代辦清單系統</strong></a>裡有提到的，
-待辦清單能夠幫助我們減輕壓力，將所有尚未完成或必須要做但還沒辦法馬上開始做的事都寫下來，清空你的大腦。</p>
-
-<p>所以不管你是工作到一半，有有其他工作項目進來，那就寫下來; 通勤到一半，想到下班之後要去辦一些事情，一樣寫下來;
-靈機一動來了個點子，也是寫下來，然後就可以回去做你原本正在的做的事情，可能是專心工作、跟朋友聚會玩樂或者就單純是在放空。</p>
-
-<p>有人也會利用一天睡前的時間將今天未完成的事項寫下來，做為明天的待辦事項，雖然事情一樣尚未完成，但透過寫下來這個動作，
-或許就能稍微幫助你減輕壓力。祝大家每天晚上都能睡個好覺😴，掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="psychology" /><category term="productivity" /><summary type="html"><![CDATA[不知道大家有沒有這樣的經驗？在絡繹不絕的早餐店裡，老闆娘總是記得還有哪些餐點還未送到客人手裡， 不過一旦那些餐點已經上過了，卻好像就立刻忘記了。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/productivity-zeigarnik-effect-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+如果想更即時的看到改造過程的，也歡迎追蹤我的Instagram: <a href="https://www.instagram.com/mumu.life.lab/" target="_blank"><strong>mumu.life.lab</strong></a>。希望以上的內容對你有幫助！掰掰～👋</p>]]></content><author><name>HoMuChen</name></author><category term="生活" /><category term="life style" /><category term="room makeover" /><summary type="html"><![CDATA[想改造自己的房間的地板，免膠地板還是SPC卡扣地板，施作過程有什麼要注意的嗎？會花多少錢跟時間？ 這篇文章將給你我親身經驗的解答。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" /><media:content medium="image" url="https://storage.googleapis.com/homuchen.com/images/room-makeover-floor-0.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
